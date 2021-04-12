@@ -1,0 +1,9 @@
+/*! \mainpage Drawing Shapes
+ *
+ * This project helps user to draw shapes.
+ * Currently two types of shapes can be drawn:
+ * - \subpage drawingRectanglePage "How to draw rectangle?"
+ *
+ * - \subpage drawingCirclePage "How to draw circle?"
+ *
+ */
