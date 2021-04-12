@@ -1,5 +1,5 @@
-#ifndef J_MOTOR_DRIVER_ESP32_L293D_H
-#define J_MOTOR_DRIVER_ESP32_L293D_H
+#ifndef J_MOTOR_DRIVER_ESP32_PWMDIR_H
+#define J_MOTOR_DRIVER_ESP32_PWMDIR_H
 #include "JMotorDriver.h"
 #include "JMotorDriverEsp32PWM.h"
 class JMotorDriverESP32L293d : private JMotorDriver {
@@ -25,7 +25,7 @@ public:
     }
     JMotorDriverType getType()
     {
-        return JMotorDriverType::espPWMDir;
+        return JMotorDriverType::esp32PWMDir;
     }
     /**
      * @brief  

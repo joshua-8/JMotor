@@ -28,7 +28,7 @@ public:
     }
     JMotorDriverType getType()
     {
-        return JMotorDriverType::espL293d;
+        return JMotorDriverType::esp32L293d;
     }
     /**
      * @brief  

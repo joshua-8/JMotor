@@ -9,10 +9,11 @@ private:
 public:
     const int PWM_RANGE = 255;
     boolean disableState = LOW;
-    JMotorDriverAvrPWM(int _pin)
+    JMotorDriverAvrPWM(int _pin, boolean _disableState = LOW)
     {
-        enabled=false;
+        enabled = false;
         pin = _pin;
+        _disableState = disableState;
     }
     JMotorDriverType getType()
     {

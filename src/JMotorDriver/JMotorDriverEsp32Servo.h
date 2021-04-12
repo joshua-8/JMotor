@@ -49,7 +49,7 @@ public:
     }
     JMotorDriverType getType()
     {
-        return JMotorDriverType::espServo;
+        return JMotorDriverType::esp32Servo;
     }
     /**
      * @brief  

@@ -8,13 +8,13 @@ public:
     enum JMotorDriverType {
         Null,
         avrServo,
-        espServo,
+        esp32Servo,
         avrPWM,
-        espPWM,
+        esp32PWM,
         avrPWMDir,
-        espPWMDir,
+        esp32PWMDir,
         avrL293d,
-        espL293d,
+        esp32L293d,
     };
 
     virtual JMotorDriverType getType();
