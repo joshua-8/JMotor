@@ -27,5 +27,5 @@ jobs:
       - name: run doxygen
         uses: mattnotmitt/doxygen-action@v1
         with:
-          working-directory: 'src/'
-          doxyfile-path: './docs/Doxygen'
+          working-directory: './src'
+#          doxyfile-path: "./Doxyfile" # default is ./Doxyfile
