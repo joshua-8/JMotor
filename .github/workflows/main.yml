@@ -33,3 +33,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           destination_dir: docs
           publish_dir: ./html
+          publish_branch: main
