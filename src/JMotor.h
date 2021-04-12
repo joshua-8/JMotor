@@ -1,3 +1,8 @@
+/*! \mainpage
+ * JMotor is a library for controlling motors
+ * 
+ */
+
 #ifndef J_MOTOR_LIB_H
 #define J_MOTOR_LIB_H
 #include "JMotorDriver/JMotorDriver.h"
