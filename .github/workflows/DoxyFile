@@ -17,9 +17,6 @@
 # Project related configuration options
 #---------------------------------------------------------------------------
 
-INPUT                  = README.md
-USE_MDFILE_AS_MAINPAGE = README.md
-
 
 # This tag specifies the encoding used for all characters in the configuration
 # file that follow. The default is UTF-8 which is also the encoding used for all
