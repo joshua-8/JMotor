@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: doxygen-reference-generator-github-actions
 
 # Controls when the action will run. 
 on:
@@ -28,4 +28,4 @@ jobs:
         uses: mattnotmitt/doxygen-action@v1
         with:
           working-directory: 'src/'
-          doxyfile-path: 'docs'
+          doxyfile-path: 'docs/reference.md'
