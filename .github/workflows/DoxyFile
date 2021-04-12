@@ -17,7 +17,7 @@
 # Project related configuration options
 #---------------------------------------------------------------------------
 
-INPUT                  = ./.github/workflows/main.dox
+INPUT                  = ../.github/workflows/main.dox
 
 # This tag specifies the encoding used for all characters in the configuration
 # file that follow. The default is UTF-8 which is also the encoding used for all
@@ -1022,13 +1022,6 @@ FILTER_SOURCE_FILES    = NO
 # This tag requires that the tag FILTER_SOURCE_FILES is set to YES.
 
 FILTER_SOURCE_PATTERNS =
-
-# If the USE_MDFILE_AS_MAINPAGE tag refers to the name of a markdown file that
-# is part of the input, its contents will be placed on the main page
-# (index.html). This can be useful if you have a project on for instance GitHub
-# and want to reuse the introduction page also for the doxygen output.
-
-USE_MDFILE_AS_MAINPAGE = README.md
 
 #---------------------------------------------------------------------------
 # Configuration options related to source browsing
