@@ -3,13 +3,13 @@
 #include "JMotorDriver/JMotorDriver.h"
 
 #ifdef ESP32
-#include "JMotor/JMotorDriver/JMotorDriverEsp32L293d.h"
-#include "JMotor/JMotorDriver/JMotorDriverEsp32PWM.h"
-#include "JMotor/JMotorDriver/JMotorDriverEsp32Servo.h"
+#include "JMotorDriver/JMotorDriverEsp32L293d.h"
+#include "JMotorDriver/JMotorDriverEsp32PWM.h"
+#include "JMotorDriver/JMotorDriverEsp32Servo.h"
 #else
-#include "JMotor/JMotorDriver/JMotorDriverAvrL293D.h"
-#include "JMotor/JMotorDriver/JMotorDriverAvrPWM.h"
-#include "JMotor/JMotorDriver/JMotorDriverAvrServo.h"
+#include "JMotorDriver/JMotorDriverAvrL293D.h"
+#include "JMotorDriver/JMotorDriverAvrPWM.h"
+#include "JMotorDriver/JMotorDriverAvrServo.h"
 #endif
 
 #endif

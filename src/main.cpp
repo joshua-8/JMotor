@@ -1,6 +1,5 @@
 #include <Arduino.h>
-
-#include "JMotor/JMotor.h"
+#include "JMotor.h"
 JMotorDriverAvrL293d jmd(9,3,4);
 void setup()
 {
