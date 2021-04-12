@@ -13,24 +13,26 @@ private:
 public:
     boolean disableState = LOW;
 
-    JMotorDriverEsp32PWM(int _ch, int _pin)
+    JMotorDriverEsp32PWM(int _ch, int _pin, boolean _disableState = LOW)
     {
         enabled = false;
         ch = _ch;
         pin = _pin;
+        disableState = _disableState;
     }
-    JMotorDriverEsp32PWM(int _ch, int _pin, int freq, int resolution)
+    JMotorDriverEsp32PWM(int _ch, int _pin, int freq, int resolution, boolean _disableState = LOW)
     {
         enabled = false;
         ch = _ch;
         pin = _pin;
+        disableState = _disableState;
         PWM_RES = resolution;
         PWM_FREQ = freq;
         PWM_RANGE = (1 << PWM_RES) - 1;
     }
     JMotorDriverType getType()
     {
-        return JMotorDriverType::espPWM;
+        return JMotorDriverType::esp32PWM;
     }
     /**
      * @brief  
