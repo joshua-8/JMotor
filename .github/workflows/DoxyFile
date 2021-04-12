@@ -17,6 +17,7 @@
 # Project related configuration options
 #---------------------------------------------------------------------------
 
+INPUT                  = ./.github/workflows/main.dox
 
 # This tag specifies the encoding used for all characters in the configuration
 # file that follow. The default is UTF-8 which is also the encoding used for all
