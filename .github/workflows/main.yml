@@ -26,5 +26,3 @@ jobs:
       # runs doxygen
       - name: run doxygen
         uses: mattnotmitt/doxygen-action@v1
-        with:
-          working-directory: './src'
