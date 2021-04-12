@@ -17,7 +17,7 @@
 # Project related configuration options
 #---------------------------------------------------------------------------
 
-
+INPUT                  = README.md
 USE_MDFILE_AS_MAINPAGE = README.md
 
 
