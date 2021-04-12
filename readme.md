@@ -1,10 +1,10 @@
-# JMotor
+# JMotor Library
 
-## work in progress
+## work in progress!
 
-https://joshua-8.github.io/JMotor/md_readme.html
+full reference: https://joshua-8.github.io/JMotor/md_readme.html
 
-description
+write description of library here
 
 JMotorDriver
 
