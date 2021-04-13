@@ -1,3 +1,7 @@
+/**
+ * @brief  for motor controllers with one direction input and one speed input pin
+ * @note   platform: ESP32
+ */
 #ifndef J_MOTOR_DRIVER_ESP32_PWMDIR_H
 #define J_MOTOR_DRIVER_ESP32_PWMDIR_H
 #include "JMotorDriver.h"
@@ -10,13 +14,28 @@ private:
 public:
     JMotorDriverEsp32PWM pwmDriver;
     boolean reverse = false;
-
+    /**
+     * @brief  constructor, sets up pins, default PWM
+     * @param  _ch:  ledc channel (must be unique for each driver)
+     * @param  _enablePin: pin to output speed signal on
+     * @param  _dirPin: pin to output direction signal on
+     * @param  _rev = false: if false(default), direction pin set HIGH for positive speed, LOW for negative speed
+     */
     JMotorDriverESP32L293d(int _ch, int _enablePin, int _dirPin, boolean _rev = false)
         : pwmDriver { _ch, _enablePin }
     {
         enabled = false;
         dir = _dirPin;
     }
+    /**
+     * @brief  constructor, sets up pins, custom PWM settings
+     * @param  _ch: ledc channel (must be unique for each driver)
+     * @param  _enPin: pin to output speed signal on
+     * @param  _dirPin: pin to output direction signal on
+     * @param  freq: <= int(80E6 / 2^resolution), 2kHz default and recommended for motor PWM
+     * @param  resolution: bits of resolution, tradeoff with frequency, default 12
+     * @param  _rev = false: if false(default), direction pin set HIGH for positive speed, LOW for negative speed
+     */
     JMotorDriverESP32L293d(int _ch, int _enPin, int _dirPin, int freq, int resolution, boolean _rev = false)
         : pwmDriver { _ch, _enPin, freq, resolution }
     {
@@ -27,12 +46,6 @@ public:
     {
         return JMotorDriverType::esp32PWMDir;
     }
-    /**
-     * @brief  
-     * @note   
-     * @param  _val: 
-     * @retval true if value at end of range
-     */
     boolean set(float val)
     {
         if (enabled) {
@@ -46,12 +59,6 @@ public:
         }
         return abs(val) >= 1.0;
     }
-    /**
-     * @brief  
-     * @note   
-     * @param  enable: 
-     * @retval true if state changed
-     */
     boolean setEnable(boolean enable)
     {
         if (enable) {

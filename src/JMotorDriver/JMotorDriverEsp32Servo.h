@@ -1,10 +1,10 @@
+/**
+ * @brief For servos and motor controllers that use servo signals (ESCs)
+ * @note  platform: ESP32
+ */
 #ifndef J_MOTOR_DRIVER_ESP32_SERVO_H
 #define J_MOTOR_DRIVER_ESP32_SERVO_H
 #include "JMotorDriver.h"
-/**
- * @brief  
- * @note   
- */
 class JMotorDriverEsp32Servo : private JMotorDriver {
 private:
     boolean enabled = false;
@@ -15,17 +15,17 @@ private:
     int SERVO_RES = 20;
 
 public:
-    int minServoValue = 544;
-    int maxServoValue = 2400;
+    int minServoValue = 544; // can be changed during runtime
+    int maxServoValue = 2400; // can be changed during runtime
 
-    JMotorDriverEsp32Servo(int _pwmChannel, int _servoPin)
-    {
-        enabled = false;
-        servoPin = _servoPin;
-        pwmChannel = _pwmChannel;
-        setFrequencyAndResolution();
-    }
-    JMotorDriverEsp32Servo(int _pwmChannel, int _servoPin, int _freq, int _resBits)
+    /**
+     * @brief  constructor, sets up pins, custom frequency and resolution optional
+     * @param  _pwmChannel: ledc channel (must be unique for each driver)
+     * @param  _servoPin: pin to output signal on
+     * @param  _freq = 50: Hz (default 50) must be <= int(80E6 / 2^resBits)
+     * @param  _resBits = 20: (default 20) tradeoff with max available frequency
+     */
+    JMotorDriverEsp32Servo(int _pwmChannel, int _servoPin, int _freq = 50, int _resBits = 20)
     {
         enabled = false;
         servoPin = _servoPin;
@@ -33,14 +33,13 @@ public:
         setFrequencyAndResolution(_freq, _resBits);
     }
     /**
-     * @brief  
+     * @brief  set frequency that servo signal pulse is repeated at and how many bits are used internally for resolution
      * @param  freq: Hz (default 50) must be <= int(80E6 / 2^resBits)
-     * @param  resBits: (default 20)
+     * @param  resBits: (default 20) tradeoff with max available frequency
      * @retval (float) returns PWM cycles per microsecond-used in ledcWrite call, returned for debugging purposes
      */
     float setFrequencyAndResolution(int freq = 50, int resBits = 20)
     {
-        //TODO: verify values?
         SERVO_FREQ = freq;
         SERVO_RES = resBits;
         SERVO_TICKS_PER_MICROSECOND = (1 << SERVO_RES) * SERVO_FREQ / 1000000; //DEFAULT=52.4288  2^SERVO_RES / 1E6 * SERVO_FREQ
@@ -51,12 +50,6 @@ public:
     {
         return JMotorDriverType::esp32Servo;
     }
-    /**
-     * @brief  
-     * @note   
-     * @param  _val: 
-     * @retval true if value at end of range
-     */
     boolean set(float _val)
     {
         if (enabled) {
@@ -64,12 +57,6 @@ public:
         }
         return abs(_val) >= 1.0;
     }
-    /**
-     * @brief  
-    * @note   
-    * @param  enable: 
-    * @retval returns true if state changed, false otherwise
-    */
     boolean setEnable(boolean enable)
     {
         if (enable) {
@@ -86,7 +73,6 @@ public:
                 //actually disable
                 enabled = false;
                 ledcDetachPin(servoPin);
-                //TODO: avoid cutting pulses short?
                 pinMode(servoPin, OUTPUT);
                 digitalWrite(servoPin, LOW);
                 return true;
