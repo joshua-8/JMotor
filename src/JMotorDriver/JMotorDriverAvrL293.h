@@ -1,8 +1,12 @@
-#ifndef J_MOTOR_DRIVER_AVR_L293D_H
-#define J_MOTOR_DRIVER_AVR_L293D_H
+/**
+ * @brief  L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf
+ * @note   platform: AVR (standard Arduinos)
+ */
+#ifndef J_MOTOR_DRIVER_AVR_L293_H
+#define J_MOTOR_DRIVER_AVR_L293_H
 #include "JMotorDriver.h"
 #include "JMotorDriverAvrPWM.h"
-class JMotorDriverAvrL293d : public JMotorDriver {
+class JMotorDriverAvrL293 : public JMotorDriver {
 private:
     boolean enabled = false;
     int i1;
@@ -10,7 +14,13 @@ private:
 
 public:
     JMotorDriverAvrPWM pwmDriver;
-    JMotorDriverAvrL293d(int _en, int _i1, int _i2)
+    /**
+     * @brief  constructor, sets up pins
+     * @param  _en: enable pin
+     * @param  _i1: input pin 1
+     * @param  _i2: input pin 2
+     */
+    JMotorDriverAvrL293(int _en, int _i1, int _i2)
         : pwmDriver { _en }
     {
         enabled = false;
@@ -19,14 +29,8 @@ public:
     }
     JMotorDriverType getType()
     {
-        return JMotorDriverType::avrL293d;
+        return JMotorDriverType::avrL293;
     }
-    /**
-     * @brief  
-     * @note   
-     * @param  _val: 
-     * @retval true if value at end of range
-     */
     boolean set(float val)
     {
         if (enabled) {
@@ -44,12 +48,6 @@ public:
         }
         return abs(val) >= 1.0;
     }
-    /**
-     * @brief  
-     * @note   
-     * @param  enable: 
-     * @retval true if state changed
-     */
     boolean setEnable(boolean enable)
     {
         if (enable) {
