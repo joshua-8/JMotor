@@ -70,8 +70,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><br  />
-  
+<p>wraps standard servo library. For servos and motor controllers that use servo signals (ESCs)  
  <a href="class_j_motor_driver_avr_servo.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_j_motor_driver_avr_servo_8h_source.html">JMotorDriverAvrServo.h</a>&gt;</code></p>
@@ -87,19 +86,17 @@ Inheritance diagram for JMotorDriverAvrServo:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0de86a3ed003fba2e1948b1f2944416c"><td class="memItemLeft" align="right" valign="top"><a id="a0de86a3ed003fba2e1948b1f2944416c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>JMotorDriverAvrServo</b> (int _servoPin)</td></tr>
+<tr class="memitem:a0de86a3ed003fba2e1948b1f2944416c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_servo.html#a0de86a3ed003fba2e1948b1f2944416c">JMotorDriverAvrServo</a> (int _servoPin)</td></tr>
+<tr class="memdesc:a0de86a3ed003fba2e1948b1f2944416c"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets up pins  <a href="class_j_motor_driver_avr_servo.html#a0de86a3ed003fba2e1948b1f2944416c">More...</a><br /></td></tr>
 <tr class="separator:a0de86a3ed003fba2e1948b1f2944416c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61d4f8a634fb14ba6c6b0b59084f03eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_j_motor_driver.html#a2ccb6ae751915e9173e192ba4b0cb009">JMotorDriverType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_servo.html#a61d4f8a634fb14ba6c6b0b59084f03eb">getType</a> ()</td></tr>
 <tr class="memdesc:a61d4f8a634fb14ba6c6b0b59084f03eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns what type of driver it is  <a href="class_j_motor_driver_avr_servo.html#a61d4f8a634fb14ba6c6b0b59084f03eb">More...</a><br /></td></tr>
 <tr class="separator:a61d4f8a634fb14ba6c6b0b59084f03eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1048893e5e7551e676aa6d8590839121"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_servo.html#a1048893e5e7551e676aa6d8590839121">set</a> (float _val)</td></tr>
-<tr class="memdesc:a1048893e5e7551e676aa6d8590839121"><td class="mdescLeft">&#160;</td><td class="mdescRight"><br  />
-  <a href="class_j_motor_driver_avr_servo.html#a1048893e5e7551e676aa6d8590839121">More...</a><br /></td></tr>
+<tr class="memdesc:a1048893e5e7551e676aa6d8590839121"><td class="mdescLeft">&#160;</td><td class="mdescRight">set motor power  <a href="class_j_motor_driver_avr_servo.html#a1048893e5e7551e676aa6d8590839121">More...</a><br /></td></tr>
 <tr class="separator:a1048893e5e7551e676aa6d8590839121"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4595d9e5de4c36bef37977d61d6938a9"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_servo.html#a4595d9e5de4c36bef37977d61d6938a9">setEnable</a> (boolean enable)</td></tr>
-<tr class="memdesc:a4595d9e5de4c36bef37977d61d6938a9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><br  />
-  <a href="class_j_motor_driver_avr_servo.html#a4595d9e5de4c36bef37977d61d6938a9">More...</a><br /></td></tr>
+<tr class="memdesc:a4595d9e5de4c36bef37977d61d6938a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">use to enable or disable a motor, and sets up pin states  <a href="class_j_motor_driver_avr_servo.html#a4595d9e5de4c36bef37977d61d6938a9">More...</a><br /></td></tr>
 <tr class="separator:a4595d9e5de4c36bef37977d61d6938a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac63b9954461af665282cfab0d78c78d7"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_servo.html#ac63b9954461af665282cfab0d78c78d7">getEnable</a> ()</td></tr>
 <tr class="memdesc:ac63b9954461af665282cfab0d78c78d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the enable state of the driver  <a href="class_j_motor_driver_avr_servo.html#ac63b9954461af665282cfab0d78c78d7">More...</a><br /></td></tr>
@@ -137,15 +134,48 @@ Additional Inherited Members</h2></td></tr>
 &#160;&#160;<b>esp32L293</b>
 <br />
  }</td></tr>
-<tr class="memdesc:a2ccb6ae751915e9173e192ba4b0cb009"><td class="mdescLeft">&#160;</td><td class="mdescRight">The JMotorDriverType enum is used so a specific subclass of <a class="el" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers">JMotorDriver</a> can return what type it is. <br /></td></tr>
+<tr class="memdesc:a2ccb6ae751915e9173e192ba4b0cb009"><td class="mdescLeft">&#160;</td><td class="mdescRight">The JMotorDriverType enum is used so a specific subclass of <a class="el" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers">JMotorDriver</a> can indicate what type it is. <br /></td></tr>
 <tr class="separator:a2ccb6ae751915e9173e192ba4b0cb009 inherit pub_types_class_j_motor_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><br  />
- </p>
-<dl class="section note"><dt>Note</dt><dd><br  />
- </dd></dl>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p>wraps standard servo library. For servos and motor controllers that use servo signals (ESCs) </p>
+<dl class="section note"><dt>Note</dt><dd>platform: AVR (standard Arduinos) </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a0de86a3ed003fba2e1948b1f2944416c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0de86a3ed003fba2e1948b1f2944416c">&#9670;&nbsp;</a></span>JMotorDriverAvrServo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">JMotorDriverAvrServo::JMotorDriverAvrServo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_servoPin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>constructor, sets up pins </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_servoPin</td><td>pin to attach servo to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac63b9954461af665282cfab0d78c78d7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac63b9954461af665282cfab0d78c78d7">&#9670;&nbsp;</a></span>getEnable()</h2>
 
@@ -172,7 +202,7 @@ Additional Inherited Members</h2></td></tr>
 <p>get the enable state of the driver </p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">true</td><td>if enabled, false if disabled </td></tr>
+    <tr><td class="paramname">(boolean)</td><td>true if enabled, false if disabled </td></tr>
   </table>
   </dd>
 </dl>
@@ -208,7 +238,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>usually 1.0 </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">(float)</td><td></td></tr>
+    <tr><td class="paramname">(float)</td><td>maxRange </td></tr>
   </table>
   </dd>
 </dl>
@@ -244,7 +274,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>usually -1.0, if 0, that indicates a motor controller with no reverse function </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">(float)</td><td></td></tr>
+    <tr><td class="paramname">(float)</td><td>minRange </td></tr>
   </table>
   </dd>
 </dl>
@@ -279,7 +309,7 @@ Additional Inherited Members</h2></td></tr>
 <p>returns what type of driver it is </p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">(JMotorDriverType)</td><td></td></tr>
+    <tr><td class="paramname">(JMotorDriverType)</td><td>type </td></tr>
   </table>
   </dd>
 </dl>
@@ -301,7 +331,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">boolean JMotorDriverAvrServo::set </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>_val</em></td><td>)</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -312,19 +342,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><br  />
- </p>
-<dl class="section note"><dt>Note</dt><dd><br  />
- </dd></dl>
+<p>set motor power </p>
+<dl class="section note"><dt>Note</dt><dd>val should be between getMinRange and getMaxRange, but constrained internally </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_val</td><td></td></tr>
+    <tr><td class="paramname">val</td><td>(float) val </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">true</td><td>if value at end of range </td></tr>
+    <tr><td class="paramname">(boolean)</td><td>true if at end of power range </td></tr>
   </table>
   </dd>
 </dl>
@@ -346,7 +374,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">boolean JMotorDriverAvrServo::setEnable </td>
           <td>(</td>
           <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>enable</em></td><td>)</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -357,19 +385,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><br  />
- </p>
-<dl class="section note"><dt>Note</dt><dd><br  />
- </dd></dl>
+<p>use to enable or disable a motor, and sets up pin states </p>
+<dl class="section note"><dt>Note</dt><dd>setEnable(true) must be called before a motor driver will activate </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">enable</td><td></td></tr>
+    <tr><td class="paramname">val</td><td>(boolean) true=eneable, false=disable </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">returns</td><td>true if state changed, false otherwise </td></tr>
+    <tr><td class="paramname">(boolean)</td><td>true if state changed, false if state already set </td></tr>
   </table>
   </dd>
 </dl>

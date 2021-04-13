@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>JMotor: JMotorDriverESP32L293d Class Reference</title>
+<title>JMotor: JMotorDriverESP32L293 Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,68 +64,65 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="class_j_motor_driver_e_s_p32_l293d-members.html">List of all members</a>  </div>
+<a href="class_j_motor_driver_e_s_p32_l293-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">JMotorDriverESP32L293d Class Reference</div>  </div>
+<div class="title">JMotorDriverESP32L293 Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>for motor controllers with one direction input and one speed input pin  
- <a href="class_j_motor_driver_e_s_p32_l293d.html#details">More...</a></p>
+<p>L293 motor driver chip: <a href="https://www.ti.com/lit/ds/symlink/l293.pdf">https://www.ti.com/lit/ds/symlink/l293.pdf</a>.  
+ <a href="class_j_motor_driver_e_s_p32_l293.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_j_motor_driver_esp32_p_w_m_dir_8h_source.html">JMotorDriverEsp32PWMDir.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_j_motor_driver_esp32_l293_8h_source.html">JMotorDriverEsp32L293.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for JMotorDriverESP32L293d:</div>
+Inheritance diagram for JMotorDriverESP32L293:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="class_j_motor_driver_e_s_p32_l293d.png" usemap="#JMotorDriverESP32L293d_map" alt=""/>
-  <map id="JMotorDriverESP32L293d_map" name="JMotorDriverESP32L293d_map">
-<area href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="JMotorDriver" shape="rect" coords="0,0,161,24"/>
+  <img src="class_j_motor_driver_e_s_p32_l293.png" usemap="#JMotorDriverESP32L293_map" alt=""/>
+  <map id="JMotorDriverESP32L293_map" name="JMotorDriverESP32L293_map">
+<area href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="JMotorDriver" shape="rect" coords="0,0,154,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5b427aade397bbde6b35d4c7246733a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_e_s_p32_l293d.html#a5b427aade397bbde6b35d4c7246733a5">JMotorDriverESP32L293d</a> (int _ch, int _enablePin, int _dirPin, boolean _rev=false)</td></tr>
-<tr class="memdesc:a5b427aade397bbde6b35d4c7246733a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets up pins, default PWM  <a href="class_j_motor_driver_e_s_p32_l293d.html#a5b427aade397bbde6b35d4c7246733a5">More...</a><br /></td></tr>
-<tr class="separator:a5b427aade397bbde6b35d4c7246733a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4ecc9b56c20651b7ce62f46ec9b81d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_e_s_p32_l293d.html#aa4ecc9b56c20651b7ce62f46ec9b81d8">JMotorDriverESP32L293d</a> (int _ch, int _enPin, int _dirPin, int freq, int resolution, boolean _rev=false)</td></tr>
-<tr class="memdesc:aa4ecc9b56c20651b7ce62f46ec9b81d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets up pins, custom PWM settings  <a href="class_j_motor_driver_e_s_p32_l293d.html#aa4ecc9b56c20651b7ce62f46ec9b81d8">More...</a><br /></td></tr>
-<tr class="separator:aa4ecc9b56c20651b7ce62f46ec9b81d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6e9a3416661d99a8deb068145f5fcc7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_j_motor_driver.html#a2ccb6ae751915e9173e192ba4b0cb009">JMotorDriverType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_e_s_p32_l293d.html#af6e9a3416661d99a8deb068145f5fcc7">getType</a> ()</td></tr>
-<tr class="memdesc:af6e9a3416661d99a8deb068145f5fcc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns what type of driver it is  <a href="class_j_motor_driver_e_s_p32_l293d.html#af6e9a3416661d99a8deb068145f5fcc7">More...</a><br /></td></tr>
-<tr class="separator:af6e9a3416661d99a8deb068145f5fcc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9635e9ce24c0730f3afe5a072d241b1f"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_e_s_p32_l293d.html#a9635e9ce24c0730f3afe5a072d241b1f">set</a> (float val)</td></tr>
-<tr class="memdesc:a9635e9ce24c0730f3afe5a072d241b1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">set motor power  <a href="class_j_motor_driver_e_s_p32_l293d.html#a9635e9ce24c0730f3afe5a072d241b1f">More...</a><br /></td></tr>
-<tr class="separator:a9635e9ce24c0730f3afe5a072d241b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4f1cd75b478fa4eabc6883977870943"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_e_s_p32_l293d.html#ab4f1cd75b478fa4eabc6883977870943">setEnable</a> (boolean enable)</td></tr>
-<tr class="memdesc:ab4f1cd75b478fa4eabc6883977870943"><td class="mdescLeft">&#160;</td><td class="mdescRight">use to enable or disable a motor, and sets up pin states  <a href="class_j_motor_driver_e_s_p32_l293d.html#ab4f1cd75b478fa4eabc6883977870943">More...</a><br /></td></tr>
-<tr class="separator:ab4f1cd75b478fa4eabc6883977870943"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf1492309b07af595504bd3161c3ac37"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_e_s_p32_l293d.html#adf1492309b07af595504bd3161c3ac37">getEnable</a> ()</td></tr>
-<tr class="memdesc:adf1492309b07af595504bd3161c3ac37"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the enable state of the driver  <a href="class_j_motor_driver_e_s_p32_l293d.html#adf1492309b07af595504bd3161c3ac37">More...</a><br /></td></tr>
-<tr class="separator:adf1492309b07af595504bd3161c3ac37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9165fdb762112fbbffaa11a4ec21eb80"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_e_s_p32_l293d.html#a9165fdb762112fbbffaa11a4ec21eb80">getMaxRange</a> ()</td></tr>
-<tr class="memdesc:a9165fdb762112fbbffaa11a4ec21eb80"><td class="mdescLeft">&#160;</td><td class="mdescRight">high end of the range  <a href="class_j_motor_driver_e_s_p32_l293d.html#a9165fdb762112fbbffaa11a4ec21eb80">More...</a><br /></td></tr>
-<tr class="separator:a9165fdb762112fbbffaa11a4ec21eb80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a69b571ecfca8c541480e551326aa24"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_e_s_p32_l293d.html#a5a69b571ecfca8c541480e551326aa24">getMinRange</a> ()</td></tr>
-<tr class="memdesc:a5a69b571ecfca8c541480e551326aa24"><td class="mdescLeft">&#160;</td><td class="mdescRight">low end of the range  <a href="class_j_motor_driver_e_s_p32_l293d.html#a5a69b571ecfca8c541480e551326aa24">More...</a><br /></td></tr>
-<tr class="separator:a5a69b571ecfca8c541480e551326aa24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e593e3d0a53edba9856bc993a116326"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_e_s_p32_l293.html#a4e593e3d0a53edba9856bc993a116326">JMotorDriverESP32L293</a> (int _ch, int _enablePin, int _i1, int _i2)</td></tr>
+<tr class="memdesc:a4e593e3d0a53edba9856bc993a116326"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets up pins, default PWM  <a href="class_j_motor_driver_e_s_p32_l293.html#a4e593e3d0a53edba9856bc993a116326">More...</a><br /></td></tr>
+<tr class="separator:a4e593e3d0a53edba9856bc993a116326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a532faf943a99dd12c0a1e453a53f8d9b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_e_s_p32_l293.html#a532faf943a99dd12c0a1e453a53f8d9b">JMotorDriverESP32L293</a> (int _ch, int _enPin, int _i1, int _i2, int freq, int resolution)</td></tr>
+<tr class="memdesc:a532faf943a99dd12c0a1e453a53f8d9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets up pins, custom PWM settings  <a href="class_j_motor_driver_e_s_p32_l293.html#a532faf943a99dd12c0a1e453a53f8d9b">More...</a><br /></td></tr>
+<tr class="separator:a532faf943a99dd12c0a1e453a53f8d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee6ce2748b5057f7c76db31172010364"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_j_motor_driver.html#a2ccb6ae751915e9173e192ba4b0cb009">JMotorDriverType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_e_s_p32_l293.html#aee6ce2748b5057f7c76db31172010364">getType</a> ()</td></tr>
+<tr class="memdesc:aee6ce2748b5057f7c76db31172010364"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns what type of driver it is  <a href="class_j_motor_driver_e_s_p32_l293.html#aee6ce2748b5057f7c76db31172010364">More...</a><br /></td></tr>
+<tr class="separator:aee6ce2748b5057f7c76db31172010364"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a404aeaf88044976238a41b544195333a"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_e_s_p32_l293.html#a404aeaf88044976238a41b544195333a">set</a> (float val)</td></tr>
+<tr class="memdesc:a404aeaf88044976238a41b544195333a"><td class="mdescLeft">&#160;</td><td class="mdescRight">set motor power  <a href="class_j_motor_driver_e_s_p32_l293.html#a404aeaf88044976238a41b544195333a">More...</a><br /></td></tr>
+<tr class="separator:a404aeaf88044976238a41b544195333a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a220d81a20f1c2c092b98175a77a453be"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_e_s_p32_l293.html#a220d81a20f1c2c092b98175a77a453be">setEnable</a> (boolean enable)</td></tr>
+<tr class="memdesc:a220d81a20f1c2c092b98175a77a453be"><td class="mdescLeft">&#160;</td><td class="mdescRight">use to enable or disable a motor, and sets up pin states  <a href="class_j_motor_driver_e_s_p32_l293.html#a220d81a20f1c2c092b98175a77a453be">More...</a><br /></td></tr>
+<tr class="separator:a220d81a20f1c2c092b98175a77a453be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3804425ccb06d28e9908b91e927e1e06"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_e_s_p32_l293.html#a3804425ccb06d28e9908b91e927e1e06">getEnable</a> ()</td></tr>
+<tr class="memdesc:a3804425ccb06d28e9908b91e927e1e06"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the enable state of the driver  <a href="class_j_motor_driver_e_s_p32_l293.html#a3804425ccb06d28e9908b91e927e1e06">More...</a><br /></td></tr>
+<tr class="separator:a3804425ccb06d28e9908b91e927e1e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b2912832c69131540ab7fbeb231b9d9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_e_s_p32_l293.html#a8b2912832c69131540ab7fbeb231b9d9">getMaxRange</a> ()</td></tr>
+<tr class="memdesc:a8b2912832c69131540ab7fbeb231b9d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">high end of the range  <a href="class_j_motor_driver_e_s_p32_l293.html#a8b2912832c69131540ab7fbeb231b9d9">More...</a><br /></td></tr>
+<tr class="separator:a8b2912832c69131540ab7fbeb231b9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a152acb21ef5098c412b5991c18a99782"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_e_s_p32_l293.html#a152acb21ef5098c412b5991c18a99782">getMinRange</a> ()</td></tr>
+<tr class="memdesc:a152acb21ef5098c412b5991c18a99782"><td class="mdescLeft">&#160;</td><td class="mdescRight">low end of the range  <a href="class_j_motor_driver_e_s_p32_l293.html#a152acb21ef5098c412b5991c18a99782">More...</a><br /></td></tr>
+<tr class="separator:a152acb21ef5098c412b5991c18a99782"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a3a8ed4396d14f036b26fde5e1553e1a6"><td class="memItemLeft" align="right" valign="top"><a id="a3a8ed4396d14f036b26fde5e1553e1a6"></a>
+<tr class="memitem:a59742234cfce182208dc4eff36d10d53"><td class="memItemLeft" align="right" valign="top"><a id="a59742234cfce182208dc4eff36d10d53"></a>
 <a class="el" href="class_j_motor_driver_esp32_p_w_m.html">JMotorDriverEsp32PWM</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pwmDriver</b></td></tr>
-<tr class="separator:a3a8ed4396d14f036b26fde5e1553e1a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dad56b98f849b8fb6acf606008a153c"><td class="memItemLeft" align="right" valign="top"><a id="a8dad56b98f849b8fb6acf606008a153c"></a>
-boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = false</td></tr>
-<tr class="separator:a8dad56b98f849b8fb6acf606008a153c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a59742234cfce182208dc4eff36d10d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>for motor controllers with one direction input and one speed input pin </p>
+<div class="textblock"><p>L293 motor driver chip: <a href="https://www.ti.com/lit/ds/symlink/l293.pdf">https://www.ti.com/lit/ds/symlink/l293.pdf</a>. </p>
 <dl class="section note"><dt>Note</dt><dd>platform: ESP32 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a5b427aade397bbde6b35d4c7246733a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b427aade397bbde6b35d4c7246733a5">&#9670;&nbsp;</a></span>JMotorDriverESP32L293d() <span class="overload">[1/2]</span></h2>
+<a id="a4e593e3d0a53edba9856bc993a116326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e593e3d0a53edba9856bc993a116326">&#9670;&nbsp;</a></span>JMotorDriverESP32L293() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -134,7 +131,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = fals
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">JMotorDriverESP32L293d::JMotorDriverESP32L293d </td>
+          <td class="memname">JMotorDriverESP32L293::JMotorDriverESP32L293 </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>_ch</em>, </td>
@@ -149,13 +146,13 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = fals
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>_dirPin</em>, </td>
+          <td class="paramname"><em>_i1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>_rev</em> = <code>false</code>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_i2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -174,17 +171,17 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = fals
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_ch</td><td>ledc channel (must be unique for each driver) </td></tr>
-    <tr><td class="paramname">_enablePin</td><td>pin to output speed signal on </td></tr>
-    <tr><td class="paramname">_dirPin</td><td>pin to output direction signal on </td></tr>
-    <tr><td class="paramname">_rev</td><td>= false: if false(default), direction pin set HIGH for positive speed, LOW for negative speed </td></tr>
+    <tr><td class="paramname">_enablePin</td><td>enable(speed) pin on driver </td></tr>
+    <tr><td class="paramname">_i1</td><td>input pin 1 </td></tr>
+    <tr><td class="paramname">_i2</td><td>input pin 2 </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="aa4ecc9b56c20651b7ce62f46ec9b81d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4ecc9b56c20651b7ce62f46ec9b81d8">&#9670;&nbsp;</a></span>JMotorDriverESP32L293d() <span class="overload">[2/2]</span></h2>
+<a id="a532faf943a99dd12c0a1e453a53f8d9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a532faf943a99dd12c0a1e453a53f8d9b">&#9670;&nbsp;</a></span>JMotorDriverESP32L293() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -193,7 +190,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = fals
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">JMotorDriverESP32L293d::JMotorDriverESP32L293d </td>
+          <td class="memname">JMotorDriverESP32L293::JMotorDriverESP32L293 </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>_ch</em>, </td>
@@ -208,7 +205,13 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = fals
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>_dirPin</em>, </td>
+          <td class="paramname"><em>_i1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_i2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -220,13 +223,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = fals
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>resolution</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>_rev</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>resolution</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -245,11 +242,11 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = fals
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_ch</td><td>ledc channel (must be unique for each driver) </td></tr>
-    <tr><td class="paramname">_enPin</td><td>pin to output speed signal on </td></tr>
-    <tr><td class="paramname">_dirPin</td><td>pin to output direction signal on </td></tr>
+    <tr><td class="paramname">_enPin</td><td>enable(speed) pin on driver </td></tr>
+    <tr><td class="paramname">_i1</td><td>input pin 1 (direction) </td></tr>
+    <tr><td class="paramname">_i2</td><td>input pin 2 (direction) </td></tr>
     <tr><td class="paramname">freq</td><td>&lt;= int(80E6 / 2^resolution), 2kHz default and recommended for motor PWM </td></tr>
     <tr><td class="paramname">resolution</td><td>bits of resolution, tradeoff with frequency, default 12 </td></tr>
-    <tr><td class="paramname">_rev</td><td>= false: if false(default), direction pin set HIGH for positive speed, LOW for negative speed </td></tr>
   </table>
   </dd>
 </dl>
@@ -257,8 +254,8 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = fals
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="adf1492309b07af595504bd3161c3ac37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf1492309b07af595504bd3161c3ac37">&#9670;&nbsp;</a></span>getEnable()</h2>
+<a id="a3804425ccb06d28e9908b91e927e1e06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3804425ccb06d28e9908b91e927e1e06">&#9670;&nbsp;</a></span>getEnable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -267,7 +264,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = fals
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boolean JMotorDriverESP32L293d::getEnable </td>
+          <td class="memname">boolean JMotorDriverESP32L293::getEnable </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -292,8 +289,8 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = fals
 
 </div>
 </div>
-<a id="a9165fdb762112fbbffaa11a4ec21eb80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9165fdb762112fbbffaa11a4ec21eb80">&#9670;&nbsp;</a></span>getMaxRange()</h2>
+<a id="a8b2912832c69131540ab7fbeb231b9d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b2912832c69131540ab7fbeb231b9d9">&#9670;&nbsp;</a></span>getMaxRange()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -302,7 +299,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = fals
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float JMotorDriverESP32L293d::getMaxRange </td>
+          <td class="memname">float JMotorDriverESP32L293::getMaxRange </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -328,8 +325,8 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = fals
 
 </div>
 </div>
-<a id="a5a69b571ecfca8c541480e551326aa24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a69b571ecfca8c541480e551326aa24">&#9670;&nbsp;</a></span>getMinRange()</h2>
+<a id="a152acb21ef5098c412b5991c18a99782"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a152acb21ef5098c412b5991c18a99782">&#9670;&nbsp;</a></span>getMinRange()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -338,7 +335,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = fals
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float JMotorDriverESP32L293d::getMinRange </td>
+          <td class="memname">float JMotorDriverESP32L293::getMinRange </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -364,8 +361,8 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = fals
 
 </div>
 </div>
-<a id="af6e9a3416661d99a8deb068145f5fcc7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6e9a3416661d99a8deb068145f5fcc7">&#9670;&nbsp;</a></span>getType()</h2>
+<a id="aee6ce2748b5057f7c76db31172010364"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee6ce2748b5057f7c76db31172010364">&#9670;&nbsp;</a></span>getType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -374,7 +371,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = fals
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_j_motor_driver.html#a2ccb6ae751915e9173e192ba4b0cb009">JMotorDriverType</a> JMotorDriverESP32L293d::getType </td>
+          <td class="memname"><a class="el" href="class_j_motor_driver.html#a2ccb6ae751915e9173e192ba4b0cb009">JMotorDriverType</a> JMotorDriverESP32L293::getType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -399,8 +396,8 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = fals
 
 </div>
 </div>
-<a id="a9635e9ce24c0730f3afe5a072d241b1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9635e9ce24c0730f3afe5a072d241b1f">&#9670;&nbsp;</a></span>set()</h2>
+<a id="a404aeaf88044976238a41b544195333a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a404aeaf88044976238a41b544195333a">&#9670;&nbsp;</a></span>set()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -409,7 +406,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = fals
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boolean JMotorDriverESP32L293d::set </td>
+          <td class="memname">boolean JMotorDriverESP32L293::set </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>val</em></td><td>)</td>
@@ -442,8 +439,8 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = fals
 
 </div>
 </div>
-<a id="ab4f1cd75b478fa4eabc6883977870943"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4f1cd75b478fa4eabc6883977870943">&#9670;&nbsp;</a></span>setEnable()</h2>
+<a id="a220d81a20f1c2c092b98175a77a453be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a220d81a20f1c2c092b98175a77a453be">&#9670;&nbsp;</a></span>setEnable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -452,7 +449,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = fals
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boolean JMotorDriverESP32L293d::setEnable </td>
+          <td class="memname">boolean JMotorDriverESP32L293::setEnable </td>
           <td>(</td>
           <td class="paramtype">boolean&#160;</td>
           <td class="paramname"><em>val</em></td><td>)</td>
@@ -486,7 +483,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = fals
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/JMotorDriver/<a class="el" href="_j_motor_driver_esp32_p_w_m_dir_8h_source.html">JMotorDriverEsp32PWMDir.h</a></li>
+<li>src/JMotorDriver/<a class="el" href="_j_motor_driver_esp32_l293_8h_source.html">JMotorDriverEsp32L293.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -70,8 +70,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><br  />
-  
+<p>For servos and motor controllers that use servo signals (ESCs)  
  <a href="class_j_motor_driver_esp32_servo.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_j_motor_driver_esp32_servo_8h_source.html">JMotorDriverEsp32Servo.h</a>&gt;</code></p>
@@ -87,26 +86,20 @@ Inheritance diagram for JMotorDriverEsp32Servo:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa4aab964feec23cadd1a45e49ba004cc"><td class="memItemLeft" align="right" valign="top"><a id="aa4aab964feec23cadd1a45e49ba004cc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>JMotorDriverEsp32Servo</b> (int _pwmChannel, int _servoPin)</td></tr>
-<tr class="separator:aa4aab964feec23cadd1a45e49ba004cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e15a181d43844f731ceb8998b39cfe0"><td class="memItemLeft" align="right" valign="top"><a id="a1e15a181d43844f731ceb8998b39cfe0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>JMotorDriverEsp32Servo</b> (int _pwmChannel, int _servoPin, int _freq, int _resBits)</td></tr>
-<tr class="separator:a1e15a181d43844f731ceb8998b39cfe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add45cbcf20e45d1a5442e192701a04f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_servo.html#add45cbcf20e45d1a5442e192701a04f9">JMotorDriverEsp32Servo</a> (int _pwmChannel, int _servoPin, int _freq=50, int _resBits=20)</td></tr>
+<tr class="memdesc:add45cbcf20e45d1a5442e192701a04f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets up pins, custom frequency and resolution optional  <a href="class_j_motor_driver_esp32_servo.html#add45cbcf20e45d1a5442e192701a04f9">More...</a><br /></td></tr>
+<tr class="separator:add45cbcf20e45d1a5442e192701a04f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56b7ca1961e67c647afb5aba9ae2f7c2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_servo.html#a56b7ca1961e67c647afb5aba9ae2f7c2">setFrequencyAndResolution</a> (int freq=50, int resBits=20)</td></tr>
-<tr class="memdesc:a56b7ca1961e67c647afb5aba9ae2f7c2"><td class="mdescLeft">&#160;</td><td class="mdescRight"><br  />
-  <a href="class_j_motor_driver_esp32_servo.html#a56b7ca1961e67c647afb5aba9ae2f7c2">More...</a><br /></td></tr>
+<tr class="memdesc:a56b7ca1961e67c647afb5aba9ae2f7c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">set frequency that servo signal pulse is repeated at and how many bits are used internally for resolution  <a href="class_j_motor_driver_esp32_servo.html#a56b7ca1961e67c647afb5aba9ae2f7c2">More...</a><br /></td></tr>
 <tr class="separator:a56b7ca1961e67c647afb5aba9ae2f7c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c8a108c3536b6c39e275b38b02a594c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_j_motor_driver.html#a2ccb6ae751915e9173e192ba4b0cb009">JMotorDriverType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_servo.html#a8c8a108c3536b6c39e275b38b02a594c">getType</a> ()</td></tr>
 <tr class="memdesc:a8c8a108c3536b6c39e275b38b02a594c"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns what type of driver it is  <a href="class_j_motor_driver_esp32_servo.html#a8c8a108c3536b6c39e275b38b02a594c">More...</a><br /></td></tr>
 <tr class="separator:a8c8a108c3536b6c39e275b38b02a594c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a5c8695ab71784070c478a09803a761"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_servo.html#a5a5c8695ab71784070c478a09803a761">set</a> (float _val)</td></tr>
-<tr class="memdesc:a5a5c8695ab71784070c478a09803a761"><td class="mdescLeft">&#160;</td><td class="mdescRight"><br  />
-  <a href="class_j_motor_driver_esp32_servo.html#a5a5c8695ab71784070c478a09803a761">More...</a><br /></td></tr>
+<tr class="memdesc:a5a5c8695ab71784070c478a09803a761"><td class="mdescLeft">&#160;</td><td class="mdescRight">set motor power  <a href="class_j_motor_driver_esp32_servo.html#a5a5c8695ab71784070c478a09803a761">More...</a><br /></td></tr>
 <tr class="separator:a5a5c8695ab71784070c478a09803a761"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad26b8204b5c51ea285a28249be07ce98"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_servo.html#ad26b8204b5c51ea285a28249be07ce98">setEnable</a> (boolean enable)</td></tr>
-<tr class="memdesc:ad26b8204b5c51ea285a28249be07ce98"><td class="mdescLeft">&#160;</td><td class="mdescRight"><br  />
-  <a href="class_j_motor_driver_esp32_servo.html#ad26b8204b5c51ea285a28249be07ce98">More...</a><br /></td></tr>
+<tr class="memdesc:ad26b8204b5c51ea285a28249be07ce98"><td class="mdescLeft">&#160;</td><td class="mdescRight">use to enable or disable a motor, and sets up pin states  <a href="class_j_motor_driver_esp32_servo.html#ad26b8204b5c51ea285a28249be07ce98">More...</a><br /></td></tr>
 <tr class="separator:ad26b8204b5c51ea285a28249be07ce98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7a8ab511fad35d4a32b1e872d24d168"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_servo.html#ab7a8ab511fad35d4a32b1e872d24d168">getEnable</a> ()</td></tr>
 <tr class="memdesc:ab7a8ab511fad35d4a32b1e872d24d168"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the enable state of the driver  <a href="class_j_motor_driver_esp32_servo.html#ab7a8ab511fad35d4a32b1e872d24d168">More...</a><br /></td></tr>
@@ -128,11 +121,69 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>maxServoValue</b> = 24
 <tr class="separator:aaf18a239bbbfc89db79ef2c946bb4cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><br  />
- </p>
-<dl class="section note"><dt>Note</dt><dd><br  />
- </dd></dl>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p>For servos and motor controllers that use servo signals (ESCs) </p>
+<dl class="section note"><dt>Note</dt><dd>platform: ESP32 </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="add45cbcf20e45d1a5442e192701a04f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add45cbcf20e45d1a5442e192701a04f9">&#9670;&nbsp;</a></span>JMotorDriverEsp32Servo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">JMotorDriverEsp32Servo::JMotorDriverEsp32Servo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_pwmChannel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_servoPin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_freq</em> = <code>50</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_resBits</em> = <code>20</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>constructor, sets up pins, custom frequency and resolution optional </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_pwmChannel</td><td>ledc channel (must be unique for each driver) </td></tr>
+    <tr><td class="paramname">_servoPin</td><td>pin to output signal on </td></tr>
+    <tr><td class="paramname">_freq</td><td>= 50: Hz (default 50) must be &lt;= int(80E6 / 2^resBits) </td></tr>
+    <tr><td class="paramname">_resBits</td><td>= 20: (default 20) tradeoff with max available frequency </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab7a8ab511fad35d4a32b1e872d24d168"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab7a8ab511fad35d4a32b1e872d24d168">&#9670;&nbsp;</a></span>getEnable()</h2>
 
@@ -159,7 +210,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>maxServoValue</b> = 24
 <p>get the enable state of the driver </p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">true</td><td>if enabled, false if disabled </td></tr>
+    <tr><td class="paramname">(boolean)</td><td>true if enabled, false if disabled </td></tr>
   </table>
   </dd>
 </dl>
@@ -195,7 +246,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>maxServoValue</b> = 24
 <dl class="section note"><dt>Note</dt><dd>usually 1.0 </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">(float)</td><td></td></tr>
+    <tr><td class="paramname">(float)</td><td>maxRange </td></tr>
   </table>
   </dd>
 </dl>
@@ -231,7 +282,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>maxServoValue</b> = 24
 <dl class="section note"><dt>Note</dt><dd>usually -1.0, if 0, that indicates a motor controller with no reverse function </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">(float)</td><td></td></tr>
+    <tr><td class="paramname">(float)</td><td>minRange </td></tr>
   </table>
   </dd>
 </dl>
@@ -266,7 +317,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>maxServoValue</b> = 24
 <p>returns what type of driver it is </p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">(JMotorDriverType)</td><td></td></tr>
+    <tr><td class="paramname">(JMotorDriverType)</td><td>type </td></tr>
   </table>
   </dd>
 </dl>
@@ -288,7 +339,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>maxServoValue</b> = 24
           <td class="memname">boolean JMotorDriverEsp32Servo::set </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>_val</em></td><td>)</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -299,19 +350,17 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>maxServoValue</b> = 24
 </table>
 </div><div class="memdoc">
 
-<p><br  />
- </p>
-<dl class="section note"><dt>Note</dt><dd><br  />
- </dd></dl>
+<p>set motor power </p>
+<dl class="section note"><dt>Note</dt><dd>val should be between getMinRange and getMaxRange, but constrained internally </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_val</td><td></td></tr>
+    <tr><td class="paramname">val</td><td>(float) val </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">true</td><td>if value at end of range </td></tr>
+    <tr><td class="paramname">(boolean)</td><td>true if at end of power range </td></tr>
   </table>
   </dd>
 </dl>
@@ -333,7 +382,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>maxServoValue</b> = 24
           <td class="memname">boolean JMotorDriverEsp32Servo::setEnable </td>
           <td>(</td>
           <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>enable</em></td><td>)</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -344,19 +393,17 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>maxServoValue</b> = 24
 </table>
 </div><div class="memdoc">
 
-<p><br  />
- </p>
-<dl class="section note"><dt>Note</dt><dd><br  />
- </dd></dl>
+<p>use to enable or disable a motor, and sets up pin states </p>
+<dl class="section note"><dt>Note</dt><dd>setEnable(true) must be called before a motor driver will activate </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">enable</td><td></td></tr>
+    <tr><td class="paramname">val</td><td>(boolean) true=eneable, false=disable </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">returns</td><td>true if state changed, false otherwise </td></tr>
+    <tr><td class="paramname">(boolean)</td><td>true if state changed, false if state already set </td></tr>
   </table>
   </dd>
 </dl>
@@ -399,12 +446,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>maxServoValue</b> = 24
 </table>
 </div><div class="memdoc">
 
-<p><br  />
- </p>
+<p>set frequency that servo signal pulse is repeated at and how many bits are used internally for resolution </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">freq</td><td>Hz (default 50) must be &lt;= int(80E6 / 2^resBits) </td></tr>
-    <tr><td class="paramname">resBits</td><td>(default 20) </td></tr>
+    <tr><td class="paramname">resBits</td><td>(default 20) tradeoff with max available frequency </td></tr>
   </table>
   </dd>
 </dl>
