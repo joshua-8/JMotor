@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>JMotor: JMotorDriverAvrPWMDir Class Reference</title>
+<title>JMotor: JMotorDriverAvrL293 Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,56 +64,55 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="class_j_motor_driver_avr_p_w_m_dir-members.html">List of all members</a>  </div>
+<a href="class_j_motor_driver_avr_l293-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">JMotorDriverAvrPWMDir Class Reference</div>  </div>
+<div class="title">JMotorDriverAvrL293 Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>L293 motor driver chip: <a href="https://www.ti.com/lit/ds/symlink/l293.pdf">https://www.ti.com/lit/ds/symlink/l293.pdf</a>.  
+ <a href="class_j_motor_driver_avr_l293.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_j_motor_driver_avr_l293_8h_source.html">JMotorDriverAvrL293.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for JMotorDriverAvrPWMDir:</div>
+Inheritance diagram for JMotorDriverAvrL293:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="class_j_motor_driver_avr_p_w_m_dir.png" usemap="#JMotorDriverAvrPWMDir_map" alt=""/>
-  <map id="JMotorDriverAvrPWMDir_map" name="JMotorDriverAvrPWMDir_map">
-<area href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="JMotorDriver" shape="rect" coords="0,0,156,24"/>
+  <img src="class_j_motor_driver_avr_l293.png" usemap="#JMotorDriverAvrL293_map" alt=""/>
+  <map id="JMotorDriverAvrL293_map" name="JMotorDriverAvrL293_map">
+<area href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="JMotorDriver" shape="rect" coords="0,0,137,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1eeb5fb9f981cb92afe6024da67d7407"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_p_w_m_dir.html#a1eeb5fb9f981cb92afe6024da67d7407">JMotorDriverAvrPWMDir</a> (int _speedPin, int _dirPin, boolean _rev=false)</td></tr>
-<tr class="memdesc:a1eeb5fb9f981cb92afe6024da67d7407"><td class="mdescLeft">&#160;</td><td class="mdescRight"><br  />
-  <a href="class_j_motor_driver_avr_p_w_m_dir.html#a1eeb5fb9f981cb92afe6024da67d7407">More...</a><br /></td></tr>
-<tr class="separator:a1eeb5fb9f981cb92afe6024da67d7407"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af63d6a93ab37242e4901847f3cd35835"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_j_motor_driver.html#a2ccb6ae751915e9173e192ba4b0cb009">JMotorDriverType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_p_w_m_dir.html#af63d6a93ab37242e4901847f3cd35835">getType</a> ()</td></tr>
-<tr class="memdesc:af63d6a93ab37242e4901847f3cd35835"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns what type of driver it is  <a href="class_j_motor_driver_avr_p_w_m_dir.html#af63d6a93ab37242e4901847f3cd35835">More...</a><br /></td></tr>
-<tr class="separator:af63d6a93ab37242e4901847f3cd35835"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22660784e00b8d647664b2ffef8ae179"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_p_w_m_dir.html#a22660784e00b8d647664b2ffef8ae179">set</a> (float val)</td></tr>
-<tr class="memdesc:a22660784e00b8d647664b2ffef8ae179"><td class="mdescLeft">&#160;</td><td class="mdescRight"><br  />
-  <a href="class_j_motor_driver_avr_p_w_m_dir.html#a22660784e00b8d647664b2ffef8ae179">More...</a><br /></td></tr>
-<tr class="separator:a22660784e00b8d647664b2ffef8ae179"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9b97ebfbc1b7dd12bf57df17d3afc77"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_p_w_m_dir.html#ac9b97ebfbc1b7dd12bf57df17d3afc77">setEnable</a> (boolean enable)</td></tr>
-<tr class="memdesc:ac9b97ebfbc1b7dd12bf57df17d3afc77"><td class="mdescLeft">&#160;</td><td class="mdescRight"><br  />
-  <a href="class_j_motor_driver_avr_p_w_m_dir.html#ac9b97ebfbc1b7dd12bf57df17d3afc77">More...</a><br /></td></tr>
-<tr class="separator:ac9b97ebfbc1b7dd12bf57df17d3afc77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a439e92dc38b83a6e84de6d23654f14cf"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_p_w_m_dir.html#a439e92dc38b83a6e84de6d23654f14cf">getEnable</a> ()</td></tr>
-<tr class="memdesc:a439e92dc38b83a6e84de6d23654f14cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the enable state of the driver  <a href="class_j_motor_driver_avr_p_w_m_dir.html#a439e92dc38b83a6e84de6d23654f14cf">More...</a><br /></td></tr>
-<tr class="separator:a439e92dc38b83a6e84de6d23654f14cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a144188a01291cc83a95ff32b03471289"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_p_w_m_dir.html#a144188a01291cc83a95ff32b03471289">getMaxRange</a> ()</td></tr>
-<tr class="memdesc:a144188a01291cc83a95ff32b03471289"><td class="mdescLeft">&#160;</td><td class="mdescRight">high end of the range  <a href="class_j_motor_driver_avr_p_w_m_dir.html#a144188a01291cc83a95ff32b03471289">More...</a><br /></td></tr>
-<tr class="separator:a144188a01291cc83a95ff32b03471289"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b41167dc302d8b6c09716020a37a177"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_p_w_m_dir.html#a3b41167dc302d8b6c09716020a37a177">getMinRange</a> ()</td></tr>
-<tr class="memdesc:a3b41167dc302d8b6c09716020a37a177"><td class="mdescLeft">&#160;</td><td class="mdescRight">low end of the range  <a href="class_j_motor_driver_avr_p_w_m_dir.html#a3b41167dc302d8b6c09716020a37a177">More...</a><br /></td></tr>
-<tr class="separator:a3b41167dc302d8b6c09716020a37a177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a060fee9bf01df5401cadfa910d8dbdf0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_l293.html#a060fee9bf01df5401cadfa910d8dbdf0">JMotorDriverAvrL293</a> (int _en, int _i1, int _i2)</td></tr>
+<tr class="memdesc:a060fee9bf01df5401cadfa910d8dbdf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets up pins  <a href="class_j_motor_driver_avr_l293.html#a060fee9bf01df5401cadfa910d8dbdf0">More...</a><br /></td></tr>
+<tr class="separator:a060fee9bf01df5401cadfa910d8dbdf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07f373eb72ad36f9e1cae0832553e003"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_j_motor_driver.html#a2ccb6ae751915e9173e192ba4b0cb009">JMotorDriverType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_l293.html#a07f373eb72ad36f9e1cae0832553e003">getType</a> ()</td></tr>
+<tr class="memdesc:a07f373eb72ad36f9e1cae0832553e003"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns what type of driver it is  <a href="class_j_motor_driver_avr_l293.html#a07f373eb72ad36f9e1cae0832553e003">More...</a><br /></td></tr>
+<tr class="separator:a07f373eb72ad36f9e1cae0832553e003"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea5d08dc200f13e9631ae4d9c0848eba"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_l293.html#aea5d08dc200f13e9631ae4d9c0848eba">set</a> (float val)</td></tr>
+<tr class="memdesc:aea5d08dc200f13e9631ae4d9c0848eba"><td class="mdescLeft">&#160;</td><td class="mdescRight">set motor power  <a href="class_j_motor_driver_avr_l293.html#aea5d08dc200f13e9631ae4d9c0848eba">More...</a><br /></td></tr>
+<tr class="separator:aea5d08dc200f13e9631ae4d9c0848eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51430321ca511ed0cc7ad81984e0ee02"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_l293.html#a51430321ca511ed0cc7ad81984e0ee02">setEnable</a> (boolean enable)</td></tr>
+<tr class="memdesc:a51430321ca511ed0cc7ad81984e0ee02"><td class="mdescLeft">&#160;</td><td class="mdescRight">use to enable or disable a motor, and sets up pin states  <a href="class_j_motor_driver_avr_l293.html#a51430321ca511ed0cc7ad81984e0ee02">More...</a><br /></td></tr>
+<tr class="separator:a51430321ca511ed0cc7ad81984e0ee02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71569213d97b5d50f900a1dfda09deab"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_l293.html#a71569213d97b5d50f900a1dfda09deab">getEnable</a> ()</td></tr>
+<tr class="memdesc:a71569213d97b5d50f900a1dfda09deab"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the enable state of the driver  <a href="class_j_motor_driver_avr_l293.html#a71569213d97b5d50f900a1dfda09deab">More...</a><br /></td></tr>
+<tr class="separator:a71569213d97b5d50f900a1dfda09deab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5512afe93b96a10c2fe6c0659b6ee9eb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_l293.html#a5512afe93b96a10c2fe6c0659b6ee9eb">getMaxRange</a> ()</td></tr>
+<tr class="memdesc:a5512afe93b96a10c2fe6c0659b6ee9eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">high end of the range  <a href="class_j_motor_driver_avr_l293.html#a5512afe93b96a10c2fe6c0659b6ee9eb">More...</a><br /></td></tr>
+<tr class="separator:a5512afe93b96a10c2fe6c0659b6ee9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1f843cc6eb914d5cf0dd00ae8ba9d3d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_l293.html#ae1f843cc6eb914d5cf0dd00ae8ba9d3d">getMinRange</a> ()</td></tr>
+<tr class="memdesc:ae1f843cc6eb914d5cf0dd00ae8ba9d3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">low end of the range  <a href="class_j_motor_driver_avr_l293.html#ae1f843cc6eb914d5cf0dd00ae8ba9d3d">More...</a><br /></td></tr>
+<tr class="separator:ae1f843cc6eb914d5cf0dd00ae8ba9d3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a8fe41b013b17ca8ceddcb583016e4c97"><td class="memItemLeft" align="right" valign="top"><a id="a8fe41b013b17ca8ceddcb583016e4c97"></a>
-boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = false</td></tr>
-<tr class="separator:a8fe41b013b17ca8ceddcb583016e4c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a405440d1a48c7c755118dc099ceac969"><td class="memItemLeft" align="right" valign="top"><a id="a405440d1a48c7c755118dc099ceac969"></a>
+<tr class="memitem:ac3693aaf5c9fba48882d1d713390c460"><td class="memItemLeft" align="right" valign="top"><a id="ac3693aaf5c9fba48882d1d713390c460"></a>
 <a class="el" href="class_j_motor_driver_avr_p_w_m.html">JMotorDriverAvrPWM</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pwmDriver</b></td></tr>
-<tr class="separator:a405440d1a48c7c755118dc099ceac969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ac3693aaf5c9fba48882d1d713390c460"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -135,9 +134,12 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:a2ccb6ae751915e9173e192ba4b0cb009"><td class="mdescLeft">&#160;</td><td class="mdescRight">The JMotorDriverType enum is used so a specific subclass of <a class="el" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers">JMotorDriver</a> can return what type it is. <br /></td></tr>
 <tr class="separator:a2ccb6ae751915e9173e192ba4b0cb009 inherit pub_types_class_j_motor_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a1eeb5fb9f981cb92afe6024da67d7407"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1eeb5fb9f981cb92afe6024da67d7407">&#9670;&nbsp;</a></span>JMotorDriverAvrPWMDir()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>L293 motor driver chip: <a href="https://www.ti.com/lit/ds/symlink/l293.pdf">https://www.ti.com/lit/ds/symlink/l293.pdf</a>. </p>
+<dl class="section note"><dt>Note</dt><dd>platform: AVR (standard Arduinos) </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a060fee9bf01df5401cadfa910d8dbdf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a060fee9bf01df5401cadfa910d8dbdf0">&#9670;&nbsp;</a></span>JMotorDriverAvrL293()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,22 +148,22 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">JMotorDriverAvrPWMDir::JMotorDriverAvrPWMDir </td>
+          <td class="memname">JMotorDriverAvrL293::JMotorDriverAvrL293 </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>_speedPin</em>, </td>
+          <td class="paramname"><em>_en</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>_dirPin</em>, </td>
+          <td class="paramname"><em>_i1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>_rev</em> = <code>false</code>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_i2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -176,21 +178,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><br  />
- </p>
-<dl class="section note"><dt>Note</dt><dd><br  />
- </dd></dl>
+<p>constructor, sets up pins </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_speedPin</td><td></td></tr>
-    <tr><td class="paramname">_dirPin</td><td></td></tr>
-    <tr><td class="paramname">_rev</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramname">_en</td><td>enable pin </td></tr>
+    <tr><td class="paramname">_i1</td><td>input pin 1 </td></tr>
+    <tr><td class="paramname">_i2</td><td>input pin 2 </td></tr>
   </table>
   </dd>
 </dl>
@@ -198,8 +191,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a439e92dc38b83a6e84de6d23654f14cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a439e92dc38b83a6e84de6d23654f14cf">&#9670;&nbsp;</a></span>getEnable()</h2>
+<a id="a71569213d97b5d50f900a1dfda09deab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71569213d97b5d50f900a1dfda09deab">&#9670;&nbsp;</a></span>getEnable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -208,7 +201,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boolean JMotorDriverAvrPWMDir::getEnable </td>
+          <td class="memname">boolean JMotorDriverAvrL293::getEnable </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -233,8 +226,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a144188a01291cc83a95ff32b03471289"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a144188a01291cc83a95ff32b03471289">&#9670;&nbsp;</a></span>getMaxRange()</h2>
+<a id="a5512afe93b96a10c2fe6c0659b6ee9eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5512afe93b96a10c2fe6c0659b6ee9eb">&#9670;&nbsp;</a></span>getMaxRange()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,7 +236,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float JMotorDriverAvrPWMDir::getMaxRange </td>
+          <td class="memname">float JMotorDriverAvrL293::getMaxRange </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -269,8 +262,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a3b41167dc302d8b6c09716020a37a177"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b41167dc302d8b6c09716020a37a177">&#9670;&nbsp;</a></span>getMinRange()</h2>
+<a id="ae1f843cc6eb914d5cf0dd00ae8ba9d3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1f843cc6eb914d5cf0dd00ae8ba9d3d">&#9670;&nbsp;</a></span>getMinRange()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -279,7 +272,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float JMotorDriverAvrPWMDir::getMinRange </td>
+          <td class="memname">float JMotorDriverAvrL293::getMinRange </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -305,8 +298,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="af63d6a93ab37242e4901847f3cd35835"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af63d6a93ab37242e4901847f3cd35835">&#9670;&nbsp;</a></span>getType()</h2>
+<a id="a07f373eb72ad36f9e1cae0832553e003"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07f373eb72ad36f9e1cae0832553e003">&#9670;&nbsp;</a></span>getType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -315,7 +308,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_j_motor_driver.html#a2ccb6ae751915e9173e192ba4b0cb009">JMotorDriverType</a> JMotorDriverAvrPWMDir::getType </td>
+          <td class="memname"><a class="el" href="class_j_motor_driver.html#a2ccb6ae751915e9173e192ba4b0cb009">JMotorDriverType</a> JMotorDriverAvrL293::getType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -340,8 +333,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a22660784e00b8d647664b2ffef8ae179"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22660784e00b8d647664b2ffef8ae179">&#9670;&nbsp;</a></span>set()</h2>
+<a id="aea5d08dc200f13e9631ae4d9c0848eba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea5d08dc200f13e9631ae4d9c0848eba">&#9670;&nbsp;</a></span>set()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -350,7 +343,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boolean JMotorDriverAvrPWMDir::set </td>
+          <td class="memname">boolean JMotorDriverAvrL293::set </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>val</em></td><td>)</td>
@@ -364,19 +357,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><br  />
- </p>
-<dl class="section note"><dt>Note</dt><dd><br  />
- </dd></dl>
+<p>set motor power </p>
+<dl class="section note"><dt>Note</dt><dd>val should be between getMinRange and getMaxRange, but constrained internally </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_val</td><td></td></tr>
+    <tr><td class="paramname">val</td><td>(float) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">true</td><td>if value at end of range </td></tr>
+    <tr><td class="paramname">true</td><td>if at end of power range </td></tr>
   </table>
   </dd>
 </dl>
@@ -385,8 +376,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ac9b97ebfbc1b7dd12bf57df17d3afc77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9b97ebfbc1b7dd12bf57df17d3afc77">&#9670;&nbsp;</a></span>setEnable()</h2>
+<a id="a51430321ca511ed0cc7ad81984e0ee02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51430321ca511ed0cc7ad81984e0ee02">&#9670;&nbsp;</a></span>setEnable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -395,10 +386,10 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boolean JMotorDriverAvrPWMDir::setEnable </td>
+          <td class="memname">boolean JMotorDriverAvrL293::setEnable </td>
           <td>(</td>
           <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>enable</em></td><td>)</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -409,19 +400,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><br  />
- </p>
-<dl class="section note"><dt>Note</dt><dd><br  />
- </dd></dl>
+<p>use to enable or disable a motor, and sets up pin states </p>
+<dl class="section note"><dt>Note</dt><dd>setEnable(true) must be called before a motor driver will activate </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">enable</td><td></td></tr>
+    <tr><td class="paramname">val</td><td>true=eneable, false=disable </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">true</td><td>if state changed </td></tr>
+    <tr><td class="paramname">true</td><td>if state changed, false if state already set </td></tr>
   </table>
   </dd>
 </dl>
@@ -431,7 +420,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/JMotorDriver/<a class="el" href="_j_motor_driver_avr_p_w_m_dir_8h_source.html">JMotorDriverAvrPWMDir.h</a></li>
+<li>src/JMotorDriver/<a class="el" href="_j_motor_driver_avr_l293_8h_source.html">JMotorDriverAvrL293.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

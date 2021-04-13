@@ -30,7 +30,14 @@ var menudata={children:[
 {text:"Class Index",url:"classes.html"},
 {text:"Class Hierarchy",url:"hierarchy.html"},
 {text:"Class Members",url:"functions.html",children:[
-{text:"All",url:"functions.html"},
-{text:"Functions",url:"functions_func.html"}]}]},
+{text:"All",url:"functions.html",children:[
+{text:"g",url:"functions.html#index_g"},
+{text:"j",url:"functions.html#index_j"},
+{text:"s",url:"functions.html#index_s"}]},
+{text:"Functions",url:"functions_func.html",children:[
+{text:"g",url:"functions_func.html#index_g"},
+{text:"j",url:"functions_func.html#index_j"},
+{text:"s",url:"functions_func.html#index_s"}]},
+{text:"Enumerations",url:"functions_enum.html"}]}]},
 {text:"Files",url:"files.html",children:[
 {text:"File List",url:"files.html"}]}]}
