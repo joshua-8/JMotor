@@ -1,4 +1,0 @@
-<map id="JMotorDriverESP32L293d" name="JMotorDriverESP32L293d">
-<area shape="rect" id="node1" title="for motor controllers with one direction input and one speed input pin" alt="" coords="5,80,177,107"/>
-<area shape="rect" id="node2" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="43,5,139,32"/>
-</map>
