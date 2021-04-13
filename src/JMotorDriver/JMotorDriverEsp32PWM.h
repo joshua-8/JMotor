@@ -1,5 +1,5 @@
 /**
- * @brief  uses PulseWidthModulation to approximate an analog output
+ * @brief  uses ledc to output PWM approximation of an analog output
  * @note   platform: ESP32
  */
 #ifndef J_MOTOR_DRIVER_ESP32_PWM_H
