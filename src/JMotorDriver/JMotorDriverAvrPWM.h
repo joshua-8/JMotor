@@ -1,5 +1,5 @@
 /**
- * @brief  wrapper for analogWrite()  https://www.ti.com/lit/ds/symlink/l293.pdf
+ * @brief  wrapper for analogWrite()
  * @note   platform: AVR (standard Arduinos)
  */
 #ifndef J_MOTOR_DRIVER_AVR_PWM_H
@@ -35,7 +35,7 @@ public:
             int val = constrain(_val * PWM_RANGE, 0, PWM_RANGE);
             analogWrite(pin, val);
         }
-        return (_val >= 1.0) || (_val <= 0);
+        return (_val > 0.0) && (_val < 1.0);
     }
     boolean setEnable(boolean enable)
     {

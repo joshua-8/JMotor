@@ -57,7 +57,7 @@ public:
             }
             pwmDriver.set(abs(val));
         }
-        return abs(val) >= 1.0;
+        return abs(val) < 1.0;
     }
     boolean setEnable(boolean enable)
     {

@@ -1,5 +1,5 @@
 /**
- * @brief  uses PulseWidthModulation to approximate an analog output
+ * @brief  uses ledc to output PWM approximation of an analog output
  * @note   platform: ESP32
  */
 #ifndef J_MOTOR_DRIVER_ESP32_PWM_H
@@ -57,7 +57,7 @@ public:
             int val = constrain(_val * PWM_RANGE, 0, PWM_RANGE);
             ledcWrite(ch, val);
         }
-        return (_val >= 1.0) || (_val <= 0);
+        return (_val > 0) && (_val < 1.0);
     }
     boolean setEnable(boolean enable)
     {

@@ -36,7 +36,7 @@ public:
      * @brief  set motor power
      * @note  val should be between getMinRange and getMaxRange, but constrained internally
      * @param  val:  (float) val
-     * @retval (boolean) true if at end of power range
+     * @retval (boolean) false if at end of power range, true otherwise
      */
     virtual boolean set(float val);
 
