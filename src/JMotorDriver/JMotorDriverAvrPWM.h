@@ -1,5 +1,5 @@
 /**
- * @brief  wrapper for analogWrite()  https://www.ti.com/lit/ds/symlink/l293.pdf
+ * @brief  wrapper for analogWrite()
  * @note   platform: AVR (standard Arduinos)
  */
 #ifndef J_MOTOR_DRIVER_AVR_PWM_H
