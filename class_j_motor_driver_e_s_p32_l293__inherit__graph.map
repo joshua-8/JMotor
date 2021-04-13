@@ -1,0 +1,4 @@
+<map id="JMotorDriverESP32L293" name="JMotorDriverESP32L293">
+<area shape="rect" id="node1" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf." alt="" coords="5,80,171,107"/>
+<area shape="rect" id="node2" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="40,5,136,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="JMotorDriverAvrL293" name="JMotorDriverAvrL293">
+<area shape="rect" id="node1" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf." alt="" coords="5,171,151,197"/>
+<area shape="rect" id="node2" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="25,5,121,32"/>
+<area shape="rect" id="node3" href="$class_j_motor_driver_avr_p_w_m.html" title="wrapper for analogWrite() https://www.ti.com/lit/ds/symlink/l293.pdf" alt="" coords="95,81,243,108"/>
+</map>
