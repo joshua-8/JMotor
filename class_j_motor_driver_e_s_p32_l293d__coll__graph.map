@@ -1,5 +1,5 @@
 <map id="JMotorDriverESP32L293d" name="JMotorDriverESP32L293d">
 <area shape="rect" id="node1" title="for motor controllers with one direction input and one speed input pin" alt="" coords="5,171,177,197"/>
 <area shape="rect" id="node2" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="38,5,134,32"/>
-<area shape="rect" id="node3" href="$class_j_motor_driver_esp32_p_w_m.html" title="uses PulseWidthModulation to approximate an analog output" alt="" coords="108,81,272,108"/>
+<area shape="rect" id="node3" href="$class_j_motor_driver_esp32_p_w_m.html" title="uses ledc to output PWM approximation of an analog output" alt="" coords="108,81,272,108"/>
 </map>

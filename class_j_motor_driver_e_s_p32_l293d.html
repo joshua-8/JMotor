@@ -90,7 +90,7 @@ Collaboration diagram for JMotorDriverESP32L293d:</div>
 <map name="a_j_motor_driver_e_s_p32_l293d_coll__map" id="a_j_motor_driver_e_s_p32_l293d_coll__map">
 <area shape="rect" title="for motor controllers with one direction input and one speed input pin" alt="" coords="5,171,177,197"/>
 <area shape="rect" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="38,5,134,32"/>
-<area shape="rect" href="class_j_motor_driver_esp32_p_w_m.html" title="uses PulseWidthModulation to approximate an analog output" alt="" coords="108,81,272,108"/>
+<area shape="rect" href="class_j_motor_driver_esp32_p_w_m.html" title="uses ledc to output PWM approximation of an analog output" alt="" coords="108,81,272,108"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -443,7 +443,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reverse</b> = fals
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">(boolean)</td><td>true if at end of power range </td></tr>
+    <tr><td class="paramname">(boolean)</td><td>false if at end of power range, true otherwise </td></tr>
   </table>
   </dd>
 </dl>

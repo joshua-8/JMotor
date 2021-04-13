@@ -70,7 +70,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>uses PulseWidthModulation to approximate an analog output  
+<p>uses ledc to output PWM approximation of an analog output  
  <a href="class_j_motor_driver_esp32_p_w_m.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_j_motor_driver_esp32_p_w_m_8h_source.html">JMotorDriverEsp32PWM.h</a>&gt;</code></p>
@@ -79,7 +79,7 @@ Inheritance diagram for JMotorDriverEsp32PWM:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_motor_driver_esp32_p_w_m__inherit__graph.png" border="0" usemap="#a_j_motor_driver_esp32_p_w_m_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_j_motor_driver_esp32_p_w_m_inherit__map" id="a_j_motor_driver_esp32_p_w_m_inherit__map">
-<area shape="rect" title="uses PulseWidthModulation to approximate an analog output" alt="" coords="5,80,169,107"/>
+<area shape="rect" title="uses ledc to output PWM approximation of an analog output" alt="" coords="5,80,169,107"/>
 <area shape="rect" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="39,5,135,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -88,7 +88,7 @@ Collaboration diagram for JMotorDriverEsp32PWM:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_motor_driver_esp32_p_w_m__coll__graph.png" border="0" usemap="#a_j_motor_driver_esp32_p_w_m_coll__map" alt="Collaboration graph"/></div>
 <map name="a_j_motor_driver_esp32_p_w_m_coll__map" id="a_j_motor_driver_esp32_p_w_m_coll__map">
-<area shape="rect" title="uses PulseWidthModulation to approximate an analog output" alt="" coords="5,80,169,107"/>
+<area shape="rect" title="uses ledc to output PWM approximation of an analog output" alt="" coords="5,80,169,107"/>
 <area shape="rect" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="39,5,135,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -127,7 +127,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>disableState</b> =
 <tr class="separator:a1ede582361727e9d001ca3db9adb42c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>uses PulseWidthModulation to approximate an analog output </p>
+<div class="textblock"><p>uses ledc to output PWM approximation of an analog output </p>
 <dl class="section note"><dt>Note</dt><dd>platform: ESP32 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab74365a91e34c1e7d31f8b6c1b153db5"></a>
@@ -425,7 +425,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>disableState</b> =
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">(boolean)</td><td>true if at end of power range </td></tr>
+    <tr><td class="paramname">(boolean)</td><td>false if at end of power range, true otherwise </td></tr>
   </table>
   </dd>
 </dl>
