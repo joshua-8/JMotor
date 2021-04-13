@@ -1,3 +1,7 @@
+/**
+ * @brief  wrapper for analogWrite()
+ * @note   platform: AVR (standard Arduinos)
+ */
 #ifndef J_MOTOR_DRIVER_AVR_PWM_H
 #define J_MOTOR_DRIVER_AVR_PWM_H
 #include "JMotorDriver.h"
@@ -9,6 +13,12 @@ private:
 public:
     const int PWM_RANGE = 255;
     boolean disableState = LOW;
+    /**
+     * @brief  constructor, sets up pins
+     * @note   make sure to check which pins on your board are PWM capable
+     * @param  _pin: what pin to use
+     * @param  _disableState = LOW: when disabled, set pin LOW(default) or HIGH
+     */
     JMotorDriverAvrPWM(int _pin, boolean _disableState = LOW)
     {
         enabled = false;

@@ -1,3 +1,7 @@
+/**
+ * @brief  uses PulseWidthModulation to approximate an analog output
+ * @note   platform: ESP32
+ */
 #ifndef J_MOTOR_DRIVER_ESP32_PWM_H
 #define J_MOTOR_DRIVER_ESP32_PWM_H
 #include "JMotorDriver.h"
@@ -12,7 +16,12 @@ private:
 
 public:
     boolean disableState = LOW;
-
+    /**
+    * @brief  constructor, sets up pins, default PWM
+    * @param  _ch: ledc channel (must be unique for each driver)
+    * @param  _pin: pin to output signal on
+    * @param  _disableState = LOW: when disabled, set pin LOW(default) or HIGH
+    */
     JMotorDriverEsp32PWM(int _ch, int _pin, boolean _disableState = LOW)
     {
         enabled = false;
@@ -20,6 +29,14 @@ public:
         pin = _pin;
         disableState = _disableState;
     }
+    /**
+     * @brief  constructor, sets up pins, custom PWM settings
+     * @param  _ch:  ledc channel (must be unique for each driver)
+     * @param  _pin: pin to output signal on
+     * @param  freq: <= int(80E6 / 2^resolution), 2kHz default and recommended for motor PWM
+     * @param  resolution: bits of resolution, tradeoff with frequency, default 12
+     * @param  _disableState = LOw: when disabled, set pin LOW(default) or HIGH
+     */
     JMotorDriverEsp32PWM(int _ch, int _pin, int freq, int resolution, boolean _disableState = LOW)
     {
         enabled = false;
@@ -34,12 +51,6 @@ public:
     {
         return JMotorDriverType::esp32PWM;
     }
-    /**
-     * @brief  
-     * @note   
-     * @param  _val: 
-     * @retval true if value at end of range
-     */
     boolean set(float _val)
     {
         if (enabled) {

@@ -1,9 +1,12 @@
-#ifndef J_MOTOR_DRIVER_ESP32_L293D_H
-#define J_MOTOR_DRIVER_ESP32_L293D_H
+/**
+ * @brief  L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf
+ * @note   platform: ESP32
+ */
+#ifndef J_MOTOR_DRIVER_ESP32_L293_H
+#define J_MOTOR_DRIVER_ESP32_L293_H
 #include "JMotorDriver.h"
 #include "JMotorDriverEsp32PWM.h"
-//TODO: add more options for breaking
-class JMotorDriverESP32L293d : private JMotorDriver {
+class JMotorDriverESP32L293 : private JMotorDriver {
 private:
     boolean enabled = false;
     int i1;
@@ -11,15 +14,30 @@ private:
 
 public:
     JMotorDriverEsp32PWM pwmDriver;
-
-    JMotorDriverESP32L293d(int _ch, int _enablePin, int _i1, int _i2)
+    /**
+ * @brief  constructor, sets up pins, default PWM
+ * @param  _ch: ledc channel (must be unique for each driver)
+ * @param  _enablePin: enable(speed) pin on driver
+ * @param  _i1: input pin 1
+ * @param  _i2: input pin 2
+ */
+    JMotorDriverESP32L293(int _ch, int _enablePin, int _i1, int _i2)
         : pwmDriver { _ch, _enablePin }
     {
         enabled = false;
         i1 = _i1;
         i2 = _i2;
     }
-    JMotorDriverESP32L293d(int _ch, int _enPin, int _i1, int _i2, int freq, int resolution)
+    /**
+     * @brief  constructor, sets up pins, custom PWM settings
+     * @param  _ch: ledc channel (must be unique for each driver)
+     * @param  _enPin: enable(speed) pin on driver
+     * @param  _i1: input pin 1 (direction)
+     * @param  _i2: input pin 2 (direction)
+     * @param  freq: <= int(80E6 / 2^resolution), 2kHz default and recommended for motor PWM
+     * @param  resolution: bits of resolution, tradeoff with frequency, default 12
+     */
+    JMotorDriverESP32L293(int _ch, int _enPin, int _i1, int _i2, int freq, int resolution)
         : pwmDriver { _ch, _enPin, freq, resolution }
     {
         enabled = false;
@@ -28,14 +46,8 @@ public:
     }
     JMotorDriverType getType()
     {
-        return JMotorDriverType::esp32L293d;
+        return JMotorDriverType::esp32L293;
     }
-    /**
-     * @brief  
-     * @note   
-     * @param  _val: 
-     * @retval true if value at end of range
-     */
     boolean set(float val)
     {
         if (enabled) {
@@ -53,12 +65,6 @@ public:
         }
         return abs(val) >= 1.0;
     }
-    /**
-     * @brief  
-     * @note   
-     * @param  enable: 
-     * @retval true if state changed
-     */
     boolean setEnable(boolean enable)
     {
         if (enable) {

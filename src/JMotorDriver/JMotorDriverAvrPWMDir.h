@@ -1,3 +1,7 @@
+/**
+ * @brief  for motor controllers with one direction input and one speed input pin
+ * @note   platform: AVR (standard Arduinos)
+ */
 #ifndef J_MOTOR_DRIVER_AVR_PWMDIR_H
 #define J_MOTOR_DRIVER_AVR_PWMDIR_H
 #include "JMotorDriver.h"
@@ -11,12 +15,11 @@ public:
     boolean reverse = false;
     JMotorDriverAvrPWM pwmDriver;
     /**
-     * @brief  
-     * @note   
-     * @param  _speedPin: 
-     * @param  _dirPin: 
-     * @param  _rev: 
-     * @retval 
+     * @brief  constructor, sets up pins
+     * @note   speed pin must be PWM capable
+     * @param  _speedPin: speed input to motor controller (PWM)
+     * @param  _dirPin: direction input to motor controller (digital)
+     * @param  _rev = false: if false(default), direction pin set HIGH for positive speed, LOW for negative speed
      */
     JMotorDriverAvrPWMDir(int _speedPin, int _dirPin, boolean _rev = false)
         : pwmDriver { _speedPin }
@@ -29,12 +32,6 @@ public:
     {
         return JMotorDriverType::avrPWMDir;
     }
-    /**
-     * @brief  
-     * @note   
-     * @param  _val: 
-     * @retval true if value at end of range
-     */
     boolean set(float val)
     {
         if (enabled) {
@@ -48,12 +45,6 @@ public:
         }
         return abs(val) >= 1.0;
     }
-    /**
-     * @brief  
-     * @note   
-     * @param  enable: 
-     * @retval true if state changed
-     */
     boolean setEnable(boolean enable)
     {
         if (enable) {

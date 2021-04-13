@@ -16,9 +16,9 @@ public:
     JMotorDriverAvrPWM pwmDriver;
     /**
      * @brief  constructor, sets up pins
-     * @param  _en: enable pin
-     * @param  _i1: input pin 1
-     * @param  _i2: input pin 2
+     * @param  _en: enable(speed) pin on driver
+     * @param  _i1: input pin 1 (direction)
+     * @param  _i2: input pin 2 (direction)
      */
     JMotorDriverAvrL293(int _en, int _i1, int _i2)
         : pwmDriver { _en }
