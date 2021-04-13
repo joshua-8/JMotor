@@ -38,7 +38,7 @@ public:
             }
             motorServo.writeMicroseconds((maxServoValue + minServoValue) / 2 + (maxServoValue - minServoValue) * val / 2);
         }
-        return abs(_val) >= 1.0;
+        return abs(_val) < 1.0;
     }
     boolean setEnable(boolean enable)
     {

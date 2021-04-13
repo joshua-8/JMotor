@@ -57,7 +57,7 @@ public:
             int val = constrain(_val * PWM_RANGE, 0, PWM_RANGE);
             ledcWrite(ch, val);
         }
-        return (_val >= 1.0) || (_val <= 0);
+        return (_val > 0) && (_val < 1.0);
     }
     boolean setEnable(boolean enable)
     {
