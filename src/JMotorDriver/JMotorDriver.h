@@ -69,16 +69,16 @@ public:
     virtual float getMinRange();
 };
 
-#if defined(ESP32)
-#include "JMotorDriverEsp32L293.h"
-#include "JMotorDriverEsp32PWM.h"
-#include "JMotorDriverEsp32PWMDir.h"
-#include "JMotorDriverEsp32Servo.h"
-#elif defined(__AVR__)
+#if defined(ESP32) // ESP32s do pwm differently
 #include "JMotorDriverAvrL293.h"
 #include "JMotorDriverAvrPWM.h"
 #include "JMotorDriverAvrPWMDir.h"
 #include "JMotorDriverAvrServo.h"
+#else  // "standard" Arduino commands (analogWrite())
+#include "JMotorDriverEsp32L293.h"
+#include "JMotorDriverEsp32PWM.h"
+#include "JMotorDriverEsp32PWMDir.h"
+#include "JMotorDriverEsp32Servo.h"
 #endif
 
 #endif

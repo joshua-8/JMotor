@@ -1,5 +1,5 @@
 /**
- * @brief  wrapper for analogWrite()
+ * @brief  wrapper for analogWrite()  https://www.ti.com/lit/ds/symlink/l293.pdf
  * @note   platform: AVR (standard Arduinos)
  */
 #ifndef J_MOTOR_DRIVER_AVR_PWM_H
@@ -29,12 +29,6 @@ public:
     {
         return JMotorDriverType::avrPWM;
     }
-    /**
-     * @brief  
-     * @note   
-     * @param  _val: 
-     * @retval true if value at end of range
-     */
     boolean set(float _val)
     {
         if (enabled) {
