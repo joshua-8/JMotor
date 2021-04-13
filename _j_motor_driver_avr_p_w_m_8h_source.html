@@ -91,57 +91,57 @@ $(function() {
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">return</span> JMotorDriverType::avrPWM;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_j_motor_driver_avr_p_w_m.html#a0a091b51c5e6395ebc8e5aa04033e919">   38</a></span>&#160;    <span class="keywordtype">boolean</span> <a class="code" href="class_j_motor_driver_avr_p_w_m.html#a0a091b51c5e6395ebc8e5aa04033e919">set</a>(<span class="keywordtype">float</span> _val)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">if</span> (enabled) {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordtype">int</span> val = constrain(_val * PWM_RANGE, 0, PWM_RANGE);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            analogWrite(pin, val);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">return</span> (_val &gt;= 1.0) || (_val &lt;= 0);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_j_motor_driver_avr_p_w_m.html#a7e4055492f82fe7a0cad3b6b74d10d8a">   46</a></span>&#160;    <span class="keywordtype">boolean</span> <a class="code" href="class_j_motor_driver_avr_p_w_m.html#a7e4055492f82fe7a0cad3b6b74d10d8a">setEnable</a>(<span class="keywordtype">boolean</span> enable)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">if</span> (enable) {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">if</span> (!enabled) {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="comment">//actually enable</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                enabled = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                pinMode(pin, OUTPUT);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                analogWrite(pin, !disableState ? 0 : PWM_RANGE);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        } <span class="keywordflow">else</span> { <span class="comment">//disable</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">if</span> (enabled) {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="comment">//actually disable</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                enabled = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                pinMode(pin, OUTPUT);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                digitalWrite(pin, disableState);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_j_motor_driver_avr_p_w_m.html#abd134f1e70266f437c95e9ae1fd668d1">   67</a></span>&#160;    <span class="keywordtype">boolean</span> <a class="code" href="class_j_motor_driver_avr_p_w_m.html#abd134f1e70266f437c95e9ae1fd668d1">getEnable</a>()</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> enabled;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_j_motor_driver_avr_p_w_m.html#a13ea631d58e66d9e33c2aa1762b629c8">   71</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_motor_driver_avr_p_w_m.html#a13ea631d58e66d9e33c2aa1762b629c8">getMaxRange</a>()</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">return</span> 1.0;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_j_motor_driver_avr_p_w_m.html#ab1e320102fa7d133f1914da39300f32d">   75</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_motor_driver_avr_p_w_m.html#ab1e320102fa7d133f1914da39300f32d">getMinRange</a>()</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">return</span> 0.0;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_j_motor_driver_avr_p_w_m_html"><div class="ttname"><a href="class_j_motor_driver_avr_p_w_m.html">JMotorDriverAvrPWM</a></div><div class="ttdoc">wrapper for analogWrite()</div><div class="ttdef"><b>Definition:</b> JMotorDriverAvrPWM.h:8</div></div>
-<div class="ttc" id="aclass_j_motor_driver_avr_p_w_m_html_a0a091b51c5e6395ebc8e5aa04033e919"><div class="ttname"><a href="class_j_motor_driver_avr_p_w_m.html#a0a091b51c5e6395ebc8e5aa04033e919">JMotorDriverAvrPWM::set</a></div><div class="ttdeci">boolean set(float _val)</div><div class="ttdef"><b>Definition:</b> JMotorDriverAvrPWM.h:38</div></div>
-<div class="ttc" id="aclass_j_motor_driver_avr_p_w_m_html_a13ea631d58e66d9e33c2aa1762b629c8"><div class="ttname"><a href="class_j_motor_driver_avr_p_w_m.html#a13ea631d58e66d9e33c2aa1762b629c8">JMotorDriverAvrPWM::getMaxRange</a></div><div class="ttdeci">float getMaxRange()</div><div class="ttdoc">high end of the range</div><div class="ttdef"><b>Definition:</b> JMotorDriverAvrPWM.h:71</div></div>
-<div class="ttc" id="aclass_j_motor_driver_avr_p_w_m_html_a7e4055492f82fe7a0cad3b6b74d10d8a"><div class="ttname"><a href="class_j_motor_driver_avr_p_w_m.html#a7e4055492f82fe7a0cad3b6b74d10d8a">JMotorDriverAvrPWM::setEnable</a></div><div class="ttdeci">boolean setEnable(boolean enable)</div><div class="ttdoc">use to enable or disable a motor, and sets up pin states</div><div class="ttdef"><b>Definition:</b> JMotorDriverAvrPWM.h:46</div></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_j_motor_driver_avr_p_w_m.html#a0a091b51c5e6395ebc8e5aa04033e919">   32</a></span>&#160;    <span class="keywordtype">boolean</span> <a class="code" href="class_j_motor_driver_avr_p_w_m.html#a0a091b51c5e6395ebc8e5aa04033e919">set</a>(<span class="keywordtype">float</span> _val)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span> (enabled) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordtype">int</span> val = constrain(_val * PWM_RANGE, 0, PWM_RANGE);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            analogWrite(pin, val);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">return</span> (_val &gt;= 1.0) || (_val &lt;= 0);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_j_motor_driver_avr_p_w_m.html#a7e4055492f82fe7a0cad3b6b74d10d8a">   40</a></span>&#160;    <span class="keywordtype">boolean</span> <a class="code" href="class_j_motor_driver_avr_p_w_m.html#a7e4055492f82fe7a0cad3b6b74d10d8a">setEnable</a>(<span class="keywordtype">boolean</span> enable)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">if</span> (enable) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">if</span> (!enabled) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="comment">//actually enable</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                pinMode(pin, OUTPUT);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                analogWrite(pin, !disableState ? 0 : PWM_RANGE);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        } <span class="keywordflow">else</span> { <span class="comment">//disable</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">if</span> (enabled) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="comment">//actually disable</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                enabled = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                pinMode(pin, OUTPUT);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                digitalWrite(pin, disableState);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_j_motor_driver_avr_p_w_m.html#abd134f1e70266f437c95e9ae1fd668d1">   61</a></span>&#160;    <span class="keywordtype">boolean</span> <a class="code" href="class_j_motor_driver_avr_p_w_m.html#abd134f1e70266f437c95e9ae1fd668d1">getEnable</a>()</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span> enabled;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_j_motor_driver_avr_p_w_m.html#a13ea631d58e66d9e33c2aa1762b629c8">   65</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_motor_driver_avr_p_w_m.html#a13ea631d58e66d9e33c2aa1762b629c8">getMaxRange</a>()</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">return</span> 1.0;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_j_motor_driver_avr_p_w_m.html#ab1e320102fa7d133f1914da39300f32d">   69</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_motor_driver_avr_p_w_m.html#ab1e320102fa7d133f1914da39300f32d">getMinRange</a>()</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">return</span> 0.0;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_j_motor_driver_avr_p_w_m_html"><div class="ttname"><a href="class_j_motor_driver_avr_p_w_m.html">JMotorDriverAvrPWM</a></div><div class="ttdoc">wrapper for analogWrite() https://www.ti.com/lit/ds/symlink/l293.pdf</div><div class="ttdef"><b>Definition:</b> JMotorDriverAvrPWM.h:8</div></div>
+<div class="ttc" id="aclass_j_motor_driver_avr_p_w_m_html_a0a091b51c5e6395ebc8e5aa04033e919"><div class="ttname"><a href="class_j_motor_driver_avr_p_w_m.html#a0a091b51c5e6395ebc8e5aa04033e919">JMotorDriverAvrPWM::set</a></div><div class="ttdeci">boolean set(float _val)</div><div class="ttdoc">set motor power</div><div class="ttdef"><b>Definition:</b> JMotorDriverAvrPWM.h:32</div></div>
+<div class="ttc" id="aclass_j_motor_driver_avr_p_w_m_html_a13ea631d58e66d9e33c2aa1762b629c8"><div class="ttname"><a href="class_j_motor_driver_avr_p_w_m.html#a13ea631d58e66d9e33c2aa1762b629c8">JMotorDriverAvrPWM::getMaxRange</a></div><div class="ttdeci">float getMaxRange()</div><div class="ttdoc">high end of the range</div><div class="ttdef"><b>Definition:</b> JMotorDriverAvrPWM.h:65</div></div>
+<div class="ttc" id="aclass_j_motor_driver_avr_p_w_m_html_a7e4055492f82fe7a0cad3b6b74d10d8a"><div class="ttname"><a href="class_j_motor_driver_avr_p_w_m.html#a7e4055492f82fe7a0cad3b6b74d10d8a">JMotorDriverAvrPWM::setEnable</a></div><div class="ttdeci">boolean setEnable(boolean enable)</div><div class="ttdoc">use to enable or disable a motor, and sets up pin states</div><div class="ttdef"><b>Definition:</b> JMotorDriverAvrPWM.h:40</div></div>
 <div class="ttc" id="aclass_j_motor_driver_avr_p_w_m_html_a85126e1b738d3756b2e664a134bee55d"><div class="ttname"><a href="class_j_motor_driver_avr_p_w_m.html#a85126e1b738d3756b2e664a134bee55d">JMotorDriverAvrPWM::getType</a></div><div class="ttdeci">JMotorDriverType getType()</div><div class="ttdoc">returns what type of driver it is</div><div class="ttdef"><b>Definition:</b> JMotorDriverAvrPWM.h:28</div></div>
-<div class="ttc" id="aclass_j_motor_driver_avr_p_w_m_html_ab1e320102fa7d133f1914da39300f32d"><div class="ttname"><a href="class_j_motor_driver_avr_p_w_m.html#ab1e320102fa7d133f1914da39300f32d">JMotorDriverAvrPWM::getMinRange</a></div><div class="ttdeci">float getMinRange()</div><div class="ttdoc">low end of the range</div><div class="ttdef"><b>Definition:</b> JMotorDriverAvrPWM.h:75</div></div>
-<div class="ttc" id="aclass_j_motor_driver_avr_p_w_m_html_abd134f1e70266f437c95e9ae1fd668d1"><div class="ttname"><a href="class_j_motor_driver_avr_p_w_m.html#abd134f1e70266f437c95e9ae1fd668d1">JMotorDriverAvrPWM::getEnable</a></div><div class="ttdeci">boolean getEnable()</div><div class="ttdoc">get the enable state of the driver</div><div class="ttdef"><b>Definition:</b> JMotorDriverAvrPWM.h:67</div></div>
+<div class="ttc" id="aclass_j_motor_driver_avr_p_w_m_html_ab1e320102fa7d133f1914da39300f32d"><div class="ttname"><a href="class_j_motor_driver_avr_p_w_m.html#ab1e320102fa7d133f1914da39300f32d">JMotorDriverAvrPWM::getMinRange</a></div><div class="ttdeci">float getMinRange()</div><div class="ttdoc">low end of the range</div><div class="ttdef"><b>Definition:</b> JMotorDriverAvrPWM.h:69</div></div>
+<div class="ttc" id="aclass_j_motor_driver_avr_p_w_m_html_abd134f1e70266f437c95e9ae1fd668d1"><div class="ttname"><a href="class_j_motor_driver_avr_p_w_m.html#abd134f1e70266f437c95e9ae1fd668d1">JMotorDriverAvrPWM::getEnable</a></div><div class="ttdeci">boolean getEnable()</div><div class="ttdoc">get the enable state of the driver</div><div class="ttdef"><b>Definition:</b> JMotorDriverAvrPWM.h:61</div></div>
 <div class="ttc" id="aclass_j_motor_driver_avr_p_w_m_html_ad47046e668c419621b1ee36ec3d4e8cc"><div class="ttname"><a href="class_j_motor_driver_avr_p_w_m.html#ad47046e668c419621b1ee36ec3d4e8cc">JMotorDriverAvrPWM::JMotorDriverAvrPWM</a></div><div class="ttdeci">JMotorDriverAvrPWM(int _pin, boolean _disableState=LOW)</div><div class="ttdoc">constructor, sets up pins</div><div class="ttdef"><b>Definition:</b> JMotorDriverAvrPWM.h:22</div></div>
 <div class="ttc" id="aclass_j_motor_driver_html"><div class="ttname"><a href="class_j_motor_driver.html">JMotorDriver</a></div><div class="ttdoc">defines common interface for all types of JMotorDrivers</div><div class="ttdef"><b>Definition:</b> JMotorDriver.h:11</div></div>
 <div class="ttc" id="aclass_j_motor_driver_html_a2ccb6ae751915e9173e192ba4b0cb009"><div class="ttname"><a href="class_j_motor_driver.html#a2ccb6ae751915e9173e192ba4b0cb009">JMotorDriver::JMotorDriverType</a></div><div class="ttdeci">JMotorDriverType</div><div class="ttdoc">The JMotorDriverType enum is used so a specific subclass of JMotorDriver can indicate what type it is...</div><div class="ttdef"><b>Definition:</b> JMotorDriver.h:17</div></div>
