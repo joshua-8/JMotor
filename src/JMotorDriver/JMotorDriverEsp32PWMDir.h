@@ -6,7 +6,7 @@
 #define J_MOTOR_DRIVER_ESP32_PWMDIR_H
 #include "JMotorDriver.h"
 #include "JMotorDriverEsp32PWM.h"
-class JMotorDriverESP32L293d : private JMotorDriver {
+class JMotorDriverEsp32PWMDir : private JMotorDriver {
 private:
     boolean enabled = false;
     int dir;
@@ -21,7 +21,7 @@ public:
      * @param  _dirPin: pin to output direction signal on
      * @param  _rev = false: if false(default), direction pin set HIGH for positive speed, LOW for negative speed
      */
-    JMotorDriverESP32L293d(int _ch, int _enablePin, int _dirPin, boolean _rev = false)
+    JMotorDriverEsp32PWMDir(int _ch, int _enablePin, int _dirPin, boolean _rev = false)
         : pwmDriver { _ch, _enablePin }
     {
         enabled = false;
@@ -36,7 +36,7 @@ public:
      * @param  resolution: bits of resolution, tradeoff with frequency, default 12
      * @param  _rev = false: if false(default), direction pin set HIGH for positive speed, LOW for negative speed
      */
-    JMotorDriverESP32L293d(int _ch, int _enPin, int _dirPin, int freq, int resolution, boolean _rev = false)
+    JMotorDriverEsp32PWMDir(int _ch, int _enPin, int _dirPin, int freq, int resolution, boolean _rev = false)
         : pwmDriver { _ch, _enPin, freq, resolution }
     {
         enabled = false;

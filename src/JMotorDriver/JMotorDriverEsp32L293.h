@@ -6,7 +6,7 @@
 #define J_MOTOR_DRIVER_ESP32_L293_H
 #include "JMotorDriver.h"
 #include "JMotorDriverEsp32PWM.h"
-class JMotorDriverESP32L293 : private JMotorDriver {
+class JMotorDriverEsp32L293 : private JMotorDriver {
 private:
     boolean enabled = false;
     int i1;
@@ -21,7 +21,7 @@ public:
  * @param  _i1: input pin 1
  * @param  _i2: input pin 2
  */
-    JMotorDriverESP32L293(int _ch, int _enablePin, int _i1, int _i2)
+    JMotorDriverEsp32L293(int _ch, int _enablePin, int _i1, int _i2)
         : pwmDriver { _ch, _enablePin }
     {
         enabled = false;
@@ -37,7 +37,7 @@ public:
      * @param  freq: <= int(80E6 / 2^resolution), 2kHz default and recommended for motor PWM
      * @param  resolution: bits of resolution, tradeoff with frequency, default 12
      */
-    JMotorDriverESP32L293(int _ch, int _enPin, int _i1, int _i2, int freq, int resolution)
+    JMotorDriverEsp32L293(int _ch, int _enPin, int _i1, int _i2, int freq, int resolution)
         : pwmDriver { _ch, _enPin, freq, resolution }
     {
         enabled = false;

@@ -1,6 +1,6 @@
-#include <Arduino.h>
 #include "JMotor.h"
-JMotorDriverEsp32Servo jmd(1,1);
+#include <Arduino.h>
+JMotorDriverEsp32L293 jmd(1, 5, 18, 21);
 void setup()
 {
 }
