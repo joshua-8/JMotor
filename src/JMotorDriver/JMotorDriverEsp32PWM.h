@@ -17,7 +17,7 @@ private:
 public:
     boolean disableState = LOW;
     /**
-    * @brief  constructor, sets up pins, default PWM
+    * @brief  constructor, sets pins, default PWM
     * @param  _ch: ledc channel (must be unique for each driver)
     * @param  _pin: pin to output signal on
     * @param  _disableState = LOW: when disabled, set pin LOW(default) or HIGH
@@ -30,7 +30,7 @@ public:
         disableState = _disableState;
     }
     /**
-     * @brief  constructor, sets up pins, custom PWM settings
+     * @brief  constructor, sets pins, custom PWM settings
      * @param  _ch:  ledc channel (must be unique for each driver)
      * @param  _pin: pin to output signal on
      * @param  freq: <= int(80E6 / 2^resolution), 2kHz default and recommended for motor PWM
@@ -68,7 +68,7 @@ public:
                 ledcSetup(ch, PWM_FREQ, PWM_RES);
                 ledcAttachPin(pin, ch);
                 pinMode(pin, OUTPUT);
-                ledcWrite(ch, !disableState ? 0 : PWM_RANGE);
+                ledcWrite(ch, !disableState ? 0 : PWM_RANGE); //set disable state to start with
                 return true;
             }
         } else { //disable
@@ -96,5 +96,4 @@ public:
         return 0;
     }
 };
-
 #endif

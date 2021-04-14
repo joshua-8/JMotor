@@ -15,11 +15,11 @@ private:
     int SERVO_RES = 20;
 
 public:
-    int minServoValue = 544; // can be changed during runtime
-    int maxServoValue = 2400; // can be changed during runtime
+    int minServoValue = 544; // can be changed while running
+    int maxServoValue = 2400; // can be changed while running
 
     /**
-     * @brief  constructor, sets up pins, custom frequency and resolution optional
+     * @brief  constructor, sets pins, custom frequency and resolution optional
      * @param  _pwmChannel: ledc channel (must be unique for each driver)
      * @param  _servoPin: pin to output signal on
      * @param  _freq = 50: Hz (default 50) must be <= int(80E6 / 2^resBits)

@@ -14,18 +14,22 @@ private:
 
 public:
     JMotorDriverAvrPWM pwmDriver;
+    boolean breakOn; // can be changed while running
     /**
-     * @brief  constructor, sets up pins
+     * @brief  constructor, sets pins
      * @param  _en: enable(speed) pin on driver
      * @param  _i1: input pin 1 (direction)
      * @param  _i2: input pin 2 (direction)
+     * @param  _breakOn = true: if true (default), add extra resistance to motor when set to 0 power (by shorting motor terminals)
+     * @param  breakWhenDisabled = false: if false (default) turn off break when disabled, if true, keep electrically breaking
      */
-    JMotorDriverAvrL293(int _en, int _i1, int _i2)
-        : pwmDriver { _en }
+    JMotorDriverAvrL293(int _en, int _i1, int _i2, boolean _breakOn = true, boolean breakWhenDisabled = false)
+        : pwmDriver { _en, breakWhenDisabled }
     {
         enabled = false;
         i1 = _i1;
         i2 = _i2;
+        breakOn = _breakOn;
     }
     JMotorDriverType getType()
     {
@@ -44,7 +48,11 @@ public:
                 digitalWrite(i1, HIGH);
                 digitalWrite(i2, HIGH);
             }
-            pwmDriver.set(abs(val));
+            if (breakOn && val == 0) {
+                pwmDriver.set(1); //activate break
+            } else {
+                pwmDriver.set(abs(val));
+            }
         }
         return abs(val) < 1.0;
     }
@@ -56,8 +64,8 @@ public:
                 enabled = true;
                 pinMode(i1, OUTPUT);
                 pinMode(i2, OUTPUT);
-                digitalWrite(i1, HIGH);
-                digitalWrite(i2, HIGH);
+                digitalWrite(i1, LOW);
+                digitalWrite(i2, LOW);
                 pwmDriver.setEnable(true);
                 return true;
             }
@@ -65,11 +73,11 @@ public:
             if (enabled) {
                 //actually disable
                 enabled = false;
-                pwmDriver.setEnable(false);
                 pinMode(i1, OUTPUT);
                 pinMode(i2, OUTPUT);
                 digitalWrite(i1, LOW);
                 digitalWrite(i2, LOW);
+                pwmDriver.setEnable(false);
                 return true;
             }
         }

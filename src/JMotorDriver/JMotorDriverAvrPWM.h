@@ -14,7 +14,7 @@ public:
     const int PWM_RANGE = 255;
     boolean disableState = LOW;
     /**
-     * @brief  constructor, sets up pins
+     * @brief  constructor, sets pins
      * @note   make sure to check which pins on your board are PWM capable
      * @param  _pin: what pin to use
      * @param  _disableState = LOW: when disabled, set pin LOW(default) or HIGH
