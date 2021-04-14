@@ -13,10 +13,10 @@ private:
     Servo motorServo;
 
 public:
-    int minServoValue = 544;
-    int maxServoValue = 2400;
+    int minServoValue = 544; // can be changed while running
+    int maxServoValue = 2400; // can be changed while running
     /**
-     * @brief  constructor, sets up pins
+     * @brief  constructor, sets pins
      * @param  _servoPin: pin to attach servo to
      */
     JMotorDriverAvrServo(int _servoPin)

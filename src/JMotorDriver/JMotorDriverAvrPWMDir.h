@@ -15,7 +15,7 @@ public:
     boolean reverse = false;
     JMotorDriverAvrPWM pwmDriver;
     /**
-     * @brief  constructor, sets up pins
+     * @brief  constructor, sets pins
      * @note   speed pin must be PWM capable
      * @param  _speedPin: speed input to motor controller (PWM)
      * @param  _dirPin: direction input to motor controller (digital)
