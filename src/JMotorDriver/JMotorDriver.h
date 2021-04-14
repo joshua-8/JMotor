@@ -1,5 +1,4 @@
 /**
- * \class JMotorDriver
  * @brief  defines common interface for all types of JMotorDrivers
  * @note  JMotorDriver's functions are virtual, it can not be used directly
  */
