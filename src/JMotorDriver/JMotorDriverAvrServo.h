@@ -6,7 +6,7 @@
 #define J_MOTOR_DRIVER_AVR_SERVO_H
 #include "JMotorDriver.h"
 #include <Servo.h>
-class JMotorDriverAvrServo : public JMotorDriver {
+class JMotorDriverAvrServo : private JMotorDriver {
 private:
     boolean enabled = false;
     int servoPin;
