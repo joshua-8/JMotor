@@ -6,7 +6,7 @@
 #define J_MOTOR_DRIVER_AVR_PWMDIR_H
 #include "JMotorDriver.h"
 #include "JMotorDriverAvrPWM.h"
-class JMotorDriverAvrPWMDir : public JMotorDriver {
+class JMotorDriverAvrPWMDir : private JMotorDriver {
 private:
     boolean enabled = false;
     int dir;

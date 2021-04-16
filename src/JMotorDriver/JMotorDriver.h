@@ -1,5 +1,4 @@
 /**
- * \class JMotorDriver
  * @brief  defines common interface for all types of JMotorDrivers
  * @note  JMotorDriver's functions are virtual, it can not be used directly
  */
@@ -10,7 +9,6 @@
 //**********SEE BOTTOM OF THIS FILE FOR #INCLUDES OF SUBCLASSES**********//
 
 class JMotorDriver {
-
 public:
     /**
      * @brief  The JMotorDriverType enum is used so a specific subclass of JMotorDriver can indicate what type it is
@@ -75,7 +73,7 @@ public:
 #include "JMotorDriverEsp32PWM.h"
 #include "JMotorDriverEsp32PWMDir.h"
 #include "JMotorDriverEsp32Servo.h"
-#else  // "standard" Arduino commands (analogWrite())
+#else // "standard" Arduino commands (analogWrite())
 #include "JMotorDriverAvrL293.h"
 #include "JMotorDriverAvrPWM.h"
 #include "JMotorDriverAvrPWMDir.h"

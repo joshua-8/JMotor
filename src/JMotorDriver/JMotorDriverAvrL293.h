@@ -6,7 +6,7 @@
 #define J_MOTOR_DRIVER_AVR_L293_H
 #include "JMotorDriver.h"
 #include "JMotorDriverAvrPWM.h"
-class JMotorDriverAvrL293 : public JMotorDriver {
+class JMotorDriverAvrL293 : private JMotorDriver {
 private:
     boolean enabled = false;
     int i1;

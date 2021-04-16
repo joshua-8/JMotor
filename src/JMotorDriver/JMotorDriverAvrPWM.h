@@ -5,7 +5,7 @@
 #ifndef J_MOTOR_DRIVER_AVR_PWM_H
 #define J_MOTOR_DRIVER_AVR_PWM_H
 #include "JMotorDriver.h"
-class JMotorDriverAvrPWM : public JMotorDriver {
+class JMotorDriverAvrPWM : private JMotorDriver {
 private:
     boolean enabled = false;
     int pin;
