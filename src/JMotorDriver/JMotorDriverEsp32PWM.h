@@ -5,6 +5,7 @@
 #ifndef J_MOTOR_DRIVER_ESP32_PWM_H
 #define J_MOTOR_DRIVER_ESP32_PWM_H
 #include "JMotorDriver.h"
+#include <Arduino.h>
 class JMotorDriverEsp32PWM : private JMotorDriver {
 private:
     int PWM_RES = 12;

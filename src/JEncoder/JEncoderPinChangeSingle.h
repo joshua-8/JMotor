@@ -1,71 +1,64 @@
 /**
- * @brief  reads a quadrature (incremental) encoder,
- *      using a pin change interrupt library to support more pins than attachInterrupt()
- *      interrupt library: https://github.com/GreyGnome/EnableInterrupt
- *      speed calulation is done by measuring time between 4 encoder ticks (not between every tick since encoders may not have evenly spaced ticks)
- *      velocity is set to zero if the encoder has not turned in slowestIntervalMicros
+ * @brief  reads a single channel (incremental) encoder
+ * using a pin change interrupt library to support more pins than attachInterrupt()
+ * interrupt library: https://github.com/GreyGnome/EnableInterrupt
+ * direction can't be calculated with a single channel encoder, only speed can be.
+ * speed calulation is done by measuring time between 4 encoder ticks (not between every tick since encoders may not have evenly spaced ticks)
+ * velocity is set to zero if the encoder has not turned in slowestIntervalMicros
  * @note  platform: AVR (standard Arduinos)
  */
-#ifndef J_ENCODER_PIN_CHANGE_QUADRATURE_H
-#define J_ENCODER_PIN_CHANGE_QUADRATURE_H
+#ifndef J_ENCODER_PIN_CHANGE_SINGLE_H
+#define J_ENCODER_PIN_CHANGE_SINGLE_H
 #include "EnableInterrupt.h" //https://github.com/GreyGnome/EnableInterrupt
 #include "JEncoder.h"
 #include <Arduino.h>
 /**
  * @brief  Functions called by interrupts can't expect parameters or be functions of classes so a workaround is needed to use interrupts in a class.
  * The workaround that's used here is global functions need to be made when a new instance of this class is made.
- * The global functions get used when attaching interrupts, and the global functions can call functions inside the class.
- * The following macro makes it easy to make the global functions.
+ * The global function get used when attaching interrupts, and the global function can call a function inside the class.
+ * The following macro makes it easy to make the global function.
  */
-#define ENCODER_PCQ_MAKE_ISRS_MACRO(name)         \
-    void name##_jENCODER_ISR_A() { name.ISRA(); } \
-    void name##_jENCODER_ISR_B() { name.ISRB(); }
+#define ENCODER_PCS_MAKE_ISRS_MACRO(name) \
+    void name##_jENCODER_ISR() { name.encoderISR(); }
 
-class JEncoderPinChangeQuadrature : private JEncoder {
+class JEncoderPinChangeSingle : private JEncoder {
+
 private:
-    byte encoderAPin;
-    byte encoderBPin;
-
-    int8_t reverse; //can be 1 or -1
+    byte encoderPin;
+    int8_t reverse;
     float distPerCountFactor;
 
     volatile boolean velNew;
     volatile long tickCounter;
-    volatile boolean encForwards;
     volatile unsigned long lastEncoderTickMicros;
     volatile unsigned long encoderIntervalMicros;
     boolean newSpeed;
     unsigned long slowestIntervalMicros;
     boolean wasTimedOut;
 
-    void (*isrAPointer)(void);
-    void (*isrBPointer)(void);
+    void (*isrPointer)(void);
 
 public:
     /**
      * @brief  constructor, sets pins and settings
-     * @note   
-     * @param  _encoderAPin: one channel of quadrature encoder
-     * @param  _encoderBPin: other channel of quadrature encoder
+     * @param  _encoderAPin: encoder input pin
      * @param  _countsToDistFactor: conversion factor for getting distance in an actual unit
      * @param  _reverse: false(default)
      * @param  _slowestIntervalMicros: after this many microseconds without an encoder tick velocity is set to zero.
      */
-    JEncoderPinChangeQuadrature(byte _encoderAPin, byte _encoderBPin, float _countsToDistFactor = 1.0, boolean _reverse = false, unsigned long _slowestIntervalMicros = 100000UL)
+    JEncoderPinChangeSingle(byte _encoderPin, float _countsToDistFactor = 1.0, boolean _reverse = false, unsigned long _slowestIntervalMicros = 100000UL)
     {
-        encoderAPin = _encoderAPin;
-        encoderBPin = _encoderBPin;
+        encoderPin = _encoderPin;
+        distPerCountFactor = _countsToDistFactor;
+        slowestIntervalMicros = _slowestIntervalMicros;
         if (_reverse) {
             reverse = -1;
         } else {
             reverse = 1;
         }
-        distPerCountFactor = _countsToDistFactor;
-        slowestIntervalMicros = _slowestIntervalMicros;
 
         velNew = false;
         tickCounter = 0;
-        encForwards = true;
         encoderIntervalMicros = 0;
         lastEncoderTickMicros = 0;
         newSpeed = false;
@@ -73,19 +66,15 @@ public:
     }
     /**
      * @brief  set up pins and interrupts
-     * @param  _isrAPointer: global function that calls internal ISRA, to use with enableInterrupt
-     * @param  _isrBPointer: 
+     * @param  _isrPointer: global function that calls internal ISRA, to use with enableInterrupt
      */
-    void setUpInterrupts(void (*_isrAPointer)(void), void (*_isrBPointer)(void))
+    void setUpInterrupts(void (*_isrPointer)(void))
     {
-        isrAPointer = _isrAPointer;
-        isrBPointer = _isrBPointer;
+        isrPointer = _isrPointer;
 
-        pinMode(encoderAPin, INPUT);
-        pinMode(encoderBPin, INPUT);
+        pinMode(encoderPin, INPUT);
 
-        enableInterrupt(encoderAPin, isrAPointer, CHANGE);
-        enableInterrupt(encoderBPin, isrBPointer, CHANGE);
+        enableInterrupt(encoderPin, isrPointer, CHANGE);
     }
     /**
      * @brief  disable interrupts and stop monitoring encoder
@@ -93,8 +82,7 @@ public:
      */
     void turnOffInterrupts()
     {
-        disableInterrupt(encoderAPin);
-        disableInterrupt(encoderBPin);
+        disableInterrupt(encoderPin);
     }
     long zeroCounter()
     {
@@ -116,12 +104,7 @@ public:
         if (tempInterval == 0) { //avoid divide by zero
             return 0.0;
         }
-
-        if (encForwards) {
-            return reverse * 1000000.0 / (tempInterval)*distPerCountFactor * 4;
-        } else {
-            return reverse * -1000000.0 / (tempInterval)*distPerCountFactor * 4;
-        }
+        return reverse * 1000000.0 / (tempInterval)*distPerCountFactor * 2;
     }
     long getCounter()
     {
@@ -154,7 +137,7 @@ public:
     }
     boolean hasDirection()
     {
-        return true;
+        return false;
     }
     boolean isVelNew()
     {
@@ -179,29 +162,15 @@ public:
         return false;
     }
 
-    void ISRA(void)
+    void encoderISR(void)
     {
-        if (digitalRead(encoderAPin) == HIGH) { //once a cycle save values used for speed calculations
+        if (digitalRead(encoderPin) == HIGH) { //once a cycle save values used for speed calculations
             unsigned long tempMicros = micros();
             encoderIntervalMicros = tempMicros - lastEncoderTickMicros;
             lastEncoderTickMicros = tempMicros;
             newSpeed = true;
         }
-        encForwards = (digitalRead(encoderAPin) == digitalRead(encoderBPin));
-        if (encForwards) {
-            tickCounter++;
-        } else {
-            tickCounter--;
-        }
-    }
-    void ISRB(void)
-    {
-        encForwards = (digitalRead(encoderAPin) != digitalRead(encoderBPin));
-        if (encForwards) {
-            tickCounter++;
-        } else {
-            tickCounter--;
-        }
+        tickCounter++;
     }
 };
 #endif

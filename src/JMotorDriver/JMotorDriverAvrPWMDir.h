@@ -6,6 +6,7 @@
 #define J_MOTOR_DRIVER_AVR_PWMDIR_H
 #include "JMotorDriver.h"
 #include "JMotorDriverAvrPWM.h"
+#include <Arduino.h>
 class JMotorDriverAvrPWMDir : private JMotorDriver {
 private:
     boolean enabled = false;

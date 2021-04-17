@@ -63,8 +63,10 @@ public:
 
 #if defined(ESP32) || defined(CORE_TEENSY)
 #include "JEncoderAttachInterruptQuadrature.h"
+#include "JEncoderAttachInterruptSingle.h"
 #else
 #include "JEncoderPinChangeQuadrature.h"
+#include "JEncoderPinChangeSingle.h"
 #endif
 
 #endif

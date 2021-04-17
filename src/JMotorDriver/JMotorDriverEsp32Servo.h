@@ -5,6 +5,7 @@
 #ifndef J_MOTOR_DRIVER_ESP32_SERVO_H
 #define J_MOTOR_DRIVER_ESP32_SERVO_H
 #include "JMotorDriver.h"
+#include <Arduino.h>
 class JMotorDriverEsp32Servo : private JMotorDriver {
 private:
     boolean enabled = false;

@@ -6,6 +6,7 @@
 #define J_MOTOR_DRIVER_AVR_L293_H
 #include "JMotorDriver.h"
 #include "JMotorDriverAvrPWM.h"
+#include <Arduino.h>
 class JMotorDriverAvrL293 : private JMotorDriver {
 private:
     boolean enabled = false;

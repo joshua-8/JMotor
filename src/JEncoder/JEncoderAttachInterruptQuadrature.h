@@ -8,7 +8,7 @@
 #ifndef J_ENCODER_ATTACH_INTERRUPT_QUADRATURE_H
 #define J_ENCODER_ATTACH_INTERRUPT_QUADRATURE_H
 #include "JEncoder.h"
-
+#include <Arduino.h>
 /**
  * @brief  Functions called by interrupts can't expect parameters or be functions of classes so a workaround is needed to use interrupts in a class.
  * The workaround that's used here is global functions need to be made when a new instance of this class is made.
@@ -47,10 +47,10 @@ public:
      * @param  _encoderAPin: one channel of quadrature encoder
      * @param  _encoderBPin: other channel of quadrature encoder
      * @param  _countsToDistFactor: conversion factor for getting distance in an actual unit
-     * @param  _slowestIntervalMicros: after this many microseconds without an encoder tick velocity is set to zero.
      * @param  _reverse: false(default)
+     * @param  _slowestIntervalMicros: after this many microseconds without an encoder tick velocity is set to zero.
      */
-    JEncoderAttachInterruptQuadrature(byte _encoderAPin, byte _encoderBPin, float _countsToDistFactor = 1.0, unsigned long _slowestIntervalMicros = 100000UL, boolean _reverse = false)
+    JEncoderAttachInterruptQuadrature(byte _encoderAPin, byte _encoderBPin, float _countsToDistFactor = 1.0, boolean _reverse = false, unsigned long _slowestIntervalMicros = 100000UL)
     {
         encoderAPin = _encoderAPin;
         encoderBPin = _encoderBPin;

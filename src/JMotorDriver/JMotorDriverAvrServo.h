@@ -5,6 +5,7 @@
 #ifndef J_MOTOR_DRIVER_AVR_SERVO_H
 #define J_MOTOR_DRIVER_AVR_SERVO_H
 #include "JMotorDriver.h"
+#include <Arduino.h>
 #include <Servo.h>
 class JMotorDriverAvrServo : private JMotorDriver {
 private:
