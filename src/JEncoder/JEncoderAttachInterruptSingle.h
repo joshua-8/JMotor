@@ -159,6 +159,7 @@ public:
         }
         return false;
     }
+    void run() { }
 
     void encoderISR(void)
     {

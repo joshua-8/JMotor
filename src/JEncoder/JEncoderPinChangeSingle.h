@@ -162,6 +162,8 @@ public:
         return false;
     }
 
+    void run() { }
+
     void encoderISR(void)
     {
         if (digitalRead(encoderPin) == HIGH) { //once a cycle save values used for speed calculations
