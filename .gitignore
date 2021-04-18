@@ -1,3 +1,4 @@
 *.ini
+!platformio.ini
 /.pio
 /.vscode
