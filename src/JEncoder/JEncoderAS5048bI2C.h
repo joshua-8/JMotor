@@ -226,9 +226,9 @@ public:
         writeToZeroRegister(zeroAngle);
     }
 
-    /**
-     * @retval the raw angle reading from the sensor (0 to 16,383) (but negative if reverse is true)
+    /** 
      * @note divide by STEPS_PER_TURN to get fraction of full turn
+     * @retval the raw angle reading from the sensor (0 to 16,383) (but negative if reverse is true)
      */
 
     int rawReading()

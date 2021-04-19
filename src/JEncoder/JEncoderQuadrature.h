@@ -1,62 +1,71 @@
 /**
- * @brief  reads a single channel (incremental) encoder using attachInterrupt()
- * direction can't be calculated with a single channel encoder, only speed can be.
- * speed calulation is done by measuring time between 2 encoder ticks (not between every tick since encoders may not have evenly spaced ticks)
+ * @brief  reads a quadrature (incremental) encoder
+ * speed calulation is done by measuring time between 4 encoder ticks (not between every tick since encoders may not have evenly spaced ticks)
  * velocity is set to zero if the encoder has not turned in slowestIntervalMicros
- * @note  platform: esp32, teensy \n
- *          (could be used with standard avr arduinos but only with pins that support attachInterrupt())
+ * @note don't use this class directly, use a subclass
  */
-#ifndef J_ENCODER_ATTACH_INTERRUPT_SINGLE_H
-#define J_ENCODER_ATTACH_INTERRUPT_SINGLE_H
+
+#ifndef J_ENCODER_QUADRATURE_H
+#define J_ENCODER_QUADRATURE_H
 #include "JEncoder.h"
 #include <Arduino.h>
 /*
  * Functions called by interrupts can't expect parameters or be functions of classes so a workaround is needed to use interrupts in a class.
  * The workaround that's used here is global functions need to be made when a new instance of this class is made.
- * The global function get used when attaching interrupts, and the global function can call a function inside the class.
- * The following macro makes it easy to make the global function.
+ * The global functions get used when attaching interrupts, and the global functions can call functions inside the class.
+ * The following macro makes it easy to make the global functions.
  */
-#define ENCODER_AIS_MAKE_ISRS_MACRO(name) \
-    void name##_jENCODER_ISR() { name.encoderISR(); }
+#define ENCODER_MAKE_ISRS_MACRO(name)             \
+    void name##_jENCODER_ISR_A() { name.ISRA(); } \
+    void name##_jENCODER_ISR_B() { name.ISRB(); }
 
-class JEncoderAttachInterruptSingle : private JEncoder {
+class JEncoderQuadrature : public JEncoder {
+
+protected:
+    byte encoderAPin;
+    byte encoderBPin;
+
+    void (*isrAPointer)(void);
+    void (*isrBPointer)(void);
 
 private:
-    byte encoderPin;
-    int8_t reverse;
+    int8_t reverse; //can be 1 or -1
     float distPerCountFactor;
 
     volatile boolean velNew;
     volatile long tickCounter;
+    volatile boolean encForwards;
     volatile unsigned long lastEncoderTickMicros;
     volatile unsigned long encoderIntervalMicros;
     boolean newSpeed;
     unsigned long slowestIntervalMicros;
     boolean wasTimedOut;
 
-    void (*isrPointer)(void);
-
-public:
+protected:
     /**
      * @brief  constructor, sets pins and settings
-     * @param  _encoderAPin: encoder input pin
+     * @note   
+     * @param  _encoderAPin: one channel of quadrature encoder
+     * @param  _encoderBPin: other channel of quadrature encoder
      * @param  _countsToDistFactor: conversion factor for getting distance in an actual unit
      * @param  _reverse: false(default)
      * @param  _slowestIntervalMicros: after this many microseconds without an encoder tick velocity is set to zero.
      */
-    JEncoderAttachInterruptSingle(byte _encoderPin, float _countsToDistFactor = 1.0, boolean _reverse = false, unsigned long _slowestIntervalMicros = 100000UL)
+    JEncoderQuadrature(byte _encoderAPin, byte _encoderBPin, float _countsToDistFactor = 1.0, boolean _reverse = false, unsigned long _slowestIntervalMicros = 100000UL)
     {
-        encoderPin = _encoderPin;
-        distPerCountFactor = _countsToDistFactor;
-        slowestIntervalMicros = _slowestIntervalMicros;
+        encoderAPin = _encoderAPin;
+        encoderBPin = _encoderBPin;
         if (_reverse) {
             reverse = -1;
         } else {
             reverse = 1;
         }
+        distPerCountFactor = _countsToDistFactor;
+        slowestIntervalMicros = _slowestIntervalMicros;
 
         velNew = false;
         tickCounter = 0;
+        encForwards = true;
         encoderIntervalMicros = 0;
         lastEncoderTickMicros = 0;
         newSpeed = false;
@@ -64,24 +73,17 @@ public:
     }
     /**
      * @brief  set up pins and interrupts
-     * @param  _isrPointer: global function that calls internal ISRA, to use with enableInterrupt
+     * @param  _isrAPointer: global function that calls internal ISRA, to use with enableInterrupt
+     * @param  _isrBPointer: 
      */
-    void setUpInterrupts(void (*_isrPointer)(void))
-    {
-        isrPointer = _isrPointer;
-
-        pinMode(encoderPin, INPUT);
-
-        attachInterrupt(encoderPin, isrPointer, CHANGE);
-    }
+    virtual void setUpInterrupts(void (*_isrAPointer)(void), void (*_isrBPointer)(void));
     /**
      * @brief  disable interrupts and stop monitoring encoder
      * @note use setUpInterrupts to start encoder again
      */
-    void turnOffInterrupts()
-    {
-        detachInterrupt(encoderPin);
-    }
+    virtual void turnOffInterrupts();
+
+public:
     long zeroCounter()
     {
         long tempCounter = tickCounter * reverse;
@@ -102,7 +104,12 @@ public:
         if (tempInterval == 0) { //avoid divide by zero
             return 0.0;
         }
-        return reverse * 1000000.0 / (tempInterval)*distPerCountFactor * 2;
+
+        if (encForwards) {
+            return reverse * 1000000.0 / (tempInterval)*distPerCountFactor * 4;
+        } else {
+            return reverse * -1000000.0 / (tempInterval)*distPerCountFactor * 4;
+        }
     }
     long getCounter()
     {
@@ -135,7 +142,7 @@ public:
     }
     boolean hasDirection()
     {
-        return false;
+        return true;
     }
     boolean isVelNew()
     {
@@ -161,15 +168,29 @@ public:
     }
     void run() { }
 
-    void encoderISR(void)
+    void ISRA(void)
     {
-        if (digitalRead(encoderPin) == HIGH) { //once a cycle save values used for speed calculations
+        if (digitalRead(encoderAPin) == HIGH) { //once a cycle save values used for speed calculations
             unsigned long tempMicros = micros();
             encoderIntervalMicros = tempMicros - lastEncoderTickMicros;
             lastEncoderTickMicros = tempMicros;
             newSpeed = true;
         }
-        tickCounter++;
+        encForwards = (digitalRead(encoderAPin) == digitalRead(encoderBPin));
+        if (encForwards) {
+            tickCounter++;
+        } else {
+            tickCounter--;
+        }
+    }
+    void ISRB(void)
+    {
+        encForwards = (digitalRead(encoderAPin) != digitalRead(encoderBPin));
+        if (encForwards) {
+            tickCounter++;
+        } else {
+            tickCounter--;
+        }
     }
 };
 #endif
