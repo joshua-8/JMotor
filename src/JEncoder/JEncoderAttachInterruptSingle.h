@@ -3,15 +3,15 @@
  * direction can't be calculated with a single channel encoder, only speed can be.
  * speed calulation is done by measuring time between 2 encoder ticks (not between every tick since encoders may not have evenly spaced ticks)
  * velocity is set to zero if the encoder has not turned in slowestIntervalMicros
- * @note  platform: esp32, teensy
+ * @note  platform: esp32, teensy \n
  *          (could be used with standard avr arduinos but only with pins that support attachInterrupt())
  */
 #ifndef J_ENCODER_ATTACH_INTERRUPT_SINGLE_H
 #define J_ENCODER_ATTACH_INTERRUPT_SINGLE_H
 #include "JEncoder.h"
 #include <Arduino.h>
-/**
- * @brief  Functions called by interrupts can't expect parameters or be functions of classes so a workaround is needed to use interrupts in a class.
+/*
+ * Functions called by interrupts can't expect parameters or be functions of classes so a workaround is needed to use interrupts in a class.
  * The workaround that's used here is global functions need to be made when a new instance of this class is made.
  * The global function get used when attaching interrupts, and the global function can call a function inside the class.
  * The following macro makes it easy to make the global function.
