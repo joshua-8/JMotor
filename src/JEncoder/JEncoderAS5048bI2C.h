@@ -102,8 +102,8 @@ private:
     }
 
 public:
-    const unsigned int STEPS_PER_TURN = 16384;
-    static const byte AS5048B_DEFAULT_ADDRESS = 0x40;
+    const unsigned int STEPS_PER_TURN = 16384; //resolution of encoder
+    static const byte AS5048B_DEFAULT_ADDRESS = 0x40; //can be accessed as JEncoderAS5048bI2C::AS5048B_DEFAULT_ADDRESS
 
     /**
      * @brief  sets pins and settings for reading the encoder
@@ -153,10 +153,10 @@ public:
      */
 
 #ifndef J_ENCODER_AS5048_I2C_USE_SOFTWIRE
-    void begin(boolean begin = true)
+    void begin(boolean _begin = true)
     {
         wire = &Wire;
-        if (begin) {
+        if (_begin) {
             wire->begin();
         }
     }
