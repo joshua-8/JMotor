@@ -74,5 +74,6 @@ public:
 #include "JEncoderPinChangeQuadrature.h"
 #include "JEncoderPinChangeSingle.h"
 #endif
+#include "JEncoderAS5048bI2C.h"
 
 #endif

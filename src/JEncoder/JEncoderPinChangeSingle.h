@@ -86,7 +86,7 @@ public:
     }
     long zeroCounter()
     {
-        long tempCounter = tickCounter;
+        long tempCounter = tickCounter * reverse;
         tickCounter = 0;
         return tempCounter;
     }

@@ -12,7 +12,7 @@ private:
     int pin;
 
 public:
-    const int PWM_RANGE = 255;
+    int PWM_RANGE = 255;
     boolean disableState = LOW;
     /**
      * @brief  constructor, sets pins
