@@ -5,12 +5,13 @@
  * @note  platform: esp32, teensy
  *          (could be used with standard avr arduinos but only with pins that support attachInterrupt())
  */
+
 #ifndef J_ENCODER_ATTACH_INTERRUPT_QUADRATURE_H
 #define J_ENCODER_ATTACH_INTERRUPT_QUADRATURE_H
 #include "JEncoder.h"
 #include <Arduino.h>
-/**
- * @brief  Functions called by interrupts can't expect parameters or be functions of classes so a workaround is needed to use interrupts in a class.
+/*
+ * Functions called by interrupts can't expect parameters or be functions of classes so a workaround is needed to use interrupts in a class.
  * The workaround that's used here is global functions need to be made when a new instance of this class is made.
  * The global functions get used when attaching interrupts, and the global functions can call functions inside the class.
  * The following macro makes it easy to make the global functions.
