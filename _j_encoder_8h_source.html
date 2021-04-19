@@ -92,19 +92,25 @@ $(function() {
 <div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_j_encoder.html#a2a55b6be277ce62eb1d1e966fcb18fe0">   55</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">boolean</span> <a class="code" href="class_j_encoder.html#a2a55b6be277ce62eb1d1e966fcb18fe0">hasDirection</a>();</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
 <div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_j_encoder.html#a60ceceebb51924d83c38bd93a4e22aba">   61</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">boolean</span> <a class="code" href="class_j_encoder.html#a60ceceebb51924d83c38bd93a4e22aba">isVelNew</a>();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#if defined(ESP32) || defined(CORE_TEENSY)</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#include &quot;JEncoderAttachInterruptQuadrature.h&quot;</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#include &quot;JEncoderPinChangeQuadrature.h&quot;</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_j_encoder.html#a565ca78c9735b6306c23a0820fc7b482">   67</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_j_encoder.html#a565ca78c9735b6306c23a0820fc7b482">run</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#if defined(ESP32) || defined(CORE_TEENSY)</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#include &quot;JEncoderAttachInterruptQuadrature.h&quot;</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#include &quot;JEncoderAttachInterruptSingle.h&quot;</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#include &quot;JEncoderPinChangeQuadrature.h&quot;</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#include &quot;JEncoderPinChangeSingle.h&quot;</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#include &quot;JEncoderAS5048bI2C.h&quot;</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_j_encoder_html"><div class="ttname"><a href="class_j_encoder.html">JEncoder</a></div><div class="ttdoc">defines common interface for JEncoder</div><div class="ttdef"><b>Definition:</b> JEncoder.h:10</div></div>
 <div class="ttc" id="aclass_j_encoder_html_a0eda190de4c394c8d7a554203cdde5b1"><div class="ttname"><a href="class_j_encoder.html#a0eda190de4c394c8d7a554203cdde5b1">JEncoder::getDistPerCountFactor</a></div><div class="ttdeci">virtual float getDistPerCountFactor()</div><div class="ttdoc">returns a conversion factor between encoder ticks and distance that can be set for the encoder</div></div>
 <div class="ttc" id="aclass_j_encoder_html_a2a55b6be277ce62eb1d1e966fcb18fe0"><div class="ttname"><a href="class_j_encoder.html#a2a55b6be277ce62eb1d1e966fcb18fe0">JEncoder::hasDirection</a></div><div class="ttdeci">virtual boolean hasDirection()</div><div class="ttdoc">can this encoder mesure direction or just speed</div></div>
 <div class="ttc" id="aclass_j_encoder_html_a36f0584a444a8fba1a641787661dfdbb"><div class="ttname"><a href="class_j_encoder.html#a36f0584a444a8fba1a641787661dfdbb">JEncoder::getCounter</a></div><div class="ttdeci">virtual long getCounter()</div><div class="ttdoc">returns how far the encoder has turned from the zero position</div></div>
+<div class="ttc" id="aclass_j_encoder_html_a565ca78c9735b6306c23a0820fc7b482"><div class="ttname"><a href="class_j_encoder.html#a565ca78c9735b6306c23a0820fc7b482">JEncoder::run</a></div><div class="ttdeci">virtual void run()</div><div class="ttdoc">if an encoder needs to have some code called each loop (like absolute encoder polling encoder and cal...</div></div>
 <div class="ttc" id="aclass_j_encoder_html_a60ceceebb51924d83c38bd93a4e22aba"><div class="ttname"><a href="class_j_encoder.html#a60ceceebb51924d83c38bd93a4e22aba">JEncoder::isVelNew</a></div><div class="ttdeci">virtual boolean isVelNew()</div><div class="ttdoc">could be useful for only recalculating a control loop if there's new velocity data</div></div>
 <div class="ttc" id="aclass_j_encoder_html_a7208a3275ba13d484c712658b50a0699"><div class="ttname"><a href="class_j_encoder.html#a7208a3275ba13d484c712658b50a0699">JEncoder::getVel</a></div><div class="ttdeci">virtual float getVel()</div><div class="ttdoc">calculates velocity in distance per second where distance was set by setCountsToDistFactor()</div></div>
 <div class="ttc" id="aclass_j_encoder_html_a8b06b77c281d2228d7362c9ebc043405"><div class="ttname"><a href="class_j_encoder.html#a8b06b77c281d2228d7362c9ebc043405">JEncoder::getDist</a></div><div class="ttdeci">virtual float getDist()</div><div class="ttdoc">returns how far the encoder has turned from the zero position converted to distance</div></div>

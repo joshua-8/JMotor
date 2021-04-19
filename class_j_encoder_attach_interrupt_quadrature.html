@@ -89,9 +89,9 @@ Collaboration diagram for JEncoderAttachInterruptQuadrature:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2a0beaf56b303498391c3acb0f477ae0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_attach_interrupt_quadrature.html#a2a0beaf56b303498391c3acb0f477ae0">JEncoderAttachInterruptQuadrature</a> (byte _encoderAPin, byte _encoderBPin, float _countsToDistFactor=1.0, unsigned long _slowestIntervalMicros=100000UL, boolean _reverse=false)</td></tr>
-<tr class="memdesc:a2a0beaf56b303498391c3acb0f477ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins and settings  <a href="class_j_encoder_attach_interrupt_quadrature.html#a2a0beaf56b303498391c3acb0f477ae0">More...</a><br /></td></tr>
-<tr class="separator:a2a0beaf56b303498391c3acb0f477ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fd40e93f11b2e9d629d0fcbe83775db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_attach_interrupt_quadrature.html#a1fd40e93f11b2e9d629d0fcbe83775db">JEncoderAttachInterruptQuadrature</a> (byte _encoderAPin, byte _encoderBPin, float _countsToDistFactor=1.0, boolean _reverse=false, unsigned long _slowestIntervalMicros=100000UL)</td></tr>
+<tr class="memdesc:a1fd40e93f11b2e9d629d0fcbe83775db"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins and settings  <a href="class_j_encoder_attach_interrupt_quadrature.html#a1fd40e93f11b2e9d629d0fcbe83775db">More...</a><br /></td></tr>
+<tr class="separator:a1fd40e93f11b2e9d629d0fcbe83775db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43f18b4a16038e8993c96078ef42369f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_attach_interrupt_quadrature.html#a43f18b4a16038e8993c96078ef42369f">setUpInterrupts</a> (void(*_isrAPointer)(void), void(*_isrBPointer)(void))</td></tr>
 <tr class="memdesc:a43f18b4a16038e8993c96078ef42369f"><td class="mdescLeft">&#160;</td><td class="mdescRight">set up pins and interrupts  <a href="class_j_encoder_attach_interrupt_quadrature.html#a43f18b4a16038e8993c96078ef42369f">More...</a><br /></td></tr>
 <tr class="separator:a43f18b4a16038e8993c96078ef42369f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,6 +125,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8ca2a25c4ffc1659052e14044382c01e"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_attach_interrupt_quadrature.html#a8ca2a25c4ffc1659052e14044382c01e">isVelNew</a> ()</td></tr>
 <tr class="memdesc:a8ca2a25c4ffc1659052e14044382c01e"><td class="mdescLeft">&#160;</td><td class="mdescRight">could be useful for only recalculating a control loop if there's new velocity data  <a href="class_j_encoder_attach_interrupt_quadrature.html#a8ca2a25c4ffc1659052e14044382c01e">More...</a><br /></td></tr>
 <tr class="separator:a8ca2a25c4ffc1659052e14044382c01e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7362a7c23062eff3d6c4ec13c056a62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_attach_interrupt_quadrature.html#ae7362a7c23062eff3d6c4ec13c056a62">run</a> ()</td></tr>
+<tr class="memdesc:ae7362a7c23062eff3d6c4ec13c056a62"><td class="mdescLeft">&#160;</td><td class="mdescRight">if an encoder needs to have some code called each loop (like absolute encoder polling encoder and calculating amount turned)  <a href="class_j_encoder_attach_interrupt_quadrature.html#ae7362a7c23062eff3d6c4ec13c056a62">More...</a><br /></td></tr>
+<tr class="separator:ae7362a7c23062eff3d6c4ec13c056a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad235b788a9508a7d7349ffadbe170441"><td class="memItemLeft" align="right" valign="top"><a id="ad235b788a9508a7d7349ffadbe170441"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ISRA</b> (void)</td></tr>
 <tr class="separator:ad235b788a9508a7d7349ffadbe170441"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,8 +136,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ISRB</b> (void)</td><
 <tr class="separator:ab89e007dadc185139d1a8d81b766a904"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a2a0beaf56b303498391c3acb0f477ae0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a0beaf56b303498391c3acb0f477ae0">&#9670;&nbsp;</a></span>JEncoderAttachInterruptQuadrature()</h2>
+<a id="a1fd40e93f11b2e9d629d0fcbe83775db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fd40e93f11b2e9d629d0fcbe83775db">&#9670;&nbsp;</a></span>JEncoderAttachInterruptQuadrature()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,14 +166,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ISRB</b> (void)</td><
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned long&#160;</td>
-          <td class="paramname"><em>_slowestIntervalMicros</em> = <code>100000UL</code>, </td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>_reverse</em> = <code>false</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>_reverse</em> = <code>false</code>&#160;</td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>_slowestIntervalMicros</em> = <code>100000UL</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -193,8 +196,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ISRB</b> (void)</td><
     <tr><td class="paramname">_encoderAPin</td><td>one channel of quadrature encoder </td></tr>
     <tr><td class="paramname">_encoderBPin</td><td>other channel of quadrature encoder </td></tr>
     <tr><td class="paramname">_countsToDistFactor</td><td>conversion factor for getting distance in an actual unit </td></tr>
-    <tr><td class="paramname">_slowestIntervalMicros</td><td>after this many microseconds without an encoder tick velocity is set to zero. </td></tr>
     <tr><td class="paramname">_reverse</td><td>false(default) </td></tr>
+    <tr><td class="paramname">_slowestIntervalMicros</td><td>after this many microseconds without an encoder tick velocity is set to zero. </td></tr>
   </table>
   </dd>
 </dl>
@@ -412,6 +415,36 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ISRB</b> (void)</td><
 </dl>
 
 <p>Reimplemented from <a class="el" href="class_j_encoder.html#a60ceceebb51924d83c38bd93a4e22aba">JEncoder</a>.</p>
+
+</div>
+</div>
+<a id="ae7362a7c23062eff3d6c4ec13c056a62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7362a7c23062eff3d6c4ec13c056a62">&#9670;&nbsp;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JEncoderAttachInterruptQuadrature::run </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>if an encoder needs to have some code called each loop (like absolute encoder polling encoder and calculating amount turned) </p>
+<dl class="section note"><dt>Note</dt><dd>interrupt based encoders don't need this to do anything and can define an empty function </dd></dl>
+
+<p>Reimplemented from <a class="el" href="class_j_encoder.html#a565ca78c9735b6306c23a0820fc7b482">JEncoder</a>.</p>
 
 </div>
 </div>

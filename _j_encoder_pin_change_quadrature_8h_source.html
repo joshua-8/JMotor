@@ -74,7 +74,7 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define J_ENCODER_PIN_CHANGE_QUADRATURE_H</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;EnableInterrupt.h&quot;</span> <span class="comment">//https://github.com/GreyGnome/EnableInterrupt</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;JEncoder.h&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define ENCODER_PCQ_MAKE_ISRS_MACRO(name)         \</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">    void name##_jENCODER_ISR_A() { name.ISRA(); } \</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">    void name##_jENCODER_ISR_B() { name.ISRB(); }</span></div>
@@ -96,11 +96,11 @@ $(function() {
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> slowestIntervalMicros;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">boolean</span> wasTimedOut;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    interruptFunctionType isrAPointer;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    interruptFunctionType isrBPointer;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    void (*isrAPointer)(void);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    void (*isrBPointer)(void);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_j_encoder_pin_change_quadrature.html#ac4e0222560dd98824f53cd23b72db8ac">   54</a></span>&#160;    <a class="code" href="class_j_encoder_pin_change_quadrature.html#ac4e0222560dd98824f53cd23b72db8ac">JEncoderPinChangeQuadrature</a>(<span class="keywordtype">byte</span> _encoderAPin, <span class="keywordtype">byte</span> _encoderBPin, <span class="keywordtype">float</span> _countsToDistFactor = 1.0, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> _slowestIntervalMicros = 100000UL, <span class="keywordtype">boolean</span> _reverse = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_j_encoder_pin_change_quadrature.html#ac06eea8fdc1e4fbcfff8f106966aa40d">   54</a></span>&#160;    <a class="code" href="class_j_encoder_pin_change_quadrature.html#ac06eea8fdc1e4fbcfff8f106966aa40d">JEncoderPinChangeQuadrature</a>(<span class="keywordtype">byte</span> _encoderAPin, <span class="keywordtype">byte</span> _encoderBPin, <span class="keywordtype">float</span> _countsToDistFactor = 1.0, <span class="keywordtype">boolean</span> _reverse = <span class="keyword">false</span>, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> _slowestIntervalMicros = 100000UL)</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        encoderAPin = _encoderAPin;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        encoderBPin = _encoderBPin;</div>
@@ -120,7 +120,7 @@ $(function() {
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        newSpeed = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        wasTimedOut = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_j_encoder_pin_change_quadrature.html#a72d68de83b97b51faf0522e81e5471ed">   79</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_pin_change_quadrature.html#a72d68de83b97b51faf0522e81e5471ed">setUpInterrupts</a>(interruptFunctionType _isrAPointer, interruptFunctionType _isrBPointer)</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_j_encoder_pin_change_quadrature.html#a4a4dce598c3eb50abe7ae45f71b91213">   79</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_pin_change_quadrature.html#a4a4dce598c3eb50abe7ae45f71b91213">setUpInterrupts</a>(<span class="keywordtype">void</span> (*_isrAPointer)(<span class="keywordtype">void</span>), <span class="keywordtype">void</span> (*_isrBPointer)(<span class="keywordtype">void</span>))</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        isrAPointer = _isrAPointer;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        isrBPointer = _isrBPointer;</div>
@@ -138,7 +138,7 @@ $(function() {
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
 <div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="class_j_encoder_pin_change_quadrature.html#af37d8cbebb5f503ae93d9869f2ed99da">   99</a></span>&#160;    <span class="keywordtype">long</span> <a class="code" href="class_j_encoder_pin_change_quadrature.html#af37d8cbebb5f503ae93d9869f2ed99da">zeroCounter</a>()</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordtype">long</span> tempCounter = tickCounter;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordtype">long</span> tempCounter = tickCounter * reverse;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        tickCounter = 0;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">return</span> tempCounter;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
@@ -213,45 +213,47 @@ $(function() {
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        }</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordtype">void</span> ISRA(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    {</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">if</span> (digitalRead(encoderAPin) == HIGH) { <span class="comment">//once a cycle save values used for speed calculations</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> tempMicros = micros();</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            encoderIntervalMicros = tempMicros - lastEncoderTickMicros;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            lastEncoderTickMicros = tempMicros;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            newSpeed = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        }</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        encForwards = (digitalRead(encoderAPin) == digitalRead(encoderBPin));</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">if</span> (encForwards) {</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            tickCounter++;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            tickCounter--;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        }</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    }</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordtype">void</span> ISRB(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    {</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        encForwards = (digitalRead(encoderAPin) != digitalRead(encoderBPin));</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordflow">if</span> (encForwards) {</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            tickCounter++;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            tickCounter--;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        }</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    }</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;};</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="class_j_encoder_pin_change_quadrature.html#a7f92762f9e7c8dca92630a19d4f3d24d">  181</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_pin_change_quadrature.html#a7f92762f9e7c8dca92630a19d4f3d24d">run</a>() { }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordtype">void</span> ISRA(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">if</span> (digitalRead(encoderAPin) == HIGH) { <span class="comment">//once a cycle save values used for speed calculations</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> tempMicros = micros();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            encoderIntervalMicros = tempMicros - lastEncoderTickMicros;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            lastEncoderTickMicros = tempMicros;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            newSpeed = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        encForwards = (digitalRead(encoderAPin) == digitalRead(encoderBPin));</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">if</span> (encForwards) {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            tickCounter++;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            tickCounter--;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">void</span> ISRB(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        encForwards = (digitalRead(encoderAPin) != digitalRead(encoderBPin));</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordflow">if</span> (encForwards) {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            tickCounter++;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            tickCounter--;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;};</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_j_encoder_html"><div class="ttname"><a href="class_j_encoder.html">JEncoder</a></div><div class="ttdoc">defines common interface for JEncoder</div><div class="ttdef"><b>Definition:</b> JEncoder.h:10</div></div>
 <div class="ttc" id="aclass_j_encoder_pin_change_quadrature_html"><div class="ttname"><a href="class_j_encoder_pin_change_quadrature.html">JEncoderPinChangeQuadrature</a></div><div class="ttdef"><b>Definition:</b> JEncoderPinChangeQuadrature.h:24</div></div>
 <div class="ttc" id="aclass_j_encoder_pin_change_quadrature_html_a0308952fcad0b3d5d05aebc59c7b8c30"><div class="ttname"><a href="class_j_encoder_pin_change_quadrature.html#a0308952fcad0b3d5d05aebc59c7b8c30">JEncoderPinChangeQuadrature::hasDirection</a></div><div class="ttdeci">boolean hasDirection()</div><div class="ttdoc">can this encoder mesure direction or just speed</div><div class="ttdef"><b>Definition:</b> JEncoderPinChangeQuadrature.h:155</div></div>
 <div class="ttc" id="aclass_j_encoder_pin_change_quadrature_html_a3a1d9048480105909f2dbb00189cba39"><div class="ttname"><a href="class_j_encoder_pin_change_quadrature.html#a3a1d9048480105909f2dbb00189cba39">JEncoderPinChangeQuadrature::getDist</a></div><div class="ttdeci">float getDist()</div><div class="ttdoc">returns how far the encoder has turned from the zero position converted to distance</div><div class="ttdef"><b>Definition:</b> JEncoderPinChangeQuadrature.h:130</div></div>
+<div class="ttc" id="aclass_j_encoder_pin_change_quadrature_html_a4a4dce598c3eb50abe7ae45f71b91213"><div class="ttname"><a href="class_j_encoder_pin_change_quadrature.html#a4a4dce598c3eb50abe7ae45f71b91213">JEncoderPinChangeQuadrature::setUpInterrupts</a></div><div class="ttdeci">void setUpInterrupts(void(*_isrAPointer)(void), void(*_isrBPointer)(void))</div><div class="ttdoc">set up pins and interrupts</div><div class="ttdef"><b>Definition:</b> JEncoderPinChangeQuadrature.h:79</div></div>
 <div class="ttc" id="aclass_j_encoder_pin_change_quadrature_html_a5b4788988a9f099b29a367d2cbe26d63"><div class="ttname"><a href="class_j_encoder_pin_change_quadrature.html#a5b4788988a9f099b29a367d2cbe26d63">JEncoderPinChangeQuadrature::getVel</a></div><div class="ttdeci">float getVel()</div><div class="ttdoc">calculates velocity in distance per second where distance was set by setCountsToDistFactor()</div><div class="ttdef"><b>Definition:</b> JEncoderPinChangeQuadrature.h:105</div></div>
 <div class="ttc" id="aclass_j_encoder_pin_change_quadrature_html_a7060e085d3ba3c121f28748e1d1b8304"><div class="ttname"><a href="class_j_encoder_pin_change_quadrature.html#a7060e085d3ba3c121f28748e1d1b8304">JEncoderPinChangeQuadrature::setDistPerCountFactor</a></div><div class="ttdeci">void setDistPerCountFactor(float _factor)</div><div class="ttdoc">set the conversion factor between encoder ticks and distance</div><div class="ttdef"><b>Definition:</b> JEncoderPinChangeQuadrature.h:138</div></div>
 <div class="ttc" id="aclass_j_encoder_pin_change_quadrature_html_a70956b344828a16c6849974e38ec57d6"><div class="ttname"><a href="class_j_encoder_pin_change_quadrature.html#a70956b344828a16c6849974e38ec57d6">JEncoderPinChangeQuadrature::turnOffInterrupts</a></div><div class="ttdeci">void turnOffInterrupts()</div><div class="ttdoc">disable interrupts and stop monitoring encoder</div><div class="ttdef"><b>Definition:</b> JEncoderPinChangeQuadrature.h:94</div></div>
-<div class="ttc" id="aclass_j_encoder_pin_change_quadrature_html_a72d68de83b97b51faf0522e81e5471ed"><div class="ttname"><a href="class_j_encoder_pin_change_quadrature.html#a72d68de83b97b51faf0522e81e5471ed">JEncoderPinChangeQuadrature::setUpInterrupts</a></div><div class="ttdeci">void setUpInterrupts(interruptFunctionType _isrAPointer, interruptFunctionType _isrBPointer)</div><div class="ttdoc">set up pins and interrupts</div><div class="ttdef"><b>Definition:</b> JEncoderPinChangeQuadrature.h:79</div></div>
+<div class="ttc" id="aclass_j_encoder_pin_change_quadrature_html_a7f92762f9e7c8dca92630a19d4f3d24d"><div class="ttname"><a href="class_j_encoder_pin_change_quadrature.html#a7f92762f9e7c8dca92630a19d4f3d24d">JEncoderPinChangeQuadrature::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">if an encoder needs to have some code called each loop (like absolute encoder polling encoder and cal...</div><div class="ttdef"><b>Definition:</b> JEncoderPinChangeQuadrature.h:181</div></div>
 <div class="ttc" id="aclass_j_encoder_pin_change_quadrature_html_aa36f092c725a82d4565ebc90d6cd0c75"><div class="ttname"><a href="class_j_encoder_pin_change_quadrature.html#aa36f092c725a82d4565ebc90d6cd0c75">JEncoderPinChangeQuadrature::getDistPerCountFactor</a></div><div class="ttdeci">float getDistPerCountFactor()</div><div class="ttdoc">returns a conversion factor between encoder ticks and distance that can be set for the encoder</div><div class="ttdef"><b>Definition:</b> JEncoderPinChangeQuadrature.h:134</div></div>
 <div class="ttc" id="aclass_j_encoder_pin_change_quadrature_html_abbb44db09901888d3c3f99580c3d6800"><div class="ttname"><a href="class_j_encoder_pin_change_quadrature.html#abbb44db09901888d3c3f99580c3d6800">JEncoderPinChangeQuadrature::setReverse</a></div><div class="ttdeci">void setReverse(boolean _reverse)</div><div class="ttdoc">reverse readings of encoder</div><div class="ttdef"><b>Definition:</b> JEncoderPinChangeQuadrature.h:147</div></div>
+<div class="ttc" id="aclass_j_encoder_pin_change_quadrature_html_ac06eea8fdc1e4fbcfff8f106966aa40d"><div class="ttname"><a href="class_j_encoder_pin_change_quadrature.html#ac06eea8fdc1e4fbcfff8f106966aa40d">JEncoderPinChangeQuadrature::JEncoderPinChangeQuadrature</a></div><div class="ttdeci">JEncoderPinChangeQuadrature(byte _encoderAPin, byte _encoderBPin, float _countsToDistFactor=1.0, boolean _reverse=false, unsigned long _slowestIntervalMicros=100000UL)</div><div class="ttdoc">constructor, sets pins and settings</div><div class="ttdef"><b>Definition:</b> JEncoderPinChangeQuadrature.h:54</div></div>
 <div class="ttc" id="aclass_j_encoder_pin_change_quadrature_html_ac33ef4fc7153bc3296c4298caedcc4a0"><div class="ttname"><a href="class_j_encoder_pin_change_quadrature.html#ac33ef4fc7153bc3296c4298caedcc4a0">JEncoderPinChangeQuadrature::isVelNew</a></div><div class="ttdeci">boolean isVelNew()</div><div class="ttdoc">could be useful for only recalculating a control loop if there's new velocity data</div><div class="ttdef"><b>Definition:</b> JEncoderPinChangeQuadrature.h:159</div></div>
-<div class="ttc" id="aclass_j_encoder_pin_change_quadrature_html_ac4e0222560dd98824f53cd23b72db8ac"><div class="ttname"><a href="class_j_encoder_pin_change_quadrature.html#ac4e0222560dd98824f53cd23b72db8ac">JEncoderPinChangeQuadrature::JEncoderPinChangeQuadrature</a></div><div class="ttdeci">JEncoderPinChangeQuadrature(byte _encoderAPin, byte _encoderBPin, float _countsToDistFactor=1.0, unsigned long _slowestIntervalMicros=100000UL, boolean _reverse=false)</div><div class="ttdoc">constructor, sets pins and settings</div><div class="ttdef"><b>Definition:</b> JEncoderPinChangeQuadrature.h:54</div></div>
 <div class="ttc" id="aclass_j_encoder_pin_change_quadrature_html_ac8e7cc13fbd70ec13d9448200b95252b"><div class="ttname"><a href="class_j_encoder_pin_change_quadrature.html#ac8e7cc13fbd70ec13d9448200b95252b">JEncoderPinChangeQuadrature::getCounter</a></div><div class="ttdeci">long getCounter()</div><div class="ttdoc">returns how far the encoder has turned from the zero position</div><div class="ttdef"><b>Definition:</b> JEncoderPinChangeQuadrature.h:126</div></div>
 <div class="ttc" id="aclass_j_encoder_pin_change_quadrature_html_af37d8cbebb5f503ae93d9869f2ed99da"><div class="ttname"><a href="class_j_encoder_pin_change_quadrature.html#af37d8cbebb5f503ae93d9869f2ed99da">JEncoderPinChangeQuadrature::zeroCounter</a></div><div class="ttdeci">long zeroCounter()</div><div class="ttdoc">reset the counter of how far the encoder has turned</div><div class="ttdef"><b>Definition:</b> JEncoderPinChangeQuadrature.h:99</div></div>
 </div><!-- fragment --></div><!-- contents -->

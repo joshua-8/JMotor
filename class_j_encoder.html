@@ -78,9 +78,12 @@ Inheritance diagram for JEncoder:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_encoder__inherit__graph.png" border="0" usemap="#a_j_encoder_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_j_encoder_inherit__map" id="a_j_encoder_inherit__map">
-<area shape="rect" title="defines common interface for JEncoder" alt="" coords="199,5,275,32"/>
-<area shape="rect" href="class_j_encoder_attach_interrupt_quadrature.html" title=" " alt="" coords="5,80,232,107"/>
-<area shape="rect" href="class_j_encoder_pin_change_quadrature.html" title=" " alt="" coords="256,80,459,107"/>
+<area shape="rect" title="defines common interface for JEncoder" alt="" coords="5,107,81,133"/>
+<area shape="rect" href="class_j_encoder_a_s5048b_i2_c.html" title="reads a type of absolute encoder https://ams.com/as0548b (uses I2C) based on work by sosandroid https..." alt="" coords="168,5,317,32"/>
+<area shape="rect" href="class_j_encoder_attach_interrupt_quadrature.html" title=" " alt="" coords="129,56,356,83"/>
+<area shape="rect" href="class_j_encoder_attach_interrupt_single.html" title=" " alt="" coords="143,107,342,133"/>
+<area shape="rect" href="class_j_encoder_pin_change_quadrature.html" title=" " alt="" coords="141,157,344,184"/>
+<area shape="rect" href="class_j_encoder_pin_change_single.html" title=" " alt="" coords="155,208,330,235"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -110,6 +113,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a60ceceebb51924d83c38bd93a4e22aba"><td class="memItemLeft" align="right" valign="top">virtual boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder.html#a60ceceebb51924d83c38bd93a4e22aba">isVelNew</a> ()</td></tr>
 <tr class="memdesc:a60ceceebb51924d83c38bd93a4e22aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">could be useful for only recalculating a control loop if there's new velocity data  <a href="class_j_encoder.html#a60ceceebb51924d83c38bd93a4e22aba">More...</a><br /></td></tr>
 <tr class="separator:a60ceceebb51924d83c38bd93a4e22aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a565ca78c9735b6306c23a0820fc7b482"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder.html#a565ca78c9735b6306c23a0820fc7b482">run</a> ()</td></tr>
+<tr class="memdesc:a565ca78c9735b6306c23a0820fc7b482"><td class="mdescLeft">&#160;</td><td class="mdescRight">if an encoder needs to have some code called each loop (like absolute encoder polling encoder and calculating amount turned)  <a href="class_j_encoder.html#a565ca78c9735b6306c23a0820fc7b482">More...</a><br /></td></tr>
+<tr class="separator:a565ca78c9735b6306c23a0820fc7b482"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>defines common interface for <a class="el" href="class_j_encoder.html" title="defines common interface for JEncoder">JEncoder</a> </p>
@@ -147,7 +153,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_j_encoder_pin_change_quadrature.html#ac8e7cc13fbd70ec13d9448200b95252b">JEncoderPinChangeQuadrature</a>, and <a class="el" href="class_j_encoder_attach_interrupt_quadrature.html#a5d190ffd89283ab8a6216d0cd3e6291b">JEncoderAttachInterruptQuadrature</a>.</p>
+<p>Reimplemented in <a class="el" href="class_j_encoder_pin_change_single.html#a72f14a5f3535d6ec535881cf59324741">JEncoderPinChangeSingle</a>, <a class="el" href="class_j_encoder_pin_change_quadrature.html#ac8e7cc13fbd70ec13d9448200b95252b">JEncoderPinChangeQuadrature</a>, <a class="el" href="class_j_encoder_attach_interrupt_single.html#a3b29293cc40c257c8fc7adc9afdf37d9">JEncoderAttachInterruptSingle</a>, <a class="el" href="class_j_encoder_attach_interrupt_quadrature.html#a5d190ffd89283ab8a6216d0cd3e6291b">JEncoderAttachInterruptQuadrature</a>, and <a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a046728560702239c1af7f4087df9e9f9">JEncoderAS5048bI2C</a>.</p>
 
 </div>
 </div>
@@ -183,7 +189,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_j_encoder_pin_change_quadrature.html#a3a1d9048480105909f2dbb00189cba39">JEncoderPinChangeQuadrature</a>, and <a class="el" href="class_j_encoder_attach_interrupt_quadrature.html#a011b3f0d6da5022024ad27457f14aa40">JEncoderAttachInterruptQuadrature</a>.</p>
+<p>Reimplemented in <a class="el" href="class_j_encoder_pin_change_single.html#a7414274653ea71ac07c838d898c1ee47">JEncoderPinChangeSingle</a>, <a class="el" href="class_j_encoder_pin_change_quadrature.html#a3a1d9048480105909f2dbb00189cba39">JEncoderPinChangeQuadrature</a>, <a class="el" href="class_j_encoder_attach_interrupt_single.html#a36a5500dc297401f2a4d8a590343db6f">JEncoderAttachInterruptSingle</a>, <a class="el" href="class_j_encoder_attach_interrupt_quadrature.html#a011b3f0d6da5022024ad27457f14aa40">JEncoderAttachInterruptQuadrature</a>, and <a class="el" href="class_j_encoder_a_s5048b_i2_c.html#abad14bb180b9435d2fd654c98eb56f76">JEncoderAS5048bI2C</a>.</p>
 
 </div>
 </div>
@@ -219,7 +225,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_j_encoder_pin_change_quadrature.html#aa36f092c725a82d4565ebc90d6cd0c75">JEncoderPinChangeQuadrature</a>, and <a class="el" href="class_j_encoder_attach_interrupt_quadrature.html#aa897660a41137eaead66781c2d1f420f">JEncoderAttachInterruptQuadrature</a>.</p>
+<p>Reimplemented in <a class="el" href="class_j_encoder_pin_change_single.html#a295cf1cd1b7fddc6b8d178599c3c7598">JEncoderPinChangeSingle</a>, <a class="el" href="class_j_encoder_pin_change_quadrature.html#aa36f092c725a82d4565ebc90d6cd0c75">JEncoderPinChangeQuadrature</a>, <a class="el" href="class_j_encoder_attach_interrupt_single.html#acedcfc7fa637e7720b5ea508efb3b424">JEncoderAttachInterruptSingle</a>, <a class="el" href="class_j_encoder_attach_interrupt_quadrature.html#aa897660a41137eaead66781c2d1f420f">JEncoderAttachInterruptQuadrature</a>, and <a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a5138a500cb0d24f47b29e9595a3aabb1">JEncoderAS5048bI2C</a>.</p>
 
 </div>
 </div>
@@ -254,7 +260,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_j_encoder_pin_change_quadrature.html#a5b4788988a9f099b29a367d2cbe26d63">JEncoderPinChangeQuadrature</a>, and <a class="el" href="class_j_encoder_attach_interrupt_quadrature.html#a1df7a2f235dab4c7ce12f1aa48f28f0f">JEncoderAttachInterruptQuadrature</a>.</p>
+<p>Reimplemented in <a class="el" href="class_j_encoder_pin_change_single.html#afabe75074a70dab166bd66d3d9c1ef09">JEncoderPinChangeSingle</a>, <a class="el" href="class_j_encoder_pin_change_quadrature.html#a5b4788988a9f099b29a367d2cbe26d63">JEncoderPinChangeQuadrature</a>, <a class="el" href="class_j_encoder_attach_interrupt_single.html#a49492e4a2ee34b94b585d12d0a535227">JEncoderAttachInterruptSingle</a>, <a class="el" href="class_j_encoder_attach_interrupt_quadrature.html#a1df7a2f235dab4c7ce12f1aa48f28f0f">JEncoderAttachInterruptQuadrature</a>, and <a class="el" href="class_j_encoder_a_s5048b_i2_c.html#aebeb1fdb74a4a5070f3a54b8ffdddbe4">JEncoderAS5048bI2C</a>.</p>
 
 </div>
 </div>
@@ -289,7 +295,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_j_encoder_pin_change_quadrature.html#a0308952fcad0b3d5d05aebc59c7b8c30">JEncoderPinChangeQuadrature</a>, and <a class="el" href="class_j_encoder_attach_interrupt_quadrature.html#a4fde0ba8036b00b6dc47f262f471a715">JEncoderAttachInterruptQuadrature</a>.</p>
+<p>Reimplemented in <a class="el" href="class_j_encoder_pin_change_single.html#a563d10c1c90fd43c097c02c3b44153d0">JEncoderPinChangeSingle</a>, <a class="el" href="class_j_encoder_pin_change_quadrature.html#a0308952fcad0b3d5d05aebc59c7b8c30">JEncoderPinChangeQuadrature</a>, <a class="el" href="class_j_encoder_attach_interrupt_single.html#a60fd338e16b2cfd52703afbcdf070110">JEncoderAttachInterruptSingle</a>, <a class="el" href="class_j_encoder_attach_interrupt_quadrature.html#a4fde0ba8036b00b6dc47f262f471a715">JEncoderAttachInterruptQuadrature</a>, and <a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a3451d0aca7ab7d02d3dff861bcca9933">JEncoderAS5048bI2C</a>.</p>
 
 </div>
 </div>
@@ -324,7 +330,37 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_j_encoder_pin_change_quadrature.html#ac33ef4fc7153bc3296c4298caedcc4a0">JEncoderPinChangeQuadrature</a>, and <a class="el" href="class_j_encoder_attach_interrupt_quadrature.html#a8ca2a25c4ffc1659052e14044382c01e">JEncoderAttachInterruptQuadrature</a>.</p>
+<p>Reimplemented in <a class="el" href="class_j_encoder_pin_change_single.html#a8ad4b093df1bd475b886455eaaad3459">JEncoderPinChangeSingle</a>, <a class="el" href="class_j_encoder_pin_change_quadrature.html#ac33ef4fc7153bc3296c4298caedcc4a0">JEncoderPinChangeQuadrature</a>, <a class="el" href="class_j_encoder_attach_interrupt_single.html#ab1b7bd6e947de6cabf8403cfe03ee972">JEncoderAttachInterruptSingle</a>, <a class="el" href="class_j_encoder_attach_interrupt_quadrature.html#a8ca2a25c4ffc1659052e14044382c01e">JEncoderAttachInterruptQuadrature</a>, and <a class="el" href="class_j_encoder_a_s5048b_i2_c.html#abb858384db5d1f73615c2cf917464cc2">JEncoderAS5048bI2C</a>.</p>
+
+</div>
+</div>
+<a id="a565ca78c9735b6306c23a0820fc7b482"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a565ca78c9735b6306c23a0820fc7b482">&#9670;&nbsp;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void JEncoder::run </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>if an encoder needs to have some code called each loop (like absolute encoder polling encoder and calculating amount turned) </p>
+<dl class="section note"><dt>Note</dt><dd>interrupt based encoders don't need this to do anything and can define an empty function </dd></dl>
+
+<p>Reimplemented in <a class="el" href="class_j_encoder_pin_change_single.html#a8e6433a17ca5667b65c11ec38d9616b0">JEncoderPinChangeSingle</a>, <a class="el" href="class_j_encoder_pin_change_quadrature.html#a7f92762f9e7c8dca92630a19d4f3d24d">JEncoderPinChangeQuadrature</a>, <a class="el" href="class_j_encoder_attach_interrupt_single.html#a7921a39ff30dcc1a49c5d62a1029b9ab">JEncoderAttachInterruptSingle</a>, <a class="el" href="class_j_encoder_attach_interrupt_quadrature.html#ae7362a7c23062eff3d6c4ec13c056a62">JEncoderAttachInterruptQuadrature</a>, and <a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b">JEncoderAS5048bI2C</a>.</p>
 
 </div>
 </div>
@@ -360,7 +396,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_j_encoder_pin_change_quadrature.html#a7060e085d3ba3c121f28748e1d1b8304">JEncoderPinChangeQuadrature</a>, and <a class="el" href="class_j_encoder_attach_interrupt_quadrature.html#a0b77749520f481757afefa5ba98f6478">JEncoderAttachInterruptQuadrature</a>.</p>
+<p>Reimplemented in <a class="el" href="class_j_encoder_pin_change_single.html#af5f36ee515c52d04f7aeababc8f1a18f">JEncoderPinChangeSingle</a>, <a class="el" href="class_j_encoder_pin_change_quadrature.html#a7060e085d3ba3c121f28748e1d1b8304">JEncoderPinChangeQuadrature</a>, <a class="el" href="class_j_encoder_attach_interrupt_single.html#adda49a8462d72f8a224f73dfed3ed1d4">JEncoderAttachInterruptSingle</a>, <a class="el" href="class_j_encoder_attach_interrupt_quadrature.html#a0b77749520f481757afefa5ba98f6478">JEncoderAttachInterruptQuadrature</a>, and <a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a815b677dcaa4a4c92cb396fa0fdb877d">JEncoderAS5048bI2C</a>.</p>
 
 </div>
 </div>
@@ -395,7 +431,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_j_encoder_pin_change_quadrature.html#af37d8cbebb5f503ae93d9869f2ed99da">JEncoderPinChangeQuadrature</a>, and <a class="el" href="class_j_encoder_attach_interrupt_quadrature.html#a1181d38917acb59994e0b88ab175e2a2">JEncoderAttachInterruptQuadrature</a>.</p>
+<p>Reimplemented in <a class="el" href="class_j_encoder_pin_change_single.html#a77959b3a9feacf6e967e840b06c83766">JEncoderPinChangeSingle</a>, <a class="el" href="class_j_encoder_pin_change_quadrature.html#af37d8cbebb5f503ae93d9869f2ed99da">JEncoderPinChangeQuadrature</a>, <a class="el" href="class_j_encoder_attach_interrupt_single.html#aba6860f6f8a6d6939779f044b89ef6a8">JEncoderAttachInterruptSingle</a>, <a class="el" href="class_j_encoder_attach_interrupt_quadrature.html#a1181d38917acb59994e0b88ab175e2a2">JEncoderAttachInterruptQuadrature</a>, and <a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a1b39b8b34b9105542eea68150047ea37">JEncoderAS5048bI2C</a>.</p>
 
 </div>
 </div>

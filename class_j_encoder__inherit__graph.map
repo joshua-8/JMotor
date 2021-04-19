@@ -1,5 +1,8 @@
 <map id="JEncoder" name="JEncoder">
-<area shape="rect" id="node1" title="defines common interface for JEncoder" alt="" coords="199,5,275,32"/>
-<area shape="rect" id="node2" href="$class_j_encoder_attach_interrupt_quadrature.html" title=" " alt="" coords="5,80,232,107"/>
-<area shape="rect" id="node3" href="$class_j_encoder_pin_change_quadrature.html" title=" " alt="" coords="256,80,459,107"/>
+<area shape="rect" id="node1" title="defines common interface for JEncoder" alt="" coords="5,107,81,133"/>
+<area shape="rect" id="node2" href="$class_j_encoder_a_s5048b_i2_c.html" title="reads a type of absolute encoder https://ams.com/as0548b (uses I2C) based on work by sosandroid https..." alt="" coords="168,5,317,32"/>
+<area shape="rect" id="node3" href="$class_j_encoder_attach_interrupt_quadrature.html" title=" " alt="" coords="129,56,356,83"/>
+<area shape="rect" id="node4" href="$class_j_encoder_attach_interrupt_single.html" title=" " alt="" coords="143,107,342,133"/>
+<area shape="rect" id="node5" href="$class_j_encoder_pin_change_quadrature.html" title=" " alt="" coords="141,157,344,184"/>
+<area shape="rect" id="node6" href="$class_j_encoder_pin_change_single.html" title=" " alt="" coords="155,208,330,235"/>
 </map>
