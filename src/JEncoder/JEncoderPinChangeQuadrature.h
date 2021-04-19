@@ -10,7 +10,7 @@
 #define J_ENCODER_PIN_CHANGE_QUADRATURE_H
 #include "EnableInterrupt.h" //https://github.com/GreyGnome/EnableInterrupt
 #include "JEncoder.h"
-
+#include <Arduino.h>
 /**
  * @brief  Functions called by interrupts can't expect parameters or be functions of classes so a workaround is needed to use interrupts in a class.
  * The workaround that's used here is global functions need to be made when a new instance of this class is made.
@@ -38,8 +38,8 @@ private:
     unsigned long slowestIntervalMicros;
     boolean wasTimedOut;
 
-    interruptFunctionType isrAPointer;
-    interruptFunctionType isrBPointer;
+    void (*isrAPointer)(void);
+    void (*isrBPointer)(void);
 
 public:
     /**
@@ -48,10 +48,10 @@ public:
      * @param  _encoderAPin: one channel of quadrature encoder
      * @param  _encoderBPin: other channel of quadrature encoder
      * @param  _countsToDistFactor: conversion factor for getting distance in an actual unit
-     * @param  _slowestIntervalMicros: after this many microseconds without an encoder tick velocity is set to zero.
      * @param  _reverse: false(default)
+     * @param  _slowestIntervalMicros: after this many microseconds without an encoder tick velocity is set to zero.
      */
-    JEncoderPinChangeQuadrature(byte _encoderAPin, byte _encoderBPin, float _countsToDistFactor = 1.0, unsigned long _slowestIntervalMicros = 100000UL, boolean _reverse = false)
+    JEncoderPinChangeQuadrature(byte _encoderAPin, byte _encoderBPin, float _countsToDistFactor = 1.0, boolean _reverse = false, unsigned long _slowestIntervalMicros = 100000UL)
     {
         encoderAPin = _encoderAPin;
         encoderBPin = _encoderBPin;
@@ -76,7 +76,7 @@ public:
      * @param  _isrAPointer: global function that calls internal ISRA, to use with enableInterrupt
      * @param  _isrBPointer: 
      */
-    void setUpInterrupts(interruptFunctionType _isrAPointer, interruptFunctionType _isrBPointer)
+    void setUpInterrupts(void (*_isrAPointer)(void), void (*_isrBPointer)(void))
     {
         isrAPointer = _isrAPointer;
         isrBPointer = _isrBPointer;
@@ -98,7 +98,7 @@ public:
     }
     long zeroCounter()
     {
-        long tempCounter = tickCounter;
+        long tempCounter = tickCounter * reverse;
         tickCounter = 0;
         return tempCounter;
     }
@@ -178,6 +178,7 @@ public:
         }
         return false;
     }
+    void run() { }
 
     void ISRA(void)
     {

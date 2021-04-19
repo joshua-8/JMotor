@@ -6,6 +6,7 @@
 #define J_MOTOR_DRIVER_ESP32_PWMDIR_H
 #include "JMotorDriver.h"
 #include "JMotorDriverEsp32PWM.h"
+#include <Arduino.h>
 class JMotorDriverEsp32PWMDir : private JMotorDriver {
 private:
     boolean enabled = false;

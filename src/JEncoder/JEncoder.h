@@ -59,12 +59,21 @@ public:
      * @retval true if velocity has changed since this function was last called
      */
     virtual boolean isVelNew();
+
+    /**
+     * @brief  if an encoder needs to have some code called each loop (like absolute encoder polling encoder and calculating amount turned)
+     * @note   interrupt based encoders don't need this to do anything and can define an empty function
+     */
+    virtual void run();
 };
 
 #if defined(ESP32) || defined(CORE_TEENSY)
 #include "JEncoderAttachInterruptQuadrature.h"
+#include "JEncoderAttachInterruptSingle.h"
 #else
 #include "JEncoderPinChangeQuadrature.h"
+#include "JEncoderPinChangeSingle.h"
 #endif
+#include "JEncoderAS5048bI2C.h"
 
 #endif

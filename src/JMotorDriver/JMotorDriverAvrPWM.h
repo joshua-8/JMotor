@@ -5,13 +5,14 @@
 #ifndef J_MOTOR_DRIVER_AVR_PWM_H
 #define J_MOTOR_DRIVER_AVR_PWM_H
 #include "JMotorDriver.h"
+#include <Arduino.h>
 class JMotorDriverAvrPWM : private JMotorDriver {
 private:
     boolean enabled = false;
     int pin;
 
 public:
-    const int PWM_RANGE = 255;
+    int PWM_RANGE = 255;
     boolean disableState = LOW;
     /**
      * @brief  constructor, sets pins
