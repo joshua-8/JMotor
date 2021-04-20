@@ -1,5 +1,5 @@
 /**
- * \brief  uses ledc to output PWM approximation of an analog output
+ * @brief  uses ledc to output PWM approximation of an analog output
  * @note   platform: ESP32
  */
 #ifndef J_MOTOR_DRIVER_ESP32_PWM_H
@@ -18,7 +18,7 @@ private:
 public:
     boolean disableState = LOW;
     /**
-    * \brief  constructor, sets pins, default PWM
+    * @brief  constructor, sets pins, default PWM
     * @param  _ch: ledc channel (must be unique for each driver)
     * @param  _pin: pin to output signal on
     * @param  _disableState = LOW: when disabled, set pin LOW(default) or HIGH
@@ -31,7 +31,7 @@ public:
         disableState = _disableState;
     }
     /**
-     * \brief  constructor, sets pins, custom PWM settings
+     * @brief  constructor, sets pins, custom PWM settings
      * @param  _ch:  ledc channel (must be unique for each driver)
      * @param  _pin: pin to output signal on
      * @param  freq: <= int(80E6 / 2^resolution), 2kHz default and recommended for motor PWM

@@ -1,5 +1,5 @@
 /**
- * \brief  L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf
+ * @brief  L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf
  * @note   platform: AVR (standard Arduinos)
  */
 #ifndef J_MOTOR_DRIVER_AVR_L293_H
@@ -17,7 +17,7 @@ public:
     JMotorDriverAvrPWM pwmDriver;
     boolean breakOn; // can be changed while running
     /**
-     * \brief  constructor, sets pins
+     * @brief  constructor, sets pins
      * @param  _en: enable(speed) pin on driver
      * @param  _i1: input pin 1 (direction)
      * @param  _i2: input pin 2 (direction)

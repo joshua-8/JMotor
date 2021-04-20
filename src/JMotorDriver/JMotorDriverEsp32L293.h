@@ -1,5 +1,5 @@
 /**
- * \brief  L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf
+ * @brief  L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf
  * @note   platform: ESP32
  */
 #ifndef J_MOTOR_DRIVER_ESP32_L293_H
@@ -17,7 +17,7 @@ public:
     JMotorDriverEsp32PWM pwmDriver;
     boolean breakOn;
     /**
- * \brief  constructor, sets pins, default PWM
+ * @brief  constructor, sets pins, default PWM
  * @param  _ch: ledc channel (must be unique for each driver)
  * @param  _enablePin: enable(speed) pin on driver
  * @param  _i1: input pin 1
@@ -34,7 +34,7 @@ public:
         breakOn = _breakOn;
     }
     /**
-     * \brief  constructor, sets pins, custom PWM settings
+     * @brief  constructor, sets pins, custom PWM settings
      * @param  _ch: ledc channel (must be unique for each driver)
      * @param  _enPin: enable(speed) pin on driver
      * @param  _i1: input pin 1 (direction)

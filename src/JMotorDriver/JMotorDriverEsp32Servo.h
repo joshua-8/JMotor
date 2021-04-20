@@ -1,5 +1,5 @@
 /**
- * \brief For servos and motor controllers that use servo signals (ESCs)
+ * @brief For servos and motor controllers that use servo signals (ESCs)
  * @note  platform: ESP32
  */
 #ifndef J_MOTOR_DRIVER_ESP32_SERVO_H
@@ -20,7 +20,7 @@ public:
     int maxServoValue = 2400; // can be changed while running
 
     /**
-     * \brief  constructor, sets pins, custom frequency and resolution optional
+     * @brief  constructor, sets pins, custom frequency and resolution optional
      * @param  _pwmChannel: ledc channel (must be unique for each driver)
      * @param  _servoPin: pin to output signal on
      * @param  _freq = 50: Hz (default 50) must be <= int(80E6 / 2^resBits)
@@ -34,7 +34,7 @@ public:
         setFrequencyAndResolution(_freq, _resBits);
     }
     /**
-     * \brief  set frequency that servo signal pulse is repeated at and how many bits are used internally for resolution
+     * @brief  set frequency that servo signal pulse is repeated at and how many bits are used internally for resolution
      * @param  freq: Hz (default 50) must be <= int(80E6 / 2^resBits)
      * @param  resBits: (default 20) tradeoff with max available frequency
      * @retval (float) returns PWM cycles per microsecond-used in ledcWrite call, returned for debugging purposes
