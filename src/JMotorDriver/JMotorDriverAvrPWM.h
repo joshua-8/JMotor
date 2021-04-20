@@ -1,5 +1,5 @@
 /**
- * \brief  wrapper for analogWrite()
+ * @brief  wrapper for analogWrite()
  * @note   platform: AVR (standard Arduinos)
  */
 #ifndef J_MOTOR_DRIVER_AVR_PWM_H
@@ -15,7 +15,7 @@ public:
     int PWM_RANGE = 255;
     boolean disableState = LOW;
     /**
-     * \brief  constructor, sets pins
+     * @brief  constructor, sets pins
      * @note   make sure to check which pins on your board are PWM capable
      * @param  _pin: what pin to use
      * @param  _disableState = LOW: when disabled, set pin LOW(default) or HIGH

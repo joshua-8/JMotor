@@ -12,7 +12,7 @@
 class JEncoderSinglePinChange : public JEncoderSingle {
 public:
     /**
-     * \brief  constructor, sets pins and settings
+     * @brief  constructor, sets pins and settings
      * @param  _encoderAPin: encoder input pin
      * @param  _countsToDistFactor: conversion factor for getting distance in an actual unit
      * @param  _reverse: false(default)
