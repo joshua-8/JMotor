@@ -73,39 +73,59 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define J_ENCODER_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//**********SEE BOTTOM OF THIS FILE FOR #INCLUDES OF SUBCLASSES**********//</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_j_encoder.html">   10</a></span>&#160;<span class="comment"></span><span class="keyword">class </span><a class="code" href="class_j_encoder.html">JEncoder</a> {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_j_encoder.html#aebd11e6e685427b4a1323fcc4b4e8e51">   16</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">long</span> <a class="code" href="class_j_encoder.html#aebd11e6e685427b4a1323fcc4b4e8e51">zeroCounter</a>();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_j_encoder.html#a7208a3275ba13d484c712658b50a0699">   22</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="class_j_encoder.html#a7208a3275ba13d484c712658b50a0699">getVel</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_j_encoder.html#a36f0584a444a8fba1a641787661dfdbb">   29</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">long</span> <a class="code" href="class_j_encoder.html#a36f0584a444a8fba1a641787661dfdbb">getCounter</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_j_encoder.html#a8b06b77c281d2228d7362c9ebc043405">   36</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="class_j_encoder.html#a8b06b77c281d2228d7362c9ebc043405">getDist</a>();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_j_encoder.html#a0eda190de4c394c8d7a554203cdde5b1">   43</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="class_j_encoder.html#a0eda190de4c394c8d7a554203cdde5b1">getDistPerCountFactor</a>();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_j_encoder.html#a9b924eeb11c622938a27c61d48aac8de">   49</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_j_encoder.html#a9b924eeb11c622938a27c61d48aac8de">setDistPerCountFactor</a>(<span class="keywordtype">float</span> _factor);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_j_encoder.html#a2a55b6be277ce62eb1d1e966fcb18fe0">   55</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">boolean</span> <a class="code" href="class_j_encoder.html#a2a55b6be277ce62eb1d1e966fcb18fe0">hasDirection</a>();</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    * Functions called by interrupts can&#39;t expect parameters or be functions of classes so a workaround is needed to use interrupts in a class.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    * The workaround that&#39;s used here is global functions need to be made when a new instance of this class is made.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    * The global function(s) get used when attaching interrupts, and the global function(s) can call a function inside the class.</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    * The following macros makes it easy to make the global function(s).</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define jENCODER_MAKE_ISR_MACRO(name) \</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">    void name##_jENCODER_ISR() { name.encoderISR(); }</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/*  *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    * Functions called by interrupts can&#39;t expect parameters or be functions of classes so a workaround is needed to use interrupts in a class.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    * The workaround that&#39;s used here is global functions need to be made when a new instance of this class is made.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    * The global function(s) get used when attaching interrupts, and the global function(s) can call a function inside the class.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    * The following macros makes it easy to make the global function(s).</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define jENCODER_MAKE_ISRS_MACRO(name)            \</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">    void name##_jENCODER_ISR_A() { name.ISRA(); } \</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">    void name##_jENCODER_ISR_B() { name.ISRB(); }</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_j_encoder.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_j_encoder.html">JEncoder</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_j_encoder.html#aebd11e6e685427b4a1323fcc4b4e8e51">   35</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">long</span> <a class="code" href="class_j_encoder.html#aebd11e6e685427b4a1323fcc4b4e8e51">zeroCounter</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_j_encoder.html#a7208a3275ba13d484c712658b50a0699">   41</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="class_j_encoder.html#a7208a3275ba13d484c712658b50a0699">getVel</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_j_encoder.html#a36f0584a444a8fba1a641787661dfdbb">   48</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">long</span> <a class="code" href="class_j_encoder.html#a36f0584a444a8fba1a641787661dfdbb">getCounter</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_j_encoder.html#a8b06b77c281d2228d7362c9ebc043405">   55</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="class_j_encoder.html#a8b06b77c281d2228d7362c9ebc043405">getDist</a>();</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_j_encoder.html#a60ceceebb51924d83c38bd93a4e22aba">   61</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">boolean</span> <a class="code" href="class_j_encoder.html#a60ceceebb51924d83c38bd93a4e22aba">isVelNew</a>();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_j_encoder.html#a565ca78c9735b6306c23a0820fc7b482">   67</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_j_encoder.html#a565ca78c9735b6306c23a0820fc7b482">run</a>();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_j_encoder.html#a0eda190de4c394c8d7a554203cdde5b1">   62</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="class_j_encoder.html#a0eda190de4c394c8d7a554203cdde5b1">getDistPerCountFactor</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_j_encoder.html#a9b924eeb11c622938a27c61d48aac8de">   68</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_j_encoder.html#a9b924eeb11c622938a27c61d48aac8de">setDistPerCountFactor</a>(<span class="keywordtype">float</span> _factor);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#if defined(ESP32) || defined(CORE_TEENSY)</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_quadrature_attach_interrupt_8h.html">JEncoderQuadratureAttachInterrupt.h</a>&quot;</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_single_attach_interrupt_8h.html">JEncoderSingleAttachInterrupt.h</a>&quot;</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_p_w_m_absolute_attach_interrupt_8h.html">JEncoderPWMAbsoluteAttachInterrupt.h</a>&quot;</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_quadrature_pin_change_8h.html">JEncoderQuadraturePinChange.h</a>&quot;</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_single_pin_change_8h.html">JEncoderSinglePinChange.h</a>&quot;</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_p_w_m_absolute_pin_change_8h.html">JEncoderPWMAbsolutePinChange.h</a>&quot;</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_a_s5048b_i2_c_8h.html">JEncoderAS5048bI2C.h</a>&quot;</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_j_encoder.html#a2a55b6be277ce62eb1d1e966fcb18fe0">   74</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">boolean</span> <a class="code" href="class_j_encoder.html#a2a55b6be277ce62eb1d1e966fcb18fe0">hasDirection</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_j_encoder.html#a60ceceebb51924d83c38bd93a4e22aba">   80</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">boolean</span> <a class="code" href="class_j_encoder.html#a60ceceebb51924d83c38bd93a4e22aba">isVelNew</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_j_encoder.html#a565ca78c9735b6306c23a0820fc7b482">   86</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_j_encoder.html#a565ca78c9735b6306c23a0820fc7b482">run</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#if defined(ESP32) || defined(CORE_TEENSY)</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_p_w_m_absolute_attach_interrupt_8h.html">JEncoderPWMAbsoluteAttachInterrupt.h</a>&quot;</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_quadrature_attach_interrupt_8h.html">JEncoderQuadratureAttachInterrupt.h</a>&quot;</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_single_attach_interrupt_8h.html">JEncoderSingleAttachInterrupt.h</a>&quot;</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_p_w_m_absolute_pin_change_8h.html">JEncoderPWMAbsolutePinChange.h</a>&quot;</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_quadrature_pin_change_8h.html">JEncoderQuadraturePinChange.h</a>&quot;</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_single_pin_change_8h.html">JEncoderSinglePinChange.h</a>&quot;</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_a_s5048b_i2_c_8h.html">JEncoderAS5048bI2C.h</a>&quot;</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_j_encoder_a_s5048b_i2_c_8h_html"><div class="ttname"><a href="_j_encoder_a_s5048b_i2_c_8h.html">JEncoderAS5048bI2C.h</a></div></div>
 <div class="ttc" id="a_j_encoder_p_w_m_absolute_attach_interrupt_8h_html"><div class="ttname"><a href="_j_encoder_p_w_m_absolute_attach_interrupt_8h.html">JEncoderPWMAbsoluteAttachInterrupt.h</a></div></div>
 <div class="ttc" id="a_j_encoder_p_w_m_absolute_pin_change_8h_html"><div class="ttname"><a href="_j_encoder_p_w_m_absolute_pin_change_8h.html">JEncoderPWMAbsolutePinChange.h</a></div></div>
@@ -113,7 +133,7 @@ $(function() {
 <div class="ttc" id="a_j_encoder_quadrature_pin_change_8h_html"><div class="ttname"><a href="_j_encoder_quadrature_pin_change_8h.html">JEncoderQuadraturePinChange.h</a></div></div>
 <div class="ttc" id="a_j_encoder_single_attach_interrupt_8h_html"><div class="ttname"><a href="_j_encoder_single_attach_interrupt_8h.html">JEncoderSingleAttachInterrupt.h</a></div></div>
 <div class="ttc" id="a_j_encoder_single_pin_change_8h_html"><div class="ttname"><a href="_j_encoder_single_pin_change_8h.html">JEncoderSinglePinChange.h</a></div></div>
-<div class="ttc" id="aclass_j_encoder_html"><div class="ttname"><a href="class_j_encoder.html">JEncoder</a></div><div class="ttdoc">defines common interface for JEncoder</div><div class="ttdef"><b>Definition:</b> JEncoder.h:10</div></div>
+<div class="ttc" id="aclass_j_encoder_html"><div class="ttname"><a href="class_j_encoder.html">JEncoder</a></div><div class="ttdoc">defines common interface for JEncoder</div><div class="ttdef"><b>Definition:</b> JEncoder.h:29</div></div>
 <div class="ttc" id="aclass_j_encoder_html_a0eda190de4c394c8d7a554203cdde5b1"><div class="ttname"><a href="class_j_encoder.html#a0eda190de4c394c8d7a554203cdde5b1">JEncoder::getDistPerCountFactor</a></div><div class="ttdeci">virtual float getDistPerCountFactor()</div><div class="ttdoc">returns a conversion factor between encoder ticks and distance that can be set for the encoder</div></div>
 <div class="ttc" id="aclass_j_encoder_html_a2a55b6be277ce62eb1d1e966fcb18fe0"><div class="ttname"><a href="class_j_encoder.html#a2a55b6be277ce62eb1d1e966fcb18fe0">JEncoder::hasDirection</a></div><div class="ttdeci">virtual boolean hasDirection()</div><div class="ttdoc">can this encoder mesure direction or just speed</div></div>
 <div class="ttc" id="aclass_j_encoder_html_a36f0584a444a8fba1a641787661dfdbb"><div class="ttname"><a href="class_j_encoder.html#a36f0584a444a8fba1a641787661dfdbb">JEncoder::getCounter</a></div><div class="ttdeci">virtual long getCounter()</div><div class="ttdoc">returns how far the encoder has turned from the zero position</div></div>

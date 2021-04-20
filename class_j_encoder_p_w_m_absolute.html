@@ -81,8 +81,8 @@ Inheritance diagram for JEncoderPWMAbsolute:</div>
 <div class="center"><img src="class_j_encoder_p_w_m_absolute__inherit__graph.png" border="0" usemap="#a_j_encoder_p_w_m_absolute_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_j_encoder_p_w_m_absolute_inherit__map" id="a_j_encoder_p_w_m_absolute_inherit__map">
 <area shape="rect" title="reads a PWM signal from an absolute encoder using attachInterrupt()" alt="" coords="142,80,301,107"/>
-<area shape="rect" href="class_j_encoder_p_w_m_absolute_attach_interrupt.html" title=" " alt="" coords="5,155,203,196"/>
-<area shape="rect" href="class_j_encoder_p_w_m_absolute_pin_change.html" title=" " alt="" coords="227,162,450,189"/>
+<area shape="rect" href="class_j_encoder_p_w_m_absolute_attach_interrupt.html" title="uses attachInterrupt() (could be used with standard avr arduinos but only with pins that support atta..." alt="" coords="5,155,203,196"/>
+<area shape="rect" href="class_j_encoder_p_w_m_absolute_pin_change.html" title="uses a pin change interrupt library to support more pins than attachInterrupt()." alt="" coords="227,162,450,189"/>
 <area shape="rect" href="class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="183,5,259,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -99,6 +99,7 @@ Collaboration diagram for JEncoderPWMAbsolute:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html">pwmSettings</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">struct for holding parameters for reading PWM Absolute Encoders  <a href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -218,7 +219,7 @@ Protected Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_encoderPin</td><td>pin to read encoder signal with </td></tr>
-    <tr><td class="paramname">_ps</td><td>(struct <a class="el" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html">pwmSettings</a>) parameters of encoder signal </td></tr>
+    <tr><td class="paramname">_ps</td><td>(struct <a class="el" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html" title="struct for holding parameters for reading PWM Absolute Encoders">pwmSettings</a>) parameters of encoder signal </td></tr>
     <tr><td class="paramname">_reverse</td><td>(boolean) reverse positive direction, default=false </td></tr>
     <tr><td class="paramname">_distPerCountFactor</td><td>(float) for the purposes of setting this factor a "count" is considered a full revolution of the absolute encoder </td></tr>
     <tr><td class="paramname">_velEnoughTime</td><td>(default=0, no limit) shortest interval between velocity calculations, if <a class="el" href="class_j_encoder_p_w_m_absolute.html#a122f35f077150b64126880c03aa00d1d">run()</a> is called faster the calculation will wait to run </td></tr>
