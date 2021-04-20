@@ -3,19 +3,30 @@
 #include "JEncoder.h"
 #include <Arduino.h>
 
+/**
+ \def
+ * parameters for reading PWM output of AS5048 absolute encoders
+ */
 #define JEncoderPWMAbsolute_AS5048settings \
     {                                      \
         4095, 4119, 16, HIGH               \
     }
+/**
+ \def
+ * parameters for reading PWM output of MA3 10bit absolute encoders
+ */
 #define JEncoderPWMAbsolute_MA310bitsettings \
     {                                        \
         1023, 1026, 1, HIGH                  \
     } //untested
+/**
+ \def
+ * parameters for reading PWM output of MA3 12bit absolute encoders
+ */
 #define JEncoderPWMAbsolute_MA312bitsettings \
     {                                        \
         4095, 4098, 1, HIGH                  \
     } //untested
-
 
 /**
  * @brief  reads a PWM signal from an absolute encoder using attachInterrupt()
@@ -27,6 +38,9 @@
  */
 class JEncoderPWMAbsolute : public JEncoder {
 public:
+    /**
+     * @brief  struct for holding parameters for reading PWM Absolute Encoders
+     */
     struct pwmSettings {
         uint16_t RESOLUTION; //resolution of encoder data (pwm steps)
         uint16_t PWM_STEPS; //number of total clock steps in pwm output
@@ -60,15 +74,6 @@ private:
     pwmSettings ps;
 
 public:
-    /* \def
-    * Functions called by interrupts can't expect parameters or be functions of classes so a workaround is needed to use interrupts in a class.
-    * The workaround that's used here is global functions need to be made when a new instance of this class is made.
-    * The global function get used when attaching interrupts, and the global function can call a function inside the class.
-    * The following macro makes it easy to make the global function.
-    */
-#define jENCODER_PWMABS_MAKE_ISR_MACRO(name) \
-    void name##_jENCODER_ISR() { name.encoderISR(); }
-
     /**
      * @brief  sets pins and settings for reading the encoder
      * @param  _encoderPin: pin to read encoder signal with
