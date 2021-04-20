@@ -2,14 +2,6 @@
 #define J_ENCODER_ATTACH_INTERRUPT_SINGLE_H
 #include "JEncoder.h"
 #include <Arduino.h>
-/* \def
- * Functions called by interrupts can't expect parameters or be functions of classes so a workaround is needed to use interrupts in a class.
- * The workaround that's used here is global functions need to be made when a new instance of this class is made.
- * The global function get used when attaching interrupts, and the global function can call a function inside the class.
- * The following macro makes it easy to make the global function.
- */
-#define jENCODER_SINGLE_MAKE_ISR_MACRO(name) \
-    void name##_jENCODER_ISR() { name.encoderISR(); }
 
 /**
  * @brief  reads a single channel (incremental) encoder

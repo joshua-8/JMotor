@@ -2,16 +2,6 @@
 #define J_ENCODER_QUADRATURE_H
 #include "JEncoder.h"
 #include <Arduino.h>
-/* \def
- * Functions called by interrupts can't expect parameters or be functions of classes so a workaround is needed to use interrupts in a class.
- * The workaround that's used here is global functions need to be made when a new instance of this class is made.
- * The global functions get used when attaching interrupts, and the global functions can call functions inside the class.
- * The following macro makes it easy to make the global functions.
- */
-#define ENCODER_MAKE_ISRS_MACRO(name)             \
-    void name##_jENCODER_ISR_A() { name.ISRA(); } \
-    void name##_jENCODER_ISR_B() { name.ISRB(); }
-
 /**
  * @brief  reads a quadrature (incremental) encoder
  * 
