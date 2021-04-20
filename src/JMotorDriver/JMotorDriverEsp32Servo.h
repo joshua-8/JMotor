@@ -1,12 +1,12 @@
-/**
- * \file JMotorDriverEsp32Servo.h
- * @brief For servos and motor controllers that use servo signals (ESCs)
- * @note  platform: ESP32
- */
 #ifndef J_MOTOR_DRIVER_ESP32_SERVO_H
 #define J_MOTOR_DRIVER_ESP32_SERVO_H
 #include "JMotorDriver.h"
 #include <Arduino.h>
+
+/**
+ * @brief For servos and motor controllers that use servo signals (ESCs)
+ * @note  platform: ESP32
+ */
 class JMotorDriverEsp32Servo : private JMotorDriver {
 private:
     boolean enabled = false;

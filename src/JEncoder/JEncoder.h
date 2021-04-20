@@ -1,12 +1,11 @@
-/**
- * \file JEncoder.h
- * @brief  defines common interface for JEncoder
- * @note   JEcoder's functions are virtual, it can not be used directly
- */
 #ifndef J_ENCODER_H
 #define J_ENCODER_H
 #include <Arduino.h>
 //**********SEE BOTTOM OF THIS FILE FOR #INCLUDES OF SUBCLASSES**********//
+/**
+ * @brief  defines common interface for JEncoder
+ * @note   JEcoder's functions are virtual, it can not be used directly
+ */
 
 class JEncoder {
 public:

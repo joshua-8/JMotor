@@ -1,13 +1,12 @@
-/**
- * \file JMotorDriverEsp32PWMDir.h
- * @brief  for motor controllers with one direction input and one speed input pin
- * @note   platform: ESP32
- */
 #ifndef J_MOTOR_DRIVER_ESP32_PWMDIR_H
 #define J_MOTOR_DRIVER_ESP32_PWMDIR_H
 #include "JMotorDriver.h"
 #include "JMotorDriverEsp32PWM.h"
 #include <Arduino.h>
+/**
+ * @brief  for motor controllers with one direction input and one speed input pin
+ * @note   platform: ESP32
+ */
 class JMotorDriverEsp32PWMDir : private JMotorDriver {
 private:
     boolean enabled = false;

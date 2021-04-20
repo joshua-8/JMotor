@@ -1,13 +1,3 @@
-/**
- * \file JEncoderSingle.h
- * @brief  reads a single channel (incremental) encoder
- * 
- * direction can't be calculated with a single channel encoder, only speed can be. \n
- * speed calulation is done by measuring time between 2 encoder ticks (not between every tick since encoders may not have evenly spaced ticks) \n
- * velocity is set to zero if the encoder has not turned in slowestIntervalMicros
- * 
- * @note  don't use this class directly, use a subclass
- */
 #ifndef J_ENCODER_ATTACH_INTERRUPT_SINGLE_H
 #define J_ENCODER_ATTACH_INTERRUPT_SINGLE_H
 #include "JEncoder.h"
@@ -21,6 +11,15 @@
 #define jENCODER_SINGLE_MAKE_ISR_MACRO(name) \
     void name##_jENCODER_ISR() { name.encoderISR(); }
 
+/**
+ * @brief  reads a single channel (incremental) encoder
+ * 
+ * direction can't be calculated with a single channel encoder, only speed can be. \n
+ * speed calulation is done by measuring time between 2 encoder ticks (not between every tick since encoders may not have evenly spaced ticks) \n
+ * velocity is set to zero if the encoder has not turned in slowestIntervalMicros
+ * 
+ * @note  don't use this class directly, use a subclass
+ */
 class JEncoderSingle : public JEncoder {
 
 protected:

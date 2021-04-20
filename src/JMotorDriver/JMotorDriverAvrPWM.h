@@ -1,12 +1,12 @@
-/**
- * \file JMotorDriverAvrPWM.h
- * @brief  wrapper for analogWrite()
- * @note   platform: AVR (standard Arduinos)
- */
 #ifndef J_MOTOR_DRIVER_AVR_PWM_H
 #define J_MOTOR_DRIVER_AVR_PWM_H
 #include "JMotorDriver.h"
 #include <Arduino.h>
+
+/**
+ * @brief  wrapper for analogWrite()
+ * @note   platform: AVR (standard Arduinos)
+ */
 class JMotorDriverAvrPWM : private JMotorDriver {
 private:
     boolean enabled = false;

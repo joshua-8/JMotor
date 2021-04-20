@@ -1,14 +1,12 @@
-/**
- * \file JEncoderQuadratureAttachInterrupt.h
- * @note  uses attachInterrupt() \n
- * platform: esp32, teensy \n
- *          (could be used with standard avr arduinos but only with pins that support attachInterrupt())
- */
-
 #ifndef J_ENCODER_QUADRATURE_ATTACH_INTERRUPT_H
 #define J_ENCODER_QUADRATURE_ATTACH_INTERRUPT_H
 #include "JEncoderQuadrature.h"
 #include <Arduino.h>
+/**
+ * @note  uses attachInterrupt() \n
+ * platform: esp32, teensy \n
+ *          (could be used with standard avr arduinos but only with pins that support attachInterrupt())
+ */
 
 class JEncoderQuadratureAttachInterrupt : public JEncoderQuadrature {
 
