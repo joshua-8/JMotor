@@ -71,16 +71,19 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>reads a quadrature (incremental) encoder  
+ <a href="class_j_encoder_quadrature.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_j_encoder_quadrature_8h_source.html">JEncoderQuadrature.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for JEncoderQuadrature:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_encoder_quadrature__inherit__graph.png" border="0" usemap="#a_j_encoder_quadrature_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_j_encoder_quadrature_inherit__map" id="a_j_encoder_quadrature_inherit__map">
-<area shape="rect" title=" " alt="" coords="131,80,271,107"/>
+<area shape="rect" title="reads a quadrature (incremental) encoder" alt="" coords="131,80,271,107"/>
 <area shape="rect" href="class_j_encoder_quadrature_attach_interrupt.html" title=" " alt="" coords="5,155,184,196"/>
 <area shape="rect" href="class_j_encoder_quadrature_pin_change.html" title=" " alt="" coords="208,162,411,189"/>
-<area shape="rect" href="class_j_encoder.html" title=" " alt="" coords="163,5,239,32"/>
+<area shape="rect" href="class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="163,5,239,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -88,8 +91,8 @@ Collaboration diagram for JEncoderQuadrature:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_encoder_quadrature__coll__graph.png" border="0" usemap="#a_j_encoder_quadrature_coll__map" alt="Collaboration graph"/></div>
 <map name="a_j_encoder_quadrature_coll__map" id="a_j_encoder_quadrature_coll__map">
-<area shape="rect" title=" " alt="" coords="5,80,145,107"/>
-<area shape="rect" href="class_j_encoder.html" title=" " alt="" coords="37,5,113,32"/>
+<area shape="rect" title="reads a quadrature (incremental) encoder" alt="" coords="5,80,145,107"/>
+<area shape="rect" href="class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="37,5,113,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -149,7 +152,10 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a44ef3124ee19d39ef43b539c4ffe7b11"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_quadrature.html#a44ef3124ee19d39ef43b539c4ffe7b11">encoderBPin</a></td></tr>
 <tr class="separator:a44ef3124ee19d39ef43b539c4ffe7b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>reads a quadrature (incremental) encoder </p>
+<p>speed calulation is done by measuring time between 4 encoder ticks (not between every tick since encoders may not have evenly spaced ticks) velocity is set to zero if the encoder has not turned in slowestIntervalMicros </p><dl class="section note"><dt>Note</dt><dd>don't use this class directly, use a subclass </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3e42918a6a557bf436cf3cce2e243680"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3e42918a6a557bf436cf3cce2e243680">&#9670;&nbsp;</a></span>JEncoderQuadrature()</h2>
 

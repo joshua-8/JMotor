@@ -1,6 +1,6 @@
 <map id="JEncoderQuadrature" name="JEncoderQuadrature">
-<area shape="rect" id="node1" title=" " alt="" coords="131,80,271,107"/>
+<area shape="rect" id="node1" title="reads a quadrature (incremental) encoder" alt="" coords="131,80,271,107"/>
 <area shape="rect" id="node3" href="$class_j_encoder_quadrature_attach_interrupt.html" title=" " alt="" coords="5,155,184,196"/>
 <area shape="rect" id="node4" href="$class_j_encoder_quadrature_pin_change.html" title=" " alt="" coords="208,162,411,189"/>
-<area shape="rect" id="node2" href="$class_j_encoder.html" title=" " alt="" coords="163,5,239,32"/>
+<area shape="rect" id="node2" href="$class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="163,5,239,32"/>
 </map>

@@ -1,9 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_j_encoder.html" title=" " alt="" coords="5,105,81,131"/>
+<area shape="rect" id="node1" href="$class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="5,105,81,131"/>
 <area shape="rect" id="node2" href="$class_j_encoder_a_s5048b_i2_c.html" title="reads a type of absolute encoder https://ams.com/as0548b (uses I2C)" alt="" coords="134,25,283,51"/>
-<area shape="rect" id="node3" href="$class_j_encoder_p_w_m_absolute.html" title=" " alt="" coords="129,75,288,102"/>
-<area shape="rect" id="node6" href="$class_j_encoder_quadrature.html" title=" " alt="" coords="139,130,279,157"/>
-<area shape="rect" id="node9" href="$class_j_encoder_single.html" title=" " alt="" coords="153,239,265,266"/>
+<area shape="rect" id="node3" href="$class_j_encoder_p_w_m_absolute.html" title="reads a PWM signal from an absolute encoder using attachInterrupt()" alt="" coords="129,75,288,102"/>
+<area shape="rect" id="node6" href="$class_j_encoder_quadrature.html" title="reads a quadrature (incremental) encoder" alt="" coords="139,130,279,157"/>
+<area shape="rect" id="node9" href="$class_j_encoder_single.html" title="reads a single channel (incremental) encoder" alt="" coords="153,239,265,266"/>
 <area shape="rect" id="node4" href="$class_j_encoder_p_w_m_absolute_attach_interrupt.html" title=" " alt="" coords="349,5,546,47"/>
 <area shape="rect" id="node5" href="$class_j_encoder_p_w_m_absolute_pin_change.html" title=" " alt="" coords="336,71,559,98"/>
 <area shape="rect" id="node7" href="$class_j_encoder_quadrature_attach_interrupt.html" title=" " alt="" coords="358,123,537,164"/>

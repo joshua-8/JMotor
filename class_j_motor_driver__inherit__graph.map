@@ -1,11 +1,11 @@
 <map id="JMotorDriver" name="JMotorDriver">
-<area shape="rect" id="node1" title=" " alt="" coords="5,183,101,209"/>
-<area shape="rect" id="node2" href="$class_j_motor_driver_avr_l293.html" title=" " alt="" coords="167,5,312,32"/>
-<area shape="rect" id="node3" href="$class_j_motor_driver_avr_p_w_m.html" title=" " alt="" coords="165,56,313,83"/>
-<area shape="rect" id="node4" href="$class_j_motor_driver_avr_p_w_m_dir.html" title=" " alt="" coords="157,107,321,133"/>
-<area shape="rect" id="node5" href="$class_j_motor_driver_avr_servo.html" title=" " alt="" coords="164,157,315,184"/>
-<area shape="rect" id="node6" href="$class_j_motor_driver_esp32_l293.html" title=" " alt="" coords="159,208,320,235"/>
-<area shape="rect" id="node7" href="$class_j_motor_driver_esp32_p_w_m.html" title=" " alt="" coords="157,259,321,285"/>
-<area shape="rect" id="node8" href="$class_j_motor_driver_esp32_p_w_m_dir.html" title=" " alt="" coords="149,309,329,336"/>
-<area shape="rect" id="node9" href="$class_j_motor_driver_esp32_servo.html" title=" " alt="" coords="156,360,323,387"/>
+<area shape="rect" id="node1" title="defines common interface for all types of JMotorDrivers" alt="" coords="5,183,101,209"/>
+<area shape="rect" id="node2" href="$class_j_motor_driver_avr_l293.html" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf." alt="" coords="167,5,312,32"/>
+<area shape="rect" id="node3" href="$class_j_motor_driver_avr_p_w_m.html" title="wrapper for analogWrite()" alt="" coords="165,56,313,83"/>
+<area shape="rect" id="node4" href="$class_j_motor_driver_avr_p_w_m_dir.html" title="for motor controllers with one direction input and one speed input pin" alt="" coords="157,107,321,133"/>
+<area shape="rect" id="node5" href="$class_j_motor_driver_avr_servo.html" title="wraps standard servo library. For servos and motor controllers that use servo signals (ESCs)" alt="" coords="164,157,315,184"/>
+<area shape="rect" id="node6" href="$class_j_motor_driver_esp32_l293.html" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf." alt="" coords="159,208,320,235"/>
+<area shape="rect" id="node7" href="$class_j_motor_driver_esp32_p_w_m.html" title="uses ledc to output PWM approximation of an analog output" alt="" coords="157,259,321,285"/>
+<area shape="rect" id="node8" href="$class_j_motor_driver_esp32_p_w_m_dir.html" title="for motor controllers with one direction input and one speed input pin" alt="" coords="149,309,329,336"/>
+<area shape="rect" id="node9" href="$class_j_motor_driver_esp32_servo.html" title="For servos and motor controllers that use servo signals (ESCs)" alt="" coords="156,360,323,387"/>
 </map>
