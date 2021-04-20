@@ -11,7 +11,7 @@
 class JEncoderPWMAbsolutePinChange : public JEncoderPWMAbsolute {
 public:
     /**
-     * @brief  sets pins and settings for reading the encoder
+     * /brief  sets pins and settings for reading the encoder
      * @param  _encoderPin: pin to read encoder signal with
      * @param  _ps: (struct pwmSettings) parameters of encoder signal
      * @param  _reverse: (boolean) reverse positive direction, default=false 

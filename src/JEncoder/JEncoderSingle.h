@@ -1,5 +1,5 @@
 /**
- * @brief  reads a single channel (incremental) encoder \n
+ * /brief  reads a single channel (incremental) encoder \n
  * direction can't be calculated with a single channel encoder, only speed can be. \n
  * speed calulation is done by measuring time between 2 encoder ticks (not between every tick since encoders may not have evenly spaced ticks) \n
  * velocity is set to zero if the encoder has not turned in slowestIntervalMicros
@@ -37,7 +37,7 @@ private:
 
 protected:
     /**
-     * @brief  constructor, sets pins and settings
+     * /brief  constructor, sets pins and settings
      * @param  _encoderAPin: encoder input pin
      * @param  _countsToDistFactor: conversion factor for getting distance in an actual unit
      * @param  _reverse: false(default)
@@ -62,12 +62,12 @@ protected:
         wasTimedOut = false;
     }
     /**
-     * @brief  set up pins and interrupts
+     * /brief  set up pins and interrupts
      * @param  _isrPointer: global function that calls internal ISRA to use with enableInterrupt
      */
     virtual void setUpInterrupts(void (*_isrPointer)(void));
     /**
-     * @brief  disable interrupts and stop monitoring encoder
+     * /brief  disable interrupts and stop monitoring encoder
      * @note use setUpInterrupts to start encoder again
      */
     virtual void turnOffInterrupts();
@@ -112,7 +112,7 @@ public:
         distPerCountFactor = _factor;
     }
     /**
-     * @brief  reverse readings of encoder
+     * /brief  reverse readings of encoder
      * @param  _reverse: whether to invert sign of readings
      * @retval None
      */

@@ -1,5 +1,5 @@
 /**
- * @brief  for motor controllers with one direction input and one speed input pin
+ * /brief  for motor controllers with one direction input and one speed input pin
  * @note   platform: AVR (standard Arduinos)
  */
 #ifndef J_MOTOR_DRIVER_AVR_PWMDIR_H
@@ -16,7 +16,7 @@ public:
     boolean reverse = false;
     JMotorDriverAvrPWM pwmDriver;
     /**
-     * @brief  constructor, sets pins
+     * /brief  constructor, sets pins
      * @note   speed pin must be PWM capable
      * @param  _speedPin: speed input to motor controller (PWM)
      * @param  _dirPin: direction input to motor controller (digital)

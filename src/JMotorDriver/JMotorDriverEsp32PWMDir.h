@@ -1,5 +1,5 @@
 /**
- * @brief  for motor controllers with one direction input and one speed input pin
+ * /brief  for motor controllers with one direction input and one speed input pin
  * @note   platform: ESP32
  */
 #ifndef J_MOTOR_DRIVER_ESP32_PWMDIR_H
@@ -16,7 +16,7 @@ public:
     JMotorDriverEsp32PWM pwmDriver;
     boolean reverse = false;
     /**
-     * @brief  constructor, sets pins, default PWM
+     * /brief  constructor, sets pins, default PWM
      * @param  _ch:  ledc channel (must be unique for each driver)
      * @param  _enablePin: pin to output speed signal on
      * @param  _dirPin: pin to output direction signal on
@@ -29,7 +29,7 @@ public:
         dir = _dirPin;
     }
     /**
-     * @brief  constructor, sets pins, custom PWM settings
+     * /brief  constructor, sets pins, custom PWM settings
      * @param  _ch: ledc channel (must be unique for each driver)
      * @param  _enPin: pin to output speed signal on
      * @param  _dirPin: pin to output direction signal on
