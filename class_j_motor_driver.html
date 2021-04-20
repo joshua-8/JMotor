@@ -88,7 +88,7 @@ Inheritance diagram for JMotorDriver:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a2ccb6ae751915e9173e192ba4b0cb009"><td class="memItemLeft" align="right" valign="top"><a id="a2ccb6ae751915e9173e192ba4b0cb009"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#a2ccb6ae751915e9173e192ba4b0cb009">JMotorDriverType</a> { <br />
+<tr class="memitem:a2ccb6ae751915e9173e192ba4b0cb009"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#a2ccb6ae751915e9173e192ba4b0cb009">JMotorDriverType</a> { <br />
 &#160;&#160;<b>Null</b>
 , <b>avrServo</b>
 , <b>esp32Servo</b>
@@ -102,30 +102,39 @@ Public Types</h2></td></tr>
 &#160;&#160;<b>esp32L293</b>
 <br />
  }</td></tr>
-<tr class="memdesc:a2ccb6ae751915e9173e192ba4b0cb009"><td class="mdescLeft">&#160;</td><td class="mdescRight">The JMotorDriverType enum is used so a specific subclass of <a class="el" href="class_j_motor_driver.html">JMotorDriver</a> can indicate what type it is. <br /></td></tr>
 <tr class="separator:a2ccb6ae751915e9173e192ba4b0cb009"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a734032814a1b53458d6b31a3f0faeee8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_j_motor_driver.html#a2ccb6ae751915e9173e192ba4b0cb009">JMotorDriverType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#a734032814a1b53458d6b31a3f0faeee8">getType</a> ()</td></tr>
-<tr class="memdesc:a734032814a1b53458d6b31a3f0faeee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns what type of driver it is  <a href="class_j_motor_driver.html#a734032814a1b53458d6b31a3f0faeee8">More...</a><br /></td></tr>
 <tr class="separator:a734032814a1b53458d6b31a3f0faeee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58df7c0b6be01a28dba5d2f8578d44c7"><td class="memItemLeft" align="right" valign="top">virtual boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#a58df7c0b6be01a28dba5d2f8578d44c7">set</a> (float val)</td></tr>
-<tr class="memdesc:a58df7c0b6be01a28dba5d2f8578d44c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">set motor power  <a href="class_j_motor_driver.html#a58df7c0b6be01a28dba5d2f8578d44c7">More...</a><br /></td></tr>
 <tr class="separator:a58df7c0b6be01a28dba5d2f8578d44c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4232200c9772a03fff51f120e86ebdd"><td class="memItemLeft" align="right" valign="top">virtual boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#ae4232200c9772a03fff51f120e86ebdd">setEnable</a> (boolean val)</td></tr>
-<tr class="memdesc:ae4232200c9772a03fff51f120e86ebdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">use to enable or disable a motor, and sets up pin states  <a href="class_j_motor_driver.html#ae4232200c9772a03fff51f120e86ebdd">More...</a><br /></td></tr>
 <tr class="separator:ae4232200c9772a03fff51f120e86ebdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af77be52c28d7d0d3bbb03a771d17e427"><td class="memItemLeft" align="right" valign="top">virtual boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#af77be52c28d7d0d3bbb03a771d17e427">getEnable</a> ()</td></tr>
-<tr class="memdesc:af77be52c28d7d0d3bbb03a771d17e427"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the enable state of the driver  <a href="class_j_motor_driver.html#af77be52c28d7d0d3bbb03a771d17e427">More...</a><br /></td></tr>
 <tr class="separator:af77be52c28d7d0d3bbb03a771d17e427"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36aa5a3f2e5c5ce8c769023047822e84"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#a36aa5a3f2e5c5ce8c769023047822e84">getMaxRange</a> ()</td></tr>
-<tr class="memdesc:a36aa5a3f2e5c5ce8c769023047822e84"><td class="mdescLeft">&#160;</td><td class="mdescRight">high end of the range  <a href="class_j_motor_driver.html#a36aa5a3f2e5c5ce8c769023047822e84">More...</a><br /></td></tr>
 <tr class="separator:a36aa5a3f2e5c5ce8c769023047822e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70e074ae03c7685d2147f70ae4ed9ff6"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#a70e074ae03c7685d2147f70ae4ed9ff6">getMinRange</a> ()</td></tr>
-<tr class="memdesc:a70e074ae03c7685d2147f70ae4ed9ff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">low end of the range  <a href="class_j_motor_driver.html#a70e074ae03c7685d2147f70ae4ed9ff6">More...</a><br /></td></tr>
 <tr class="separator:a70e074ae03c7685d2147f70ae4ed9ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a2ccb6ae751915e9173e192ba4b0cb009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ccb6ae751915e9173e192ba4b0cb009">&#9670;&nbsp;</a></span>JMotorDriverType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_j_motor_driver.html#a2ccb6ae751915e9173e192ba4b0cb009">JMotorDriver::JMotorDriverType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>/brief The JMotorDriverType enum is used so a specific subclass of <a class="el" href="class_j_motor_driver.html">JMotorDriver</a> can indicate what type it is </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="af77be52c28d7d0d3bbb03a771d17e427"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af77be52c28d7d0d3bbb03a771d17e427">&#9670;&nbsp;</a></span>getEnable()</h2>
@@ -149,9 +158,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>get the enable state of the driver </p>
-<dl class="retval"><dt>Return values</dt><dd>
+<p>/brief get the enable state of the driver </p><dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">(boolean)</td><td>true if enabled, false if disabled </td></tr>
   </table>
@@ -184,9 +191,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>high end of the range </p>
-<dl class="section note"><dt>Note</dt><dd>usually 1.0 </dd></dl>
+<p>/brief high end of the range </p><dl class="section note"><dt>Note</dt><dd>usually 1.0 </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">(float)</td><td>maxRange </td></tr>
@@ -220,9 +225,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>low end of the range </p>
-<dl class="section note"><dt>Note</dt><dd>usually -1.0, if 0, that indicates a motor controller with no reverse function </dd></dl>
+<p>/brief low end of the range </p><dl class="section note"><dt>Note</dt><dd>usually -1.0, if 0, that indicates a motor controller with no reverse function </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">(float)</td><td>minRange </td></tr>
@@ -256,9 +259,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>returns what type of driver it is </p>
-<dl class="retval"><dt>Return values</dt><dd>
+<p>/brief returns what type of driver it is </p><dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">(JMotorDriverType)</td><td>type </td></tr>
   </table>
@@ -292,9 +293,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>set motor power </p>
-<dl class="section note"><dt>Note</dt><dd>val should be between getMinRange and getMaxRange, but constrained internally </dd></dl>
+<p>/brief set motor power </p><dl class="section note"><dt>Note</dt><dd>val should be between getMinRange and getMaxRange, but constrained internally </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">val</td><td>(float) val </td></tr>
@@ -335,9 +334,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>use to enable or disable a motor, and sets up pin states </p>
-<dl class="section note"><dt>Note</dt><dd>setEnable(true) must be called before a motor driver will activate </dd></dl>
+<p>/brief use to enable or disable a motor, and sets up pin states </p><dl class="section note"><dt>Note</dt><dd>setEnable(true) must be called before a motor driver will activate </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">val</td><td>(boolean) true=eneable, false=disable </td></tr>
