@@ -69,11 +69,11 @@ $(function() {
 <div class="title">JMotorDriverEsp32L293.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<a href="_j_motor_driver_esp32_l293_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef J_MOTOR_DRIVER_ESP32_L293_H</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define J_MOTOR_DRIVER_ESP32_L293_H</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;JMotorDriver.h&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;JMotorDriverEsp32PWM.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_motor_driver_8h.html">JMotorDriver.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_motor_driver_esp32_p_w_m_8h.html">JMotorDriverEsp32PWM.h</a>&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_j_motor_driver_esp32_l293.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_j_motor_driver_esp32_l293.html">JMotorDriverEsp32L293</a> : <span class="keyword">private</span> <a class="code" href="class_j_motor_driver.html">JMotorDriver</a> {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">private</span>:</div>
@@ -82,23 +82,23 @@ $(function() {
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">int</span> i2;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_j_motor_driver_esp32_p_w_m.html">JMotorDriverEsp32PWM</a> pwmDriver;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">boolean</span> breakOn;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_j_motor_driver_esp32_l293.html#a170b794230d12938e5f436a1cfdff407">   17</a></span>&#160;    <a class="code" href="class_j_motor_driver_esp32_p_w_m.html">JMotorDriverEsp32PWM</a> <a class="code" href="class_j_motor_driver_esp32_l293.html#a170b794230d12938e5f436a1cfdff407">pwmDriver</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_j_motor_driver_esp32_l293.html#a46eb43a27d8950b311633bbd776fe45e">   18</a></span>&#160;    <span class="keywordtype">boolean</span> <a class="code" href="class_j_motor_driver_esp32_l293.html#a46eb43a27d8950b311633bbd776fe45e">breakOn</a>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_j_motor_driver_esp32_l293.html#adb4b3659c72dec89165613cbbb7c1ab1">   28</a></span>&#160;    <a class="code" href="class_j_motor_driver_esp32_l293.html#adb4b3659c72dec89165613cbbb7c1ab1">JMotorDriverEsp32L293</a>(<span class="keywordtype">int</span> _ch, <span class="keywordtype">int</span> _enablePin, <span class="keywordtype">int</span> _i1, <span class="keywordtype">int</span> _i2, <span class="keywordtype">boolean</span> _breakOn = <span class="keyword">true</span>, <span class="keywordtype">boolean</span> breakWhenDisabled = <span class="keyword">false</span>)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        : pwmDriver { _ch, _enablePin, breakWhenDisabled }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        : <a class="code" href="class_j_motor_driver_esp32_l293.html#a170b794230d12938e5f436a1cfdff407">pwmDriver</a> { _ch, _enablePin, breakWhenDisabled }</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        enabled = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        i1 = _i1;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        i2 = _i2;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        breakOn = _breakOn;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="class_j_motor_driver_esp32_l293.html#a46eb43a27d8950b311633bbd776fe45e">breakOn</a> = _breakOn;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
 <div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_j_motor_driver_esp32_l293.html#a31676dbba14368d1b660b1804ff159a4">   47</a></span>&#160;    <a class="code" href="class_j_motor_driver_esp32_l293.html#a31676dbba14368d1b660b1804ff159a4">JMotorDriverEsp32L293</a>(<span class="keywordtype">int</span> _ch, <span class="keywordtype">int</span> _enPin, <span class="keywordtype">int</span> _i1, <span class="keywordtype">int</span> _i2, <span class="keywordtype">int</span> freq, <span class="keywordtype">int</span> resolution, <span class="keywordtype">boolean</span> _breakOn = <span class="keyword">true</span>, <span class="keywordtype">boolean</span> breakWhenDisabled = <span class="keyword">false</span>)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        : pwmDriver { _ch, _enPin, freq, resolution, breakWhenDisabled }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        : <a class="code" href="class_j_motor_driver_esp32_l293.html#a170b794230d12938e5f436a1cfdff407">pwmDriver</a> { _ch, _enPin, freq, resolution, breakWhenDisabled }</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        enabled = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        i1 = _i1;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        i2 = _i2;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        breakOn = _breakOn;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="class_j_motor_driver_esp32_l293.html#a46eb43a27d8950b311633bbd776fe45e">breakOn</a> = _breakOn;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
 <div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_j_motor_driver_esp32_l293.html#a33349dab430d7483d5b7712dd4f405e5">   55</a></span>&#160;    <a class="code" href="class_j_motor_driver.html#a2ccb6ae751915e9173e192ba4b0cb009">JMotorDriverType</a> <a class="code" href="class_j_motor_driver_esp32_l293.html#a33349dab430d7483d5b7712dd4f405e5">getType</a>()</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
@@ -117,10 +117,10 @@ $(function() {
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                digitalWrite(i1, LOW);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                digitalWrite(i2, LOW);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">if</span> (breakOn &amp;&amp; val == 0) {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                pwmDriver.<a class="code" href="class_j_motor_driver_esp32_p_w_m.html#a70ee3167df225aae5b9c16c9726ce40e">set</a>(1); <span class="comment">//activate break</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_j_motor_driver_esp32_l293.html#a46eb43a27d8950b311633bbd776fe45e">breakOn</a> &amp;&amp; val == 0) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <a class="code" href="class_j_motor_driver_esp32_l293.html#a170b794230d12938e5f436a1cfdff407">pwmDriver</a>.<a class="code" href="class_j_motor_driver_esp32_p_w_m.html#a70ee3167df225aae5b9c16c9726ce40e">set</a>(1); <span class="comment">//activate break</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                pwmDriver.<a class="code" href="class_j_motor_driver_esp32_p_w_m.html#a70ee3167df225aae5b9c16c9726ce40e">set</a>(abs(val));</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <a class="code" href="class_j_motor_driver_esp32_l293.html#a170b794230d12938e5f436a1cfdff407">pwmDriver</a>.<a class="code" href="class_j_motor_driver_esp32_p_w_m.html#a70ee3167df225aae5b9c16c9726ce40e">set</a>(abs(val));</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            }</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> abs(val) &lt; 1.0;</div>
@@ -135,7 +135,7 @@ $(function() {
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                pinMode(i2, OUTPUT);</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                digitalWrite(i1, LOW);</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                digitalWrite(i2, LOW);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                pwmDriver.<a class="code" href="class_j_motor_driver_esp32_p_w_m.html#a77a3fbb4a9e1cd86db51b3c1dfc1af75">setEnable</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                <a class="code" href="class_j_motor_driver_esp32_l293.html#a170b794230d12938e5f436a1cfdff407">pwmDriver</a>.<a class="code" href="class_j_motor_driver_esp32_p_w_m.html#a77a3fbb4a9e1cd86db51b3c1dfc1af75">setEnable</a>(<span class="keyword">true</span>);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            }</div>
@@ -147,7 +147,7 @@ $(function() {
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                pinMode(i2, OUTPUT);</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                digitalWrite(i1, LOW);</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                digitalWrite(i2, LOW);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                pwmDriver.<a class="code" href="class_j_motor_driver_esp32_p_w_m.html#a77a3fbb4a9e1cd86db51b3c1dfc1af75">setEnable</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <a class="code" href="class_j_motor_driver_esp32_l293.html#a170b794230d12938e5f436a1cfdff407">pwmDriver</a>.<a class="code" href="class_j_motor_driver_esp32_p_w_m.html#a77a3fbb4a9e1cd86db51b3c1dfc1af75">setEnable</a>(<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            }</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
@@ -167,10 +167,14 @@ $(function() {
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;};</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_j_motor_driver_8h_html"><div class="ttname"><a href="_j_motor_driver_8h.html">JMotorDriver.h</a></div></div>
+<div class="ttc" id="a_j_motor_driver_esp32_p_w_m_8h_html"><div class="ttname"><a href="_j_motor_driver_esp32_p_w_m_8h.html">JMotorDriverEsp32PWM.h</a></div></div>
 <div class="ttc" id="aclass_j_motor_driver_esp32_l293_html"><div class="ttname"><a href="class_j_motor_driver_esp32_l293.html">JMotorDriverEsp32L293</a></div><div class="ttdef"><b>Definition:</b> JMotorDriverEsp32L293.h:10</div></div>
+<div class="ttc" id="aclass_j_motor_driver_esp32_l293_html_a170b794230d12938e5f436a1cfdff407"><div class="ttname"><a href="class_j_motor_driver_esp32_l293.html#a170b794230d12938e5f436a1cfdff407">JMotorDriverEsp32L293::pwmDriver</a></div><div class="ttdeci">JMotorDriverEsp32PWM pwmDriver</div><div class="ttdef"><b>Definition:</b> JMotorDriverEsp32L293.h:17</div></div>
 <div class="ttc" id="aclass_j_motor_driver_esp32_l293_html_a31676dbba14368d1b660b1804ff159a4"><div class="ttname"><a href="class_j_motor_driver_esp32_l293.html#a31676dbba14368d1b660b1804ff159a4">JMotorDriverEsp32L293::JMotorDriverEsp32L293</a></div><div class="ttdeci">JMotorDriverEsp32L293(int _ch, int _enPin, int _i1, int _i2, int freq, int resolution, boolean _breakOn=true, boolean breakWhenDisabled=false)</div><div class="ttdoc">constructor, sets pins, custom PWM settings</div><div class="ttdef"><b>Definition:</b> JMotorDriverEsp32L293.h:47</div></div>
 <div class="ttc" id="aclass_j_motor_driver_esp32_l293_html_a33349dab430d7483d5b7712dd4f405e5"><div class="ttname"><a href="class_j_motor_driver_esp32_l293.html#a33349dab430d7483d5b7712dd4f405e5">JMotorDriverEsp32L293::getType</a></div><div class="ttdeci">JMotorDriverType getType()</div><div class="ttdoc">returns what type of driver it is</div><div class="ttdef"><b>Definition:</b> JMotorDriverEsp32L293.h:55</div></div>
 <div class="ttc" id="aclass_j_motor_driver_esp32_l293_html_a35fdd02602e3f85c6fece9c16d42b6f1"><div class="ttname"><a href="class_j_motor_driver_esp32_l293.html#a35fdd02602e3f85c6fece9c16d42b6f1">JMotorDriverEsp32L293::getMinRange</a></div><div class="ttdeci">float getMinRange()</div><div class="ttdoc">low end of the range</div><div class="ttdef"><b>Definition:</b> JMotorDriverEsp32L293.h:116</div></div>
+<div class="ttc" id="aclass_j_motor_driver_esp32_l293_html_a46eb43a27d8950b311633bbd776fe45e"><div class="ttname"><a href="class_j_motor_driver_esp32_l293.html#a46eb43a27d8950b311633bbd776fe45e">JMotorDriverEsp32L293::breakOn</a></div><div class="ttdeci">boolean breakOn</div><div class="ttdef"><b>Definition:</b> JMotorDriverEsp32L293.h:18</div></div>
 <div class="ttc" id="aclass_j_motor_driver_esp32_l293_html_a5fafa827e09b9843b8aa868f0c2f01f9"><div class="ttname"><a href="class_j_motor_driver_esp32_l293.html#a5fafa827e09b9843b8aa868f0c2f01f9">JMotorDriverEsp32L293::getMaxRange</a></div><div class="ttdeci">float getMaxRange()</div><div class="ttdoc">high end of the range</div><div class="ttdef"><b>Definition:</b> JMotorDriverEsp32L293.h:112</div></div>
 <div class="ttc" id="aclass_j_motor_driver_esp32_l293_html_a5fffe3052e57c68167461c81b2dff1b9"><div class="ttname"><a href="class_j_motor_driver_esp32_l293.html#a5fffe3052e57c68167461c81b2dff1b9">JMotorDriverEsp32L293::set</a></div><div class="ttdeci">boolean set(float val)</div><div class="ttdoc">set motor power</div><div class="ttdef"><b>Definition:</b> JMotorDriverEsp32L293.h:59</div></div>
 <div class="ttc" id="aclass_j_motor_driver_esp32_l293_html_aa062a62c2c25a323935021ba1f31c037"><div class="ttname"><a href="class_j_motor_driver_esp32_l293.html#aa062a62c2c25a323935021ba1f31c037">JMotorDriverEsp32L293::setEnable</a></div><div class="ttdeci">boolean setEnable(boolean enable)</div><div class="ttdoc">use to enable or disable a motor, and sets up pin states</div><div class="ttdef"><b>Definition:</b> JMotorDriverEsp32L293.h:80</div></div>

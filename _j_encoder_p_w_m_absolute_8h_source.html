@@ -69,10 +69,10 @@ $(function() {
 <div class="title">JEncoderPWMAbsolute.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<a href="_j_encoder_p_w_m_absolute_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef J_ENCODER_ATTACH_INTERRUPT_PWM_ABSOLUTE_H</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define J_ENCODER_ATTACH_INTERRUPT_PWM_ABSOLUTE_H</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;JEncoder.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_8h.html">JEncoder.h</a>&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define JEncoderPWMAbsolute_AS5048settings \</span></div>
@@ -91,14 +91,14 @@ $(function() {
 <div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_j_encoder_p_w_m_absolute.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_j_encoder_p_w_m_absolute.html">JEncoderPWMAbsolute</a> : <span class="keyword">public</span> <a class="code" href="class_j_encoder.html">JEncoder</a> {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html">   30</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html">pwmSettings</a> {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        uint16_t RESOLUTION; <span class="comment">//resolution of encoder data (pwm steps)</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        uint16_t PWM_STEPS; <span class="comment">//number of total clock steps in pwm output</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        uint16_t MIN_STEPS; <span class="comment">//number of steps corresponding to min angle. MAX_STEPS=MIN_STEPS+RESOLUTION</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">boolean</span> dataState; <span class="comment">//HIGH or LOW, which state when pulse length increasing=increasing angle</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aaeaa01d54add313c783c532f654651e6">   31</a></span>&#160;        uint16_t <a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aaeaa01d54add313c783c532f654651e6">RESOLUTION</a>; <span class="comment">//resolution of encoder data (pwm steps)</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aff02616f61cfef0904b0e7a41d57b187">   32</a></span>&#160;        uint16_t <a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aff02616f61cfef0904b0e7a41d57b187">PWM_STEPS</a>; <span class="comment">//number of total clock steps in pwm output</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#a7479527686a611225b8cfdf24a23d461">   33</a></span>&#160;        uint16_t <a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#a7479527686a611225b8cfdf24a23d461">MIN_STEPS</a>; <span class="comment">//number of steps corresponding to min angle. MAX_STEPS=MIN_STEPS+RESOLUTION</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#af8ca49e38c3a7627ddffdaa53c944972">   34</a></span>&#160;        <span class="keywordtype">boolean</span> <a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#af8ca49e38c3a7627ddffdaa53c944972">dataState</a>; <span class="comment">//HIGH or LOW, which state when pulse length increasing=increasing angle</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    };</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">byte</span> encoderPin;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_j_encoder_p_w_m_absolute.html#a7639836ccba8344fed34e24cb3170ec2">   38</a></span>&#160;    <span class="keywordtype">byte</span> <a class="code" href="class_j_encoder_p_w_m_absolute.html#a7639836ccba8344fed34e24cb3170ec2">encoderPin</a>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">long</span> turns;</div>
@@ -123,7 +123,7 @@ $(function() {
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html">pwmSettings</a> ps;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">/* /def</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">/* \def</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">    * Functions called by interrupts can&#39;t expect parameters or be functions of classes so a workaround is needed to use interrupts in a class.</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">    * The workaround that&#39;s used here is global functions need to be made when a new instance of this class is made.</span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">    * The global function get used when attaching interrupts, and the global function can call a function inside the class.</span></div>
@@ -134,7 +134,7 @@ $(function() {
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
 <div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_j_encoder_p_w_m_absolute.html#a97a789b9758e62a07c7a1f15af15f878">   81</a></span>&#160;    <a class="code" href="class_j_encoder_p_w_m_absolute.html#a97a789b9758e62a07c7a1f15af15f878">JEncoderPWMAbsolute</a>(<span class="keywordtype">byte</span> _encoderPin, <a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html">pwmSettings</a> _ps, <span class="keywordtype">boolean</span> _reverse = <span class="keyword">false</span>, <span class="keywordtype">float</span> _distPerCountFactor = 1.0, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> _velEnoughTime = 0, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> _velEnoughTicks = 0)</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        encoderPin = _encoderPin;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="class_j_encoder_p_w_m_absolute.html#a7639836ccba8344fed34e24cb3170ec2">encoderPin</a> = _encoderPin;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        ps = _ps;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">if</span> (_reverse) {</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            reverse = -1;</div>
@@ -180,7 +180,7 @@ $(function() {
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        uint16_t tAngle = angle;</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        turns = 0;</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        angle = 0;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">return</span> (tTurns * ps.RESOLUTION + tAngle) * reverse;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">return</span> (tTurns * ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aaeaa01d54add313c783c532f654651e6">RESOLUTION</a> + tAngle) * reverse;</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    }</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
 <div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="class_j_encoder_p_w_m_absolute.html#adbb6611f2bbf42f4de71ecf00fb1b429">  150</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_encoder_p_w_m_absolute.html#adbb6611f2bbf42f4de71ecf00fb1b429">getVel</a>()</div>
@@ -190,12 +190,12 @@ $(function() {
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
 <div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="class_j_encoder_p_w_m_absolute.html#a4b5866897f7aa8d8d93e2acd7f7326a3">  155</a></span>&#160;    <span class="keywordtype">long</span> <a class="code" href="class_j_encoder_p_w_m_absolute.html#a4b5866897f7aa8d8d93e2acd7f7326a3">getCounter</a>()</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    {</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">return</span> (turns * ps.RESOLUTION + angle) * reverse;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">return</span> (turns * ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aaeaa01d54add313c783c532f654651e6">RESOLUTION</a> + angle) * reverse;</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
 <div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="class_j_encoder_p_w_m_absolute.html#a6277734ae88854d5d8c22cbb54b2cd67">  160</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_encoder_p_w_m_absolute.html#a6277734ae88854d5d8c22cbb54b2cd67">getDist</a>()</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    {</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">return</span> (turns * ps.RESOLUTION + angle) * reverse * distPerCountFactor;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">return</span> (turns * ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aaeaa01d54add313c783c532f654651e6">RESOLUTION</a> + angle) * reverse * distPerCountFactor;</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
 <div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="class_j_encoder_p_w_m_absolute.html#aacb2edcd453af61df165abde3cfddfb8">  165</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_encoder_p_w_m_absolute.html#aacb2edcd453af61df165abde3cfddfb8">getDistPerCountFactor</a>()</div>
@@ -205,7 +205,7 @@ $(function() {
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
 <div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="class_j_encoder_p_w_m_absolute.html#af8dc546c25140a4cc42e0fd9d44ab387">  174</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_p_w_m_absolute.html#af8dc546c25140a4cc42e0fd9d44ab387">setDistPerCountFactor</a>(<span class="keywordtype">float</span> _factor)</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    {</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        distPerCountFactor = _factor / ps.RESOLUTION;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        distPerCountFactor = _factor / ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aaeaa01d54add313c783c532f654651e6">RESOLUTION</a>;</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    }</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
 <div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="class_j_encoder_p_w_m_absolute.html#aa46f9870a5d1c98e987f266f3ba332a8">  179</a></span>&#160;    <span class="keywordtype">boolean</span> <a class="code" href="class_j_encoder_p_w_m_absolute.html#aa46f9870a5d1c98e987f266f3ba332a8">hasDirection</a>()</div>
@@ -224,9 +224,9 @@ $(function() {
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="keywordtype">long</span> interval = dataEndMicros - dataStartMicros;</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <span class="keywordtype">long</span> cycle = dataEndMicros - oldDataEndMicros;</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <span class="keywordflow">if</span> (interval &gt; 0 &amp;&amp; cycle &gt; 0) { <span class="comment">//check that interrupts didn&#39;t change one number but not the other</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                angle = constrain(interval * ps.PWM_STEPS / cycle - ps.MIN_STEPS, 0, ps.RESOLUTION);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                angle = constrain(interval * ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aff02616f61cfef0904b0e7a41d57b187">PWM_STEPS</a> / cycle - ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#a7479527686a611225b8cfdf24a23d461">MIN_STEPS</a>, 0, ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aaeaa01d54add313c783c532f654651e6">RESOLUTION</a>);</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                newAngle = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                <span class="keywordflow">if</span> (abs(angle - lastAngle) &gt; ps.RESOLUTION / 2) { <span class="comment">// angle jump over half of circle is assummed to be the shorter crossing of 0</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                <span class="keywordflow">if</span> (abs(angle - lastAngle) &gt; ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aaeaa01d54add313c783c532f654651e6">RESOLUTION</a> / 2) { <span class="comment">// angle jump over half of circle is assummed to be the shorter crossing of 0</span></div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                    <span class="keywordflow">if</span> (angle &gt; lastAngle) {</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                        turns--;</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                    } <span class="keywordflow">else</span> {</div>
@@ -235,7 +235,7 @@ $(function() {
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                }</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            }</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        }</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordtype">long</span> velDist = (angle - lastVelAngle) + (turns - lastVelTurns) * ps.RESOLUTION;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordtype">long</span> velDist = (angle - lastVelAngle) + (turns - lastVelTurns) * ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aaeaa01d54add313c783c532f654651e6">RESOLUTION</a>;</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keywordflow">if</span> (micros() - lastVelTimeMicros &gt; velEnoughTime || abs(velDist) &gt; velEnoughTicks) {</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            velocity = (double)1000000.0 * velDist / (micros() - lastVelTimeMicros) * distPerCountFactor * reverse;</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            lastVelTimeMicros = micros();</div>
@@ -248,9 +248,9 @@ $(function() {
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        lastAngle = angle;</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    }</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordtype">void</span> encoderISR()</div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="class_j_encoder_p_w_m_absolute.html#a60591c08ee301a506649c4bf6b39b585">  222</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_p_w_m_absolute.html#a60591c08ee301a506649c4bf6b39b585">encoderISR</a>()</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    {</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">if</span> (digitalRead(encoderPin) == ps.dataState) {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">if</span> (digitalRead(<a class="code" href="class_j_encoder_p_w_m_absolute.html#a7639836ccba8344fed34e24cb3170ec2">encoderPin</a>) == ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#af8ca49e38c3a7627ddffdaa53c944972">dataState</a>) {</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            earlyDataStartMicros = micros();</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            oldDataEndMicros = dataEndMicros;</div>
@@ -261,13 +261,16 @@ $(function() {
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    }</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;};</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_j_encoder_8h_html"><div class="ttname"><a href="_j_encoder_8h.html">JEncoder.h</a></div></div>
 <div class="ttc" id="aclass_j_encoder_html"><div class="ttname"><a href="class_j_encoder.html">JEncoder</a></div><div class="ttdef"><b>Definition:</b> JEncoder.h:10</div></div>
 <div class="ttc" id="aclass_j_encoder_p_w_m_absolute_html"><div class="ttname"><a href="class_j_encoder_p_w_m_absolute.html">JEncoderPWMAbsolute</a></div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsolute.h:28</div></div>
 <div class="ttc" id="aclass_j_encoder_p_w_m_absolute_html_a0442670df73e04fd8af5f4c158c160e1"><div class="ttname"><a href="class_j_encoder_p_w_m_absolute.html#a0442670df73e04fd8af5f4c158c160e1">JEncoderPWMAbsolute::zeroCounter</a></div><div class="ttdeci">long zeroCounter()</div><div class="ttdoc">reset the counter of how far the encoder has turned</div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsolute.h:141</div></div>
 <div class="ttc" id="aclass_j_encoder_p_w_m_absolute_html_a0f3709d037551a4e417804da8ecd44f9"><div class="ttname"><a href="class_j_encoder_p_w_m_absolute.html#a0f3709d037551a4e417804da8ecd44f9">JEncoderPWMAbsolute::setUpInterrupts</a></div><div class="ttdeci">virtual void setUpInterrupts(void(*_isrPointer)(void))</div><div class="ttdoc">set up pins and interrupts</div></div>
 <div class="ttc" id="aclass_j_encoder_p_w_m_absolute_html_a122f35f077150b64126880c03aa00d1d"><div class="ttname"><a href="class_j_encoder_p_w_m_absolute.html#a122f35f077150b64126880c03aa00d1d">JEncoderPWMAbsolute::run</a></div><div class="ttdeci">void run()</div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsolute.h:192</div></div>
 <div class="ttc" id="aclass_j_encoder_p_w_m_absolute_html_a4b5866897f7aa8d8d93e2acd7f7326a3"><div class="ttname"><a href="class_j_encoder_p_w_m_absolute.html#a4b5866897f7aa8d8d93e2acd7f7326a3">JEncoderPWMAbsolute::getCounter</a></div><div class="ttdeci">long getCounter()</div><div class="ttdoc">returns how far the encoder has turned from the zero position</div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsolute.h:155</div></div>
+<div class="ttc" id="aclass_j_encoder_p_w_m_absolute_html_a60591c08ee301a506649c4bf6b39b585"><div class="ttname"><a href="class_j_encoder_p_w_m_absolute.html#a60591c08ee301a506649c4bf6b39b585">JEncoderPWMAbsolute::encoderISR</a></div><div class="ttdeci">void encoderISR()</div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsolute.h:222</div></div>
 <div class="ttc" id="aclass_j_encoder_p_w_m_absolute_html_a6277734ae88854d5d8c22cbb54b2cd67"><div class="ttname"><a href="class_j_encoder_p_w_m_absolute.html#a6277734ae88854d5d8c22cbb54b2cd67">JEncoderPWMAbsolute::getDist</a></div><div class="ttdeci">float getDist()</div><div class="ttdoc">returns how far the encoder has turned from the zero position converted to distance</div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsolute.h:160</div></div>
+<div class="ttc" id="aclass_j_encoder_p_w_m_absolute_html_a7639836ccba8344fed34e24cb3170ec2"><div class="ttname"><a href="class_j_encoder_p_w_m_absolute.html#a7639836ccba8344fed34e24cb3170ec2">JEncoderPWMAbsolute::encoderPin</a></div><div class="ttdeci">byte encoderPin</div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsolute.h:38</div></div>
 <div class="ttc" id="aclass_j_encoder_p_w_m_absolute_html_a90908819eb8f415db323cc9f06224bd6"><div class="ttname"><a href="class_j_encoder_p_w_m_absolute.html#a90908819eb8f415db323cc9f06224bd6">JEncoderPWMAbsolute::isVelNew</a></div><div class="ttdeci">boolean isVelNew()</div><div class="ttdoc">could be useful for only recalculating a control loop if there's new velocity data</div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsolute.h:184</div></div>
 <div class="ttc" id="aclass_j_encoder_p_w_m_absolute_html_a97a789b9758e62a07c7a1f15af15f878"><div class="ttname"><a href="class_j_encoder_p_w_m_absolute.html#a97a789b9758e62a07c7a1f15af15f878">JEncoderPWMAbsolute::JEncoderPWMAbsolute</a></div><div class="ttdeci">JEncoderPWMAbsolute(byte _encoderPin, pwmSettings _ps, boolean _reverse=false, float _distPerCountFactor=1.0, unsigned long _velEnoughTime=0, unsigned long _velEnoughTicks=0)</div><div class="ttdoc">sets pins and settings for reading the encoder</div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsolute.h:81</div></div>
 <div class="ttc" id="aclass_j_encoder_p_w_m_absolute_html_aa2fa14e03fc502e79e63a0d7121b84ed"><div class="ttname"><a href="class_j_encoder_p_w_m_absolute.html#aa2fa14e03fc502e79e63a0d7121b84ed">JEncoderPWMAbsolute::turnOffInterrupts</a></div><div class="ttdeci">virtual void turnOffInterrupts()</div><div class="ttdoc">disable interrupts and stop monitoring encoder</div></div>
@@ -278,6 +281,10 @@ $(function() {
 <div class="ttc" id="aclass_j_encoder_p_w_m_absolute_html_af689df544afd9812612e1ba369a154a9"><div class="ttname"><a href="class_j_encoder_p_w_m_absolute.html#af689df544afd9812612e1ba369a154a9">JEncoderPWMAbsolute::rawReading</a></div><div class="ttdeci">int rawReading()</div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsolute.h:126</div></div>
 <div class="ttc" id="aclass_j_encoder_p_w_m_absolute_html_af8dc546c25140a4cc42e0fd9d44ab387"><div class="ttname"><a href="class_j_encoder_p_w_m_absolute.html#af8dc546c25140a4cc42e0fd9d44ab387">JEncoderPWMAbsolute::setDistPerCountFactor</a></div><div class="ttdeci">void setDistPerCountFactor(float _factor)</div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsolute.h:174</div></div>
 <div class="ttc" id="astruct_j_encoder_p_w_m_absolute_1_1pwm_settings_html"><div class="ttname"><a href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html">JEncoderPWMAbsolute::pwmSettings</a></div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsolute.h:30</div></div>
+<div class="ttc" id="astruct_j_encoder_p_w_m_absolute_1_1pwm_settings_html_a7479527686a611225b8cfdf24a23d461"><div class="ttname"><a href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#a7479527686a611225b8cfdf24a23d461">JEncoderPWMAbsolute::pwmSettings::MIN_STEPS</a></div><div class="ttdeci">uint16_t MIN_STEPS</div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsolute.h:33</div></div>
+<div class="ttc" id="astruct_j_encoder_p_w_m_absolute_1_1pwm_settings_html_aaeaa01d54add313c783c532f654651e6"><div class="ttname"><a href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aaeaa01d54add313c783c532f654651e6">JEncoderPWMAbsolute::pwmSettings::RESOLUTION</a></div><div class="ttdeci">uint16_t RESOLUTION</div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsolute.h:31</div></div>
+<div class="ttc" id="astruct_j_encoder_p_w_m_absolute_1_1pwm_settings_html_af8ca49e38c3a7627ddffdaa53c944972"><div class="ttname"><a href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#af8ca49e38c3a7627ddffdaa53c944972">JEncoderPWMAbsolute::pwmSettings::dataState</a></div><div class="ttdeci">boolean dataState</div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsolute.h:34</div></div>
+<div class="ttc" id="astruct_j_encoder_p_w_m_absolute_1_1pwm_settings_html_aff02616f61cfef0904b0e7a41d57b187"><div class="ttname"><a href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aff02616f61cfef0904b0e7a41d57b187">JEncoderPWMAbsolute::pwmSettings::PWM_STEPS</a></div><div class="ttdeci">uint16_t PWM_STEPS</div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsolute.h:32</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -70,6 +70,8 @@ $(function() {
 <div class="title">JEncoderAS5048bI2C Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_j_encoder_a_s5048b_i2_c_8h_source.html">JEncoderAS5048bI2C.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for JEncoderAS5048bI2C:</div>
 <div class="dyncontent">
@@ -106,9 +108,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a866839c8baf76e92555f003694c3dba8"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a866839c8baf76e92555f003694c3dba8">setAddressRegister</a> (uint8_t val)</td></tr>
 <tr class="memdesc:a866839c8baf76e92555f003694c3dba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">change the i2c address of the encoder (see the datasheet <a href="https://ams.com/as0548b">https://ams.com/as0548b</a>) from addressRegW() in <a href="https://github.com/sosandroid/AMS_AS5048B/blob/master/ams_as5048b.cpp">https://github.com/sosandroid/AMS_AS5048B/blob/master/ams_as5048b.cpp</a>  <a href="class_j_encoder_a_s5048b_i2_c.html#a866839c8baf76e92555f003694c3dba8">More...</a><br /></td></tr>
 <tr class="separator:a866839c8baf76e92555f003694c3dba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a225aa9f6177c40b5da6c32e44ae60eb7"><td class="memItemLeft" align="right" valign="top"><a id="a225aa9f6177c40b5da6c32e44ae60eb7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a225aa9f6177c40b5da6c32e44ae60eb7">setEncoderZero</a> ()</td></tr>
-<tr class="memdesc:a225aa9f6177c40b5da6c32e44ae60eb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current angle of the sensor is read and set to zero. <br /></td></tr>
+<tr class="memitem:a225aa9f6177c40b5da6c32e44ae60eb7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a225aa9f6177c40b5da6c32e44ae60eb7">setEncoderZero</a> ()</td></tr>
+<tr class="memdesc:a225aa9f6177c40b5da6c32e44ae60eb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current angle of the sensor is read and set to zero.  <a href="class_j_encoder_a_s5048b_i2_c.html#a225aa9f6177c40b5da6c32e44ae60eb7">More...</a><br /></td></tr>
 <tr class="separator:a225aa9f6177c40b5da6c32e44ae60eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b935a54672e7e7a942111c5a45e3cb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a3b935a54672e7e7a942111c5a45e3cb8">setEncoderZero</a> (int zeroAngle)</td></tr>
 <tr class="memdesc:a3b935a54672e7e7a942111c5a45e3cb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A custom (repeatable) angle can be set for what the sensor calls zero relative to default zero.  <a href="class_j_encoder_a_s5048b_i2_c.html#a3b935a54672e7e7a942111c5a45e3cb8">More...</a><br /></td></tr>
@@ -147,14 +148,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a02b5a5ddc6653586bfa7bf95f070ae85"><td class="memItemLeft" align="right" valign="top"><a id="a02b5a5ddc6653586bfa7bf95f070ae85"></a>
-const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>STEPS_PER_TURN</b> = 16384</td></tr>
+<tr class="memitem:a02b5a5ddc6653586bfa7bf95f070ae85"><td class="memItemLeft" align="right" valign="top">const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">STEPS_PER_TURN</a> = 16384</td></tr>
 <tr class="separator:a02b5a5ddc6653586bfa7bf95f070ae85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a1163389759e000ee702376baa16aea44"><td class="memItemLeft" align="right" valign="top"><a id="a1163389759e000ee702376baa16aea44"></a>
-static const byte&#160;</td><td class="memItemRight" valign="bottom"><b>AS5048B_DEFAULT_ADDRESS</b> = 0x40</td></tr>
+<tr class="memitem:a1163389759e000ee702376baa16aea44"><td class="memItemLeft" align="right" valign="top">static const byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a1163389759e000ee702376baa16aea44">AS5048B_DEFAULT_ADDRESS</a> = 0x40</td></tr>
 <tr class="separator:a1163389759e000ee702376baa16aea44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -726,8 +725,35 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a225aa9f6177c40b5da6c32e44ae60eb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a225aa9f6177c40b5da6c32e44ae60eb7">&#9670;&nbsp;</a></span>setEncoderZero() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JEncoderAS5048bI2C::setEncoderZero </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The current angle of the sensor is read and set to zero. </p>
+
+</div>
+</div>
 <a id="a3b935a54672e7e7a942111c5a45e3cb8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b935a54672e7e7a942111c5a45e3cb8">&#9670;&nbsp;</a></span>setEncoderZero()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b935a54672e7e7a942111c5a45e3cb8">&#9670;&nbsp;</a></span>setEncoderZero() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -792,6 +818,43 @@ Here is the caller graph for this function:</div>
 </dl>
 
 <p>Reimplemented from <a class="el" href="class_j_encoder.html#aebd11e6e685427b4a1323fcc4b4e8e51">JEncoder</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a1163389759e000ee702376baa16aea44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1163389759e000ee702376baa16aea44">&#9670;&nbsp;</a></span>AS5048B_DEFAULT_ADDRESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const byte JEncoderAS5048bI2C::AS5048B_DEFAULT_ADDRESS = 0x40</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02b5a5ddc6653586bfa7bf95f070ae85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02b5a5ddc6653586bfa7bf95f070ae85">&#9670;&nbsp;</a></span>STEPS_PER_TURN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int JEncoderAS5048bI2C::STEPS_PER_TURN = 16384</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

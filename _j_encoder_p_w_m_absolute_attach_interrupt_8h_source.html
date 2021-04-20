@@ -69,8 +69,8 @@ $(function() {
 <div class="title">JEncoderPWMAbsoluteAttachInterrupt.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;JEncoderPWMAbsolute.h&quot;</span></div>
+<a href="_j_encoder_p_w_m_absolute_attach_interrupt_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_p_w_m_absolute_8h.html">JEncoderPWMAbsolute.h</a>&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef J_ENCODER_PWM_ABSOLUTE_ATTACH_INTERRUPT_H</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define J_ENCODER_PWM_ABSOLUTE_ATTACH_INTERRUPT_H</span></div>
@@ -83,20 +83,22 @@ $(function() {
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_j_encoder_p_w_m_absolute_attach_interrupt.html#a0b05e0f1d9c6ed430e549021142ad30f">   26</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_p_w_m_absolute_attach_interrupt.html#a0b05e0f1d9c6ed430e549021142ad30f">setUpInterrupts</a>(<span class="keywordtype">void</span> (*_isrPointer)(<span class="keywordtype">void</span>))</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        pinMode(encoderPin, INPUT);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        attachInterrupt(encoderPin, _isrPointer, CHANGE);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        pinMode(<a class="code" href="class_j_encoder_p_w_m_absolute.html#a7639836ccba8344fed34e24cb3170ec2">encoderPin</a>, INPUT);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        attachInterrupt(<a class="code" href="class_j_encoder_p_w_m_absolute.html#a7639836ccba8344fed34e24cb3170ec2">encoderPin</a>, _isrPointer, CHANGE);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
 <div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_j_encoder_p_w_m_absolute_attach_interrupt.html#a9f2d0e320a0d8f956413891bf8b8266e">   31</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_p_w_m_absolute_attach_interrupt.html#a9f2d0e320a0d8f956413891bf8b8266e">turnOffInterrupts</a>()</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        detachInterrupt(encoderPin);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        detachInterrupt(<a class="code" href="class_j_encoder_p_w_m_absolute.html#a7639836ccba8344fed34e24cb3170ec2">encoderPin</a>);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_j_encoder_p_w_m_absolute_8h_html"><div class="ttname"><a href="_j_encoder_p_w_m_absolute_8h.html">JEncoderPWMAbsolute.h</a></div></div>
 <div class="ttc" id="aclass_j_encoder_p_w_m_absolute_attach_interrupt_html"><div class="ttname"><a href="class_j_encoder_p_w_m_absolute_attach_interrupt.html">JEncoderPWMAbsoluteAttachInterrupt</a></div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsoluteAttachInterrupt.h:10</div></div>
 <div class="ttc" id="aclass_j_encoder_p_w_m_absolute_attach_interrupt_html_a0b05e0f1d9c6ed430e549021142ad30f"><div class="ttname"><a href="class_j_encoder_p_w_m_absolute_attach_interrupt.html#a0b05e0f1d9c6ed430e549021142ad30f">JEncoderPWMAbsoluteAttachInterrupt::setUpInterrupts</a></div><div class="ttdeci">void setUpInterrupts(void(*_isrPointer)(void))</div><div class="ttdoc">set up pins and interrupts</div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsoluteAttachInterrupt.h:26</div></div>
 <div class="ttc" id="aclass_j_encoder_p_w_m_absolute_attach_interrupt_html_a9f2d0e320a0d8f956413891bf8b8266e"><div class="ttname"><a href="class_j_encoder_p_w_m_absolute_attach_interrupt.html#a9f2d0e320a0d8f956413891bf8b8266e">JEncoderPWMAbsoluteAttachInterrupt::turnOffInterrupts</a></div><div class="ttdeci">void turnOffInterrupts()</div><div class="ttdoc">disable interrupts and stop monitoring encoder</div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsoluteAttachInterrupt.h:31</div></div>
 <div class="ttc" id="aclass_j_encoder_p_w_m_absolute_attach_interrupt_html_aabcac407d35df59f6db5000865c90ffe"><div class="ttname"><a href="class_j_encoder_p_w_m_absolute_attach_interrupt.html#aabcac407d35df59f6db5000865c90ffe">JEncoderPWMAbsoluteAttachInterrupt::JEncoderPWMAbsoluteAttachInterrupt</a></div><div class="ttdeci">JEncoderPWMAbsoluteAttachInterrupt(byte _encoderPin, pwmSettings _ps, boolean _reverse=false, float _distPerCountFactor=1.0, unsigned long _velEnoughTime=0, unsigned long _velEnoughTicks=0)</div><div class="ttdoc">sets pins and settings for reading the encoder</div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsoluteAttachInterrupt.h:21</div></div>
 <div class="ttc" id="aclass_j_encoder_p_w_m_absolute_html"><div class="ttname"><a href="class_j_encoder_p_w_m_absolute.html">JEncoderPWMAbsolute</a></div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsolute.h:28</div></div>
+<div class="ttc" id="aclass_j_encoder_p_w_m_absolute_html_a7639836ccba8344fed34e24cb3170ec2"><div class="ttname"><a href="class_j_encoder_p_w_m_absolute.html#a7639836ccba8344fed34e24cb3170ec2">JEncoderPWMAbsolute::encoderPin</a></div><div class="ttdeci">byte encoderPin</div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsolute.h:38</div></div>
 <div class="ttc" id="astruct_j_encoder_p_w_m_absolute_1_1pwm_settings_html"><div class="ttname"><a href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html">JEncoderPWMAbsolute::pwmSettings</a></div><div class="ttdef"><b>Definition:</b> JEncoderPWMAbsolute.h:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
