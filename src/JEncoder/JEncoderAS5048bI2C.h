@@ -9,11 +9,11 @@
 #include "JEncoder.h"
 #include <Arduino.h>
 #ifdef J_ENCODER_AS5048_I2C_USE_SOFTWIRE
-#include <SoftWire.h>
+#include <SoftWire.h> // https://github.com/stevemarple/SoftWire tested v2.04
 #else
 #include <Wire.h>
 #endif
-class JEncoderAS5048bI2C : private JEncoder {
+class JEncoderAS5048bI2C : public JEncoder {
 private:
 #ifdef J_ENCODER_AS5048_I2C_USE_SOFTWIRE
     SoftWire* wire;
@@ -102,8 +102,8 @@ private:
     }
 
 public:
-    const unsigned int STEPS_PER_TURN = 16384;
-    static const byte AS5048B_DEFAULT_ADDRESS = 0x40;
+    const unsigned int STEPS_PER_TURN = 16384; //resolution of encoder
+    static const byte AS5048B_DEFAULT_ADDRESS = 0x40; //can be accessed as JEncoderAS5048bI2C::AS5048B_DEFAULT_ADDRESS
 
     /**
      * @brief  sets pins and settings for reading the encoder
@@ -153,10 +153,10 @@ public:
      */
 
 #ifndef J_ENCODER_AS5048_I2C_USE_SOFTWIRE
-    void begin(boolean begin = true)
+    void begin(boolean _begin = true)
     {
         wire = &Wire;
-        if (begin) {
+        if (_begin) {
             wire->begin();
         }
     }
@@ -226,9 +226,9 @@ public:
         writeToZeroRegister(zeroAngle);
     }
 
-    /**
-     * @retval the raw angle reading from the sensor (0 to 16,383) (but negative if reverse is true)
+    /** 
      * @note divide by STEPS_PER_TURN to get fraction of full turn
+     * @retval the raw angle reading from the sensor (0 to 16,383) (but negative if reverse is true)
      */
 
     int rawReading()
@@ -260,15 +260,16 @@ public:
 
     long zeroCounter()
     {
-        long tempTurns = turns * reverse;
+        long tTurns = turns;
+        uint16_t tAngle = angle;
         turns = 0;
         angle = 0;
-        return tempTurns;
+        return (tTurns * STEPS_PER_TURN + tAngle) * reverse;
     }
 
     float getVel()
     {
-        return velocity * reverse;
+        return velocity;
     }
 
     long getCounter()

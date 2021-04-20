@@ -11,7 +11,7 @@ class JEncoder {
 public:
     /**
      * @brief  reset the counter of how far the encoder has turned
-     * @retval returns value of counter before it is reset
+     * @retval (long) returns value of counter before it is reset
      */
     virtual long zeroCounter();
 
@@ -50,13 +50,13 @@ public:
 
     /**
      * @brief  can this encoder mesure direction or just speed
-     * @retval true=can measure direction
+     * @retval (boolean) true = can measure direction
      */
     virtual boolean hasDirection();
 
     /**
      * @brief  could be useful for only recalculating a control loop if there's new velocity data
-     * @retval true if velocity has changed since this function was last called
+     * @retval (boolean) true if velocity has changed since this function was last called
      */
     virtual boolean isVelNew();
 
@@ -68,11 +68,13 @@ public:
 };
 
 #if defined(ESP32) || defined(CORE_TEENSY)
-#include "JEncoderAttachInterruptQuadrature.h"
-#include "JEncoderAttachInterruptSingle.h"
+#include "JEncoderQuadratureAttachInterrupt.h"
+#include "JEncoderSingleAttachInterrupt.h"
+#include "JEncoderPWMAbsoluteAttachInterrupt.h"
 #else
-#include "JEncoderPinChangeQuadrature.h"
-#include "JEncoderPinChangeSingle.h"
+#include "JEncoderQuadraturePinChange.h"
+#include "JEncoderSinglePinChange.h"
+#include "JEncoderPWMAbsolutePinChange.h"
 #endif
 #include "JEncoderAS5048bI2C.h"
 
