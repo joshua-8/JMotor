@@ -8,7 +8,6 @@
 #include <Wire.h>
 #endif
 /**
- * \file JEncoderAS5048bI2C.h
  * @brief reads a type of absolute encoder https://ams.com/as0548b (uses I2C)
  * 
  * based on work by sosandroid https://github.com/sosandroid/AMS_AS5048B 
