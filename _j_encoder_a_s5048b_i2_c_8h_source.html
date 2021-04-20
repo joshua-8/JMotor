@@ -78,262 +78,262 @@ $(function() {
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;Wire.h&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_j_encoder_a_s5048b_i2_c.html">JEncoderAS5048bI2C</a> : <span class="keyword">public</span> <a class="code" href="class_j_encoder.html">JEncoder</a> {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifdef J_ENCODER_AS5048_I2C_USE_SOFTWIRE</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    SoftWire* wire;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    TwoWire* wire;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">byte</span> address;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">long</span> turns;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    uint16_t angle;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    int8_t reverse;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">float</span> velocity;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">float</span> distPerCountFactor;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">boolean</span> newSpeed;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    uint16_t lastAngle;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    uint16_t lastVelAngle;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">long</span> lastVelTurns;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> lastVelTimeMicros;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> velEnoughTime;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> velEnoughTicks;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">byte</span> AS5048B_ZEROMSB_REG = 0x16;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">byte</span> AS5048B_ZEROLSB_REG = 0x17;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">byte</span> AS5048B_ADDR_REG = 0x15;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">byte</span> AS5048B_ANGLMSB_REG = 0xFE;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">byte</span> AS5048B_GAIN_REG = 0xFA;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> writeRegister8(uint8_t reg, uint8_t value)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        wire-&gt;beginTransmission(address);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        wire-&gt;write(reg);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        wire-&gt;write(value);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        wire-&gt;endTransmission();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    uint16_t readRegister14(uint8_t reg)</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="comment">//16 bit value got from 2 8bits registers (7..0 MSB + 5..0 LSB) =&gt; 14 bits value</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        uint16_t readValue = 0;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">byte</span> readArray[2];</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        wire-&gt;beginTransmission(address);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        wire-&gt;write(reg);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        wire-&gt;endTransmission(<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        wire-&gt;requestFrom(address, (uint8_t)2);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        readArray[0] = wire-&gt;read();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        readArray[1] = wire-&gt;read();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        readValue = (((uint16_t)readArray[0]) &lt;&lt; 6);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        readValue += (readArray[1] &amp; 0b111111);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> readValue;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    uint8_t readRegister8(uint8_t reg)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        uint8_t readValue;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        wire-&gt;beginTransmission(address);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        wire-&gt;write(reg);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        wire-&gt;endTransmission(<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        wire-&gt;requestFrom(address, (uint8_t)1);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        readValue = (uint8_t)wire-&gt;read();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> readValue;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> writeToZeroRegister(uint16_t val)</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        writeRegister8(AS5048B_ZEROMSB_REG, (uint8_t)(val &gt;&gt; 6));</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        writeRegister8(AS5048B_ZEROLSB_REG, (uint8_t)(val &amp; 0b00111111));</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    uint8_t getAutoGain()</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">return</span> readRegister8(AS5048B_GAIN_REG);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    uint16_t readAngle()</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">return</span> readRegister14(AS5048B_ANGLMSB_REG);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">  107</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">STEPS_PER_TURN</a> = 16384; <span class="comment">//resolution of encoder</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a1163389759e000ee702376baa16aea44">  108</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">byte</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a1163389759e000ee702376baa16aea44">AS5048B_DEFAULT_ADDRESS</a> = 0x40; <span class="comment">//can be accessed as JEncoderAS5048bI2C::AS5048B_DEFAULT_ADDRESS</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a089d51e73f1bc1ce71de167239e81954">  118</a></span>&#160;    <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a089d51e73f1bc1ce71de167239e81954">JEncoderAS5048bI2C</a>(<span class="keywordtype">boolean</span> _reverse = <span class="keyword">false</span>, <span class="keywordtype">float</span> _distPerCountFactor = 1.0, uint8_t _address = 0x40, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> _velEnoughTime = 0, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> _velEnoughTicks = 0)</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        : address(_address)</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">if</span> (_reverse) {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            reverse = -1;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            reverse = 1;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        }</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        turns = 0;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        angle = 0;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        velocity = 0;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a815b677dcaa4a4c92cb396fa0fdb877d">setDistPerCountFactor</a>(_distPerCountFactor);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        newSpeed = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        lastVelAngle = 0;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        lastVelTurns = 0;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        lastVelTimeMicros = 0;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        velEnoughTime = _velEnoughTime;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        velEnoughTicks = _velEnoughTicks;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="preprocessor">#ifdef J_ENCODER_AS5048_I2C_USE_SOFTWIRE</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#aa197f1a1f8347b7434adb1d1a20b943d">  144</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#aa197f1a1f8347b7434adb1d1a20b943d">begin</a>(SoftWire* _wire)</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#aa197f1a1f8347b7434adb1d1a20b943d">begin</a>(TwoWire* _wire)</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    {</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        wire = _wire;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">#ifndef J_ENCODER_AS5048_I2C_USE_SOFTWIRE</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#ab5505cbc5bc359e4887f30c109b7fbf0">  158</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#ab5505cbc5bc359e4887f30c109b7fbf0">begin</a>(<span class="keywordtype">boolean</span> _begin = <span class="keyword">true</span>)</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    {</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        wire = &amp;Wire;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordflow">if</span> (_begin) {</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            wire-&gt;begin();</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        }</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b">  171</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b">run</a>()</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    {</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        angle = readAngle();</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">if</span> (abs(angle - lastAngle) &gt; <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">STEPS_PER_TURN</a> / 2) { <span class="comment">// angle jump over half of circle is assummed to be the shorter crossing of 0</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="keywordflow">if</span> (angle &gt; lastAngle) {</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                turns--;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                turns++;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            }</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        }</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordtype">long</span> velDist = (angle - lastVelAngle) + (turns - lastVelTurns) * <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">STEPS_PER_TURN</a>;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordflow">if</span> (micros() - lastVelTimeMicros &gt; velEnoughTime || abs(velDist) &gt; velEnoughTicks) {</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            velocity = (double)1000000.0 * velDist / (micros() - lastVelTimeMicros) * distPerCountFactor * reverse;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            lastVelTimeMicros = micros();</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            newSpeed = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            lastVelAngle = angle;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            lastVelTurns = turns;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            newSpeed = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        }</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        lastAngle = angle;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    }</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
-<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a866839c8baf76e92555f003694c3dba8">  203</a></span>&#160;    uint8_t <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a866839c8baf76e92555f003694c3dba8">setAddressRegister</a>(uint8_t val)</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    {</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        writeRegister8(AS5048B_ADDR_REG, val);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="comment">// update our chip address with our 5 programmable bits</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="comment">// the MSB is internally inverted, so we flip the leftmost bit</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        address = ((val &lt;&lt; 2) | (address &amp; 0b11)) ^ (1 &lt;&lt; 6);</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordflow">return</span> address;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    }</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a225aa9f6177c40b5da6c32e44ae60eb7">  215</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a225aa9f6177c40b5da6c32e44ae60eb7">setEncoderZero</a>()</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    {</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        writeToZeroRegister(0);</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        uint16_t newZero = readRegister14(AS5048B_ANGLMSB_REG);</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        writeToZeroRegister(newZero);</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div>
-<div class="line"><a name="l00225"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a3b935a54672e7e7a942111c5a45e3cb8">  225</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a3b935a54672e7e7a942111c5a45e3cb8">setEncoderZero</a>(<span class="keywordtype">int</span> zeroAngle)</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        zeroAngle = constrain(zeroAngle, 0, (<span class="keywordtype">long</span>)<a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">STEPS_PER_TURN</a> - 1);</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        writeToZeroRegister(zeroAngle);</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    }</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
-<div class="line"><a name="l00236"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a2857d5f8ba2b031d351f22c904b8a7ca">  236</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a2857d5f8ba2b031d351f22c904b8a7ca">rawReading</a>()</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    {</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keywordflow">return</span> angle * reverse;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    }</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
-<div class="line"><a name="l00247"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a8b0edec9954c20afdc4dadfc9c1ad9f9">  247</a></span>&#160;    <span class="keywordtype">boolean</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a8b0edec9954c20afdc4dadfc9c1ad9f9">isMagnetInRange</a>()</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    {</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        uint8_t gain = getAutoGain();</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keywordflow">return</span> (gain != 0) &amp;&amp; (gain != 255);</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    }</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
-<div class="line"><a name="l00258"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a5d7a9a2d83944a546d4343944c8ec92d">  258</a></span>&#160;    <span class="keywordtype">long</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a5d7a9a2d83944a546d4343944c8ec92d">intTurns</a>()</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    {</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordflow">return</span> turns * reverse;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    }</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
-<div class="line"><a name="l00263"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a1b39b8b34b9105542eea68150047ea37">  263</a></span>&#160;    <span class="keywordtype">long</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a1b39b8b34b9105542eea68150047ea37">zeroCounter</a>()</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    {</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keywordtype">long</span> tTurns = turns;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        uint16_t tAngle = angle;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        turns = 0;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        angle = 0;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordflow">return</span> (tTurns * <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">STEPS_PER_TURN</a> + tAngle) * reverse;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    }</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
-<div class="line"><a name="l00272"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#aebeb1fdb74a4a5070f3a54b8ffdddbe4">  272</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#aebeb1fdb74a4a5070f3a54b8ffdddbe4">getVel</a>()</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    {</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordflow">return</span> velocity;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    }</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
-<div class="line"><a name="l00277"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a046728560702239c1af7f4087df9e9f9">  277</a></span>&#160;    <span class="keywordtype">long</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a046728560702239c1af7f4087df9e9f9">getCounter</a>()</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    {</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">return</span> (turns * <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">STEPS_PER_TURN</a> + angle) * reverse;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    }</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
-<div class="line"><a name="l00282"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#abad14bb180b9435d2fd654c98eb56f76">  282</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#abad14bb180b9435d2fd654c98eb56f76">getDist</a>()</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    {</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">return</span> (turns * <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">STEPS_PER_TURN</a> + angle) * reverse * distPerCountFactor;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    }</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
-<div class="line"><a name="l00287"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a5138a500cb0d24f47b29e9595a3aabb1">  287</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a5138a500cb0d24f47b29e9595a3aabb1">getDistPerCountFactor</a>()</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    {</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keywordflow">return</span> distPerCountFactor;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    }</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
-<div class="line"><a name="l00296"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a815b677dcaa4a4c92cb396fa0fdb877d">  296</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a815b677dcaa4a4c92cb396fa0fdb877d">setDistPerCountFactor</a>(<span class="keywordtype">float</span> _factor)</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        distPerCountFactor = _factor / <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">STEPS_PER_TURN</a>;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    }</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
-<div class="line"><a name="l00301"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a3451d0aca7ab7d02d3dff861bcca9933">  301</a></span>&#160;    <span class="keywordtype">boolean</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a3451d0aca7ab7d02d3dff861bcca9933">hasDirection</a>()</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    {</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    }</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
-<div class="line"><a name="l00306"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#abb858384db5d1f73615c2cf917464cc2">  306</a></span>&#160;    <span class="keywordtype">boolean</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#abb858384db5d1f73615c2cf917464cc2">isVelNew</a>()</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    {</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keywordflow">return</span> newSpeed;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    }</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;};</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_j_encoder_a_s5048b_i2_c.html">JEncoderAS5048bI2C</a> : <span class="keyword">public</span> <a class="code" href="class_j_encoder.html">JEncoder</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifdef J_ENCODER_AS5048_I2C_USE_SOFTWIRE</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    SoftWire* wire;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    TwoWire* wire;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">byte</span> address;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">long</span> turns;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    uint16_t angle;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    int8_t reverse;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">float</span> velocity;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">float</span> distPerCountFactor;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">boolean</span> newSpeed;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    uint16_t lastAngle;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    uint16_t lastVelAngle;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">long</span> lastVelTurns;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> lastVelTimeMicros;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> velEnoughTime;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> velEnoughTicks;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">byte</span> AS5048B_ZEROMSB_REG = 0x16;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">byte</span> AS5048B_ZEROLSB_REG = 0x17;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">byte</span> AS5048B_ADDR_REG = 0x15;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">byte</span> AS5048B_ANGLMSB_REG = 0xFE;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">byte</span> AS5048B_GAIN_REG = 0xFA;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> writeRegister8(uint8_t reg, uint8_t value)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        wire-&gt;beginTransmission(address);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        wire-&gt;write(reg);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        wire-&gt;write(value);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        wire-&gt;endTransmission();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    uint16_t readRegister14(uint8_t reg)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="comment">//16 bit value got from 2 8bits registers (7..0 MSB + 5..0 LSB) =&gt; 14 bits value</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        uint16_t readValue = 0;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">byte</span> readArray[2];</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        wire-&gt;beginTransmission(address);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        wire-&gt;write(reg);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        wire-&gt;endTransmission(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        wire-&gt;requestFrom(address, (uint8_t)2);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        readArray[0] = wire-&gt;read();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        readArray[1] = wire-&gt;read();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        readValue = (((uint16_t)readArray[0]) &lt;&lt; 6);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        readValue += (readArray[1] &amp; 0b111111);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> readValue;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    uint8_t readRegister8(uint8_t reg)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        uint8_t readValue;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        wire-&gt;beginTransmission(address);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        wire-&gt;write(reg);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        wire-&gt;endTransmission(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        wire-&gt;requestFrom(address, (uint8_t)1);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        readValue = (uint8_t)wire-&gt;read();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">return</span> readValue;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> writeToZeroRegister(uint16_t val)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        writeRegister8(AS5048B_ZEROMSB_REG, (uint8_t)(val &gt;&gt; 6));</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        writeRegister8(AS5048B_ZEROLSB_REG, (uint8_t)(val &amp; 0b00111111));</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    uint8_t getAutoGain()</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">return</span> readRegister8(AS5048B_GAIN_REG);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    uint16_t readAngle()</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">return</span> readRegister14(AS5048B_ANGLMSB_REG);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">  106</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">STEPS_PER_TURN</a> = 16384; <span class="comment">//resolution of encoder</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a1163389759e000ee702376baa16aea44">  107</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">byte</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a1163389759e000ee702376baa16aea44">AS5048B_DEFAULT_ADDRESS</a> = 0x40; <span class="comment">//can be accessed as JEncoderAS5048bI2C::AS5048B_DEFAULT_ADDRESS</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a089d51e73f1bc1ce71de167239e81954">  117</a></span>&#160;    <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a089d51e73f1bc1ce71de167239e81954">JEncoderAS5048bI2C</a>(<span class="keywordtype">boolean</span> _reverse = <span class="keyword">false</span>, <span class="keywordtype">float</span> _distPerCountFactor = 1.0, uint8_t _address = 0x40, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> _velEnoughTime = 0, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> _velEnoughTicks = 0)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        : address(_address)</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">if</span> (_reverse) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            reverse = -1;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            reverse = 1;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        turns = 0;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        angle = 0;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        velocity = 0;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a815b677dcaa4a4c92cb396fa0fdb877d">setDistPerCountFactor</a>(_distPerCountFactor);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        newSpeed = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        lastVelAngle = 0;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        lastVelTurns = 0;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        lastVelTimeMicros = 0;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        velEnoughTime = _velEnoughTime;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        velEnoughTicks = _velEnoughTicks;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="preprocessor">#ifdef J_ENCODER_AS5048_I2C_USE_SOFTWIRE</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#aa197f1a1f8347b7434adb1d1a20b943d">  143</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#aa197f1a1f8347b7434adb1d1a20b943d">begin</a>(SoftWire* _wire)</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#aa197f1a1f8347b7434adb1d1a20b943d">begin</a>(TwoWire* _wire)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        wire = _wire;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor">#ifndef J_ENCODER_AS5048_I2C_USE_SOFTWIRE</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#ab5505cbc5bc359e4887f30c109b7fbf0">  157</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#ab5505cbc5bc359e4887f30c109b7fbf0">begin</a>(<span class="keywordtype">boolean</span> _begin = <span class="keyword">true</span>)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        wire = &amp;Wire;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">if</span> (_begin) {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            wire-&gt;begin();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b">  170</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b">run</a>()</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        angle = readAngle();</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">if</span> (abs(angle - lastAngle) &gt; <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">STEPS_PER_TURN</a> / 2) { <span class="comment">// angle jump over half of circle is assummed to be the shorter crossing of 0</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <span class="keywordflow">if</span> (angle &gt; lastAngle) {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                turns--;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                turns++;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordtype">long</span> velDist = (angle - lastVelAngle) + (turns - lastVelTurns) * <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">STEPS_PER_TURN</a>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordflow">if</span> (micros() - lastVelTimeMicros &gt; velEnoughTime || abs(velDist) &gt; velEnoughTicks) {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            velocity = (double)1000000.0 * velDist / (micros() - lastVelTimeMicros) * distPerCountFactor * reverse;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            lastVelTimeMicros = micros();</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            newSpeed = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            lastVelAngle = angle;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            lastVelTurns = turns;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            newSpeed = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        lastAngle = angle;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a866839c8baf76e92555f003694c3dba8">  202</a></span>&#160;    uint8_t <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a866839c8baf76e92555f003694c3dba8">setAddressRegister</a>(uint8_t val)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        writeRegister8(AS5048B_ADDR_REG, val);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="comment">// update our chip address with our 5 programmable bits</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="comment">// the MSB is internally inverted, so we flip the leftmost bit</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        address = ((val &lt;&lt; 2) | (address &amp; 0b11)) ^ (1 &lt;&lt; 6);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">return</span> address;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a225aa9f6177c40b5da6c32e44ae60eb7">  214</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a225aa9f6177c40b5da6c32e44ae60eb7">setEncoderZero</a>()</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        writeToZeroRegister(0);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        uint16_t newZero = readRegister14(AS5048B_ANGLMSB_REG);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        writeToZeroRegister(newZero);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    }</div>
+<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a3b935a54672e7e7a942111c5a45e3cb8">  224</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a3b935a54672e7e7a942111c5a45e3cb8">setEncoderZero</a>(<span class="keywordtype">int</span> zeroAngle)</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        zeroAngle = constrain(zeroAngle, 0, (<span class="keywordtype">long</span>)<a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">STEPS_PER_TURN</a> - 1);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        writeToZeroRegister(zeroAngle);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a2857d5f8ba2b031d351f22c904b8a7ca">  235</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a2857d5f8ba2b031d351f22c904b8a7ca">rawReading</a>()</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keywordflow">return</span> angle * reverse;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    }</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a8b0edec9954c20afdc4dadfc9c1ad9f9">  246</a></span>&#160;    <span class="keywordtype">boolean</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a8b0edec9954c20afdc4dadfc9c1ad9f9">isMagnetInRange</a>()</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    {</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        uint8_t gain = getAutoGain();</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordflow">return</span> (gain != 0) &amp;&amp; (gain != 255);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a5d7a9a2d83944a546d4343944c8ec92d">  257</a></span>&#160;    <span class="keywordtype">long</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a5d7a9a2d83944a546d4343944c8ec92d">intTurns</a>()</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordflow">return</span> turns * reverse;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a1b39b8b34b9105542eea68150047ea37">  262</a></span>&#160;    <span class="keywordtype">long</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a1b39b8b34b9105542eea68150047ea37">zeroCounter</a>()</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    {</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keywordtype">long</span> tTurns = turns;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        uint16_t tAngle = angle;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        turns = 0;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        angle = 0;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="keywordflow">return</span> (tTurns * <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">STEPS_PER_TURN</a> + tAngle) * reverse;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    }</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
+<div class="line"><a name="l00271"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#aebeb1fdb74a4a5070f3a54b8ffdddbe4">  271</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#aebeb1fdb74a4a5070f3a54b8ffdddbe4">getVel</a>()</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    {</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keywordflow">return</span> velocity;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    }</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00276"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a046728560702239c1af7f4087df9e9f9">  276</a></span>&#160;    <span class="keywordtype">long</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a046728560702239c1af7f4087df9e9f9">getCounter</a>()</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    {</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordflow">return</span> (turns * <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">STEPS_PER_TURN</a> + angle) * reverse;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    }</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
+<div class="line"><a name="l00281"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#abad14bb180b9435d2fd654c98eb56f76">  281</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#abad14bb180b9435d2fd654c98eb56f76">getDist</a>()</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    {</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="keywordflow">return</span> (turns * <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">STEPS_PER_TURN</a> + angle) * reverse * distPerCountFactor;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    }</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a5138a500cb0d24f47b29e9595a3aabb1">  286</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a5138a500cb0d24f47b29e9595a3aabb1">getDistPerCountFactor</a>()</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    {</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordflow">return</span> distPerCountFactor;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    }</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a815b677dcaa4a4c92cb396fa0fdb877d">  295</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a815b677dcaa4a4c92cb396fa0fdb877d">setDistPerCountFactor</a>(<span class="keywordtype">float</span> _factor)</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        distPerCountFactor = _factor / <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">STEPS_PER_TURN</a>;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    }</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
+<div class="line"><a name="l00300"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#a3451d0aca7ab7d02d3dff861bcca9933">  300</a></span>&#160;    <span class="keywordtype">boolean</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a3451d0aca7ab7d02d3dff861bcca9933">hasDirection</a>()</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    {</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    }</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno"><a class="line" href="class_j_encoder_a_s5048b_i2_c.html#abb858384db5d1f73615c2cf917464cc2">  305</a></span>&#160;    <span class="keywordtype">boolean</span> <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#abb858384db5d1f73615c2cf917464cc2">isVelNew</a>()</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    {</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keywordflow">return</span> newSpeed;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;};</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_j_encoder_8h_html"><div class="ttname"><a href="_j_encoder_8h.html">JEncoder.h</a></div><div class="ttdoc">defines common interface for JEncoder</div></div>
-<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html">JEncoderAS5048bI2C</a></div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:18</div></div>
-<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a02b5a5ddc6653586bfa7bf95f070ae85"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">JEncoderAS5048bI2C::STEPS_PER_TURN</a></div><div class="ttdeci">const unsigned int STEPS_PER_TURN</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:107</div></div>
-<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a046728560702239c1af7f4087df9e9f9"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a046728560702239c1af7f4087df9e9f9">JEncoderAS5048bI2C::getCounter</a></div><div class="ttdeci">long getCounter()</div><div class="ttdoc">returns how far the encoder has turned from the zero position</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:277</div></div>
-<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a089d51e73f1bc1ce71de167239e81954"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a089d51e73f1bc1ce71de167239e81954">JEncoderAS5048bI2C::JEncoderAS5048bI2C</a></div><div class="ttdeci">JEncoderAS5048bI2C(boolean _reverse=false, float _distPerCountFactor=1.0, uint8_t _address=0x40, unsigned long _velEnoughTime=0, unsigned long _velEnoughTicks=0)</div><div class="ttdoc">sets pins and settings for reading the encoder</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:118</div></div>
-<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a1163389759e000ee702376baa16aea44"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a1163389759e000ee702376baa16aea44">JEncoderAS5048bI2C::AS5048B_DEFAULT_ADDRESS</a></div><div class="ttdeci">static const byte AS5048B_DEFAULT_ADDRESS</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:108</div></div>
-<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a1b39b8b34b9105542eea68150047ea37"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a1b39b8b34b9105542eea68150047ea37">JEncoderAS5048bI2C::zeroCounter</a></div><div class="ttdeci">long zeroCounter()</div><div class="ttdoc">reset the counter of how far the encoder has turned</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:263</div></div>
-<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a225aa9f6177c40b5da6c32e44ae60eb7"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a225aa9f6177c40b5da6c32e44ae60eb7">JEncoderAS5048bI2C::setEncoderZero</a></div><div class="ttdeci">void setEncoderZero()</div><div class="ttdoc">The current angle of the sensor is read and set to zero.</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:215</div></div>
-<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a2857d5f8ba2b031d351f22c904b8a7ca"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a2857d5f8ba2b031d351f22c904b8a7ca">JEncoderAS5048bI2C::rawReading</a></div><div class="ttdeci">int rawReading()</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:236</div></div>
-<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a3451d0aca7ab7d02d3dff861bcca9933"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a3451d0aca7ab7d02d3dff861bcca9933">JEncoderAS5048bI2C::hasDirection</a></div><div class="ttdeci">boolean hasDirection()</div><div class="ttdoc">can this encoder mesure direction or just speed</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:301</div></div>
-<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a3b935a54672e7e7a942111c5a45e3cb8"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a3b935a54672e7e7a942111c5a45e3cb8">JEncoderAS5048bI2C::setEncoderZero</a></div><div class="ttdeci">void setEncoderZero(int zeroAngle)</div><div class="ttdoc">A custom (repeatable) angle can be set for what the sensor calls zero relative to default zero.</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:225</div></div>
-<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a3ba89138c6c48820f16c8c874428180b"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b">JEncoderAS5048bI2C::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">communication is done over I2C and requires constant polling instead of being able to use interrupts</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:171</div></div>
-<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a5138a500cb0d24f47b29e9595a3aabb1"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a5138a500cb0d24f47b29e9595a3aabb1">JEncoderAS5048bI2C::getDistPerCountFactor</a></div><div class="ttdeci">float getDistPerCountFactor()</div><div class="ttdoc">returns a conversion factor between encoder ticks and distance that can be set for the encoder</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:287</div></div>
-<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a5d7a9a2d83944a546d4343944c8ec92d"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a5d7a9a2d83944a546d4343944c8ec92d">JEncoderAS5048bI2C::intTurns</a></div><div class="ttdeci">long intTurns()</div><div class="ttdoc">how many full turns the encoder has made.</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:258</div></div>
-<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a815b677dcaa4a4c92cb396fa0fdb877d"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a815b677dcaa4a4c92cb396fa0fdb877d">JEncoderAS5048bI2C::setDistPerCountFactor</a></div><div class="ttdeci">void setDistPerCountFactor(float _factor)</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:296</div></div>
-<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a866839c8baf76e92555f003694c3dba8"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a866839c8baf76e92555f003694c3dba8">JEncoderAS5048bI2C::setAddressRegister</a></div><div class="ttdeci">uint8_t setAddressRegister(uint8_t val)</div><div class="ttdoc">change the i2c address of the encoder (see the datasheet https://ams.com/as0548b) from addressRegW() ...</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:203</div></div>
-<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a8b0edec9954c20afdc4dadfc9c1ad9f9"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a8b0edec9954c20afdc4dadfc9c1ad9f9">JEncoderAS5048bI2C::isMagnetInRange</a></div><div class="ttdeci">boolean isMagnetInRange()</div><div class="ttdoc">is the magnet in the optimal position Unlike other functions, this function does not rely on run()</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:247</div></div>
-<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_aa197f1a1f8347b7434adb1d1a20b943d"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#aa197f1a1f8347b7434adb1d1a20b943d">JEncoderAS5048bI2C::begin</a></div><div class="ttdeci">void begin(SoftWire *_wire) void begin(TwoWire *_wire)</div><div class="ttdoc">set up communication with encoder</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:144</div></div>
-<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_ab5505cbc5bc359e4887f30c109b7fbf0"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#ab5505cbc5bc359e4887f30c109b7fbf0">JEncoderAS5048bI2C::begin</a></div><div class="ttdeci">void begin(boolean _begin=true)</div><div class="ttdoc">set up communication with encoder</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:158</div></div>
-<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_abad14bb180b9435d2fd654c98eb56f76"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#abad14bb180b9435d2fd654c98eb56f76">JEncoderAS5048bI2C::getDist</a></div><div class="ttdeci">float getDist()</div><div class="ttdoc">returns how far the encoder has turned from the zero position converted to distance</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:282</div></div>
-<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_abb858384db5d1f73615c2cf917464cc2"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#abb858384db5d1f73615c2cf917464cc2">JEncoderAS5048bI2C::isVelNew</a></div><div class="ttdeci">boolean isVelNew()</div><div class="ttdoc">could be useful for only recalculating a control loop if there's new velocity data</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:306</div></div>
-<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_aebeb1fdb74a4a5070f3a54b8ffdddbe4"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#aebeb1fdb74a4a5070f3a54b8ffdddbe4">JEncoderAS5048bI2C::getVel</a></div><div class="ttdeci">float getVel()</div><div class="ttdoc">calculates velocity in distance per second where distance was set by setCountsToDistFactor()</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:272</div></div>
+<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html">JEncoderAS5048bI2C</a></div><div class="ttdoc">reads a type of absolute encoder https://ams.com/as0548b (uses I2C)</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:17</div></div>
+<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a02b5a5ddc6653586bfa7bf95f070ae85"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">JEncoderAS5048bI2C::STEPS_PER_TURN</a></div><div class="ttdeci">const unsigned int STEPS_PER_TURN</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:106</div></div>
+<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a046728560702239c1af7f4087df9e9f9"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a046728560702239c1af7f4087df9e9f9">JEncoderAS5048bI2C::getCounter</a></div><div class="ttdeci">long getCounter()</div><div class="ttdoc">returns how far the encoder has turned from the zero position</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:276</div></div>
+<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a089d51e73f1bc1ce71de167239e81954"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a089d51e73f1bc1ce71de167239e81954">JEncoderAS5048bI2C::JEncoderAS5048bI2C</a></div><div class="ttdeci">JEncoderAS5048bI2C(boolean _reverse=false, float _distPerCountFactor=1.0, uint8_t _address=0x40, unsigned long _velEnoughTime=0, unsigned long _velEnoughTicks=0)</div><div class="ttdoc">sets pins and settings for reading the encoder</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:117</div></div>
+<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a1163389759e000ee702376baa16aea44"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a1163389759e000ee702376baa16aea44">JEncoderAS5048bI2C::AS5048B_DEFAULT_ADDRESS</a></div><div class="ttdeci">static const byte AS5048B_DEFAULT_ADDRESS</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:107</div></div>
+<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a1b39b8b34b9105542eea68150047ea37"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a1b39b8b34b9105542eea68150047ea37">JEncoderAS5048bI2C::zeroCounter</a></div><div class="ttdeci">long zeroCounter()</div><div class="ttdoc">reset the counter of how far the encoder has turned</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:262</div></div>
+<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a225aa9f6177c40b5da6c32e44ae60eb7"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a225aa9f6177c40b5da6c32e44ae60eb7">JEncoderAS5048bI2C::setEncoderZero</a></div><div class="ttdeci">void setEncoderZero()</div><div class="ttdoc">The current angle of the sensor is read and set to zero.</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:214</div></div>
+<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a2857d5f8ba2b031d351f22c904b8a7ca"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a2857d5f8ba2b031d351f22c904b8a7ca">JEncoderAS5048bI2C::rawReading</a></div><div class="ttdeci">int rawReading()</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:235</div></div>
+<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a3451d0aca7ab7d02d3dff861bcca9933"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a3451d0aca7ab7d02d3dff861bcca9933">JEncoderAS5048bI2C::hasDirection</a></div><div class="ttdeci">boolean hasDirection()</div><div class="ttdoc">can this encoder mesure direction or just speed</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:300</div></div>
+<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a3b935a54672e7e7a942111c5a45e3cb8"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a3b935a54672e7e7a942111c5a45e3cb8">JEncoderAS5048bI2C::setEncoderZero</a></div><div class="ttdeci">void setEncoderZero(int zeroAngle)</div><div class="ttdoc">A custom (repeatable) angle can be set for what the sensor calls zero relative to default zero.</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:224</div></div>
+<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a3ba89138c6c48820f16c8c874428180b"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b">JEncoderAS5048bI2C::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">communication is done over I2C and requires constant polling instead of being able to use interrupts</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:170</div></div>
+<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a5138a500cb0d24f47b29e9595a3aabb1"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a5138a500cb0d24f47b29e9595a3aabb1">JEncoderAS5048bI2C::getDistPerCountFactor</a></div><div class="ttdeci">float getDistPerCountFactor()</div><div class="ttdoc">returns a conversion factor between encoder ticks and distance that can be set for the encoder</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:286</div></div>
+<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a5d7a9a2d83944a546d4343944c8ec92d"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a5d7a9a2d83944a546d4343944c8ec92d">JEncoderAS5048bI2C::intTurns</a></div><div class="ttdeci">long intTurns()</div><div class="ttdoc">how many full turns the encoder has made.</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:257</div></div>
+<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a815b677dcaa4a4c92cb396fa0fdb877d"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a815b677dcaa4a4c92cb396fa0fdb877d">JEncoderAS5048bI2C::setDistPerCountFactor</a></div><div class="ttdeci">void setDistPerCountFactor(float _factor)</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:295</div></div>
+<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a866839c8baf76e92555f003694c3dba8"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a866839c8baf76e92555f003694c3dba8">JEncoderAS5048bI2C::setAddressRegister</a></div><div class="ttdeci">uint8_t setAddressRegister(uint8_t val)</div><div class="ttdoc">change the i2c address of the encoder (see the datasheet https://ams.com/as0548b) from addressRegW() ...</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:202</div></div>
+<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_a8b0edec9954c20afdc4dadfc9c1ad9f9"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#a8b0edec9954c20afdc4dadfc9c1ad9f9">JEncoderAS5048bI2C::isMagnetInRange</a></div><div class="ttdeci">boolean isMagnetInRange()</div><div class="ttdoc">is the magnet in the optimal position Unlike other functions, this function does not rely on run()</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:246</div></div>
+<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_aa197f1a1f8347b7434adb1d1a20b943d"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#aa197f1a1f8347b7434adb1d1a20b943d">JEncoderAS5048bI2C::begin</a></div><div class="ttdeci">void begin(SoftWire *_wire) void begin(TwoWire *_wire)</div><div class="ttdoc">set up communication with encoder</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:143</div></div>
+<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_ab5505cbc5bc359e4887f30c109b7fbf0"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#ab5505cbc5bc359e4887f30c109b7fbf0">JEncoderAS5048bI2C::begin</a></div><div class="ttdeci">void begin(boolean _begin=true)</div><div class="ttdoc">set up communication with encoder</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:157</div></div>
+<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_abad14bb180b9435d2fd654c98eb56f76"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#abad14bb180b9435d2fd654c98eb56f76">JEncoderAS5048bI2C::getDist</a></div><div class="ttdeci">float getDist()</div><div class="ttdoc">returns how far the encoder has turned from the zero position converted to distance</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:281</div></div>
+<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_abb858384db5d1f73615c2cf917464cc2"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#abb858384db5d1f73615c2cf917464cc2">JEncoderAS5048bI2C::isVelNew</a></div><div class="ttdeci">boolean isVelNew()</div><div class="ttdoc">could be useful for only recalculating a control loop if there's new velocity data</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:305</div></div>
+<div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_aebeb1fdb74a4a5070f3a54b8ffdddbe4"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#aebeb1fdb74a4a5070f3a54b8ffdddbe4">JEncoderAS5048bI2C::getVel</a></div><div class="ttdeci">float getVel()</div><div class="ttdoc">calculates velocity in distance per second where distance was set by setCountsToDistFactor()</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:271</div></div>
 <div class="ttc" id="aclass_j_encoder_html"><div class="ttname"><a href="class_j_encoder.html">JEncoder</a></div><div class="ttdef"><b>Definition:</b> JEncoder.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
