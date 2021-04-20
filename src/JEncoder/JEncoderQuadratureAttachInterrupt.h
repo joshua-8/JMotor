@@ -1,4 +1,5 @@
 /**
+ * \file JEncoderQuadratureAttachInterrupt.h
  * @note  uses attachInterrupt() \n
  * platform: esp32, teensy \n
  *          (could be used with standard avr arduinos but only with pins that support attachInterrupt())

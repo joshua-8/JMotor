@@ -1,4 +1,5 @@
 /**
+ * \file JMotorDriverEsp32PWM.h
  * @brief  uses ledc to output PWM approximation of an analog output
  * @note   platform: ESP32
  */

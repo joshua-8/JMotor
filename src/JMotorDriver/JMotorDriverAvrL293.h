@@ -1,4 +1,5 @@
 /**
+ * \file JMotorDriverAvrL293.h
  * @brief  L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf
  * @note   platform: AVR (standard Arduinos)
  */

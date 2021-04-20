@@ -1,4 +1,5 @@
 /**
+ * \file JEncoderPWMAbsolute.h
  * @brief  reads a PWM signal from an absolute encoder using attachInterrupt()
  *
  * tested with https://ams.com/as0548b 
