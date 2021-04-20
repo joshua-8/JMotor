@@ -21,22 +21,15 @@ public:
     {
     }
     /**
-     * @brief  set up pins and interrupts
      * @note interrupt created by jENCODER_SINGLE_MAKE_ISR_MACRO(name of encoder) will be of the form <name of encoder instance>_jENCODER_ISR
-     * @param  _isrPointer: global function that calls internal ISR, to use with enableInterrupt
      */
     void setUpInterrupts(void (*_isrPointer)(void))
     {
-        isrPointer = _isrPointer;
 
         pinMode(encoderPin, INPUT);
 
-        attachInterrupt(encoderPin, isrPointer, CHANGE);
+        attachInterrupt(encoderPin, _isrPointer, CHANGE);
     }
-    /**
-     * @brief  disable interrupts and stop monitoring encoder
-     * @note use setUpInterrupts to start encoder again
-     */
     void turnOffInterrupts()
     {
         detachInterrupt(encoderPin);

@@ -70,9 +70,11 @@ public:
 #if defined(ESP32) || defined(CORE_TEENSY)
 #include "JEncoderQuadratureAttachInterrupt.h"
 #include "JEncoderSingleAttachInterrupt.h"
+#include "JEncoderPWMAbsoluteAttachInterrupt.h"
 #else
 #include "JEncoderQuadraturePinChange.h"
 #include "JEncoderSinglePinChange.h"
+#include "JEncoderPWMAbsolutePinChange.h"
 #endif
 #include "JEncoderAS5048bI2C.h"
 

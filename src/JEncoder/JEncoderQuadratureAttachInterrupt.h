@@ -26,26 +26,15 @@ public:
     {
     }
 
-    /**
-     * @brief  set up pins and interrupts
-     * @param  _isrAPointer: global function that calls internal ISRA, to use with enableInterrupt
-     * @param  _isrBPointer: global function that calls internal ISRA, to use with enableInterrupt
-     */
     void setUpInterrupts(void (*_isrAPointer)(void), void (*_isrBPointer)(void))
     {
-        isrAPointer = _isrAPointer;
-        isrBPointer = _isrBPointer;
 
         pinMode(encoderAPin, INPUT);
         pinMode(encoderBPin, INPUT);
 
-        attachInterrupt(encoderAPin, isrAPointer, CHANGE);
-        attachInterrupt(encoderBPin, isrBPointer, CHANGE);
+        attachInterrupt(encoderAPin, _isrAPointer, CHANGE);
+        attachInterrupt(encoderBPin, _isrBPointer, CHANGE);
     }
-    /**
-     * @brief  disable interrupts and stop monitoring encoder
-     * @note use setUpInterrupts to start encoder again
-     */
     void turnOffInterrupts()
     {
         detachInterrupt(encoderAPin);

@@ -25,9 +25,6 @@ protected:
     byte encoderAPin;
     byte encoderBPin;
 
-    void (*isrAPointer)(void);
-    void (*isrBPointer)(void);
-
 private:
     int8_t reverse; //can be 1 or -1
     float distPerCountFactor;
@@ -74,7 +71,7 @@ protected:
     /**
      * @brief  set up pins and interrupts
      * @param  _isrAPointer: global function that calls internal ISRA, to use with enableInterrupt
-     * @param  _isrBPointer: 
+     * @param  _isrBPointer: global function that calls internal ISRB, to use with enableInterrupt
      */
     virtual void setUpInterrupts(void (*_isrAPointer)(void), void (*_isrBPointer)(void));
     /**

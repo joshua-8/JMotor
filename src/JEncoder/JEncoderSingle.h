@@ -21,7 +21,6 @@
 class JEncoderSingle : public JEncoder {
 
 protected:
-    void (*isrPointer)(void);
     byte encoderPin;
 
 private:
