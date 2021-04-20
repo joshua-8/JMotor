@@ -4,9 +4,10 @@
 #ifndef J_ENCODER_PWM_ABSOLUTE_PIN_CHANGE_H
 #define J_ENCODER_PWM_ABSOLUTE_PIN_CHANGE_H
 /**
- * @note  uses a pin change interrupt library to support more pins than attachInterrupt() \n
- *      interrupt library (tested with v1.1.0): https://github.com/GreyGnome/EnableInterrupt \n
- * platform: AVR (standard Arduinos)
+ * @brief  uses a pin change interrupt library to support more pins than attachInterrupt().
+ * 
+ * Interrupt library (tested with v1.1.0): https://github.com/GreyGnome/EnableInterrupt
+ * @note platform: AVR (standard Arduinos)
  */
 class JEncoderPWMAbsolutePinChange : public JEncoderPWMAbsolute {
 public:

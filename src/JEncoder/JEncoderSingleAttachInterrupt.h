@@ -2,11 +2,10 @@
 #define J_ENCODER_SINGLE_ATTACH_INTERRUPT_H
 #include "JEncoderSingle.h"
 #include <Arduino.h>
-
 /**
- * @note  uses attachInterrupt() \n
- * platform: esp32, teensy \n
- *          (could be used with standard avr arduinos but only with pins that support attachInterrupt())
+ * @brief  uses attachInterrupt()
+ * platform: esp32, teensy 
+ * @note  (could be used with standard avr arduinos but only with pins that support attachInterrupt())
  */
 class JEncoderSingleAttachInterrupt : public JEncoderSingle {
 public:
