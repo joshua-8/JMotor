@@ -1,5 +1,5 @@
 /**
- * /brief  reads a PWM signal from an absolute encoder using attachInterrupt()
+ * \brief  reads a PWM signal from an absolute encoder using attachInterrupt()
  * tested with https://ams.com/as0548b 
  * @note  platform: esp32, teensy \n
  *          (could be used with standard avr arduinos but only with pins that support attachInterrupt())
@@ -68,7 +68,7 @@ public:
     void name##_jENCODER_ISR() { name.encoderISR(); }
 
     /**
-     * /brief  sets pins and settings for reading the encoder
+     * \brief  sets pins and settings for reading the encoder
      * @param  _encoderPin: pin to read encoder signal with
      * @param  _ps: (struct pwmSettings) parameters of encoder signal
      * @param  _reverse: (boolean) reverse positive direction, default=false 
@@ -106,12 +106,12 @@ public:
     }
 
     /**
-     * /brief  set up pins and interrupts
+     * \brief  set up pins and interrupts
      * @param  _isrPointer: global function that calls internal ISR
      */
     virtual void setUpInterrupts(void (*_isrPointer)(void));
     /**
-     * /brief  disable interrupts and stop monitoring encoder
+     * \brief  disable interrupts and stop monitoring encoder
      * @note use setUpInterrupts to start encoder again
      */
     virtual void turnOffInterrupts();
@@ -127,7 +127,7 @@ public:
     }
 
     /**
-     * /brief  how many full turns the encoder has made.
+     * \brief  how many full turns the encoder has made.
      * @note   this and rawReading can be used as an alternative to getDist if the limited precision of a float is a concert
      * @retval (long) how far the encoder has turned
      */
