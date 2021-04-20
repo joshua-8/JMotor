@@ -1,13 +1,13 @@
-/**
- * \file JMotorDriverAvrPWMDir.h
- * @brief  for motor controllers with one direction input and one speed input pin
- * @note   platform: AVR (standard Arduinos)
- */
 #ifndef J_MOTOR_DRIVER_AVR_PWMDIR_H
 #define J_MOTOR_DRIVER_AVR_PWMDIR_H
 #include "JMotorDriver.h"
 #include "JMotorDriverAvrPWM.h"
 #include <Arduino.h>
+
+/**
+ * @brief  for motor controllers with one direction input and one speed input pin
+ * @note   platform: AVR (standard Arduinos)
+ */
 class JMotorDriverAvrPWMDir : private JMotorDriver {
 private:
     boolean enabled = false;

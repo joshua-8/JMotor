@@ -1,14 +1,13 @@
-/**
- * \file JEncoderPWMAbsolutePinChange.h
- * @note  uses a pin change interrupt library to support more pins than attachInterrupt() \n
- *      interrupt library (tested with v1.1.0): https://github.com/GreyGnome/EnableInterrupt \n
- * platform: AVR (standard Arduinos)
- */
 #include "EnableInterrupt.h" //https://github.com/GreyGnome/EnableInterrupt
 #include "JEncoderPWMAbsolute.h"
 #include <Arduino.h>
 #ifndef J_ENCODER_PWM_ABSOLUTE_PIN_CHANGE_H
 #define J_ENCODER_PWM_ABSOLUTE_PIN_CHANGE_H
+/**
+ * @note  uses a pin change interrupt library to support more pins than attachInterrupt() \n
+ *      interrupt library (tested with v1.1.0): https://github.com/GreyGnome/EnableInterrupt \n
+ * platform: AVR (standard Arduinos)
+ */
 class JEncoderPWMAbsolutePinChange : public JEncoderPWMAbsolute {
 public:
     /**

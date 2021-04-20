@@ -1,14 +1,13 @@
-/**
- * \file JMotorDriver.h
- * @brief  defines common interface for all types of JMotorDrivers
- * @note  JMotorDriver's functions are virtual, it can not be used directly
- */
+
 #ifndef J_MOTOR_DRIVER_H
 #define J_MOTOR_DRIVER_H
 #include <Arduino.h>
 
 //**********SEE BOTTOM OF THIS FILE FOR #INCLUDES OF SUBCLASSES**********//
-
+/**
+ * @brief  defines common interface for all types of JMotorDrivers
+ * @note  JMotorDriver's functions are virtual, it can not be used directly
+ */
 class JMotorDriver {
 public:
     /**

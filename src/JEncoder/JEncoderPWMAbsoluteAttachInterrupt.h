@@ -1,13 +1,14 @@
-/**
- * \file JEncoderPWMAbsoluteAttachInterrupt.h
- * @note uses attachInterrupt() \n
- * platform: esp32, teensy \n
- *      (could be used with standard avr arduinos but only with pins that support attachInterrupt())
- */
 #include "JEncoderPWMAbsolute.h"
 #include <Arduino.h>
 #ifndef J_ENCODER_PWM_ABSOLUTE_ATTACH_INTERRUPT_H
 #define J_ENCODER_PWM_ABSOLUTE_ATTACH_INTERRUPT_H
+
+/**
+ * @note uses attachInterrupt() \n
+ * platform: esp32, teensy \n
+ *      (could be used with standard avr arduinos but only with pins that support attachInterrupt())
+ */
+
 class JEncoderPWMAbsoluteAttachInterrupt : public JEncoderPWMAbsolute {
 public:
     /**

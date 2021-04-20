@@ -1,13 +1,13 @@
-/**
- * \file JMotorDriverEsp32L293.h
- * @brief  L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf
- * @note   platform: ESP32
- */
 #ifndef J_MOTOR_DRIVER_ESP32_L293_H
 #define J_MOTOR_DRIVER_ESP32_L293_H
 #include "JMotorDriver.h"
 #include "JMotorDriverEsp32PWM.h"
 #include <Arduino.h>
+
+/**
+ * @brief  L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf
+ * @note   platform: ESP32
+ */
 class JMotorDriverEsp32L293 : private JMotorDriver {
 private:
     boolean enabled = false;

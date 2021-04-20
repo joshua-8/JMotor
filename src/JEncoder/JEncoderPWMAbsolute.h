@@ -1,13 +1,3 @@
-/**
- * \file JEncoderPWMAbsolute.h
- * @brief  reads a PWM signal from an absolute encoder using attachInterrupt()
- *
- * tested with https://ams.com/as0548b 
- * 
- * @note  platform: esp32, teensy \n
- *          (could be used with standard avr arduinos but only with pins that support attachInterrupt())
- */
-
 #ifndef J_ENCODER_ATTACH_INTERRUPT_PWM_ABSOLUTE_H
 #define J_ENCODER_ATTACH_INTERRUPT_PWM_ABSOLUTE_H
 #include "JEncoder.h"
@@ -26,6 +16,15 @@
         4095, 4098, 1, HIGH                  \
     } //untested
 
+
+/**
+ * @brief  reads a PWM signal from an absolute encoder using attachInterrupt()
+ *
+ * tested with https://ams.com/as0548b 
+ * 
+ * @note  platform: esp32, teensy \n
+ *          (could be used with standard avr arduinos but only with pins that support attachInterrupt())
+ */
 class JEncoderPWMAbsolute : public JEncoder {
 public:
     struct pwmSettings {

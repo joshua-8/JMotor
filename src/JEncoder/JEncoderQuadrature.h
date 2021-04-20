@@ -1,12 +1,3 @@
-/**
- * \file JEncoderQuadrature.h
- * @brief  reads a quadrature (incremental) encoder
- * 
- * speed calulation is done by measuring time between 4 encoder ticks (not between every tick since encoders may not have evenly spaced ticks)
- * velocity is set to zero if the encoder has not turned in slowestIntervalMicros
- * @note don't use this class directly, use a subclass
- */
-
 #ifndef J_ENCODER_QUADRATURE_H
 #define J_ENCODER_QUADRATURE_H
 #include "JEncoder.h"
@@ -20,6 +11,14 @@
 #define ENCODER_MAKE_ISRS_MACRO(name)             \
     void name##_jENCODER_ISR_A() { name.ISRA(); } \
     void name##_jENCODER_ISR_B() { name.ISRB(); }
+
+/**
+ * @brief  reads a quadrature (incremental) encoder
+ * 
+ * speed calulation is done by measuring time between 4 encoder ticks (not between every tick since encoders may not have evenly spaced ticks)
+ * velocity is set to zero if the encoder has not turned in slowestIntervalMicros
+ * @note don't use this class directly, use a subclass
+ */
 
 class JEncoderQuadrature : public JEncoder {
 

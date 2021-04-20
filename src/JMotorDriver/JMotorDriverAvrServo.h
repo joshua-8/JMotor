@@ -1,13 +1,12 @@
-/**
- * \file JMotorDriverAvrServo.h
- * @brief  wraps standard servo library. For servos and motor controllers that use servo signals (ESCs)
- * @note   platform: AVR (standard Arduinos)
- */
 #ifndef J_MOTOR_DRIVER_AVR_SERVO_H
 #define J_MOTOR_DRIVER_AVR_SERVO_H
 #include "JMotorDriver.h"
 #include <Arduino.h>
 #include <Servo.h>
+/**
+ * @brief  wraps standard servo library. For servos and motor controllers that use servo signals (ESCs)
+ * @note   platform: AVR (standard Arduinos)
+ */
 class JMotorDriverAvrServo : private JMotorDriver {
 private:
     boolean enabled = false;

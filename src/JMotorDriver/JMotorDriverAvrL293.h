@@ -1,13 +1,12 @@
-/**
- * \file JMotorDriverAvrL293.h
- * @brief  L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf
- * @note   platform: AVR (standard Arduinos)
- */
 #ifndef J_MOTOR_DRIVER_AVR_L293_H
 #define J_MOTOR_DRIVER_AVR_L293_H
 #include "JMotorDriver.h"
 #include "JMotorDriverAvrPWM.h"
 #include <Arduino.h>
+/**
+ * @brief  L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf
+ * @note   platform: AVR (standard Arduinos)
+ */
 class JMotorDriverAvrL293 : private JMotorDriver {
 private:
     boolean enabled = false;

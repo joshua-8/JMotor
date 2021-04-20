@@ -1,12 +1,11 @@
-/**
- * \file JMotorDriverEsp32PWM.h
- * @brief  uses ledc to output PWM approximation of an analog output
- * @note   platform: ESP32
- */
 #ifndef J_MOTOR_DRIVER_ESP32_PWM_H
 #define J_MOTOR_DRIVER_ESP32_PWM_H
 #include "JMotorDriver.h"
 #include <Arduino.h>
+/**
+ * @brief  uses ledc to output PWM approximation of an analog output
+ * @note   platform: ESP32
+ */
 class JMotorDriverEsp32PWM : private JMotorDriver {
 private:
     int PWM_RES = 12;
