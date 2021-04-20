@@ -92,40 +92,57 @@ Collaboration diagram for JEncoderAS5048bI2C:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a089d51e73f1bc1ce71de167239e81954"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a089d51e73f1bc1ce71de167239e81954">JEncoderAS5048bI2C</a> (boolean _reverse=false, float _distPerCountFactor=1.0, uint8_t _address=0x40, unsigned long _velEnoughTime=0, unsigned long _velEnoughTicks=0)</td></tr>
+<tr class="memdesc:a089d51e73f1bc1ce71de167239e81954"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets pins and settings for reading the encoder  <a href="class_j_encoder_a_s5048b_i2_c.html#a089d51e73f1bc1ce71de167239e81954">More...</a><br /></td></tr>
 <tr class="separator:a089d51e73f1bc1ce71de167239e81954"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa197f1a1f8347b7434adb1d1a20b943d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#aa197f1a1f8347b7434adb1d1a20b943d">begin</a> (SoftWire *_wire) void begin(TwoWire *_wire)</td></tr>
+<tr class="memdesc:aa197f1a1f8347b7434adb1d1a20b943d"><td class="mdescLeft">&#160;</td><td class="mdescRight">set up communication with encoder  <a href="class_j_encoder_a_s5048b_i2_c.html#aa197f1a1f8347b7434adb1d1a20b943d">More...</a><br /></td></tr>
 <tr class="separator:aa197f1a1f8347b7434adb1d1a20b943d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5505cbc5bc359e4887f30c109b7fbf0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#ab5505cbc5bc359e4887f30c109b7fbf0">begin</a> (boolean _begin=true)</td></tr>
+<tr class="memdesc:ab5505cbc5bc359e4887f30c109b7fbf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">set up communication with encoder  <a href="class_j_encoder_a_s5048b_i2_c.html#ab5505cbc5bc359e4887f30c109b7fbf0">More...</a><br /></td></tr>
 <tr class="separator:ab5505cbc5bc359e4887f30c109b7fbf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ba89138c6c48820f16c8c874428180b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b">run</a> ()</td></tr>
+<tr class="memdesc:a3ba89138c6c48820f16c8c874428180b"><td class="mdescLeft">&#160;</td><td class="mdescRight">communication is done over I2C and requires constant polling instead of being able to use interrupts  <a href="class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b">More...</a><br /></td></tr>
 <tr class="separator:a3ba89138c6c48820f16c8c874428180b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a866839c8baf76e92555f003694c3dba8"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a866839c8baf76e92555f003694c3dba8">setAddressRegister</a> (uint8_t val)</td></tr>
+<tr class="memdesc:a866839c8baf76e92555f003694c3dba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">change the i2c address of the encoder (see the datasheet <a href="https://ams.com/as0548b">https://ams.com/as0548b</a>) from addressRegW() in <a href="https://github.com/sosandroid/AMS_AS5048B/blob/master/ams_as5048b.cpp">https://github.com/sosandroid/AMS_AS5048B/blob/master/ams_as5048b.cpp</a>  <a href="class_j_encoder_a_s5048b_i2_c.html#a866839c8baf76e92555f003694c3dba8">More...</a><br /></td></tr>
 <tr class="separator:a866839c8baf76e92555f003694c3dba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a225aa9f6177c40b5da6c32e44ae60eb7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a225aa9f6177c40b5da6c32e44ae60eb7">setEncoderZero</a> ()</td></tr>
+<tr class="memitem:a225aa9f6177c40b5da6c32e44ae60eb7"><td class="memItemLeft" align="right" valign="top"><a id="a225aa9f6177c40b5da6c32e44ae60eb7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a225aa9f6177c40b5da6c32e44ae60eb7">setEncoderZero</a> ()</td></tr>
+<tr class="memdesc:a225aa9f6177c40b5da6c32e44ae60eb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current angle of the sensor is read and set to zero. <br /></td></tr>
 <tr class="separator:a225aa9f6177c40b5da6c32e44ae60eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b935a54672e7e7a942111c5a45e3cb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a3b935a54672e7e7a942111c5a45e3cb8">setEncoderZero</a> (int zeroAngle)</td></tr>
+<tr class="memdesc:a3b935a54672e7e7a942111c5a45e3cb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A custom (repeatable) angle can be set for what the sensor calls zero relative to default zero.  <a href="class_j_encoder_a_s5048b_i2_c.html#a3b935a54672e7e7a942111c5a45e3cb8">More...</a><br /></td></tr>
 <tr class="separator:a3b935a54672e7e7a942111c5a45e3cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2857d5f8ba2b031d351f22c904b8a7ca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a2857d5f8ba2b031d351f22c904b8a7ca">rawReading</a> ()</td></tr>
 <tr class="separator:a2857d5f8ba2b031d351f22c904b8a7ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b0edec9954c20afdc4dadfc9c1ad9f9"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a8b0edec9954c20afdc4dadfc9c1ad9f9">isMagnetInRange</a> ()</td></tr>
+<tr class="memdesc:a8b0edec9954c20afdc4dadfc9c1ad9f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">is the magnet in the optimal position Unlike other functions, this function does not rely on <a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b" title="communication is done over I2C and requires constant polling instead of being able to use interrupts">run()</a>  <a href="class_j_encoder_a_s5048b_i2_c.html#a8b0edec9954c20afdc4dadfc9c1ad9f9">More...</a><br /></td></tr>
 <tr class="separator:a8b0edec9954c20afdc4dadfc9c1ad9f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d7a9a2d83944a546d4343944c8ec92d"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a5d7a9a2d83944a546d4343944c8ec92d">intTurns</a> ()</td></tr>
+<tr class="memdesc:a5d7a9a2d83944a546d4343944c8ec92d"><td class="mdescLeft">&#160;</td><td class="mdescRight">how many full turns the encoder has made.  <a href="class_j_encoder_a_s5048b_i2_c.html#a5d7a9a2d83944a546d4343944c8ec92d">More...</a><br /></td></tr>
 <tr class="separator:a5d7a9a2d83944a546d4343944c8ec92d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b39b8b34b9105542eea68150047ea37"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a1b39b8b34b9105542eea68150047ea37">zeroCounter</a> ()</td></tr>
+<tr class="memdesc:a1b39b8b34b9105542eea68150047ea37"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset the counter of how far the encoder has turned  <a href="class_j_encoder_a_s5048b_i2_c.html#a1b39b8b34b9105542eea68150047ea37">More...</a><br /></td></tr>
 <tr class="separator:a1b39b8b34b9105542eea68150047ea37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebeb1fdb74a4a5070f3a54b8ffdddbe4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#aebeb1fdb74a4a5070f3a54b8ffdddbe4">getVel</a> ()</td></tr>
+<tr class="memdesc:aebeb1fdb74a4a5070f3a54b8ffdddbe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculates velocity in distance per second where distance was set by setCountsToDistFactor()  <a href="class_j_encoder_a_s5048b_i2_c.html#aebeb1fdb74a4a5070f3a54b8ffdddbe4">More...</a><br /></td></tr>
 <tr class="separator:aebeb1fdb74a4a5070f3a54b8ffdddbe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a046728560702239c1af7f4087df9e9f9"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a046728560702239c1af7f4087df9e9f9">getCounter</a> ()</td></tr>
+<tr class="memdesc:a046728560702239c1af7f4087df9e9f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns how far the encoder has turned from the zero position  <a href="class_j_encoder_a_s5048b_i2_c.html#a046728560702239c1af7f4087df9e9f9">More...</a><br /></td></tr>
 <tr class="separator:a046728560702239c1af7f4087df9e9f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abad14bb180b9435d2fd654c98eb56f76"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#abad14bb180b9435d2fd654c98eb56f76">getDist</a> ()</td></tr>
+<tr class="memdesc:abad14bb180b9435d2fd654c98eb56f76"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns how far the encoder has turned from the zero position converted to distance  <a href="class_j_encoder_a_s5048b_i2_c.html#abad14bb180b9435d2fd654c98eb56f76">More...</a><br /></td></tr>
 <tr class="separator:abad14bb180b9435d2fd654c98eb56f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5138a500cb0d24f47b29e9595a3aabb1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a5138a500cb0d24f47b29e9595a3aabb1">getDistPerCountFactor</a> ()</td></tr>
+<tr class="memdesc:a5138a500cb0d24f47b29e9595a3aabb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a conversion factor between encoder ticks and distance that can be set for the encoder  <a href="class_j_encoder_a_s5048b_i2_c.html#a5138a500cb0d24f47b29e9595a3aabb1">More...</a><br /></td></tr>
 <tr class="separator:a5138a500cb0d24f47b29e9595a3aabb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a815b677dcaa4a4c92cb396fa0fdb877d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a815b677dcaa4a4c92cb396fa0fdb877d">setDistPerCountFactor</a> (float _factor)</td></tr>
 <tr class="separator:a815b677dcaa4a4c92cb396fa0fdb877d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3451d0aca7ab7d02d3dff861bcca9933"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a3451d0aca7ab7d02d3dff861bcca9933">hasDirection</a> ()</td></tr>
+<tr class="memdesc:a3451d0aca7ab7d02d3dff861bcca9933"><td class="mdescLeft">&#160;</td><td class="mdescRight">can this encoder mesure direction or just speed  <a href="class_j_encoder_a_s5048b_i2_c.html#a3451d0aca7ab7d02d3dff861bcca9933">More...</a><br /></td></tr>
 <tr class="separator:a3451d0aca7ab7d02d3dff861bcca9933"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb858384db5d1f73615c2cf917464cc2"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#abb858384db5d1f73615c2cf917464cc2">isVelNew</a> ()</td></tr>
+<tr class="memdesc:abb858384db5d1f73615c2cf917464cc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">could be useful for only recalculating a control loop if there's new velocity data  <a href="class_j_encoder_a_s5048b_i2_c.html#abb858384db5d1f73615c2cf917464cc2">More...</a><br /></td></tr>
 <tr class="separator:abb858384db5d1f73615c2cf917464cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -192,12 +209,14 @@ static const byte&#160;</td><td class="memItemRight" valign="bottom"><b>AS5048B_
   </tr>
 </table>
 </div><div class="memdoc">
-<p>/brief sets pins and settings for reading the encoder </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>sets pins and settings for reading the encoder </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_reverse</td><td>(boolean) reverse positive direction, default=false </td></tr>
     <tr><td class="paramname">_distPerCountFactor</td><td>(float) for the purposes of setting this factor a "count" is considered a full revolution of the absolute encoder </td></tr>
     <tr><td class="paramname">_address</td><td>(byte) I2C address of </td></tr>
-    <tr><td class="paramname">_velEnoughTime</td><td>(default=0, no limit) shortest interval between velocity calculations, if <a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b">run()</a> is called faster the calculation will wait to run </td></tr>
+    <tr><td class="paramname">_velEnoughTime</td><td>(default=0, no limit) shortest interval between velocity calculations, if <a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b" title="communication is done over I2C and requires constant polling instead of being able to use interrupts">run()</a> is called faster the calculation will wait to run </td></tr>
     <tr><td class="paramname">_velEnoughTicks</td><td>(default=0, no limit) if the encoder turns more than this number of steps velocity calculations will be done even if velEnoughTime hasn't been reached </td></tr>
   </table>
   </dd>
@@ -207,7 +226,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_encoder_a_s5048b_i2_c_a089d51e73f1bc1ce71de167239e81954_cgraph.png" border="0" usemap="#aclass_j_encoder_a_s5048b_i2_c_a089d51e73f1bc1ce71de167239e81954_cgraph" alt=""/></div>
 <map name="aclass_j_encoder_a_s5048b_i2_c_a089d51e73f1bc1ce71de167239e81954_cgraph" id="aclass_j_encoder_a_s5048b_i2_c_a089d51e73f1bc1ce71de167239e81954_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,160,47"/>
+<area shape="rect" title="sets pins and settings for reading the encoder" alt="" coords="5,5,160,47"/>
 <area shape="rect" href="class_j_encoder_a_s5048b_i2_c.html#a815b677dcaa4a4c92cb396fa0fdb877d" title=" " alt="" coords="208,5,368,47"/>
 </map>
 </div>
@@ -238,7 +257,9 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>/brief set up communication with encoder </p><dl class="section note"><dt>Note</dt><dd>uses default Wire object, not available if J_ENCODER_AS5048_I2C_USE_SOFTWIRE is defined </dd></dl>
+
+<p>set up communication with encoder </p>
+<dl class="section note"><dt>Note</dt><dd>uses default Wire object, not available if J_ENCODER_AS5048_I2C_USE_SOFTWIRE is defined </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">begin</td><td>true(default) call wire.begin(), false means call it yourself before using this function </td></tr>
@@ -271,7 +292,9 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>/brief set up communication with encoder </p><dl class="section note"><dt>Note</dt><dd>call Wire.begin() yourself before using this function </dd></dl>
+
+<p>set up communication with encoder </p>
+<dl class="section note"><dt>Note</dt><dd>call Wire.begin() yourself before using this function </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_wire</td><td>TwoWire or SoftWire (I2C) object to use for communicating </td></tr>
@@ -303,7 +326,9 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>/brief returns how far the encoder has turned from the zero position </p><dl class="section note"><dt>Note</dt><dd>remember that variables overflow </dd></dl>
+
+<p>returns how far the encoder has turned from the zero position </p>
+<dl class="section note"><dt>Note</dt><dd>remember that variables overflow </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">(long)</td><td>encoder ticks </td></tr>
@@ -337,7 +362,9 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>/brief returns how far the encoder has turned from the zero position converted to distance </p><dl class="section note"><dt>Note</dt><dd>remember that variables overflow (counter) and that floats have limited precision </dd></dl>
+
+<p>returns how far the encoder has turned from the zero position converted to distance </p>
+<dl class="section note"><dt>Note</dt><dd>remember that variables overflow (counter) and that floats have limited precision </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">(float)</td><td>encoder ticks converted to distance </td></tr>
@@ -371,7 +398,9 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>/brief returns a conversion factor between encoder ticks and distance that can be set for the encoder </p><dl class="section note"><dt>Note</dt><dd>default is 1.0 </dd></dl>
+
+<p>returns a conversion factor between encoder ticks and distance that can be set for the encoder </p>
+<dl class="section note"><dt>Note</dt><dd>default is 1.0 </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">(float)</td><td>distPerCountFactor </td></tr>
@@ -405,7 +434,9 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>/brief calculates velocity in distance per second where distance was set by setCountsToDistFactor() </p><dl class="retval"><dt>Return values</dt><dd>
+
+<p>calculates velocity in distance per second where distance was set by setCountsToDistFactor() </p>
+<dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">(float)</td><td>velocity </td></tr>
   </table>
@@ -438,7 +469,9 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>/brief can this encoder mesure direction or just speed </p><dl class="retval"><dt>Return values</dt><dd>
+
+<p>can this encoder mesure direction or just speed </p>
+<dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">(boolean)</td><td>true = can measure direction </td></tr>
   </table>
@@ -471,7 +504,9 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>/brief how many full turns the encoder has made. </p><dl class="section note"><dt>Note</dt><dd>this and rawReading can be used as an alternative to getDist if the limited precision of a float is a concert </dd></dl>
+
+<p>how many full turns the encoder has made. </p>
+<dl class="section note"><dt>Note</dt><dd>this and rawReading can be used as an alternative to getDist if the limited precision of a float is a concert </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">(long)</td><td>how far the encoder has turned </td></tr>
@@ -503,7 +538,9 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>/brief is the magnet in the optimal position Unlike other functions, this function does not rely on <a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b">run()</a> </p><dl class="section note"><dt>Note</dt><dd>if this is false, the encoder may still be providing angle information </dd></dl>
+
+<p>is the magnet in the optimal position Unlike other functions, this function does not rely on <a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b" title="communication is done over I2C and requires constant polling instead of being able to use interrupts">run()</a> </p>
+<dl class="section note"><dt>Note</dt><dd>if this is false, the encoder may still be providing angle information </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">(boolean)</td><td></td></tr>
@@ -535,7 +572,9 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>/brief could be useful for only recalculating a control loop if there's new velocity data </p><dl class="retval"><dt>Return values</dt><dd>
+
+<p>could be useful for only recalculating a control loop if there's new velocity data </p>
+<dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">(boolean)</td><td>true if velocity has changed since this function was last called </td></tr>
   </table>
@@ -600,7 +639,9 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>/brief communication is done over I2C and requires constant polling instead of being able to use interrupts </p><dl class="section note"><dt>Note</dt><dd>call this function as frequently as possible or this code can't keep track of how many times the encoder has turned </dd></dl>
+
+<p>communication is done over I2C and requires constant polling instead of being able to use interrupts </p>
+<dl class="section note"><dt>Note</dt><dd>call this function as frequently as possible or this code can't keep track of how many times the encoder has turned </dd></dl>
 
 <p>Reimplemented from <a class="el" href="class_j_encoder.html#a565ca78c9735b6306c23a0820fc7b482">JEncoder</a>.</p>
 
@@ -629,7 +670,9 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>/brief change the i2c address of the encoder (see the datasheet <a href="https://ams.com/as0548b">https://ams.com/as0548b</a>) from addressRegW() in <a href="https://github.com/sosandroid/AMS_AS5048B/blob/master/ams_as5048b.cpp">https://github.com/sosandroid/AMS_AS5048B/blob/master/ams_as5048b.cpp</a> </p><dl class="section note"><dt>Note</dt><dd>you can also get 4 different addresses by setting the A1 and A2 pins </dd></dl>
+
+<p>change the i2c address of the encoder (see the datasheet <a href="https://ams.com/as0548b">https://ams.com/as0548b</a>) from addressRegW() in <a href="https://github.com/sosandroid/AMS_AS5048B/blob/master/ams_as5048b.cpp">https://github.com/sosandroid/AMS_AS5048B/blob/master/ams_as5048b.cpp</a> </p>
+<dl class="section note"><dt>Note</dt><dd>you can also get 4 different addresses by setting the A1 and A2 pins </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">val</td><td></td></tr>
@@ -677,40 +720,14 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_j_encoder_a_s5048b_i2_c_a815b677dcaa4a4c92cb396fa0fdb877d_icgraph.png" border="0" usemap="#aclass_j_encoder_a_s5048b_i2_c_a815b677dcaa4a4c92cb396fa0fdb877d_icgraph" alt=""/></div>
 <map name="aclass_j_encoder_a_s5048b_i2_c_a815b677dcaa4a4c92cb396fa0fdb877d_icgraph" id="aclass_j_encoder_a_s5048b_i2_c_a815b677dcaa4a4c92cb396fa0fdb877d_icgraph">
 <area shape="rect" title=" " alt="" coords="208,5,368,47"/>
-<area shape="rect" href="class_j_encoder_a_s5048b_i2_c.html#a089d51e73f1bc1ce71de167239e81954" title=" " alt="" coords="5,5,160,47"/>
+<area shape="rect" href="class_j_encoder_a_s5048b_i2_c.html#a089d51e73f1bc1ce71de167239e81954" title="sets pins and settings for reading the encoder" alt="" coords="5,5,160,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a225aa9f6177c40b5da6c32e44ae60eb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a225aa9f6177c40b5da6c32e44ae60eb7">&#9670;&nbsp;</a></span>setEncoderZero() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void JEncoderAS5048bI2C::setEncoderZero </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>/brief The current angle of the sensor is read and set to zero. </p>
-
-</div>
-</div>
 <a id="a3b935a54672e7e7a942111c5a45e3cb8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b935a54672e7e7a942111c5a45e3cb8">&#9670;&nbsp;</a></span>setEncoderZero() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b935a54672e7e7a942111c5a45e3cb8">&#9670;&nbsp;</a></span>setEncoderZero()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -732,7 +749,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>/brief A custom (repeatable) angle can be set for what the sensor calls zero relative to default zero. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>A custom (repeatable) angle can be set for what the sensor calls zero relative to default zero. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">zeroAngle</td><td>(int) [0, STEPS_PER_TURN) </td></tr>
   </table>
@@ -763,7 +782,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>/brief reset the counter of how far the encoder has turned </p><dl class="retval"><dt>Return values</dt><dd>
+
+<p>reset the counter of how far the encoder has turned </p>
+<dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">(long)</td><td>returns value of counter before it is reset </td></tr>
   </table>

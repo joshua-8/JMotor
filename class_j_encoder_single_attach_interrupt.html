@@ -92,31 +92,43 @@ Collaboration diagram for JEncoderSingleAttachInterrupt:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1bf323d726d237bd4ddb23d6d954e07b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single_attach_interrupt.html#a1bf323d726d237bd4ddb23d6d954e07b">JEncoderSingleAttachInterrupt</a> (byte _encoderPin, float _countsToDistFactor=1.0, boolean _reverse=false, unsigned long _slowestIntervalMicros=100000UL)</td></tr>
+<tr class="memdesc:a1bf323d726d237bd4ddb23d6d954e07b"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins and settings  <a href="class_j_encoder_single_attach_interrupt.html#a1bf323d726d237bd4ddb23d6d954e07b">More...</a><br /></td></tr>
 <tr class="separator:a1bf323d726d237bd4ddb23d6d954e07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fe08adf2221e5b3a011dff9bc47abc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single_attach_interrupt.html#a6fe08adf2221e5b3a011dff9bc47abc8">setUpInterrupts</a> (void(*_isrPointer)(void))</td></tr>
 <tr class="separator:a6fe08adf2221e5b3a011dff9bc47abc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24a7a6391c09d68bcd02794c415c1d4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single_attach_interrupt.html#a24a7a6391c09d68bcd02794c415c1d4c">turnOffInterrupts</a> ()</td></tr>
+<tr class="memdesc:a24a7a6391c09d68bcd02794c415c1d4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">disable interrupts and stop monitoring encoder  <a href="class_j_encoder_single_attach_interrupt.html#a24a7a6391c09d68bcd02794c415c1d4c">More...</a><br /></td></tr>
 <tr class="separator:a24a7a6391c09d68bcd02794c415c1d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_j_encoder_single"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_j_encoder_single')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_j_encoder_single.html">JEncoderSingle</a></td></tr>
 <tr class="memitem:a7f02b28fd0d1421be8ff8402de6b5406 inherit pub_methods_class_j_encoder_single"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#a7f02b28fd0d1421be8ff8402de6b5406">zeroCounter</a> ()</td></tr>
+<tr class="memdesc:a7f02b28fd0d1421be8ff8402de6b5406 inherit pub_methods_class_j_encoder_single"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset the counter of how far the encoder has turned  <a href="class_j_encoder_single.html#a7f02b28fd0d1421be8ff8402de6b5406">More...</a><br /></td></tr>
 <tr class="separator:a7f02b28fd0d1421be8ff8402de6b5406 inherit pub_methods_class_j_encoder_single"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7f6ec3370553abc0af477522c9f4965 inherit pub_methods_class_j_encoder_single"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#ab7f6ec3370553abc0af477522c9f4965">getVel</a> ()</td></tr>
+<tr class="memdesc:ab7f6ec3370553abc0af477522c9f4965 inherit pub_methods_class_j_encoder_single"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculates velocity in distance per second where distance was set by setCountsToDistFactor()  <a href="class_j_encoder_single.html#ab7f6ec3370553abc0af477522c9f4965">More...</a><br /></td></tr>
 <tr class="separator:ab7f6ec3370553abc0af477522c9f4965 inherit pub_methods_class_j_encoder_single"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc1ca32f42e1c1c61d1c74dec5b3fd0e inherit pub_methods_class_j_encoder_single"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#afc1ca32f42e1c1c61d1c74dec5b3fd0e">getCounter</a> ()</td></tr>
+<tr class="memdesc:afc1ca32f42e1c1c61d1c74dec5b3fd0e inherit pub_methods_class_j_encoder_single"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns how far the encoder has turned from the zero position  <a href="class_j_encoder_single.html#afc1ca32f42e1c1c61d1c74dec5b3fd0e">More...</a><br /></td></tr>
 <tr class="separator:afc1ca32f42e1c1c61d1c74dec5b3fd0e inherit pub_methods_class_j_encoder_single"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a162bfc5b68cc534acf27835b1dcfde40 inherit pub_methods_class_j_encoder_single"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#a162bfc5b68cc534acf27835b1dcfde40">getDist</a> ()</td></tr>
+<tr class="memdesc:a162bfc5b68cc534acf27835b1dcfde40 inherit pub_methods_class_j_encoder_single"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns how far the encoder has turned from the zero position converted to distance  <a href="class_j_encoder_single.html#a162bfc5b68cc534acf27835b1dcfde40">More...</a><br /></td></tr>
 <tr class="separator:a162bfc5b68cc534acf27835b1dcfde40 inherit pub_methods_class_j_encoder_single"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b45b1afa98689918c3577a11148ebb7 inherit pub_methods_class_j_encoder_single"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#a8b45b1afa98689918c3577a11148ebb7">getDistPerCountFactor</a> ()</td></tr>
+<tr class="memdesc:a8b45b1afa98689918c3577a11148ebb7 inherit pub_methods_class_j_encoder_single"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a conversion factor between encoder ticks and distance that can be set for the encoder  <a href="class_j_encoder_single.html#a8b45b1afa98689918c3577a11148ebb7">More...</a><br /></td></tr>
 <tr class="separator:a8b45b1afa98689918c3577a11148ebb7 inherit pub_methods_class_j_encoder_single"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60420576d5cceac935716aa86f79cb2b inherit pub_methods_class_j_encoder_single"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#a60420576d5cceac935716aa86f79cb2b">setDistPerCountFactor</a> (float _factor)</td></tr>
+<tr class="memdesc:a60420576d5cceac935716aa86f79cb2b inherit pub_methods_class_j_encoder_single"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the conversion factor between encoder ticks and distance  <a href="class_j_encoder_single.html#a60420576d5cceac935716aa86f79cb2b">More...</a><br /></td></tr>
 <tr class="separator:a60420576d5cceac935716aa86f79cb2b inherit pub_methods_class_j_encoder_single"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3603f3724d349628787b45a05e03da24 inherit pub_methods_class_j_encoder_single"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#a3603f3724d349628787b45a05e03da24">setReverse</a> (boolean _reverse)</td></tr>
+<tr class="memdesc:a3603f3724d349628787b45a05e03da24 inherit pub_methods_class_j_encoder_single"><td class="mdescLeft">&#160;</td><td class="mdescRight">reverse readings of encoder  <a href="class_j_encoder_single.html#a3603f3724d349628787b45a05e03da24">More...</a><br /></td></tr>
 <tr class="separator:a3603f3724d349628787b45a05e03da24 inherit pub_methods_class_j_encoder_single"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb1c957f66201eb3711038ff3f3e2fe7 inherit pub_methods_class_j_encoder_single"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#aeb1c957f66201eb3711038ff3f3e2fe7">hasDirection</a> ()</td></tr>
+<tr class="memdesc:aeb1c957f66201eb3711038ff3f3e2fe7 inherit pub_methods_class_j_encoder_single"><td class="mdescLeft">&#160;</td><td class="mdescRight">can this encoder mesure direction or just speed  <a href="class_j_encoder_single.html#aeb1c957f66201eb3711038ff3f3e2fe7">More...</a><br /></td></tr>
 <tr class="separator:aeb1c957f66201eb3711038ff3f3e2fe7 inherit pub_methods_class_j_encoder_single"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc507ecf655f0e5d756bc628908dc120 inherit pub_methods_class_j_encoder_single"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#afc507ecf655f0e5d756bc628908dc120">isVelNew</a> ()</td></tr>
+<tr class="memdesc:afc507ecf655f0e5d756bc628908dc120 inherit pub_methods_class_j_encoder_single"><td class="mdescLeft">&#160;</td><td class="mdescRight">could be useful for only recalculating a control loop if there's new velocity data  <a href="class_j_encoder_single.html#afc507ecf655f0e5d756bc628908dc120">More...</a><br /></td></tr>
 <tr class="separator:afc507ecf655f0e5d756bc628908dc120 inherit pub_methods_class_j_encoder_single"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88d5a8aa16bf1ff48727aea4f22fc1bf inherit pub_methods_class_j_encoder_single"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#a88d5a8aa16bf1ff48727aea4f22fc1bf">run</a> ()</td></tr>
+<tr class="memdesc:a88d5a8aa16bf1ff48727aea4f22fc1bf inherit pub_methods_class_j_encoder_single"><td class="mdescLeft">&#160;</td><td class="mdescRight">if an encoder needs to have some code called each loop (like absolute encoder polling encoder and calculating amount turned)  <a href="class_j_encoder_single.html#a88d5a8aa16bf1ff48727aea4f22fc1bf">More...</a><br /></td></tr>
 <tr class="separator:a88d5a8aa16bf1ff48727aea4f22fc1bf inherit pub_methods_class_j_encoder_single"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8a409d326be67c99c6841bbb11c6a29 inherit pub_methods_class_j_encoder_single"><td class="memItemLeft" align="right" valign="top"><a id="ab8a409d326be67c99c6841bbb11c6a29"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>encoderISR</b> (void)</td></tr>
@@ -126,6 +138,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>encoderISR</b> (void)
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_j_encoder_single"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_j_encoder_single')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_j_encoder_single.html">JEncoderSingle</a></td></tr>
 <tr class="memitem:a0349d4e73be45cdaee1a4dddcdff6979 inherit pro_methods_class_j_encoder_single"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#a0349d4e73be45cdaee1a4dddcdff6979">JEncoderSingle</a> (byte _encoderPin, float _countsToDistFactor=1.0, boolean _reverse=false, unsigned long _slowestIntervalMicros=100000UL)</td></tr>
+<tr class="memdesc:a0349d4e73be45cdaee1a4dddcdff6979 inherit pro_methods_class_j_encoder_single"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins and settings  <a href="class_j_encoder_single.html#a0349d4e73be45cdaee1a4dddcdff6979">More...</a><br /></td></tr>
 <tr class="separator:a0349d4e73be45cdaee1a4dddcdff6979 inherit pro_methods_class_j_encoder_single"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_j_encoder_single"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_j_encoder_single')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_j_encoder_single.html">JEncoderSingle</a></td></tr>
 <tr class="memitem:aecf17461b8be58118af29feebb98dfaf inherit pro_attribs_class_j_encoder_single"><td class="memItemLeft" align="right" valign="top"><a id="aecf17461b8be58118af29feebb98dfaf"></a>
@@ -178,7 +191,9 @@ byte&#160;</td><td class="memItemRight" valign="bottom"><b>encoderPin</b></td></
   </tr>
 </table>
 </div><div class="memdoc">
-<p>/brief constructor, sets pins and settings </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>constructor, sets pins and settings </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_encoderAPin</td><td>encoder input pin </td></tr>
     <tr><td class="paramname">_countsToDistFactor</td><td>conversion factor for getting distance in an actual unit </td></tr>
@@ -242,7 +257,9 @@ byte&#160;</td><td class="memItemRight" valign="bottom"><b>encoderPin</b></td></
   </tr>
 </table>
 </div><div class="memdoc">
-<p>/brief disable interrupts and stop monitoring encoder </p><dl class="section note"><dt>Note</dt><dd>use setUpInterrupts to start encoder again </dd></dl>
+
+<p>disable interrupts and stop monitoring encoder </p>
+<dl class="section note"><dt>Note</dt><dd>use setUpInterrupts to start encoder again </dd></dl>
 
 <p>Reimplemented from <a class="el" href="class_j_encoder_single.html#a1a276e36fe6393440ba92627c44decb3">JEncoderSingle</a>.</p>
 
