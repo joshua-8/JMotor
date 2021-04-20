@@ -1,11 +1,3 @@
-/**
- * \file JEncoderAS5048bI2C.h
- * @brief reads a type of absolute encoder https://ams.com/as0548b (uses I2C)
- * 
- * based on work by sosandroid https://github.com/sosandroid/AMS_AS5048B 
- * @note remember to add pull up resistors on I2C lines (~4.7k for 5v, ~2.4k for 3.3v microcontrollers). \n
- * Use #define J_ENCODER_AS5048_I2C_USE_SOFTWIRE to use SoftWire
- */
 #ifndef J_ENCODER_AS5048B_I2C_H
 #define J_ENCODER_AS5048B_I2C_H
 #include "JEncoder.h"
@@ -15,6 +7,14 @@
 #else
 #include <Wire.h>
 #endif
+/**
+ * \file JEncoderAS5048bI2C.h
+ * @brief reads a type of absolute encoder https://ams.com/as0548b (uses I2C)
+ * 
+ * based on work by sosandroid https://github.com/sosandroid/AMS_AS5048B 
+ * @note remember to add pull up resistors on I2C lines (~4.7k for 5v, ~2.4k for 3.3v microcontrollers). \n
+ * Use #define J_ENCODER_AS5048_I2C_USE_SOFTWIRE to use SoftWire
+ */
 class JEncoderAS5048bI2C : public JEncoder {
 private:
 #ifdef J_ENCODER_AS5048_I2C_USE_SOFTWIRE
