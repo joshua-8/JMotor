@@ -1,4 +1,5 @@
 /**
+ * \file JMotorDriverAvrPWM.h
  * @brief  wrapper for analogWrite()
  * @note   platform: AVR (standard Arduinos)
  */

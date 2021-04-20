@@ -1,4 +1,5 @@
 /**
+ * \file JEncoderSingle.h
  * @brief  reads a single channel (incremental) encoder
  * 
  * direction can't be calculated with a single channel encoder, only speed can be. \n

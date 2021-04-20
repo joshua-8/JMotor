@@ -1,4 +1,5 @@
 /**
+ * \file JEncoder.h
  * @brief  defines common interface for JEncoder
  * @note   JEcoder's functions are virtual, it can not be used directly
  */

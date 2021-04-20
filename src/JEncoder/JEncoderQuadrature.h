@@ -1,4 +1,5 @@
 /**
+ * \file JEncoderQuadrature.h
  * @brief  reads a quadrature (incremental) encoder
  * 
  * speed calulation is done by measuring time between 4 encoder ticks (not between every tick since encoders may not have evenly spaced ticks)

@@ -1,4 +1,5 @@
 /**
+ * \file JMotorDriverAvrServo.h
  * @brief  wraps standard servo library. For servos and motor controllers that use servo signals (ESCs)
  * @note   platform: AVR (standard Arduinos)
  */

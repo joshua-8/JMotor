@@ -1,4 +1,5 @@
 /**
+ * \file JEncoderQuadraturePinChange.h
  * @note  uses a pin change interrupt library to support more pins than attachInterrupt() \n
  *      interrupt library (tested with v1.1.0): https://github.com/GreyGnome/EnableInterrupt \n
  * platform: AVR (standard Arduinos)

@@ -1,4 +1,5 @@
 /**
+ * \file JMotorDriverAvrPWMDir.h
  * @brief  for motor controllers with one direction input and one speed input pin
  * @note   platform: AVR (standard Arduinos)
  */
