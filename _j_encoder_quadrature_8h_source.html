@@ -74,7 +74,7 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define J_ENCODER_QUADRATURE_H</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;JEncoder.h&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/* /def</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * Functions called by interrupts can&#39;t expect parameters or be functions of classes so a workaround is needed to use interrupts in a class.</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * The workaround that&#39;s used here is global functions need to be made when a new instance of this class is made.</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * The global functions get used when attaching interrupts, and the global functions can call functions inside the class.</span></div>
@@ -233,7 +233,7 @@ $(function() {
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;};</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_j_encoder_html"><div class="ttname"><a href="class_j_encoder.html">JEncoder</a></div><div class="ttdoc">defines common interface for JEncoder</div><div class="ttdef"><b>Definition:</b> JEncoder.h:10</div></div>
+<div class="ttc" id="aclass_j_encoder_html"><div class="ttname"><a href="class_j_encoder.html">JEncoder</a></div><div class="ttdef"><b>Definition:</b> JEncoder.h:10</div></div>
 <div class="ttc" id="aclass_j_encoder_quadrature_html"><div class="ttname"><a href="class_j_encoder_quadrature.html">JEncoderQuadrature</a></div><div class="ttdef"><b>Definition:</b> JEncoderQuadrature.h:22</div></div>
 <div class="ttc" id="aclass_j_encoder_quadrature_html_a0d2089c6b731414c5edeb4e815a9d4d0"><div class="ttname"><a href="class_j_encoder_quadrature.html#a0d2089c6b731414c5edeb4e815a9d4d0">JEncoderQuadrature::setReverse</a></div><div class="ttdeci">void setReverse(boolean _reverse)</div><div class="ttdoc">reverse readings of encoder</div><div class="ttdef"><b>Definition:</b> JEncoderQuadrature.h:132</div></div>
 <div class="ttc" id="aclass_j_encoder_quadrature_html_a1436cba90f9b5d0be84fc84dea0d7453"><div class="ttname"><a href="class_j_encoder_quadrature.html#a1436cba90f9b5d0be84fc84dea0d7453">JEncoderQuadrature::isVelNew</a></div><div class="ttdeci">boolean isVelNew()</div><div class="ttdoc">could be useful for only recalculating a control loop if there's new velocity data</div><div class="ttdef"><b>Definition:</b> JEncoderQuadrature.h:144</div></div>

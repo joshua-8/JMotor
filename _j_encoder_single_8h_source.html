@@ -74,7 +74,7 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define J_ENCODER_ATTACH_INTERRUPT_SINGLE_H</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;JEncoder.h&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/* /def</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * Functions called by interrupts can&#39;t expect parameters or be functions of classes so a workaround is needed to use interrupts in a class.</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * The workaround that&#39;s used here is global functions need to be made when a new instance of this class is made.</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * The global function get used when attaching interrupts, and the global function can call a function inside the class.</span></div>
@@ -209,7 +209,7 @@ $(function() {
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;};</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_j_encoder_html"><div class="ttname"><a href="class_j_encoder.html">JEncoder</a></div><div class="ttdoc">defines common interface for JEncoder</div><div class="ttdef"><b>Definition:</b> JEncoder.h:10</div></div>
+<div class="ttc" id="aclass_j_encoder_html"><div class="ttname"><a href="class_j_encoder.html">JEncoder</a></div><div class="ttdef"><b>Definition:</b> JEncoder.h:10</div></div>
 <div class="ttc" id="aclass_j_encoder_single_html"><div class="ttname"><a href="class_j_encoder_single.html">JEncoderSingle</a></div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:21</div></div>
 <div class="ttc" id="aclass_j_encoder_single_html_a0349d4e73be45cdaee1a4dddcdff6979"><div class="ttname"><a href="class_j_encoder_single.html#a0349d4e73be45cdaee1a4dddcdff6979">JEncoderSingle::JEncoderSingle</a></div><div class="ttdeci">JEncoderSingle(byte _encoderPin, float _countsToDistFactor=1.0, boolean _reverse=false, unsigned long _slowestIntervalMicros=100000UL)</div><div class="ttdoc">constructor, sets pins and settings</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:46</div></div>
 <div class="ttc" id="aclass_j_encoder_single_html_a162bfc5b68cc534acf27835b1dcfde40"><div class="ttname"><a href="class_j_encoder_single.html#a162bfc5b68cc534acf27835b1dcfde40">JEncoderSingle::getDist</a></div><div class="ttdeci">float getDist()</div><div class="ttdoc">returns how far the encoder has turned from the zero position converted to distance</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:102</div></div>
