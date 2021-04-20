@@ -1,5 +1,5 @@
 /**
- * /brief  reads a quadrature (incremental) encoder
+ * \brief  reads a quadrature (incremental) encoder
  * speed calulation is done by measuring time between 4 encoder ticks (not between every tick since encoders may not have evenly spaced ticks)
  * velocity is set to zero if the encoder has not turned in slowestIntervalMicros
  * @note don't use this class directly, use a subclass
@@ -40,7 +40,7 @@ private:
 
 protected:
     /**
-     * /brief  constructor, sets pins and settings
+     * \brief  constructor, sets pins and settings
      * @note   
      * @param  _encoderAPin: one channel of quadrature encoder
      * @param  _encoderBPin: other channel of quadrature encoder
@@ -69,13 +69,13 @@ protected:
         wasTimedOut = false;
     }
     /**
-     * /brief  set up pins and interrupts
+     * \brief  set up pins and interrupts
      * @param  _isrAPointer: global function that calls internal ISRA, to use with enableInterrupt
      * @param  _isrBPointer: global function that calls internal ISRB, to use with enableInterrupt
      */
     virtual void setUpInterrupts(void (*_isrAPointer)(void), void (*_isrBPointer)(void));
     /**
-     * /brief  disable interrupts and stop monitoring encoder
+     * \brief  disable interrupts and stop monitoring encoder
      * @note use setUpInterrupts to start encoder again
      */
     virtual void turnOffInterrupts();
@@ -125,7 +125,7 @@ public:
         distPerCountFactor = _factor;
     }
     /**
-     * /brief  reverse readings of encoder
+     * \brief  reverse readings of encoder
      * @param  _reverse: whether to invert sign of readings
      * @retval None
      */
