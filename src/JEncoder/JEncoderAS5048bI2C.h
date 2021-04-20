@@ -1,5 +1,5 @@
 /**
- * @brief reads a type of absolute encoder https://ams.com/as0548b (uses I2C) \n
+ * /brief reads a type of absolute encoder https://ams.com/as0548b (uses I2C) \n
  * based on work by sosandroid https://github.com/sosandroid/AMS_AS5048B 
  * @note remember to add pull up resistors on I2C lines (~4.7k for 5v, ~2.4k for 3.3v microcontrollers). \n
  * Use #define J_ENCODER_AS5048_I2C_USE_SOFTWIRE to use SoftWire
@@ -106,7 +106,7 @@ public:
     static const byte AS5048B_DEFAULT_ADDRESS = 0x40; //can be accessed as JEncoderAS5048bI2C::AS5048B_DEFAULT_ADDRESS
 
     /**
-     * @brief  sets pins and settings for reading the encoder
+     * /brief  sets pins and settings for reading the encoder
      * @param  _reverse: (boolean) reverse positive direction, default=false 
      * @param  _distPerCountFactor: (float) for the purposes of setting this factor a "count" is considered a full revolution of the absolute encoder
      * @param  _address: (byte) I2C address of 
@@ -134,7 +134,7 @@ public:
     }
 
 /**
-     * @brief  set up communication with encoder
+     * /brief  set up communication with encoder
      * @note  call Wire.begin() yourself before using this function
      * @param  _wire: TwoWire or SoftWire (I2C) object to use for communicating
      */
@@ -147,7 +147,7 @@ public:
         wire = _wire;
     }
     /**
-     * @brief  set up communication with encoder
+     * /brief  set up communication with encoder
      * @note   uses default Wire object, not available if J_ENCODER_AS5048_I2C_USE_SOFTWIRE is defined
      * @param begin: true(default) call wire.begin(), false means call it yourself before using this function
      */
@@ -163,7 +163,7 @@ public:
 #endif
 
     /**
-     * @brief  communication is done over I2C and requires constant polling instead of being able to use interrupts
+     * /brief  communication is done over I2C and requires constant polling instead of being able to use interrupts
      * @note   call this function as frequently as possible or this code can't keep track of how many times the encoder has turned
      */
     void run()
@@ -192,7 +192,7 @@ public:
     }
 
     /**
-     * @brief  change the i2c address of the encoder (see the datasheet https://ams.com/as0548b)
+     * /brief  change the i2c address of the encoder (see the datasheet https://ams.com/as0548b)
      *      from addressRegW() in https://github.com/sosandroid/AMS_AS5048B/blob/master/ams_as5048b.cpp
      * @note you can also get 4 different addresses by setting the A1 and A2 pins
      * @param  val: 
@@ -208,7 +208,7 @@ public:
     }
 
     /**
-     * @brief  The current angle of the sensor is read and set to zero.
+     * /brief  The current angle of the sensor is read and set to zero.
      */
     void setEncoderZero()
     {
@@ -217,7 +217,7 @@ public:
         writeToZeroRegister(newZero);
     }
     /**
-     * @brief  A custom (repeatable) angle can be set for what the sensor calls zero relative to default zero.
+     * /brief  A custom (repeatable) angle can be set for what the sensor calls zero relative to default zero.
      * @param zeroAngle (int) [0, STEPS_PER_TURN)
      */
     void setEncoderZero(int zeroAngle)
@@ -237,7 +237,7 @@ public:
     }
 
     /**
-     * @brief  is the magnet in the optimal position
+     * /brief  is the magnet in the optimal position
      *          Unlike other functions, this function does not rely on run()
      * @note  if this is false, the encoder may still be providing angle information
      * @retval  (boolean) 
@@ -249,7 +249,7 @@ public:
     }
 
     /**
-     * @brief  how many full turns the encoder has made.
+     * /brief  how many full turns the encoder has made.
      * @note   this and rawReading can be used as an alternative to getDist if the limited precision of a float is a concert
      * @retval (long) how far the encoder has turned
      */

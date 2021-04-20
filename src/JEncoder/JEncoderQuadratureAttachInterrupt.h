@@ -13,7 +13,7 @@ class JEncoderQuadratureAttachInterrupt : public JEncoderQuadrature {
 
 public:
     /**
-     * @brief  constructor, sets pins and settings
+     * /brief  constructor, sets pins and settings
      * @note   
      * @param  _encoderAPin: one channel of quadrature encoder
      * @param  _encoderBPin: other channel of quadrature encoder
