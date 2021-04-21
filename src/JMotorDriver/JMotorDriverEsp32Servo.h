@@ -48,10 +48,6 @@ public:
         ledcSetup(pwmChannel, SERVO_FREQ, SERVO_RES);
         return SERVO_TICKS_PER_MICROSECOND;
     }
-    JMotorDriverType getType()
-    {
-        return JMotorDriverType::esp32Servo;
-    }
     boolean set(float _val)
     {
         if (enabled) {

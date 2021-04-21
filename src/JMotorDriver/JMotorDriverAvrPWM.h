@@ -27,10 +27,6 @@ public:
         pin = _pin;
         _disableState = disableState;
     }
-    JMotorDriverType getType()
-    {
-        return JMotorDriverType::avrPWM;
-    }
     boolean set(float _val)
     {
         if (enabled) {

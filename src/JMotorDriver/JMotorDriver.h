@@ -11,27 +11,6 @@
 class JMotorDriver {
 public:
     /**
-     * @brief  The JMotorDriverType enum is used so a specific subclass of JMotorDriver can indicate what type it is
-     */
-    enum JMotorDriverType {
-        Null,
-        avrServo,
-        esp32Servo,
-        avrPWM,
-        esp32PWM,
-        avrPWMDir,
-        esp32PWMDir,
-        avrL293,
-        esp32L293,
-    };
-
-    /**
-     * @brief  returns what type of driver it is
-     * @retval (JMotorDriverType) type
-     */
-    virtual JMotorDriverType getType();
-
-    /**
      * @brief  set motor power
      * @note  val should be between getMinRange and getMaxRange, but constrained internally
      * @param  val:  (float) val

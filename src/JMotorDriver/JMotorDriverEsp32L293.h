@@ -53,10 +53,6 @@ public:
         i2 = _i2;
         breakOn = _breakOn;
     }
-    JMotorDriverType getType()
-    {
-        return JMotorDriverType::esp32L293;
-    }
     boolean set(float val)
     {
         if (enabled) {

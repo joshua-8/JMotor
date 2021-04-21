@@ -48,10 +48,6 @@ public:
         PWM_FREQ = freq;
         PWM_RANGE = (1 << PWM_RES) - 1;
     }
-    JMotorDriverType getType()
-    {
-        return JMotorDriverType::esp32PWM;
-    }
     boolean set(float _val)
     {
         if (enabled) {

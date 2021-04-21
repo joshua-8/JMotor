@@ -32,10 +32,6 @@ public:
         i2 = _i2;
         breakOn = _breakOn;
     }
-    JMotorDriverType getType()
-    {
-        return JMotorDriverType::avrL293;
-    }
     boolean set(float val)
     {
         if (enabled) {

@@ -26,10 +26,6 @@ public:
         enabled = false;
         servoPin = _servoPin;
     }
-    JMotorDriverType getType()
-    {
-        return JMotorDriverType::avrServo;
-    }
     boolean set(float _val)
     {
         float val = constrain(_val, -1.0, 1.0);

@@ -43,10 +43,6 @@ public:
         enabled = false;
         dir = _dirPin;
     }
-    JMotorDriverType getType()
-    {
-        return JMotorDriverType::esp32PWMDir;
-    }
     boolean set(float val)
     {
         if (enabled) {

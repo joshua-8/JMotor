@@ -30,10 +30,6 @@ public:
         dir = _dirPin;
         reverse = _rev;
     }
-    JMotorDriverType getType()
-    {
-        return JMotorDriverType::avrPWMDir;
-    }
     boolean set(float val)
     {
         if (enabled) {
