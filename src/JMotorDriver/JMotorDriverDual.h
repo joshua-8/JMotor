@@ -21,10 +21,10 @@ public:
         boolean m2state = m2.set(val);
         return m1state && m2state;
     }
-    boolean setEnable(boolean val)
+    boolean setEnable(boolean _enable)
     {
-        boolean m1state = m1.setEnable(val);
-        boolean m2state = m2.setEnable(val);
+        boolean m1state = m1.setEnable(_enable);
+        boolean m2state = m2.setEnable(_enable);
         return m1state || m2state;
     }
     boolean getEnable()

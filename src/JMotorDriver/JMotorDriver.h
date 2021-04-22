@@ -20,10 +20,10 @@ public:
     /**
      * @brief  use to enable or disable a motor, and sets up pin states
      * @note   setEnable(true) must be called before a motor driver will activate
-     * @param  val: (boolean) true=eneable, false=disable
+     * @param  _enable: (boolean) true=enable, false=disable
      * @retval (boolean) true if state changed, false if state already set
      */
-    virtual boolean setEnable(boolean val);
+    virtual boolean setEnable(boolean _enable);
 
     /**
      * @brief  enable motor
@@ -36,7 +36,7 @@ public:
     }
 
     /**
-     * @brief  disables motor
+     * @brief  disable motor
      * @note equivalent to setEnable(false)
      * @retval (boolean) true if state changed, false if state already set
      */
