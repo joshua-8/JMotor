@@ -7,7 +7,7 @@
  * @brief For servos and motor controllers that use servo signals (ESCs)
  * @note  platform: ESP32
  */
-class JMotorDriverEsp32Servo : private JMotorDriver {
+class JMotorDriverEsp32Servo : public JMotorDriver {
 private:
     boolean enabled = false;
     int servoPin;

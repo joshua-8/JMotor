@@ -84,9 +84,9 @@ public:
      * @param  _velEnoughTicks: (default=0, no limit) if the encoder turns more than this number of steps velocity calculations will be done even if velEnoughTime hasn't been reached
      */
     JEncoderPWMAbsolute(byte _encoderPin, pwmSettings _ps, boolean _reverse = false, float _distPerCountFactor = 1.0, unsigned long _velEnoughTime = 0, unsigned long _velEnoughTicks = 0)
+        : ps(_ps)
     {
         encoderPin = _encoderPin;
-        ps = _ps;
         if (_reverse) {
             reverse = -1;
         } else {

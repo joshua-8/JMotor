@@ -7,7 +7,7 @@
  * @brief  L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf
  * @note   platform: AVR (standard Arduinos)
  */
-class JMotorDriverAvrL293 : private JMotorDriver {
+class JMotorDriverAvrL293 : public JMotorDriver {
 private:
     boolean enabled = false;
     int i1;

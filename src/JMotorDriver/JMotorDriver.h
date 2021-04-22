@@ -16,7 +16,7 @@ public:
      * @param  val:  (float) val
      * @retval (boolean) false if at end of power range, true otherwise
      */
-    virtual boolean set(float val);
+    virtual boolean set(float val) = 0;
 
     /**
      * @brief  use to enable or disable a motor, and sets up pin states
@@ -24,27 +24,27 @@ public:
      * @param  val: (boolean) true=eneable, false=disable
      * @retval (boolean) true if state changed, false if state already set
      */
-    virtual boolean setEnable(boolean val);
+    virtual boolean setEnable(boolean val) = 0;
 
     /**
      * @brief  get the enable state of the driver
      * @retval (boolean) true if enabled, false if disabled
      */
-    virtual boolean getEnable();
+    virtual boolean getEnable() = 0;
 
     /**
      * @brief  high end of the range
      * @note   usually 1.0
      * @retval (float) maxRange
      */
-    virtual float getMaxRange();
+    virtual float getMaxRange() = 0;
 
     /**
      * @brief  low end of the range
      * @note   usually -1.0, if 0, that indicates a motor controller with no reverse function
      * @retval (float) minRange
      */
-    virtual float getMinRange();
+    virtual float getMinRange() = 0;
 };
 
 #if defined(ESP32) // ESP32s do pwm differently
