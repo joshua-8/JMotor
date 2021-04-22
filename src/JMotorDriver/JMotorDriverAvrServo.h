@@ -7,7 +7,7 @@
  * @brief  wraps standard servo library. For servos and motor controllers that use servo signals (ESCs)
  * @note   platform: AVR (standard Arduinos)
  */
-class JMotorDriverAvrServo : private JMotorDriver {
+class JMotorDriverAvrServo : public JMotorDriver {
 private:
     boolean enabled = false;
     int servoPin;
@@ -25,10 +25,6 @@ public:
 
         enabled = false;
         servoPin = _servoPin;
-    }
-    JMotorDriverType getType()
-    {
-        return JMotorDriverType::avrServo;
     }
     boolean set(float _val)
     {

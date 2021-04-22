@@ -1,4 +1,3 @@
-
 #ifndef J_MOTOR_DRIVER_H
 #define J_MOTOR_DRIVER_H
 #include <Arduino.h>
@@ -10,27 +9,6 @@
  */
 class JMotorDriver {
 public:
-    /**
-     * @brief  The JMotorDriverType enum is used so a specific subclass of JMotorDriver can indicate what type it is
-     */
-    enum JMotorDriverType {
-        Null,
-        avrServo,
-        esp32Servo,
-        avrPWM,
-        esp32PWM,
-        avrPWMDir,
-        esp32PWMDir,
-        avrL293,
-        esp32L293,
-    };
-
-    /**
-     * @brief  returns what type of driver it is
-     * @retval (JMotorDriverType) type
-     */
-    virtual JMotorDriverType getType();
-
     /**
      * @brief  set motor power
      * @note  val should be between getMinRange and getMaxRange, but constrained internally
@@ -46,6 +24,26 @@ public:
      * @retval (boolean) true if state changed, false if state already set
      */
     virtual boolean setEnable(boolean val);
+
+    /**
+     * @brief  enable motor
+     * @note equivalent to setEnable(true)
+     * @retval (boolean) true if state changed, false if state already set
+     */
+    boolean enable()
+    {
+        return setEnable(true);
+    }
+
+    /**
+     * @brief  disables motor
+     * @note equivalent to setEnable(false)
+     * @retval (boolean) true if state changed, false if state already set
+     */
+    boolean disable()
+    {
+        return setEnable(false);
+    }
 
     /**
      * @brief  get the enable state of the driver
@@ -79,5 +77,6 @@ public:
 #include "JMotorDriverAvrPWMDir.h"
 #include "JMotorDriverAvrServo.h"
 #endif
+#include "JMotorDriverDual.h"
 
 #endif

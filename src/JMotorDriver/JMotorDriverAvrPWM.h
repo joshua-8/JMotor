@@ -7,7 +7,7 @@
  * @brief  wrapper for analogWrite()
  * @note   platform: AVR (standard Arduinos)
  */
-class JMotorDriverAvrPWM : private JMotorDriver {
+class JMotorDriverAvrPWM : public JMotorDriver {
 private:
     boolean enabled = false;
     int pin;
@@ -26,10 +26,6 @@ public:
         enabled = false;
         pin = _pin;
         _disableState = disableState;
-    }
-    JMotorDriverType getType()
-    {
-        return JMotorDriverType::avrPWM;
     }
     boolean set(float _val)
     {

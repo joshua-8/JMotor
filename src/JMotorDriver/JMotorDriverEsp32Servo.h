@@ -7,7 +7,7 @@
  * @brief For servos and motor controllers that use servo signals (ESCs)
  * @note  platform: ESP32
  */
-class JMotorDriverEsp32Servo : private JMotorDriver {
+class JMotorDriverEsp32Servo : public JMotorDriver {
 private:
     boolean enabled = false;
     int servoPin;
@@ -47,10 +47,6 @@ public:
         SERVO_TICKS_PER_MICROSECOND = (1 << SERVO_RES) * SERVO_FREQ / 1000000; //DEFAULT=52.4288  2^SERVO_RES / 1E6 * SERVO_FREQ
         ledcSetup(pwmChannel, SERVO_FREQ, SERVO_RES);
         return SERVO_TICKS_PER_MICROSECOND;
-    }
-    JMotorDriverType getType()
-    {
-        return JMotorDriverType::esp32Servo;
     }
     boolean set(float _val)
     {

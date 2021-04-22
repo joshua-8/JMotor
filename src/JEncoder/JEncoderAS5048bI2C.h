@@ -127,6 +127,7 @@ public:
         velocity = 0;
         setDistPerCountFactor(_distPerCountFactor);
         newSpeed = false;
+        lastAngle = 0;
         lastVelAngle = 0;
         lastVelTurns = 0;
         lastVelTimeMicros = 0;

@@ -7,7 +7,7 @@
  * @brief  for motor controllers with one direction input and one speed input pin
  * @note   platform: ESP32
  */
-class JMotorDriverEsp32PWMDir : private JMotorDriver {
+class JMotorDriverEsp32PWMDir : public JMotorDriver {
 private:
     boolean enabled = false;
     int dir;
@@ -42,10 +42,6 @@ public:
     {
         enabled = false;
         dir = _dirPin;
-    }
-    JMotorDriverType getType()
-    {
-        return JMotorDriverType::esp32PWMDir;
     }
     boolean set(float val)
     {

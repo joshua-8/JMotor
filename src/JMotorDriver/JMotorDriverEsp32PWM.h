@@ -6,7 +6,7 @@
  * @brief  uses ledc to output PWM approximation of an analog output
  * @note   platform: ESP32
  */
-class JMotorDriverEsp32PWM : private JMotorDriver {
+class JMotorDriverEsp32PWM : public JMotorDriver {
 private:
     int PWM_RES = 12;
     int PWM_FREQ = 2000; // <= int(80E6 / 2^PWM_RES), 2kHz recommended for motor PWM
@@ -47,10 +47,6 @@ public:
         PWM_RES = resolution;
         PWM_FREQ = freq;
         PWM_RANGE = (1 << PWM_RES) - 1;
-    }
-    JMotorDriverType getType()
-    {
-        return JMotorDriverType::esp32PWM;
     }
     boolean set(float _val)
     {

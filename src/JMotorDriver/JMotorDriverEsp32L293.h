@@ -8,7 +8,7 @@
  * @brief  L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf
  * @note   platform: ESP32
  */
-class JMotorDriverEsp32L293 : private JMotorDriver {
+class JMotorDriverEsp32L293 : public JMotorDriver {
 private:
     boolean enabled = false;
     int i1;
@@ -52,10 +52,6 @@ public:
         i1 = _i1;
         i2 = _i2;
         breakOn = _breakOn;
-    }
-    JMotorDriverType getType()
-    {
-        return JMotorDriverType::esp32L293;
     }
     boolean set(float val)
     {
