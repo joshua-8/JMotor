@@ -17,15 +17,21 @@ public:
     }
     boolean set(float val)
     {
-        return m1.set(val) && m1.set(val);
+        boolean m1state = m1.set(val);
+        boolean m2state = m2.set(val);
+        return m1state && m2state;
     }
     boolean setEnable(boolean val)
     {
-        return m1.setEnable(val) || m2.setEnable(val);
+        boolean m1state = m1.setEnable(val);
+        boolean m2state = m2.setEnable(val);
+        return m1state || m2state;
     }
     boolean getEnable()
     {
-        return m1.getEnable() || m2.getEnable();
+        boolean m1state = m1.getEnable();
+        boolean m2state = m2.getEnable();
+        return m1state || m2state;
     }
     float getMaxRange()
     {
