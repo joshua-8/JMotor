@@ -56,9 +56,9 @@ public:
         }
         return (_val > 0) && (_val < 1.0);
     }
-    boolean setEnable(boolean enable)
+    boolean setEnable(boolean _enable)
     {
-        if (enable) {
+        if (_enable) {
             if (!enabled) {
                 //actually enable
                 enabled = true;

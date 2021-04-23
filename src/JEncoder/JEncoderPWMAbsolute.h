@@ -42,10 +42,22 @@ public:
      * @brief  struct for holding parameters for reading PWM Absolute Encoders
      */
     struct pwmSettings {
-        uint16_t RESOLUTION; //resolution of encoder data (pwm steps)
-        uint16_t PWM_STEPS; //number of total clock steps in pwm output
-        uint16_t MIN_STEPS; //number of steps corresponding to min angle. MAX_STEPS=MIN_STEPS+RESOLUTION
-        boolean dataState; //HIGH or LOW, which state when pulse length increasing=increasing angle
+        /**
+         * @brief resolution of encoder data (pwm steps)
+         */
+        uint16_t RESOLUTION;
+        /**
+         * @brief number of total clock steps in pwm output
+         */
+        uint16_t PWM_STEPS;
+        /**
+         * @brief  number of steps corresponding to min angle. MAX_STEPS=MIN_STEPS+RESOLUTION
+         */
+        uint16_t MIN_STEPS;
+        /**
+         * @brief  HIGH or LOW, which state when pulse length increasing=increasing angle
+         */
+        boolean dataState;
     };
 
 protected:
