@@ -128,9 +128,9 @@ public:
     }
 
     /**
- * @brief  Set what Wire (I2C) bus to use (for microcontrollers with more than one)
- * @param  _wire: (TwoWire)
- */
+     * @brief  Set what Wire (I2C) bus to use (for microcontrollers with more than one)
+     * @param  _wire: (TwoWire)
+     */
     void useCustomWire(TwoWire& _wire)
     {
         wire = &_wire;
