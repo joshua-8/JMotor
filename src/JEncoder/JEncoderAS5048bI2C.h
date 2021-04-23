@@ -2,25 +2,16 @@
 #define J_ENCODER_AS5048B_I2C_H
 #include "JEncoder.h"
 #include <Arduino.h>
-#ifdef J_ENCODER_AS5048_I2C_USE_SOFTWIRE
-#include <SoftWire.h> // https://github.com/stevemarple/SoftWire tested v2.04
-#else
 #include <Wire.h>
-#endif
 /**
  * @brief reads a type of absolute encoder https://ams.com/as0548b (uses I2C)
  * 
  * based on work by sosandroid https://github.com/sosandroid/AMS_AS5048B 
- * @note remember to add pull up resistors on I2C lines (~4.7k for 5v, ~2.4k for 3.3v microcontrollers). \n
- * Use #define J_ENCODER_AS5048_I2C_USE_SOFTWIRE to use SoftWire
+ * @note remember to add pull up resistors on I2C lines (~4.7k for 5v, ~2.4k for 3.3v microcontrollers).
  */
 class JEncoderAS5048bI2C : public JEncoder {
 private:
-#ifdef J_ENCODER_AS5048_I2C_USE_SOFTWIRE
-    SoftWire* wire;
-#else
     TwoWire* wire;
-#endif
 
     byte address;
     long turns;
@@ -117,6 +108,7 @@ public:
     JEncoderAS5048bI2C(boolean _reverse = false, float _distPerCountFactor = 1.0, uint8_t _address = 0x40, unsigned long _velEnoughTime = 0, unsigned long _velEnoughTicks = 0)
         : address(_address)
     {
+        wire = &Wire;
         if (_reverse) {
             reverse = -1;
         } else {
@@ -135,34 +127,14 @@ public:
         velEnoughTicks = _velEnoughTicks;
     }
 
-/**
-     * @brief  set up communication with encoder
-     * @note  call Wire.begin() yourself before using this function
-     * @param  _wire: TwoWire or SoftWire (I2C) object to use for communicating
-     */
-#ifdef J_ENCODER_AS5048_I2C_USE_SOFTWIRE
-    void begin(SoftWire* _wire)
-#else
-    void begin(TwoWire* _wire)
-#endif
-    {
-        wire = _wire;
-    }
     /**
-     * @brief  set up communication with encoder
-     * @note   uses default Wire object, not available if J_ENCODER_AS5048_I2C_USE_SOFTWIRE is defined
-     * @param begin: true(default) call wire.begin(), false means call it yourself before using this function
-     */
-
-#ifndef J_ENCODER_AS5048_I2C_USE_SOFTWIRE
-    void begin(boolean _begin = true)
+ * @brief  Set what Wire (I2C) bus to use (for microcontrollers with more than one)
+ * @param  _wire: (TwoWire)
+ */
+    void useCustomWire(TwoWire& _wire)
     {
-        wire = &Wire;
-        if (_begin) {
-            wire->begin();
-        }
+        wire = &_wire;
     }
-#endif
 
     /**
      * @brief  communication is done over I2C and requires constant polling instead of being able to use interrupts
