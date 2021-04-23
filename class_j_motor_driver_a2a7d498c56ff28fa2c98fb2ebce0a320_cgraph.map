@@ -1,4 +1,4 @@
 <map id="JMotorDriver::disable" name="JMotorDriver::disable">
-<area shape="rect" id="node1" title="disables motor" alt="" coords="5,5,148,32"/>
-<area shape="rect" id="node2" href="$class_j_motor_driver.html#ae4232200c9772a03fff51f120e86ebdd" title="use to enable or disable a motor, and sets up pin states" alt="" coords="196,5,355,32"/>
+<area shape="rect" id="node1" title="disable motor" alt="" coords="5,5,148,32"/>
+<area shape="rect" id="node2" href="$class_j_motor_driver.html#a89a8707d21bbef61bf01946a65b2944a" title="use to enable or disable a motor, and sets up pin states" alt="" coords="196,5,355,32"/>
 </map>

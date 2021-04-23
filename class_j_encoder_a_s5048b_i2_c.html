@@ -99,12 +99,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a089d51e73f1bc1ce71de167239e81954"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a089d51e73f1bc1ce71de167239e81954">JEncoderAS5048bI2C</a> (boolean _reverse=false, float _distPerCountFactor=1.0, uint8_t _address=0x40, unsigned long _velEnoughTime=0, unsigned long _velEnoughTicks=0)</td></tr>
 <tr class="memdesc:a089d51e73f1bc1ce71de167239e81954"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets pins and settings for reading the encoder  <a href="class_j_encoder_a_s5048b_i2_c.html#a089d51e73f1bc1ce71de167239e81954">More...</a><br /></td></tr>
 <tr class="separator:a089d51e73f1bc1ce71de167239e81954"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa197f1a1f8347b7434adb1d1a20b943d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#aa197f1a1f8347b7434adb1d1a20b943d">begin</a> (SoftWire *_wire) void begin(TwoWire *_wire)</td></tr>
-<tr class="memdesc:aa197f1a1f8347b7434adb1d1a20b943d"><td class="mdescLeft">&#160;</td><td class="mdescRight">set up communication with encoder  <a href="class_j_encoder_a_s5048b_i2_c.html#aa197f1a1f8347b7434adb1d1a20b943d">More...</a><br /></td></tr>
-<tr class="separator:aa197f1a1f8347b7434adb1d1a20b943d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5505cbc5bc359e4887f30c109b7fbf0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#ab5505cbc5bc359e4887f30c109b7fbf0">begin</a> (boolean _begin=true)</td></tr>
-<tr class="memdesc:ab5505cbc5bc359e4887f30c109b7fbf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">set up communication with encoder  <a href="class_j_encoder_a_s5048b_i2_c.html#ab5505cbc5bc359e4887f30c109b7fbf0">More...</a><br /></td></tr>
-<tr class="separator:ab5505cbc5bc359e4887f30c109b7fbf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad405ab13e47e798ecd8a6a501cda9e6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#ad405ab13e47e798ecd8a6a501cda9e6d">useCustomWire</a> (TwoWire &amp;_wire)</td></tr>
+<tr class="memdesc:ad405ab13e47e798ecd8a6a501cda9e6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set what Wire (I2C) bus to use (for microcontrollers with more than one)  <a href="class_j_encoder_a_s5048b_i2_c.html#ad405ab13e47e798ecd8a6a501cda9e6d">More...</a><br /></td></tr>
+<tr class="separator:ad405ab13e47e798ecd8a6a501cda9e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ba89138c6c48820f16c8c874428180b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b">run</a> ()</td></tr>
 <tr class="memdesc:a3ba89138c6c48820f16c8c874428180b"><td class="mdescLeft">&#160;</td><td class="mdescRight">communication is done over I2C and requires constant polling instead of being able to use interrupts  <a href="class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b">More...</a><br /></td></tr>
 <tr class="separator:a3ba89138c6c48820f16c8c874428180b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,8 +158,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>reads a type of absolute encoder <a href="https://ams.com/as0548b">https://ams.com/as0548b</a> (uses I2C) </p>
-<p>based on work by sosandroid <a href="https://github.com/sosandroid/AMS_AS5048B">https://github.com/sosandroid/AMS_AS5048B</a> </p><dl class="section note"><dt>Note</dt><dd>remember to add pull up resistors on I2C lines (~4.7k for 5v, ~2.4k for 3.3v microcontrollers). <br  />
-Use #define J_ENCODER_AS5048_I2C_USE_SOFTWIRE to use SoftWire </dd></dl>
+<p>based on work by sosandroid <a href="https://github.com/sosandroid/AMS_AS5048B">https://github.com/sosandroid/AMS_AS5048B</a> </p><dl class="section note"><dt>Note</dt><dd>remember to add pull up resistors on I2C lines (~4.7k for 5v, ~2.4k for 3.3v microcontrollers). </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a089d51e73f1bc1ce71de167239e81954"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a089d51e73f1bc1ce71de167239e81954">&#9670;&nbsp;</a></span>JEncoderAS5048bI2C()</h2>
@@ -240,76 +236,6 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab5505cbc5bc359e4887f30c109b7fbf0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5505cbc5bc359e4887f30c109b7fbf0">&#9670;&nbsp;</a></span>begin() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void JEncoderAS5048bI2C::begin </td>
-          <td>(</td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>_begin</em> = <code>true</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>set up communication with encoder </p>
-<dl class="section note"><dt>Note</dt><dd>uses default Wire object, not available if J_ENCODER_AS5048_I2C_USE_SOFTWIRE is defined </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">begin</td><td>true(default) call wire.begin(), false means call it yourself before using this function </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aa197f1a1f8347b7434adb1d1a20b943d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa197f1a1f8347b7434adb1d1a20b943d">&#9670;&nbsp;</a></span>begin() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void JEncoderAS5048bI2C::begin </td>
-          <td>(</td>
-          <td class="paramtype">SoftWire *&#160;</td>
-          <td class="paramname"><em>_wire</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>set up communication with encoder </p>
-<dl class="section note"><dt>Note</dt><dd>call Wire.begin() yourself before using this function </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">_wire</td><td>TwoWire or SoftWire (I2C) object to use for communicating </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a046728560702239c1af7f4087df9e9f9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a046728560702239c1af7f4087df9e9f9">&#9670;&nbsp;</a></span>getCounter()</h2>
 
@@ -787,6 +713,40 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">zeroAngle</td><td>(int) [0, STEPS_PER_TURN) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad405ab13e47e798ecd8a6a501cda9e6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad405ab13e47e798ecd8a6a501cda9e6d">&#9670;&nbsp;</a></span>useCustomWire()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JEncoderAS5048bI2C::useCustomWire </td>
+          <td>(</td>
+          <td class="paramtype">TwoWire &amp;&#160;</td>
+          <td class="paramname"><em>_wire</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set what Wire (I2C) bus to use (for microcontrollers with more than one) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_wire</td><td>(TwoWire) </td></tr>
   </table>
   </dd>
 </dl>
