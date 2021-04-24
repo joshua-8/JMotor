@@ -10,15 +10,21 @@
 class JMotorDriverEsp32Servo : public JMotorDriver {
 private:
     boolean enabled = false;
-    int servoPin;
-    int pwmChannel;
+    byte servoPin;
+    byte pwmChannel;
     float SERVO_TICKS_PER_MICROSECOND = 52.4288;
     int SERVO_FREQ = 50;
     int SERVO_RES = 20;
 
 public:
-    int minServoValue = 544; // can be changed while running
-    int maxServoValue = 2400; // can be changed while running
+    /**
+     * can be changed while running
+     */
+    int minServoValue = 544;
+    /**
+     * can be changed while running
+     */
+    int maxServoValue = 2400;
 
     /**
      * @brief  constructor, sets pins, custom frequency and resolution optional
@@ -27,7 +33,7 @@ public:
      * @param  _freq = 50: Hz (default 50) must be <= int(80E6 / 2^resBits)
      * @param  _resBits = 20: (default 20) tradeoff with max available frequency
      */
-    JMotorDriverEsp32Servo(int _pwmChannel, int _servoPin, int _freq = 50, int _resBits = 20)
+    JMotorDriverEsp32Servo(byte _pwmChannel, byte _servoPin, int _freq = 50, int _resBits = 20)
     {
         enabled = false;
         servoPin = _servoPin;

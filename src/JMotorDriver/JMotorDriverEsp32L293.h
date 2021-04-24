@@ -11,8 +11,8 @@
 class JMotorDriverEsp32L293 : public JMotorDriver {
 private:
     boolean enabled = false;
-    int i1;
-    int i2;
+    byte i1;
+    byte i2;
 
 public:
     JMotorDriverEsp32PWM pwmDriver;
@@ -21,12 +21,12 @@ public:
  * @brief  constructor, sets pins, default PWM
  * @param  _ch: ledc channel (must be unique for each driver)
  * @param  _enablePin: enable(speed) pin on driver
- * @param  _i1: input pin 1
- * @param  _i2: input pin 2
+ * @param  _i1: input pin 1 (direction)
+ * @param  _i2: input pin 2 (direction)
  * @param  _breakOn = true: if true (default), add extra resistance to motor when set to 0 power (by shorting motor terminals)
  * @param  breakWhenDisabled = false: if false (default) turn off break when disabled, if true, keep electrically breaking
  */
-    JMotorDriverEsp32L293(int _ch, int _enablePin, int _i1, int _i2, boolean _breakOn = true, boolean breakWhenDisabled = false)
+    JMotorDriverEsp32L293(byte _ch, byte _enablePin, byte _i1, byte _i2, boolean _breakOn = true, boolean breakWhenDisabled = false)
         : pwmDriver { _ch, _enablePin, breakWhenDisabled }
     {
         enabled = false;
@@ -45,7 +45,7 @@ public:
      * @param  _breakOn = true: if true (default), add extra resistance to motor when set to 0 power (by shorting motor terminals)
      * @param  breakWhenDisabled = false: if false (default) turn off break when disabled, if true, keep electrically breaking
      */
-    JMotorDriverEsp32L293(int _ch, int _enPin, int _i1, int _i2, int freq, int resolution, boolean _breakOn = true, boolean breakWhenDisabled = false)
+    JMotorDriverEsp32L293(byte _ch, byte _enPin, byte _i1, byte _i2, int freq, int resolution, boolean _breakOn = true, boolean breakWhenDisabled = false)
         : pwmDriver { _ch, _enPin, freq, resolution, breakWhenDisabled }
     {
         enabled = false;
