@@ -96,21 +96,20 @@ $(function() {
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
 <div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_j_motor_driver.html#a70e074ae03c7685d2147f70ae4ed9ff6">   66</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="class_j_motor_driver.html#a70e074ae03c7685d2147f70ae4ed9ff6">getMinRange</a>();</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#if defined(ESP32) </span><span class="comment">// ESP32s do pwm differently</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_motor_driver_esp32_l293_8h.html">JMotorDriverEsp32L293.h</a>&quot;</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_motor_driver_esp32_p_w_m_8h.html">JMotorDriverEsp32PWM.h</a>&quot;</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_motor_driver_esp32_p_w_m_dir_8h.html">JMotorDriverEsp32PWMDir.h</a>&quot;</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_motor_driver_esp32_servo_8h.html">JMotorDriverEsp32Servo.h</a>&quot;</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#else </span><span class="comment">// &quot;standard&quot; Arduino commands (analogWrite())</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_motor_driver_avr_l293_8h.html">JMotorDriverAvrL293.h</a>&quot;</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_motor_driver_avr_p_w_m_8h.html">JMotorDriverAvrPWM.h</a>&quot;</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_motor_driver_avr_p_w_m_dir_8h.html">JMotorDriverAvrPWMDir.h</a>&quot;</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_motor_driver_avr_servo_8h.html">JMotorDriverAvrServo.h</a>&quot;</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_motor_driver_dual_8h.html">JMotorDriverDual.h</a>&quot;</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#if defined(ESP32) &amp;&amp; !defined(JMOTOR_DRIVER_FORCE_ANALOGWRITE) </span><span class="comment">// ESP32s do pwm differently</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_motor_driver_esp32_l293_8h.html">JMotorDriverEsp32L293.h</a>&quot;</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_motor_driver_esp32_p_w_m_8h.html">JMotorDriverEsp32PWM.h</a>&quot;</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_motor_driver_esp32_p_w_m_dir_8h.html">JMotorDriverEsp32PWMDir.h</a>&quot;</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_motor_driver_esp32_servo_8h.html">JMotorDriverEsp32Servo.h</a>&quot;</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#else </span><span class="comment">// &quot;standard&quot; Arduino commands (analogWrite())</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_motor_driver_avr_l293_8h.html">JMotorDriverAvrL293.h</a>&quot;</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_motor_driver_avr_p_w_m_8h.html">JMotorDriverAvrPWM.h</a>&quot;</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_motor_driver_avr_p_w_m_dir_8h.html">JMotorDriverAvrPWMDir.h</a>&quot;</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_motor_driver_avr_servo_8h.html">JMotorDriverAvrServo.h</a>&quot;</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_motor_driver_dual_8h.html">JMotorDriverDual.h</a>&quot;</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_j_motor_driver_avr_l293_8h_html"><div class="ttname"><a href="_j_motor_driver_avr_l293_8h.html">JMotorDriverAvrL293.h</a></div></div>
 <div class="ttc" id="a_j_motor_driver_avr_p_w_m_8h_html"><div class="ttname"><a href="_j_motor_driver_avr_p_w_m_8h.html">JMotorDriverAvrPWM.h</a></div></div>
 <div class="ttc" id="a_j_motor_driver_avr_p_w_m_dir_8h_html"><div class="ttname"><a href="_j_motor_driver_avr_p_w_m_dir_8h.html">JMotorDriverAvrPWMDir.h</a></div></div>

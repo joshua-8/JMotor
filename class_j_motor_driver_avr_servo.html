@@ -95,9 +95,9 @@ Collaboration diagram for JMotorDriverAvrServo:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0de86a3ed003fba2e1948b1f2944416c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_servo.html#a0de86a3ed003fba2e1948b1f2944416c">JMotorDriverAvrServo</a> (int _servoPin)</td></tr>
-<tr class="memdesc:a0de86a3ed003fba2e1948b1f2944416c"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins  <a href="class_j_motor_driver_avr_servo.html#a0de86a3ed003fba2e1948b1f2944416c">More...</a><br /></td></tr>
-<tr class="separator:a0de86a3ed003fba2e1948b1f2944416c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ce60ddb3b67e42d044d45f7a2b5ece3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_servo.html#a5ce60ddb3b67e42d044d45f7a2b5ece3">JMotorDriverAvrServo</a> (byte _servoPin)</td></tr>
+<tr class="memdesc:a5ce60ddb3b67e42d044d45f7a2b5ece3"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins  <a href="class_j_motor_driver_avr_servo.html#a5ce60ddb3b67e42d044d45f7a2b5ece3">More...</a><br /></td></tr>
+<tr class="separator:a5ce60ddb3b67e42d044d45f7a2b5ece3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1048893e5e7551e676aa6d8590839121"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_servo.html#a1048893e5e7551e676aa6d8590839121">set</a> (float _val)</td></tr>
 <tr class="memdesc:a1048893e5e7551e676aa6d8590839121"><td class="mdescLeft">&#160;</td><td class="mdescRight">set motor power  <a href="class_j_motor_driver_avr_servo.html#a1048893e5e7551e676aa6d8590839121">More...</a><br /></td></tr>
 <tr class="separator:a1048893e5e7551e676aa6d8590839121"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,10 +130,10 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>wraps standard servo library. For servos and motor controllers that use servo signals (ESCs) </p>
-<dl class="section note"><dt>Note</dt><dd>platform: AVR (standard Arduinos) </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>compatible with all boards that support analogWrite() </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a0de86a3ed003fba2e1948b1f2944416c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0de86a3ed003fba2e1948b1f2944416c">&#9670;&nbsp;</a></span>JMotorDriverAvrServo()</h2>
+<a id="a5ce60ddb3b67e42d044d45f7a2b5ece3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ce60ddb3b67e42d044d45f7a2b5ece3">&#9670;&nbsp;</a></span>JMotorDriverAvrServo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -144,7 +144,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">JMotorDriverAvrServo::JMotorDriverAvrServo </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">byte&#160;</td>
           <td class="paramname"><em>_servoPin</em></td><td>)</td>
           <td></td>
         </tr>
@@ -372,6 +372,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>can be changed while running </p>
 
 </div>
 </div>
@@ -386,6 +387,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>can be changed while running </p>
 
 </div>
 </div>

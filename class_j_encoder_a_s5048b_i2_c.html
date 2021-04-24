@@ -105,9 +105,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3ba89138c6c48820f16c8c874428180b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b">run</a> ()</td></tr>
 <tr class="memdesc:a3ba89138c6c48820f16c8c874428180b"><td class="mdescLeft">&#160;</td><td class="mdescRight">communication is done over I2C and requires constant polling instead of being able to use interrupts  <a href="class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b">More...</a><br /></td></tr>
 <tr class="separator:a3ba89138c6c48820f16c8c874428180b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a866839c8baf76e92555f003694c3dba8"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a866839c8baf76e92555f003694c3dba8">setAddressRegister</a> (uint8_t val)</td></tr>
-<tr class="memdesc:a866839c8baf76e92555f003694c3dba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">change the i2c address of the encoder (see the datasheet <a href="https://ams.com/as0548b">https://ams.com/as0548b</a>) from addressRegW() in <a href="https://github.com/sosandroid/AMS_AS5048B/blob/master/ams_as5048b.cpp">https://github.com/sosandroid/AMS_AS5048B/blob/master/ams_as5048b.cpp</a>  <a href="class_j_encoder_a_s5048b_i2_c.html#a866839c8baf76e92555f003694c3dba8">More...</a><br /></td></tr>
-<tr class="separator:a866839c8baf76e92555f003694c3dba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a225aa9f6177c40b5da6c32e44ae60eb7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a225aa9f6177c40b5da6c32e44ae60eb7">setEncoderZero</a> ()</td></tr>
 <tr class="memdesc:a225aa9f6177c40b5da6c32e44ae60eb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current angle of the sensor is read and set to zero.  <a href="class_j_encoder_a_s5048b_i2_c.html#a225aa9f6177c40b5da6c32e44ae60eb7">More...</a><br /></td></tr>
 <tr class="separator:a225aa9f6177c40b5da6c32e44ae60eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -576,47 +573,6 @@ Here is the call graph for this function:</div>
 <dl class="section note"><dt>Note</dt><dd>call this function as frequently as possible or this code can't keep track of how many times the encoder has turned </dd></dl>
 
 <p>Reimplemented from <a class="el" href="class_j_encoder.html#a565ca78c9735b6306c23a0820fc7b482">JEncoder</a>.</p>
-
-</div>
-</div>
-<a id="a866839c8baf76e92555f003694c3dba8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a866839c8baf76e92555f003694c3dba8">&#9670;&nbsp;</a></span>setAddressRegister()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t JEncoderAS5048bI2C::setAddressRegister </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>val</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>change the i2c address of the encoder (see the datasheet <a href="https://ams.com/as0548b">https://ams.com/as0548b</a>) from addressRegW() in <a href="https://github.com/sosandroid/AMS_AS5048B/blob/master/ams_as5048b.cpp">https://github.com/sosandroid/AMS_AS5048B/blob/master/ams_as5048b.cpp</a> </p>
-<dl class="section note"><dt>Note</dt><dd>you can also get 4 different addresses by setting the A1 and A2 pins </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">val</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">new</td><td>address </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

@@ -113,19 +113,18 @@ $(function() {
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
 <div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_j_encoder.html#a565ca78c9735b6306c23a0820fc7b482">   86</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_j_encoder.html#a565ca78c9735b6306c23a0820fc7b482">run</a>();</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#if defined(ESP32) || defined(CORE_TEENSY)</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_p_w_m_absolute_attach_interrupt_8h.html">JEncoderPWMAbsoluteAttachInterrupt.h</a>&quot;</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_quadrature_attach_interrupt_8h.html">JEncoderQuadratureAttachInterrupt.h</a>&quot;</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_single_attach_interrupt_8h.html">JEncoderSingleAttachInterrupt.h</a>&quot;</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_p_w_m_absolute_pin_change_8h.html">JEncoderPWMAbsolutePinChange.h</a>&quot;</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_quadrature_pin_change_8h.html">JEncoderQuadraturePinChange.h</a>&quot;</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_single_pin_change_8h.html">JEncoderSinglePinChange.h</a>&quot;</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_a_s5048b_i2_c_8h.html">JEncoderAS5048bI2C.h</a>&quot;</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#if (defined(ESP32) || defined(CORE_TEENSY) || defined(SAMD_SERIES) || defined(JMOTOR_ENCODER_FORCE_ATTACHINTERRUPT)) &amp;&amp; !defined(JMOTOR_ENCODER_FORCE_PINCHANGE)</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_p_w_m_absolute_attach_interrupt_8h.html">JEncoderPWMAbsoluteAttachInterrupt.h</a>&quot;</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_quadrature_attach_interrupt_8h.html">JEncoderQuadratureAttachInterrupt.h</a>&quot;</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_single_attach_interrupt_8h.html">JEncoderSingleAttachInterrupt.h</a>&quot;</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_p_w_m_absolute_pin_change_8h.html">JEncoderPWMAbsolutePinChange.h</a>&quot;</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_quadrature_pin_change_8h.html">JEncoderQuadraturePinChange.h</a>&quot;</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_single_pin_change_8h.html">JEncoderSinglePinChange.h</a>&quot;</span></div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_encoder_a_s5048b_i2_c_8h.html">JEncoderAS5048bI2C.h</a>&quot;</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_j_encoder_a_s5048b_i2_c_8h_html"><div class="ttname"><a href="_j_encoder_a_s5048b_i2_c_8h.html">JEncoderAS5048bI2C.h</a></div></div>
 <div class="ttc" id="a_j_encoder_p_w_m_absolute_attach_interrupt_8h_html"><div class="ttname"><a href="_j_encoder_p_w_m_absolute_attach_interrupt_8h.html">JEncoderPWMAbsoluteAttachInterrupt.h</a></div></div>
 <div class="ttc" id="a_j_encoder_p_w_m_absolute_pin_change_8h_html"><div class="ttname"><a href="_j_encoder_p_w_m_absolute_pin_change_8h.html">JEncoderPWMAbsolutePinChange.h</a></div></div>
