@@ -65,8 +65,10 @@ public:
      */
     virtual float getMinRange();
 };
-
-#if defined(ESP32) // ESP32s do pwm differently
+/**
+ * @brief  use #define JMOTOR_DRIVER_FORCE_ANALOGWRITE to override automatic board detection and make the standard analogWrite versions load (use if you're using an esp32 and this library https://github.com/ERROPiX/ESP32_AnalogWrite)
+ */
+#if defined(ESP32) && !defined(JMOTOR_DRIVER_FORCE_ANALOGWRITE) // ESP32s do pwm differently
 #include "JMotorDriverEsp32L293.h"
 #include "JMotorDriverEsp32PWM.h"
 #include "JMotorDriverEsp32PWMDir.h"

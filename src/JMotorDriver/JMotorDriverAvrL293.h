@@ -5,13 +5,13 @@
 #include <Arduino.h>
 /**
  * @brief  L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf
- * @note   platform: AVR (standard Arduinos)
+ * @note  compatible with all boards that support analogWrite()
  */
 class JMotorDriverAvrL293 : public JMotorDriver {
 private:
     boolean enabled = false;
-    int i1;
-    int i2;
+    byte i1;
+    byte i2;
 
 public:
     JMotorDriverAvrPWM pwmDriver;
@@ -24,7 +24,7 @@ public:
      * @param  _breakOn = true: if true (default), add extra resistance to motor when set to 0 power (by shorting motor terminals)
      * @param  breakWhenDisabled = false: if false (default) turn off break when disabled, if true, keep electrically breaking
      */
-    JMotorDriverAvrL293(int _en, int _i1, int _i2, boolean _breakOn = true, boolean breakWhenDisabled = false)
+    JMotorDriverAvrL293(byte _en, byte _i1, byte _i2, boolean _breakOn = true, boolean breakWhenDisabled = false)
         : pwmDriver { _en, breakWhenDisabled }
     {
         enabled = false;

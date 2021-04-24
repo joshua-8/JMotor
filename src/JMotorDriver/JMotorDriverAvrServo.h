@@ -5,22 +5,28 @@
 #include <Servo.h>
 /**
  * @brief  wraps standard servo library. For servos and motor controllers that use servo signals (ESCs)
- * @note   platform: AVR (standard Arduinos)
+ * @note   compatible with all boards that support analogWrite()
  */
 class JMotorDriverAvrServo : public JMotorDriver {
 private:
     boolean enabled = false;
-    int servoPin;
+    byte servoPin;
     Servo motorServo;
 
 public:
-    int minServoValue = 544; // can be changed while running
-    int maxServoValue = 2400; // can be changed while running
+    /**
+     * can be changed while running
+     */
+    int minServoValue = 544;
+    /**
+     * can be changed while running
+     */
+    int maxServoValue = 2400;
     /**
      * @brief  constructor, sets pins
      * @param  _servoPin: pin to attach servo to
      */
-    JMotorDriverAvrServo(int _servoPin)
+    JMotorDriverAvrServo(byte _servoPin)
     {
 
         enabled = false;

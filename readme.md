@@ -4,13 +4,16 @@
 
 reference docs (made with Doxygen): https://joshua-8.github.io/JMotor/md_readme.html
 
-
 list of all classes: https://joshua-8.github.io/JMotor/hierarchy.html
 
+*add description of library here* (copy to/from library.properties description)
 
 This library defines common interfaces for reading encoders and controlling motors allowing for easy open or closed loop motor control.
 
 Supports reading the following kinds of encoders: quadrature, single pin, absolute with PWM output, AS5048b with I2C. Supports controlling the following kinds of motor controllers: single PWM pin, PWM and direction pins, servo signal, L293 driver. 
 
+supports the following boards:   ESP32, Arduino AVR (tested on nano), Teensy (tested on LC), SAMD M0 boards (tested on feather m0)
 
-This library uses lots of floating point math. This makes it easy to use, but if you need speed optimized code this library isn't for you.
+Why do all the classes start with J? It's to avoid name conflicts with other libraries (and J is my first initial).
+
+This library uses lots of floating point math, and in general isn't optimized for speed or small size. Ease of use and ease of development is prioritized.

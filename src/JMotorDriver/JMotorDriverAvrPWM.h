@@ -5,12 +5,12 @@
 
 /**
  * @brief  wrapper for analogWrite()
- * @note   platform: AVR (standard Arduinos)
+ * @note   compatible with all boards that support analogWrite()
  */
 class JMotorDriverAvrPWM : public JMotorDriver {
 private:
     boolean enabled = false;
-    int pin;
+    byte pin;
 
 public:
     int PWM_RANGE = 255;
@@ -21,7 +21,7 @@ public:
      * @param  _pin: what pin to use
      * @param  _disableState = LOW: when disabled, set pin LOW(default) or HIGH
      */
-    JMotorDriverAvrPWM(int _pin, boolean _disableState = LOW)
+    JMotorDriverAvrPWM(byte _pin, boolean _disableState = LOW)
     {
         enabled = false;
         pin = _pin;

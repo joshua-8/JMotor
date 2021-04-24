@@ -10,7 +10,7 @@
 class JMotorDriverEsp32PWMDir : public JMotorDriver {
 private:
     boolean enabled = false;
-    int dir;
+    byte dir;
 
 public:
     JMotorDriverEsp32PWM pwmDriver;
@@ -22,7 +22,7 @@ public:
      * @param  _dirPin: pin to output direction signal on
      * @param  _rev = false: if false(default), direction pin set HIGH for positive speed, LOW for negative speed
      */
-    JMotorDriverEsp32PWMDir(int _ch, int _enablePin, int _dirPin, boolean _rev = false)
+    JMotorDriverEsp32PWMDir(byte _ch, byte _enablePin, byte _dirPin, boolean _rev = false)
         : pwmDriver { _ch, _enablePin }
     {
         enabled = false;
@@ -37,7 +37,7 @@ public:
      * @param  resolution: bits of resolution, tradeoff with frequency, default 12
      * @param  _rev = false: if false(default), direction pin set HIGH for positive speed, LOW for negative speed
      */
-    JMotorDriverEsp32PWMDir(int _ch, int _enPin, int _dirPin, int freq, int resolution, boolean _rev = false)
+    JMotorDriverEsp32PWMDir(byte _ch, byte _enPin, byte _dirPin, int freq, int resolution, boolean _rev = false)
         : pwmDriver { _ch, _enPin, freq, resolution }
     {
         enabled = false;

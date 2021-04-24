@@ -12,8 +12,8 @@ private:
     int PWM_FREQ = 2000; // <= int(80E6 / 2^PWM_RES), 2kHz recommended for motor PWM
     int PWM_RANGE = 4095; // 2^PWM_RES -1
     boolean enabled = false;
-    int ch;
-    int pin;
+    byte ch;
+    byte pin;
 
 public:
     boolean disableState = LOW;
@@ -23,7 +23,7 @@ public:
     * @param  _pin: pin to output signal on
     * @param  _disableState = LOW: when disabled, set pin LOW(default) or HIGH
     */
-    JMotorDriverEsp32PWM(int _ch, int _pin, boolean _disableState = LOW)
+    JMotorDriverEsp32PWM(byte _ch, byte _pin, boolean _disableState = LOW)
     {
         enabled = false;
         ch = _ch;
@@ -38,7 +38,7 @@ public:
      * @param  resolution: bits of resolution, tradeoff with frequency, default 12
      * @param  _disableState = LOw: when disabled, set pin LOW(default) or HIGH
      */
-    JMotorDriverEsp32PWM(int _ch, int _pin, int freq, int resolution, boolean _disableState = LOW)
+    JMotorDriverEsp32PWM(byte _ch, byte _pin, int freq, int resolution, boolean _disableState = LOW)
     {
         enabled = false;
         ch = _ch;
