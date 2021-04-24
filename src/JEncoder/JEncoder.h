@@ -85,8 +85,11 @@ public:
      */
     virtual void run();
 };
-
-#if defined(ESP32) || defined(CORE_TEENSY)
+/**
+ * @brief  use #define JMOTOR_ENCODER_FORCE_ATTACHINTERRUPT to override automatic board detection and make the attachInterrupt versions load (use if your board supports attachInterrupt and isn't an Esp32, Teensy, or SAMD_SERIES) \n
+ *  use #define JMOTOR_ENCODER_FORCE_PINCHANGE to override automatic board detection and make the EnableInterrupt library (pin change interrupts) versions load
+ */
+#if (defined(ESP32) || defined(CORE_TEENSY) || defined(SAMD_SERIES) || defined(JMOTOR_ENCODER_FORCE_ATTACHINTERRUPT)) && !defined(JMOTOR_ENCODER_FORCE_PINCHANGE)
 #include "JEncoderPWMAbsoluteAttachInterrupt.h"
 #include "JEncoderQuadratureAttachInterrupt.h"
 #include "JEncoderSingleAttachInterrupt.h"

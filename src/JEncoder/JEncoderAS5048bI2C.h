@@ -29,7 +29,6 @@ private:
 
     const byte AS5048B_ZEROMSB_REG = 0x16;
     const byte AS5048B_ZEROLSB_REG = 0x17;
-    const byte AS5048B_ADDR_REG = 0x15;
     const byte AS5048B_ANGLMSB_REG = 0xFE;
     const byte AS5048B_GAIN_REG = 0xFA;
 
@@ -163,22 +162,6 @@ public:
         }
 
         lastAngle = angle;
-    }
-
-    /**
-     * @brief  change the i2c address of the encoder (see the datasheet https://ams.com/as0548b)
-     *      from addressRegW() in https://github.com/sosandroid/AMS_AS5048B/blob/master/ams_as5048b.cpp
-     * @note you can also get 4 different addresses by setting the A1 and A2 pins
-     * @param  val: 
-     * @retval new address
-     */
-    uint8_t setAddressRegister(uint8_t val)
-    {
-        writeRegister8(AS5048B_ADDR_REG, val);
-        // update our chip address with our 5 programmable bits
-        // the MSB is internally inverted, so we flip the leftmost bit
-        address = ((val << 2) | (address & 0b11)) ^ (1 << 6);
-        return address;
     }
 
     /**

@@ -5,7 +5,7 @@
 #include <Arduino.h>
 /**
  * @brief  L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf
- * @note   platform: AVR (standard Arduinos)
+ * @note  compatible with all boards that support analogWrite()
  */
 class JMotorDriverAvrL293 : public JMotorDriver {
 private:

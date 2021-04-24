@@ -5,7 +5,7 @@
 
 /**
  * @brief  wrapper for analogWrite()
- * @note   platform: AVR (standard Arduinos)
+ * @note   compatible with all boards that support analogWrite()
  */
 class JMotorDriverAvrPWM : public JMotorDriver {
 private:
