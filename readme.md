@@ -1,6 +1,5 @@
 # JMotor Library
 
-![https://github.com/joshua-8/JMotor/actions](https://img.shields.io/github/workflow/status/joshua-8/JMotor/actions)
 [![arduino-library-badge](https://www.ardu-badge.com/badge/JMotor.svg?)](https://www.ardu-badge.com/JMotor)
 
 ## work in progress! Bug reports/fixes welcomed
