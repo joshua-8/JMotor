@@ -1,13 +1,13 @@
 #ifndef J_MOTOR_DRIVER_AVR_SERVO_H
 #define J_MOTOR_DRIVER_AVR_SERVO_H
-#include "JMotorDriver.h"
+#include "JMotorDriverServo.h"
 #include <Arduino.h>
 #include <Servo.h>
 /**
  * @brief  wraps standard servo library. For servos and motor controllers that use servo signals (ESCs)
  * @note   compatible with all boards that support analogWrite()
  */
-class JMotorDriverAvrServo : public JMotorDriver {
+class JMotorDriverAvrServo : public JMotorDriverServo {
 private:
     boolean enabled = false;
     byte servoPin;

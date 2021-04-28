@@ -13,6 +13,9 @@ private:
     byte pin;
 
 public:
+    /**
+     * @brief  change PWM_RANGE to match the range of analogWrite (change after using analogWriteResolution)
+     */
     int PWM_RANGE = 255;
     boolean disableState = LOW;
     /**
@@ -41,7 +44,6 @@ public:
             if (!enabled) {
                 //actually enable
                 enabled = true;
-                pinMode(pin, OUTPUT);
                 analogWrite(pin, !disableState ? 0 : PWM_RANGE);
                 return true;
             }
@@ -49,8 +51,7 @@ public:
             if (enabled) {
                 //actually disable
                 enabled = false;
-                pinMode(pin, OUTPUT);
-                digitalWrite(pin, disableState);
+                analogWrite(pin, !disableState ? 0 : PWM_RANGE);
                 return true;
             }
         }
