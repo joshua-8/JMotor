@@ -9,4 +9,5 @@
 #define J_MOTOR_LIB_H
 #include "JEncoder/JEncoder.h"
 #include "JMotorDriver/JMotorDriver.h"
+#include "JMotorFilter/JMotorFilter.h"
 #endif

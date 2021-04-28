@@ -1,13 +1,13 @@
 #ifndef J_MOTOR_DRIVER_ESP32_SERVO_H
 #define J_MOTOR_DRIVER_ESP32_SERVO_H
-#include "JMotorDriver.h"
+#include "JMotorDriverServo.h"
 #include <Arduino.h>
 
 /**
  * @brief For servos and motor controllers that use servo signals (ESCs)
  * @note  platform: ESP32
  */
-class JMotorDriverEsp32Servo : public JMotorDriver {
+class JMotorDriverEsp32Servo : public JMotorDriverServo {
 private:
     boolean enabled = false;
     byte servoPin;

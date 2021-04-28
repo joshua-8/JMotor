@@ -26,26 +26,6 @@ public:
     virtual boolean setEnable(boolean _enable);
 
     /**
-     * @brief  enable motor
-     * @note equivalent to setEnable(true)
-     * @retval (boolean) true if state changed, false if state already set
-     */
-    boolean enable()
-    {
-        return setEnable(true);
-    }
-
-    /**
-     * @brief  disable motor
-     * @note equivalent to setEnable(false)
-     * @retval (boolean) true if state changed, false if state already set
-     */
-    boolean disable()
-    {
-        return setEnable(false);
-    }
-
-    /**
      * @brief  get the enable state of the driver
      * @retval (boolean) true if enabled, false if disabled
      */
@@ -64,16 +44,33 @@ public:
      * @retval (float) minRange
      */
     virtual float getMinRange();
+
+    /**
+     * @brief  enable motor
+     * @note equivalent to setEnable(true)
+     * @retval (boolean) true if state changed, false if state already set
+     */
+    boolean enable()
+    {
+        return setEnable(true);
+    }
+
+    /**
+     * @brief  disable motor
+     * @note equivalent to setEnable(false)
+     * @retval (boolean) true if state changed, false if state already set
+     */
+    boolean disable()
+    {
+        return setEnable(false);
+    }
 };
-/**
- * @brief  use #define JMOTOR_DRIVER_FORCE_ANALOGWRITE to override automatic board detection and make the standard analogWrite versions load (use if you're using an esp32 and this library https://github.com/ERROPiX/ESP32_AnalogWrite)
- */
-#if defined(ESP32) && !defined(JMOTOR_DRIVER_FORCE_ANALOGWRITE) // ESP32s do pwm differently
+#ifdef ESP32 // ESP32s do pwm differently
 #include "JMotorDriverEsp32L293.h"
 #include "JMotorDriverEsp32PWM.h"
 #include "JMotorDriverEsp32PWMDir.h"
 #include "JMotorDriverEsp32Servo.h"
-#else // "standard" Arduino commands (analogWrite())
+#else
 #include "JMotorDriverAvrL293.h"
 #include "JMotorDriverAvrPWM.h"
 #include "JMotorDriverAvrPWMDir.h"
