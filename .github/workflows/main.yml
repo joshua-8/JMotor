@@ -36,4 +36,8 @@ jobs:
       - uses: arduino/arduino-lint-action@v1
         with:
           compliance: strict
-          project-type: library
+          project-type: all
+          library-manager: submit
+          recursive: true
+          
+
