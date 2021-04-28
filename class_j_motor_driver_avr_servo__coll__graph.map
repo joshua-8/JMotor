@@ -1,4 +1,5 @@
 <map id="JMotorDriverAvrServo" name="JMotorDriverAvrServo">
-<area shape="rect" id="node1" title="wraps standard servo library. For servos and motor controllers that use servo signals (ESCs)" alt="" coords="5,80,156,107"/>
-<area shape="rect" id="node2" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="33,5,129,32"/>
+<area shape="rect" id="node1" title="wraps standard servo library. For servos and motor controllers that use servo signals (ESCs)" alt="" coords="5,155,156,181"/>
+<area shape="rect" id="node2" href="$class_j_motor_driver_servo.html" title="empty class that can be used to specify a driver that controls specifically a servo" alt="" coords="15,80,146,107"/>
+<area shape="rect" id="node3" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="33,5,129,32"/>
 </map>

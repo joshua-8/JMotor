@@ -78,16 +78,17 @@ Inheritance diagram for JMotorDriver:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_motor_driver__inherit__graph.png" border="0" usemap="#a_j_motor_driver_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_j_motor_driver_inherit__map" id="a_j_motor_driver_inherit__map">
-<area shape="rect" title="defines common interface for all types of JMotorDrivers" alt="" coords="5,208,101,235"/>
+<area shape="rect" title="defines common interface for all types of JMotorDrivers" alt="" coords="5,183,101,209"/>
 <area shape="rect" href="class_j_motor_driver_avr_l293.html" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf." alt="" coords="167,5,312,32"/>
 <area shape="rect" href="class_j_motor_driver_avr_p_w_m.html" title="wrapper for analogWrite()" alt="" coords="165,56,313,83"/>
 <area shape="rect" href="class_j_motor_driver_avr_p_w_m_dir.html" title="for motor controllers with one direction input and one speed input pin" alt="" coords="157,107,321,133"/>
-<area shape="rect" href="class_j_motor_driver_avr_servo.html" title="wraps standard servo library. For servos and motor controllers that use servo signals (ESCs)" alt="" coords="164,157,315,184"/>
-<area shape="rect" href="class_j_motor_driver_dual.html" title="control two JMotorDrivers (of any type) as if they are one driver" alt="" coords="178,208,301,235"/>
-<area shape="rect" href="class_j_motor_driver_esp32_l293.html" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf." alt="" coords="159,259,320,285"/>
-<area shape="rect" href="class_j_motor_driver_esp32_p_w_m.html" title="uses ledc to output PWM approximation of an analog output" alt="" coords="157,309,321,336"/>
-<area shape="rect" href="class_j_motor_driver_esp32_p_w_m_dir.html" title="for motor controllers with one direction input and one speed input pin" alt="" coords="149,360,329,387"/>
-<area shape="rect" href="class_j_motor_driver_esp32_servo.html" title="For servos and motor controllers that use servo signals (ESCs)" alt="" coords="156,411,323,437"/>
+<area shape="rect" href="class_j_motor_driver_dual.html" title="control two JMotorDrivers (of any type) as if they are one driver" alt="" coords="178,157,301,184"/>
+<area shape="rect" href="class_j_motor_driver_esp32_l293.html" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf." alt="" coords="159,208,320,235"/>
+<area shape="rect" href="class_j_motor_driver_esp32_p_w_m.html" title="uses ledc to output PWM approximation of an analog output" alt="" coords="157,259,321,285"/>
+<area shape="rect" href="class_j_motor_driver_esp32_p_w_m_dir.html" title="for motor controllers with one direction input and one speed input pin" alt="" coords="149,309,329,336"/>
+<area shape="rect" href="class_j_motor_driver_servo.html" title="empty class that can be used to specify a driver that controls specifically a servo" alt="" coords="174,360,305,387"/>
+<area shape="rect" href="class_j_motor_driver_avr_servo.html" title="wraps standard servo library. For servos and motor controllers that use servo signals (ESCs)" alt="" coords="385,335,536,361"/>
+<area shape="rect" href="class_j_motor_driver_esp32_servo.html" title="For servos and motor controllers that use servo signals (ESCs)" alt="" coords="377,385,544,412"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -99,12 +100,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a89a8707d21bbef61bf01946a65b2944a"><td class="memItemLeft" align="right" valign="top">virtual boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#a89a8707d21bbef61bf01946a65b2944a">setEnable</a> (boolean _enable)</td></tr>
 <tr class="memdesc:a89a8707d21bbef61bf01946a65b2944a"><td class="mdescLeft">&#160;</td><td class="mdescRight">use to enable or disable a motor, and sets up pin states  <a href="class_j_motor_driver.html#a89a8707d21bbef61bf01946a65b2944a">More...</a><br /></td></tr>
 <tr class="separator:a89a8707d21bbef61bf01946a65b2944a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff1d2bee4a868412b5af7a07f43ed3fe"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#aff1d2bee4a868412b5af7a07f43ed3fe">enable</a> ()</td></tr>
-<tr class="memdesc:aff1d2bee4a868412b5af7a07f43ed3fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable motor  <a href="class_j_motor_driver.html#aff1d2bee4a868412b5af7a07f43ed3fe">More...</a><br /></td></tr>
-<tr class="separator:aff1d2bee4a868412b5af7a07f43ed3fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a7d498c56ff28fa2c98fb2ebce0a320"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#a2a7d498c56ff28fa2c98fb2ebce0a320">disable</a> ()</td></tr>
-<tr class="memdesc:a2a7d498c56ff28fa2c98fb2ebce0a320"><td class="mdescLeft">&#160;</td><td class="mdescRight">disable motor  <a href="class_j_motor_driver.html#a2a7d498c56ff28fa2c98fb2ebce0a320">More...</a><br /></td></tr>
-<tr class="separator:a2a7d498c56ff28fa2c98fb2ebce0a320"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af77be52c28d7d0d3bbb03a771d17e427"><td class="memItemLeft" align="right" valign="top">virtual boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#af77be52c28d7d0d3bbb03a771d17e427">getEnable</a> ()</td></tr>
 <tr class="memdesc:af77be52c28d7d0d3bbb03a771d17e427"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the enable state of the driver  <a href="class_j_motor_driver.html#af77be52c28d7d0d3bbb03a771d17e427">More...</a><br /></td></tr>
 <tr class="separator:af77be52c28d7d0d3bbb03a771d17e427"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -114,6 +109,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a70e074ae03c7685d2147f70ae4ed9ff6"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#a70e074ae03c7685d2147f70ae4ed9ff6">getMinRange</a> ()</td></tr>
 <tr class="memdesc:a70e074ae03c7685d2147f70ae4ed9ff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">low end of the range  <a href="class_j_motor_driver.html#a70e074ae03c7685d2147f70ae4ed9ff6">More...</a><br /></td></tr>
 <tr class="separator:a70e074ae03c7685d2147f70ae4ed9ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff1d2bee4a868412b5af7a07f43ed3fe"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#aff1d2bee4a868412b5af7a07f43ed3fe">enable</a> ()</td></tr>
+<tr class="memdesc:aff1d2bee4a868412b5af7a07f43ed3fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable motor  <a href="class_j_motor_driver.html#aff1d2bee4a868412b5af7a07f43ed3fe">More...</a><br /></td></tr>
+<tr class="separator:aff1d2bee4a868412b5af7a07f43ed3fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a7d498c56ff28fa2c98fb2ebce0a320"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#a2a7d498c56ff28fa2c98fb2ebce0a320">disable</a> ()</td></tr>
+<tr class="memdesc:a2a7d498c56ff28fa2c98fb2ebce0a320"><td class="mdescLeft">&#160;</td><td class="mdescRight">disable motor  <a href="class_j_motor_driver.html#a2a7d498c56ff28fa2c98fb2ebce0a320">More...</a><br /></td></tr>
+<tr class="separator:a2a7d498c56ff28fa2c98fb2ebce0a320"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>defines common interface for all types of JMotorDrivers </p>
