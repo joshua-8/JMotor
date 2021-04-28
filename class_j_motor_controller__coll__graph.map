@@ -1,0 +1,4 @@
+<map id="JMotorController" name="JMotorController">
+<area shape="rect" id="node1" title=" " alt="" coords="5,95,123,121"/>
+<area shape="rect" id="node2" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="16,5,112,32"/>
+</map>
