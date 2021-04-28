@@ -1,4 +1,4 @@
-name: doxygen-reference-generator-github-actions
+name: actions
 
 on:
   push:
