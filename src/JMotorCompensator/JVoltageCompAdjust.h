@@ -7,7 +7,7 @@ private:
     float& supplyVoltage;
 
 public:
-/**
+    /**
  * @brief  constructor
  * @param  _supplyVoltage: (float&) reference to a variable that contains the current voltage supplied to the motor controller
  * @param  _driverRange: (float) default 1.0

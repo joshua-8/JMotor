@@ -13,7 +13,7 @@ public:
      * @param  val: (float) speed
      * @retval (float) value to set driver
      */
-    float compensate(float val);
+    virtual float compensate(float val);
 };
 #include "JMotorCompDirect.h"
 #include "JMotorCompStandard.h"
