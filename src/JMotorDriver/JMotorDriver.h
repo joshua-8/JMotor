@@ -65,15 +65,18 @@ public:
         return setEnable(false);
     }
 };
-#ifdef ESP32 // ESP32s do pwm differently
+#if defined(ESP32)
 #include "JMotorDriverEsp32L293.h"
 #include "JMotorDriverEsp32PWM.h"
 #include "JMotorDriverEsp32PWMDir.h"
 #include "JMotorDriverEsp32Servo.h"
-#else
+#endif
+#if !defined(ESP32) || defined(J_MOTOR_DRIVER_FORCE_ANALOGWRITE) || defined(_ESP32_ESP32S2_ANALOG_WRITE_)
 #include "JMotorDriverAvrL293.h"
 #include "JMotorDriverAvrPWM.h"
 #include "JMotorDriverAvrPWMDir.h"
+#endif
+#if !defined(ESP32)
 #include "JMotorDriverAvrServo.h"
 #endif
 #include "JMotorDriverDual.h"
