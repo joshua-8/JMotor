@@ -29,7 +29,7 @@
     } //untested
 
 /**
- * @brief  reads a PWM signal from an absolute encoder using attachInterrupt()
+ * @brief  reads a PWM signal from an absolute encoder
  *
  * tested with https://ams.com/as0548b 
  * 
@@ -82,6 +82,7 @@ private:
     unsigned long dataEndMicros;
     unsigned long earlyDataStartMicros;
     unsigned long oldDataEndMicros;
+    boolean justStarted;
 
     pwmSettings ps;
 
@@ -92,7 +93,7 @@ public:
      * @param  _ps: (struct pwmSettings) parameters of encoder signal
      * @param  _reverse: (boolean) reverse positive direction, default=false 
      * @param  _distPerCountFactor: (float) for the purposes of setting this factor a "count" is considered a full revolution of the absolute encoder
-     * @param  _velEnoughTime: (default=0, no limit) shortest interval between velocity calculations, if run() is called faster the calculation will wait to run
+     * @param  _velEnoughTime: (default=0, no limit) shortest interval (in MICROseconds) between velocity calculations, if run() is called faster the calculation will wait to run
      * @param  _velEnoughTicks: (default=0, no limit) if the encoder turns more than this number of steps velocity calculations will be done even if velEnoughTime hasn't been reached
      */
     JEncoderPWMAbsolute(byte _encoderPin, pwmSettings _ps, boolean _reverse = false, float _distPerCountFactor = 1.0, unsigned long _velEnoughTime = 0, unsigned long _velEnoughTicks = 0)
@@ -122,6 +123,7 @@ public:
         dataEndMicros = 0;
         earlyDataStartMicros = 0;
         oldDataEndMicros = 0;
+        justStarted = true;
     }
 
     /**
@@ -209,12 +211,14 @@ public:
     void run()
     {
         if (newAngle) {
+            noInterrupts();
             long interval = dataEndMicros - dataStartMicros;
             long cycle = dataEndMicros - oldDataEndMicros;
+            interrupts();
             if (interval > 0 && cycle > 0) { //check that interrupts didn't change one number but not the other
                 angle = constrain(interval * ps.PWM_STEPS / cycle - ps.MIN_STEPS, 0, ps.RESOLUTION);
                 newAngle = false;
-                if (abs(angle - lastAngle) > ps.RESOLUTION / 2) { // angle jump over half of circle is assummed to be the shorter crossing of 0
+                if (abs((int16_t)angle - (int16_t)lastAngle) > ps.RESOLUTION / 2) { // angle jump over half of circle is assummed to be the shorter crossing of 0
                     if (angle > lastAngle) {
                         turns--;
                     } else {
@@ -223,11 +227,16 @@ public:
                 }
             }
         }
-        long velDist = (angle - lastVelAngle) + (turns - lastVelTurns) * ps.RESOLUTION;
-        if (micros() - lastVelTimeMicros > velEnoughTime || abs(velDist) > velEnoughTicks) {
+        int64_t velDist = ((int16_t)angle - (int16_t)lastVelAngle) + (turns - lastVelTurns) * ps.RESOLUTION;
+        if ((micros() - lastVelTimeMicros > velEnoughTime || abs(velDist) > velEnoughTicks)) {
+            if (justStarted) {
+                justStarted = false;
+                lastVelAngle = angle;
+                velDist = 0;
+            }
             velocity = (double)1000000.0 * velDist / (micros() - lastVelTimeMicros) * distPerCountFactor * reverse;
-            lastVelTimeMicros = micros();
             newSpeed = true;
+            lastVelTimeMicros = micros();
             lastVelAngle = angle;
             lastVelTurns = turns;
         } else {

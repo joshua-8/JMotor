@@ -142,7 +142,7 @@ public:
     void run()
     {
         angle = readAngle();
-        if (abs(angle - lastAngle) > STEPS_PER_TURN / 2) { // angle jump over half of circle is assummed to be the shorter crossing of 0
+        if (abs((int16_t)angle - (int16_t)lastAngle) > STEPS_PER_TURN / 2) { // angle jump over half of circle is assummed to be the shorter crossing of 0
             if (angle > lastAngle) {
                 turns--;
             } else {
@@ -150,7 +150,7 @@ public:
             }
         }
 
-        long velDist = (angle - lastVelAngle) + (turns - lastVelTurns) * STEPS_PER_TURN;
+        long velDist = ((int16_t)angle - (int16_t)lastVelAngle) + (turns - lastVelTurns) * STEPS_PER_TURN;
         if (micros() - lastVelTimeMicros > velEnoughTime || abs(velDist) > velEnoughTicks) {
             velocity = (double)1000000.0 * velDist / (micros() - lastVelTimeMicros) * distPerCountFactor * reverse;
             lastVelTimeMicros = micros();
