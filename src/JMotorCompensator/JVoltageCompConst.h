@@ -7,8 +7,12 @@ private:
     float supplyVoltage;
 
 public:
-    JVoltageCompConst(float _supplyVoltage, float _driverRange = 1.0)
-        : JVoltageCompensator(_driverRange)
+    /**
+     * @brief  constructor
+     * @param  _supplyVoltage: (float) default: 1.0
+     */
+    JVoltageCompConst(float _supplyVoltage = 1.0)
+        : JVoltageCompensator()
         , supplyVoltage(_supplyVoltage)
     {
     }
@@ -16,6 +20,11 @@ public:
     {
         return voltage / supplyVoltage * driverRange;
     }
+    /**
+     * @brief  adjust the setting of what the motor controller supply voltage is
+     * @param  _supplyVoltage: (float) new setting for what the supply voltage is
+     * @retval (boolean) true if value changed
+     */
     boolean changeSupplyVoltageSetting(float _supplyVoltage)
     {
         if (supplyVoltage != _supplyVoltage) {
@@ -23,6 +32,11 @@ public:
             return true;
         }
         return false;
+    }
+
+    float getSupplyVoltage()
+    {
+        return supplyVoltage;
     }
 };
 #endif

@@ -8,13 +8,12 @@ private:
 
 public:
     /**
- * @brief  constructor
- * @param  _supplyVoltage: (float&) reference to a variable that contains the current voltage supplied to the motor controller
- * @param  _driverRange: (float) default 1.0
- * @retval 
- */
-    JVoltageCompAdjust(float& _supplyVoltage, float _driverRange = 1.0)
-        : JVoltageCompensator(_driverRange)
+     * @brief  constructor
+     * @param  _supplyVoltage: (float) reference to a variable that contains the current voltage supplied to the motor controller
+     * @retval 
+     */
+    JVoltageCompAdjust(float& _supplyVoltage)
+        : JVoltageCompensator()
         , supplyVoltage(_supplyVoltage)
     {
     }
@@ -29,6 +28,11 @@ public:
     void changeSupplyVoltageVariable(float& _supplyVoltage)
     {
         supplyVoltage = _supplyVoltage;
+    }
+
+    float getSupplyVoltage()
+    {
+        return supplyVoltage;
     }
 };
 #endif

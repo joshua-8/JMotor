@@ -8,8 +8,7 @@ class JVoltageCompensator {
 protected:
     float driverRange = 1.0;
 
-    JVoltageCompensator(float _driverRange)
-        : driverRange(_driverRange)
+    JVoltageCompensator()
     {
     }
 
@@ -22,8 +21,8 @@ public:
     virtual float adjust(float voltage);
 
     /**
-     * @param  _driverRange: (float) driver units per speed units
-     * @retval (boolean) true if multiplier changed
+     * @param  _driverRange: (float) maximum driver power, in driver units
+     * @retval (boolean) true if value changed
      */
     boolean setDriverRange(float _driverRange)
     {
@@ -33,6 +32,10 @@ public:
         }
         return false;
     }
+    /**
+     * @retval (float) returns current supply voltage
+     */
+    virtual float getSupplyVoltage();
 };
 #include "JVoltageCompAdjust.h"
 #include "JVoltageCompConst.h"
