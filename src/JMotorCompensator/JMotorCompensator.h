@@ -14,6 +14,13 @@ public:
      * @retval (float) value to set driver
      */
     virtual float compensate(float val);
+
+    /**
+     * @brief  How fast of a motor speed setting would get adjusted to full motor power
+     * @note   may change as battery voltage changes
+     * @retval  (float)
+     */
+    virtual float getMaxVel();
 };
 #include "JMotorCompDirect.h"
 #include "JMotorCompStandard.h"
