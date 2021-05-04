@@ -10,10 +10,11 @@ public:
     /**
      * @brief  constructor
      * @param  _supplyVoltage: (float) reference to a variable that contains the current voltage supplied to the motor controller
+     * @param  _driverRange: (float) what value makes the driver output 100% of supply voltage (default=1.0)
      * @retval 
      */
-    JVoltageCompAdjust(float& _supplyVoltage)
-        : JVoltageCompensator()
+    JVoltageCompAdjust(float& _supplyVoltage, float _driverRange = 1.0)
+        : JVoltageCompensator(_driverRange)
         , supplyVoltage(_supplyVoltage)
     {
     }

@@ -10,9 +10,10 @@ public:
     /**
      * @brief  constructor
      * @param  _supplyVoltage: (float) default: 1.0
+     * @param  _driverRange: (float) what value makes the driver output 100% of supply voltage (default=1.0)
      */
-    JVoltageCompConst(float _supplyVoltage = 1.0)
-        : JVoltageCompensator()
+    JVoltageCompConst(float _supplyVoltage = 1.0, float _driverRange = 1.0)
+        : JVoltageCompensator(_driverRange)
         , supplyVoltage(_supplyVoltage)
     {
     }

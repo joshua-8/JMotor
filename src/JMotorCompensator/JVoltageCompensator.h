@@ -8,8 +8,13 @@ class JVoltageCompensator {
 protected:
     float driverRange = 1.0;
 
-    JVoltageCompensator()
+    /**
+     * @brief  constructor
+     * @param  _driverRange: (float) what value makes the driver output 100% of supply voltage
+     */
+    JVoltageCompensator(float _driverRange)
     {
+        driverRange = _driverRange;
     }
 
 public:
@@ -39,4 +44,5 @@ public:
 };
 #include "JVoltageCompAdjust.h"
 #include "JVoltageCompConst.h"
+#include "JVoltageCompMeasure.h"
 #endif
