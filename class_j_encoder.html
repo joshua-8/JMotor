@@ -80,7 +80,7 @@ Inheritance diagram for JEncoder:</div>
 <map name="a_j_encoder_inherit__map" id="a_j_encoder_inherit__map">
 <area shape="rect" title="defines common interface for JEncoder" alt="" coords="5,105,81,131"/>
 <area shape="rect" href="class_j_encoder_a_s5048b_i2_c.html" title="reads a type of absolute encoder https://ams.com/as0548b (uses I2C)" alt="" coords="134,25,283,51"/>
-<area shape="rect" href="class_j_encoder_p_w_m_absolute.html" title="reads a PWM signal from an absolute encoder using attachInterrupt()" alt="" coords="129,75,288,102"/>
+<area shape="rect" href="class_j_encoder_p_w_m_absolute.html" title="reads a PWM signal from an absolute encoder" alt="" coords="129,75,288,102"/>
 <area shape="rect" href="class_j_encoder_quadrature.html" title="reads a quadrature (incremental) encoder" alt="" coords="139,130,279,157"/>
 <area shape="rect" href="class_j_encoder_single.html" title="reads a single channel (incremental) encoder" alt="" coords="153,239,265,266"/>
 <area shape="rect" href="class_j_encoder_p_w_m_absolute_attach_interrupt.html" title="uses attachInterrupt() (could be used with standard avr arduinos but only with pins that support atta..." alt="" coords="349,5,546,47"/>
@@ -112,12 +112,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9b924eeb11c622938a27c61d48aac8de"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder.html#a9b924eeb11c622938a27c61d48aac8de">setDistPerCountFactor</a> (float _factor)</td></tr>
 <tr class="memdesc:a9b924eeb11c622938a27c61d48aac8de"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the conversion factor between encoder ticks and distance  <a href="class_j_encoder.html#a9b924eeb11c622938a27c61d48aac8de">More...</a><br /></td></tr>
 <tr class="separator:a9b924eeb11c622938a27c61d48aac8de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a55b6be277ce62eb1d1e966fcb18fe0"><td class="memItemLeft" align="right" valign="top">virtual boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder.html#a2a55b6be277ce62eb1d1e966fcb18fe0">hasDirection</a> ()</td></tr>
-<tr class="memdesc:a2a55b6be277ce62eb1d1e966fcb18fe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">can this encoder mesure direction or just speed  <a href="class_j_encoder.html#a2a55b6be277ce62eb1d1e966fcb18fe0">More...</a><br /></td></tr>
-<tr class="separator:a2a55b6be277ce62eb1d1e966fcb18fe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60ceceebb51924d83c38bd93a4e22aba"><td class="memItemLeft" align="right" valign="top">virtual boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder.html#a60ceceebb51924d83c38bd93a4e22aba">isVelNew</a> ()</td></tr>
-<tr class="memdesc:a60ceceebb51924d83c38bd93a4e22aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">could be useful for only recalculating a control loop if there's new velocity data  <a href="class_j_encoder.html#a60ceceebb51924d83c38bd93a4e22aba">More...</a><br /></td></tr>
-<tr class="separator:a60ceceebb51924d83c38bd93a4e22aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca7315277c58c5f91f3faac84c048e31"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder.html#aca7315277c58c5f91f3faac84c048e31">hasDirection</a> ()</td></tr>
+<tr class="memdesc:aca7315277c58c5f91f3faac84c048e31"><td class="mdescLeft">&#160;</td><td class="mdescRight">can this encoder mesure direction or just speed  <a href="class_j_encoder.html#aca7315277c58c5f91f3faac84c048e31">More...</a><br /></td></tr>
+<tr class="separator:aca7315277c58c5f91f3faac84c048e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8164a9b44eebfe41365d6b8090c89891"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder.html#a8164a9b44eebfe41365d6b8090c89891">isVelNew</a> ()</td></tr>
+<tr class="memdesc:a8164a9b44eebfe41365d6b8090c89891"><td class="mdescLeft">&#160;</td><td class="mdescRight">could be useful for only recalculating a control loop if there's new velocity data  <a href="class_j_encoder.html#a8164a9b44eebfe41365d6b8090c89891">More...</a><br /></td></tr>
+<tr class="separator:a8164a9b44eebfe41365d6b8090c89891"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a565ca78c9735b6306c23a0820fc7b482"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder.html#a565ca78c9735b6306c23a0820fc7b482">run</a> ()</td></tr>
 <tr class="memdesc:a565ca78c9735b6306c23a0820fc7b482"><td class="mdescLeft">&#160;</td><td class="mdescRight">if an encoder needs to have some code called each loop (like absolute encoder polling encoder and calculating amount turned)  <a href="class_j_encoder.html#a565ca78c9735b6306c23a0820fc7b482">More...</a><br /></td></tr>
 <tr class="separator:a565ca78c9735b6306c23a0820fc7b482"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -269,8 +269,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a2a55b6be277ce62eb1d1e966fcb18fe0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a55b6be277ce62eb1d1e966fcb18fe0">&#9670;&nbsp;</a></span>hasDirection()</h2>
+<a id="aca7315277c58c5f91f3faac84c048e31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca7315277c58c5f91f3faac84c048e31">&#9670;&nbsp;</a></span>hasDirection()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -279,7 +279,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual boolean JEncoder::hasDirection </td>
+          <td class="memname">virtual bool JEncoder::hasDirection </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -295,17 +295,17 @@ Public Member Functions</h2></td></tr>
 <p>can this encoder mesure direction or just speed </p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">(boolean)</td><td>true = can measure direction </td></tr>
+    <tr><td class="paramname">(bool)</td><td>true = can measure direction </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_j_encoder_single.html#aeb1c957f66201eb3711038ff3f3e2fe7">JEncoderSingle</a>, <a class="el" href="class_j_encoder_quadrature.html#a5557d470e8d27d3ed4092ff99ade29c5">JEncoderQuadrature</a>, <a class="el" href="class_j_encoder_p_w_m_absolute.html#aa46f9870a5d1c98e987f266f3ba332a8">JEncoderPWMAbsolute</a>, and <a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a3451d0aca7ab7d02d3dff861bcca9933">JEncoderAS5048bI2C</a>.</p>
+<p>Reimplemented in <a class="el" href="class_j_encoder_single.html#a597e7df58daf8ec2c2bae977e09bdeef">JEncoderSingle</a>, <a class="el" href="class_j_encoder_quadrature.html#a8d3dbc0b8cc4c5077dd25f71aed97c9a">JEncoderQuadrature</a>, <a class="el" href="class_j_encoder_p_w_m_absolute.html#a4372b148b8d436a26a476ddd264dad3a">JEncoderPWMAbsolute</a>, and <a class="el" href="class_j_encoder_a_s5048b_i2_c.html#adb8d9aa63811086e5f3fdcc733aa5b42">JEncoderAS5048bI2C</a>.</p>
 
 </div>
 </div>
-<a id="a60ceceebb51924d83c38bd93a4e22aba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60ceceebb51924d83c38bd93a4e22aba">&#9670;&nbsp;</a></span>isVelNew()</h2>
+<a id="a8164a9b44eebfe41365d6b8090c89891"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8164a9b44eebfe41365d6b8090c89891">&#9670;&nbsp;</a></span>isVelNew()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -314,7 +314,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual boolean JEncoder::isVelNew </td>
+          <td class="memname">virtual bool JEncoder::isVelNew </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -330,12 +330,12 @@ Public Member Functions</h2></td></tr>
 <p>could be useful for only recalculating a control loop if there's new velocity data </p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">(boolean)</td><td>true if velocity has changed since this function was last called </td></tr>
+    <tr><td class="paramname">(bool)</td><td>true if velocity has changed since this function was last called </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_j_encoder_single.html#afc507ecf655f0e5d756bc628908dc120">JEncoderSingle</a>, <a class="el" href="class_j_encoder_quadrature.html#a1436cba90f9b5d0be84fc84dea0d7453">JEncoderQuadrature</a>, <a class="el" href="class_j_encoder_p_w_m_absolute.html#a90908819eb8f415db323cc9f06224bd6">JEncoderPWMAbsolute</a>, and <a class="el" href="class_j_encoder_a_s5048b_i2_c.html#abb858384db5d1f73615c2cf917464cc2">JEncoderAS5048bI2C</a>.</p>
+<p>Reimplemented in <a class="el" href="class_j_encoder_single.html#afff3269442c9f7be35ee5450ad1db9f2">JEncoderSingle</a>, <a class="el" href="class_j_encoder_quadrature.html#aa5e10e87b22f7b117a00bf7f1d5fe097">JEncoderQuadrature</a>, <a class="el" href="class_j_encoder_p_w_m_absolute.html#ad00a119a4e68a38fb2723055f56785f9">JEncoderPWMAbsolute</a>, and <a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a66600fc450d835b46c2c6245c92b6ebf">JEncoderAS5048bI2C</a>.</p>
 
 </div>
 </div>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pwmsettings_128',['pwmSettings',['../struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html',1,'JEncoderPWMAbsolute']]]
+  ['pwmsettings_194',['pwmSettings',['../struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html',1,'JEncoderPWMAbsolute']]]
 ];

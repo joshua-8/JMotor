@@ -1,0 +1,5 @@
+<map id="JMotorControllerBasicOpen::run" name="JMotorControllerBasicOpen::run">
+<area shape="rect" id="node1" title="update driver" alt="" coords="235,46,440,73"/>
+<area shape="rect" id="node2" href="$class_j_motor_controller_basic_open.html#aa7f5f2ac950894eb1c5d1969196cfdd9" title="set velocity for controller" alt="" coords="5,5,187,47"/>
+<area shape="rect" id="node3" href="$class_j_motor_controller_basic_open.html#ab14569a9952239bf8c86a482ae6f0f44" title="set target velocity for controller (acceleration limited)" alt="" coords="5,71,187,112"/>
+</map>

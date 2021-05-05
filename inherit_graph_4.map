@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="5,5,152,32"/>
+<area shape="rect" id="node2" href="$class_j_motor_controller_basic_open.html" title="A motor controller object that uses a JMotorCompensator to set velocity of a motor." alt="" coords="200,5,381,32"/>
+</map>

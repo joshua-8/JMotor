@@ -1,5 +1,0 @@
-<map id="JMotorDriverEsp32PWM::setEnable" name="JMotorDriverEsp32PWM::setEnable">
-<area shape="rect" id="node1" title="use to enable or disable a motor, and sets up pin states" alt="" coords="233,39,397,80"/>
-<area shape="rect" id="node2" href="$class_j_motor_driver_esp32_l293.html#ae041f31b500222f42b7d08ee9da1db9a" title="use to enable or disable a motor, and sets up pin states" alt="" coords="15,5,176,47"/>
-<area shape="rect" id="node3" href="$class_j_motor_driver_esp32_p_w_m_dir.html#ab2b89d6ef4fa799f67ce6dc07e9c68bd" title="use to enable or disable a motor, and sets up pin states" alt="" coords="5,71,185,112"/>
-</map>

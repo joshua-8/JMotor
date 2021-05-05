@@ -1,6 +1,30 @@
 var searchData=
 [
-  ['rawreading_193',['rawReading',['../class_j_encoder_a_s5048b_i2_c.html#a2857d5f8ba2b031d351f22c904b8a7ca',1,'JEncoderAS5048bI2C::rawReading()'],['../class_j_encoder_p_w_m_absolute.html#af689df544afd9812612e1ba369a154a9',1,'JEncoderPWMAbsolute::rawReading()']]],
-  ['resetpos_194',['resetPos',['../class_j_motor_controller.html#af80d3838b973649cf16e32b97b353259',1,'JMotorController']]],
-  ['run_195',['run',['../class_j_encoder.html#a565ca78c9735b6306c23a0820fc7b482',1,'JEncoder::run()'],['../class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b',1,'JEncoderAS5048bI2C::run()'],['../class_j_encoder_p_w_m_absolute.html#a122f35f077150b64126880c03aa00d1d',1,'JEncoderPWMAbsolute::run()'],['../class_j_encoder_quadrature.html#a9f302ae76475013f963f088f750254ad',1,'JEncoderQuadrature::run()'],['../class_j_encoder_single.html#a88d5a8aa16bf1ff48727aea4f22fc1bf',1,'JEncoderSingle::run()'],['../class_j_motor_controller.html#a92cc21b00eddb759ae887d9de1a57988',1,'JMotorController::run()']]]
+  ['jencoder_5fmake_5fisr_5fmacro_261',['jENCODER_MAKE_ISR_MACRO',['../main_8cpp.html#afe26474d5784249732665584045a63ae',1,'main.cpp']]],
+  ['jencoderas5048bi2c_262',['JEncoderAS5048bI2C',['../class_j_encoder_a_s5048b_i2_c.html#a53ab756bc3a83aeae590de58684c2ab5',1,'JEncoderAS5048bI2C']]],
+  ['jencoderpwmabsolute_263',['JEncoderPWMAbsolute',['../class_j_encoder_p_w_m_absolute.html#a6e6e735a67b51e85f5d57aff38684779',1,'JEncoderPWMAbsolute']]],
+  ['jencoderpwmabsoluteattachinterrupt_264',['JEncoderPWMAbsoluteAttachInterrupt',['../class_j_encoder_p_w_m_absolute_attach_interrupt.html#ad49b4491c2630ed255572692a456acb3',1,'JEncoderPWMAbsoluteAttachInterrupt']]],
+  ['jencoderpwmabsolutepinchange_265',['JEncoderPWMAbsolutePinChange',['../class_j_encoder_p_w_m_absolute_pin_change.html#ae078916a3f4d3f6f1c1957243cfeb2c1',1,'JEncoderPWMAbsolutePinChange']]],
+  ['jencoderquadrature_266',['JEncoderQuadrature',['../class_j_encoder_quadrature.html#a90840f97d7c5766b7ce8a88552cf4232',1,'JEncoderQuadrature']]],
+  ['jencoderquadratureattachinterrupt_267',['JEncoderQuadratureAttachInterrupt',['../class_j_encoder_quadrature_attach_interrupt.html#a730968af79ab4f9a790410a1e02237e6',1,'JEncoderQuadratureAttachInterrupt']]],
+  ['jencoderquadraturepinchange_268',['JEncoderQuadraturePinChange',['../class_j_encoder_quadrature_pin_change.html#a4dfb60df0927ea7eb09d043f67c73245',1,'JEncoderQuadraturePinChange']]],
+  ['jencodersingle_269',['JEncoderSingle',['../class_j_encoder_single.html#a2fa9dee4d249801c3a5911744d1a531b',1,'JEncoderSingle']]],
+  ['jencodersingleattachinterrupt_270',['JEncoderSingleAttachInterrupt',['../class_j_encoder_single_attach_interrupt.html#a7b7d22b6302e9f8170797c2eed50f08c',1,'JEncoderSingleAttachInterrupt']]],
+  ['jencodersinglepinchange_271',['JEncoderSinglePinChange',['../class_j_encoder_single_pin_change.html#af960f65ad35a00e9191f43cde19ddf2d',1,'JEncoderSinglePinChange']]],
+  ['jmotorcompdirect_272',['JMotorCompDirect',['../class_j_motor_comp_direct.html#acc7a79c94ad00af5bec2894984194766',1,'JMotorCompDirect']]],
+  ['jmotorcompstandard_273',['JMotorCompStandard',['../class_j_motor_comp_standard.html#a9ca1ea1830f1eeedd8a01f14316c1ccd',1,'JMotorCompStandard']]],
+  ['jmotorcompstandardconfig_274',['JMotorCompStandardConfig',['../struct_j_motor_comp_standard_config.html#a222009ee606dabd699714c18272655cc',1,'JMotorCompStandardConfig']]],
+  ['jmotorcontrollerbasicopen_275',['JMotorControllerBasicOpen',['../class_j_motor_controller_basic_open.html#aba939c1cf3782a8a5f846cde0ebfacb7',1,'JMotorControllerBasicOpen']]],
+  ['jmotordriveravrl293_276',['JMotorDriverAvrL293',['../class_j_motor_driver_avr_l293.html#a2632b08bfc86803adaa1a1bf267cb91e',1,'JMotorDriverAvrL293']]],
+  ['jmotordriveravrpwm_277',['JMotorDriverAvrPWM',['../class_j_motor_driver_avr_p_w_m.html#ace8bd58bf25264b24458382c781d9ca5',1,'JMotorDriverAvrPWM']]],
+  ['jmotordriveravrpwmdir_278',['JMotorDriverAvrPWMDir',['../class_j_motor_driver_avr_p_w_m_dir.html#ae76377254ee0c74d68c8afd8b1428657',1,'JMotorDriverAvrPWMDir']]],
+  ['jmotordriveravrservo_279',['JMotorDriverAvrServo',['../class_j_motor_driver_avr_servo.html#a5ce60ddb3b67e42d044d45f7a2b5ece3',1,'JMotorDriverAvrServo']]],
+  ['jmotordriverdual_280',['JMotorDriverDual',['../class_j_motor_driver_dual.html#a23fe7f7173680b4eac526d91f59c3fcb',1,'JMotorDriverDual']]],
+  ['jmotordriveresp32l293_281',['JMotorDriverEsp32L293',['../class_j_motor_driver_esp32_l293.html#a1a7d5e8b0e6f8ea04ef8a4281353cf97',1,'JMotorDriverEsp32L293::JMotorDriverEsp32L293(byte _ch, byte _enablePin, byte _i1, byte _i2, bool _breakOn=true, bool breakWhenDisabled=false)'],['../class_j_motor_driver_esp32_l293.html#a2b6f23b8e86234cca59c3a206b993dad',1,'JMotorDriverEsp32L293::JMotorDriverEsp32L293(byte _ch, byte _enPin, byte _i1, byte _i2, int freq, int resolution, bool _breakOn=true, bool breakWhenDisabled=false)']]],
+  ['jmotordriveresp32pwm_282',['JMotorDriverEsp32PWM',['../class_j_motor_driver_esp32_p_w_m.html#aab405776a6d6e281f1d3067599d45231',1,'JMotorDriverEsp32PWM::JMotorDriverEsp32PWM(byte _ch, byte _pin, bool _disableState=LOW)'],['../class_j_motor_driver_esp32_p_w_m.html#a3cd958f28273aa1226cbe03838fc474b',1,'JMotorDriverEsp32PWM::JMotorDriverEsp32PWM(byte _ch, byte _pin, int freq, int resolution, bool _disableState=LOW)']]],
+  ['jmotordriveresp32pwmdir_283',['JMotorDriverEsp32PWMDir',['../class_j_motor_driver_esp32_p_w_m_dir.html#abcc34ebfbbdd5f37b2ed0313350d3c18',1,'JMotorDriverEsp32PWMDir::JMotorDriverEsp32PWMDir(byte _ch, byte _enablePin, byte _dirPin, bool _rev=false)'],['../class_j_motor_driver_esp32_p_w_m_dir.html#a6e3c20537c15afa1e5642df0ab28274c',1,'JMotorDriverEsp32PWMDir::JMotorDriverEsp32PWMDir(byte _ch, byte _enPin, byte _dirPin, int freq, int resolution, bool _rev=false)']]],
+  ['jmotordriveresp32servo_284',['JMotorDriverEsp32Servo',['../class_j_motor_driver_esp32_servo.html#abcec312fb1f080578aaac2e7e232559b',1,'JMotorDriverEsp32Servo']]],
+  ['jvoltagecompadjust_285',['JVoltageCompAdjust',['../class_j_voltage_comp_adjust.html#a2de39bc3f2f2357e355dd9cb0f4a7f83',1,'JVoltageCompAdjust']]],
+  ['jvoltagecompconst_286',['JVoltageCompConst',['../class_j_voltage_comp_const.html#a232304a1ff678562f11b5450ba96711e',1,'JVoltageCompConst']]],
+  ['jvoltagecompmeasure_287',['JVoltageCompMeasure',['../class_j_voltage_comp_measure.html#aad14f8ccee418a9bf7966cc3adb73da6',1,'JVoltageCompMeasure']]]
 ];

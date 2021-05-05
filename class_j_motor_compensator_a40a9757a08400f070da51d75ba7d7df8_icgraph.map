@@ -1,0 +1,6 @@
+<map id="JMotorCompensator::compensate" name="JMotorCompensator::compensate">
+<area shape="rect" id="node1" title="calculate" alt="" coords="488,39,633,80"/>
+<area shape="rect" id="node2" href="$class_j_motor_controller_basic_open.html#a64924f3b95a5dad3675ab7eb8ddd80a8" title="update driver" alt="" coords="235,46,440,73"/>
+<area shape="rect" id="node3" href="$class_j_motor_controller_basic_open.html#aa7f5f2ac950894eb1c5d1969196cfdd9" title="set velocity for controller" alt="" coords="5,5,187,47"/>
+<area shape="rect" id="node4" href="$class_j_motor_controller_basic_open.html#ab14569a9952239bf8c86a482ae6f0f44" title="set target velocity for controller (acceleration limited)" alt="" coords="5,71,187,112"/>
+</map>

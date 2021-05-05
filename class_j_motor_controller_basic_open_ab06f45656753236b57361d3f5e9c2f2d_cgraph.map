@@ -1,0 +1,4 @@
+<map id="JMotorControllerBasicOpen::getEnabled" name="JMotorControllerBasicOpen::getEnabled">
+<area shape="rect" id="node1" title="is the controller enabled" alt="" coords="5,5,187,47"/>
+<area shape="rect" id="node2" href="$class_j_motor_driver.html#a87e4adac669e4dcafc0e540e2d1e4849" title="get the enable state of the driver" alt="" coords="235,13,393,39"/>
+</map>

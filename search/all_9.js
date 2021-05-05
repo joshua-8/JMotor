@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['m1_75',['m1',['../class_j_motor_driver_dual.html#a85e4cc7428e5dcde08c8d524d8d5799e',1,'JMotorDriverDual']]],
-  ['m2_76',['m2',['../class_j_motor_driver_dual.html#acdc948a8735bb3b70e88454ef1074b45',1,'JMotorDriverDual']]],
-  ['main_2ecpp_77',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['maxservovalue_78',['maxServoValue',['../class_j_motor_driver_avr_servo.html#a5076b45e9fab5ee49acde263e98e736c',1,'JMotorDriverAvrServo::maxServoValue()'],['../class_j_motor_driver_esp32_servo.html#aaf18a239bbbfc89db79ef2c946bb4cc4',1,'JMotorDriverEsp32Servo::maxServoValue()']]],
-  ['min_5fsteps_79',['MIN_STEPS',['../struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#a7479527686a611225b8cfdf24a23d461',1,'JEncoderPWMAbsolute::pwmSettings']]],
-  ['minservovalue_80',['minServoValue',['../class_j_motor_driver_avr_servo.html#a44cd36bb6a6d35424ff561903f3e8fc9',1,'JMotorDriverAvrServo::minServoValue()'],['../class_j_motor_driver_esp32_servo.html#a0a4f813cd866bdd72e0420e0f4487b2b',1,'JMotorDriverEsp32Servo::minServoValue()']]]
+  ['lastrunmicros_112',['lastRunMicros',['../class_j_motor_controller_basic_open.html#a7a05d95ffc5824b523b7e89ebacd5247',1,'JMotorControllerBasicOpen']]],
+  ['loop_113',['loop',['../main_8cpp.html#afe461d27b9c48d5921c00d521181f12f',1,'main.cpp']]]
 ];

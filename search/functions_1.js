@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['enable_156',['enable',['../class_j_motor_controller.html#a96a2d212be6e37e934cc6db6997954ae',1,'JMotorController::enable()'],['../class_j_motor_driver.html#aff1d2bee4a868412b5af7a07f43ed3fe',1,'JMotorDriver::enable()']]],
-  ['encoderisr_157',['encoderISR',['../class_j_encoder_p_w_m_absolute.html#a60591c08ee301a506649c4bf6b39b585',1,'JEncoderPWMAbsolute::encoderISR()'],['../class_j_encoder_single.html#ab8a409d326be67c99c6841bbb11c6a29',1,'JEncoderSingle::encoderISR()']]]
+  ['changesupplyvoltagesetting_234',['changeSupplyVoltageSetting',['../class_j_voltage_comp_const.html#a5200fd8e1e894a45ec817944cbb8f8e4',1,'JVoltageCompConst']]],
+  ['changesupplyvoltagevariable_235',['changeSupplyVoltageVariable',['../class_j_voltage_comp_adjust.html#aca1ee78f945cbf6ea7929a4e2715d4eb',1,'JVoltageCompAdjust']]],
+  ['compensate_236',['compensate',['../class_j_motor_comp_direct.html#ad817d16fe4afb4df25363d9c0f26eb52',1,'JMotorCompDirect::compensate()'],['../class_j_motor_compensator.html#a40a9757a08400f070da51d75ba7d7df8',1,'JMotorCompensator::compensate()'],['../class_j_motor_comp_standard.html#a4efa9461ed6585844857a20fd9530580',1,'JMotorCompStandard::compensate()']]]
 ];

@@ -1,0 +1,5 @@
+<map id="JMotorDriverEsp32PWM::set" name="JMotorDriverEsp32PWM::set">
+<area shape="rect" id="node1" title="set motor power" alt="" coords="257,31,445,57"/>
+<area shape="rect" id="node2" href="$class_j_motor_driver_esp32_l293.html#a30fac2de0054d75f9a0960bd8eacf565" title="set motor power" alt="" coords="15,5,200,32"/>
+<area shape="rect" id="node3" href="$class_j_motor_driver_esp32_p_w_m_dir.html#a4eeca45fbada68e04007adb1e9c8312a" title="set motor power" alt="" coords="5,56,209,83"/>
+</map>

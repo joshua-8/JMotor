@@ -1,4 +1,6 @@
 <map id="JMotorDriver::getMaxRange" name="JMotorDriver::getMaxRange">
-<area shape="rect" id="node1" title="high end of the range" alt="" coords="224,13,405,39"/>
-<area shape="rect" id="node2" href="$class_j_motor_driver_dual.html#adb412d537c9a48e4046f4a3d2f3c637e" title="high end of the range" alt="" coords="5,5,176,47"/>
+<area shape="rect" id="node1" title="high end of the range" alt="" coords="240,78,421,105"/>
+<area shape="rect" id="node2" href="$class_j_motor_controller_basic_open.html#aeeef6d9d22c26f81c6ffdade9bc630b3" title="if getDriverSetVal exceeds this, isDriverInRange will go false" alt="" coords="8,5,189,47"/>
+<area shape="rect" id="node3" href="$class_j_motor_driver_dual.html#adb412d537c9a48e4046f4a3d2f3c637e" title="high end of the range" alt="" coords="13,71,184,112"/>
+<area shape="rect" id="node4" href="$class_j_motor_controller_basic_open.html#aba939c1cf3782a8a5f846cde0ebfacb7" title="constructor" alt="" coords="5,136,192,177"/>
 </map>

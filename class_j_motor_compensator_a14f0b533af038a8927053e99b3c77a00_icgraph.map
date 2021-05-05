@@ -1,0 +1,7 @@
+<map id="JMotorCompensator::getMaxVel" name="JMotorCompensator::getMaxVel">
+<area shape="rect" id="node1" title="How fast of a motor speed setting would get adjusted to full motor power." alt="" coords="488,35,633,76"/>
+<area shape="rect" id="node2" href="$class_j_motor_controller_basic_open.html#af796447b21eae6e02a2058dca0233baf" title="How fast of a motor speed setting would get adjusted to full motor power." alt="" coords="247,5,428,47"/>
+<area shape="rect" id="node3" href="$class_j_motor_controller_basic_open.html#a64924f3b95a5dad3675ab7eb8ddd80a8" title="update driver" alt="" coords="235,71,440,98"/>
+<area shape="rect" id="node4" href="$class_j_motor_controller_basic_open.html#aa7f5f2ac950894eb1c5d1969196cfdd9" title="set velocity for controller" alt="" coords="5,31,187,72"/>
+<area shape="rect" id="node5" href="$class_j_motor_controller_basic_open.html#ab14569a9952239bf8c86a482ae6f0f44" title="set target velocity for controller (acceleration limited)" alt="" coords="5,96,187,137"/>
+</map>

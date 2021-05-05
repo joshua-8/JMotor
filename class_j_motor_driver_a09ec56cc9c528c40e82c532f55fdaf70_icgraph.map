@@ -1,0 +1,7 @@
+<map id="JMotorDriver::set" name="JMotorDriver::set">
+<area shape="rect" id="node1" title="set motor power" alt="" coords="488,70,608,97"/>
+<area shape="rect" id="node2" href="$class_j_motor_controller_basic_open.html#a64924f3b95a5dad3675ab7eb8ddd80a8" title="update driver" alt="" coords="235,45,440,71"/>
+<area shape="rect" id="node5" href="$class_j_motor_driver_dual.html#a8cdaf4ae1b5cb69280fd0164743f5501" title="set motor power" alt="" coords="264,95,411,122"/>
+<area shape="rect" id="node3" href="$class_j_motor_controller_basic_open.html#aa7f5f2ac950894eb1c5d1969196cfdd9" title="set velocity for controller" alt="" coords="5,5,187,47"/>
+<area shape="rect" id="node4" href="$class_j_motor_controller_basic_open.html#ab14569a9952239bf8c86a482ae6f0f44" title="set target velocity for controller (acceleration limited)" alt="" coords="5,71,187,112"/>
+</map>

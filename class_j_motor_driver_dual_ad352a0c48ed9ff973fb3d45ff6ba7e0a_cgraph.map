@@ -1,0 +1,4 @@
+<map id="JMotorDriverDual::getEnable" name="JMotorDriverDual::getEnable">
+<area shape="rect" id="node1" title="get the enable state of the driver" alt="" coords="5,5,191,32"/>
+<area shape="rect" id="node2" href="$class_j_motor_driver.html#a87e4adac669e4dcafc0e540e2d1e4849" title="get the enable state of the driver" alt="" coords="239,5,397,32"/>
+</map>

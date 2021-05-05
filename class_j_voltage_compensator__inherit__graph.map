@@ -1,0 +1,6 @@
+<map id="JVoltageCompensator" name="JVoltageCompensator">
+<area shape="rect" id="node1" title="convert voltage to value needed to set driver at to get that voltage" alt="" coords="169,5,319,32"/>
+<area shape="rect" id="node2" href="$class_j_voltage_comp_adjust.html" title=" " alt="" coords="5,80,149,107"/>
+<area shape="rect" id="node3" href="$class_j_voltage_comp_const.html" title=" " alt="" coords="173,80,315,107"/>
+<area shape="rect" id="node4" href="$class_j_voltage_comp_measure.html" title=" " alt="" coords="339,80,528,107"/>
+</map>
