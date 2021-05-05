@@ -30,7 +30,6 @@ public:
      * @param  _measurementIntervalMillis:  wait this many milliseconds before taking another reading (default: 10)
      */
     JVoltageCompMeasure(byte _measurePin, float _DACUnitsPerVolt, float _driverRange = 1.0, int _measurementIntervalMillis = 10)
-        : JVoltageCompensator(_driverRange)
     {
         measurePin = _measurePin;
         supplyVoltage = 10;
@@ -41,7 +40,7 @@ public:
         lastMeasurementMillis = 0;
         measurementInterval = _measurementIntervalMillis;
     }
-    float adjust(float voltage)
+    float adjust(float voltage, float driverRange)
     {
         if (millis() - lastMeasurementMillis > measurementInterval) {
             lastMeasurementMillis = millis();

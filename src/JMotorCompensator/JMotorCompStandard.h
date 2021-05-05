@@ -117,7 +117,7 @@ public:
                 startBoosting = false;
             }
         }
-        ret = voltComp.adjust(ret);
+        ret = voltComp.adjust(ret, driverRange);
         return ret;
     }
     void setConfig(JMotorCompStandardConfig& _config)

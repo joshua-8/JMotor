@@ -8,18 +8,15 @@
 class JMotorCompDirect : public JMotorCompensator {
 private:
     float multiplier;
-    float driverMax;
 
 public:
     /**
      * @brief  constructor
      * @param  _multiplier: (float) driver units per speed units
-     * @param  _driverMax: (float) default 1, max range of driver
      */
-    JMotorCompDirect(float _multiplier, float _driverMax = 1)
+    JMotorCompDirect(float _multiplier)
     {
         multiplier = _multiplier;
-        driverMax = _driverMax;
     }
     float compensate(float val)
     {
@@ -39,7 +36,7 @@ public:
     }
     float getMaxVel()
     {
-        return driverMax / multiplier;
+        return driverRange / multiplier;
     }
 };
 #endif

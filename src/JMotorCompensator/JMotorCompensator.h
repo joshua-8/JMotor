@@ -7,7 +7,18 @@
  * It should compensate for factors like motor response and supply voltage.
  **/
 class JMotorCompensator {
+protected:
+    float driverRange = 1.0;
+
 public:
+    /**
+     * @brief  set what value makes the driver output 100% of supply voltage
+     * @param  _driverRange: (float) max range of driver
+     */
+    void setDriverRange(float _driverRange)
+    {
+        driverRange = _driverRange;
+    }
     /**
      * @brief  calculate
      * @param  val: (float) speed
