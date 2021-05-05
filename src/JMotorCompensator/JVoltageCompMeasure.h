@@ -22,25 +22,7 @@ private:
     unsigned long lastMeasurementMillis;
     unsigned int measurementInterval;
 
-public:
-    /**
-     * @brief  constructor
-     * @param  _measurePin: pin to use to measure battery voltage (you probably want to make a voltage divider with a couple resistors)
-     * @param  _DACUnitsPerVolt:  the value read through analogRead is divided by this value to get voltage
-     * @param  _measurementIntervalMillis:  wait this many milliseconds before taking another reading (default: 10)
-     */
-    JVoltageCompMeasure(byte _measurePin, float _DACUnitsPerVolt, float _driverRange = 1.0, unsigned int _measurementIntervalMillis = 10)
-    {
-        measurePin = _measurePin;
-        supplyVoltage = 10;
-        justStarted = true;
-        total = 0;
-        readIndex = 0;
-        DACUnitsPerVolt = _DACUnitsPerVolt;
-        lastMeasurementMillis = 0;
-        measurementInterval = _measurementIntervalMillis;
-    }
-    float adjust(float voltage, float driverRange)
+    void measure()
     {
         if (millis() - lastMeasurementMillis > measurementInterval) {
             lastMeasurementMillis = millis();
@@ -68,10 +50,34 @@ public:
                 supplyVoltage = 1.0 / DACUnitsPerVolt * readings[readIndex - 1];
             }
         }
+    }
+
+public:
+    /**
+     * @brief  constructor
+     * @param  _measurePin: pin to use to measure battery voltage (you probably want to make a voltage divider with a couple resistors)
+     * @param  _DACUnitsPerVolt:  the value read through analogRead is divided by this value to get voltage
+     * @param  _measurementIntervalMillis:  wait this many milliseconds before taking another reading (default: 10)
+     */
+    JVoltageCompMeasure(byte _measurePin, float _DACUnitsPerVolt, unsigned int _measurementIntervalMillis = 10)
+    {
+        measurePin = _measurePin;
+        supplyVoltage = 10;
+        justStarted = true;
+        total = 0;
+        readIndex = 0;
+        DACUnitsPerVolt = _DACUnitsPerVolt;
+        lastMeasurementMillis = 0;
+        measurementInterval = _measurementIntervalMillis;
+    }
+    float adjust(float voltage, float driverRange)
+    {
+        measure();
         return voltage / supplyVoltage * driverRange;
     }
     float getSupplyVoltage()
     {
+        measure();
         return supplyVoltage;
     }
 };

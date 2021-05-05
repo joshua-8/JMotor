@@ -22,6 +22,12 @@ public:
     virtual float setVelTarget(float vel);
 
     /**
+     * @brief  get target velocity for controller
+     * @retval (float) current velocity target
+     */
+    virtual float getVelTarget();
+
+    /**
      * @brief  get current velocity of motor
      * @retval (float)
      */

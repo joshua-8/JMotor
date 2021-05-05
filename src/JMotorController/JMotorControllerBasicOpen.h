@@ -65,6 +65,11 @@ public:
         return velocity;
     }
 
+    float getVelTarget()
+    {
+        return velocityTarget;
+    }
+
     float getVel()
     {
         return velocity;
@@ -79,7 +84,7 @@ public:
     {
         if (velocity != velocityTarget) {
             velocity += constrain(velocityTarget - velocity, -accelLimit * (micros() - lastRunMicros) / 1000000.0, accelLimit * (micros() - lastRunMicros) / 1000000.0);
-
+            driverInRange = (abs(velocity) < compensator.getMaxVel());
             velocity = constrain(velocity, -compensator.getMaxVel(), compensator.getMaxVel());
         }
         lastRunMicros = micros();
@@ -87,7 +92,7 @@ public:
             float lastSetVal = setVal;
             setVal = compensator.compensate(velocity);
             if (setVal != lastSetVal) {
-                driverInRange = driver.set(setVal);
+                driver.set(setVal);
             }
         }
     }
