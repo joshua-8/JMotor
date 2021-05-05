@@ -2,8 +2,8 @@
 #define J_VOLTAGE_COMP_MEASURE_H
 #include "JVoltageCompensator.h"
 #include <Arduino.h>
-
 /**
+ * @brief  measure supply voltage with analogRead and use that to convert voltage to value needed to set driver at to get that voltage
  * @note  N (the value in the template) is how many measurements to average together to smooth voltage readings
  */
 template <byte N>
