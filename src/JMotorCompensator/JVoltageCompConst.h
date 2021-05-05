@@ -23,9 +23,9 @@ public:
     /**
      * @brief  adjust the setting of what the motor controller supply voltage is
      * @param  _supplyVoltage: (float) new setting for what the supply voltage is
-     * @retval (boolean) true if value changed
+     * @retval (bool) true if value changed
      */
-    boolean changeSupplyVoltageSetting(float _supplyVoltage)
+    bool changeSupplyVoltageSetting(float _supplyVoltage)
     {
         if (supplyVoltage != _supplyVoltage) {
             supplyVoltage = _supplyVoltage;

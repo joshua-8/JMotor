@@ -19,7 +19,7 @@ private:
     int8_t reverse;
     float velocity;
     float distPerCountFactor;
-    boolean newSpeed;
+    bool newSpeed;
     uint16_t lastAngle;
     uint16_t lastVelAngle;
     long lastVelTurns;
@@ -98,13 +98,13 @@ public:
 
     /**
      * @brief  sets pins and settings for reading the encoder
-     * @param  _reverse: (boolean) reverse positive direction, default=false 
+     * @param  _reverse: (bool) reverse positive direction, default=false 
      * @param  _distPerCountFactor: (float) for the purposes of setting this factor a "count" is considered a full revolution of the absolute encoder
      * @param  _address: (byte) I2C address of 
      * @param  _velEnoughTime: (default=0, no limit) shortest interval between velocity calculations, if run() is called faster the calculation will wait to run
      * @param  _velEnoughTicks: (default=0, no limit) if the encoder turns more than this number of steps velocity calculations will be done even if velEnoughTime hasn't been reached
      */
-    JEncoderAS5048bI2C(boolean _reverse = false, float _distPerCountFactor = 1.0, uint8_t _address = 0x40, unsigned long _velEnoughTime = 0, unsigned long _velEnoughTicks = 0)
+    JEncoderAS5048bI2C(bool _reverse = false, float _distPerCountFactor = 1.0, uint8_t _address = 0x40, unsigned long _velEnoughTime = 0, unsigned long _velEnoughTicks = 0)
         : address(_address)
     {
         wire = &Wire;
@@ -197,9 +197,9 @@ public:
      * @brief  is the magnet in the optimal position
      *          Unlike other functions, this function does not rely on run()
      * @note  if this is false, the encoder may still be providing angle information
-     * @retval  (boolean) 
+     * @retval  (bool) 
      */
-    boolean isMagnetInRange()
+    bool isMagnetInRange()
     {
         uint8_t gain = getAutoGain();
         return (gain != 0) && (gain != 255);
@@ -253,12 +253,12 @@ public:
         distPerCountFactor = _factor / STEPS_PER_TURN;
     }
 
-    boolean hasDirection()
+    bool hasDirection()
     {
         return true;
     }
 
-    boolean isVelNew()
+    bool isVelNew()
     {
         return newSpeed;
     }

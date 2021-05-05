@@ -41,28 +41,28 @@ public:
 
     /**
      * @brief  change whether motor controller is enabled
-     * @param  _enable: (boolean)
-     * @retval (boolean) true if state changed
+     * @param  _enable: (bool)
+     * @retval (bool) true if state changed
      */
-    virtual boolean setEnable(boolean _enable);
+    virtual bool setEnable(bool _enable);
 
     /**
      * @brief  true if motor driver is being set to within its range, false if driver is at a maximum
-     * @retval (boolean)
+     * @retval (bool)
      */
-    virtual boolean isDriverInRange();
+    virtual bool isDriverInRange();
 
     /**
      * @brief  enable motor controller
-     * @retval (boolean) true if state changed
+     * @retval (bool) true if state changed
      */
-    virtual boolean enable();
+    virtual bool enable();
 
     /**
      * @brief  disable motor controller 
-     * @retval (boolean) true if state changed
+     * @retval (bool) true if state changed
      */
-    virtual boolean disable();
+    virtual bool disable();
 
     /**
      * @brief  if getDriverSetVal goes below this, isDriverInRange will go false
@@ -78,9 +78,16 @@ public:
 
     /**
      * @brief  is the controller enabled
-     * @retval (boolean)
+     * @retval (bool)
      */
-    virtual boolean getEnabled();
+    virtual bool getEnabled();
+
+    /**
+     * @brief  How fast of a motor speed setting would get adjusted to full motor power
+     * @note   may change as battery voltage changes
+     * @retval  (float)
+     */
+    virtual float getMaxVel();
 };
 #include "JMotorControllerBasicOpen.h"
 #endif

@@ -20,7 +20,7 @@ public:
      * @param  _reverse: false(default)
      * @param  _slowestIntervalMicros: after this many microseconds without an encoder tick velocity is set to zero.
      */
-    JEncoderQuadraturePinChange(byte _encoderAPin, byte _encoderBPin, float _countsToDistFactor = 1.0, boolean _reverse = false, unsigned long _slowestIntervalMicros = 100000UL)
+    JEncoderQuadraturePinChange(byte _encoderAPin, byte _encoderBPin, float _countsToDistFactor = 1.0, bool _reverse = false, unsigned long _slowestIntervalMicros = 100000UL)
         : JEncoderQuadrature(_encoderAPin, _encoderBPin, _countsToDistFactor, _reverse, _slowestIntervalMicros)
     {
     }

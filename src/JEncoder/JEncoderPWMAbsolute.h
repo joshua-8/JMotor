@@ -57,7 +57,7 @@ public:
         /**
          * @brief  HIGH or LOW, which state when pulse length increasing=increasing angle
          */
-        boolean dataState;
+        bool dataState;
     };
 
 protected:
@@ -69,20 +69,20 @@ private:
     uint16_t lastAngle;
     int8_t reverse;
     float distPerCountFactor;
-    boolean newSpeed;
+    bool newSpeed;
     uint16_t lastVelAngle;
     long lastVelTurns;
     unsigned long lastVelTimeMicros;
     unsigned long velEnoughTime;
     unsigned long velEnoughTicks;
     float velocity;
-    boolean newAngle;
+    bool newAngle;
 
     unsigned long dataStartMicros;
     unsigned long dataEndMicros;
     unsigned long earlyDataStartMicros;
     unsigned long oldDataEndMicros;
-    boolean justStarted;
+    bool justStarted;
 
     pwmSettings ps;
 
@@ -91,12 +91,12 @@ public:
      * @brief  sets pins and settings for reading the encoder
      * @param  _encoderPin: pin to read encoder signal with
      * @param  _ps: (struct pwmSettings) parameters of encoder signal
-     * @param  _reverse: (boolean) reverse positive direction, default=false 
+     * @param  _reverse: (bool) reverse positive direction, default=false 
      * @param  _distPerCountFactor: (float) for the purposes of setting this factor a "count" is considered a full revolution of the absolute encoder
      * @param  _velEnoughTime: (default=0, no limit) shortest interval (in MICROseconds) between velocity calculations, if run() is called faster the calculation will wait to run
      * @param  _velEnoughTicks: (default=0, no limit) if the encoder turns more than this number of steps velocity calculations will be done even if velEnoughTime hasn't been reached
      */
-    JEncoderPWMAbsolute(byte _encoderPin, pwmSettings _ps, boolean _reverse = false, float _distPerCountFactor = 1.0, unsigned long _velEnoughTime = 0, unsigned long _velEnoughTicks = 0)
+    JEncoderPWMAbsolute(byte _encoderPin, pwmSettings _ps, bool _reverse = false, float _distPerCountFactor = 1.0, unsigned long _velEnoughTime = 0, unsigned long _velEnoughTicks = 0)
         : ps(_ps)
     {
         encoderPin = _encoderPin;
@@ -195,12 +195,12 @@ public:
         distPerCountFactor = _factor / ps.RESOLUTION;
     }
 
-    boolean hasDirection()
+    bool hasDirection()
     {
         return true;
     }
 
-    boolean isVelNew()
+    bool isVelNew()
     {
         return newSpeed;
     }

@@ -15,22 +15,22 @@ public:
         , m2(_m2)
     {
     }
-    boolean set(float val)
+    bool set(float val)
     {
-        boolean m1state = m1.set(val);
-        boolean m2state = m2.set(val);
+        bool m1state = m1.set(val);
+        bool m2state = m2.set(val);
         return m1state && m2state;
     }
-    boolean setEnable(boolean _enable)
+    bool setEnable(bool _enable)
     {
-        boolean m1state = m1.setEnable(_enable);
-        boolean m2state = m2.setEnable(_enable);
+        bool m1state = m1.setEnable(_enable);
+        bool m2state = m2.setEnable(_enable);
         return m1state || m2state;
     }
-    boolean getEnable()
+    bool getEnable()
     {
-        boolean m1state = m1.getEnable();
-        boolean m2state = m2.getEnable();
+        bool m1state = m1.getEnable();
+        bool m2state = m2.getEnable();
         return m1state || m2state;
     }
     float getMaxRange()

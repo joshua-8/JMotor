@@ -10,11 +10,11 @@
  */
 class JMotorDriverAvrPWMDir : public JMotorDriver {
 private:
-    boolean enabled = false;
+    bool enabled = false;
     byte dir;
 
 public:
-    boolean reverse = false;
+    bool reverse = false;
     JMotorDriverAvrPWM pwmDriver;
     /**
      * @brief  constructor, sets pins
@@ -23,14 +23,14 @@ public:
      * @param  _dirPin: direction input to motor controller (digital)
      * @param  _rev = false: if false(default), direction pin set HIGH for positive speed, LOW for negative speed
      */
-    JMotorDriverAvrPWMDir(byte _speedPin, byte _dirPin, boolean _rev = false)
+    JMotorDriverAvrPWMDir(byte _speedPin, byte _dirPin, bool _rev = false)
         : pwmDriver { _speedPin }
     {
         enabled = false;
         dir = _dirPin;
         reverse = _rev;
     }
-    boolean set(float val)
+    bool set(float val)
     {
         if (enabled) {
             if (val > 0) {
@@ -43,7 +43,7 @@ public:
         }
         return abs(val) < 1.0;
     }
-    boolean setEnable(boolean _enable)
+    bool setEnable(bool _enable)
     {
         if (_enable) {
             if (!enabled) {
@@ -63,7 +63,7 @@ public:
         }
         return false;
     }
-    boolean getEnable()
+    bool getEnable()
     {
         return enabled;
     }

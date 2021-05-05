@@ -11,19 +11,19 @@ private:
     int PWM_RES = 12;
     int PWM_FREQ = 2000; // <= int(80E6 / 2^PWM_RES), 2kHz recommended for motor PWM
     int PWM_RANGE = 4095; // 2^PWM_RES -1
-    boolean enabled = false;
+    bool enabled = false;
     byte ch;
     byte pin;
 
 public:
-    boolean disableState = LOW;
+    bool disableState = LOW;
     /**
     * @brief  constructor, sets pins, default PWM
     * @param  _ch: ledc channel (must be unique for each driver)
     * @param  _pin: pin to output signal on
     * @param  _disableState = LOW: when disabled, set pin LOW(default) or HIGH
     */
-    JMotorDriverEsp32PWM(byte _ch, byte _pin, boolean _disableState = LOW)
+    JMotorDriverEsp32PWM(byte _ch, byte _pin, bool _disableState = LOW)
     {
         enabled = false;
         ch = _ch;
@@ -38,7 +38,7 @@ public:
      * @param  resolution: bits of resolution, tradeoff with frequency, default 12
      * @param  _disableState = LOw: when disabled, set pin LOW(default) or HIGH
      */
-    JMotorDriverEsp32PWM(byte _ch, byte _pin, int freq, int resolution, boolean _disableState = LOW)
+    JMotorDriverEsp32PWM(byte _ch, byte _pin, int freq, int resolution, bool _disableState = LOW)
     {
         enabled = false;
         ch = _ch;
@@ -48,7 +48,7 @@ public:
         PWM_FREQ = freq;
         PWM_RANGE = (1 << PWM_RES) - 1;
     }
-    boolean set(float _val)
+    bool set(float _val)
     {
         if (enabled) {
             int val = constrain(_val * PWM_RANGE, 0, PWM_RANGE);
@@ -56,7 +56,7 @@ public:
         }
         return (_val > 0) && (_val < 1.0);
     }
-    boolean setEnable(boolean _enable)
+    bool setEnable(bool _enable)
     {
         if (_enable) {
             if (!enabled) {
@@ -80,7 +80,7 @@ public:
         }
         return false;
     }
-    boolean getEnable()
+    bool getEnable()
     {
         return enabled;
     }

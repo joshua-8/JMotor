@@ -58,8 +58,8 @@ class JMotorCompStandard : public JMotorCompensator {
 private:
     JVoltageCompensator& voltComp;
     JMotorCompStandardConfig config;
-    boolean startBoosting;
-    boolean startBoostingArmed;
+    bool startBoosting;
+    bool startBoostingArmed;
     unsigned long startBoostingTimeMillis;
     float multiplier;
 

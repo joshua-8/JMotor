@@ -13,23 +13,23 @@ public:
      * @brief  set motor power
      * @note  val should be between getMinRange and getMaxRange, but constrained internally
      * @param  val:  (float) val
-     * @retval (boolean) false if at end of power range, true otherwise
+     * @retval (bool) false if at end of power range, true otherwise
      */
-    virtual boolean set(float val);
+    virtual bool set(float val);
 
     /**
      * @brief  use to enable or disable a motor, and sets up pin states
      * @note   setEnable(true) must be called before a motor driver will activate
-     * @param  _enable: (boolean) true=enable, false=disable
-     * @retval (boolean) true if state changed, false if state already set
+     * @param  _enable: (bool) true=enable, false=disable
+     * @retval (bool) true if state changed, false if state already set
      */
-    virtual boolean setEnable(boolean _enable);
+    virtual bool setEnable(bool _enable);
 
     /**
      * @brief  get the enable state of the driver
-     * @retval (boolean) true if enabled, false if disabled
+     * @retval (bool) true if enabled, false if disabled
      */
-    virtual boolean getEnable();
+    virtual bool getEnable();
 
     /**
      * @brief  high end of the range
@@ -48,9 +48,9 @@ public:
     /**
      * @brief  enable motor
      * @note equivalent to setEnable(true)
-     * @retval (boolean) true if state changed, false if state already set
+     * @retval (bool) true if state changed, false if state already set
      */
-    boolean enable()
+    bool enable()
     {
         return setEnable(true);
     }
@@ -58,9 +58,9 @@ public:
     /**
      * @brief  disable motor
      * @note equivalent to setEnable(false)
-     * @retval (boolean) true if state changed, false if state already set
+     * @retval (bool) true if state changed, false if state already set
      */
-    boolean disable()
+    bool disable()
     {
         return setEnable(false);
     }

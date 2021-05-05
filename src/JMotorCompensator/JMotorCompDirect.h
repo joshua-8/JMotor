@@ -24,9 +24,9 @@ public:
     }
     /**
      * @param  _multiplier: (float) driver units per speed units
-     * @retval (boolean) true if multiplier changed
+     * @retval (bool) true if multiplier changed
      */
-    boolean setMultiplier(float _multiplier)
+    bool setMultiplier(float _multiplier)
     {
         if (multiplier != _multiplier) {
             multiplier = _multiplier;

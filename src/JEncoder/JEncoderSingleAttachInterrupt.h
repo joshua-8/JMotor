@@ -16,7 +16,7 @@ public:
      * @param  _reverse: false(default)
      * @param  _slowestIntervalMicros: after this many microseconds without an encoder tick velocity is set to zero.
      */
-    JEncoderSingleAttachInterrupt(byte _encoderPin, float _countsToDistFactor = 1.0, boolean _reverse = false, unsigned long _slowestIntervalMicros = 100000UL)
+    JEncoderSingleAttachInterrupt(byte _encoderPin, float _countsToDistFactor = 1.0, bool _reverse = false, unsigned long _slowestIntervalMicros = 100000UL)
         : JEncoderSingle(_encoderPin, _countsToDistFactor, _reverse, _slowestIntervalMicros)
     {
     }

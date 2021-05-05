@@ -69,15 +69,15 @@ public:
 
     /**
      * @brief  can this encoder mesure direction or just speed
-     * @retval (boolean) true = can measure direction
+     * @retval (bool) true = can measure direction
      */
-    virtual boolean hasDirection();
+    virtual bool hasDirection();
 
     /**
      * @brief  could be useful for only recalculating a control loop if there's new velocity data
-     * @retval (boolean) true if velocity has changed since this function was last called
+     * @retval (bool) true if velocity has changed since this function was last called
      */
-    virtual boolean isVelNew();
+    virtual bool isVelNew();
 
     /**
      * @brief  if an encoder needs to have some code called each loop (like absolute encoder polling encoder and calculating amount turned)

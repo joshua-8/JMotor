@@ -14,13 +14,13 @@ private:
     /**
      * until N readings have been made, supplyVoltage is just the instantaneous measurement
      */
-    boolean justStarted;
+    bool justStarted;
     int readings[N]; // the readings from the analog input
     byte readIndex; // the index of the current reading
     long total; // the running total
     float DACUnitsPerVolt;
     unsigned long lastMeasurementMillis;
-    int measurementInterval;
+    unsigned int measurementInterval;
 
 public:
     /**
@@ -29,7 +29,7 @@ public:
      * @param  _DACUnitsPerVolt:  the value read through analogRead is divided by this value to get voltage
      * @param  _measurementIntervalMillis:  wait this many milliseconds before taking another reading (default: 10)
      */
-    JVoltageCompMeasure(byte _measurePin, float _DACUnitsPerVolt, float _driverRange = 1.0, int _measurementIntervalMillis = 10)
+    JVoltageCompMeasure(byte _measurePin, float _DACUnitsPerVolt, float _driverRange = 1.0, unsigned int _measurementIntervalMillis = 10)
     {
         measurePin = _measurePin;
         supplyVoltage = 10;

@@ -9,7 +9,7 @@
  */
 class JMotorDriverAvrServo : public JMotorDriverServo {
 private:
-    boolean enabled = false;
+    bool enabled = false;
     byte servoPin;
     Servo motorServo;
 
@@ -32,7 +32,7 @@ public:
         enabled = false;
         servoPin = _servoPin;
     }
-    boolean set(float _val)
+    bool set(float _val)
     {
         float val = constrain(_val, -1.0, 1.0);
         if (enabled) {
@@ -43,7 +43,7 @@ public:
         }
         return abs(_val) < 1.0;
     }
-    boolean setEnable(boolean _enable)
+    bool setEnable(bool _enable)
     {
         if (_enable) {
             if (!enabled) {
@@ -61,7 +61,7 @@ public:
         }
         return false;
     }
-    boolean getEnable()
+    bool getEnable()
     {
         return enabled;
     }
