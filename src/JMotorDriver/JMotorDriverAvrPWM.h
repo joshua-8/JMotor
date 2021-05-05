@@ -9,7 +9,7 @@
  */
 class JMotorDriverAvrPWM : public JMotorDriver {
 private:
-    boolean enabled = false;
+    bool enabled = false;
     byte pin;
 
 public:
@@ -17,20 +17,20 @@ public:
      * @brief  change PWM_RANGE to match the range of analogWrite (change after using analogWriteResolution)
      */
     int PWM_RANGE = 255;
-    boolean disableState = LOW;
+    bool disableState = LOW;
     /**
      * @brief  constructor, sets pins
      * @note   make sure to check which pins on your board are PWM capable
      * @param  _pin: what pin to use
      * @param  _disableState = LOW: when disabled, set pin LOW(default) or HIGH
      */
-    JMotorDriverAvrPWM(byte _pin, boolean _disableState = LOW)
+    JMotorDriverAvrPWM(byte _pin, bool _disableState = LOW)
     {
         enabled = false;
         pin = _pin;
         _disableState = disableState;
     }
-    boolean set(float _val)
+    bool set(float _val)
     {
         if (enabled) {
             int val = constrain(_val * PWM_RANGE, 0, PWM_RANGE);
@@ -38,7 +38,7 @@ public:
         }
         return (_val > 0.0) && (_val < 1.0);
     }
-    boolean setEnable(boolean _enable)
+    bool setEnable(bool _enable)
     {
         if (_enable) {
             if (!enabled) {
@@ -57,7 +57,7 @@ public:
         }
         return false;
     }
-    boolean getEnable()
+    bool getEnable()
     {
         return enabled;
     }

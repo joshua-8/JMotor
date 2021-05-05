@@ -9,13 +9,13 @@
  */
 class JMotorDriverAvrL293 : public JMotorDriver {
 private:
-    boolean enabled = false;
+    bool enabled = false;
     byte i1;
     byte i2;
 
 public:
     JMotorDriverAvrPWM pwmDriver;
-    boolean breakOn; // can be changed while running
+    bool breakOn; // can be changed while running
     /**
      * @brief  constructor, sets pins
      * @param  _en: enable(speed) pin on driver
@@ -24,7 +24,7 @@ public:
      * @param  _breakOn = true: if true (default), add extra resistance to motor when set to 0 power (by shorting motor terminals)
      * @param  breakWhenDisabled = false: if false (default) turn off break when disabled, if true, keep electrically breaking
      */
-    JMotorDriverAvrL293(byte _en, byte _i1, byte _i2, boolean _breakOn = true, boolean breakWhenDisabled = false)
+    JMotorDriverAvrL293(byte _en, byte _i1, byte _i2, bool _breakOn = true, bool breakWhenDisabled = false)
         : pwmDriver { _en, breakWhenDisabled }
     {
         enabled = false;
@@ -32,7 +32,7 @@ public:
         i2 = _i2;
         breakOn = _breakOn;
     }
-    boolean set(float val)
+    bool set(float val)
     {
         if (enabled) {
             if (val > 0) {
@@ -53,7 +53,7 @@ public:
         }
         return abs(val) < 1.0;
     }
-    boolean setEnable(boolean _enable)
+    bool setEnable(bool _enable)
     {
         if (_enable) {
             if (!enabled) {
@@ -80,7 +80,7 @@ public:
         }
         return false;
     }
-    boolean getEnable()
+    bool getEnable()
     {
         return enabled;
     }

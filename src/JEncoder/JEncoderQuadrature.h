@@ -20,14 +20,14 @@ private:
     int8_t reverse; //can be 1 or -1
     float distPerCountFactor;
 
-    volatile boolean velNew;
+    volatile bool velNew;
     volatile long tickCounter;
-    volatile boolean encForwards;
+    volatile bool encForwards;
     volatile unsigned long lastEncoderTickMicros;
     volatile unsigned long encoderIntervalMicros;
-    boolean newSpeed;
+    bool newSpeed;
     unsigned long slowestIntervalMicros;
-    boolean wasTimedOut;
+    bool wasTimedOut;
 
 protected:
     /**
@@ -39,7 +39,7 @@ protected:
      * @param  _reverse: false(default)
      * @param  _slowestIntervalMicros: after this many microseconds without an encoder tick velocity is set to zero.
      */
-    JEncoderQuadrature(byte _encoderAPin, byte _encoderBPin, float _countsToDistFactor = 1.0, boolean _reverse = false, unsigned long _slowestIntervalMicros = 100000UL)
+    JEncoderQuadrature(byte _encoderAPin, byte _encoderBPin, float _countsToDistFactor = 1.0, bool _reverse = false, unsigned long _slowestIntervalMicros = 100000UL)
     {
         encoderAPin = _encoderAPin;
         encoderBPin = _encoderBPin;
@@ -120,7 +120,7 @@ public:
      * @param  _reverse: whether to invert sign of readings
      * @retval None
      */
-    void setReverse(boolean _reverse)
+    void setReverse(bool _reverse)
     {
         if (_reverse) {
             reverse = -1;
@@ -128,11 +128,11 @@ public:
             reverse = 1;
         }
     }
-    boolean hasDirection()
+    bool hasDirection()
     {
         return true;
     }
-    boolean isVelNew()
+    bool isVelNew()
     {
         //occasionally micros seems to be smaller than tempEncoderTickMicros and there's an overflow
         //  adding tempInterval fixes the problem (looking back one more tick)

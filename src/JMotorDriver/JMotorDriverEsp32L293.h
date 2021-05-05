@@ -10,13 +10,13 @@
  */
 class JMotorDriverEsp32L293 : public JMotorDriver {
 private:
-    boolean enabled = false;
+    bool enabled = false;
     byte i1;
     byte i2;
 
 public:
     JMotorDriverEsp32PWM pwmDriver;
-    boolean breakOn;
+    bool breakOn;
     /**
  * @brief  constructor, sets pins, default PWM
  * @param  _ch: ledc channel (must be unique for each driver)
@@ -26,7 +26,7 @@ public:
  * @param  _breakOn = true: if true (default), add extra resistance to motor when set to 0 power (by shorting motor terminals)
  * @param  breakWhenDisabled = false: if false (default) turn off break when disabled, if true, keep electrically breaking
  */
-    JMotorDriverEsp32L293(byte _ch, byte _enablePin, byte _i1, byte _i2, boolean _breakOn = true, boolean breakWhenDisabled = false)
+    JMotorDriverEsp32L293(byte _ch, byte _enablePin, byte _i1, byte _i2, bool _breakOn = true, bool breakWhenDisabled = false)
         : pwmDriver { _ch, _enablePin, breakWhenDisabled }
     {
         enabled = false;
@@ -45,7 +45,7 @@ public:
      * @param  _breakOn = true: if true (default), add extra resistance to motor when set to 0 power (by shorting motor terminals)
      * @param  breakWhenDisabled = false: if false (default) turn off break when disabled, if true, keep electrically breaking
      */
-    JMotorDriverEsp32L293(byte _ch, byte _enPin, byte _i1, byte _i2, int freq, int resolution, boolean _breakOn = true, boolean breakWhenDisabled = false)
+    JMotorDriverEsp32L293(byte _ch, byte _enPin, byte _i1, byte _i2, int freq, int resolution, bool _breakOn = true, bool breakWhenDisabled = false)
         : pwmDriver { _ch, _enPin, freq, resolution, breakWhenDisabled }
     {
         enabled = false;
@@ -53,7 +53,7 @@ public:
         i2 = _i2;
         breakOn = _breakOn;
     }
-    boolean set(float val)
+    bool set(float val)
     {
         if (enabled) {
             if (val > 0) {
@@ -74,7 +74,7 @@ public:
         }
         return abs(val) < 1.0;
     }
-    boolean setEnable(boolean _enable)
+    bool setEnable(bool _enable)
     {
         if (_enable) {
             if (!enabled) {
@@ -102,7 +102,7 @@ public:
         }
         return false;
     }
-    boolean getEnable()
+    bool getEnable()
     {
         return enabled;
     }

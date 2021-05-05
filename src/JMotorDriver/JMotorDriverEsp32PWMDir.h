@@ -9,12 +9,12 @@
  */
 class JMotorDriverEsp32PWMDir : public JMotorDriver {
 private:
-    boolean enabled = false;
+    bool enabled = false;
     byte dir;
 
 public:
     JMotorDriverEsp32PWM pwmDriver;
-    boolean reverse = false;
+    bool reverse = false;
     /**
      * @brief  constructor, sets pins, default PWM
      * @param  _ch:  ledc channel (must be unique for each driver)
@@ -22,7 +22,7 @@ public:
      * @param  _dirPin: pin to output direction signal on
      * @param  _rev = false: if false(default), direction pin set HIGH for positive speed, LOW for negative speed
      */
-    JMotorDriverEsp32PWMDir(byte _ch, byte _enablePin, byte _dirPin, boolean _rev = false)
+    JMotorDriverEsp32PWMDir(byte _ch, byte _enablePin, byte _dirPin, bool _rev = false)
         : pwmDriver { _ch, _enablePin }
     {
         enabled = false;
@@ -37,13 +37,13 @@ public:
      * @param  resolution: bits of resolution, tradeoff with frequency, default 12
      * @param  _rev = false: if false(default), direction pin set HIGH for positive speed, LOW for negative speed
      */
-    JMotorDriverEsp32PWMDir(byte _ch, byte _enPin, byte _dirPin, int freq, int resolution, boolean _rev = false)
+    JMotorDriverEsp32PWMDir(byte _ch, byte _enPin, byte _dirPin, int freq, int resolution, bool _rev = false)
         : pwmDriver { _ch, _enPin, freq, resolution }
     {
         enabled = false;
         dir = _dirPin;
     }
-    boolean set(float val)
+    bool set(float val)
     {
         if (enabled) {
             if (val > 0) {
@@ -56,7 +56,7 @@ public:
         }
         return abs(val) < 1.0;
     }
-    boolean setEnable(boolean _enable)
+    bool setEnable(bool _enable)
     {
         if (_enable) {
             if (!enabled) {
@@ -76,7 +76,7 @@ public:
         }
         return false;
     }
-    boolean getEnable()
+    bool getEnable()
     {
         return enabled;
     }
