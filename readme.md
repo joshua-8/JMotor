@@ -1,20 +1,18 @@
 # JMotor Library
 
-## work in progress! Bug reports/fixes welcomed
-
-![](https://img.shields.io/github/workflow/status/joshua-8/JMotor/actions)
 [![arduino-library-badge](https://www.ardu-badge.com/badge/JMotor.svg?)](https://www.ardu-badge.com/JMotor)
 
+## work in progress! Bug reports/fixes welcomed
 
 reference docs (made with Doxygen): https://joshua-8.github.io/JMotor/md_readme.html
 
 list of all classes: https://joshua-8.github.io/JMotor/hierarchy.html
 
-*add description of library here* (copy to/from library.properties description)
-
 This library defines common interfaces for reading encoders and controlling motors allowing for easy open or closed loop motor control.
 
-Supports reading the following kinds of encoders: quadrature, single pin, absolute with PWM output, AS5048b with I2C. Supports controlling the following kinds of motor controllers: single PWM pin, PWM and direction pins, servo signal, L293 driver. 
+Supports reading the following kinds of encoders: quadrature, single pin, absolute with PWM output, AS5048b with I2C.
+
+Supports controlling the following kinds of motor controllers: single PWM pin, PWM and direction pins, servo signal, L293 driver. 
 
 supports the following boards:   ESP32, Arduino AVR (tested on nano), Teensy (tested on LC), SAMD M0 boards (tested on feather m0)
 
