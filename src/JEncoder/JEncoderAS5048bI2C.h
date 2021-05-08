@@ -175,7 +175,7 @@ public:
     }
     /**
      * @brief  A custom (repeatable) angle can be set for what the sensor calls zero relative to default zero.
-     * @param zeroAngle (int) [0, STEPS_PER_TURN)
+     * @param zeroAngle: (int) [0, STEPS_PER_TURN)
      */
     void setEncoderZero(int zeroAngle)
     {
@@ -217,11 +217,22 @@ public:
 
     long zeroCounter()
     {
+        return zeroCounter(true);
+    }
+
+    /**
+     * @brief  reset the counter of how far the encoder has turned
+     * @param  _resetAngle: (bool) true=zero absolute angle measurement and set current position to zero. false= zero out number of turns, but angle stays relative to absolute encoder's zero point
+     * @retval (long) returns value of counter before it is reset
+     */
+    long zeroCounter(bool _resetAngle)
+    {
         long tTurns = turns;
-        uint16_t tAngle = angle;
         turns = 0;
-        angle = 0;
-        return (tTurns * STEPS_PER_TURN + tAngle) * reverse;
+        if (_resetAngle) {
+            setEncoderZero();
+        }
+        return (tTurns * STEPS_PER_TURN + angle) * reverse;
     }
 
     float getVel()

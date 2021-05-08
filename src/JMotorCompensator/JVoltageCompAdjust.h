@@ -2,6 +2,9 @@
 #define J_VOLTAGE_COMP_ADJUST_H
 #include "JVoltageCompensator.h"
 #include <Arduino.h>
+/**
+ * @brief  convert voltage to value needed to set driver at to get that voltage, uses reference to variable that should be equal to measured supply voltage
+ */
 class JVoltageCompAdjust : public JVoltageCompensator {
 private:
     float& supplyVoltage;

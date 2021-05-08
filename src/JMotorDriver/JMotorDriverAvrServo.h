@@ -25,10 +25,13 @@ public:
     /**
      * @brief  constructor, sets pins
      * @param  _servoPin: pin to attach servo to
+     * @param  _minServoValue: (int) minimum servo pulse, default: 544 microseconds
+     * @param  _maxServoValue: (int) maximum servo pulse, default: 2400 microseconds
      */
-    JMotorDriverAvrServo(byte _servoPin)
+    JMotorDriverAvrServo(byte _servoPin, int _minServoValue = 544, int _maxServoValue = 2400)
     {
-
+        minServoValue = _minServoValue;
+        maxServoValue = _maxServoValue;
         enabled = false;
         servoPin = _servoPin;
     }

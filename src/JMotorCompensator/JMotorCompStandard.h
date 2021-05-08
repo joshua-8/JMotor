@@ -136,6 +136,11 @@ public:
         }
     }
 
+    float getMinVel()
+    {
+        return config.motor_stop_speed;
+    }
+
 private:
     float calcSlope(float ret)
     {

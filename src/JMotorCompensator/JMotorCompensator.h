@@ -32,6 +32,12 @@ public:
      * @retval  (float)
      */
     virtual float getMaxVel();
+
+    /**
+     * @brief  Slowest speed motor can go
+     * @retval  (float)
+     */
+    virtual float getMinVel();
 };
 #include "JMotorCompDirect.h"
 #include "JMotorCompStandard.h"

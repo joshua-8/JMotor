@@ -9,7 +9,7 @@
  * @brief  A motor controller object that uses a JMotorCompensator to set velocity of a motor
  * @note  Open loop, and no position based commands
  */
-class JMotorControllerBasicOpen : public JMotorControllerBase {
+class JMotorControllerBasicOpen : public virtual JMotorControllerBase {
 protected:
     float velocity;
     float setVal;
@@ -55,13 +55,13 @@ public:
     {
         velocity = vel;
         velocityTarget = vel;
-        run();
+        JMotorControllerBasicOpen::run();
     }
 
     float setVelTarget(float vel)
     {
         velocityTarget = vel;
-        run();
+        JMotorControllerBasicOpen::run();
         return velocity;
     }
 
@@ -136,6 +136,11 @@ public:
     float getMaxVel()
     {
         return compensator.getMaxVel();
+    }
+
+    float getMinVel()
+    {
+        return compensator.getMinVel();
     }
 };
 #endif

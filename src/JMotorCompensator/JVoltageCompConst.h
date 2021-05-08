@@ -2,6 +2,9 @@
 #define J_VOLTAGE_COMP_CONST_H
 #include "JVoltageCompensator.h"
 #include <Arduino.h>
+/**
+ * @brief  convert voltage to value needed to set driver at to get that voltage, with constant value for what supply voltage is
+ */
 class JVoltageCompConst : public JVoltageCompensator {
 private:
     float supplyVoltage;

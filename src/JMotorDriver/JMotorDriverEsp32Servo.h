@@ -33,8 +33,10 @@ public:
      * @param  _freq = 50: Hz (default 50) must be <= int(80E6 / 2^resBits)
      * @param  _resBits = 20: (default 20) tradeoff with max available frequency
      */
-    JMotorDriverEsp32Servo(byte _pwmChannel, byte _servoPin, int _freq = 50, int _resBits = 20)
+    JMotorDriverEsp32Servo(byte _pwmChannel, byte _servoPin, int _freq = 50, int _resBits = 20, int _minServoValue = 544, int _maxServoValue = 2400)
     {
+        minServoValue = _minServoValue;
+        maxServoValue = _maxServoValue;
         enabled = false;
         servoPin = _servoPin;
         pwmChannel = _pwmChannel;

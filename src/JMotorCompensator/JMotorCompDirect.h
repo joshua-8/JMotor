@@ -38,5 +38,10 @@ public:
     {
         return driverRange / multiplier;
     }
+
+    float getMinVel()
+    {
+        return 0;
+    }
 };
 #endif

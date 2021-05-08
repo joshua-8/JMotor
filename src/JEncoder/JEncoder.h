@@ -3,20 +3,24 @@
 #include <Arduino.h>
 //**********SEE BOTTOM OF THIS FILE FOR #INCLUDES OF SUBCLASSES**********//
 
-/*
+/* \def
     * Functions called by interrupts can't expect parameters or be functions of classes so a workaround is needed to use interrupts in a class.
     * The workaround that's used here is global functions need to be made when a new instance of this class is made.
     * The global function(s) get used when attaching interrupts, and the global function(s) can call a function inside the class.
     * The following macros makes it easy to make the global function(s).
+    * 
+    * Put IRAM_ATTR keyword before macro when calling on esp32
     */
 #define jENCODER_MAKE_ISR_MACRO(name) \
     void name##_jENCODER_ISR() { name.encoderISR(); }
 
-/*  *
+/* \def
     * Functions called by interrupts can't expect parameters or be functions of classes so a workaround is needed to use interrupts in a class.
     * The workaround that's used here is global functions need to be made when a new instance of this class is made.
     * The global function(s) get used when attaching interrupts, and the global function(s) can call a function inside the class.
     * The following macros makes it easy to make the global function(s).
+    * 
+    * Put IRAM_ATTR keyword before macro when calling on esp32
     */
 #define jENCODER_MAKE_ISRS_MACRO(name)            \
     void name##_jENCODER_ISR_A() { name.ISRA(); } \
