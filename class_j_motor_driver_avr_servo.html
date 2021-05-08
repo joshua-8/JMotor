@@ -97,9 +97,9 @@ Collaboration diagram for JMotorDriverAvrServo:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5ce60ddb3b67e42d044d45f7a2b5ece3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_servo.html#a5ce60ddb3b67e42d044d45f7a2b5ece3">JMotorDriverAvrServo</a> (byte _servoPin)</td></tr>
-<tr class="memdesc:a5ce60ddb3b67e42d044d45f7a2b5ece3"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins  <a href="class_j_motor_driver_avr_servo.html#a5ce60ddb3b67e42d044d45f7a2b5ece3">More...</a><br /></td></tr>
-<tr class="separator:a5ce60ddb3b67e42d044d45f7a2b5ece3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b3e4711b0fd39d2e80247aed385fd73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_servo.html#a0b3e4711b0fd39d2e80247aed385fd73">JMotorDriverAvrServo</a> (byte _servoPin, int _minServoValue=544, int _maxServoValue=2400)</td></tr>
+<tr class="memdesc:a0b3e4711b0fd39d2e80247aed385fd73"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins  <a href="class_j_motor_driver_avr_servo.html#a0b3e4711b0fd39d2e80247aed385fd73">More...</a><br /></td></tr>
+<tr class="separator:a0b3e4711b0fd39d2e80247aed385fd73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a482e65e081c58870c469d64d5b842787"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_servo.html#a482e65e081c58870c469d64d5b842787">set</a> (float _val)</td></tr>
 <tr class="memdesc:a482e65e081c58870c469d64d5b842787"><td class="mdescLeft">&#160;</td><td class="mdescRight">set motor power  <a href="class_j_motor_driver_avr_servo.html#a482e65e081c58870c469d64d5b842787">More...</a><br /></td></tr>
 <tr class="separator:a482e65e081c58870c469d64d5b842787"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,8 +134,8 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>wraps standard servo library. For servos and motor controllers that use servo signals (ESCs) </p>
 <dl class="section note"><dt>Note</dt><dd>compatible with all boards that support analogWrite() </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a5ce60ddb3b67e42d044d45f7a2b5ece3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ce60ddb3b67e42d044d45f7a2b5ece3">&#9670;&nbsp;</a></span>JMotorDriverAvrServo()</h2>
+<a id="a0b3e4711b0fd39d2e80247aed385fd73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b3e4711b0fd39d2e80247aed385fd73">&#9670;&nbsp;</a></span>JMotorDriverAvrServo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -147,8 +147,24 @@ Public Attributes</h2></td></tr>
           <td class="memname">JMotorDriverAvrServo::JMotorDriverAvrServo </td>
           <td>(</td>
           <td class="paramtype">byte&#160;</td>
-          <td class="paramname"><em>_servoPin</em></td><td>)</td>
+          <td class="paramname"><em>_servoPin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_minServoValue</em> = <code>544</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_maxServoValue</em> = <code>2400</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -162,6 +178,8 @@ Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_servoPin</td><td>pin to attach servo to </td></tr>
+    <tr><td class="paramname">_minServoValue</td><td>(int) minimum servo pulse, default: 544 microseconds </td></tr>
+    <tr><td class="paramname">_maxServoValue</td><td>(int) maximum servo pulse, default: 2400 microseconds </td></tr>
   </table>
   </dd>
 </dl>

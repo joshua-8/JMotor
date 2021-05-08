@@ -1,4 +1,4 @@
 <map id="JVoltageCompConst" name="JVoltageCompConst">
-<area shape="rect" id="node1" title=" " alt="" coords="10,80,151,107"/>
+<area shape="rect" id="node1" title="convert voltage to value needed to set driver at to get that voltage, with constant value for what su..." alt="" coords="10,80,151,107"/>
 <area shape="rect" id="node2" href="$class_j_voltage_compensator.html" title="convert voltage to value needed to set driver at to get that voltage" alt="" coords="5,5,156,32"/>
 </map>

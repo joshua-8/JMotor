@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inc_321',['inc',['../main_8cpp.html#a57f18d77123735e874dee2abe841bf0e',1,'main.cpp']]]
+  ['lastrunmicros_352',['lastRunMicros',['../class_j_motor_controller_basic_open.html#a7a05d95ffc5824b523b7e89ebacd5247',1,'JMotorControllerBasicOpen']]]
 ];

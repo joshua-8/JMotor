@@ -1,0 +1,4 @@
+<map id="JMotorControllerBasicOpen::getMinVel" name="JMotorControllerBasicOpen::getMinVel">
+<area shape="rect" id="node1" title="slowest speed motor can go" alt="" coords="5,5,187,47"/>
+<area shape="rect" id="node2" href="$class_j_motor_compensator.html#a8497819d10b2fa39b1b4062a7d99d6d1" title="Slowest speed motor can go." alt="" coords="235,5,380,47"/>
+</map>

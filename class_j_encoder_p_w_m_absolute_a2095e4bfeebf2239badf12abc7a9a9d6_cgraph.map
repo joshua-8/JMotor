@@ -1,0 +1,4 @@
+<map id="JEncoderPWMAbsolute::zeroCounter" name="JEncoderPWMAbsolute::zeroCounter">
+<area shape="rect" id="node1" title="reset the zero point of the encoder" alt="" coords="5,5,164,47"/>
+<area shape="rect" id="node2" href="$class_j_encoder_p_w_m_absolute.html#a9b30ff9c872fb49b149c1f9b084b4f94" title="change what angle of the absolute encoder is zero" alt="" coords="212,5,371,47"/>
+</map>

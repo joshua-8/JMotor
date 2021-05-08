@@ -1,4 +1,4 @@
 <map id="JMotorDriverEsp32Servo::setFrequencyAndResolution" name="JMotorDriverEsp32Servo::setFrequencyAndResolution">
 <area shape="rect" id="node1" title="set frequency that servo signal pulse is repeated at and how many bits are used internally for resolu..." alt="" coords="225,5,416,47"/>
-<area shape="rect" id="node2" href="$class_j_motor_driver_esp32_servo.html#abcec312fb1f080578aaac2e7e232559b" title="constructor, sets pins, custom frequency and resolution optional" alt="" coords="5,5,177,47"/>
+<area shape="rect" id="node2" href="$class_j_motor_driver_esp32_servo.html#afcb74840e1b8fa0b50ed5cea4e6d0379" title="constructor, sets pins, custom frequency and resolution optional" alt="" coords="5,5,177,47"/>
 </map>

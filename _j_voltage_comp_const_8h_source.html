@@ -73,40 +73,40 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define J_VOLTAGE_COMP_CONST_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_j_voltage_compensator_8h.html">JVoltageCompensator.h</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_j_voltage_comp_const.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_j_voltage_comp_const.html">JVoltageCompConst</a> : <span class="keyword">public</span> <a class="code" href="class_j_voltage_compensator.html">JVoltageCompensator</a> {</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordtype">float</span> supplyVoltage;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_j_voltage_comp_const.html#a232304a1ff678562f11b5450ba96711e">   15</a></span>&#160;    <a class="code" href="class_j_voltage_comp_const.html#a232304a1ff678562f11b5450ba96711e">JVoltageCompConst</a>(<span class="keywordtype">float</span> _supplyVoltage = 1.0)</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        supplyVoltage = _supplyVoltage;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_j_voltage_comp_const.html#a12da12d8f129eaf1ffb7a92045edba50">   19</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_voltage_comp_const.html#a12da12d8f129eaf1ffb7a92045edba50">adjust</a>(<span class="keywordtype">float</span> voltage, <span class="keywordtype">float</span> driverRange)</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">return</span> voltage / supplyVoltage * driverRange;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_j_voltage_comp_const.html#a5200fd8e1e894a45ec817944cbb8f8e4">   28</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_j_voltage_comp_const.html#a5200fd8e1e894a45ec817944cbb8f8e4">changeSupplyVoltageSetting</a>(<span class="keywordtype">float</span> _supplyVoltage)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">if</span> (supplyVoltage != _supplyVoltage) {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            supplyVoltage = _supplyVoltage;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_j_voltage_comp_const.html#a02109ecc6dbe36e186280793bef3c514">   37</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_voltage_comp_const.html#a02109ecc6dbe36e186280793bef3c514">getSupplyVoltage</a>()</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">return</span> supplyVoltage;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_j_voltage_comp_const.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_j_voltage_comp_const.html">JVoltageCompConst</a> : <span class="keyword">public</span> <a class="code" href="class_j_voltage_compensator.html">JVoltageCompensator</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">float</span> supplyVoltage;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_j_voltage_comp_const.html#a232304a1ff678562f11b5450ba96711e">   18</a></span>&#160;    <a class="code" href="class_j_voltage_comp_const.html#a232304a1ff678562f11b5450ba96711e">JVoltageCompConst</a>(<span class="keywordtype">float</span> _supplyVoltage = 1.0)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        supplyVoltage = _supplyVoltage;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_j_voltage_comp_const.html#a12da12d8f129eaf1ffb7a92045edba50">   22</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_voltage_comp_const.html#a12da12d8f129eaf1ffb7a92045edba50">adjust</a>(<span class="keywordtype">float</span> voltage, <span class="keywordtype">float</span> driverRange)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">return</span> voltage / supplyVoltage * driverRange;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_j_voltage_comp_const.html#a5200fd8e1e894a45ec817944cbb8f8e4">   31</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_j_voltage_comp_const.html#a5200fd8e1e894a45ec817944cbb8f8e4">changeSupplyVoltageSetting</a>(<span class="keywordtype">float</span> _supplyVoltage)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">if</span> (supplyVoltage != _supplyVoltage) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            supplyVoltage = _supplyVoltage;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_j_voltage_comp_const.html#a02109ecc6dbe36e186280793bef3c514">   40</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_voltage_comp_const.html#a02109ecc6dbe36e186280793bef3c514">getSupplyVoltage</a>()</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">return</span> supplyVoltage;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_j_voltage_compensator_8h_html"><div class="ttname"><a href="_j_voltage_compensator_8h.html">JVoltageCompensator.h</a></div></div>
-<div class="ttc" id="aclass_j_voltage_comp_const_html"><div class="ttname"><a href="class_j_voltage_comp_const.html">JVoltageCompConst</a></div><div class="ttdef"><b>Definition:</b> JVoltageCompConst.h:5</div></div>
-<div class="ttc" id="aclass_j_voltage_comp_const_html_a02109ecc6dbe36e186280793bef3c514"><div class="ttname"><a href="class_j_voltage_comp_const.html#a02109ecc6dbe36e186280793bef3c514">JVoltageCompConst::getSupplyVoltage</a></div><div class="ttdeci">float getSupplyVoltage()</div><div class="ttdef"><b>Definition:</b> JVoltageCompConst.h:37</div></div>
-<div class="ttc" id="aclass_j_voltage_comp_const_html_a12da12d8f129eaf1ffb7a92045edba50"><div class="ttname"><a href="class_j_voltage_comp_const.html#a12da12d8f129eaf1ffb7a92045edba50">JVoltageCompConst::adjust</a></div><div class="ttdeci">float adjust(float voltage, float driverRange)</div><div class="ttdoc">do conversion</div><div class="ttdef"><b>Definition:</b> JVoltageCompConst.h:19</div></div>
-<div class="ttc" id="aclass_j_voltage_comp_const_html_a232304a1ff678562f11b5450ba96711e"><div class="ttname"><a href="class_j_voltage_comp_const.html#a232304a1ff678562f11b5450ba96711e">JVoltageCompConst::JVoltageCompConst</a></div><div class="ttdeci">JVoltageCompConst(float _supplyVoltage=1.0)</div><div class="ttdoc">constructor</div><div class="ttdef"><b>Definition:</b> JVoltageCompConst.h:15</div></div>
-<div class="ttc" id="aclass_j_voltage_comp_const_html_a5200fd8e1e894a45ec817944cbb8f8e4"><div class="ttname"><a href="class_j_voltage_comp_const.html#a5200fd8e1e894a45ec817944cbb8f8e4">JVoltageCompConst::changeSupplyVoltageSetting</a></div><div class="ttdeci">bool changeSupplyVoltageSetting(float _supplyVoltage)</div><div class="ttdoc">adjust the setting of what the motor controller supply voltage is</div><div class="ttdef"><b>Definition:</b> JVoltageCompConst.h:28</div></div>
+<div class="ttc" id="aclass_j_voltage_comp_const_html"><div class="ttname"><a href="class_j_voltage_comp_const.html">JVoltageCompConst</a></div><div class="ttdoc">convert voltage to value needed to set driver at to get that voltage, with constant value for what su...</div><div class="ttdef"><b>Definition:</b> JVoltageCompConst.h:8</div></div>
+<div class="ttc" id="aclass_j_voltage_comp_const_html_a02109ecc6dbe36e186280793bef3c514"><div class="ttname"><a href="class_j_voltage_comp_const.html#a02109ecc6dbe36e186280793bef3c514">JVoltageCompConst::getSupplyVoltage</a></div><div class="ttdeci">float getSupplyVoltage()</div><div class="ttdef"><b>Definition:</b> JVoltageCompConst.h:40</div></div>
+<div class="ttc" id="aclass_j_voltage_comp_const_html_a12da12d8f129eaf1ffb7a92045edba50"><div class="ttname"><a href="class_j_voltage_comp_const.html#a12da12d8f129eaf1ffb7a92045edba50">JVoltageCompConst::adjust</a></div><div class="ttdeci">float adjust(float voltage, float driverRange)</div><div class="ttdoc">do conversion</div><div class="ttdef"><b>Definition:</b> JVoltageCompConst.h:22</div></div>
+<div class="ttc" id="aclass_j_voltage_comp_const_html_a232304a1ff678562f11b5450ba96711e"><div class="ttname"><a href="class_j_voltage_comp_const.html#a232304a1ff678562f11b5450ba96711e">JVoltageCompConst::JVoltageCompConst</a></div><div class="ttdeci">JVoltageCompConst(float _supplyVoltage=1.0)</div><div class="ttdoc">constructor</div><div class="ttdef"><b>Definition:</b> JVoltageCompConst.h:18</div></div>
+<div class="ttc" id="aclass_j_voltage_comp_const_html_a5200fd8e1e894a45ec817944cbb8f8e4"><div class="ttname"><a href="class_j_voltage_comp_const.html#a5200fd8e1e894a45ec817944cbb8f8e4">JVoltageCompConst::changeSupplyVoltageSetting</a></div><div class="ttdeci">bool changeSupplyVoltageSetting(float _supplyVoltage)</div><div class="ttdoc">adjust the setting of what the motor controller supply voltage is</div><div class="ttdef"><b>Definition:</b> JVoltageCompConst.h:31</div></div>
 <div class="ttc" id="aclass_j_voltage_compensator_html"><div class="ttname"><a href="class_j_voltage_compensator.html">JVoltageCompensator</a></div><div class="ttdoc">convert voltage to value needed to set driver at to get that voltage</div><div class="ttdef"><b>Definition:</b> JVoltageCompensator.h:7</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
