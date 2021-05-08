@@ -29,13 +29,13 @@
 
 JMotorDriverEsp32L293 myDriver = JMotorDriverEsp32L293(portD);
 
-JEncoderPWMAbsoluteAttachInterrupt encoder = JEncoderPWMAbsoluteAttachInterrupt(inport1, JEncoderPWMAbsolute_AS5048settings, true, 1, 50000, 1000);
+JEncoderPWMAbsoluteAttachInterrupt encoder = JEncoderPWMAbsoluteAttachInterrupt(inport1, JEncoderPWMAbsolute_AS5048settings, true, 1, 50000, 1000, true);
 IRAM_ATTR jENCODER_MAKE_ISR_MACRO(encoder);
 
 JVoltageCompMeasure<10> voltageComp = JVoltageCompMeasure<10>(batMonitorPin, dacUnitsPerVolt);
 JMotorCompStandardConfig ttConfig = JMotorCompStandardConfig(1.9, .5, 3.2, 1.1, 4.6, 1.7, 100);
 JMotorCompStandard myMotorCompensator = JMotorCompStandard(voltageComp, ttConfig, 1.0);
-JMotorControllerOpen myController = JMotorControllerOpen(myDriver, myMotorCompensator, 2.5, .4);
+JMotorControllerOpen myController = JMotorControllerOpen(myDriver, myMotorCompensator, INFINITY, 1.0);
 
 float value = 0;
 void setup()
@@ -59,11 +59,11 @@ void loop()
     myController.setPosTarget(value);
     Serial.print(myController.getPos());
     Serial.print(",");
-    Serial.print(myController.getVel());
-    Serial.print(",");
+    // Serial.print(myController.getVel());
+    // Serial.print(",");
     Serial.print(encoder.getDist());
-    Serial.print(",");
-    Serial.print(encoder.getVel());
+    // Serial.print(",");
+    // Serial.print(encoder.getVel());
     Serial.println();
     delay(100);
 }

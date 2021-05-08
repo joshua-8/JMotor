@@ -9,24 +9,8 @@
  */
 #define JEncoderPWMAbsolute_AS5048settings \
     {                                      \
-        4095, 4119, 16, HIGH               \
+        4095, 4119, 16, HIGH, 800, 1100    \
     }
-/**
- \def
- * parameters for reading PWM output of MA3 10bit absolute encoders
- */
-#define JEncoderPWMAbsolute_MA310bitsettings \
-    {                                        \
-        1023, 1026, 1, HIGH                  \
-    } //untested
-/**
- \def
- * parameters for reading PWM output of MA3 12bit absolute encoders
- */
-#define JEncoderPWMAbsolute_MA312bitsettings \
-    {                                        \
-        4095, 4098, 1, HIGH                  \
-    } //untested
 
 /**
  * @brief  reads a PWM signal from an absolute encoder
@@ -58,6 +42,14 @@ public:
          * @brief  HIGH or LOW, which state when pulse length increasing=increasing angle
          */
         bool dataState;
+        /**
+         * @brief shortest time (microseconds) between falling edges that will be considered a valid encoder signal (low end of frequency range of pwm output)
+         */
+        uint16_t MIN_CYCLE;
+        /**
+         * @brief longest time (microseconds) between falling edges that will be considered a valid encoder signal (high end of frequency range of pwm output)
+         */
+        uint16_t MAX_CYCLE;
     };
 
 protected:
@@ -67,6 +59,9 @@ private:
     long turns;
     uint16_t angle;
     uint16_t lastAngle;
+    uint16_t zeroPos;
+    bool resetAngleOnStart;
+    bool firstAngle;
     int8_t reverse;
     float distPerCountFactor;
     bool newSpeed;
@@ -76,13 +71,12 @@ private:
     unsigned long velEnoughTime;
     unsigned long velEnoughTicks;
     float velocity;
-    bool newAngle;
-
-    unsigned long dataStartMicros;
-    unsigned long dataEndMicros;
-    unsigned long earlyDataStartMicros;
-    unsigned long oldDataEndMicros;
-    bool justStarted;
+    bool justStartedVel;
+    volatile bool newAngle;
+    volatile unsigned long dataStartMicros;
+    volatile unsigned long dataEndMicros;
+    volatile unsigned long earlyDataStartMicros;
+    volatile unsigned long oldDataEndMicros;
 
     pwmSettings ps;
 
@@ -95,10 +89,14 @@ public:
      * @param  _distPerCountFactor: (float) for the purposes of setting this factor a "count" is considered a full revolution of the absolute encoder
      * @param  _velEnoughTime: (default=0, no limit) shortest interval (in MICROseconds) between velocity calculations, if run() is called faster the calculation will wait to run
      * @param  _velEnoughTicks: (default=0, no limit) if the encoder turns more than this number of steps velocity calculations will be done even if velEnoughTime hasn't been reached
+     * @param  _resetAngleOnStart: (default=false) zero encoder angle on startup (in encoder units)
+     * @param  _zeroPos: (default=0) change what angle of the absolute encoder is considered zero. set _resetAngleOnStart to false to keep setting from being overridden
      */
-    JEncoderPWMAbsolute(byte _encoderPin, pwmSettings _ps, bool _reverse = false, float _distPerCountFactor = 1.0, unsigned long _velEnoughTime = 0, unsigned long _velEnoughTicks = 0)
+    JEncoderPWMAbsolute(byte _encoderPin, pwmSettings _ps, bool _reverse = false, float _distPerCountFactor = 1.0, unsigned long _velEnoughTime = 0, unsigned long _velEnoughTicks = 0, bool _resetAngleOnStart = false, uint16_t _zeroPos = 0)
         : ps(_ps)
     {
+        firstAngle = true;
+        resetAngleOnStart = _resetAngleOnStart;
         encoderPin = _encoderPin;
         if (_reverse) {
             reverse = -1;
@@ -109,6 +107,7 @@ public:
 
         velEnoughTime = _velEnoughTime;
         velEnoughTicks = _velEnoughTicks;
+        zeroPos = _zeroPos % ps.RESOLUTION;
 
         turns = 0;
         angle = 0;
@@ -123,7 +122,7 @@ public:
         dataEndMicros = 0;
         earlyDataStartMicros = 0;
         oldDataEndMicros = 0;
-        justStarted = true;
+        justStartedVel = true;
     }
 
     /**
@@ -159,11 +158,22 @@ public:
 
     long zeroCounter()
     {
+        return zeroCounter(true);
+    }
+
+    /**
+     * @brief  reset the zero point of the encoder
+     * @param  resetAngle: (bool) true=set the current angle as zero, false=reset turns, but leave absolute angle measurement as is
+     * @retval  (long) old position (raw # ticks)
+     */
+    long zeroCounter(bool resetAngle)
+    {
         long tTurns = turns;
-        uint16_t tAngle = angle;
         turns = 0;
-        angle = 0;
-        return (tTurns * ps.RESOLUTION + tAngle) * reverse;
+        if (resetAngle) {
+            setZeroPos(angle);
+        }
+        return (tTurns * ps.RESOLUTION + angle) * reverse;
     }
 
     float getVel()
@@ -206,6 +216,20 @@ public:
     }
 
     /**
+     * @brief  change what angle of the absolute encoder is zero
+     * @param  zeroAngle: (default: 0) [0,ps.RESOLUTION-1)
+     * @retval  (bool) did the zeroAngle change
+     */
+    bool setZeroPos(uint16_t zeroAngle = 0)
+    {
+        if (zeroAngle % ps.RESOLUTION != zeroPos) {
+            zeroPos = zeroAngle % ps.RESOLUTION;
+            return true;
+        }
+        return false;
+    }
+
+    /**
      * @note   call this function as frequently as possible or this code can't keep track of how many times the encoder has turned
      */
     void run()
@@ -215,10 +239,17 @@ public:
             long interval = dataEndMicros - dataStartMicros;
             long cycle = dataEndMicros - oldDataEndMicros;
             interrupts();
-            if (interval > 0 && cycle > 0) { //check that interrupts didn't change one number but not the other
-                angle = constrain(interval * ps.PWM_STEPS / cycle - ps.MIN_STEPS, 0, ps.RESOLUTION);
+            if (interval > 0 && cycle > ps.MIN_CYCLE && cycle < ps.MAX_CYCLE) { //check that interrupts didn't change one number but not the other, and that frequency is within range
+                if (resetAngleOnStart && firstAngle) {
+                    zeroPos = 0;
+                }
+                angle = (constrain(interval * ps.PWM_STEPS / cycle - ps.MIN_STEPS, 0, ps.RESOLUTION - 1) + ps.RESOLUTION - zeroPos) % ps.RESOLUTION;
+                if (resetAngleOnStart && firstAngle) {
+                    zeroPos = angle;
+                    firstAngle = false;
+                }
                 newAngle = false;
-                if (abs((int16_t)angle - (int16_t)lastAngle) > ps.RESOLUTION / 2) { // angle jump over half of circle is assummed to be the shorter crossing of 0
+                if (abs((int16_t)angle - (int16_t)lastAngle) >= ps.RESOLUTION / 2) { // angle jump over half of circle is assummed to be the shorter crossing of 0
                     if (angle > lastAngle) {
                         turns--;
                     } else {
@@ -229,8 +260,8 @@ public:
         }
         int64_t velDist = ((int16_t)angle - (int16_t)lastVelAngle) + (turns - lastVelTurns) * ps.RESOLUTION;
         if ((micros() - lastVelTimeMicros > velEnoughTime || abs(velDist) > velEnoughTicks)) {
-            if (justStarted) {
-                justStarted = false;
+            if (justStartedVel) {
+                justStartedVel = false;
                 lastVelAngle = angle;
                 velDist = 0;
             }
