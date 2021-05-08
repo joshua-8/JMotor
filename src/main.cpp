@@ -37,33 +37,31 @@ JMotorCompStandardConfig ttConfig = JMotorCompStandardConfig(1.9, .5, 3.2, 1.1, 
 JMotorCompStandard myMotorCompensator = JMotorCompStandard(voltageComp, ttConfig, 1.0);
 JMotorControllerOpen myController = JMotorControllerOpen(myDriver, myMotorCompensator, INFINITY, 1.0);
 
+String inString = "";
 float value = 0;
 void setup()
 {
     Serial.begin(9600);
     encoder.setUpInterrupts(encoder_jENCODER_ISR);
     myController.setEnable(true);
-    Serial.setTimeout(10);
+    Serial.setTimeout(50);
 }
 void loop()
 {
-    if (Serial.available()) {
-        value = Serial.parseFloat();
-        while (Serial.available()) {
-            Serial.read();
+
+    while (Serial.available() > 0) {
+        int inChar = Serial.read();
+        if (isDigit(inChar) || inChar == '-' || inChar == '.') {
+            inString += (char)inChar;
+        }
+        if (inChar == '\n') {
+            value = inString.toFloat();
+            inString = "";
         }
     }
+
     encoder.run();
 
-    // myController.setVel(value);
-    myController.setPosTarget(value);
-    Serial.print(myController.getPos());
-    Serial.print(",");
-    // Serial.print(myController.getVel());
-    // Serial.print(",");
-    Serial.print(encoder.getDist());
-    // Serial.print(",");
-    // Serial.print(encoder.getVel());
     Serial.println();
     delay(100);
 }

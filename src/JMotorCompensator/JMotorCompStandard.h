@@ -138,7 +138,7 @@ public:
 
     float getMinVel()
     {
-        return config.motor_stop_speed;
+        return config.motor_stop_speed / multiplier;
     }
 
 private:
