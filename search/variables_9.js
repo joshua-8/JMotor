@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['setval_377',['setVal',['../class_j_motor_controller_basic_open.html#a06e47877bd4aee360ed0d66a45e5a925',1,'JMotorControllerBasicOpen']]],
-  ['start_5fboost_5ftime_378',['start_boost_time',['../struct_j_motor_comp_standard_config.html#a21505f58d6c72bcba622f64f044d4848',1,'JMotorCompStandardConfig']]],
-  ['steps_5fper_5fturn_379',['STEPS_PER_TURN',['../class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85',1,'JEncoderAS5048bI2C']]]
+  ['resolution_381',['RESOLUTION',['../struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aaeaa01d54add313c783c532f654651e6',1,'JEncoderPWMAbsolute::pwmSettings']]],
+  ['reverse_382',['reverse',['../class_j_motor_driver_avr_p_w_m_dir.html#a66cd529eff178ee36cb9cc4edf53f54e',1,'JMotorDriverAvrPWMDir::reverse()'],['../class_j_motor_driver_esp32_p_w_m_dir.html#ab502afbb0bbaf46a9c786affeb5d3eff',1,'JMotorDriverEsp32PWMDir::reverse()']]]
 ];

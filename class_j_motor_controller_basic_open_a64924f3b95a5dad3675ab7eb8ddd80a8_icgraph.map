@@ -1,10 +1,9 @@
 <map id="JMotorControllerBasicOpen::run" name="JMotorControllerBasicOpen::run">
-<area shape="rect" id="node1" title="update driver" alt="" coords="745,71,951,98"/>
-<area shape="rect" id="node2" href="$class_j_motor_controller_open.html#aad3c0954a1d5da79e908b6093c6d82cb" title="update driver" alt="" coords="296,13,468,39"/>
-<area shape="rect" id="node5" href="$class_j_motor_controller_basic_open.html#aa7f5f2ac950894eb1c5d1969196cfdd9" title="set velocity for controller" alt="" coords="516,64,697,105"/>
-<area shape="rect" id="node7" href="$class_j_motor_controller_basic_open.html#ab14569a9952239bf8c86a482ae6f0f44" title="set target velocity for controller (acceleration limited)" alt="" coords="516,129,697,171"/>
-<area shape="rect" id="node3" href="$class_j_motor_controller_open.html#adf705e9b08ed611efa941da8565e906f" title="set target position" alt="" coords="100,5,248,47"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title=" " alt="" coords="5,13,52,39"/>
-<area shape="rect" id="node6" href="$class_j_motor_controller_open.html#ac575c10b5226f2480a581a4377863b9c" title="set velocity for controller" alt="" coords="308,64,456,105"/>
-<area shape="rect" id="node8" href="$class_j_motor_controller_open.html#abd99b89867779157131d198206f2f6d4" title="set target velocity for controller (acceleration limited)" alt="" coords="308,129,456,171"/>
+<area shape="rect" id="node1" title="update driver" alt="" coords="651,107,856,134"/>
+<area shape="rect" id="node2" href="$class_j_motor_controller_open.html#aad3c0954a1d5da79e908b6093c6d82cb" title="update driver" alt="" coords="201,78,373,105"/>
+<area shape="rect" id="node6" href="$class_j_motor_controller_basic_open.html#aa7f5f2ac950894eb1c5d1969196cfdd9" title="set velocity for controller" alt="" coords="421,100,603,141"/>
+<area shape="rect" id="node7" href="$class_j_motor_controller_basic_open.html#ab14569a9952239bf8c86a482ae6f0f44" title="set target velocity for controller (acceleration limited)" alt="" coords="421,165,603,207"/>
+<area shape="rect" id="node3" href="$class_j_motor_controller_open.html#adf705e9b08ed611efa941da8565e906f" title="set target position" alt="" coords="5,5,153,47"/>
+<area shape="rect" id="node4" href="$class_j_motor_controller_open.html#ac575c10b5226f2480a581a4377863b9c" title="set velocity for controller" alt="" coords="5,71,153,112"/>
+<area shape="rect" id="node5" href="$class_j_motor_controller_open.html#abd99b89867779157131d198206f2f6d4" title="set target velocity for controller (acceleration limited)" alt="" coords="5,136,153,177"/>
 </map>

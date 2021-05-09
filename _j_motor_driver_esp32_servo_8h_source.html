@@ -126,39 +126,41 @@ $(function() {
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">if</span> (enabled) {</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <span class="comment">//actually disable</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                enabled = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                ledcDetachPin(servoPin);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                pinMode(servoPin, OUTPUT);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                digitalWrite(servoPin, LOW);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_j_motor_driver_esp32_servo.html#af463cca678ccbc99235f7159519d5784">   90</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_j_motor_driver_esp32_servo.html#af463cca678ccbc99235f7159519d5784">getEnable</a>()</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">return</span> enabled;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
-<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_j_motor_driver_esp32_servo.html#aca15ec92ce697097ee2f70a4549a1a45">   94</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_motor_driver_esp32_servo.html#aca15ec92ce697097ee2f70a4549a1a45">getMaxRange</a>()</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">return</span> 1.0;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="class_j_motor_driver_esp32_servo.html#adef73ca794c227892101f9f480497f85">   98</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_motor_driver_esp32_servo.html#adef73ca794c227892101f9f480497f85">getMinRange</a>()</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">return</span> -1.0;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;};</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="keywordflow">while</span> (digitalRead(servoPin) == HIGH)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    ; <span class="comment">//wait for pulse to go low to avoid cutting it short and causing the servo to twitch</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                ledcDetachPin(servoPin);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                pinMode(servoPin, OUTPUT);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                digitalWrite(servoPin, LOW);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_j_motor_driver_esp32_servo.html#af463cca678ccbc99235f7159519d5784">   92</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_j_motor_driver_esp32_servo.html#af463cca678ccbc99235f7159519d5784">getEnable</a>()</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">return</span> enabled;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_j_motor_driver_esp32_servo.html#aca15ec92ce697097ee2f70a4549a1a45">   96</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_motor_driver_esp32_servo.html#aca15ec92ce697097ee2f70a4549a1a45">getMaxRange</a>()</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">return</span> 1.0;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="class_j_motor_driver_esp32_servo.html#adef73ca794c227892101f9f480497f85">  100</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_motor_driver_esp32_servo.html#adef73ca794c227892101f9f480497f85">getMinRange</a>()</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">return</span> -1.0;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;};</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_j_motor_driver_servo_8h_html"><div class="ttname"><a href="_j_motor_driver_servo_8h.html">JMotorDriverServo.h</a></div></div>
 <div class="ttc" id="aclass_j_motor_driver_esp32_servo_html"><div class="ttname"><a href="class_j_motor_driver_esp32_servo.html">JMotorDriverEsp32Servo</a></div><div class="ttdoc">For servos and motor controllers that use servo signals (ESCs)</div><div class="ttdef"><b>Definition:</b> JMotorDriverEsp32Servo.h:10</div></div>
 <div class="ttc" id="aclass_j_motor_driver_esp32_servo_html_a0a4f813cd866bdd72e0420e0f4487b2b"><div class="ttname"><a href="class_j_motor_driver_esp32_servo.html#a0a4f813cd866bdd72e0420e0f4487b2b">JMotorDriverEsp32Servo::minServoValue</a></div><div class="ttdeci">int minServoValue</div><div class="ttdef"><b>Definition:</b> JMotorDriverEsp32Servo.h:23</div></div>
 <div class="ttc" id="aclass_j_motor_driver_esp32_servo_html_a56b7ca1961e67c647afb5aba9ae2f7c2"><div class="ttname"><a href="class_j_motor_driver_esp32_servo.html#a56b7ca1961e67c647afb5aba9ae2f7c2">JMotorDriverEsp32Servo::setFrequencyAndResolution</a></div><div class="ttdeci">float setFrequencyAndResolution(int freq=50, int resBits=20)</div><div class="ttdoc">set frequency that servo signal pulse is repeated at and how many bits are used internally for resolu...</div><div class="ttdef"><b>Definition:</b> JMotorDriverEsp32Servo.h:51</div></div>
 <div class="ttc" id="aclass_j_motor_driver_esp32_servo_html_a69c38d3e07ccedaefe563730714d46c8"><div class="ttname"><a href="class_j_motor_driver_esp32_servo.html#a69c38d3e07ccedaefe563730714d46c8">JMotorDriverEsp32Servo::set</a></div><div class="ttdeci">bool set(float _val)</div><div class="ttdoc">set motor power</div><div class="ttdef"><b>Definition:</b> JMotorDriverEsp32Servo.h:59</div></div>
 <div class="ttc" id="aclass_j_motor_driver_esp32_servo_html_aaf18a239bbbfc89db79ef2c946bb4cc4"><div class="ttname"><a href="class_j_motor_driver_esp32_servo.html#aaf18a239bbbfc89db79ef2c946bb4cc4">JMotorDriverEsp32Servo::maxServoValue</a></div><div class="ttdeci">int maxServoValue</div><div class="ttdef"><b>Definition:</b> JMotorDriverEsp32Servo.h:27</div></div>
-<div class="ttc" id="aclass_j_motor_driver_esp32_servo_html_aca15ec92ce697097ee2f70a4549a1a45"><div class="ttname"><a href="class_j_motor_driver_esp32_servo.html#aca15ec92ce697097ee2f70a4549a1a45">JMotorDriverEsp32Servo::getMaxRange</a></div><div class="ttdeci">float getMaxRange()</div><div class="ttdoc">high end of the range</div><div class="ttdef"><b>Definition:</b> JMotorDriverEsp32Servo.h:94</div></div>
-<div class="ttc" id="aclass_j_motor_driver_esp32_servo_html_adef73ca794c227892101f9f480497f85"><div class="ttname"><a href="class_j_motor_driver_esp32_servo.html#adef73ca794c227892101f9f480497f85">JMotorDriverEsp32Servo::getMinRange</a></div><div class="ttdeci">float getMinRange()</div><div class="ttdoc">low end of the range</div><div class="ttdef"><b>Definition:</b> JMotorDriverEsp32Servo.h:98</div></div>
+<div class="ttc" id="aclass_j_motor_driver_esp32_servo_html_aca15ec92ce697097ee2f70a4549a1a45"><div class="ttname"><a href="class_j_motor_driver_esp32_servo.html#aca15ec92ce697097ee2f70a4549a1a45">JMotorDriverEsp32Servo::getMaxRange</a></div><div class="ttdeci">float getMaxRange()</div><div class="ttdoc">high end of the range</div><div class="ttdef"><b>Definition:</b> JMotorDriverEsp32Servo.h:96</div></div>
+<div class="ttc" id="aclass_j_motor_driver_esp32_servo_html_adef73ca794c227892101f9f480497f85"><div class="ttname"><a href="class_j_motor_driver_esp32_servo.html#adef73ca794c227892101f9f480497f85">JMotorDriverEsp32Servo::getMinRange</a></div><div class="ttdeci">float getMinRange()</div><div class="ttdoc">low end of the range</div><div class="ttdef"><b>Definition:</b> JMotorDriverEsp32Servo.h:100</div></div>
 <div class="ttc" id="aclass_j_motor_driver_esp32_servo_html_adf5de4f2276842480f038fbc62cf6f4a"><div class="ttname"><a href="class_j_motor_driver_esp32_servo.html#adf5de4f2276842480f038fbc62cf6f4a">JMotorDriverEsp32Servo::setEnable</a></div><div class="ttdeci">bool setEnable(bool _enable)</div><div class="ttdoc">use to enable or disable a motor, and sets up pin states</div><div class="ttdef"><b>Definition:</b> JMotorDriverEsp32Servo.h:66</div></div>
-<div class="ttc" id="aclass_j_motor_driver_esp32_servo_html_af463cca678ccbc99235f7159519d5784"><div class="ttname"><a href="class_j_motor_driver_esp32_servo.html#af463cca678ccbc99235f7159519d5784">JMotorDriverEsp32Servo::getEnable</a></div><div class="ttdeci">bool getEnable()</div><div class="ttdoc">get the enable state of the driver</div><div class="ttdef"><b>Definition:</b> JMotorDriverEsp32Servo.h:90</div></div>
+<div class="ttc" id="aclass_j_motor_driver_esp32_servo_html_af463cca678ccbc99235f7159519d5784"><div class="ttname"><a href="class_j_motor_driver_esp32_servo.html#af463cca678ccbc99235f7159519d5784">JMotorDriverEsp32Servo::getEnable</a></div><div class="ttdeci">bool getEnable()</div><div class="ttdoc">get the enable state of the driver</div><div class="ttdef"><b>Definition:</b> JMotorDriverEsp32Servo.h:92</div></div>
 <div class="ttc" id="aclass_j_motor_driver_esp32_servo_html_afcb74840e1b8fa0b50ed5cea4e6d0379"><div class="ttname"><a href="class_j_motor_driver_esp32_servo.html#afcb74840e1b8fa0b50ed5cea4e6d0379">JMotorDriverEsp32Servo::JMotorDriverEsp32Servo</a></div><div class="ttdeci">JMotorDriverEsp32Servo(byte _pwmChannel, byte _servoPin, int _freq=50, int _resBits=20, int _minServoValue=544, int _maxServoValue=2400)</div><div class="ttdoc">constructor, sets pins, custom frequency and resolution optional</div><div class="ttdef"><b>Definition:</b> JMotorDriverEsp32Servo.h:36</div></div>
 <div class="ttc" id="aclass_j_motor_driver_servo_html"><div class="ttname"><a href="class_j_motor_driver_servo.html">JMotorDriverServo</a></div><div class="ttdoc">empty class that can be used to specify a driver that controls specifically a servo</div><div class="ttdef"><b>Definition:</b> JMotorDriverServo.h:8</div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -1,9 +1,11 @@
 <map id="JMotorControllerOpen::setVelTarget" name="JMotorControllerOpen::setVelTarget">
-<area shape="rect" id="node1" title="set target velocity for controller (acceleration limited)" alt="" coords="5,93,153,135"/>
-<area shape="rect" id="node2" href="$class_j_motor_controller_basic_open.html#ab14569a9952239bf8c86a482ae6f0f44" title="set target velocity for controller (acceleration limited)" alt="" coords="201,93,383,135"/>
-<area shape="rect" id="node3" href="$class_j_motor_controller_basic_open.html#a64924f3b95a5dad3675ab7eb8ddd80a8" title="update driver" alt="" coords="431,101,636,127"/>
-<area shape="rect" id="node4" href="$class_j_motor_compensator.html#a40a9757a08400f070da51d75ba7d7df8" title="calculate" alt="" coords="691,5,836,47"/>
-<area shape="rect" id="node5" href="$class_j_motor_driver.html#a87e4adac669e4dcafc0e540e2d1e4849" title="get the enable state of the driver" alt="" coords="684,71,843,98"/>
-<area shape="rect" id="node6" href="$class_j_motor_compensator.html#a14f0b533af038a8927053e99b3c77a00" title="How fast of a motor speed setting would get adjusted to full motor power." alt="" coords="691,123,836,164"/>
-<area shape="rect" id="node7" href="$class_j_motor_driver.html#a09ec56cc9c528c40e82c532f55fdaf70" title="set motor power" alt="" coords="703,189,823,215"/>
+<area shape="rect" id="node1" title="set target velocity for controller (acceleration limited)" alt="" coords="5,56,153,97"/>
+<area shape="rect" id="node2" href="$class_j_motor_controller_open.html#aad3c0954a1d5da79e908b6093c6d82cb" title="update driver" alt="" coords="201,63,373,90"/>
+<area shape="rect" id="node3" href="$class_j_motor_controller_basic_open.html#af796447b21eae6e02a2058dca0233baf" title="How fast of a motor speed setting would get adjusted to full motor power." alt="" coords="663,5,844,47"/>
+<area shape="rect" id="node5" href="$class_j_motor_controller_basic_open.html#a64924f3b95a5dad3675ab7eb8ddd80a8" title="update driver" alt="" coords="651,101,856,127"/>
+<area shape="rect" id="node9" href="$class_j_motor_controller_basic_open.html#aa7f5f2ac950894eb1c5d1969196cfdd9" title="set velocity for controller" alt="" coords="421,115,603,156"/>
+<area shape="rect" id="node4" href="$class_j_motor_compensator.html#a14f0b533af038a8927053e99b3c77a00" title="How fast of a motor speed setting would get adjusted to full motor power." alt="" coords="911,5,1056,47"/>
+<area shape="rect" id="node6" href="$class_j_motor_compensator.html#a40a9757a08400f070da51d75ba7d7df8" title="calculate" alt="" coords="911,71,1056,112"/>
+<area shape="rect" id="node7" href="$class_j_motor_driver.html#a87e4adac669e4dcafc0e540e2d1e4849" title="get the enable state of the driver" alt="" coords="904,137,1063,163"/>
+<area shape="rect" id="node8" href="$class_j_motor_driver.html#a09ec56cc9c528c40e82c532f55fdaf70" title="set motor power" alt="" coords="923,187,1043,214"/>
 </map>
