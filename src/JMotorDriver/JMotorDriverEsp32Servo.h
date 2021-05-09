@@ -78,6 +78,8 @@ public:
             if (enabled) {
                 //actually disable
                 enabled = false;
+                while (digitalRead(servoPin) == HIGH)
+                    ; //wait for pulse to go low to avoid cutting it short and causing the servo to twitch
                 ledcDetachPin(servoPin);
                 pinMode(servoPin, OUTPUT);
                 digitalWrite(servoPin, LOW);

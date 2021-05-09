@@ -84,12 +84,16 @@ public:
     void setVel(float vel)
     {
         posMode = false;
-        JMotorControllerBasicOpen::setVel(vel);
+        velocity = vel;
+        velocityTarget = vel;
+        run();
     }
     float setVelTarget(float vel)
     {
         posMode = false;
-        return JMotorControllerBasicOpen::setVelTarget(vel);
+        velocityTarget = vel;
+        run();
+        return velocity;
     }
     /**
      * @brief  set maximum motor speed
