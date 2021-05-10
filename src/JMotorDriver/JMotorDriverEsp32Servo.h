@@ -50,6 +50,9 @@ public:
      */
     float setFrequencyAndResolution(int freq = 50, int resBits = 20)
     {
+        if (freq == SERVO_FREQ && resBits == SERVO_RES) {
+            return SERVO_TICKS_PER_MICROSECOND; //already set
+        }
         SERVO_FREQ = freq;
         SERVO_RES = resBits;
         SERVO_TICKS_PER_MICROSECOND = (1 << SERVO_RES) * SERVO_FREQ / 1000000; //DEFAULT=52.4288  2^SERVO_RES / 1E6 * SERVO_FREQ
