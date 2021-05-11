@@ -9,7 +9,7 @@
  * @brief  A motor controller object that uses a JMotorCompensator to set velocity of a motor
  * @note  Open loop, and no position based commands
  */
-class JMotorControllerBasicOpen : public virtual JMotorControllerBase {
+class JMotorControllerBasic : public virtual JMotorControllerBase {
 protected:
     float velocity;
     float setVal;
@@ -28,7 +28,7 @@ public:
      * @param  _compensator: (JMotorCompensator)
      * @param  _accelLimit: max acceleration allowed for approaching velocityTarget, set to INFINITY for unlimited (default: INFINITY)
      */
-    JMotorControllerBasicOpen(JMotorDriver& _driver, JMotorCompensator& _compensator, float _accelLimit = INFINITY)
+    JMotorControllerBasic(JMotorDriver& _driver, JMotorCompensator& _compensator, float _accelLimit = INFINITY)
         : driver(_driver)
         , compensator(_compensator)
     {
@@ -41,27 +41,25 @@ public:
         lastRunMicros = 0;
     }
 
-    /**
-     * @brief  set maximum rate that motor speed can be changed at
-     * @note   set to INFINITY to disable acceleration limiting
-     * @param  _accelLimit: (float)
-     */
-    void setAccelLimit(float _accelLimit)
+    float setAccelLimit(float _accelLimit)
     {
         accelLimit = max(_accelLimit, (float)0.0);
+        return accelLimit;
     }
 
-    void setVel(float vel)
+    void setVel(float vel, bool _run = true)
     {
         velocity = vel;
         velocityTarget = vel;
-        JMotorControllerBasicOpen::run();
+        if (_run)
+            JMotorControllerBasic::run();
     }
 
-    float setVelTarget(float vel)
+    float setVelTarget(float vel, bool _run = true)
     {
         velocityTarget = vel;
-        JMotorControllerBasicOpen::run();
+        if (_run)
+            JMotorControllerBasic::run();
         return velocity;
     }
 

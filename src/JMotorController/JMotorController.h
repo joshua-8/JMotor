@@ -1,6 +1,6 @@
 #ifndef J_MOTOR_CONTROLLER_H
 #define J_MOTOR_CONTROLLER_H
-#include "JMotorControllerBase.h"
+#include "JMotorControllerBasic.h"
 #include <Arduino.h>
 /**
  * @brief  This class defines a common interface for classes which control velocity and position of a motor controlled by a JMotorDriver
@@ -8,12 +8,28 @@
 class JMotorController : public virtual JMotorControllerBase {
 public:
     /**
-     * @brief  set target position
-     * @note this function can be called repeatedly, or just once if run() is called frequently
+     * @brief  set target position (motor drives towards position, following acceleration profile)
      * @param  _posTarget: (float) target position
+     * @param  _run: (bool) default:true, true = call run() in this function, false=you'll call run() yourself
      * @retval (bool) did the target change
      */
-    virtual bool setPosTarget(float _posTarget) = 0;
+    virtual bool setPosTarget(float _posTarget, bool _run = true) = 0;
+
+    /**
+     * @brief  set position for motor to drive towards position as fast as possible (setpoint for control loop if available)
+     * @note  run() needs to be called in order for the motor to move
+     * @param  _posSetpoint: (float) position setpoint
+     * @param  _run: (bool) default:true, true = call run() in this function, false=you'll call run() yourself
+     * @retval (bool) did the setpoint change
+     */
+    virtual bool setPosSetpoint(float _posSetpoint, bool _run = true) = 0;
+
+    /**
+     * @brief  alternative method for setting velocity that uses setPosSetpoint
+     * @note  handles velocities below getMinVel(), and may have better distance accuracy
+     * @param  _posDelta: (float) basically velocity
+     */
+    virtual void setPosDelta(float _posDelta, bool _run = true) = 0;
 
     /**
      * @brief  get position set as target
@@ -29,7 +45,7 @@ public:
 
     /**
      * @brief  reset what position the controller thinks it's in
-     * @note   don't drive too far without resetting so that the limited precision of floats doesn't become a problem.
+     * @note   don't drive too far without resetting this so that the limited precision of floats doesn't become a problem.
      * @param  pos: (float) value to reset position to, default: 0
      * @retval (float) returns old position
      */

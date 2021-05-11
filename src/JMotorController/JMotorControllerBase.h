@@ -7,19 +7,29 @@
 class JMotorControllerBase {
 public:
     /**
+     * @brief  set maximum rate that motor speed can be changed at
+     * @note   set to INFINITY to disable acceleration limiting
+     * @param  _accelLimit: (float)
+     * @retval  (float) accelLimit
+     */
+    virtual float setAccelLimit(float _accelLimit) = 0;
+
+    /**
      * @brief  set velocity for controller
      * @note  this function can be called repeatedly, or just once if run() is called frequently
      * @param  vel: (float)
+     * @param  _run: (bool) default:true, true = call run() in this function, false=you'll call run() yourself
      */
-    virtual void setVel(float vel) = 0;
+    virtual void setVel(float vel, bool _run = true) = 0;
 
     /**
      * @brief  set target velocity for controller (acceleration limited)
      * @note  this function can be called repeatedly, or just once if run() is called frequently
      * @param  vel: (float) target velocity
+     * @param  _run: (bool) default:true, true = call run() in this function, false=you'll call run() yourself
      * @retval (float) current velocity
      */
-    virtual float setVelTarget(float vel) = 0;
+    virtual float setVelTarget(float vel, bool _run = true) = 0;
 
     /**
      * @brief  get target velocity for controller
@@ -100,5 +110,5 @@ public:
      */
     virtual float getMinVel() = 0;
 };
-#include "JMotorControllerBasicOpen.h"
+#include "JMotorControllerBasic.h"
 #endif
