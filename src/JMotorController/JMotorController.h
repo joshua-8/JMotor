@@ -26,10 +26,11 @@ public:
 
     /**
      * @brief  alternative method for setting velocity that uses setPosSetpoint
-     * @note  handles velocities below getMinVel(), and may have better distance accuracy
+     * @note  handles velocities below getMinVel(), and may have better distance accuracy, doesn't smooth velocity
      * @param  _posDelta: (float) basically velocity
+     * @param  _resetPos: (bool) default=true, 
      */
-    virtual void setPosDelta(float _posDelta, bool _run = true) = 0;
+    virtual void setPosDelta(float _posDelta, bool _run = true, bool _resetPos = true) = 0;
 
     /**
      * @brief  get position set as target

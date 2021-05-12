@@ -100,11 +100,14 @@ public:
         return false;
     }
 
-    void setPosDelta(float _posDelta, bool _run = true)
+    void setPosDelta(float _posDelta, bool _run = true, bool _resetPos = true)
     {
         smoothedMode = false;
         posMode = true;
         posDelta = _posDelta;
+        if (_resetPos) {
+            resetPos();
+        }
         if (_run)
             JMotorControllerOpen::run();
     }

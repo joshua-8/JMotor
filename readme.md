@@ -4,6 +4,8 @@
 
 ## work in progress! Bug reports/fixes welcomed
 
+https://github.com/joshua-8/JMotor
+
 reference docs (made with Doxygen): https://joshua-8.github.io/JMotor/md_readme.html
 
 list of all classes: https://joshua-8.github.io/JMotor/hierarchy.html
