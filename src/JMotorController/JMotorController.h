@@ -28,9 +28,10 @@ public:
      * @brief  alternative method for setting velocity that uses setPosSetpoint
      * @note  handles velocities below getMinVel(), and may have better distance accuracy, doesn't smooth velocity
      * @param  _posDelta: (float) basically velocity
-     * @param  _resetPos: (bool) default=true, 
+     * @param  _resetPos: (bool) default=false, keep setting current position to zero
+     * @param  _run: (bool) default:true, true = call run() in this function, false=you'll call run() yourself
      */
-    virtual void setPosDelta(float _posDelta, bool _run = true, bool _resetPos = true) = 0;
+    virtual void setPosDelta(float _posDelta, bool _resetPos = false, bool _run = true) = 0;
 
     /**
      * @brief  get position set as target
@@ -47,16 +48,15 @@ public:
     /**
      * @brief  reset what position the controller thinks it's in
      * @note   don't drive too far without resetting this so that the limited precision of floats doesn't become a problem.
-     * @param  pos: (float) value to reset position to, default: 0
      * @retval (float) returns old position
      */
-    virtual float resetPos(float pos = 0) = 0;
-
+    virtual float resetPos() = 0;
     /**
-     * @brief  true if driving to target position, false if under velocity control
-     * @retval (bool)
+     * @brief  set maximum motor speed
+     * @note   set to INFINITY to disable limit
+     * @param  _vellLimit: (float)
      */
-    virtual bool positioningMode() = 0;
+    virtual void setVelLimit(float _velLimit) = 0;
 };
 // #include "JMotorControllerClosed.h"
 #include "JMotorControllerOpen.h"

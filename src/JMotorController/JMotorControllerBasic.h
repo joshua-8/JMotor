@@ -41,26 +41,26 @@ public:
         lastRunMicros = 0;
     }
 
-    float setAccelLimit(float _accelLimit)
+    void setAccelLimit(float _accelLimit)
     {
         accelLimit = max(_accelLimit, (float)0.0);
-        return accelLimit;
     }
 
-    void setVel(float vel, bool _run = true)
+    bool setVel(float vel, bool _run = true)
     {
         velocity = vel;
         velocityTarget = vel;
         if (_run)
             JMotorControllerBasic::run();
+        return velocity == vel;
     }
 
-    float setVelTarget(float vel, bool _run = true)
+    bool setVelTarget(float vel, bool _run = true)
     {
         velocityTarget = vel;
         if (_run)
             JMotorControllerBasic::run();
-        return velocity;
+        return velocity == vel;
     }
 
     float getVelTarget()
@@ -80,24 +80,30 @@ public:
 
     void run()
     {
-        if (velocity != velocityTarget) {
-            velocity += constrain(velocityTarget - velocity, -accelLimit * (micros() - lastRunMicros) / 1000000.0, accelLimit * (micros() - lastRunMicros) / 1000000.0);
-            driverInRange = (abs(velocity) < compensator.getMaxVel());
-            velocity = constrain(velocity, -compensator.getMaxVel(), compensator.getMaxVel());
-        }
-        lastRunMicros = micros();
-        if (driver.getEnable()) {
-            float lastSetVal = setVal;
-            setVal = compensator.compensate(velocity);
-            if (setVal != lastSetVal) {
-                driver.set(setVal);
+        if (getEnabled()) {
+            if (velocity != velocityTarget) {
+                velocity += constrain(velocityTarget - velocity, -accelLimit * (micros() - lastRunMicros) / 1000000.0, accelLimit * (micros() - lastRunMicros) / 1000000.0);
+                driverInRange = (abs(velocity) < compensator.getMaxVel());
+            }
+            velocity = constrain(velocity, -compensator.getMaxVel() * (getDriverMinRange() < 0), compensator.getMaxVel() * (getDriverMaxRange() > 0));
+            lastRunMicros = micros();
+            if (driver.getEnable()) {
+                float lastSetVal = setVal;
+                setVal = compensator.compensate(velocity);
+                if (setVal != lastSetVal) {
+                    driver.set(setVal);
+                }
             }
         }
     }
 
     bool setEnable(bool _enable)
     {
-        velocity = 0;
+        if (!_enable && getEnabled()) {
+            velocity = 0;
+            velocityTarget = 0;
+        }
+        lastRunMicros = micros();
         return driver.setEnable(_enable);
     }
 

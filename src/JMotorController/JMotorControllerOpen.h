@@ -32,35 +32,52 @@ public:
 
     void run()
     {
-        if (posMode) {
-            if (!smoothedMode) { //setPosSetpoint() mode
-                float time = (micros() - lastRunMicros) / 1000000.0;
-                positionTarget += time * posDelta;
-                if (position == positionTarget) {
-                    JMotorControllerBasic::setVel(0);
-                } else if (abs(positionTarget - position) <= getMinVel() * time) {
-                    JMotorControllerBasic::setVel(0);
-                } else if (abs(positionTarget - position) < getMaxVel() * time) {
-                    JMotorControllerBasic::setVel((positionTarget - position) / time);
-                    position = positionTarget;
-                } else { //far away
-                    JMotorControllerBasic::setVel((((positionTarget - position) > 0) ? getMaxVel() : -getMaxVel()), false);
-                    position += velocity * time;
-                    JMotorControllerBasic::run();
+        if (getEnabled()) {
+            if (posMode) {
+                if (!smoothedMode) { //setPosSetpoint() mode
+                    float time = (micros() - lastRunMicros) / 1000000.0;
+                    positionTarget += time * posDelta;
+                    if (position == positionTarget) {
+                        JMotorControllerBasic::setVel(0);
+                    } else if (abs(positionTarget - position) <= getMinVel() * time) {
+                        JMotorControllerBasic::setVel(0);
+                    } else if (abs(positionTarget - position) < getMaxVel() * time) {
+                        if (time > 0) {
+                            JMotorControllerBasic::setVel((positionTarget - position) / time);
+                        } else {
+                            JMotorControllerBasic::setVel(0);
+                        }
+                        position = positionTarget;
+                    } else { //far away
+                        JMotorControllerBasic::setVel((((positionTarget - position) > 0) ? getMaxVel() : -getMaxVel()), false);
+                        position += velocity * time;
+                        JMotorControllerBasic::run();
+                    }
+                } else { //setPosTarget() mode
+                    dL.setPositionVelocity(position, velocity);
+                    dL.setVelLimit(min(velLimit, getMaxVel()));
+                    dL.calc(positionTarget);
+                    position = dL.getPosition();
+                    JMotorControllerBasic::setVel(dL.getVelocity());
                 }
-            } else { //setPosTarget() mode
-                dL.setPositionVelocity(position, velocity);
-                dL.setVelLimit(min(velLimit, getMaxVel()));
-                dL.calc(positionTarget);
-                position = dL.getPosition();
-                JMotorControllerBasic::setVel(dL.getVelocity());
+            } else { //not pos mode
+                float time = (micros() - lastRunMicros) / 1000000.0;
+                JMotorControllerBasic::run();
+                if (abs(velocity) > getMinVel()) {
+                    position += velocity * time;
+                }
             }
-        } else {
-            if (abs(velocity) > getMinVel()) {
-                position += velocity * (micros() - lastRunMicros) / 1000000.0;
-            }
-            JMotorControllerBasic::run();
         }
+    }
+
+    bool setEnable(bool _enable)
+    {
+        if (!_enable && getEnabled()) {
+            posDelta = 0;
+            positionTarget = position;
+        }
+        dL.resetTime();
+        return JMotorControllerBasic::setEnable(_enable);
     }
 
     bool setPosTarget(float _posTarget, bool _run = true)
@@ -100,7 +117,7 @@ public:
         return false;
     }
 
-    void setPosDelta(float _posDelta, bool _run = true, bool _resetPos = true)
+    void setPosDelta(float _posDelta, bool _resetPos = false, bool _run = true)
     {
         smoothedMode = false;
         posMode = true;
@@ -120,52 +137,43 @@ public:
     {
         return position;
     }
-    float resetPos(float pos = 0)
+    float resetPos()
     {
-        if (posMode) {
-            dL.setPosition(pos);
-        }
-        positionTarget += (pos - position);
+        dL.setPosition(0);
+        if (posMode)
+            positionTarget -= position;
         float temp = position;
-        position = pos;
+        position = 0;
         return temp;
-    }
-    bool positioningMode()
-    {
-        return posMode;
     }
 
     //override basicOpen functions
-    void setVel(float vel)
+    bool setVel(float vel, bool _run = true)
     {
         posMode = false;
         velocity = vel;
         velocityTarget = vel;
-        JMotorControllerOpen::run();
+        if (_run)
+            JMotorControllerOpen::run();
+        return velocity == vel;
     }
-    float setVelTarget(float vel)
+    bool setVelTarget(float vel, bool _run = true)
     {
         posMode = false;
         velocityTarget = vel;
-        JMotorControllerOpen::run();
-        return velocity;
+        if (_run)
+            JMotorControllerOpen::run();
+        return velocity == vel;
     }
-    /**
-     * @brief  set maximum motor speed
-     * @note   set to INFINITY to disable acceleration limiting
-     * @param  _accelLimit: (float)
-     */
     void setVelLimit(float _velLimit)
     {
         velLimit = max(_velLimit, (float)0.0);
         dL.setVelLimit(velLimit);
     }
-
-    float setAccelLimit(float _accelLimit)
+    void setAccelLimit(float _accelLimit)
     {
         JMotorControllerBasic::setAccelLimit(_accelLimit);
         dL.setAccelLimit(accelLimit);
-        return accelLimit;
     }
     /**
      * @brief  set velocity and acceleration limits for motor
