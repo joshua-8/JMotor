@@ -29,13 +29,13 @@
 
 JMotorDriverEsp32L293 myDriver = JMotorDriverEsp32L293(portD);
 
-JEncoderPWMAbsoluteAttachInterrupt encoder = JEncoderPWMAbsoluteAttachInterrupt(inport1, JEncoderPWMAbsolute_AS5048settings, true, 1, 50000, 1000, true);
+JEncoderPWMAbsoluteAttachInterrupt encoder = JEncoderPWMAbsoluteAttachInterrupt(port1Pin, JEncoderPWMAbsolute_AS5048settings, true, 1, 50000, 1000, true);
 IRAM_ATTR jENCODER_MAKE_ISR_MACRO(encoder);
 
 JVoltageCompMeasure<10> voltageComp = JVoltageCompMeasure<10>(batMonitorPin, dacUnitsPerVolt);
 JMotorCompStandardConfig ttConfig = JMotorCompStandardConfig(1.9, .5, 3.2, 1.1, 4.6, 1.7, 100);
 JMotorCompStandard myMotorCompensator = JMotorCompStandard(voltageComp, ttConfig, 1.0);
-JMotorControllerOpen myController = JMotorControllerOpen(myDriver, myMotorCompensator, INFINITY, 1.0);
+JMotorControllerOpen myController = JMotorControllerOpen(myDriver, myMotorCompensator, INFINITY, .5);
 
 String inString = "";
 float value = 0;
@@ -43,25 +43,27 @@ void setup()
 {
     Serial.begin(9600);
     encoder.setUpInterrupts(encoder_jENCODER_ISR);
-    myController.setEnable(true);
-    Serial.setTimeout(50);
+    myController.enable();
 }
 void loop()
 {
 
     while (Serial.available() > 0) {
         int inChar = Serial.read();
-        if (isDigit(inChar) || inChar == '-' || inChar == '.') {
+        if (isDigit(inChar) || inChar == '-' || inChar == '.' || inChar == ' ') {
             inString += (char)inChar;
         }
         if (inChar == '\n') {
-            value = inString.toFloat();
-            inString = "";
+            if (inString == " ") {
+                // myController.resetPos(10);
+                inString = "";
+            } else {
+                value = inString.toFloat();
+                inString = "";
+            }
         }
     }
-
     encoder.run();
 
-    Serial.println();
-    delay(100);
+    delay(10);
 }

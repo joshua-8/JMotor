@@ -238,6 +238,7 @@ public:
             noInterrupts();
             long interval = dataEndMicros - dataStartMicros;
             long cycle = dataEndMicros - oldDataEndMicros;
+            newAngle = false;
             interrupts();
             if (interval > 0 && cycle > ps.MIN_CYCLE && cycle < ps.MAX_CYCLE) { //check that interrupts didn't change one number but not the other, and that frequency is within range
                 if (resetAngleOnStart && firstAngle) {
@@ -248,7 +249,6 @@ public:
                     zeroPos = angle;
                     firstAngle = false;
                 }
-                newAngle = false;
                 if (abs((int16_t)angle - (int16_t)lastAngle) >= ps.RESOLUTION / 2) { // angle jump over half of circle is assummed to be the shorter crossing of 0
                     if (angle > lastAngle) {
                         turns--;
@@ -284,8 +284,8 @@ public:
             oldDataEndMicros = dataEndMicros;
             dataEndMicros = micros();
             dataStartMicros = earlyDataStartMicros;
+            newAngle = true;
         }
-        newAngle = true;
     }
 };
 #endif
