@@ -118,7 +118,7 @@ public:
             }
         }
         ret = voltComp.adjust(ret, driverRange);
-        return ret;
+        return constrain(ret, -maxDriverRange, maxDriverRange);
     }
     void setConfig(JMotorCompStandardConfig& _config)
     {

@@ -50,20 +50,26 @@ void loop()
 
     while (Serial.available() > 0) {
         int inChar = Serial.read();
-        if (isDigit(inChar) || inChar == '-' || inChar == '.' || inChar == ' ') {
-            inString += (char)inChar;
-        }
+        inString += (char)inChar;
         if (inChar == '\n') {
-            if (inString == " ") {
-                // myController.resetPos(10);
+            if (inString.equals(" \n")) {
+                myController.setEnable(!myController.getEnabled());
+                inString = "";
+            } else if (inString.equals("r\n")) {
+                myController.resetPos();
                 inString = "";
             } else {
                 value = inString.toFloat();
                 inString = "";
+
+                myController.setPosTarget(value,true);
             }
         }
     }
     encoder.run();
-
+    myController.run();
+    Serial.print(myController.getPosTarget());
+    Serial.print(",");
+    Serial.println(myController.getPos());
     delay(10);
 }

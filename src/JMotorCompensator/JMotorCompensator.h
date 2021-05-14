@@ -9,6 +9,7 @@
 class JMotorCompensator {
 protected:
     float driverRange = 1.0;
+    float maxDriverRange = 1.0;
 
 public:
     /**
@@ -18,6 +19,14 @@ public:
     void setDriverRange(float _driverRange)
     {
         driverRange = _driverRange;
+    }
+    /**
+     * @brief  set what fraction of driverRange can be used
+     * @param  _driverRangeAmount: (float)
+     */
+    void setMaxDriverRangeAmount(float _driverRangeAmount)
+    {
+        maxDriverRange = constrain(_driverRangeAmount, 0.0, 1.0);
     }
     /**
      * @brief  calculate

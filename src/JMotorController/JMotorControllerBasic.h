@@ -146,5 +146,9 @@ public:
     {
         return compensator.getMinVel();
     }
+    void setMaxDriverRangeAmount(float _driverRangeAmount)
+    {
+        compensator.setMaxDriverRangeAmount(_driverRangeAmount);
+    }
 };
 #endif

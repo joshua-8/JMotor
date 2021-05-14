@@ -110,6 +110,12 @@ public:
      * @brief  slowest speed motor can go
      */
     virtual float getMinVel() = 0;
+
+    /**
+     * @brief  set what fraction of driverRange can be used
+     * @param  _driverRangeAmount: (float)
+     */
+    virtual void setMaxDriverRangeAmount(float _driverRangeAmount) = 0;
 };
 #include "JMotorControllerBasic.h"
 #endif
