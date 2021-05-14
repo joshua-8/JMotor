@@ -2,7 +2,7 @@ var searchData=
 [
   ['instring_40',['inString',['../main_8cpp.html#a3aec325742447d04899a52f801481456',1,'main.cpp']]],
   ['intturns_41',['intTurns',['../class_j_encoder_a_s5048b_i2_c.html#a5d7a9a2d83944a546d4343944c8ec92d',1,'JEncoderAS5048bI2C::intTurns()'],['../class_j_encoder_p_w_m_absolute.html#aefa2e7f851d98f5c16e2591e87eec54f',1,'JEncoderPWMAbsolute::intTurns()']]],
-  ['isdriverinrange_42',['isDriverInRange',['../class_j_motor_controller_base.html#a770c6b052245e393a9f1fa348868d91a',1,'JMotorControllerBase::isDriverInRange()'],['../class_j_motor_controller_basic_open.html#adf4f9e2d0e5621c8c25fb476f835b1ec',1,'JMotorControllerBasicOpen::isDriverInRange()']]],
+  ['isdriverinrange_42',['isDriverInRange',['../class_j_motor_controller_base.html#a770c6b052245e393a9f1fa348868d91a',1,'JMotorControllerBase::isDriverInRange()'],['../class_j_motor_controller_basic.html#a9d8e23f2200db6374d2f9c36d14bc3de',1,'JMotorControllerBasic::isDriverInRange()']]],
   ['ismagnetinrange_43',['isMagnetInRange',['../class_j_encoder_a_s5048b_i2_c.html#a9bddee33c164c2e930fb34a60e62f01a',1,'JEncoderAS5048bI2C']]],
   ['isra_44',['ISRA',['../class_j_encoder_quadrature.html#af6903668957567cdff18c949b55d32e6',1,'JEncoderQuadrature']]],
   ['isrb_45',['ISRB',['../class_j_encoder_quadrature.html#a56c2acabf679c45d09a04b4e9a6ad61a',1,'JEncoderQuadrature']]],

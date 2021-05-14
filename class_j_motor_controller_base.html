@@ -78,21 +78,24 @@ Inheritance diagram for JMotorControllerBase:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_motor_controller_base__inherit__graph.png" border="0" usemap="#a_j_motor_controller_base_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_j_motor_controller_base_inherit__map" id="a_j_motor_controller_base_inherit__map">
-<area shape="rect" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="77,5,224,32"/>
+<area shape="rect" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="69,5,216,32"/>
 <area shape="rect" href="class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="5,80,123,107"/>
-<area shape="rect" href="class_j_motor_controller_basic_open.html" title="A motor controller object that uses a JMotorCompensator to set velocity of a motor." alt="" coords="147,80,328,107"/>
-<area shape="rect" href="class_j_motor_controller_open.html" title="This class controls velocity and position of a motor without any encoder feedback." alt="" coords="77,155,225,181"/>
+<area shape="rect" href="class_j_motor_controller_basic.html" title="A motor controller object that uses a JMotorCompensator to set velocity of a motor." alt="" coords="147,80,298,107"/>
+<area shape="rect" href="class_j_motor_controller_open.html" title="This class controls velocity and position of a motor without any encoder feedback." alt="" coords="69,155,217,181"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a05f80f01565d57350d3a9f5ecd596988"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_base.html#a05f80f01565d57350d3a9f5ecd596988">setVel</a> (float vel)=0</td></tr>
-<tr class="memdesc:a05f80f01565d57350d3a9f5ecd596988"><td class="mdescLeft">&#160;</td><td class="mdescRight">set velocity for controller  <a href="class_j_motor_controller_base.html#a05f80f01565d57350d3a9f5ecd596988">More...</a><br /></td></tr>
-<tr class="separator:a05f80f01565d57350d3a9f5ecd596988"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96367d6cd0f8bf1adff0a19f7a029c90"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_base.html#a96367d6cd0f8bf1adff0a19f7a029c90">setVelTarget</a> (float vel)=0</td></tr>
-<tr class="memdesc:a96367d6cd0f8bf1adff0a19f7a029c90"><td class="mdescLeft">&#160;</td><td class="mdescRight">set target velocity for controller (acceleration limited)  <a href="class_j_motor_controller_base.html#a96367d6cd0f8bf1adff0a19f7a029c90">More...</a><br /></td></tr>
-<tr class="separator:a96367d6cd0f8bf1adff0a19f7a029c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28759c8046b25a124ff01c80344ce690"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_base.html#a28759c8046b25a124ff01c80344ce690">setAccelLimit</a> (float _accelLimit)=0</td></tr>
+<tr class="memdesc:a28759c8046b25a124ff01c80344ce690"><td class="mdescLeft">&#160;</td><td class="mdescRight">set maximum rate that motor speed can be changed at  <a href="class_j_motor_controller_base.html#a28759c8046b25a124ff01c80344ce690">More...</a><br /></td></tr>
+<tr class="separator:a28759c8046b25a124ff01c80344ce690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17c92327cdde7e1a6e12dead8753242c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_base.html#a17c92327cdde7e1a6e12dead8753242c">setVel</a> (float vel, bool _run=true)=0</td></tr>
+<tr class="memdesc:a17c92327cdde7e1a6e12dead8753242c"><td class="mdescLeft">&#160;</td><td class="mdescRight">set velocity for controller  <a href="class_j_motor_controller_base.html#a17c92327cdde7e1a6e12dead8753242c">More...</a><br /></td></tr>
+<tr class="separator:a17c92327cdde7e1a6e12dead8753242c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac40452425aaf60e8248bc87f29d427ee"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_base.html#ac40452425aaf60e8248bc87f29d427ee">setVelTarget</a> (float vel, bool _run=true)=0</td></tr>
+<tr class="memdesc:ac40452425aaf60e8248bc87f29d427ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">set target velocity for controller (acceleration limited)  <a href="class_j_motor_controller_base.html#ac40452425aaf60e8248bc87f29d427ee">More...</a><br /></td></tr>
+<tr class="separator:ac40452425aaf60e8248bc87f29d427ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a349dce8efe007dd9534dc2ecdf6c3912"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_base.html#a349dce8efe007dd9534dc2ecdf6c3912">getVelTarget</a> ()=0</td></tr>
 <tr class="memdesc:a349dce8efe007dd9534dc2ecdf6c3912"><td class="mdescLeft">&#160;</td><td class="mdescRight">get target velocity for controller  <a href="class_j_motor_controller_base.html#a349dce8efe007dd9534dc2ecdf6c3912">More...</a><br /></td></tr>
 <tr class="separator:a349dce8efe007dd9534dc2ecdf6c3912"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,7 +170,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_basic_open.html#afec15a93afb84d7239918f012779e6e5">JMotorControllerBasicOpen</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_controller_basic.html#a37945ba7fa208f34b59424929547bc87">JMotorControllerBasic</a>.</p>
 
 </div>
 </div>
@@ -202,7 +205,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_basic_open.html#a2406ed94f3472c22285126a40553d42a">JMotorControllerBasicOpen</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_controller_basic.html#a008ba2b28f33ca0fcabb89e1887fe6a7">JMotorControllerBasic</a>.</p>
 
 </div>
 </div>
@@ -237,7 +240,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_basic_open.html#aeeef6d9d22c26f81c6ffdade9bc630b3">JMotorControllerBasicOpen</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_controller_basic.html#a5e185bb6773288c265e3e0b54adaee18">JMotorControllerBasic</a>.</p>
 
 </div>
 </div>
@@ -272,7 +275,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_basic_open.html#ab743b11607548590f3739194033a8431">JMotorControllerBasicOpen</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_controller_basic.html#ae3f7bcf4902b98a1d375baa1d4a3ae3b">JMotorControllerBasic</a>.</p>
 
 </div>
 </div>
@@ -307,7 +310,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_basic_open.html#ae5ebcbe9fc84422fcf1c0e6420f5adf4">JMotorControllerBasicOpen</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_controller_basic.html#a720c90b6f9fb17d9aa556bce1b6f7beb">JMotorControllerBasic</a>.</p>
 
 </div>
 </div>
@@ -342,7 +345,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_basic_open.html#ab06f45656753236b57361d3f5e9c2f2d">JMotorControllerBasicOpen</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_controller_basic.html#a56a908c41a2c18194db079871bd8e831">JMotorControllerBasic</a>.</p>
 
 </div>
 </div>
@@ -378,7 +381,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_basic_open.html#af796447b21eae6e02a2058dca0233baf">JMotorControllerBasicOpen</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_controller_basic.html#ad7573549d410d42e797b0b287e1ebd8a">JMotorControllerBasic</a>.</p>
 
 </div>
 </div>
@@ -407,7 +410,7 @@ Public Member Functions</h2></td></tr>
 
 <p>slowest speed motor can go </p>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_basic_open.html#a3f243fcc05cd493031eca7986dbb4a12">JMotorControllerBasicOpen</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_controller_basic.html#a92a422cbc5f7cb10c8e714ef029238a2">JMotorControllerBasic</a>.</p>
 
 </div>
 </div>
@@ -442,7 +445,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_basic_open.html#a0022e71609bc6d73d600ab48819b0abf">JMotorControllerBasicOpen</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_controller_basic.html#a9fbc78e290359e23c452c8685a4b77d9">JMotorControllerBasic</a>.</p>
 
 </div>
 </div>
@@ -477,7 +480,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_basic_open.html#a9e7d862fdea81d7fdf83db76b798f69f">JMotorControllerBasicOpen</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_controller_basic.html#a6719acbcef9e31acc0c032f7024929d7">JMotorControllerBasic</a>.</p>
 
 </div>
 </div>
@@ -512,7 +515,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_basic_open.html#adf4f9e2d0e5621c8c25fb476f835b1ec">JMotorControllerBasicOpen</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_controller_basic.html#a9d8e23f2200db6374d2f9c36d14bc3de">JMotorControllerBasic</a>.</p>
 
 </div>
 </div>
@@ -542,7 +545,44 @@ Public Member Functions</h2></td></tr>
 <p>update driver </p>
 <dl class="section note"><dt>Note</dt><dd>call this function as frequently as possible </dd></dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#aad3c0954a1d5da79e908b6093c6d82cb">JMotorControllerOpen</a>, and <a class="el" href="class_j_motor_controller_basic_open.html#a64924f3b95a5dad3675ab7eb8ddd80a8">JMotorControllerBasicOpen</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#aad3c0954a1d5da79e908b6093c6d82cb">JMotorControllerOpen</a>, and <a class="el" href="class_j_motor_controller_basic.html#a1c892de7f53781b38ec114dbba165d18">JMotorControllerBasic</a>.</p>
+
+</div>
+</div>
+<a id="a28759c8046b25a124ff01c80344ce690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28759c8046b25a124ff01c80344ce690">&#9670;&nbsp;</a></span>setAccelLimit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void JMotorControllerBase::setAccelLimit </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_accelLimit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set maximum rate that motor speed can be changed at </p>
+<dl class="section note"><dt>Note</dt><dd>set to INFINITY to disable acceleration limiting </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_accelLimit</td><td>(float) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#ab778de5954d6bf9870ffd6a66268d916">JMotorControllerOpen</a>, and <a class="el" href="class_j_motor_controller_basic.html#af9888ea6637074cfca9b0da164b6ad1c">JMotorControllerBasic</a>.</p>
 
 </div>
 </div>
@@ -577,6 +617,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>velocity related variables are reset to zero on disable. you can set velocity then enable </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">(bool)</td><td>true if state changed </td></tr>
@@ -584,12 +625,12 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_basic_open.html#a0f8110dfb52b2aec1fc41ac497ca1f89">JMotorControllerBasicOpen</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#a523e519803f2f8e75dfc660475930cea">JMotorControllerOpen</a>, and <a class="el" href="class_j_motor_controller_basic.html#a1a4c91d8f8955f033247e3d04321db24">JMotorControllerBasic</a>.</p>
 
 </div>
 </div>
-<a id="a05f80f01565d57350d3a9f5ecd596988"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05f80f01565d57350d3a9f5ecd596988">&#9670;&nbsp;</a></span>setVel()</h2>
+<a id="a17c92327cdde7e1a6e12dead8753242c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17c92327cdde7e1a6e12dead8753242c">&#9670;&nbsp;</a></span>setVel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -598,11 +639,21 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void JMotorControllerBase::setVel </td>
+          <td class="memname">virtual bool JMotorControllerBase::setVel </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>vel</em></td><td>)</td>
+          <td class="paramname"><em>vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_run</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -617,16 +668,23 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vel</td><td>(float) </td></tr>
+    <tr><td class="paramname">_run</td><td>(bool) default:true, true = call <a class="el" href="class_j_motor_controller_base.html#adfd3be6aaf5534f049ac60ffc053bc11" title="update driver">run()</a> in this function, false=you'll call <a class="el" href="class_j_motor_controller_base.html#adfd3be6aaf5534f049ac60ffc053bc11" title="update driver">run()</a> yourself </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(bool)</td><td>true if in range, false if out of motor's speed range </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#ac575c10b5226f2480a581a4377863b9c">JMotorControllerOpen</a>, and <a class="el" href="class_j_motor_controller_basic_open.html#aa7f5f2ac950894eb1c5d1969196cfdd9">JMotorControllerBasicOpen</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#aa5752d5b3107993d7d5c860f66f1a9f3">JMotorControllerOpen</a>, and <a class="el" href="class_j_motor_controller_basic.html#a46318f537ccaf32ce9d72e8792968464">JMotorControllerBasic</a>.</p>
 
 </div>
 </div>
-<a id="a96367d6cd0f8bf1adff0a19f7a029c90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96367d6cd0f8bf1adff0a19f7a029c90">&#9670;&nbsp;</a></span>setVelTarget()</h2>
+<a id="ac40452425aaf60e8248bc87f29d427ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac40452425aaf60e8248bc87f29d427ee">&#9670;&nbsp;</a></span>setVelTarget()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -635,11 +693,21 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual float JMotorControllerBase::setVelTarget </td>
+          <td class="memname">virtual bool JMotorControllerBase::setVelTarget </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>vel</em></td><td>)</td>
+          <td class="paramname"><em>vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_run</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -654,17 +722,18 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vel</td><td>(float) target velocity </td></tr>
+    <tr><td class="paramname">_run</td><td>(bool) default:true, true = call <a class="el" href="class_j_motor_controller_base.html#adfd3be6aaf5534f049ac60ffc053bc11" title="update driver">run()</a> in this function, false=you'll call <a class="el" href="class_j_motor_controller_base.html#adfd3be6aaf5534f049ac60ffc053bc11" title="update driver">run()</a> yourself </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">(float)</td><td>current velocity </td></tr>
+    <tr><td class="paramname">(bool)</td><td>true if target reached, false if not reached (due to acceleration or out of range) </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#abd99b89867779157131d198206f2f6d4">JMotorControllerOpen</a>, and <a class="el" href="class_j_motor_controller_basic_open.html#ab14569a9952239bf8c86a482ae6f0f44">JMotorControllerBasicOpen</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#ae5df67427e891d212c64b5b5026b217a">JMotorControllerOpen</a>, and <a class="el" href="class_j_motor_controller_basic.html#a7ddb6b1f937bd3770ae9d31b05c73fff">JMotorControllerBasic</a>.</p>
 
 </div>
 </div>

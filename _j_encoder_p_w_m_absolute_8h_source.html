@@ -230,17 +230,17 @@ $(function() {
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            noInterrupts();</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <span class="keywordtype">long</span> interval = dataEndMicros - dataStartMicros;</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <span class="keywordtype">long</span> cycle = dataEndMicros - oldDataEndMicros;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            interrupts();</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="keywordflow">if</span> (interval &gt; 0 &amp;&amp; cycle &gt; ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#ae298b8d5967515c32130ba9c431b8e5d">MIN_CYCLE</a> &amp;&amp; cycle &lt; ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#a99db41a37254e7ca74e50b56ef0d81fe">MAX_CYCLE</a>) { <span class="comment">//check that interrupts didn&#39;t change one number but not the other, and that frequency is within range</span></div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                <span class="keywordflow">if</span> (resetAngleOnStart &amp;&amp; firstAngle) {</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                    zeroPos = 0;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                }</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                angle = (constrain(interval * ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aff02616f61cfef0904b0e7a41d57b187">PWM_STEPS</a> / cycle - ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#a7479527686a611225b8cfdf24a23d461">MIN_STEPS</a>, 0, ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aaeaa01d54add313c783c532f654651e6">RESOLUTION</a> - 1) + ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aaeaa01d54add313c783c532f654651e6">RESOLUTION</a> - zeroPos) % ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aaeaa01d54add313c783c532f654651e6">RESOLUTION</a>;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                if (resetAngleOnStart &amp;&amp; firstAngle) {</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                    zeroPos = angle;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                    firstAngle = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                }</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                newAngle = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            newAngle = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            interrupts();</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="keywordflow">if</span> (interval &gt; 0 &amp;&amp; cycle &gt; ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#ae298b8d5967515c32130ba9c431b8e5d">MIN_CYCLE</a> &amp;&amp; cycle &lt; ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#a99db41a37254e7ca74e50b56ef0d81fe">MAX_CYCLE</a>) { <span class="comment">//check that interrupts didn&#39;t change one number but not the other, and that frequency is within range</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                <span class="keywordflow">if</span> (resetAngleOnStart &amp;&amp; firstAngle) {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                    zeroPos = 0;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                angle = (constrain(interval * ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aff02616f61cfef0904b0e7a41d57b187">PWM_STEPS</a> / cycle - ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#a7479527686a611225b8cfdf24a23d461">MIN_STEPS</a>, 0, ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aaeaa01d54add313c783c532f654651e6">RESOLUTION</a> - 1) + ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aaeaa01d54add313c783c532f654651e6">RESOLUTION</a> - zeroPos) % ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aaeaa01d54add313c783c532f654651e6">RESOLUTION</a>;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                if (resetAngleOnStart &amp;&amp; firstAngle) {</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                    zeroPos = angle;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                    firstAngle = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                }</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                <span class="keywordflow">if</span> (abs((int16_t)angle - (int16_t)lastAngle) &gt;= ps.<a class="code" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aaeaa01d54add313c783c532f654651e6">RESOLUTION</a> / 2) { <span class="comment">// angle jump over half of circle is assummed to be the shorter crossing of 0</span></div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                    <span class="keywordflow">if</span> (angle &gt; lastAngle) {</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                        turns--;</div>
@@ -276,8 +276,8 @@ $(function() {
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            oldDataEndMicros = dataEndMicros;</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            dataEndMicros = micros();</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            dataStartMicros = earlyDataStartMicros;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        }</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        newAngle = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            newAngle = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        }</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    }</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;};</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="preprocessor">#endif</span></div>

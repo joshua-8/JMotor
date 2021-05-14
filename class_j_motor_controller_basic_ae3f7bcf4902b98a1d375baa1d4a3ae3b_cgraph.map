@@ -1,0 +1,4 @@
+<map id="JMotorControllerBasic::getDriverMinRange" name="JMotorControllerBasic::getDriverMinRange">
+<area shape="rect" id="node1" title="if getDriverSetVal goes below this, isDriverInRange will go false" alt="" coords="5,5,156,47"/>
+<area shape="rect" id="node2" href="$class_j_motor_driver.html#a70e074ae03c7685d2147f70ae4ed9ff6" title="low end of the range" alt="" coords="204,13,383,39"/>
+</map>

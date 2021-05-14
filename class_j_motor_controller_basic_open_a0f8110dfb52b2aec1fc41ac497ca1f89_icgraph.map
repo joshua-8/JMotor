@@ -1,6 +1,0 @@
-<map id="JMotorControllerBasicOpen::setEnable" name="JMotorControllerBasicOpen::setEnable">
-<area shape="rect" id="node1" title="change whether motor controller is enabled" alt="" coords="235,71,416,112"/>
-<area shape="rect" id="node2" href="$class_j_motor_controller_basic_open.html#afec15a93afb84d7239918f012779e6e5" title="disable motor controller" alt="" coords="5,5,187,47"/>
-<area shape="rect" id="node3" href="$class_j_motor_controller_basic_open.html#a2406ed94f3472c22285126a40553d42a" title="enable motor controller" alt="" coords="5,71,187,112"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="69,137,123,163"/>
-</map>

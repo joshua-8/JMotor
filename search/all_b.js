@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['position_139',['position',['../class_j_motor_controller_open.html#a917a6564a342fffc14c31e3669e01cad',1,'JMotorControllerOpen']]],
-  ['positioningmode_140',['positioningMode',['../class_j_motor_controller.html#a7593c42aa6582d73de991065210071e9',1,'JMotorController::positioningMode()'],['../class_j_motor_controller_open.html#a003c2365576e137993263d3a1e7b92e5',1,'JMotorControllerOpen::positioningMode()']]],
+  ['posdelta_139',['posDelta',['../class_j_motor_controller_open.html#a6ef86624b07d5b5ea560d97b9f2e623e',1,'JMotorControllerOpen']]],
+  ['position_140',['position',['../class_j_motor_controller_open.html#a917a6564a342fffc14c31e3669e01cad',1,'JMotorControllerOpen']]],
   ['positiontarget_141',['positionTarget',['../class_j_motor_controller_open.html#a4c13006321b87236a3feb707df91258b',1,'JMotorControllerOpen']]],
   ['posmode_142',['posMode',['../class_j_motor_controller_open.html#a42adee6e39dfdffcf65854b588f47023',1,'JMotorControllerOpen']]],
   ['pwm_5frange_143',['PWM_RANGE',['../class_j_motor_driver_avr_p_w_m.html#a03a258f040596b9711fd2e773434bd54',1,'JMotorDriverAvrPWM']]],

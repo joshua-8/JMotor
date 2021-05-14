@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['compensator_346',['compensator',['../class_j_motor_controller_basic_open.html#ac08cb41e30e3752fbe68d2bcefa53d5b',1,'JMotorControllerBasicOpen']]]
+  ['compensator_350',['compensator',['../class_j_motor_controller_basic.html#a4c1f4b702b721dd056c7dc5e01d3ee03',1,'JMotorControllerBasic']]]
 ];
