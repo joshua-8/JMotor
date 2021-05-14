@@ -117,16 +117,18 @@ public:
         return false;
     }
 
-    void setPosDelta(float _posDelta, bool _resetPos = false, bool _run = true)
+    bool setPosDelta(float _posDelta, bool _resetPos = false, bool _run = true)
     {
         smoothedMode = false;
         posMode = true;
+        bool ret = (posDelta != _posDelta);
         posDelta = _posDelta;
         if (_resetPos) {
             resetPos();
         }
         if (_run)
             JMotorControllerOpen::run();
+        return ret;
     }
 
     float getPosTarget()

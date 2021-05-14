@@ -58,7 +58,7 @@ public:
     /**
      * @brief  change whether motor controller is enabled
      * @param  _enable: (bool)
-     * @note velocity related variables are reset to zero on disable. you can set velocity then enable
+     * @note  velocity related variables are reset to zero on disable. you can set velocity then enable
      * @retval (bool) true if state changed
      */
     virtual bool setEnable(bool _enable) = 0;
