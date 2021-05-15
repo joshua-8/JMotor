@@ -167,7 +167,7 @@ public:
     }
     void setVelLimit(float _velLimit)
     {
-        JMotorControllerBase::setVelLimit(_velLimit);
+        JMotorControllerBasic::setVelLimit(_velLimit);
         dL.setVelLimit(velLimit);
     }
     void setAccelLimit(float _accelLimit)
