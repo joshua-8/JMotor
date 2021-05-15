@@ -78,9 +78,10 @@ Inheritance diagram for JMotorController:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_motor_controller__inherit__graph.png" border="0" usemap="#a_j_motor_controller_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_j_motor_controller_inherit__map" id="a_j_motor_controller_inherit__map">
-<area shape="rect" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="21,80,138,107"/>
-<area shape="rect" href="class_j_motor_controller_open.html" title="This class controls velocity and position of a motor without any encoder feedback." alt="" coords="5,155,153,181"/>
-<area shape="rect" href="class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="6,5,153,32"/>
+<area shape="rect" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="113,80,231,107"/>
+<area shape="rect" href="class_j_motor_controller_closed.html" title=" " alt="" coords="5,155,163,181"/>
+<area shape="rect" href="class_j_motor_controller_open.html" title="This class controls velocity and position of a motor without any encoder feedback." alt="" coords="187,155,335,181"/>
+<area shape="rect" href="class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="99,5,245,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -165,6 +166,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad7fb53f36fcbcde9e2756c63fb41e536 inherit pub_methods_class_j_motor_controller_base"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_base.html#ad7fb53f36fcbcde9e2756c63fb41e536">getMinVel</a> ()=0</td></tr>
 <tr class="memdesc:ad7fb53f36fcbcde9e2756c63fb41e536 inherit pub_methods_class_j_motor_controller_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">slowest speed motor can go  <a href="class_j_motor_controller_base.html#ad7fb53f36fcbcde9e2756c63fb41e536">More...</a><br /></td></tr>
 <tr class="separator:ad7fb53f36fcbcde9e2756c63fb41e536 inherit pub_methods_class_j_motor_controller_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69e70a259b49afbb240f03b3f46531e9 inherit pub_methods_class_j_motor_controller_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_base.html#a69e70a259b49afbb240f03b3f46531e9">setMaxDriverRangeAmount</a> (float _driverRangeAmount)=0</td></tr>
+<tr class="memdesc:a69e70a259b49afbb240f03b3f46531e9 inherit pub_methods_class_j_motor_controller_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">set what fraction of driverRange can be used  <a href="class_j_motor_controller_base.html#a69e70a259b49afbb240f03b3f46531e9">More...</a><br /></td></tr>
+<tr class="separator:a69e70a259b49afbb240f03b3f46531e9 inherit pub_methods_class_j_motor_controller_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class defines a common interface for classes which control velocity and position of a motor controlled by a <a class="el" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers">JMotorDriver</a>. </p>
@@ -200,7 +204,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#ae49d61e9c7870bdbca1a264fd135a080">JMotorControllerOpen</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#ae49d61e9c7870bdbca1a264fd135a080">JMotorControllerOpen</a>, and <a class="el" href="class_j_motor_controller_closed.html#a6f0fa378981b4ed4c7bdc43b9e23a904">JMotorControllerClosed</a>.</p>
 
 </div>
 </div>
@@ -235,7 +239,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#a38bb7d2c7306075974d7efe4dda3298f">JMotorControllerOpen</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#a38bb7d2c7306075974d7efe4dda3298f">JMotorControllerOpen</a>, and <a class="el" href="class_j_motor_controller_closed.html#a1d2680eb0aa6d516ecbe8be0184a03ae">JMotorControllerClosed</a>.</p>
 
 </div>
 </div>
@@ -271,7 +275,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#a8add0786c2b80c1649696bf916c0f4a2">JMotorControllerOpen</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#a8add0786c2b80c1649696bf916c0f4a2">JMotorControllerOpen</a>, and <a class="el" href="class_j_motor_controller_closed.html#a82da7daa4b03d6deed328777f98ac401">JMotorControllerClosed</a>.</p>
 
 </div>
 </div>
@@ -332,7 +336,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#a2fff42e1e435cafe638e792d699b56fb">JMotorControllerOpen</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_controller_closed.html#a34b9a874846877ba5f2e229ad279d4c4">JMotorControllerClosed</a>, and <a class="el" href="class_j_motor_controller_open.html#a2fff42e1e435cafe638e792d699b56fb">JMotorControllerOpen</a>.</p>
 
 </div>
 </div>
@@ -476,7 +480,9 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#ad1c70fe2e38a7f879287c720d8e18252">JMotorControllerOpen</a>.</p>
+<p>Implements <a class="el" href="class_j_motor_controller_base.html#a4bc3f3c349bddd8dac5a9ae84b830fbb">JMotorControllerBase</a>.</p>
+
+<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#ad1c70fe2e38a7f879287c720d8e18252">JMotorControllerOpen</a>, and <a class="el" href="class_j_motor_controller_closed.html#a624088996995420a3745f8cb5964055f">JMotorControllerClosed</a>.</p>
 
 </div>
 </div>

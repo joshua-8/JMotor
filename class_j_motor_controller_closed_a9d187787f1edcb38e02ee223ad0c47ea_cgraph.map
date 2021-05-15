@@ -1,0 +1,4 @@
+<map id="JMotorControllerClosed::getDriverMaxRange" name="JMotorControllerClosed::getDriverMaxRange">
+<area shape="rect" id="node1" title="if getDriverSetVal exceeds this, isDriverInRange will go false" alt="" coords="5,5,163,47"/>
+<area shape="rect" id="node2" href="$class_j_motor_driver.html#a36aa5a3f2e5c5ce8c769023047822e84" title="high end of the range" alt="" coords="211,13,392,39"/>
+</map>

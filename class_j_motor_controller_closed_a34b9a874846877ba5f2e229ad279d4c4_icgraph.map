@@ -1,0 +1,4 @@
+<map id="JMotorControllerClosed::setPosDelta" name="JMotorControllerClosed::setPosDelta">
+<area shape="rect" id="node1" title="alternative method for setting velocity that uses setPosSetpoint" alt="" coords="211,5,368,47"/>
+<area shape="rect" id="node2" href="$class_j_motor_controller_closed.html#ac51c69d41b1ba6b51796f42a0c8fcce2" title="set velocity for controller" alt="" coords="5,5,163,47"/>
+</map>

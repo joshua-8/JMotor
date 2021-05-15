@@ -1,0 +1,4 @@
+<map id="JMotorDriverEsp32Servo::adjustFrequency" name="JMotorDriverEsp32Servo::adjustFrequency">
+<area shape="rect" id="node1" title="adjust frequency as a fraction of standard 50hz frequency lower frequencies (try ...." alt="" coords="5,5,172,47"/>
+<area shape="rect" id="node2" href="$class_j_motor_driver_esp32_servo.html#a56b7ca1961e67c647afb5aba9ae2f7c2" title="set frequency that servo signal pulse is repeated at and how many bits are used internally for resolu..." alt="" coords="220,5,411,47"/>
+</map>

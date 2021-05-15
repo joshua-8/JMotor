@@ -1,0 +1,6 @@
+<map id="JMotorControllerClosed::setVelTarget" name="JMotorControllerClosed::setVelTarget">
+<area shape="rect" id="node1" title="set target velocity for controller (acceleration limited)" alt="" coords="5,39,163,80"/>
+<area shape="rect" id="node2" href="$class_j_motor_controller_closed.html#a31f9721c54c38962fc7a7dfbdf7572c3" title="How fast of a motor speed setting would get adjusted to full motor power." alt="" coords="211,5,368,47"/>
+<area shape="rect" id="node4" href="$class_j_motor_controller_closed.html#ae3e80985541a2659aa3c532fae94c413" title=" " alt="" coords="211,71,368,112"/>
+<area shape="rect" id="node3" href="$class_j_motor_compensator.html#a14f0b533af038a8927053e99b3c77a00" title="How fast of a motor speed setting would get adjusted to full motor power." alt="" coords="416,5,561,47"/>
+</map>

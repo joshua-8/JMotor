@@ -1,0 +1,4 @@
+<map id="JEncoder::getDistPerCountFactor" name="JEncoder::getDistPerCountFactor">
+<area shape="rect" id="node1" title="returns a conversion factor between encoder ticks and distance that can be set for the encoder" alt="" coords="211,5,388,47"/>
+<area shape="rect" id="node2" href="$class_j_motor_controller_closed.html#a82da7daa4b03d6deed328777f98ac401" title="reset what position the controller thinks it&#39;s in" alt="" coords="5,5,163,47"/>
+</map>

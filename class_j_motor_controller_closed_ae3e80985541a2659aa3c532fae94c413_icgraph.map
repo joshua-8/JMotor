@@ -1,0 +1,4 @@
+<map id="JMotorControllerClosed::setAccelPosDelta" name="JMotorControllerClosed::setAccelPosDelta">
+<area shape="rect" id="node1" title=" " alt="" coords="211,5,368,47"/>
+<area shape="rect" id="node2" href="$class_j_motor_controller_closed.html#a984f682096fd230e748b8724ef29a0b4" title="set target velocity for controller (acceleration limited)" alt="" coords="5,5,163,47"/>
+</map>

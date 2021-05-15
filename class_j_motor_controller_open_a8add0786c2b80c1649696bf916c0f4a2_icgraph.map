@@ -1,4 +1,5 @@
 <map id="JMotorControllerOpen::resetPos" name="JMotorControllerOpen::resetPos">
-<area shape="rect" id="node1" title="reset what position the controller thinks it&#39;s in" alt="" coords="201,5,349,47"/>
-<area shape="rect" id="node2" href="$class_j_motor_controller_open.html#a2fff42e1e435cafe638e792d699b56fb" title="alternative method for setting velocity that uses setPosSetpoint" alt="" coords="5,5,153,47"/>
+<area shape="rect" id="node1" title="reset what position the controller thinks it&#39;s in" alt="" coords="201,27,349,69"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title=" " alt="" coords="56,5,103,32"/>
+<area shape="rect" id="node3" href="$class_j_motor_controller_open.html#a2fff42e1e435cafe638e792d699b56fb" title="alternative method for setting velocity that uses setPosSetpoint" alt="" coords="5,57,153,98"/>
 </map>

@@ -1,0 +1,4 @@
+<map id="JEncoder::getDist" name="JEncoder::getDist">
+<area shape="rect" id="node1" title="returns how far the encoder has turned from the zero position converted to distance" alt="" coords="211,13,333,39"/>
+<area shape="rect" id="node2" href="$class_j_motor_controller_closed.html#a6f0fa378981b4ed4c7bdc43b9e23a904" title="get what position the motor is currently at" alt="" coords="5,5,163,47"/>
+</map>

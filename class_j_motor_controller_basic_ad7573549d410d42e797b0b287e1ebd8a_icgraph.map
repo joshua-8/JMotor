@@ -1,9 +1,10 @@
 <map id="JMotorControllerBasic::getMaxVel" name="JMotorControllerBasic::getMaxVel">
-<area shape="rect" id="node1" title="How fast of a motor speed setting would get adjusted to full motor power." alt="" coords="421,201,572,243"/>
-<area shape="rect" id="node2" href="$class_j_motor_controller_open.html#aad3c0954a1d5da79e908b6093c6d82cb" title="update driver" alt="" coords="201,177,373,203"/>
-<area shape="rect" id="node5" href="$class_j_motor_controller_open.html#a3e3d100832eda976980648ec08d7e7d6" title="set target position (motor drives towards position, following acceleration profile)" alt="" coords="5,267,153,308"/>
-<area shape="rect" id="node3" href="$class_j_motor_controller_open.html#a2fff42e1e435cafe638e792d699b56fb" title="alternative method for setting velocity that uses setPosSetpoint" alt="" coords="5,5,153,47"/>
-<area shape="rect" id="node4" href="$class_j_motor_controller_open.html#a6389b6056bbc2a5e3cfe89ad73658880" title="set position for motor to drive towards position as fast as possible (setpoint for control loop if av..." alt="" coords="5,71,153,112"/>
-<area shape="rect" id="node6" href="$class_j_motor_controller_open.html#aa5752d5b3107993d7d5c860f66f1a9f3" title="set velocity for controller" alt="" coords="5,136,153,177"/>
-<area shape="rect" id="node7" href="$class_j_motor_controller_open.html#ae5df67427e891d212c64b5b5026b217a" title="set target velocity for controller (acceleration limited)" alt="" coords="5,201,153,243"/>
+<area shape="rect" id="node1" title="How fast of a motor speed setting would get adjusted to full motor power." alt="" coords="516,238,667,279"/>
+<area shape="rect" id="node2" href="$class_j_motor_controller_open.html#aad3c0954a1d5da79e908b6093c6d82cb" title="update driver" alt="" coords="296,180,468,206"/>
+<area shape="rect" id="node6" href="$class_j_motor_controller_open.html#a3e3d100832eda976980648ec08d7e7d6" title="set target position (motor drives towards position, following acceleration profile)" alt="" coords="100,303,248,344"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title=" " alt="" coords="5,150,52,177"/>
+<area shape="rect" id="node4" href="$class_j_motor_controller_open.html#a2fff42e1e435cafe638e792d699b56fb" title="alternative method for setting velocity that uses setPosSetpoint" alt="" coords="100,42,248,83"/>
+<area shape="rect" id="node5" href="$class_j_motor_controller_open.html#a6389b6056bbc2a5e3cfe89ad73658880" title="set position for motor to drive towards position as fast as possible (setpoint for control loop if av..." alt="" coords="100,107,248,148"/>
+<area shape="rect" id="node7" href="$class_j_motor_controller_open.html#aa5752d5b3107993d7d5c860f66f1a9f3" title="set velocity for controller" alt="" coords="100,172,248,214"/>
+<area shape="rect" id="node8" href="$class_j_motor_controller_open.html#ae5df67427e891d212c64b5b5026b217a" title="set target velocity for controller (acceleration limited)" alt="" coords="100,238,248,279"/>
 </map>

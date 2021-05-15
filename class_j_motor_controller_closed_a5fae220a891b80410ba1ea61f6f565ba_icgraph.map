@@ -1,0 +1,5 @@
+<map id="JMotorControllerClosed::setEnable" name="JMotorControllerClosed::setEnable">
+<area shape="rect" id="node1" title="change whether motor controller is enabled" alt="" coords="211,39,368,80"/>
+<area shape="rect" id="node2" href="$class_j_motor_controller_closed.html#a4d09bd7c4ea0f5e0181bae92432af8a2" title="disable motor controller" alt="" coords="5,5,163,47"/>
+<area shape="rect" id="node3" href="$class_j_motor_controller_closed.html#ac10af2f64b0ff551758cceca7e422433" title="enable motor controller" alt="" coords="5,71,163,112"/>
+</map>

@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['rawreading_147',['rawReading',['../class_j_encoder_a_s5048b_i2_c.html#a2857d5f8ba2b031d351f22c904b8a7ca',1,'JEncoderAS5048bI2C::rawReading()'],['../class_j_encoder_p_w_m_absolute.html#af689df544afd9812612e1ba369a154a9',1,'JEncoderPWMAbsolute::rawReading()']]],
-  ['readme_2emd_148',['readme.md',['../readme_8md.html',1,'']]],
-  ['resetpos_149',['resetPos',['../class_j_motor_controller.html#a07c8715135799319bae0d4a86751cab5',1,'JMotorController::resetPos()'],['../class_j_motor_controller_open.html#a8add0786c2b80c1649696bf916c0f4a2',1,'JMotorControllerOpen::resetPos()']]],
-  ['resolution_150',['RESOLUTION',['../struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aaeaa01d54add313c783c532f654651e6',1,'JEncoderPWMAbsolute::pwmSettings']]],
-  ['reverse_151',['reverse',['../class_j_motor_driver_avr_p_w_m_dir.html#a66cd529eff178ee36cb9cc4edf53f54e',1,'JMotorDriverAvrPWMDir::reverse()'],['../class_j_motor_driver_esp32_p_w_m_dir.html#ab502afbb0bbaf46a9c786affeb5d3eff',1,'JMotorDriverEsp32PWMDir::reverse()']]],
-  ['run_152',['run',['../class_j_encoder.html#a565ca78c9735b6306c23a0820fc7b482',1,'JEncoder::run()'],['../class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b',1,'JEncoderAS5048bI2C::run()'],['../class_j_encoder_p_w_m_absolute.html#a122f35f077150b64126880c03aa00d1d',1,'JEncoderPWMAbsolute::run()'],['../class_j_encoder_quadrature.html#a9f302ae76475013f963f088f750254ad',1,'JEncoderQuadrature::run()'],['../class_j_encoder_single.html#a88d5a8aa16bf1ff48727aea4f22fc1bf',1,'JEncoderSingle::run()'],['../class_j_motor_controller_base.html#adfd3be6aaf5534f049ac60ffc053bc11',1,'JMotorControllerBase::run()'],['../class_j_motor_controller_basic.html#a1c892de7f53781b38ec114dbba165d18',1,'JMotorControllerBasic::run()'],['../class_j_motor_controller_open.html#aad3c0954a1d5da79e908b6093c6d82cb',1,'JMotorControllerOpen::run()']]]
+  ['posdelta_145',['posDelta',['../class_j_motor_controller_open.html#a6ef86624b07d5b5ea560d97b9f2e623e',1,'JMotorControllerOpen']]],
+  ['position_146',['position',['../class_j_motor_controller_open.html#a917a6564a342fffc14c31e3669e01cad',1,'JMotorControllerOpen']]],
+  ['positiontarget_147',['positionTarget',['../class_j_motor_controller_open.html#a4c13006321b87236a3feb707df91258b',1,'JMotorControllerOpen']]],
+  ['posmode_148',['posMode',['../class_j_motor_controller_open.html#a42adee6e39dfdffcf65854b588f47023',1,'JMotorControllerOpen']]],
+  ['pwm_5frange_149',['PWM_RANGE',['../class_j_motor_driver_avr_p_w_m.html#a03a258f040596b9711fd2e773434bd54',1,'JMotorDriverAvrPWM']]],
+  ['pwm_5fsteps_150',['PWM_STEPS',['../struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aff02616f61cfef0904b0e7a41d57b187',1,'JEncoderPWMAbsolute::pwmSettings']]],
+  ['pwmdriver_151',['pwmDriver',['../class_j_motor_driver_avr_l293.html#ac3693aaf5c9fba48882d1d713390c460',1,'JMotorDriverAvrL293::pwmDriver()'],['../class_j_motor_driver_avr_p_w_m_dir.html#a405440d1a48c7c755118dc099ceac969',1,'JMotorDriverAvrPWMDir::pwmDriver()'],['../class_j_motor_driver_esp32_l293.html#a170b794230d12938e5f436a1cfdff407',1,'JMotorDriverEsp32L293::pwmDriver()'],['../class_j_motor_driver_esp32_p_w_m_dir.html#a26da30d40f1c0d90c9b32df8b3089293',1,'JMotorDriverEsp32PWMDir::pwmDriver()']]],
+  ['pwmsettings_152',['pwmSettings',['../struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html',1,'JEncoderPWMAbsolute']]]
 ];

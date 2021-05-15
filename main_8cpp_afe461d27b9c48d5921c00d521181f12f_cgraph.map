@@ -1,4 +1,26 @@
 <map id="loop" name="loop">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,52,32"/>
-<area shape="rect" id="node2" href="$class_j_encoder_p_w_m_absolute.html#a122f35f077150b64126880c03aa00d1d" title=" " alt="" coords="100,5,283,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,496,52,523"/>
+<area shape="rect" id="node2" href="$class_j_motor_controller_basic.html#a56a908c41a2c18194db079871bd8e831" title="is the controller enabled" alt="" coords="976,395,1127,437"/>
+<area shape="rect" id="node4" href="$class_j_motor_controller_open.html#ae49d61e9c7870bdbca1a264fd135a080" title="get what position the motor is currently at" alt="" coords="117,518,265,559"/>
+<area shape="rect" id="node5" href="$class_j_motor_controller_open.html#a38bb7d2c7306075974d7efe4dda3298f" title="get position set as target" alt="" coords="117,583,265,625"/>
+<area shape="rect" id="node6" href="$class_j_motor_controller_open.html#a8add0786c2b80c1649696bf916c0f4a2" title="reset what position the controller thinks it&#39;s in" alt="" coords="117,649,265,690"/>
+<area shape="rect" id="node7" href="$class_j_encoder_p_w_m_absolute.html#a122f35f077150b64126880c03aa00d1d" title=" " alt="" coords="100,715,283,741"/>
+<area shape="rect" id="node8" href="$class_j_motor_controller_open.html#aad3c0954a1d5da79e908b6093c6d82cb" title="update driver" alt="" coords="331,299,503,325"/>
+<area shape="rect" id="node21" href="$class_j_motor_controller_open.html#a523e519803f2f8e75dfc660475930cea" title="change whether motor controller is enabled" alt="" coords="552,467,700,509"/>
+<area shape="rect" id="node24" href="$class_j_motor_controller_open.html#a3e3d100832eda976980648ec08d7e7d6" title="set target position (motor drives towards position, following acceleration profile)" alt="" coords="117,350,265,391"/>
+<area shape="rect" id="node3" href="$class_j_motor_driver.html#a87e4adac669e4dcafc0e540e2d1e4849" title="get the enable state of the driver" alt="" coords="1190,328,1349,355"/>
+<area shape="rect" id="node9" href="$class_j_motor_controller_basic.html#ad7573549d410d42e797b0b287e1ebd8a" title="How fast of a motor speed setting would get adjusted to full motor power." alt="" coords="551,350,701,391"/>
+<area shape="rect" id="node11" href="$class_j_motor_controller_basic.html#a92a422cbc5f7cb10c8e714ef029238a2" title="slowest speed motor can go" alt="" coords="551,233,701,274"/>
+<area shape="rect" id="node13" href="$class_j_motor_controller_basic.html#a1c892de7f53781b38ec114dbba165d18" title="update driver" alt="" coords="749,181,924,208"/>
+<area shape="rect" id="node20" href="$class_j_motor_controller_basic.html#a46318f537ccaf32ce9d72e8792968464" title="set velocity for controller" alt="" coords="551,115,701,157"/>
+<area shape="rect" id="node10" href="$class_j_motor_compensator.html#a14f0b533af038a8927053e99b3c77a00" title="How fast of a motor speed setting would get adjusted to full motor power." alt="" coords="979,305,1124,346"/>
+<area shape="rect" id="node12" href="$class_j_motor_compensator.html#a8497819d10b2fa39b1b4062a7d99d6d1" title="Slowest speed motor can go." alt="" coords="764,233,909,274"/>
+<area shape="rect" id="node14" href="$class_j_motor_compensator.html#a40a9757a08400f070da51d75ba7d7df8" title="calculate" alt="" coords="979,122,1124,163"/>
+<area shape="rect" id="node15" href="$class_j_motor_controller_basic.html#a5e185bb6773288c265e3e0b54adaee18" title="if getDriverSetVal exceeds this, isDriverInRange will go false" alt="" coords="976,57,1127,98"/>
+<area shape="rect" id="node17" href="$class_j_motor_controller_basic.html#ae3f7bcf4902b98a1d375baa1d4a3ae3b" title="if getDriverSetVal goes below this, isDriverInRange will go false" alt="" coords="976,187,1127,229"/>
+<area shape="rect" id="node19" href="$class_j_motor_driver.html#a09ec56cc9c528c40e82c532f55fdaf70" title="set motor power" alt="" coords="991,5,1111,32"/>
+<area shape="rect" id="node16" href="$class_j_motor_driver.html#a36aa5a3f2e5c5ce8c769023047822e84" title="high end of the range" alt="" coords="1179,64,1360,91"/>
+<area shape="rect" id="node18" href="$class_j_motor_driver.html#a70e074ae03c7685d2147f70ae4ed9ff6" title="low end of the range" alt="" coords="1180,195,1359,221"/>
+<area shape="rect" id="node22" href="$class_j_motor_controller_basic.html#a1a4c91d8f8955f033247e3d04321db24" title="change whether motor controller is enabled" alt="" coords="761,518,912,559"/>
+<area shape="rect" id="node23" href="$class_j_motor_driver.html#a2bc676fe29a60f49f488fc10fac07b11" title="use to enable or disable a motor, and sets up pin states" alt="" coords="972,525,1131,552"/>
 </map>
