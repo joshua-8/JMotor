@@ -15,6 +15,7 @@ protected:
     float setVal;
     float velocityTarget;
     float accelLimit;
+    float velLimit;
     unsigned long lastRunMicros;
 
     JMotorDriver& driver;
@@ -28,14 +29,15 @@ public:
      * @param  _compensator: (JMotorCompensator)
      * @param  _accelLimit: max acceleration allowed for approaching velocityTarget, set to INFINITY for unlimited (default: INFINITY)
      */
-    JMotorControllerBasic(JMotorDriver& _driver, JMotorCompensator& _compensator, float _accelLimit = INFINITY)
+    JMotorControllerBasic(JMotorDriver& _driver, JMotorCompensator& _compensator, float _velLimit = INFINITY, float _accelLimit = INFINITY)
         : driver(_driver)
         , compensator(_compensator)
     {
         compensator.setDriverRange(driver.getMaxRange());
         driverInRange = true;
         velocity = 0;
-        accelLimit = _accelLimit;
+        accelLimit = max(_accelLimit, (float)0.0);
+        velLimit = max(_velLimit, (float)0.0);
         velocityTarget = 0;
         setVal = 0;
         lastRunMicros = 0;
@@ -44,6 +46,11 @@ public:
     void setAccelLimit(float _accelLimit)
     {
         accelLimit = max(_accelLimit, (float)0.0);
+    }
+
+    void setVelLimit(float _velLimit)
+    {
+        velLimit = max(_velLimit, (float)0.0);
     }
 
     bool setVel(float vel, bool _run = true)
@@ -83,9 +90,10 @@ public:
         if (getEnabled()) {
             if (velocity != velocityTarget) {
                 velocity += constrain(velocityTarget - velocity, -accelLimit * (micros() - lastRunMicros) / 1000000.0, accelLimit * (micros() - lastRunMicros) / 1000000.0);
-                driverInRange = (abs(velocity) < compensator.getMaxVel());
             }
+            driverInRange = (abs(velocity) < compensator.getMaxVel());
             velocity = constrain(velocity, -compensator.getMaxVel() * (getDriverMinRange() < 0), compensator.getMaxVel() * (getDriverMaxRange() > 0));
+            velocity = constrain(velocity, -velLimit, velLimit);
             lastRunMicros = micros();
             if (driver.getEnable()) {
                 float lastSetVal = setVal;
@@ -139,12 +147,17 @@ public:
 
     float getMaxVel()
     {
-        return compensator.getMaxVel();
+        return min(velLimit, compensator.getMaxVel());
     }
 
     float getMinVel()
     {
-        return compensator.getMinVel();
+        return min(velLimit, compensator.getMinVel());
+    }
+
+    void setMaxDriverRangeAmount(float _driverRangeAmount)
+    {
+        compensator.setMaxDriverRangeAmount(_driverRangeAmount);
     }
 };
 #endif

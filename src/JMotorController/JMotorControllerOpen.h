@@ -14,17 +14,15 @@ protected:
     bool smoothedMode;
     float position;
     float positionTarget;
-    float velLimit;
     float posDelta;
 
 public:
     JMotorControllerOpen(JMotorDriver& _driver, JMotorCompensator& _compensator, float _velLimit = INFINITY, float _accelLimit = INFINITY)
-        : JMotorControllerBasic(_driver, _compensator, _accelLimit)
+        : JMotorControllerBasic(_driver, _compensator, _velLimit, _accelLimit)
         , dL(Derivs_Limiter(_velLimit, _accelLimit))
     {
         position = 0;
         positionTarget = 0;
-        velLimit = max(_velLimit, (float)0.0);
         posMode = false;
         smoothedMode = true;
         posDelta = 0;
@@ -169,7 +167,7 @@ public:
     }
     void setVelLimit(float _velLimit)
     {
-        velLimit = max(_velLimit, (float)0.0);
+        JMotorControllerBase::setVelLimit(_velLimit);
         dL.setVelLimit(velLimit);
     }
     void setAccelLimit(float _accelLimit)
