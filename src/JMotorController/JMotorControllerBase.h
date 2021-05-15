@@ -14,6 +14,13 @@ public:
     virtual void setAccelLimit(float _accelLimit) = 0;
 
     /**
+     * @brief  set maximum motor speed
+     * @note   set to INFINITY to disable velocity limiting
+     * @param  _velLimit: (float)
+     */
+    virtual void setVelLimit(float _velLimit) = 0;
+
+    /**
      * @brief  set velocity for controller
      * @note  this function can be called repeatedly, or just once if run() is called frequently
      * @param  vel: (float)

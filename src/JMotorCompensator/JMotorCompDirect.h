@@ -36,7 +36,7 @@ public:
     }
     float getMaxVel()
     {
-        return driverRange / multiplier;
+        return driverRange / multiplier * maxDriverRange;
     }
 
     float getMinVel()

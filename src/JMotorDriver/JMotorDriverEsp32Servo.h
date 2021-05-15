@@ -1,13 +1,13 @@
 #ifndef J_MOTOR_DRIVER_ESP32_SERVO_H
 #define J_MOTOR_DRIVER_ESP32_SERVO_H
-#include "JMotorDriverServo.h"
+#include "JMotorDriverServoAdvanced.h"
 #include <Arduino.h>
 
 /**
  * @brief For servos and motor controllers that use servo signals (ESCs)
  * @note  platform: ESP32
  */
-class JMotorDriverEsp32Servo : public JMotorDriverServo {
+class JMotorDriverEsp32Servo : public JMotorDriverServoAdvanced {
 private:
     bool enabled = false;
     byte servoPin;
@@ -42,6 +42,12 @@ public:
         pwmChannel = _pwmChannel;
         setFrequencyAndResolution(_freq, _resBits);
     }
+
+    void adjustFrequency(float freq = 1.0)
+    {
+        setFrequencyAndResolution(freq * 50);
+    }
+
     /**
      * @brief  set frequency that servo signal pulse is repeated at and how many bits are used internally for resolution
      * @param  freq: Hz (default 50) must be <= int(80E6 / 2^resBits)

@@ -127,7 +127,7 @@ public:
 
     float getMaxVel()
     {
-        if (voltComp.getSupplyVoltage() < config.motor_stop_voltage) {
+        if (voltComp.getSupplyVoltage()*maxDriverRange < config.motor_stop_voltage) {
             return 0;
         } else if (voltComp.getSupplyVoltage() < config.motor_start_voltage) {
             return floatMap(voltComp.getSupplyVoltage(), config.motor_stop_voltage, config.motor_start_voltage, config.motor_stop_speed, config.motor_start_speed) / multiplier;
