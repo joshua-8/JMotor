@@ -27,23 +27,28 @@
 //
 #define dacUnitsPerVolt 380
 
-JMotorDriverEsp32L293 myDriver = JMotorDriverEsp32L293(portD);
+JMotorDriverEsp32Servo myServo = JMotorDriverEsp32Servo(port1);
 
-JEncoderPWMAbsoluteAttachInterrupt encoder = JEncoderPWMAbsoluteAttachInterrupt(port1Pin, JEncoderPWMAbsolute_AS5048settings, true, 1, 50000, 1000, true);
-IRAM_ATTR jENCODER_MAKE_ISR_MACRO(encoder);
+// JMotorDriverEsp32L293 myDriver = JMotorDriverEsp32L293(portD);
 
-JVoltageCompMeasure<10> voltageComp = JVoltageCompMeasure<10>(batMonitorPin, dacUnitsPerVolt);
-JMotorCompStandardConfig ttConfig = JMotorCompStandardConfig(1.9, .5, 3.2, 1.1, 4.6, 1.7, 100);
-JMotorCompStandard myMotorCompensator = JMotorCompStandard(voltageComp, ttConfig, 1.0);
-JMotorControllerOpen myController = JMotorControllerOpen(myDriver, myMotorCompensator, INFINITY, .5);
+// JEncoderPWMAbsoluteAttachInterrupt encoder = JEncoderPWMAbsoluteAttachInterrupt(inport1, JEncoderPWMAbsolute_AS5048settings, true, 1, 50000, 1000, true);
+// IRAM_ATTR jENCODER_MAKE_ISR_MACRO(encoder);
+
+// JVoltageCompMeasure<10> voltageComp = JVoltageCompMeasure<10>(batMonitorPin, dacUnitsPerVolt);
+// JMotorCompStandardConfig ttConfig = JMotorCompStandardConfig(1.9, .5, 3.2, 1.1, 4.6, 1.7, 100);
+// JMotorCompStandard myMotorCompensator = JMotorCompStandard(voltageComp, ttConfig, 1.0);
+// JMotorControllerOpen myController = JMotorControllerOpen(myDriver, myMotorCompensator, INFINITY, .5);
 
 String inString = "";
 float value = 0;
+float sum = 0;
 void setup()
 {
     Serial.begin(9600);
-    encoder.setUpInterrupts(encoder_jENCODER_ISR);
-    myController.enable();
+    // encoder.setUpInterrupts(encoder_jENCODER_ISR);
+    // myController.enable();
+    myServo.enable();
+    pinMode(port5Pin, INPUT);
 }
 void loop()
 {
@@ -53,23 +58,27 @@ void loop()
         inString += (char)inChar;
         if (inChar == '\n') {
             if (inString.equals(" \n")) {
-                myController.setEnable(!myController.getEnabled());
+                // myController.setEnable(!myController.getEnabled());
                 inString = "";
             } else if (inString.equals("r\n")) {
-                myController.resetPos();
+                // myController.resetPos();
                 inString = "";
             } else {
                 value = inString.toFloat();
                 inString = "";
-
-                myController.setPosTarget(value,true);
+                myServo.set(value);
+                // myController.setPosTarget(value, true);
             }
         }
     }
-    encoder.run();
-    myController.run();
-    Serial.print(myController.getPosTarget());
-    Serial.print(",");
-    Serial.println(myController.getPos());
-    delay(10);
+    sum = sum * .95 + .05 * analogRead(port5Pin);
+    Serial.println(sum);
+
+    // encoder.run();
+    // myController.run();
+    // Serial.print(myController.getPosTarget());
+    // Serial.print(",");
+    // Serial.println(myController.getPos());
+
+    delay(1);
 }

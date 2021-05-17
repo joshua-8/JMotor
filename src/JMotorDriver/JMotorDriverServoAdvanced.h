@@ -6,6 +6,7 @@
  * @brief  defines interface for servo driver with variable frequency, subclass of JMotorDriverServo and JMotorDriver
  */
 class JMotorDriverServoAdvanced : public JMotorDriverServo {
+public:
     /**
      * @brief  adjust frequency as a fraction of standard 50hz frequency
      * lower frequencies (try .75) may let you reduce how strongly the servo holds its position

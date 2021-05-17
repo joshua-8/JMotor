@@ -18,15 +18,6 @@ private:
 
 public:
     /**
-     * can be changed while running
-     */
-    int minServoValue = 544;
-    /**
-     * can be changed while running
-     */
-    int maxServoValue = 2400;
-
-    /**
      * @brief  constructor, sets pins, custom frequency and resolution optional
      * @param  _pwmChannel: ledc channel (must be unique for each driver)
      * @param  _servoPin: pin to output signal on

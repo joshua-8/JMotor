@@ -80,5 +80,8 @@ public:
 #include "JMotorDriverAvrServo.h"
 #endif
 #include "JMotorDriverDual.h"
+#include "JMotorDriverServo.h"
+#include "JMotorDriverServoDual.h"
+#include "JMotorDriverServoAdvancedDual.h"
 
 #endif
