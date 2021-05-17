@@ -149,7 +149,7 @@ public:
         return driver.getMaxRange();
     }
 
-    bool getEnabled()
+    bool getEnable()
     {
         return driver.getEnable();
     }

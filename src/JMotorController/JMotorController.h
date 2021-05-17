@@ -10,7 +10,7 @@ public:
     /**
      * @brief  set target position (motor drives towards position, following acceleration profile)
      * @param  _posTarget: (float) target position
-     * @param  _run: (bool) default:true, true = call run() in this function, false=you'll call run() yourself
+     * @param  _run: (bool) default:true, true = call run() in this function, false = you'll call run() yourself
      * @retval (bool) did the target change?
      */
     virtual bool setPosTarget(float _posTarget, bool _run = true) = 0;
@@ -19,7 +19,7 @@ public:
      * @brief  set position for motor to drive towards position as fast as possible (setpoint for control loop if available)
      * @note  run() needs to be called in order for the motor to move
      * @param  _posSetpoint: (float) position setpoint
-     * @param  _run: (bool) default:true, true = call run() in this function, false=you'll call run() yourself
+     * @param  _run: (bool) default:true, true = call run() in this function, false = you'll call run() yourself
      * @retval (bool) did the setpoint change?
      */
     virtual bool setPosSetpoint(float _posSetpoint, bool _run = true) = 0;
@@ -29,7 +29,7 @@ public:
      * @note  handles velocities below getMinVel(), and may have better distance accuracy, doesn't smooth velocity
      * @param  _posDelta: (float) basically velocity
      * @param  _resetPos: (bool) default=false, keep setting current position to zero
-     * @param  _run: (bool) default:true, true = call run() in this function, false=you'll call run() yourself
+     * @param  _run: (bool) default:true, true = call run() in this function, false = you'll call run() yourself
      * @retval  (bool) did the setting change?
      */
     virtual bool setPosDelta(float _posDelta, bool _resetPos = false, bool _run = true) = 0;

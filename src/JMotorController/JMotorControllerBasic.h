@@ -87,7 +87,7 @@ public:
 
     void run()
     {
-        if (getEnabled()) {
+        if (getEnable()) {
             if (velocity != velocityTarget) {
                 velocity += constrain(velocityTarget - velocity, -accelLimit * (micros() - lastRunMicros) / 1000000.0, accelLimit * (micros() - lastRunMicros) / 1000000.0);
             }
@@ -107,7 +107,7 @@ public:
 
     bool setEnable(bool _enable)
     {
-        if (!_enable && getEnabled()) {
+        if (!_enable && getEnable()) {
             velocity = 0;
             velocityTarget = 0;
         }
@@ -140,7 +140,7 @@ public:
         return driver.getMaxRange();
     }
 
-    bool getEnabled()
+    bool getEnable()
     {
         return driver.getEnable();
     }

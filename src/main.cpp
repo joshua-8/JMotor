@@ -28,6 +28,7 @@
 #define dacUnitsPerVolt 380
 
 JMotorDriverEsp32Servo myServo = JMotorDriverEsp32Servo(port1);
+JServoController servoCtrl = JServoController(myServo, false, 120, 75, 0, -90, 90, 0, -90, 90);
 
 // JMotorDriverEsp32L293 myDriver = JMotorDriverEsp32L293(portD);
 
@@ -47,8 +48,10 @@ void setup()
     Serial.begin(9600);
     // encoder.setUpInterrupts(encoder_jENCODER_ISR);
     // myController.enable();
-    myServo.enable();
-    pinMode(port5Pin, INPUT);
+    // myServo.enable();
+    // servoCtrl.enable();
+
+    // pinMode(port5Pin, INPUT);
 }
 void loop()
 {
@@ -58,27 +61,28 @@ void loop()
         inString += (char)inChar;
         if (inChar == '\n') {
             if (inString.equals(" \n")) {
-                // myController.setEnable(!myController.getEnabled());
-                inString = "";
-            } else if (inString.equals("r\n")) {
-                // myController.resetPos();
-                inString = "";
+                servoCtrl.setEnable(true);
+            } else if (inString.equals("w\n")) {
+                servoCtrl.wake();
             } else {
                 value = inString.toFloat();
-                inString = "";
-                myServo.set(value);
+                servoCtrl.setAngle(value);
                 // myController.setPosTarget(value, true);
             }
+            inString = "";
         }
     }
-    sum = sum * .95 + .05 * analogRead(port5Pin);
-    Serial.println(sum);
+    servoCtrl.run();
+
+    // sum = sum * .95 + .05 * analogRead(port5Pin);
+    // Serial.println(sum);
 
     // encoder.run();
     // myController.run();
     // Serial.print(myController.getPosTarget());
     // Serial.print(",");
-    // Serial.println(myController.getPos());
+    // Serial.print(myController.getPos());
+    // Serial.println();
 
     delay(1);
 }
