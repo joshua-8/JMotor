@@ -98,7 +98,7 @@ public:
     /**
      * @brief  call this in your main loop
      */
-    void run()
+    virtual void run()
     {
         if (enabled)
             dL.calc();
@@ -182,6 +182,7 @@ public:
         if (_enable && !enabled) {
             wake();
             restartRun();
+            dL.setVelocity(0);
         }
         servo.setEnable(_enable);
         if (enabled != _enable) {
@@ -328,13 +329,17 @@ public:
     /**
      * @brief  sets servo position, leaves target where it was
      * @param  pos: (float)
+     * @param  run: (bool) default: true, true = call run() in this function, false = you'll call run() yourself
+     * 
      */
-    void setPosition(float pos)
+    void setPosition(float pos, bool _run)
     {
         if (pos != dL.getPosition()) {
-            rewriteToServo = true;
+            wake();
             dL.setPosition(pos);
         }
+        if (_run)
+            run();
     }
 
     /**

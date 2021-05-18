@@ -27,7 +27,7 @@
 #define dacUnitsPerVolt 380
 
 JMotorDriverEsp32Servo myServo = JMotorDriverEsp32Servo(port1);
-JServoControllerAdvanced servoCtrl = JServoControllerAdvanced(myServo, .3, 0, 1, false, 120, 75, 0, -90, 90, 0, -90, 90);
+JServoControllerAdvanced servoCtrl = JServoControllerAdvanced(myServo, .3, 1000, 1, false, 120, 75, 5000, -90, 90, 0, -90, 90);
 JServoCurrentSensor servoCurrent = JServoCurrentSensor(port5Pin, 150);
 // JEncoderPWMAbsoluteAttachInterrupt encoder = JEncoderPWMAbsoluteAttachInterrupt(inport1, JEncoderPWMAbsolute_AS5048settings, true, 1, 50000, 1000, true);
 // IRAM_ATTR jENCODER_MAKE_ISR_MACRO(encoder);
@@ -53,49 +53,22 @@ void setup()
 }
 void loop()
 {
-
-    // while (Serial.available() > 0) {
-    //     int inChar = Serial.read();
-    //     inString += (char)inChar;
-    //     if (inChar == '\n') {
-    //         if (inString.equals("s\n")) {
-    //             if (servoCtrl.getWeakened()) {
-    //                 servoCtrl.setNormalStrength();
-    //             } else {
-    //                 servoCtrl.setWeakStrength();
-    //             }
-    //         } else if (inString.equals("w\n")) {
-    //             servoCtrl.wake();
-    //         } else {
-    //             value = inString.toFloat();
-    //             servoCtrl.setAngleSmoothed(value);
-    //         }
-    //         inString = "";
-    //     }
-    // }
-    if (servoCtrl.getPos() == servoCtrl.getMinAngleLimit()) {
-        inc = true;
-    }
-    if (servoCtrl.getPos() == servoCtrl.getMaxAngleLimit()) {
-        inc = false;
-    }
-    if (servoCurrent.measure() > .6) {
-        if (servoCtrl.getPos() > 0) {
-            inc = false;
-        }
-        if (servoCtrl.getPos() < 0) {
-            inc = true;
+    while (Serial.available() > 0) {
+        int inChar = Serial.read();
+        inString += (char)inChar;
+        if (inChar == '\n') {
+            if (inString.equals("e\n")) {
+                servoCtrl.setEnable(!servoCtrl.getEnable());
+            } else if (inString.equals("w\n")) {
+                servoCtrl.wake();
+            } else {
+                value = inString.toFloat();
+            }
+            inString = "";
         }
     }
 
-    value += .1 * (inc ? 1 : -1);
-    // Serial.println(value);
-    servoCtrl.setAngle(value);
-
-    // Serial.println(servoCurrent.measure());
-
-    // sum = sum * .95 + .05 * analogRead(port5Pin);
-    // Serial.println(sum);
+    servoCtrl.setAngleSmoothed(value);
 
     // encoder.run();
     // myController.run();

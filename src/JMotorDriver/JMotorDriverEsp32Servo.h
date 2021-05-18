@@ -53,7 +53,8 @@ public:
         SERVO_FREQ = freq;
         SERVO_RES = resBits;
         SERVO_TICKS_PER_MICROSECOND = (1 << SERVO_RES) * SERVO_FREQ / 1000000; //DEFAULT=52.4288  2^SERVO_RES / 1E6 * SERVO_FREQ
-        while (digitalRead(servoPin) == HIGH)
+        unsigned long startMicros = micros();
+        while (digitalRead(servoPin) == HIGH && micros() - startMicros <= maxServoValue)
             ; //wait for pulse to go low to avoid cutting it short and causing the servo to twitch
         ledcDetachPin(servoPin);
         ledcSetup(pwmChannel, SERVO_FREQ, SERVO_RES);
@@ -82,7 +83,8 @@ public:
             if (enabled) {
                 //actually disable
                 enabled = false;
-                while (digitalRead(servoPin) == HIGH)
+                unsigned long startMicros = micros();
+                while (digitalRead(servoPin) == HIGH && micros() - startMicros <= maxServoValue)
                     ; //wait for pulse to go low to avoid cutting it short and causing the servo to twitch
                 ledcDetachPin(servoPin);
                 pinMode(servoPin, OUTPUT);
