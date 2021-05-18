@@ -24,55 +24,75 @@
 
 #define batMonitorPin 36
 
-//
 #define dacUnitsPerVolt 380
 
 JMotorDriverEsp32Servo myServo = JMotorDriverEsp32Servo(port1);
-JServoController servoCtrl = JServoController(myServo, false, 120, 75, 0, -90, 90, 0, -90, 90);
-
-// JMotorDriverEsp32L293 myDriver = JMotorDriverEsp32L293(portD);
-
+JServoControllerAdvanced servoCtrl = JServoControllerAdvanced(myServo, .3, 0, 1, false, 120, 75, 0, -90, 90, 0, -90, 90);
+JServoCurrentSensor servoCurrent = JServoCurrentSensor(port5Pin, 150);
 // JEncoderPWMAbsoluteAttachInterrupt encoder = JEncoderPWMAbsoluteAttachInterrupt(inport1, JEncoderPWMAbsolute_AS5048settings, true, 1, 50000, 1000, true);
 // IRAM_ATTR jENCODER_MAKE_ISR_MACRO(encoder);
 
 // JVoltageCompMeasure<10> voltageComp = JVoltageCompMeasure<10>(batMonitorPin, dacUnitsPerVolt);
 // JMotorCompStandardConfig ttConfig = JMotorCompStandardConfig(1.9, .5, 3.2, 1.1, 4.6, 1.7, 100);
 // JMotorCompStandard myMotorCompensator = JMotorCompStandard(voltageComp, ttConfig, 1.0);
+// JMotorDriverEsp32L293 myDriver = JMotorDriverEsp32L293(portD);
 // JMotorControllerOpen myController = JMotorControllerOpen(myDriver, myMotorCompensator, INFINITY, .5);
 
 String inString = "";
 float value = 0;
 float sum = 0;
+bool inc = true;
 void setup()
 {
     Serial.begin(9600);
     // encoder.setUpInterrupts(encoder_jENCODER_ISR);
     // myController.enable();
     // myServo.enable();
-    // servoCtrl.enable();
-
+    servoCtrl.enable();
     // pinMode(port5Pin, INPUT);
 }
 void loop()
 {
 
-    while (Serial.available() > 0) {
-        int inChar = Serial.read();
-        inString += (char)inChar;
-        if (inChar == '\n') {
-            if (inString.equals(" \n")) {
-                servoCtrl.setEnable(true);
-            } else if (inString.equals("w\n")) {
-                servoCtrl.wake();
-            } else {
-                value = inString.toFloat();
-                servoCtrl.setAngle(value);
-                // myController.setPosTarget(value, true);
-            }
-            inString = "";
+    // while (Serial.available() > 0) {
+    //     int inChar = Serial.read();
+    //     inString += (char)inChar;
+    //     if (inChar == '\n') {
+    //         if (inString.equals("s\n")) {
+    //             if (servoCtrl.getWeakened()) {
+    //                 servoCtrl.setNormalStrength();
+    //             } else {
+    //                 servoCtrl.setWeakStrength();
+    //             }
+    //         } else if (inString.equals("w\n")) {
+    //             servoCtrl.wake();
+    //         } else {
+    //             value = inString.toFloat();
+    //             servoCtrl.setAngleSmoothed(value);
+    //         }
+    //         inString = "";
+    //     }
+    // }
+    if (servoCtrl.getPos() == servoCtrl.getMinAngleLimit()) {
+        inc = true;
+    }
+    if (servoCtrl.getPos() == servoCtrl.getMaxAngleLimit()) {
+        inc = false;
+    }
+    if (servoCurrent.measure() > .6) {
+        if (servoCtrl.getPos() > 0) {
+            inc = false;
+        }
+        if (servoCtrl.getPos() < 0) {
+            inc = true;
         }
     }
-    servoCtrl.run();
+
+    value += .1 * (inc ? 1 : -1);
+    // Serial.println(value);
+    servoCtrl.setAngle(value);
+
+    // Serial.println(servoCurrent.measure());
 
     // sum = sum * .95 + .05 * analogRead(port5Pin);
     // Serial.println(sum);

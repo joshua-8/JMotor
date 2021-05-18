@@ -53,7 +53,11 @@ public:
         SERVO_FREQ = freq;
         SERVO_RES = resBits;
         SERVO_TICKS_PER_MICROSECOND = (1 << SERVO_RES) * SERVO_FREQ / 1000000; //DEFAULT=52.4288  2^SERVO_RES / 1E6 * SERVO_FREQ
+        while (digitalRead(servoPin) == HIGH)
+            ; //wait for pulse to go low to avoid cutting it short and causing the servo to twitch
+        ledcDetachPin(servoPin);
         ledcSetup(pwmChannel, SERVO_FREQ, SERVO_RES);
+        ledcAttachPin(servoPin, pwmChannel);
         return SERVO_TICKS_PER_MICROSECOND;
     }
     bool set(float _val)

@@ -3,6 +3,7 @@
 #include "Derivs_Limiter.h"
 #include "JMotorDriver/JMotorDriverServo.h"
 #include <Arduino.h>
+//see bottom of file for #includes of subclasses and other JServoController relevant files
 /**
  * @brief  class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting
  */
@@ -64,7 +65,6 @@ protected:
 public:
     /**
      * @brief  Constructor for JServoController, a class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting
-     * @note   
      * @param  _servo: (JMotorDriverServo&) reference to an instance of a class that's a subclass of JMotorDriverServo
      * @param  _reverse: (bool) default: false, use to reverse direction of servo
      * @param  velLimit: (float) default: INFINITY, maximum velocity you want the servo to move at in limited mode
@@ -122,7 +122,7 @@ public:
         if (dL.getPosDelta() != 0) {
             rewriteToServo = true;
         }
-        if (servo.getEnable()) {
+        if (servo.getEnable() && enabled) {
             writeAngleToServo(dL.getPosition());
         }
     }
@@ -134,8 +134,9 @@ public:
     void setAngle(float angle, bool _run = true)
     {
         angle = constrain(angle, min(minAngleLimit, maxAngleLimit), max(minAngleLimit, maxAngleLimit));
-        if (dL.getTarget() != angle)
+        if (dL.getTarget() != angle) {
             wake();
+        }
         dL.setTarget(angle);
         dL.setPosition(angle);
         if (_run)
@@ -175,16 +176,16 @@ public:
     {
         lastMovedMillis = mil;
     }
-    bool setEnable(bool enable)
+    bool setEnable(bool _enable)
     {
 
-        if (enable && !enabled) {
+        if (_enable && !enabled) {
             wake();
             restartRun();
         }
-        servo.setEnable(enable);
-        if (enabled != enable) {
-            enabled = enable;
+        servo.setEnable(_enable);
+        if (enabled != _enable) {
+            enabled = _enable;
             return true;
         } else
             return false;
@@ -208,6 +209,10 @@ public:
     float getPos()
     {
         return dL.getPosition();
+    }
+    float getVelocity()
+    {
+        return dL.getVelocity();
     }
     bool isPosAtTarget()
     {
@@ -234,9 +239,7 @@ public:
     }
     void wake()
     {
-        if (sleeping) {
-            rewriteToServo = true;
-        }
+        rewriteToServo = true;
         lastMovedMillis = millis();
     }
     void setReverse(bool rev)
@@ -268,6 +271,18 @@ public:
             rewriteToServo = true;
             maxAngleLimit = _maxAngleLimit;
         }
+    }
+    float getMinAngleLimit()
+    {
+        return minAngleLimit;
+    }
+    float getMaxAngleLimit()
+    {
+        return maxAngleLimit;
+    }
+    float getAngleLimitRange()
+    {
+        return maxAngleLimit - minAngleLimit;
     }
 
     void setSetAngles(float _minSetAngle, float _maxSetAngle)
@@ -400,4 +415,8 @@ protected:
         return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
     }
 };
+
+#include "JServoControllerAdvanced.h"
+#include "JServoCurrentSensor.h"
+
 #endif
