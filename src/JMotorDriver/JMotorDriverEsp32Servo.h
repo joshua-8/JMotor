@@ -58,7 +58,8 @@ public:
             ; //wait for pulse to go low to avoid cutting it short and causing the servo to twitch
         ledcDetachPin(servoPin);
         ledcSetup(pwmChannel, SERVO_FREQ, SERVO_RES);
-        ledcAttachPin(servoPin, pwmChannel);
+        if (enabled)
+            ledcAttachPin(servoPin, pwmChannel);
         return SERVO_TICKS_PER_MICROSECOND;
     }
     bool set(float _val)

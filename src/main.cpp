@@ -27,7 +27,7 @@
 #define dacUnitsPerVolt 380
 
 JMotorDriverEsp32Servo myServo = JMotorDriverEsp32Servo(port1);
-JServoControllerAdvanced servoCtrl = JServoControllerAdvanced(myServo, .3, 1000, 1, false, 120, 75, 5000, -90, 90, 0, -90, 90);
+JServoControllerAdvanced servoCtrl = JServoControllerAdvanced(myServo, .3, 0, 1, 1000, false, 120, 75, 0, -90, 90, 0, -90, 90);
 JServoCurrentSensor servoCurrent = JServoCurrentSensor(port5Pin, 150);
 // JEncoderPWMAbsoluteAttachInterrupt encoder = JEncoderPWMAbsoluteAttachInterrupt(inport1, JEncoderPWMAbsolute_AS5048settings, true, 1, 50000, 1000, true);
 // IRAM_ATTR jENCODER_MAKE_ISR_MACRO(encoder);
@@ -59,8 +59,12 @@ void loop()
         if (inChar == '\n') {
             if (inString.equals("e\n")) {
                 servoCtrl.setEnable(!servoCtrl.getEnable());
-            } else if (inString.equals("w\n")) {
+            } else if (inString.equals("r\n")) {
                 servoCtrl.wake();
+            } else if (inString.equals("w\n")) {
+                servoCtrl.setStrengthWeak();
+            } else if (inString.equals("s\n")) {
+                servoCtrl.setStrengthNormal();
             } else {
                 value = inString.toFloat();
             }
@@ -70,6 +74,7 @@ void loop()
 
     servoCtrl.setAngleSmoothed(value);
 
+    Serial.println(servoCurrent.getMeasurement() * 10);
     // encoder.run();
     // myController.run();
     // Serial.print(myController.getPosTarget());

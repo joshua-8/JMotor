@@ -176,7 +176,7 @@ public:
     {
         lastMovedMillis = mil;
     }
-    bool setEnable(bool _enable)
+    virtual bool setEnable(bool _enable)
     {
 
         if (_enable && !enabled) {
@@ -410,7 +410,7 @@ protected:
         } else { //not reversed
             ang = floatMap(ang, minSetAngle, maxSetAngle, servo.getMinRange(), servo.getMaxRange());
         }
-        if (rewriteToServo) {
+        if (rewriteToServo && enabled && !sleeping) {
             servo.set(ang);
             rewriteToServo = false;
         }

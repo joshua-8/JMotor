@@ -15,6 +15,8 @@ protected:
     float defaultFreq;
     float weakFreq;
     bool weakened;
+    unsigned long startWeakTimeout;
+    unsigned long enabledMillis;
 
 public:
     /**
@@ -24,6 +26,7 @@ public:
      * @param  _weakFreq: (float) what fraction of normal frequency the signal should go to in order to weaken the servo's strength
      * @param  _weakenTimeout: (unsigned long) default: 0, after how many milliseconds of no movement should the servo be set to lower power? 0=never switch to low power
      * @param  _normalFreq: (float) what fraction of 50Hz should be used
+     * @param  _startWeakTimeout: (unsigned long) default 0, how many milliseconds after enabling should the servo be in weakened mode (to soften jumps at startup)? 0=inactive
      * @param  _reverse: (bool) default: false, use to reverse direction of servo
      * @param  velLimit: (float) default: INFINITY, maximum velocity you want the servo to move at in limited mode
      * @param  accelLimit: (float) default: INFINITY, maximum acceleration you want the servo to move at in limited mode
@@ -36,45 +39,60 @@ public:
      * @param  minServoVal: (int) default: 544, microseconds for servo signal pulse for minimum angle
      * @param  maxServoVal: (int) default: 2400, microseconds for servo signal pulse for maximum angle
      */
-    JServoControllerAdvanced(JMotorDriverServoAdvanced& _servo, float _weakFreq = .75, unsigned long _weakenTimeout = 0, float _normalFreq = 1.0, bool _reverse = false, float velLimit = INFINITY, float accelLimit = INFINITY, unsigned long _disableTimeout = 0, float _minAngleLimit = 0, float _maxAngleLimit = 180, float _pos = 90, float _minSetAngle = 0, float _maxSetAngle = 180, int minServoVal = 544, int maxServoVal = 2400)
+    JServoControllerAdvanced(JMotorDriverServoAdvanced& _servo, float _weakFreq = .75, unsigned long _weakenTimeout = 0, float _normalFreq = 1.0, unsigned long _startWeakTimeout = 0, bool _reverse = false, float velLimit = INFINITY, float accelLimit = INFINITY, unsigned long _disableTimeout = 0, float _minAngleLimit = 0, float _maxAngleLimit = 180, float _pos = 90, float _minSetAngle = 0, float _maxSetAngle = 180, int minServoVal = 544, int maxServoVal = 2400)
         : JServoController(_servo, _reverse, velLimit, accelLimit, _disableTimeout, _minAngleLimit, _maxAngleLimit, _pos, _minSetAngle, _maxSetAngle, minServoVal, maxServoVal)
         , adServo(_servo)
     {
         weakenTimeout = _weakenTimeout;
+        startWeakTimeout = _startWeakTimeout;
         defaultFreq = _normalFreq;
         weakFreq = _weakFreq;
         adServo.adjustFrequency(_normalFreq);
         weakened = false;
+        enabledMillis = millis();
     }
     void run()
     {
-        if (weakenTimeout != 0) {
+        if (startWeakTimeout != 0 && millis() - enabledMillis < startWeakTimeout) {
+            if (!weakened) {
+                setStrengthWeak();
+            }
+            weakened = true;
+        } else if (weakenTimeout != 0) {
             if (millis() - lastMovedMillis > weakenTimeout) {
                 if (weakened == false) {
-                    setWeakStrength();
+                    setStrengthWeak();
                 }
                 weakened = true;
             } else {
                 if (weakened == true) {
-                    setNormalStrength();
+                    setStrengthNormal();
                 }
                 weakened = false;
             }
         }
         JServoController::run();
     }
+    //override JServoController
+    bool setEnable(bool _enable)
+    {
+        enabledMillis = millis();
+        return JServoController::setEnable(_enable);
+    }
     /**
      * @brief  set servo to weaker setting
      */
-    void setWeakStrength()
+    void setStrengthWeak()
     {
+        weakened = true;
         adjustServoFrequency(weakFreq);
     }
     /**
      * @brief  set servo to normal setting
      */
-    void setNormalStrength()
+    void setStrengthNormal()
     {
+        weakened = false;
         adjustServoFrequency(defaultFreq);
     }
     /**
@@ -86,10 +104,8 @@ public:
     void adjustServoFrequency(float freq = 1.0)
     {
         adServo.adjustFrequency(freq);
-        if (servo.getEnable() && enabled) {
-            rewriteToServo = true;
-            writeAngleToServo(dL.getPosition());
-        }
+        rewriteToServo = true;
+        writeAngleToServo(dL.getPosition());
     }
     /**
      * @brief  change setting for what fraction of normal frequency the signal should go to in order to weaken the servo's strength
@@ -120,6 +136,14 @@ public:
     unsigned long getWeakenTimeout()
     {
         return weakenTimeout;
+    }
+    void setStartWeakTimeout(unsigned long _timeout)
+    {
+        startWeakTimeout = _timeout;
+    }
+    unsigned long getStartWeakTimeout()
+    {
+        return startWeakTimeout;
     }
 };
 #endif

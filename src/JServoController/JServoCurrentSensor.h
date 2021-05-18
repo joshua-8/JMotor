@@ -5,7 +5,7 @@ class JServoCurrentSensor {
 protected:
     byte measurePin;
     bool justStarted;
-    static const byte numReadings = 16;
+    static const byte numReadings = 20;
     int readings[numReadings]; // the readings from the analog input
     byte readIndex; // the index of the current reading
     long total; // the running total
@@ -34,7 +34,7 @@ public:
         minRange = _minRange;
         maxRange = _maxRange;
     }
-    float measure(bool _run = true)
+    float getMeasurement(bool _run = true)
     {
         if (_run)
             run();
@@ -74,7 +74,7 @@ public:
     }
     void run()
     {
-        if (millis() - lastMeasurementMillis > 3) {
+        if (millis() - lastMeasurementMillis > 4) {
             lastMeasurementMillis = millis();
             if (!justStarted) {
                 // subtract the last reading:
