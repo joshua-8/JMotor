@@ -45,14 +45,18 @@ public:
     }
     bool set(float val)
     {
-        if (enabled) {
-            if (val > 0) {
-                digitalWrite(dir, !reverse);
-            } else if (val < 0) {
-                digitalWrite(dir, reverse);
-            } else {
+        if (justEnabled || val != lastSetVal) {
+            if (enabled) {
+                lastSetVal = val;
+                justEnabled = false;
+                if (val > 0) {
+                    digitalWrite(dir, !reverse);
+                } else if (val < 0) {
+                    digitalWrite(dir, reverse);
+                } else {
+                }
+                pwmDriver.set(abs(val));
             }
-            pwmDriver.set(abs(val));
         }
         return abs(val) < 1.0;
     }
@@ -61,6 +65,7 @@ public:
         if (_enable) {
             if (!enabled) {
                 //actually enable
+                justEnabled = true;
                 enabled = true;
                 pinMode(dir, OUTPUT);
                 pwmDriver.setEnable(true);

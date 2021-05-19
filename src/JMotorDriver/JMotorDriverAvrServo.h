@@ -30,11 +30,15 @@ public:
     bool set(float _val)
     {
         float val = constrain(_val, -1.0, 1.0);
-        if (enabled) {
-            if (!motorServo.attached()) {
-                motorServo.attach(servoPin);
+        if (justEnabled || val != lastSetVal) {
+            if (enabled) {
+                lastSetVal = val;
+                justEnabled = false;
+                if (!motorServo.attached()) {
+                    motorServo.attach(servoPin);
+                }
+                motorServo.writeMicroseconds((maxServoValue + minServoValue) / 2 + (maxServoValue - minServoValue) * val / 2);
             }
-            motorServo.writeMicroseconds((maxServoValue + minServoValue) / 2 + (maxServoValue - minServoValue) * val / 2);
         }
         return abs(_val) < 1.0;
     }
@@ -43,6 +47,7 @@ public:
         if (_enable) {
             if (!enabled) {
                 //actually enable
+                justEnabled = true;
                 enabled = true;
                 return true;
             }
