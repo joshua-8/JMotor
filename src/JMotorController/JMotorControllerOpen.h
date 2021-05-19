@@ -30,7 +30,7 @@ public:
 
     void run()
     {
-        if (getEnabled()) {
+        if (getEnable()) {
             if (posMode) {
                 if (!smoothedMode) { //setPosSetpoint() mode
                     float time = (micros() - lastRunMicros) / 1000000.0;
@@ -70,7 +70,7 @@ public:
 
     bool setEnable(bool _enable)
     {
-        if (!_enable && getEnabled()) {
+        if (!_enable && getEnable()) {
             posDelta = 0;
             positionTarget = position;
         }
@@ -167,7 +167,7 @@ public:
     }
     void setVelLimit(float _velLimit)
     {
-        JMotorControllerBase::setVelLimit(_velLimit);
+        JMotorControllerBasic::setVelLimit(_velLimit);
         dL.setVelLimit(velLimit);
     }
     void setAccelLimit(float _accelLimit)

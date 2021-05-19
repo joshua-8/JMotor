@@ -13,4 +13,5 @@
 #include "JMotorCompensator/JMotorCompensator.h"
 #include "JMotorController/JMotorController.h"
 #include "JMotorDriver/JMotorDriver.h"
+#include "JServoController/JServoController.h"
 #endif

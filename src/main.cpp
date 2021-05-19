@@ -1,5 +1,4 @@
 #include <Arduino.h>
-#include <JMotor.h>
 
 #define port1Pin 32
 #define port2Pin 33
@@ -24,52 +23,72 @@
 
 #define batMonitorPin 36
 
-//
 #define dacUnitsPerVolt 380
 
-JMotorDriverEsp32L293 myDriver = JMotorDriverEsp32L293(portD);
+#include <JMotor.h>
 
-JEncoderPWMAbsoluteAttachInterrupt encoder = JEncoderPWMAbsoluteAttachInterrupt(port1Pin, JEncoderPWMAbsolute_AS5048settings, true, 1, 50000, 1000, true);
-IRAM_ATTR jENCODER_MAKE_ISR_MACRO(encoder);
+JMotorDriverEsp32Servo myServo = JMotorDriverEsp32Servo(port1);
+JServoCurrentSensor myServoCurrent = JServoCurrentSensor(port5Pin, 150);
+JServoControllerStallProtected servoCtrl = JServoControllerStallProtected(JServoControllerAdvanced(myServo, .3, 0, 1, 0, false, 120, 75, 0, -90, 90, 0, -90, 90), myServoCurrent, .1, .4, 500, 1000);
+// JServoControllerAdvanced servoCtrl = JServoControllerAdvanced(myServo, .3, 0, 1, 1000, false, 120, 75, 0, -90, 90, 0, -90, 90);
+// JEncoderPWMAbsoluteAttachInterrupt encoder = JEncoderPWMAbsoluteAttachInterrupt(inport1, JEncoderPWMAbsolute_AS5048settings, true, 1, 50000, 1000, true);
+// IRAM_ATTR jENCODER_MAKE_ISR_MACRO(encoder);
 
-JVoltageCompMeasure<10> voltageComp = JVoltageCompMeasure<10>(batMonitorPin, dacUnitsPerVolt);
-JMotorCompStandardConfig ttConfig = JMotorCompStandardConfig(1.9, .5, 3.2, 1.1, 4.6, 1.7, 100);
-JMotorCompStandard myMotorCompensator = JMotorCompStandard(voltageComp, ttConfig, 1.0);
-JMotorControllerOpen myController = JMotorControllerOpen(myDriver, myMotorCompensator, INFINITY, .5);
+// JVoltageCompMeasure<10> voltageComp = JVoltageCompMeasure<10>(batMonitorPin, dacUnitsPerVolt);
+// JMotorCompStandardConfig ttConfig = JMotorCompStandardConfig(1.9, .5, 3.2, 1.1, 4.6, 1.7, 100);
+// JMotorCompStandard myMotorCompensator = JMotorCompStandard(voltageComp, ttConfig, 1.0);
+// JMotorDriverEsp32L293 myDriver = JMotorDriverEsp32L293(portD);
+// JMotorControllerOpen myController = JMotorControllerOpen(myDriver, myMotorCompensator, INFINITY, .5);
 
 String inString = "";
 float value = 0;
+float sum = 0;
+bool inc = true;
 void setup()
 {
     Serial.begin(9600);
-    encoder.setUpInterrupts(encoder_jENCODER_ISR);
-    myController.enable();
+    // encoder.setUpInterrupts(encoder_jENCODER_ISR);
+    // myController.enable();
+    // myServo.enable();
+    servoCtrl.enable();
+    // pinMode(port5Pin, INPUT);
 }
 void loop()
 {
-
     while (Serial.available() > 0) {
         int inChar = Serial.read();
         inString += (char)inChar;
         if (inChar == '\n') {
-            if (inString.equals(" \n")) {
-                myController.setEnable(!myController.getEnabled());
-                inString = "";
+            if (inString.equals("e\n")) {
+                servoCtrl.setEnable(!servoCtrl.getEnable());
             } else if (inString.equals("r\n")) {
-                myController.resetPos();
-                inString = "";
+                servoCtrl.wake();
+            } else if (inString.equals("w\n")) {
+                servoCtrl.setStrengthWeak();
+            } else if (inString.equals("s\n")) {
+                servoCtrl.setStrengthNormal();
+            } else if (inString.equals("p\n")) {
+                servoCtrl.setStallProtectionEnable(!servoCtrl.getStallProtectionEnable());
             } else {
                 value = inString.toFloat();
-                inString = "";
-
-                myController.setPosTarget(value,true);
             }
+            inString = "";
         }
     }
-    encoder.run();
-    myController.run();
-    Serial.print(myController.getPosTarget());
+
+    servoCtrl.setAngle(value);
+
+    Serial.print(servoCtrl.isStalled() * 3);
     Serial.print(",");
-    Serial.println(myController.getPos());
-    delay(10);
+    Serial.print(servoCtrl.isStallProtectionActivated() * 3);
+    Serial.print(",");
+    Serial.println(servoCtrl.currentSensor.getMeasurement(false) * 10);
+    // encoder.run();
+    // myController.run();
+    // Serial.print(myController.getPosTarget());
+    // Serial.print(",");
+    // Serial.print(myController.getPos());
+    // Serial.println();
+
+    delay(1);
 }

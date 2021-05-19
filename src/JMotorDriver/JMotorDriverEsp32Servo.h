@@ -18,15 +18,6 @@ private:
 
 public:
     /**
-     * can be changed while running
-     */
-    int minServoValue = 544;
-    /**
-     * can be changed while running
-     */
-    int maxServoValue = 2400;
-
-    /**
      * @brief  constructor, sets pins, custom frequency and resolution optional
      * @param  _pwmChannel: ledc channel (must be unique for each driver)
      * @param  _servoPin: pin to output signal on
@@ -61,8 +52,14 @@ public:
         }
         SERVO_FREQ = freq;
         SERVO_RES = resBits;
-        SERVO_TICKS_PER_MICROSECOND = (1 << SERVO_RES) * SERVO_FREQ / 1000000; //DEFAULT=52.4288  2^SERVO_RES / 1E6 * SERVO_FREQ
+        SERVO_TICKS_PER_MICROSECOND = (1 << SERVO_RES) * (float)SERVO_FREQ / 1000000; //DEFAULT=52.4288  2^SERVO_RES / 1E6 * SERVO_FREQ
+        unsigned long startMicros = micros();
+        while (digitalRead(servoPin) == HIGH && micros() - startMicros <= maxServoValue)
+            ; //wait for pulse to go low to avoid cutting it short and causing the servo to twitch
+        ledcDetachPin(servoPin);
         ledcSetup(pwmChannel, SERVO_FREQ, SERVO_RES);
+        if (enabled)
+            ledcAttachPin(servoPin, pwmChannel);
         return SERVO_TICKS_PER_MICROSECOND;
     }
     bool set(float _val)
@@ -87,7 +84,8 @@ public:
             if (enabled) {
                 //actually disable
                 enabled = false;
-                while (digitalRead(servoPin) == HIGH)
+                unsigned long startMicros = micros();
+                while (digitalRead(servoPin) == HIGH && micros() - startMicros <= maxServoValue)
                     ; //wait for pulse to go low to avoid cutting it short and causing the servo to twitch
                 ledcDetachPin(servoPin);
                 pinMode(servoPin, OUTPUT);
