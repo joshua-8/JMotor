@@ -1,7 +1,0 @@
-<map id="JMotorControllerBasic::enable" name="JMotorControllerBasic::enable">
-<area shape="rect" id="node1" title="enable motor controller" alt="" coords="5,35,156,76"/>
-<area shape="rect" id="node2" href="$class_j_motor_controller_basic.html#a1a4c91d8f8955f033247e3d04321db24" title="change whether motor controller is enabled" alt="" coords="204,35,355,76"/>
-<area shape="rect" id="node3" href="$class_j_motor_controller_basic.html#a56a908c41a2c18194db079871bd8e831" title="is the controller enabled" alt="" coords="407,5,557,47"/>
-<area shape="rect" id="node5" href="$class_j_motor_driver.html#a2bc676fe29a60f49f488fc10fac07b11" title="use to enable or disable a motor, and sets up pin states" alt="" coords="403,71,561,98"/>
-<area shape="rect" id="node4" href="$class_j_motor_driver.html#a87e4adac669e4dcafc0e540e2d1e4849" title="get the enable state of the driver" alt="" coords="609,13,768,39"/>
-</map>

@@ -86,10 +86,12 @@ Inheritance diagram for JMotorDriver:</div>
 <area shape="rect" href="class_j_motor_driver_esp32_l293.html" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf." alt="" coords="159,208,320,235"/>
 <area shape="rect" href="class_j_motor_driver_esp32_p_w_m.html" title="uses ledc to output PWM approximation of an analog output" alt="" coords="157,259,321,285"/>
 <area shape="rect" href="class_j_motor_driver_esp32_p_w_m_dir.html" title="for motor controllers with one direction input and one speed input pin" alt="" coords="149,309,329,336"/>
-<area shape="rect" href="class_j_motor_driver_servo.html" title="empty class that can be used to specify a driver that controls specifically a servo" alt="" coords="174,360,305,387"/>
-<area shape="rect" href="class_j_motor_driver_avr_servo.html" title="wraps standard servo library. For servos and motor controllers that use servo signals (ESCs)" alt="" coords="396,335,547,361"/>
-<area shape="rect" href="class_j_motor_driver_servo_advanced.html" title="defines interface for servo driver with variable frequency, subclass of JMotorDriverServo and JMotorD..." alt="" coords="377,385,565,412"/>
-<area shape="rect" href="class_j_motor_driver_esp32_servo.html" title="For servos and motor controllers that use servo signals (ESCs)" alt="" coords="613,385,780,412"/>
+<area shape="rect" href="class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="174,360,305,387"/>
+<area shape="rect" href="class_j_motor_driver_avr_servo.html" title="wraps standard servo library. For servos and motor controllers that use servo signals (ESCs)" alt="" coords="396,309,547,336"/>
+<area shape="rect" href="class_j_motor_driver_servo_advanced.html" title="defines interface for servo driver with variable frequency, subclass of JMotorDriverServo and JMotorD..." alt="" coords="377,360,565,387"/>
+<area shape="rect" href="class_j_motor_driver_servo_dual.html" title="control two JMotorDriverServos as if they are one driver" alt="" coords="393,411,549,437"/>
+<area shape="rect" href="class_j_motor_driver_esp32_servo.html" title="For servos and motor controllers that use servo signals (ESCs)" alt="" coords="637,335,804,361"/>
+<area shape="rect" href="class_j_motor_driver_servo_advanced_dual.html" title="control two JMotorDriverServoAdvanced as if they are one driver" alt="" coords="613,385,828,412"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -152,15 +154,6 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_driver_a978c868297bf5ee5958d44764bb2bbda_cgraph.png" border="0" usemap="#aclass_j_motor_driver_a978c868297bf5ee5958d44764bb2bbda_cgraph" alt=""/></div>
-<map name="aclass_j_motor_driver_a978c868297bf5ee5958d44764bb2bbda_cgraph" id="aclass_j_motor_driver_a978c868297bf5ee5958d44764bb2bbda_cgraph">
-<area shape="rect" title="disable motor" alt="" coords="5,5,148,32"/>
-<area shape="rect" href="class_j_motor_driver.html#a2bc676fe29a60f49f488fc10fac07b11" title="use to enable or disable a motor, and sets up pin states" alt="" coords="196,5,355,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -195,15 +188,6 @@ Here is the call graph for this function:</div>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_driver_afd7e4e04cc84b3eb41559f4c7bf38d43_cgraph.png" border="0" usemap="#aclass_j_motor_driver_afd7e4e04cc84b3eb41559f4c7bf38d43_cgraph" alt=""/></div>
-<map name="aclass_j_motor_driver_afd7e4e04cc84b3eb41559f4c7bf38d43_cgraph" id="aclass_j_motor_driver_afd7e4e04cc84b3eb41559f4c7bf38d43_cgraph">
-<area shape="rect" title="enable motor" alt="" coords="5,5,145,32"/>
-<area shape="rect" href="class_j_motor_driver.html#a2bc676fe29a60f49f488fc10fac07b11" title="use to enable or disable a motor, and sets up pin states" alt="" coords="193,5,352,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -238,33 +222,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_j_motor_driver_esp32_servo.html#af463cca678ccbc99235f7159519d5784">JMotorDriverEsp32Servo</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m_dir.html#a4c079c6b3a2949006062fde1dd1341cf">JMotorDriverEsp32PWMDir</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m.html#acc8f4a05c147d20d5fdea46c245ac9ae">JMotorDriverEsp32PWM</a>, <a class="el" href="class_j_motor_driver_esp32_l293.html#a3339aa36c306437bd8ecd6cea3aceaca">JMotorDriverEsp32L293</a>, <a class="el" href="class_j_motor_driver_dual.html#ad352a0c48ed9ff973fb3d45ff6ba7e0a">JMotorDriverDual</a>, <a class="el" href="class_j_motor_driver_avr_servo.html#a37634be558fecac3744150459576c834">JMotorDriverAvrServo</a>, <a class="el" href="class_j_motor_driver_avr_p_w_m_dir.html#a97080f59d31c1c36e638249224ff62ef">JMotorDriverAvrPWMDir</a>, <a class="el" href="class_j_motor_driver_avr_p_w_m.html#aef7cb6edfa6150bca3a0eb08d28534d2">JMotorDriverAvrPWM</a>, and <a class="el" href="class_j_motor_driver_avr_l293.html#a99ae564d7274b0d60531a2769a9393dc">JMotorDriverAvrL293</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_driver_a87e4adac669e4dcafc0e540e2d1e4849_icgraph.png" border="0" usemap="#aclass_j_motor_driver_a87e4adac669e4dcafc0e540e2d1e4849_icgraph" alt=""/></div>
-<map name="aclass_j_motor_driver_a87e4adac669e4dcafc0e540e2d1e4849_icgraph" id="aclass_j_motor_driver_a87e4adac669e4dcafc0e540e2d1e4849_icgraph">
-<area shape="rect" title="get the enable state of the driver" alt="" coords="1171,330,1329,357"/>
-<area shape="rect" href="class_j_motor_driver_dual.html#ad352a0c48ed9ff973fb3d45ff6ba7e0a" title="get the enable state of the driver" alt="" coords="937,250,1123,277"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a56a908c41a2c18194db079871bd8e831" title="is the controller enabled" alt="" coords="955,352,1105,393"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a1c892de7f53781b38ec114dbba165d18" title="update driver" alt="" coords="715,275,889,302"/>
-<area shape="rect" href="class_j_motor_controller_closed.html#a41cac3d3889ff56ca807cd3e1c7e2e73" title="is the controller enabled" alt="" coords="951,417,1109,459"/>
-<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title=" " alt="" coords="5,355,52,382"/>
-<area shape="rect" href="class_j_motor_controller_open.html#aad3c0954a1d5da79e908b6093c6d82cb" title="update driver" alt="" coords="296,195,468,222"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a1a4c91d8f8955f033247e3d04321db24" title="change whether motor controller is enabled" alt="" coords="727,497,877,539"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a523e519803f2f8e75dfc660475930cea" title="change whether motor controller is enabled" alt="" coords="517,436,665,477"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a46318f537ccaf32ce9d72e8792968464" title="set velocity for controller" alt="" coords="516,268,667,309"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a7ddb6b1f937bd3770ae9d31b05c73fff" title="set target velocity for controller (acceleration limited)" alt="" coords="516,203,667,244"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a2fff42e1e435cafe638e792d699b56fb" title="alternative method for setting velocity that uses setPosSetpoint" alt="" coords="100,188,248,229"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a6389b6056bbc2a5e3cfe89ad73658880" title="set position for motor to drive towards position as fast as possible (setpoint for control loop if av..." alt="" coords="100,253,248,295"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a3e3d100832eda976980648ec08d7e7d6" title="set target position (motor drives towards position, following acceleration profile)" alt="" coords="100,319,248,360"/>
-<area shape="rect" href="class_j_motor_controller_open.html#aa5752d5b3107993d7d5c860f66f1a9f3" title="set velocity for controller" alt="" coords="100,5,248,47"/>
-<area shape="rect" href="class_j_motor_controller_open.html#ae5df67427e891d212c64b5b5026b217a" title="set target velocity for controller (acceleration limited)" alt="" coords="100,71,248,112"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a37945ba7fa208f34b59424929547bc87" title="disable motor controller" alt="" coords="516,567,667,608"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a008ba2b28f33ca0fcabb89e1887fe6a7" title="enable motor controller" alt="" coords="516,501,667,543"/>
-<area shape="rect" href="main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="355,509,409,535"/>
-</map>
-</div>
+<p>Reimplemented in <a class="el" href="class_j_motor_driver_servo_dual.html#a9954706115138cb6c4e4e30bee3aec98">JMotorDriverServoDual</a>, <a class="el" href="class_j_motor_driver_servo_advanced_dual.html#ad9a025bda3ceb19c6e146781f1f9ed0f">JMotorDriverServoAdvancedDual</a>, <a class="el" href="class_j_motor_driver_esp32_servo.html#af463cca678ccbc99235f7159519d5784">JMotorDriverEsp32Servo</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m_dir.html#a4c079c6b3a2949006062fde1dd1341cf">JMotorDriverEsp32PWMDir</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m.html#acc8f4a05c147d20d5fdea46c245ac9ae">JMotorDriverEsp32PWM</a>, <a class="el" href="class_j_motor_driver_esp32_l293.html#a3339aa36c306437bd8ecd6cea3aceaca">JMotorDriverEsp32L293</a>, <a class="el" href="class_j_motor_driver_dual.html#ad352a0c48ed9ff973fb3d45ff6ba7e0a">JMotorDriverDual</a>, <a class="el" href="class_j_motor_driver_avr_servo.html#a37634be558fecac3744150459576c834">JMotorDriverAvrServo</a>, <a class="el" href="class_j_motor_driver_avr_p_w_m_dir.html#a97080f59d31c1c36e638249224ff62ef">JMotorDriverAvrPWMDir</a>, <a class="el" href="class_j_motor_driver_avr_p_w_m.html#aef7cb6edfa6150bca3a0eb08d28534d2">JMotorDriverAvrPWM</a>, and <a class="el" href="class_j_motor_driver_avr_l293.html#a99ae564d7274b0d60531a2769a9393dc">JMotorDriverAvrL293</a>.</p>
 
 </div>
 </div>
@@ -300,30 +258,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_j_motor_driver_esp32_servo.html#aca15ec92ce697097ee2f70a4549a1a45">JMotorDriverEsp32Servo</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m_dir.html#a4133ccbc30e47d5e791b8526f7a52f93">JMotorDriverEsp32PWMDir</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m.html#ada7a4070b69861c9f6288b10a6184d81">JMotorDriverEsp32PWM</a>, <a class="el" href="class_j_motor_driver_esp32_l293.html#a5fafa827e09b9843b8aa868f0c2f01f9">JMotorDriverEsp32L293</a>, <a class="el" href="class_j_motor_driver_dual.html#adb412d537c9a48e4046f4a3d2f3c637e">JMotorDriverDual</a>, <a class="el" href="class_j_motor_driver_avr_servo.html#a663e2f7e77c159cfad674a56492ceaae">JMotorDriverAvrServo</a>, <a class="el" href="class_j_motor_driver_avr_p_w_m_dir.html#a144188a01291cc83a95ff32b03471289">JMotorDriverAvrPWMDir</a>, <a class="el" href="class_j_motor_driver_avr_p_w_m.html#a13ea631d58e66d9e33c2aa1762b629c8">JMotorDriverAvrPWM</a>, and <a class="el" href="class_j_motor_driver_avr_l293.html#a5512afe93b96a10c2fe6c0659b6ee9eb">JMotorDriverAvrL293</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_driver_a36aa5a3f2e5c5ce8c769023047822e84_icgraph.png" border="0" usemap="#aclass_j_motor_driver_a36aa5a3f2e5c5ce8c769023047822e84_icgraph" alt=""/></div>
-<map name="aclass_j_motor_driver_a36aa5a3f2e5c5ce8c769023047822e84_icgraph" id="aclass_j_motor_driver_a36aa5a3f2e5c5ce8c769023047822e84_icgraph">
-<area shape="rect" title="high end of the range" alt="" coords="1156,303,1337,329"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a5e185bb6773288c265e3e0b54adaee18" title="if getDriverSetVal exceeds this, isDriverInRange will go false" alt="" coords="947,165,1098,206"/>
-<area shape="rect" href="class_j_motor_controller_closed.html#a9d187787f1edcb38e02ee223ad0c47ea" title="if getDriverSetVal exceeds this, isDriverInRange will go false" alt="" coords="944,230,1101,271"/>
-<area shape="rect" href="class_j_motor_driver_dual.html#adb412d537c9a48e4046f4a3d2f3c637e" title="high end of the range" alt="" coords="937,295,1108,337"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a5c4913adde8ced42890b18958d23e830" title="constructor" alt="" coords="945,361,1101,402"/>
-<area shape="rect" href="class_j_motor_controller_closed.html#a54c1cf8b23553975204e1b9f16fb2d78" title=" " alt="" coords="941,426,1104,467"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a1c892de7f53781b38ec114dbba165d18" title="update driver" alt="" coords="715,172,889,199"/>
-<area shape="rect" href="class_j_motor_controller_open.html#aad3c0954a1d5da79e908b6093c6d82cb" title="update driver" alt="" coords="296,143,468,169"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a46318f537ccaf32ce9d72e8792968464" title="set velocity for controller" alt="" coords="516,165,667,206"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a7ddb6b1f937bd3770ae9d31b05c73fff" title="set target velocity for controller (acceleration limited)" alt="" coords="516,230,667,271"/>
-<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title=" " alt="" coords="5,80,52,107"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a2fff42e1e435cafe638e792d699b56fb" title="alternative method for setting velocity that uses setPosSetpoint" alt="" coords="100,37,248,78"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a6389b6056bbc2a5e3cfe89ad73658880" title="set position for motor to drive towards position as fast as possible (setpoint for control loop if av..." alt="" coords="100,102,248,143"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a3e3d100832eda976980648ec08d7e7d6" title="set target position (motor drives towards position, following acceleration profile)" alt="" coords="100,167,248,209"/>
-<area shape="rect" href="class_j_motor_controller_open.html#aa5752d5b3107993d7d5c860f66f1a9f3" title="set velocity for controller" alt="" coords="100,233,248,274"/>
-<area shape="rect" href="class_j_motor_controller_open.html#ae5df67427e891d212c64b5b5026b217a" title="set target velocity for controller (acceleration limited)" alt="" coords="100,298,248,339"/>
-</map>
-</div>
+<p>Reimplemented in <a class="el" href="class_j_motor_driver_servo_dual.html#acbe36ae6d5f60493e733fd1196cf5eac">JMotorDriverServoDual</a>, <a class="el" href="class_j_motor_driver_servo_advanced_dual.html#a7fa246d3841700aabf13b5ee8cf5a595">JMotorDriverServoAdvancedDual</a>, <a class="el" href="class_j_motor_driver_esp32_servo.html#aca15ec92ce697097ee2f70a4549a1a45">JMotorDriverEsp32Servo</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m_dir.html#a4133ccbc30e47d5e791b8526f7a52f93">JMotorDriverEsp32PWMDir</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m.html#ada7a4070b69861c9f6288b10a6184d81">JMotorDriverEsp32PWM</a>, <a class="el" href="class_j_motor_driver_esp32_l293.html#a5fafa827e09b9843b8aa868f0c2f01f9">JMotorDriverEsp32L293</a>, <a class="el" href="class_j_motor_driver_dual.html#adb412d537c9a48e4046f4a3d2f3c637e">JMotorDriverDual</a>, <a class="el" href="class_j_motor_driver_avr_servo.html#a663e2f7e77c159cfad674a56492ceaae">JMotorDriverAvrServo</a>, <a class="el" href="class_j_motor_driver_avr_p_w_m_dir.html#a144188a01291cc83a95ff32b03471289">JMotorDriverAvrPWMDir</a>, <a class="el" href="class_j_motor_driver_avr_p_w_m.html#a13ea631d58e66d9e33c2aa1762b629c8">JMotorDriverAvrPWM</a>, and <a class="el" href="class_j_motor_driver_avr_l293.html#a5512afe93b96a10c2fe6c0659b6ee9eb">JMotorDriverAvrL293</a>.</p>
 
 </div>
 </div>
@@ -359,28 +294,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_j_motor_driver_esp32_servo.html#adef73ca794c227892101f9f480497f85">JMotorDriverEsp32Servo</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m_dir.html#a45ffe094f6ed9c8596898dedd34b0c82">JMotorDriverEsp32PWMDir</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m.html#a65ee461abedd4eca16f205dda1e23123">JMotorDriverEsp32PWM</a>, <a class="el" href="class_j_motor_driver_esp32_l293.html#a35fdd02602e3f85c6fece9c16d42b6f1">JMotorDriverEsp32L293</a>, <a class="el" href="class_j_motor_driver_dual.html#a3dacc835b4d2aee4d6a65a4050c97907">JMotorDriverDual</a>, <a class="el" href="class_j_motor_driver_avr_servo.html#a831af3d2c35807969b285c5f6e0caf43">JMotorDriverAvrServo</a>, <a class="el" href="class_j_motor_driver_avr_p_w_m_dir.html#a3b41167dc302d8b6c09716020a37a177">JMotorDriverAvrPWMDir</a>, <a class="el" href="class_j_motor_driver_avr_p_w_m.html#ab1e320102fa7d133f1914da39300f32d">JMotorDriverAvrPWM</a>, and <a class="el" href="class_j_motor_driver_avr_l293.html#ae1f843cc6eb914d5cf0dd00ae8ba9d3d">JMotorDriverAvrL293</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_driver_a70e074ae03c7685d2147f70ae4ed9ff6_icgraph.png" border="0" usemap="#aclass_j_motor_driver_a70e074ae03c7685d2147f70ae4ed9ff6_icgraph" alt=""/></div>
-<map name="aclass_j_motor_driver_a70e074ae03c7685d2147f70ae4ed9ff6_icgraph" id="aclass_j_motor_driver_a70e074ae03c7685d2147f70ae4ed9ff6_icgraph">
-<area shape="rect" title="low end of the range" alt="" coords="1152,237,1331,264"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#ae3f7bcf4902b98a1d375baa1d4a3ae3b" title="if getDriverSetVal goes below this, isDriverInRange will go false" alt="" coords="945,165,1096,206"/>
-<area shape="rect" href="class_j_motor_controller_closed.html#a215e6a3db9564f1fcd11969bf9e08949" title="if getDriverSetVal goes below this, isDriverInRange will go false" alt="" coords="942,230,1099,271"/>
-<area shape="rect" href="class_j_motor_driver_dual.html#a3dacc835b4d2aee4d6a65a4050c97907" title="low end of the range" alt="" coords="937,295,1104,337"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a1c892de7f53781b38ec114dbba165d18" title="update driver" alt="" coords="715,172,889,199"/>
-<area shape="rect" href="class_j_motor_controller_open.html#aad3c0954a1d5da79e908b6093c6d82cb" title="update driver" alt="" coords="296,143,468,169"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a46318f537ccaf32ce9d72e8792968464" title="set velocity for controller" alt="" coords="516,165,667,206"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a7ddb6b1f937bd3770ae9d31b05c73fff" title="set target velocity for controller (acceleration limited)" alt="" coords="516,230,667,271"/>
-<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title=" " alt="" coords="5,80,52,107"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a2fff42e1e435cafe638e792d699b56fb" title="alternative method for setting velocity that uses setPosSetpoint" alt="" coords="100,37,248,78"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a6389b6056bbc2a5e3cfe89ad73658880" title="set position for motor to drive towards position as fast as possible (setpoint for control loop if av..." alt="" coords="100,102,248,143"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a3e3d100832eda976980648ec08d7e7d6" title="set target position (motor drives towards position, following acceleration profile)" alt="" coords="100,167,248,209"/>
-<area shape="rect" href="class_j_motor_controller_open.html#aa5752d5b3107993d7d5c860f66f1a9f3" title="set velocity for controller" alt="" coords="100,233,248,274"/>
-<area shape="rect" href="class_j_motor_controller_open.html#ae5df67427e891d212c64b5b5026b217a" title="set target velocity for controller (acceleration limited)" alt="" coords="100,298,248,339"/>
-</map>
-</div>
+<p>Reimplemented in <a class="el" href="class_j_motor_driver_servo_dual.html#a6b5e174456144e7ae7bf9ef07ea6fac3">JMotorDriverServoDual</a>, <a class="el" href="class_j_motor_driver_servo_advanced_dual.html#ac2454cd7179b10c59f49b323ef5b1c0d">JMotorDriverServoAdvancedDual</a>, <a class="el" href="class_j_motor_driver_esp32_servo.html#adef73ca794c227892101f9f480497f85">JMotorDriverEsp32Servo</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m_dir.html#a45ffe094f6ed9c8596898dedd34b0c82">JMotorDriverEsp32PWMDir</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m.html#a65ee461abedd4eca16f205dda1e23123">JMotorDriverEsp32PWM</a>, <a class="el" href="class_j_motor_driver_esp32_l293.html#a35fdd02602e3f85c6fece9c16d42b6f1">JMotorDriverEsp32L293</a>, <a class="el" href="class_j_motor_driver_dual.html#a3dacc835b4d2aee4d6a65a4050c97907">JMotorDriverDual</a>, <a class="el" href="class_j_motor_driver_avr_servo.html#a831af3d2c35807969b285c5f6e0caf43">JMotorDriverAvrServo</a>, <a class="el" href="class_j_motor_driver_avr_p_w_m_dir.html#a3b41167dc302d8b6c09716020a37a177">JMotorDriverAvrPWMDir</a>, <a class="el" href="class_j_motor_driver_avr_p_w_m.html#ab1e320102fa7d133f1914da39300f32d">JMotorDriverAvrPWM</a>, and <a class="el" href="class_j_motor_driver_avr_l293.html#ae1f843cc6eb914d5cf0dd00ae8ba9d3d">JMotorDriverAvrL293</a>.</p>
 
 </div>
 </div>
@@ -423,26 +337,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_j_motor_driver_esp32_p_w_m_dir.html#a4eeca45fbada68e04007adb1e9c8312a">JMotorDriverEsp32PWMDir</a>, <a class="el" href="class_j_motor_driver_esp32_l293.html#a30fac2de0054d75f9a0960bd8eacf565">JMotorDriverEsp32L293</a>, <a class="el" href="class_j_motor_driver_dual.html#a8cdaf4ae1b5cb69280fd0164743f5501">JMotorDriverDual</a>, <a class="el" href="class_j_motor_driver_avr_p_w_m_dir.html#aa6da9ac4da952ac2dcfe9dcfd9d07623">JMotorDriverAvrPWMDir</a>, <a class="el" href="class_j_motor_driver_avr_l293.html#aac04aab386642b753efb04a62b1024b7">JMotorDriverAvrL293</a>, <a class="el" href="class_j_motor_driver_esp32_servo.html#a69c38d3e07ccedaefe563730714d46c8">JMotorDriverEsp32Servo</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m.html#abba2af7b8ece0bfd872ff0238c31d77f">JMotorDriverEsp32PWM</a>, <a class="el" href="class_j_motor_driver_avr_servo.html#a482e65e081c58870c469d64d5b842787">JMotorDriverAvrServo</a>, and <a class="el" href="class_j_motor_driver_avr_p_w_m.html#aa072df575d6fe96ca627c80b1510d360">JMotorDriverAvrPWM</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_driver_a09ec56cc9c528c40e82c532f55fdaf70_icgraph.png" border="0" usemap="#aclass_j_motor_driver_a09ec56cc9c528c40e82c532f55fdaf70_icgraph" alt=""/></div>
-<map name="aclass_j_motor_driver_a09ec56cc9c528c40e82c532f55fdaf70_icgraph" id="aclass_j_motor_driver_a09ec56cc9c528c40e82c532f55fdaf70_icgraph">
-<area shape="rect" title="set motor power" alt="" coords="937,197,1057,224"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a1c892de7f53781b38ec114dbba165d18" title="update driver" alt="" coords="715,172,889,199"/>
-<area shape="rect" href="class_j_motor_driver_dual.html#a8cdaf4ae1b5cb69280fd0164743f5501" title="set motor power" alt="" coords="729,223,875,249"/>
-<area shape="rect" href="class_j_motor_controller_open.html#aad3c0954a1d5da79e908b6093c6d82cb" title="update driver" alt="" coords="296,143,468,169"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a46318f537ccaf32ce9d72e8792968464" title="set velocity for controller" alt="" coords="516,165,667,206"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a7ddb6b1f937bd3770ae9d31b05c73fff" title="set target velocity for controller (acceleration limited)" alt="" coords="516,230,667,271"/>
-<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title=" " alt="" coords="5,80,52,107"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a2fff42e1e435cafe638e792d699b56fb" title="alternative method for setting velocity that uses setPosSetpoint" alt="" coords="100,37,248,78"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a6389b6056bbc2a5e3cfe89ad73658880" title="set position for motor to drive towards position as fast as possible (setpoint for control loop if av..." alt="" coords="100,102,248,143"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a3e3d100832eda976980648ec08d7e7d6" title="set target position (motor drives towards position, following acceleration profile)" alt="" coords="100,167,248,209"/>
-<area shape="rect" href="class_j_motor_controller_open.html#aa5752d5b3107993d7d5c860f66f1a9f3" title="set velocity for controller" alt="" coords="100,233,248,274"/>
-<area shape="rect" href="class_j_motor_controller_open.html#ae5df67427e891d212c64b5b5026b217a" title="set target velocity for controller (acceleration limited)" alt="" coords="100,298,248,339"/>
-</map>
-</div>
+<p>Reimplemented in <a class="el" href="class_j_motor_driver_servo_dual.html#ad07732579c18eb9ef65e8ad9fccb9a30">JMotorDriverServoDual</a>, <a class="el" href="class_j_motor_driver_servo_advanced_dual.html#a5e81b1039ad7c4006e4c12899cc343bb">JMotorDriverServoAdvancedDual</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m_dir.html#a4eeca45fbada68e04007adb1e9c8312a">JMotorDriverEsp32PWMDir</a>, <a class="el" href="class_j_motor_driver_esp32_l293.html#a30fac2de0054d75f9a0960bd8eacf565">JMotorDriverEsp32L293</a>, <a class="el" href="class_j_motor_driver_dual.html#a8cdaf4ae1b5cb69280fd0164743f5501">JMotorDriverDual</a>, <a class="el" href="class_j_motor_driver_avr_p_w_m_dir.html#aa6da9ac4da952ac2dcfe9dcfd9d07623">JMotorDriverAvrPWMDir</a>, <a class="el" href="class_j_motor_driver_avr_l293.html#aac04aab386642b753efb04a62b1024b7">JMotorDriverAvrL293</a>, <a class="el" href="class_j_motor_driver_esp32_servo.html#a69c38d3e07ccedaefe563730714d46c8">JMotorDriverEsp32Servo</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m.html#abba2af7b8ece0bfd872ff0238c31d77f">JMotorDriverEsp32PWM</a>, <a class="el" href="class_j_motor_driver_avr_servo.html#a482e65e081c58870c469d64d5b842787">JMotorDriverAvrServo</a>, and <a class="el" href="class_j_motor_driver_avr_p_w_m.html#aa072df575d6fe96ca627c80b1510d360">JMotorDriverAvrPWM</a>.</p>
 
 </div>
 </div>
@@ -485,27 +380,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_j_motor_driver_esp32_servo.html#adf5de4f2276842480f038fbc62cf6f4a">JMotorDriverEsp32Servo</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m_dir.html#a0fc2d37d4aec674b33e115007ef55451">JMotorDriverEsp32PWMDir</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m.html#aea96e390987b41f398d1f56da711d7a9">JMotorDriverEsp32PWM</a>, <a class="el" href="class_j_motor_driver_esp32_l293.html#a6e1417cdb14b5ca814f7891a6cb46a1d">JMotorDriverEsp32L293</a>, <a class="el" href="class_j_motor_driver_dual.html#a0c54674252822ebec9091099c9ba6008">JMotorDriverDual</a>, <a class="el" href="class_j_motor_driver_avr_servo.html#a015bfbfde8b118e32cfe24b2a76bb35e">JMotorDriverAvrServo</a>, <a class="el" href="class_j_motor_driver_avr_p_w_m_dir.html#a7ff1e14775c87680fe74d0b872918676">JMotorDriverAvrPWMDir</a>, <a class="el" href="class_j_motor_driver_avr_p_w_m.html#a713be9a6dbb651d724d42a1178664d24">JMotorDriverAvrPWM</a>, and <a class="el" href="class_j_motor_driver_avr_l293.html#ad84d5f19c2dac5c80fdce28afd0eeda3">JMotorDriverAvrL293</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_driver_a2bc676fe29a60f49f488fc10fac07b11_icgraph.png" border="0" usemap="#aclass_j_motor_driver_a2bc676fe29a60f49f488fc10fac07b11_icgraph" alt=""/></div>
-<map name="aclass_j_motor_driver_a2bc676fe29a60f49f488fc10fac07b11_icgraph" id="aclass_j_motor_driver_a2bc676fe29a60f49f488fc10fac07b11_icgraph">
-<area shape="rect" title="use to enable or disable a motor, and sets up pin states" alt="" coords="547,143,705,170"/>
-<area shape="rect" href="class_j_motor_driver.html#a978c868297bf5ee5958d44764bb2bbda" title="disable motor" alt="" coords="335,34,477,61"/>
-<area shape="rect" href="class_j_motor_driver.html#afd7e4e04cc84b3eb41559f4c7bf38d43" title="enable motor" alt="" coords="336,85,476,111"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a1a4c91d8f8955f033247e3d04321db24" title="change whether motor controller is enabled" alt="" coords="331,136,481,177"/>
-<area shape="rect" href="class_j_motor_controller_closed.html#a5fae220a891b80410ba1ea61f6f565ba" title="change whether motor controller is enabled" alt="" coords="327,201,485,243"/>
-<area shape="rect" href="class_j_motor_driver_dual.html#a0c54674252822ebec9091099c9ba6008" title="use to enable or disable a motor, and sets up pin states" alt="" coords="313,267,499,294"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a37945ba7fa208f34b59424929547bc87" title="disable motor controller" alt="" coords="111,5,262,47"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a008ba2b28f33ca0fcabb89e1887fe6a7" title="enable motor controller" alt="" coords="111,71,262,112"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a523e519803f2f8e75dfc660475930cea" title="change whether motor controller is enabled" alt="" coords="113,136,261,177"/>
-<area shape="rect" href="main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,78,60,105"/>
-<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title=" " alt="" coords="9,143,56,170"/>
-<area shape="rect" href="class_j_motor_controller_closed.html#a4d09bd7c4ea0f5e0181bae92432af8a2" title="disable motor controller" alt="" coords="108,201,265,243"/>
-<area shape="rect" href="class_j_motor_controller_closed.html#ac10af2f64b0ff551758cceca7e422433" title="enable motor controller" alt="" coords="108,267,265,308"/>
-</map>
-</div>
+<p>Reimplemented in <a class="el" href="class_j_motor_driver_servo_dual.html#ab083fe1ca606166e6cd09e97e025b8c7">JMotorDriverServoDual</a>, <a class="el" href="class_j_motor_driver_servo_advanced_dual.html#aa9f7e875013af8781a263c267574b175">JMotorDriverServoAdvancedDual</a>, <a class="el" href="class_j_motor_driver_esp32_servo.html#adf5de4f2276842480f038fbc62cf6f4a">JMotorDriverEsp32Servo</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m_dir.html#a0fc2d37d4aec674b33e115007ef55451">JMotorDriverEsp32PWMDir</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m.html#aea96e390987b41f398d1f56da711d7a9">JMotorDriverEsp32PWM</a>, <a class="el" href="class_j_motor_driver_esp32_l293.html#a6e1417cdb14b5ca814f7891a6cb46a1d">JMotorDriverEsp32L293</a>, <a class="el" href="class_j_motor_driver_dual.html#a0c54674252822ebec9091099c9ba6008">JMotorDriverDual</a>, <a class="el" href="class_j_motor_driver_avr_servo.html#a015bfbfde8b118e32cfe24b2a76bb35e">JMotorDriverAvrServo</a>, <a class="el" href="class_j_motor_driver_avr_p_w_m_dir.html#a7ff1e14775c87680fe74d0b872918676">JMotorDriverAvrPWMDir</a>, <a class="el" href="class_j_motor_driver_avr_p_w_m.html#a713be9a6dbb651d724d42a1178664d24">JMotorDriverAvrPWM</a>, and <a class="el" href="class_j_motor_driver_avr_l293.html#ad84d5f19c2dac5c80fdce28afd0eeda3">JMotorDriverAvrL293</a>.</p>
 
 </div>
 </div>

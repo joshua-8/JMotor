@@ -1,4 +1,0 @@
-<map id="JMotorControllerBasic::setMaxDriverRangeAmount" name="JMotorControllerBasic::setMaxDriverRangeAmount">
-<area shape="rect" id="node1" title="set what fraction of driverRange can be used" alt="" coords="5,5,192,47"/>
-<area shape="rect" id="node2" href="$class_j_motor_compensator.html#a864bd5b4ccd2a01a5104f2a255a7bcdb" title="set what fraction of driverRange can be used" alt="" coords="240,5,420,47"/>
-</map>

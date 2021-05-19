@@ -1,4 +1,0 @@
-<map id="JEncoderAS5048bI2C::zeroCounter" name="JEncoderAS5048bI2C::zeroCounter">
-<area shape="rect" id="node1" title="reset the counter of how far the encoder has turned" alt="" coords="5,5,155,47"/>
-<area shape="rect" id="node2" href="$class_j_encoder_a_s5048b_i2_c.html#a225aa9f6177c40b5da6c32e44ae60eb7" title="The current angle of the sensor is read and set to zero." alt="" coords="203,5,352,47"/>
-</map>

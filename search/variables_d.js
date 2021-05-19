@@ -1,8 +1,19 @@
 var searchData=
 [
-  ['value_414',['value',['../main_8cpp.html#a17956fe0129d3d4c94ebc06cfef2ad82',1,'main.cpp']]],
-  ['vellimit_415',['velLimit',['../class_j_motor_controller_basic.html#a7022d34c198c5904eb5090a868111235',1,'JMotorControllerBasic::velLimit()'],['../class_j_motor_controller_closed.html#ace55430eb2f0a641831e3d3bba7fde7a',1,'JMotorControllerClosed::velLimit()']]],
-  ['velocity_416',['velocity',['../class_j_motor_controller_basic.html#a98ce31234c2e1b7559bcebb4563f8523',1,'JMotorControllerBasic']]],
-  ['velocitytarget_417',['velocityTarget',['../class_j_motor_controller_basic.html#a3888a31cc6f05f4a78a0aaa10091cb94',1,'JMotorControllerBasic']]],
-  ['voltagecomp_418',['voltageComp',['../main_8cpp.html#a0c0bc9300594168e6ca4df0076a455e6',1,'main.cpp']]]
+  ['servo_616',['servo',['../class_j_servo_controller.html#aed08c49c0044b8504abd73474af722bd',1,'JServoController']]],
+  ['servoctrl_617',['servoCtrl',['../main_8cpp.html#a37274cbeacb407d2681200ccd0e4ac7a',1,'main.cpp']]],
+  ['setval_618',['setVal',['../class_j_motor_controller_basic.html#a78ec46745ef557731e4446906842fe50',1,'JMotorControllerBasic::setVal()'],['../class_j_motor_controller_closed.html#a6ff14ee4e1cd88922363a715550cde8f',1,'JMotorControllerClosed::setVal()']]],
+  ['sleeping_619',['sleeping',['../class_j_servo_controller.html#a2d833287f0d9d943884fc1b5052eec1d',1,'JServoController']]],
+  ['smoothedmode_620',['smoothedMode',['../class_j_motor_controller_open.html#ade07985081b2676aa297abff051f3032',1,'JMotorControllerOpen']]],
+  ['stallactivatetimeout_621',['stallActivateTimeout',['../class_j_servo_controller_stall_protected.html#a5b7755b43e650a3143b7053c44e3a874',1,'JServoControllerStallProtected']]],
+  ['stalldeactivatetimeout_622',['stallDeactivateTimeout',['../class_j_servo_controller_stall_protected.html#a907b9dadb87fce7851d4b1472e471eda',1,'JServoControllerStallProtected']]],
+  ['stalled_623',['stalled',['../class_j_servo_controller_stall_protected.html#a77da2266b44a74d3ece498f54ca99fb1',1,'JServoControllerStallProtected']]],
+  ['stallprotected_624',['stallProtected',['../class_j_servo_controller_stall_protected.html#a4a8b93643b550486af5d8444cda5a575',1,'JServoControllerStallProtected']]],
+  ['stallprotectionactivated_625',['stallProtectionActivated',['../class_j_servo_controller_stall_protected.html#a55ab461b3a55e59c22787c514017bd72',1,'JServoControllerStallProtected']]],
+  ['stallstatechangemillis_626',['stallStateChangeMillis',['../class_j_servo_controller_stall_protected.html#ac85d438624e4e01838c133d54c269cd3',1,'JServoControllerStallProtected']]],
+  ['stallthreshold_627',['stallThreshold',['../class_j_servo_controller_stall_protected.html#abcc586af6168787a75e2962588b52d34',1,'JServoControllerStallProtected']]],
+  ['start_5fboost_5ftime_628',['start_boost_time',['../struct_j_motor_comp_standard_config.html#a21505f58d6c72bcba622f64f044d4848',1,'JMotorCompStandardConfig']]],
+  ['startweaktimeout_629',['startWeakTimeout',['../class_j_servo_controller_advanced.html#aff63e6a32d7402b8d7c8f6f13a801a7d',1,'JServoControllerAdvanced']]],
+  ['steps_5fper_5fturn_630',['STEPS_PER_TURN',['../class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85',1,'JEncoderAS5048bI2C']]],
+  ['sum_631',['sum',['../main_8cpp.html#aeeafe7e9eebbd2a45ce4fa2ae0d96c51',1,'main.cpp']]]
 ];

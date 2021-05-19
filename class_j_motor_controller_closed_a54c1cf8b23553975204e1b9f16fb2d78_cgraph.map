@@ -1,5 +1,0 @@
-<map id="JMotorControllerClosed::JMotorControllerClosed" name="JMotorControllerClosed::JMotorControllerClosed">
-<area shape="rect" id="node1" title=" " alt="" coords="5,27,168,69"/>
-<area shape="rect" id="node2" href="$class_j_motor_driver.html#a36aa5a3f2e5c5ce8c769023047822e84" title="high end of the range" alt="" coords="216,5,397,32"/>
-<area shape="rect" id="node3" href="$class_j_motor_compensator.html#a1643fca00b0101ebdf8487309fe3811d" title="set what value makes the driver output 100% of supply voltage" alt="" coords="234,57,379,98"/>
-</map>

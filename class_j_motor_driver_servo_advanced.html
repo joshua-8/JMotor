@@ -62,14 +62,14 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_j_motor_driver_servo_advanced-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">JMotorDriverServoAdvanced Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>defines interface for servo driver with variable frequency, subclass of <a class="el" href="class_j_motor_driver_servo.html" title="empty class that can be used to specify a driver that controls specifically a servo">JMotorDriverServo</a> and <a class="el" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers">JMotorDriver</a>  
+<p>defines interface for servo driver with variable frequency, subclass of <a class="el" href="class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo">JMotorDriverServo</a> and <a class="el" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers">JMotorDriver</a>  
  <a href="class_j_motor_driver_servo_advanced.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_j_motor_driver_servo_advanced_8h_source.html">JMotorDriverServoAdvanced.h</a>&gt;</code></p>
@@ -78,10 +78,11 @@ Inheritance diagram for JMotorDriverServoAdvanced:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_motor_driver_servo_advanced__inherit__graph.png" border="0" usemap="#a_j_motor_driver_servo_advanced_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_j_motor_driver_servo_advanced_inherit__map" id="a_j_motor_driver_servo_advanced_inherit__map">
-<area shape="rect" title="defines interface for servo driver with variable frequency, subclass of JMotorDriverServo and JMotorD..." alt="" coords="5,155,193,181"/>
-<area shape="rect" href="class_j_motor_driver_esp32_servo.html" title="For servos and motor controllers that use servo signals (ESCs)" alt="" coords="16,229,183,256"/>
-<area shape="rect" href="class_j_motor_driver_servo.html" title="empty class that can be used to specify a driver that controls specifically a servo" alt="" coords="34,80,165,107"/>
-<area shape="rect" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="51,5,147,32"/>
+<area shape="rect" title="defines interface for servo driver with variable frequency, subclass of JMotorDriverServo and JMotorD..." alt="" coords="101,155,289,181"/>
+<area shape="rect" href="class_j_motor_driver_esp32_servo.html" title="For servos and motor controllers that use servo signals (ESCs)" alt="" coords="5,229,172,256"/>
+<area shape="rect" href="class_j_motor_driver_servo_advanced_dual.html" title="control two JMotorDriverServoAdvanced as if they are one driver" alt="" coords="196,229,411,256"/>
+<area shape="rect" href="class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="130,80,261,107"/>
+<area shape="rect" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="147,5,243,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -90,19 +91,35 @@ Collaboration diagram for JMotorDriverServoAdvanced:</div>
 <div class="center"><img src="class_j_motor_driver_servo_advanced__coll__graph.png" border="0" usemap="#a_j_motor_driver_servo_advanced_coll__map" alt="Collaboration graph"/></div>
 <map name="a_j_motor_driver_servo_advanced_coll__map" id="a_j_motor_driver_servo_advanced_coll__map">
 <area shape="rect" title="defines interface for servo driver with variable frequency, subclass of JMotorDriverServo and JMotorD..." alt="" coords="5,155,193,181"/>
-<area shape="rect" href="class_j_motor_driver_servo.html" title="empty class that can be used to specify a driver that controls specifically a servo" alt="" coords="34,80,165,107"/>
+<area shape="rect" href="class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="34,80,165,107"/>
 <area shape="rect" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="51,5,147,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
 <tr class="memitem:aee74e57c701560b9649a01362375d092"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_servo_advanced.html#aee74e57c701560b9649a01362375d092">adjustFrequency</a> (float freq)=0</td></tr>
 <tr class="memdesc:aee74e57c701560b9649a01362375d092"><td class="mdescLeft">&#160;</td><td class="mdescRight">adjust frequency as a fraction of standard 50hz frequency lower frequencies (try .75) may let you reduce how strongly the servo holds its position  <a href="class_j_motor_driver_servo_advanced.html#aee74e57c701560b9649a01362375d092">More...</a><br /></td></tr>
 <tr class="separator:aee74e57c701560b9649a01362375d092"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_methods_class_j_motor_driver_servo"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_j_motor_driver_servo')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_j_motor_driver_servo.html">JMotorDriverServo</a></td></tr>
+<tr class="memitem:a300cc50c9da182c52463e4c36d434b06 inherit pub_methods_class_j_motor_driver_servo"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_servo.html#a300cc50c9da182c52463e4c36d434b06">setMinServoValue</a> (int <a class="el" href="main_8cpp.html#a17956fe0129d3d4c94ebc06cfef2ad82">value</a>)</td></tr>
+<tr class="memdesc:a300cc50c9da182c52463e4c36d434b06 inherit pub_methods_class_j_motor_driver_servo"><td class="mdescLeft">&#160;</td><td class="mdescRight">microseconds for shortest servo pulse  <a href="class_j_motor_driver_servo.html#a300cc50c9da182c52463e4c36d434b06">More...</a><br /></td></tr>
+<tr class="separator:a300cc50c9da182c52463e4c36d434b06 inherit pub_methods_class_j_motor_driver_servo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eec087248f1ba43a1e38543890d35fc inherit pub_methods_class_j_motor_driver_servo"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_servo.html#a5eec087248f1ba43a1e38543890d35fc">setMaxServoValue</a> (int <a class="el" href="main_8cpp.html#a17956fe0129d3d4c94ebc06cfef2ad82">value</a>)</td></tr>
+<tr class="memdesc:a5eec087248f1ba43a1e38543890d35fc inherit pub_methods_class_j_motor_driver_servo"><td class="mdescLeft">&#160;</td><td class="mdescRight">microseconds for longest servo pulse  <a href="class_j_motor_driver_servo.html#a5eec087248f1ba43a1e38543890d35fc">More...</a><br /></td></tr>
+<tr class="separator:a5eec087248f1ba43a1e38543890d35fc inherit pub_methods_class_j_motor_driver_servo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf8820d32970237225bfd34312e30bd7 inherit pub_methods_class_j_motor_driver_servo"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_servo.html#aaf8820d32970237225bfd34312e30bd7">getMinServoValue</a> ()</td></tr>
+<tr class="memdesc:aaf8820d32970237225bfd34312e30bd7 inherit pub_methods_class_j_motor_driver_servo"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns setting for microseconds for shortest servo pulse  <a href="class_j_motor_driver_servo.html#aaf8820d32970237225bfd34312e30bd7">More...</a><br /></td></tr>
+<tr class="separator:aaf8820d32970237225bfd34312e30bd7 inherit pub_methods_class_j_motor_driver_servo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75117188c64919c486bc99a7c42c96b4 inherit pub_methods_class_j_motor_driver_servo"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_servo.html#a75117188c64919c486bc99a7c42c96b4">getMaxServoValue</a> ()</td></tr>
+<tr class="memdesc:a75117188c64919c486bc99a7c42c96b4 inherit pub_methods_class_j_motor_driver_servo"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns setting for microseconds for longest servo pulse  <a href="class_j_motor_driver_servo.html#a75117188c64919c486bc99a7c42c96b4">More...</a><br /></td></tr>
+<tr class="separator:a75117188c64919c486bc99a7c42c96b4 inherit pub_methods_class_j_motor_driver_servo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c07b72ad94e6b8b5d9e70bd8783c02e inherit pub_methods_class_j_motor_driver_servo"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_servo.html#a1c07b72ad94e6b8b5d9e70bd8783c02e">getServoValueRange</a> ()</td></tr>
+<tr class="memdesc:a1c07b72ad94e6b8b5d9e70bd8783c02e inherit pub_methods_class_j_motor_driver_servo"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns difference (in microseconds) between longest and shortest servo pulse settings  <a href="class_j_motor_driver_servo.html#a1c07b72ad94e6b8b5d9e70bd8783c02e">More...</a><br /></td></tr>
+<tr class="separator:a1c07b72ad94e6b8b5d9e70bd8783c02e inherit pub_methods_class_j_motor_driver_servo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a183dd6d775b842cddd2af8e940296232 inherit pub_methods_class_j_motor_driver_servo"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_servo.html#a183dd6d775b842cddd2af8e940296232">setServoValues</a> (int min, int max)</td></tr>
+<tr class="memdesc:a183dd6d775b842cddd2af8e940296232 inherit pub_methods_class_j_motor_driver_servo"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the settings for short and long servo pulses at the same time  <a href="class_j_motor_driver_servo.html#a183dd6d775b842cddd2af8e940296232">More...</a><br /></td></tr>
+<tr class="separator:a183dd6d775b842cddd2af8e940296232 inherit pub_methods_class_j_motor_driver_servo"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_j_motor_driver"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_j_motor_driver')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_j_motor_driver.html">JMotorDriver</a></td></tr>
 <tr class="memitem:a09ec56cc9c528c40e82c532f55fdaf70 inherit pub_methods_class_j_motor_driver"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#a09ec56cc9c528c40e82c532f55fdaf70">set</a> (float val)</td></tr>
 <tr class="memdesc:a09ec56cc9c528c40e82c532f55fdaf70 inherit pub_methods_class_j_motor_driver"><td class="mdescLeft">&#160;</td><td class="mdescRight">set motor power  <a href="class_j_motor_driver.html#a09ec56cc9c528c40e82c532f55fdaf70">More...</a><br /></td></tr>
@@ -125,9 +142,17 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a978c868297bf5ee5958d44764bb2bbda inherit pub_methods_class_j_motor_driver"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#a978c868297bf5ee5958d44764bb2bbda">disable</a> ()</td></tr>
 <tr class="memdesc:a978c868297bf5ee5958d44764bb2bbda inherit pub_methods_class_j_motor_driver"><td class="mdescLeft">&#160;</td><td class="mdescRight">disable motor  <a href="class_j_motor_driver.html#a978c868297bf5ee5958d44764bb2bbda">More...</a><br /></td></tr>
 <tr class="separator:a978c868297bf5ee5958d44764bb2bbda inherit pub_methods_class_j_motor_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_j_motor_driver_servo"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_j_motor_driver_servo')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_j_motor_driver_servo.html">JMotorDriverServo</a></td></tr>
+<tr class="memitem:ac2a8c273b37817b7ac5485e3a20411f4 inherit pro_attribs_class_j_motor_driver_servo"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_servo.html#ac2a8c273b37817b7ac5485e3a20411f4">minServoValue</a></td></tr>
+<tr class="separator:ac2a8c273b37817b7ac5485e3a20411f4 inherit pro_attribs_class_j_motor_driver_servo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a551c594a1944dd78b78764e3286ccbec inherit pro_attribs_class_j_motor_driver_servo"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_servo.html#a551c594a1944dd78b78764e3286ccbec">maxServoValue</a></td></tr>
+<tr class="separator:a551c594a1944dd78b78764e3286ccbec inherit pro_attribs_class_j_motor_driver_servo"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>defines interface for servo driver with variable frequency, subclass of <a class="el" href="class_j_motor_driver_servo.html" title="empty class that can be used to specify a driver that controls specifically a servo">JMotorDriverServo</a> and <a class="el" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers">JMotorDriver</a> </p>
+<div class="textblock"><p>defines interface for servo driver with variable frequency, subclass of <a class="el" href="class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo">JMotorDriverServo</a> and <a class="el" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers">JMotorDriver</a> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aee74e57c701560b9649a01362375d092"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aee74e57c701560b9649a01362375d092">&#9670;&nbsp;</a></span>adjustFrequency()</h2>
@@ -148,7 +173,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -162,7 +187,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_driver_esp32_servo.html#a848cb5a390c8d2fbac8dd0eb60c0cbf2">JMotorDriverEsp32Servo</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_driver_esp32_servo.html#a848cb5a390c8d2fbac8dd0eb60c0cbf2">JMotorDriverEsp32Servo</a>, and <a class="el" href="class_j_motor_driver_servo_advanced_dual.html#a4aaba0b4cc321191ea7e751255b4c5a2">JMotorDriverServoAdvancedDual</a>.</p>
 
 </div>
 </div>

@@ -1,4 +1,0 @@
-<map id="JMotorDriverEsp32Servo::JMotorDriverEsp32Servo" name="JMotorDriverEsp32Servo::JMotorDriverEsp32Servo">
-<area shape="rect" id="node1" title="constructor, sets pins, custom frequency and resolution optional" alt="" coords="5,5,177,47"/>
-<area shape="rect" id="node2" href="$class_j_motor_driver_esp32_servo.html#a56b7ca1961e67c647afb5aba9ae2f7c2" title="set frequency that servo signal pulse is repeated at and how many bits are used internally for resolu..." alt="" coords="225,5,416,47"/>
-</map>

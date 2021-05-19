@@ -1,0 +1,5 @@
+<map id="JServoController" name="JServoController">
+<area shape="rect" id="node1" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="46,5,165,32"/>
+<area shape="rect" id="node2" href="$class_j_servo_controller_advanced.html" title=" " alt="" coords="17,80,193,107"/>
+<area shape="rect" id="node3" href="$class_j_servo_controller_stall_protected.html" title=" " alt="" coords="5,155,205,181"/>
+</map>

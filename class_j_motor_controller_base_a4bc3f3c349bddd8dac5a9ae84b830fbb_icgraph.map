@@ -1,5 +1,0 @@
-<map id="JMotorControllerBase::setVelLimit" name="JMotorControllerBase::setVelLimit">
-<area shape="rect" id="node1" title="set maximum motor speed" alt="" coords="397,5,544,47"/>
-<area shape="rect" id="node2" href="$class_j_motor_controller_open.html#ad1c70fe2e38a7f879287c720d8e18252" title="set maximum motor speed" alt="" coords="201,5,349,47"/>
-<area shape="rect" id="node3" href="$class_j_motor_controller_open.html#a104abd09f04d7135ccf37499498de27b" title="set velocity and acceleration limits for motor" alt="" coords="5,5,153,47"/>
-</map>

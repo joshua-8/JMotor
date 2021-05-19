@@ -1,5 +1,0 @@
-<map id="JMotorDriverAvrPWM::setEnable" name="JMotorDriverAvrPWM::setEnable">
-<area shape="rect" id="node1" title="use to enable or disable a motor, and sets up pin states" alt="" coords="217,39,365,80"/>
-<area shape="rect" id="node2" href="$class_j_motor_driver_avr_l293.html#ad84d5f19c2dac5c80fdce28afd0eeda3" title="use to enable or disable a motor, and sets up pin states" alt="" coords="15,5,160,47"/>
-<area shape="rect" id="node3" href="$class_j_motor_driver_avr_p_w_m_dir.html#a7ff1e14775c87680fe74d0b872918676" title="use to enable or disable a motor, and sets up pin states" alt="" coords="5,71,169,112"/>
-</map>

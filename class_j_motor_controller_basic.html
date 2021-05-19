@@ -143,9 +143,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5e185bb6773288c265e3e0b54adaee18"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_basic.html#a5e185bb6773288c265e3e0b54adaee18">getDriverMaxRange</a> ()</td></tr>
 <tr class="memdesc:a5e185bb6773288c265e3e0b54adaee18"><td class="mdescLeft">&#160;</td><td class="mdescRight">if getDriverSetVal exceeds this, isDriverInRange will go false  <a href="class_j_motor_controller_basic.html#a5e185bb6773288c265e3e0b54adaee18">More...</a><br /></td></tr>
 <tr class="separator:a5e185bb6773288c265e3e0b54adaee18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56a908c41a2c18194db079871bd8e831"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_basic.html#a56a908c41a2c18194db079871bd8e831">getEnabled</a> ()</td></tr>
-<tr class="memdesc:a56a908c41a2c18194db079871bd8e831"><td class="mdescLeft">&#160;</td><td class="mdescRight">is the controller enabled  <a href="class_j_motor_controller_basic.html#a56a908c41a2c18194db079871bd8e831">More...</a><br /></td></tr>
-<tr class="separator:a56a908c41a2c18194db079871bd8e831"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed88dfd83321c8ee63dde6ec6cfe32d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_basic.html#aaed88dfd83321c8ee63dde6ec6cfe32d">getEnable</a> ()</td></tr>
+<tr class="memdesc:aaed88dfd83321c8ee63dde6ec6cfe32d"><td class="mdescLeft">&#160;</td><td class="mdescRight">is the controller enabled  <a href="class_j_motor_controller_basic.html#aaed88dfd83321c8ee63dde6ec6cfe32d">More...</a><br /></td></tr>
+<tr class="separator:aaed88dfd83321c8ee63dde6ec6cfe32d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7573549d410d42e797b0b287e1ebd8a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_basic.html#ad7573549d410d42e797b0b287e1ebd8a">getMaxVel</a> ()</td></tr>
 <tr class="memdesc:ad7573549d410d42e797b0b287e1ebd8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">How fast of a motor speed setting would get adjusted to full motor power.  <a href="class_j_motor_controller_basic.html#ad7573549d410d42e797b0b287e1ebd8a">More...</a><br /></td></tr>
 <tr class="separator:ad7573549d410d42e797b0b287e1ebd8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -236,16 +236,6 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_a5c4913adde8ced42890b18958d23e830_cgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_a5c4913adde8ced42890b18958d23e830_cgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_a5c4913adde8ced42890b18958d23e830_cgraph" id="aclass_j_motor_controller_basic_a5c4913adde8ced42890b18958d23e830_cgraph">
-<area shape="rect" title="constructor" alt="" coords="5,27,161,69"/>
-<area shape="rect" href="class_j_motor_driver.html#a36aa5a3f2e5c5ce8c769023047822e84" title="high end of the range" alt="" coords="209,5,391,32"/>
-<area shape="rect" href="class_j_motor_compensator.html#a1643fca00b0101ebdf8487309fe3811d" title="set what value makes the driver output 100% of supply voltage" alt="" coords="227,57,373,98"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -282,18 +272,6 @@ Here is the call graph for this function:</div>
 </dl>
 
 <p>Implements <a class="el" href="class_j_motor_controller_base.html#a4e3bc50d683df07a866d626f4ac9d080">JMotorControllerBase</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_a37945ba7fa208f34b59424929547bc87_cgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_a37945ba7fa208f34b59424929547bc87_cgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_a37945ba7fa208f34b59424929547bc87_cgraph" id="aclass_j_motor_controller_basic_a37945ba7fa208f34b59424929547bc87_cgraph">
-<area shape="rect" title="disable motor controller" alt="" coords="5,35,156,76"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a1a4c91d8f8955f033247e3d04321db24" title="change whether motor controller is enabled" alt="" coords="204,35,355,76"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a56a908c41a2c18194db079871bd8e831" title="is the controller enabled" alt="" coords="407,5,557,47"/>
-<area shape="rect" href="class_j_motor_driver.html#a2bc676fe29a60f49f488fc10fac07b11" title="use to enable or disable a motor, and sets up pin states" alt="" coords="403,71,561,98"/>
-<area shape="rect" href="class_j_motor_driver.html#a87e4adac669e4dcafc0e540e2d1e4849" title="get the enable state of the driver" alt="" coords="609,13,768,39"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -329,27 +307,6 @@ Here is the call graph for this function:</div>
 </dl>
 
 <p>Implements <a class="el" href="class_j_motor_controller_base.html#a3dc05bc56857e08cb6a3b8f7f779ba7d">JMotorControllerBase</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_a008ba2b28f33ca0fcabb89e1887fe6a7_cgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_a008ba2b28f33ca0fcabb89e1887fe6a7_cgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_a008ba2b28f33ca0fcabb89e1887fe6a7_cgraph" id="aclass_j_motor_controller_basic_a008ba2b28f33ca0fcabb89e1887fe6a7_cgraph">
-<area shape="rect" title="enable motor controller" alt="" coords="5,35,156,76"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a1a4c91d8f8955f033247e3d04321db24" title="change whether motor controller is enabled" alt="" coords="204,35,355,76"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a56a908c41a2c18194db079871bd8e831" title="is the controller enabled" alt="" coords="407,5,557,47"/>
-<area shape="rect" href="class_j_motor_driver.html#a2bc676fe29a60f49f488fc10fac07b11" title="use to enable or disable a motor, and sets up pin states" alt="" coords="403,71,561,98"/>
-<area shape="rect" href="class_j_motor_driver.html#a87e4adac669e4dcafc0e540e2d1e4849" title="get the enable state of the driver" alt="" coords="609,13,768,39"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_a008ba2b28f33ca0fcabb89e1887fe6a7_icgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_a008ba2b28f33ca0fcabb89e1887fe6a7_icgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_a008ba2b28f33ca0fcabb89e1887fe6a7_icgraph" id="aclass_j_motor_controller_basic_a008ba2b28f33ca0fcabb89e1887fe6a7_icgraph">
-<area shape="rect" title="enable motor controller" alt="" coords="108,5,259,47"/>
-<area shape="rect" href="main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,13,60,39"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -385,33 +342,6 @@ Here is the caller graph for this function:</div>
 </dl>
 
 <p>Implements <a class="el" href="class_j_motor_controller_base.html#a6763e24b878a30b09f37d04e05c11a21">JMotorControllerBase</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_a5e185bb6773288c265e3e0b54adaee18_cgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_a5e185bb6773288c265e3e0b54adaee18_cgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_a5e185bb6773288c265e3e0b54adaee18_cgraph" id="aclass_j_motor_controller_basic_a5e185bb6773288c265e3e0b54adaee18_cgraph">
-<area shape="rect" title="if getDriverSetVal exceeds this, isDriverInRange will go false" alt="" coords="5,5,156,47"/>
-<area shape="rect" href="class_j_motor_driver.html#a36aa5a3f2e5c5ce8c769023047822e84" title="high end of the range" alt="" coords="204,13,385,39"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_a5e185bb6773288c265e3e0b54adaee18_icgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_a5e185bb6773288c265e3e0b54adaee18_icgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_a5e185bb6773288c265e3e0b54adaee18_icgraph" id="aclass_j_motor_controller_basic_a5e185bb6773288c265e3e0b54adaee18_icgraph">
-<area shape="rect" title="if getDriverSetVal exceeds this, isDriverInRange will go false" alt="" coords="937,165,1088,206"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a1c892de7f53781b38ec114dbba165d18" title="update driver" alt="" coords="715,172,889,199"/>
-<area shape="rect" href="class_j_motor_controller_open.html#aad3c0954a1d5da79e908b6093c6d82cb" title="update driver" alt="" coords="296,143,468,169"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a46318f537ccaf32ce9d72e8792968464" title="set velocity for controller" alt="" coords="516,165,667,206"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a7ddb6b1f937bd3770ae9d31b05c73fff" title="set target velocity for controller (acceleration limited)" alt="" coords="516,230,667,271"/>
-<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title=" " alt="" coords="5,80,52,107"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a2fff42e1e435cafe638e792d699b56fb" title="alternative method for setting velocity that uses setPosSetpoint" alt="" coords="100,37,248,78"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a6389b6056bbc2a5e3cfe89ad73658880" title="set position for motor to drive towards position as fast as possible (setpoint for control loop if av..." alt="" coords="100,102,248,143"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a3e3d100832eda976980648ec08d7e7d6" title="set target position (motor drives towards position, following acceleration profile)" alt="" coords="100,167,248,209"/>
-<area shape="rect" href="class_j_motor_controller_open.html#aa5752d5b3107993d7d5c860f66f1a9f3" title="set velocity for controller" alt="" coords="100,233,248,274"/>
-<area shape="rect" href="class_j_motor_controller_open.html#ae5df67427e891d212c64b5b5026b217a" title="set target velocity for controller (acceleration limited)" alt="" coords="100,298,248,339"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -447,33 +377,6 @@ Here is the caller graph for this function:</div>
 </dl>
 
 <p>Implements <a class="el" href="class_j_motor_controller_base.html#a72b67735c75358fc5e0f6128af278d72">JMotorControllerBase</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_ae3f7bcf4902b98a1d375baa1d4a3ae3b_cgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_ae3f7bcf4902b98a1d375baa1d4a3ae3b_cgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_ae3f7bcf4902b98a1d375baa1d4a3ae3b_cgraph" id="aclass_j_motor_controller_basic_ae3f7bcf4902b98a1d375baa1d4a3ae3b_cgraph">
-<area shape="rect" title="if getDriverSetVal goes below this, isDriverInRange will go false" alt="" coords="5,5,156,47"/>
-<area shape="rect" href="class_j_motor_driver.html#a70e074ae03c7685d2147f70ae4ed9ff6" title="low end of the range" alt="" coords="204,13,383,39"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_ae3f7bcf4902b98a1d375baa1d4a3ae3b_icgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_ae3f7bcf4902b98a1d375baa1d4a3ae3b_icgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_ae3f7bcf4902b98a1d375baa1d4a3ae3b_icgraph" id="aclass_j_motor_controller_basic_ae3f7bcf4902b98a1d375baa1d4a3ae3b_icgraph">
-<area shape="rect" title="if getDriverSetVal goes below this, isDriverInRange will go false" alt="" coords="937,165,1088,206"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a1c892de7f53781b38ec114dbba165d18" title="update driver" alt="" coords="715,172,889,199"/>
-<area shape="rect" href="class_j_motor_controller_open.html#aad3c0954a1d5da79e908b6093c6d82cb" title="update driver" alt="" coords="296,143,468,169"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a46318f537ccaf32ce9d72e8792968464" title="set velocity for controller" alt="" coords="516,165,667,206"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a7ddb6b1f937bd3770ae9d31b05c73fff" title="set target velocity for controller (acceleration limited)" alt="" coords="516,230,667,271"/>
-<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title=" " alt="" coords="5,80,52,107"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a2fff42e1e435cafe638e792d699b56fb" title="alternative method for setting velocity that uses setPosSetpoint" alt="" coords="100,37,248,78"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a6389b6056bbc2a5e3cfe89ad73658880" title="set position for motor to drive towards position as fast as possible (setpoint for control loop if av..." alt="" coords="100,102,248,143"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a3e3d100832eda976980648ec08d7e7d6" title="set target position (motor drives towards position, following acceleration profile)" alt="" coords="100,167,248,209"/>
-<area shape="rect" href="class_j_motor_controller_open.html#aa5752d5b3107993d7d5c860f66f1a9f3" title="set velocity for controller" alt="" coords="100,233,248,274"/>
-<area shape="rect" href="class_j_motor_controller_open.html#ae5df67427e891d212c64b5b5026b217a" title="set target velocity for controller (acceleration limited)" alt="" coords="100,298,248,339"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -512,8 +415,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a56a908c41a2c18194db079871bd8e831"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56a908c41a2c18194db079871bd8e831">&#9670;&nbsp;</a></span>getEnabled()</h2>
+<a id="aaed88dfd83321c8ee63dde6ec6cfe32d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaed88dfd83321c8ee63dde6ec6cfe32d">&#9670;&nbsp;</a></span>getEnable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -522,7 +425,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool JMotorControllerBasic::getEnabled </td>
+          <td class="memname">bool JMotorControllerBasic::getEnable </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -543,39 +446,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="class_j_motor_controller_base.html#ac45f0a90d2da48c90a5dab126ca52b2e">JMotorControllerBase</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_a56a908c41a2c18194db079871bd8e831_cgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_a56a908c41a2c18194db079871bd8e831_cgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_a56a908c41a2c18194db079871bd8e831_cgraph" id="aclass_j_motor_controller_basic_a56a908c41a2c18194db079871bd8e831_cgraph">
-<area shape="rect" title="is the controller enabled" alt="" coords="5,5,156,47"/>
-<area shape="rect" href="class_j_motor_driver.html#a87e4adac669e4dcafc0e540e2d1e4849" title="get the enable state of the driver" alt="" coords="204,13,363,39"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_a56a908c41a2c18194db079871bd8e831_icgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_a56a908c41a2c18194db079871bd8e831_icgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_a56a908c41a2c18194db079871bd8e831_icgraph" id="aclass_j_motor_controller_basic_a56a908c41a2c18194db079871bd8e831_icgraph">
-<area shape="rect" title="is the controller enabled" alt="" coords="937,227,1088,268"/>
-<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title=" " alt="" coords="5,140,52,166"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a1c892de7f53781b38ec114dbba165d18" title="update driver" alt="" coords="715,144,889,170"/>
-<area shape="rect" href="class_j_motor_controller_open.html#aad3c0954a1d5da79e908b6093c6d82cb" title="update driver" alt="" coords="296,169,468,196"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a1a4c91d8f8955f033247e3d04321db24" title="change whether motor controller is enabled" alt="" coords="727,303,877,344"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a523e519803f2f8e75dfc660475930cea" title="change whether motor controller is enabled" alt="" coords="517,416,665,458"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a46318f537ccaf32ce9d72e8792968464" title="set velocity for controller" alt="" coords="516,103,667,144"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a7ddb6b1f937bd3770ae9d31b05c73fff" title="set target velocity for controller (acceleration limited)" alt="" coords="516,168,667,210"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a2fff42e1e435cafe638e792d699b56fb" title="alternative method for setting velocity that uses setPosSetpoint" alt="" coords="100,96,248,138"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a6389b6056bbc2a5e3cfe89ad73658880" title="set position for motor to drive towards position as fast as possible (setpoint for control loop if av..." alt="" coords="100,162,248,203"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a3e3d100832eda976980648ec08d7e7d6" title="set target position (motor drives towards position, following acceleration profile)" alt="" coords="100,227,248,268"/>
-<area shape="rect" href="class_j_motor_controller_open.html#aa5752d5b3107993d7d5c860f66f1a9f3" title="set velocity for controller" alt="" coords="100,292,248,334"/>
-<area shape="rect" href="class_j_motor_controller_open.html#ae5df67427e891d212c64b5b5026b217a" title="set target velocity for controller (acceleration limited)" alt="" coords="100,358,248,399"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a37945ba7fa208f34b59424929547bc87" title="disable motor controller" alt="" coords="516,286,667,327"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a008ba2b28f33ca0fcabb89e1887fe6a7" title="enable motor controller" alt="" coords="516,351,667,392"/>
-<area shape="rect" href="main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="355,358,409,385"/>
-</map>
-</div>
+<p>Implements <a class="el" href="class_j_motor_controller_base.html#a86dd60cda0072e5a2cdcd83f9ba5fa45">JMotorControllerBase</a>.</p>
 
 </div>
 </div>
@@ -612,30 +483,6 @@ Here is the caller graph for this function:</div>
 </dl>
 
 <p>Implements <a class="el" href="class_j_motor_controller_base.html#a95c2fc47d95720f39564dac4d4c4da69">JMotorControllerBase</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_ad7573549d410d42e797b0b287e1ebd8a_cgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_ad7573549d410d42e797b0b287e1ebd8a_cgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_ad7573549d410d42e797b0b287e1ebd8a_cgraph" id="aclass_j_motor_controller_basic_ad7573549d410d42e797b0b287e1ebd8a_cgraph">
-<area shape="rect" title="How fast of a motor speed setting would get adjusted to full motor power." alt="" coords="5,5,156,47"/>
-<area shape="rect" href="class_j_motor_compensator.html#a14f0b533af038a8927053e99b3c77a00" title="How fast of a motor speed setting would get adjusted to full motor power." alt="" coords="204,5,349,47"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_ad7573549d410d42e797b0b287e1ebd8a_icgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_ad7573549d410d42e797b0b287e1ebd8a_icgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_ad7573549d410d42e797b0b287e1ebd8a_icgraph" id="aclass_j_motor_controller_basic_ad7573549d410d42e797b0b287e1ebd8a_icgraph">
-<area shape="rect" title="How fast of a motor speed setting would get adjusted to full motor power." alt="" coords="516,238,667,279"/>
-<area shape="rect" href="class_j_motor_controller_open.html#aad3c0954a1d5da79e908b6093c6d82cb" title="update driver" alt="" coords="296,180,468,206"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a3e3d100832eda976980648ec08d7e7d6" title="set target position (motor drives towards position, following acceleration profile)" alt="" coords="100,303,248,344"/>
-<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title=" " alt="" coords="5,150,52,177"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a2fff42e1e435cafe638e792d699b56fb" title="alternative method for setting velocity that uses setPosSetpoint" alt="" coords="100,42,248,83"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a6389b6056bbc2a5e3cfe89ad73658880" title="set position for motor to drive towards position as fast as possible (setpoint for control loop if av..." alt="" coords="100,107,248,148"/>
-<area shape="rect" href="class_j_motor_controller_open.html#aa5752d5b3107993d7d5c860f66f1a9f3" title="set velocity for controller" alt="" coords="100,172,248,214"/>
-<area shape="rect" href="class_j_motor_controller_open.html#ae5df67427e891d212c64b5b5026b217a" title="set target velocity for controller (acceleration limited)" alt="" coords="100,238,248,279"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -665,30 +512,6 @@ Here is the caller graph for this function:</div>
 <p>slowest speed motor can go </p>
 
 <p>Implements <a class="el" href="class_j_motor_controller_base.html#ad7fb53f36fcbcde9e2756c63fb41e536">JMotorControllerBase</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_a92a422cbc5f7cb10c8e714ef029238a2_cgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_a92a422cbc5f7cb10c8e714ef029238a2_cgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_a92a422cbc5f7cb10c8e714ef029238a2_cgraph" id="aclass_j_motor_controller_basic_a92a422cbc5f7cb10c8e714ef029238a2_cgraph">
-<area shape="rect" title="slowest speed motor can go" alt="" coords="5,5,156,47"/>
-<area shape="rect" href="class_j_motor_compensator.html#a8497819d10b2fa39b1b4062a7d99d6d1" title="Slowest speed motor can go." alt="" coords="204,5,349,47"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_a92a422cbc5f7cb10c8e714ef029238a2_icgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_a92a422cbc5f7cb10c8e714ef029238a2_icgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_a92a422cbc5f7cb10c8e714ef029238a2_icgraph" id="aclass_j_motor_controller_basic_a92a422cbc5f7cb10c8e714ef029238a2_icgraph">
-<area shape="rect" title="slowest speed motor can go" alt="" coords="516,135,667,177"/>
-<area shape="rect" href="class_j_motor_controller_open.html#aad3c0954a1d5da79e908b6093c6d82cb" title="update driver" alt="" coords="296,143,468,169"/>
-<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title=" " alt="" coords="5,80,52,107"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a2fff42e1e435cafe638e792d699b56fb" title="alternative method for setting velocity that uses setPosSetpoint" alt="" coords="100,37,248,78"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a6389b6056bbc2a5e3cfe89ad73658880" title="set position for motor to drive towards position as fast as possible (setpoint for control loop if av..." alt="" coords="100,102,248,143"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a3e3d100832eda976980648ec08d7e7d6" title="set target position (motor drives towards position, following acceleration profile)" alt="" coords="100,167,248,209"/>
-<area shape="rect" href="class_j_motor_controller_open.html#aa5752d5b3107993d7d5c860f66f1a9f3" title="set velocity for controller" alt="" coords="100,233,248,274"/>
-<area shape="rect" href="class_j_motor_controller_open.html#ae5df67427e891d212c64b5b5026b217a" title="set target velocity for controller (acceleration limited)" alt="" coords="100,298,248,339"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -826,40 +649,6 @@ Here is the caller graph for this function:</div>
 <p>Implements <a class="el" href="class_j_motor_controller_base.html#adfd3be6aaf5534f049ac60ffc053bc11">JMotorControllerBase</a>.</p>
 
 <p>Reimplemented in <a class="el" href="class_j_motor_controller_open.html#aad3c0954a1d5da79e908b6093c6d82cb">JMotorControllerOpen</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_a1c892de7f53781b38ec114dbba165d18_cgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_a1c892de7f53781b38ec114dbba165d18_cgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_a1c892de7f53781b38ec114dbba165d18_cgraph" id="aclass_j_motor_controller_basic_a1c892de7f53781b38ec114dbba165d18_cgraph">
-<area shape="rect" title="update driver" alt="" coords="5,202,180,229"/>
-<area shape="rect" href="class_j_motor_compensator.html#a40a9757a08400f070da51d75ba7d7df8" title="calculate" alt="" coords="231,5,376,47"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a5e185bb6773288c265e3e0b54adaee18" title="if getDriverSetVal exceeds this, isDriverInRange will go false" alt="" coords="228,71,379,112"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#ae3f7bcf4902b98a1d375baa1d4a3ae3b" title="if getDriverSetVal goes below this, isDriverInRange will go false" alt="" coords="228,136,379,177"/>
-<area shape="rect" href="class_j_motor_driver.html#a87e4adac669e4dcafc0e540e2d1e4849" title="get the enable state of the driver" alt="" coords="438,231,597,258"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a56a908c41a2c18194db079871bd8e831" title="is the controller enabled" alt="" coords="228,253,379,295"/>
-<area shape="rect" href="class_j_motor_compensator.html#a14f0b533af038a8927053e99b3c77a00" title="How fast of a motor speed setting would get adjusted to full motor power." alt="" coords="231,319,376,360"/>
-<area shape="rect" href="class_j_motor_driver.html#a09ec56cc9c528c40e82c532f55fdaf70" title="set motor power" alt="" coords="243,385,363,411"/>
-<area shape="rect" href="class_j_motor_driver.html#a36aa5a3f2e5c5ce8c769023047822e84" title="high end of the range" alt="" coords="427,78,608,105"/>
-<area shape="rect" href="class_j_motor_driver.html#a70e074ae03c7685d2147f70ae4ed9ff6" title="low end of the range" alt="" coords="428,143,607,170"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_a1c892de7f53781b38ec114dbba165d18_icgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_a1c892de7f53781b38ec114dbba165d18_icgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_a1c892de7f53781b38ec114dbba165d18_icgraph" id="aclass_j_motor_controller_basic_a1c892de7f53781b38ec114dbba165d18_icgraph">
-<area shape="rect" title="update driver" alt="" coords="715,172,889,199"/>
-<area shape="rect" href="class_j_motor_controller_open.html#aad3c0954a1d5da79e908b6093c6d82cb" title="update driver" alt="" coords="296,143,468,169"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a46318f537ccaf32ce9d72e8792968464" title="set velocity for controller" alt="" coords="516,165,667,206"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a7ddb6b1f937bd3770ae9d31b05c73fff" title="set target velocity for controller (acceleration limited)" alt="" coords="516,230,667,271"/>
-<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title=" " alt="" coords="5,80,52,107"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a2fff42e1e435cafe638e792d699b56fb" title="alternative method for setting velocity that uses setPosSetpoint" alt="" coords="100,37,248,78"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a6389b6056bbc2a5e3cfe89ad73658880" title="set position for motor to drive towards position as fast as possible (setpoint for control loop if av..." alt="" coords="100,102,248,143"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a3e3d100832eda976980648ec08d7e7d6" title="set target position (motor drives towards position, following acceleration profile)" alt="" coords="100,167,248,209"/>
-<area shape="rect" href="class_j_motor_controller_open.html#aa5752d5b3107993d7d5c860f66f1a9f3" title="set velocity for controller" alt="" coords="100,233,248,274"/>
-<area shape="rect" href="class_j_motor_controller_open.html#ae5df67427e891d212c64b5b5026b217a" title="set target velocity for controller (acceleration limited)" alt="" coords="100,298,248,339"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -899,16 +688,6 @@ Here is the caller graph for this function:</div>
 <p>Implements <a class="el" href="class_j_motor_controller_base.html#a28759c8046b25a124ff01c80344ce690">JMotorControllerBase</a>.</p>
 
 <p>Reimplemented in <a class="el" href="class_j_motor_controller_open.html#ab778de5954d6bf9870ffd6a66268d916">JMotorControllerOpen</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_af9888ea6637074cfca9b0da164b6ad1c_icgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_af9888ea6637074cfca9b0da164b6ad1c_icgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_af9888ea6637074cfca9b0da164b6ad1c_icgraph" id="aclass_j_motor_controller_basic_af9888ea6637074cfca9b0da164b6ad1c_icgraph">
-<area shape="rect" title="set maximum rate that motor speed can be changed at" alt="" coords="397,5,548,47"/>
-<area shape="rect" href="class_j_motor_controller_open.html#ab778de5954d6bf9870ffd6a66268d916" title="set maximum rate that motor speed can be changed at" alt="" coords="201,5,349,47"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a104abd09f04d7135ccf37499498de27b" title="set velocity and acceleration limits for motor" alt="" coords="5,5,153,47"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -954,30 +733,6 @@ Here is the caller graph for this function:</div>
 <p>Implements <a class="el" href="class_j_motor_controller_base.html#afb6d5d8401b3bd775531516f7836f7c9">JMotorControllerBase</a>.</p>
 
 <p>Reimplemented in <a class="el" href="class_j_motor_controller_open.html#a523e519803f2f8e75dfc660475930cea">JMotorControllerOpen</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_a1a4c91d8f8955f033247e3d04321db24_cgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_a1a4c91d8f8955f033247e3d04321db24_cgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_a1a4c91d8f8955f033247e3d04321db24_cgraph" id="aclass_j_motor_controller_basic_a1a4c91d8f8955f033247e3d04321db24_cgraph">
-<area shape="rect" title="change whether motor controller is enabled" alt="" coords="5,35,156,76"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a56a908c41a2c18194db079871bd8e831" title="is the controller enabled" alt="" coords="208,5,359,47"/>
-<area shape="rect" href="class_j_motor_driver.html#a2bc676fe29a60f49f488fc10fac07b11" title="use to enable or disable a motor, and sets up pin states" alt="" coords="204,71,363,98"/>
-<area shape="rect" href="class_j_motor_driver.html#a87e4adac669e4dcafc0e540e2d1e4849" title="get the enable state of the driver" alt="" coords="411,13,569,39"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_a1a4c91d8f8955f033247e3d04321db24_icgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_a1a4c91d8f8955f033247e3d04321db24_icgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_a1a4c91d8f8955f033247e3d04321db24_icgraph" id="aclass_j_motor_controller_basic_a1a4c91d8f8955f033247e3d04321db24_icgraph">
-<area shape="rect" title="change whether motor controller is enabled" alt="" coords="307,71,457,112"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a37945ba7fa208f34b59424929547bc87" title="disable motor controller" alt="" coords="108,5,259,47"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a008ba2b28f33ca0fcabb89e1887fe6a7" title="enable motor controller" alt="" coords="108,71,259,112"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a523e519803f2f8e75dfc660475930cea" title="change whether motor controller is enabled" alt="" coords="109,136,257,177"/>
-<area shape="rect" href="main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,78,60,105"/>
-<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title=" " alt="" coords="9,143,56,170"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -1014,15 +769,6 @@ Here is the caller graph for this function:</div>
 </dl>
 
 <p>Implements <a class="el" href="class_j_motor_controller_base.html#a69e70a259b49afbb240f03b3f46531e9">JMotorControllerBase</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_aa32c561d94f78e90103c5f4dabfe8180_cgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_aa32c561d94f78e90103c5f4dabfe8180_cgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_aa32c561d94f78e90103c5f4dabfe8180_cgraph" id="aclass_j_motor_controller_basic_aa32c561d94f78e90103c5f4dabfe8180_cgraph">
-<area shape="rect" title="set what fraction of driverRange can be used" alt="" coords="5,5,192,47"/>
-<area shape="rect" href="class_j_motor_compensator.html#a864bd5b4ccd2a01a5104f2a255a7bcdb" title="set what fraction of driverRange can be used" alt="" coords="240,5,420,47"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -1065,7 +811,7 @@ Here is the call graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vel</td><td>(float) </td></tr>
-    <tr><td class="paramname">_run</td><td>(bool) default:true, true = call <a class="el" href="class_j_motor_controller_basic.html#a1c892de7f53781b38ec114dbba165d18" title="update driver">run()</a> in this function, false=you'll call <a class="el" href="class_j_motor_controller_basic.html#a1c892de7f53781b38ec114dbba165d18" title="update driver">run()</a> yourself </td></tr>
+    <tr><td class="paramname">_run</td><td>(bool) default:true, true = call <a class="el" href="class_j_motor_controller_basic.html#a1c892de7f53781b38ec114dbba165d18" title="update driver">run()</a> in this function, false = you'll call <a class="el" href="class_j_motor_controller_basic.html#a1c892de7f53781b38ec114dbba165d18" title="update driver">run()</a> yourself </td></tr>
   </table>
   </dd>
 </dl>
@@ -1079,39 +825,6 @@ Here is the call graph for this function:</div>
 <p>Implements <a class="el" href="class_j_motor_controller_base.html#a17c92327cdde7e1a6e12dead8753242c">JMotorControllerBase</a>.</p>
 
 <p>Reimplemented in <a class="el" href="class_j_motor_controller_open.html#aa5752d5b3107993d7d5c860f66f1a9f3">JMotorControllerOpen</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_a46318f537ccaf32ce9d72e8792968464_cgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_a46318f537ccaf32ce9d72e8792968464_cgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_a46318f537ccaf32ce9d72e8792968464_cgraph" id="aclass_j_motor_controller_basic_a46318f537ccaf32ce9d72e8792968464_cgraph">
-<area shape="rect" title="set velocity for controller" alt="" coords="5,195,156,236"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a1c892de7f53781b38ec114dbba165d18" title="update driver" alt="" coords="204,202,379,229"/>
-<area shape="rect" href="class_j_motor_compensator.html#a40a9757a08400f070da51d75ba7d7df8" title="calculate" alt="" coords="429,5,575,47"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a5e185bb6773288c265e3e0b54adaee18" title="if getDriverSetVal exceeds this, isDriverInRange will go false" alt="" coords="427,71,577,112"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#ae3f7bcf4902b98a1d375baa1d4a3ae3b" title="if getDriverSetVal goes below this, isDriverInRange will go false" alt="" coords="427,136,577,177"/>
-<area shape="rect" href="class_j_motor_driver.html#a87e4adac669e4dcafc0e540e2d1e4849" title="get the enable state of the driver" alt="" coords="637,231,795,258"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a56a908c41a2c18194db079871bd8e831" title="is the controller enabled" alt="" coords="427,253,577,295"/>
-<area shape="rect" href="class_j_motor_compensator.html#a14f0b533af038a8927053e99b3c77a00" title="How fast of a motor speed setting would get adjusted to full motor power." alt="" coords="429,319,575,360"/>
-<area shape="rect" href="class_j_motor_driver.html#a09ec56cc9c528c40e82c532f55fdaf70" title="set motor power" alt="" coords="442,385,562,411"/>
-<area shape="rect" href="class_j_motor_driver.html#a36aa5a3f2e5c5ce8c769023047822e84" title="high end of the range" alt="" coords="625,78,807,105"/>
-<area shape="rect" href="class_j_motor_driver.html#a70e074ae03c7685d2147f70ae4ed9ff6" title="low end of the range" alt="" coords="627,143,805,170"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_a46318f537ccaf32ce9d72e8792968464_icgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_a46318f537ccaf32ce9d72e8792968464_icgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_a46318f537ccaf32ce9d72e8792968464_icgraph" id="aclass_j_motor_controller_basic_a46318f537ccaf32ce9d72e8792968464_icgraph">
-<area shape="rect" title="set velocity for controller" alt="" coords="516,135,667,177"/>
-<area shape="rect" href="class_j_motor_controller_open.html#aad3c0954a1d5da79e908b6093c6d82cb" title="update driver" alt="" coords="296,143,468,169"/>
-<area shape="rect" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title=" " alt="" coords="5,80,52,107"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a2fff42e1e435cafe638e792d699b56fb" title="alternative method for setting velocity that uses setPosSetpoint" alt="" coords="100,37,248,78"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a6389b6056bbc2a5e3cfe89ad73658880" title="set position for motor to drive towards position as fast as possible (setpoint for control loop if av..." alt="" coords="100,102,248,143"/>
-<area shape="rect" href="class_j_motor_controller_open.html#a3e3d100832eda976980648ec08d7e7d6" title="set target position (motor drives towards position, following acceleration profile)" alt="" coords="100,167,248,209"/>
-<area shape="rect" href="class_j_motor_controller_open.html#aa5752d5b3107993d7d5c860f66f1a9f3" title="set velocity for controller" alt="" coords="100,233,248,274"/>
-<area shape="rect" href="class_j_motor_controller_open.html#ae5df67427e891d212c64b5b5026b217a" title="set target velocity for controller (acceleration limited)" alt="" coords="100,298,248,339"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -1193,7 +906,7 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vel</td><td>(float) target velocity </td></tr>
-    <tr><td class="paramname">_run</td><td>(bool) default:true, true = call <a class="el" href="class_j_motor_controller_basic.html#a1c892de7f53781b38ec114dbba165d18" title="update driver">run()</a> in this function, false=you'll call <a class="el" href="class_j_motor_controller_basic.html#a1c892de7f53781b38ec114dbba165d18" title="update driver">run()</a> yourself </td></tr>
+    <tr><td class="paramname">_run</td><td>(bool) default:true, true = call <a class="el" href="class_j_motor_controller_basic.html#a1c892de7f53781b38ec114dbba165d18" title="update driver">run()</a> in this function, false = you'll call <a class="el" href="class_j_motor_controller_basic.html#a1c892de7f53781b38ec114dbba165d18" title="update driver">run()</a> yourself </td></tr>
   </table>
   </dd>
 </dl>
@@ -1207,24 +920,6 @@ Here is the caller graph for this function:</div>
 <p>Implements <a class="el" href="class_j_motor_controller_base.html#ac40452425aaf60e8248bc87f29d427ee">JMotorControllerBase</a>.</p>
 
 <p>Reimplemented in <a class="el" href="class_j_motor_controller_open.html#ae5df67427e891d212c64b5b5026b217a">JMotorControllerOpen</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_j_motor_controller_basic_a7ddb6b1f937bd3770ae9d31b05c73fff_cgraph.png" border="0" usemap="#aclass_j_motor_controller_basic_a7ddb6b1f937bd3770ae9d31b05c73fff_cgraph" alt=""/></div>
-<map name="aclass_j_motor_controller_basic_a7ddb6b1f937bd3770ae9d31b05c73fff_cgraph" id="aclass_j_motor_controller_basic_a7ddb6b1f937bd3770ae9d31b05c73fff_cgraph">
-<area shape="rect" title="set target velocity for controller (acceleration limited)" alt="" coords="5,195,156,236"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a1c892de7f53781b38ec114dbba165d18" title="update driver" alt="" coords="204,202,379,229"/>
-<area shape="rect" href="class_j_motor_compensator.html#a40a9757a08400f070da51d75ba7d7df8" title="calculate" alt="" coords="429,5,575,47"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a5e185bb6773288c265e3e0b54adaee18" title="if getDriverSetVal exceeds this, isDriverInRange will go false" alt="" coords="427,71,577,112"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#ae3f7bcf4902b98a1d375baa1d4a3ae3b" title="if getDriverSetVal goes below this, isDriverInRange will go false" alt="" coords="427,136,577,177"/>
-<area shape="rect" href="class_j_motor_driver.html#a87e4adac669e4dcafc0e540e2d1e4849" title="get the enable state of the driver" alt="" coords="637,231,795,258"/>
-<area shape="rect" href="class_j_motor_controller_basic.html#a56a908c41a2c18194db079871bd8e831" title="is the controller enabled" alt="" coords="427,253,577,295"/>
-<area shape="rect" href="class_j_motor_compensator.html#a14f0b533af038a8927053e99b3c77a00" title="How fast of a motor speed setting would get adjusted to full motor power." alt="" coords="429,319,575,360"/>
-<area shape="rect" href="class_j_motor_driver.html#a09ec56cc9c528c40e82c532f55fdaf70" title="set motor power" alt="" coords="442,385,562,411"/>
-<area shape="rect" href="class_j_motor_driver.html#a36aa5a3f2e5c5ce8c769023047822e84" title="high end of the range" alt="" coords="625,78,807,105"/>
-<area shape="rect" href="class_j_motor_driver.html#a70e074ae03c7685d2147f70ae4ed9ff6" title="low end of the range" alt="" coords="627,143,805,170"/>
-</map>
-</div>
 
 </div>
 </div>

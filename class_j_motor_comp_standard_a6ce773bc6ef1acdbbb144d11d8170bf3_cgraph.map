@@ -1,4 +1,0 @@
-<map id="JMotorCompStandard::getMaxVel" name="JMotorCompStandard::getMaxVel">
-<area shape="rect" id="node1" title="How fast of a motor speed setting would get adjusted to full motor power." alt="" coords="5,5,153,47"/>
-<area shape="rect" id="node2" href="$class_j_voltage_compensator.html#af9f5285fe46175fc0c42e674145104dc" title=" " alt="" coords="201,5,352,47"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="JMotorCompStandard::compensate" name="JMotorCompStandard::compensate">
-<area shape="rect" id="node1" title="calculate" alt="" coords="5,5,153,47"/>
-<area shape="rect" id="node2" href="$class_j_voltage_compensator.html#afcf4ce79714cde2a657f5df9a0c3ec9f" title="do conversion" alt="" coords="201,5,352,47"/>
-</map>

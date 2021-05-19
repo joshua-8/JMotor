@@ -1,5 +1,0 @@
-<map id="JMotorControllerClosed::resetPos" name="JMotorControllerClosed::resetPos">
-<area shape="rect" id="node1" title="reset what position the controller thinks it&#39;s in" alt="" coords="5,35,163,76"/>
-<area shape="rect" id="node2" href="$class_j_encoder.html#a0eda190de4c394c8d7a554203cdde5b1" title="returns a conversion factor between encoder ticks and distance that can be set for the encoder" alt="" coords="211,5,388,47"/>
-<area shape="rect" id="node3" href="$class_j_encoder.html#aebd11e6e685427b4a1323fcc4b4e8e51" title="reset the counter of how far the encoder has turned" alt="" coords="224,71,375,98"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="JMotorDriverAvrPWM::set" name="JMotorDriverAvrPWM::set">
-<area shape="rect" id="node1" title="set motor power" alt="" coords="241,31,413,57"/>
-<area shape="rect" id="node2" href="$class_j_motor_driver_avr_l293.html#aac04aab386642b753efb04a62b1024b7" title="set motor power" alt="" coords="15,5,184,32"/>
-<area shape="rect" id="node3" href="$class_j_motor_driver_avr_p_w_m_dir.html#aa6da9ac4da952ac2dcfe9dcfd9d07623" title="set motor power" alt="" coords="5,56,193,83"/>
-</map>

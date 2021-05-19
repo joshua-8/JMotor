@@ -1,4 +1,0 @@
-<map id="JMotorControllerOpen::setAccelLimit" name="JMotorControllerOpen::setAccelLimit">
-<area shape="rect" id="node1" title="set maximum rate that motor speed can be changed at" alt="" coords="5,5,153,47"/>
-<area shape="rect" id="node2" href="$class_j_motor_controller_basic.html#af9888ea6637074cfca9b0da164b6ad1c" title="set maximum rate that motor speed can be changed at" alt="" coords="201,5,352,47"/>
-</map>

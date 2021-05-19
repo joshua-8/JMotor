@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lastrunmicros_381',['lastRunMicros',['../class_j_motor_controller_basic.html#a175be0e9bf6befcedfe864696db78130',1,'JMotorControllerBasic']]]
+  ['juststarted_574',['justStarted',['../class_j_servo_current_sensor.html#aa712829ec49cec2733d06cd3ea222c89',1,'JServoCurrentSensor']]]
 ];

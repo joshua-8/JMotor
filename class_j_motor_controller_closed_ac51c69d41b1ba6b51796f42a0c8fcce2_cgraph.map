@@ -1,6 +1,0 @@
-<map id="JMotorControllerClosed::setVel" name="JMotorControllerClosed::setVel">
-<area shape="rect" id="node1" title="set velocity for controller" alt="" coords="5,39,163,80"/>
-<area shape="rect" id="node2" href="$class_j_motor_controller_closed.html#a31f9721c54c38962fc7a7dfbdf7572c3" title="How fast of a motor speed setting would get adjusted to full motor power." alt="" coords="211,5,368,47"/>
-<area shape="rect" id="node4" href="$class_j_motor_controller_closed.html#a34b9a874846877ba5f2e229ad279d4c4" title="alternative method for setting velocity that uses setPosSetpoint" alt="" coords="211,71,368,112"/>
-<area shape="rect" id="node3" href="$class_j_motor_compensator.html#a14f0b533af038a8927053e99b3c77a00" title="How fast of a motor speed setting would get adjusted to full motor power." alt="" coords="416,5,561,47"/>
-</map>

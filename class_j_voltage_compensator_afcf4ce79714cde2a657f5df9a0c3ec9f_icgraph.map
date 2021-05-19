@@ -1,4 +1,0 @@
-<map id="JVoltageCompensator::adjust" name="JVoltageCompensator::adjust">
-<area shape="rect" id="node1" title="do conversion" alt="" coords="201,5,352,47"/>
-<area shape="rect" id="node2" href="$class_j_motor_comp_standard.html#a4efa9461ed6585844857a20fd9530580" title="calculate" alt="" coords="5,5,153,47"/>
-</map>
