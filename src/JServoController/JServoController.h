@@ -16,7 +16,7 @@ protected:
     /**
      * @brief  variable for how long to wait if not moved before disabling (default: 0, never disable)
      */
-    int disableTimeout;
+    unsigned long disableTimeout;
     /**
      * @brief  lower limit for angle setpoint
      * @note (if greater than maxAngleLimit, direction is reversed)
@@ -422,8 +422,8 @@ protected:
 };
 
 #include "JServoControllerAdvanced.h"
-#include "JServoCurrentSensor.h"
-#include "JServoControllerStallProtected.h"
 #include "JServoControllerGentle.h"
+#include "JServoControllerStallProtected.h"
+#include "JServoCurrentSensor.h"
 
 #endif

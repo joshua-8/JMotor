@@ -50,9 +50,9 @@ public:
     }
     bool set(float _val)
     {
-        if (justEnabled || val != lastSetVal) {
+        if (justEnabled || _val != lastSetVal) {
             if (enabled) {
-                lastSetVal = val;
+                lastSetVal = _val;
                 justEnabled = false;
                 int val = constrain(_val * PWM_RANGE, 0, PWM_RANGE);
                 ledcWrite(ch, val);
