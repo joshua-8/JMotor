@@ -1,7 +1,8 @@
 #ifndef J_SERVO_CURRENT_SENSOR_H
 #define J_SERVO_CURRENT_SENSOR_H
+#include "JServoStallSensing.h"
 #include <Arduino.h>
-class JServoCurrentSensor {
+class JServoCurrentSensor : public JServoStallSensing {
 protected:
     int measurePin;
     bool justStarted;

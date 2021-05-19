@@ -82,7 +82,7 @@ void loop()
     Serial.print(",");
     Serial.print(servoCtrl.isStallProtectionActivated() * 3);
     Serial.print(",");
-    Serial.println(servoCtrl.currentSensor.getMeasurement(false) * 10);
+    Serial.println(servoCtrl.stallSensor.getMeasurement(false) * 10);
     // encoder.run();
     // myController.run();
     // Serial.print(myController.getPosTarget());

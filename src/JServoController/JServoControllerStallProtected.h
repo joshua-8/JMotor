@@ -15,10 +15,10 @@ protected:
     unsigned long stallDeactivateTimeout;
 
 public:
-    JServoCurrentSensor& currentSensor;
-    JServoControllerStallProtected(JServoControllerAdvanced advancedServo, JServoCurrentSensor& servoCurrentSensor, float _unStallThreshold, float _stallThreshold, unsigned long _stallActivateTimeout, unsigned long _stallDeactivateTimeout)
+    JServoStallSensing& stallSensor;
+    JServoControllerStallProtected(JServoControllerAdvanced advancedServo, JServoStallSensing& servoCurrentSensor, float _unStallThreshold, float _stallThreshold, unsigned long _stallActivateTimeout, unsigned long _stallDeactivateTimeout)
         : JServoControllerAdvanced(advancedServo)
-        , currentSensor(servoCurrentSensor)
+        , stallSensor(servoCurrentSensor)
     {
         unStallThreshold = constrain(_unStallThreshold, 0, 1);
         stallThreshold = constrain(_stallThreshold, 0, 1);
@@ -29,7 +29,7 @@ public:
     }
     virtual void run()
     {
-        float measurementTemp = currentSensor.getMeasurement();
+        float measurementTemp = stallSensor.getMeasurement();
         if (measurementTemp > stallThreshold) {
             if (!stalled) {
                 stalled = true;

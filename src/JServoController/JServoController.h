@@ -6,6 +6,7 @@
 //see bottom of file for #includes of subclasses and other JServoController relevant files
 /**
  * @brief  class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting
+ * @note  after creating a ServoController object with a ServoDriver, using the Driver's methods directly is not recommended
  */
 class JServoController {
 protected:
