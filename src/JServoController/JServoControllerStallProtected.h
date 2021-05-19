@@ -52,7 +52,7 @@ public:
             }
         }
         if (!stallProtectionActivated) {
-            if (weakened && stallProtected)
+            if (stallProtected && weakened)
                 setStrengthNormal();
         }
 
