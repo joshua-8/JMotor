@@ -23,9 +23,9 @@ public:
      * @brief  Constructor for JServoControllerAdvanced, a class for controlling JMotorDriverServoAdvanced, with angle calibration and accel and velocity limiting
      * @note  the "advanced" servo driver supports adjusting the servo signal frequency
      * @param  _servo: (JMotorDriverServoAdvanced&) reference to an instance of a class that's a subclass of JMotorDriverServo
-     * @param  _weakFreq: (float) what fraction of normal frequency the signal should go to in order to weaken the servo's strength
+     * @param  _weakFreq: (float) default: .5, what fraction of normal frequency the signal should go to in order to weaken the servo's strength
      * @param  _weakenTimeout: (unsigned long) default: 0, after how many milliseconds of no movement should the servo be set to lower power? 0=never switch to low power
-     * @param  _normalFreq: (float) what fraction of 50Hz should be used
+     * @param  _normalFreq: (float) default: 1, what fraction of 50Hz should be used
      * @param  _startWeakTimeout: (unsigned long) default 0, how many milliseconds after enabling should the servo be in weakened mode (to soften jumps at startup)? 0=inactive
      * @param  _reverse: (bool) default: false, use to reverse direction of servo
      * @param  velLimit: (float) default: INFINITY, maximum velocity you want the servo to move at in limited mode
@@ -39,7 +39,7 @@ public:
      * @param  minServoVal: (int) default: 544, microseconds for servo signal pulse for minimum angle
      * @param  maxServoVal: (int) default: 2400, microseconds for servo signal pulse for maximum angle
      */
-    JServoControllerAdvanced(JMotorDriverServoAdvanced& _servo, float _weakFreq = .75, unsigned long _weakenTimeout = 0, float _normalFreq = 1.0, unsigned long _startWeakTimeout = 0, bool _reverse = false, float velLimit = INFINITY, float accelLimit = INFINITY, unsigned long _disableTimeout = 0, float _minAngleLimit = 0, float _maxAngleLimit = 180, float _pos = 90, float _minSetAngle = 0, float _maxSetAngle = 180, int minServoVal = 544, int maxServoVal = 2400)
+    JServoControllerAdvanced(JMotorDriverServoAdvanced& _servo, float _weakFreq = .5, unsigned long _weakenTimeout = 0, float _normalFreq = 1.0, unsigned long _startWeakTimeout = 0, bool _reverse = false, float velLimit = INFINITY, float accelLimit = INFINITY, unsigned long _disableTimeout = 0, float _minAngleLimit = 0, float _maxAngleLimit = 180, float _pos = 90, float _minSetAngle = 0, float _maxSetAngle = 180, int minServoVal = 544, int maxServoVal = 2400)
         : JServoController(_servo, _reverse, velLimit, accelLimit, _disableTimeout, _minAngleLimit, _maxAngleLimit, _pos, _minSetAngle, _maxSetAngle, minServoVal, maxServoVal)
         , adServo(_servo)
     {
@@ -51,7 +51,7 @@ public:
         weakened = false;
         enabledMillis = millis();
     }
-    void run()
+    virtual void run()
     {
         if (startWeakTimeout != 0 && millis() - enabledMillis < startWeakTimeout) {
             if (!weakened) {

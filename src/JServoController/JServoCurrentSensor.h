@@ -3,7 +3,7 @@
 #include <Arduino.h>
 class JServoCurrentSensor {
 protected:
-    byte measurePin;
+    int measurePin;
     bool justStarted;
     static const byte numReadings = 20;
     int readings[numReadings]; // the readings from the analog input
@@ -23,7 +23,7 @@ public:
      * @param  _minRange: 
      * @retval 
      */
-    JServoCurrentSensor(byte _measurePin, int _maxRange = 1000, int _minRange = 0)
+    JServoCurrentSensor(int _measurePin, int _maxRange = 1000, int _minRange = 0)
     {
         measurePin = _measurePin;
         measurementRaw = 0;
@@ -36,9 +36,10 @@ public:
     }
     float getMeasurement(bool _run = true)
     {
-        if (_run)
+        if (_run) {
             run();
-        return constrain(map(measurementRaw, minRange * numReadings, maxRange * numReadings, 0, 10000), 0, 10000) / 10000.0;
+        }
+        return constrain(map(measurementRaw, (long)minRange * numReadings, (long)maxRange * numReadings, 0, 10000), 0, 10000) / 10000.0;
     }
     int getUnscaledMeasurement()
     {

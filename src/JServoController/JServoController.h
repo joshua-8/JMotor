@@ -423,5 +423,7 @@ protected:
 
 #include "JServoControllerAdvanced.h"
 #include "JServoCurrentSensor.h"
+#include "JServoControllerStallProtected.h"
+#include "JServoControllerGentle.h"
 
 #endif

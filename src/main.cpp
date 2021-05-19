@@ -1,5 +1,4 @@
 #include <Arduino.h>
-#include <JMotor.h>
 
 #define port1Pin 32
 #define port2Pin 33
@@ -26,9 +25,12 @@
 
 #define dacUnitsPerVolt 380
 
+#include <JMotor.h>
+
 JMotorDriverEsp32Servo myServo = JMotorDriverEsp32Servo(port1);
-JServoControllerAdvanced servoCtrl = JServoControllerAdvanced(myServo, .3, 0, 1, 1000, false, 120, 75, 0, -90, 90, 0, -90, 90);
-JServoCurrentSensor servoCurrent = JServoCurrentSensor(port5Pin, 150);
+JServoCurrentSensor myServoCurrent = JServoCurrentSensor(port5Pin, 150);
+JServoControllerStallProtected servoCtrl = JServoControllerStallProtected(JServoControllerAdvanced(myServo, .3, 0, 1, 0, false, 120, 75, 0, -90, 90, 0, -90, 90), myServoCurrent, .1, .4, 500, 1000);
+// JServoControllerAdvanced servoCtrl = JServoControllerAdvanced(myServo, .3, 0, 1, 1000, false, 120, 75, 0, -90, 90, 0, -90, 90);
 // JEncoderPWMAbsoluteAttachInterrupt encoder = JEncoderPWMAbsoluteAttachInterrupt(inport1, JEncoderPWMAbsolute_AS5048settings, true, 1, 50000, 1000, true);
 // IRAM_ATTR jENCODER_MAKE_ISR_MACRO(encoder);
 
@@ -65,6 +67,8 @@ void loop()
                 servoCtrl.setStrengthWeak();
             } else if (inString.equals("s\n")) {
                 servoCtrl.setStrengthNormal();
+            } else if (inString.equals("p\n")) {
+                servoCtrl.setStallProtectionEnable(!servoCtrl.getStallProtectionEnable());
             } else {
                 value = inString.toFloat();
             }
@@ -72,9 +76,13 @@ void loop()
         }
     }
 
-    servoCtrl.setAngleSmoothed(value);
+    servoCtrl.setAngle(value);
 
-    Serial.println(servoCurrent.getMeasurement() * 10);
+    Serial.print(servoCtrl.isStalled() * 3);
+    Serial.print(",");
+    Serial.print(servoCtrl.isStallProtectionActivated() * 3);
+    Serial.print(",");
+    Serial.println(servoCtrl.currentSensor.getMeasurement(false) * 10);
     // encoder.run();
     // myController.run();
     // Serial.print(myController.getPosTarget());
