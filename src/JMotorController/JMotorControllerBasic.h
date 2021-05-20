@@ -86,13 +86,17 @@ public:
     void run()
     {
         if (getEnable()) {
+            float time = (micros() - lastRunMicros) / 1000000.0;
+            lastRunMicros = micros();
+            if (time == 0) {
+                return;
+            }
             if (velocity != velocityTarget) {
-                velocity += constrain(velocityTarget - velocity, -accelLimit * (micros() - lastRunMicros) / 1000000.0, accelLimit * (micros() - lastRunMicros) / 1000000.0);
+                velocity += constrain(velocityTarget - velocity, -accelLimit * time, accelLimit * time);
             }
             driverInRange = (abs(velocity) < compensator.getMaxVel());
             velocity = constrain(velocity, -compensator.getMaxVel() * (getDriverMinRange() < 0), compensator.getMaxVel() * (getDriverMaxRange() > 0));
             velocity = constrain(velocity, -velLimit, velLimit);
-            lastRunMicros = micros();
             if (driver.getEnable()) {
                 float lastSetVal = setVal;
                 setVal = compensator.compensate(velocity);
