@@ -86,7 +86,7 @@ public:
         }
 
         if (position != _posTarget && velocity == 0) {
-            dL.setVelocity((_posTarget > position) ? getMaxVel() : -getMaxVel());
+            dL.setVelocity((_posTarget > position) ? getMinVel() : -getMinVel());
         }
         posMode = true;
         if (positionTarget != _posTarget) {
