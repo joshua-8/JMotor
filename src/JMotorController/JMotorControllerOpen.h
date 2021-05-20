@@ -147,6 +147,11 @@ public:
         return temp;
     }
 
+    bool isPosModeNotVelocity()
+    {
+        return posMode;
+    }
+
     //override basicOpen functions
     void setVel(float vel, bool _run = true)
     {

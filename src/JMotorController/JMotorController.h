@@ -58,6 +58,12 @@ public:
      * @param  _vellLimit: (float)
      */
     virtual void setVelLimit(float _velLimit) = 0;
+
+    /**
+     * @brief  true if controller is in position target mode, false if in velocity  mode
+     * @retval 
+     */
+    virtual bool isPosModeNotVelocity() = 0;
 };
 #include "JMotorControllerClosed.h"
 #include "JMotorControllerOpen.h"
