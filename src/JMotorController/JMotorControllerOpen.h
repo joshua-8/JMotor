@@ -30,26 +30,24 @@ public:
 
     void run()
     {
+        float time = (micros() - lastRunMicros) / 1000000.0;
+        if (time == 0) {
+            return;
+        }
         if (getEnable()) {
             if (posMode) {
                 if (!smoothedMode) { //setPosSetpoint() mode
-                    float time = (micros() - lastRunMicros) / 1000000.0;
                     positionTarget += time * posDelta;
                     if (position == positionTarget) {
                         JMotorControllerBasic::setVel(0);
                     } else if (abs(positionTarget - position) <= getMinVel() * time) {
                         JMotorControllerBasic::setVel(0);
                     } else if (abs(positionTarget - position) < getMaxVel() * time) {
-                        if (time > 0) {
-                            JMotorControllerBasic::setVel((positionTarget - position) / time);
-                        } else {
-                            JMotorControllerBasic::setVel(0);
-                        }
+                        JMotorControllerBasic::setVel((positionTarget - position) / time);
                         position = positionTarget;
                     } else { //far away
-                        JMotorControllerBasic::setVel((((positionTarget - position) > 0) ? getMaxVel() : -getMaxVel()), false);
+                        JMotorControllerBasic::setVel((((positionTarget - position) > 0) ? getMaxVel() : -getMaxVel()));
                         position += velocity * time;
-                        JMotorControllerBasic::run();
                     }
                 } else { //setPosTarget() mode
                     dL.setPositionVelocity(position, velocity);
@@ -59,7 +57,6 @@ public:
                     JMotorControllerBasic::setVel(dL.getVelocity());
                 }
             } else { //not pos mode
-                float time = (micros() - lastRunMicros) / 1000000.0;
                 JMotorControllerBasic::run();
                 if (abs(velocity) > getMinVel()) {
                     position += velocity * time;

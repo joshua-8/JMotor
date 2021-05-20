@@ -85,12 +85,12 @@ public:
 
     void run()
     {
+        float time = (micros() - lastRunMicros) / 1000000.0;
+        lastRunMicros = micros();
+        if (time == 0) {
+            return;
+        }
         if (getEnable()) {
-            float time = (micros() - lastRunMicros) / 1000000.0;
-            lastRunMicros = micros();
-            if (time == 0) {
-                return;
-            }
             if (velocity != velocityTarget) {
                 velocity += constrain(velocityTarget - velocity, -accelLimit * time, accelLimit * time);
             }
