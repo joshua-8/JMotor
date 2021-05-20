@@ -25,18 +25,16 @@ public:
      * @note  this function can be called repeatedly, or just once if run() is called frequently
      * @param  vel: (float)
      * @param  _run: (bool) default:true, true = call run() in this function, false = you'll call run() yourself
-     * @retval (bool) true if in range, false if out of motor's speed range
      */
-    virtual bool setVel(float vel, bool _run = true) = 0;
+    virtual void setVel(float vel, bool _run = true) = 0;
 
     /**
      * @brief  set target velocity for controller (acceleration limited)
      * @note  this function can be called repeatedly, or just once if run() is called frequently
      * @param  vel: (float) target velocity
      * @param  _run: (bool) default:true, true = call run() in this function, false = you'll call run() yourself
-     * @retval (bool) true if target reached, false if not reached (due to acceleration or out of range)
      */
-    virtual bool setVelTarget(float vel, bool _run = true) = 0;
+    virtual void setVelTarget(float vel, bool _run = true) = 0;
 
     /**
      * @brief  get target velocity for controller

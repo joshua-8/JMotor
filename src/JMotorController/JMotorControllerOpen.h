@@ -148,22 +148,20 @@ public:
     }
 
     //override basicOpen functions
-    bool setVel(float vel, bool _run = true)
+    void setVel(float vel, bool _run = true)
     {
         posMode = false;
         velocity = vel;
         velocityTarget = vel;
         if (_run)
             JMotorControllerOpen::run();
-        return velocity == vel;
     }
-    bool setVelTarget(float vel, bool _run = true)
+    void setVelTarget(float vel, bool _run = true)
     {
         posMode = false;
         velocityTarget = vel;
         if (_run)
             JMotorControllerOpen::run();
-        return velocity == vel;
     }
     void setVelLimit(float _velLimit)
     {

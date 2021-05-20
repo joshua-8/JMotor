@@ -59,6 +59,6 @@ public:
      */
     virtual void setVelLimit(float _velLimit) = 0;
 };
-// #include "JMotorControllerClosed.h"
+#include "JMotorControllerClosed.h"
 #include "JMotorControllerOpen.h"
 #endif

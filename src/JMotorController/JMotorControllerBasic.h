@@ -53,21 +53,19 @@ public:
         velLimit = max(_velLimit, (float)0.0);
     }
 
-    bool setVel(float vel, bool _run = true)
+    void setVel(float vel, bool _run = true)
     {
         velocity = vel;
         velocityTarget = vel;
         if (_run)
             JMotorControllerBasic::run();
-        return velocity == vel;
     }
 
-    bool setVelTarget(float vel, bool _run = true)
+    void setVelTarget(float vel, bool _run = true)
     {
         velocityTarget = vel;
         if (_run)
             JMotorControllerBasic::run();
-        return velocity == vel;
     }
 
     float getVelTarget()
