@@ -77,6 +77,7 @@ private:
     volatile unsigned long dataEndMicros;
     volatile unsigned long earlyDataStartMicros;
     volatile unsigned long oldDataEndMicros;
+    bool setPosZero;
 
     pwmSettings ps;
 
@@ -123,6 +124,7 @@ public:
         earlyDataStartMicros = 0;
         oldDataEndMicros = 0;
         justStartedVel = true;
+        setPosZero = false;
     }
 
     /**
@@ -137,8 +139,8 @@ public:
     virtual void turnOffInterrupts();
 
     /** 
-     * @note divide by STEPS_PER_TURN to get fraction of full turn
-     * @retval the raw angle reading from the sensor (0 to 16,383) (but negative if reverse is true)
+     * @note divide by RESOLUTION to get fraction of full turn
+     * @retval the raw angle reading from the sensor (but negative if reverse is true)
      */
 
     int rawReading()
@@ -163,17 +165,17 @@ public:
 
     /**
      * @brief  reset the zero point of the encoder
-     * @param  resetAngle: (bool) true=set the current angle as zero, false=reset turns, but leave absolute angle measurement as is
-     * @retval  (long) old position (raw # ticks)
+     * @param  resetAngle: (bool) true=set the next read angle as zero, false=reset turns, but leave absolute angle measurement as is
+     * @retval  (long) old position (number of turns, not including angle!)
      */
     long zeroCounter(bool resetAngle)
     {
         long tTurns = turns;
         turns = 0;
         if (resetAngle) {
-            setZeroPos(angle);
+            setPosZero = true;
         }
-        return (tTurns * ps.RESOLUTION + angle) * reverse;
+        return (tTurns * ps.RESOLUTION) * reverse;
     }
 
     float getVel()
@@ -217,10 +219,11 @@ public:
 
     /**
      * @brief  change what angle of the absolute encoder is zero
-     * @param  zeroAngle: (default: 0) [0,ps.RESOLUTION-1)
+     * @note  this will cause distance to jump some
+     * @param  zeroAngle: [0,ps.RESOLUTION-1)
      * @retval  (bool) did the zeroAngle change
      */
-    bool setZeroPos(uint16_t zeroAngle = 0)
+    bool setZeroPos(uint16_t zeroAngle)
     {
         if (zeroAngle % ps.RESOLUTION != zeroPos) {
             zeroPos = zeroAngle % ps.RESOLUTION;
@@ -241,13 +244,16 @@ public:
             newAngle = false;
             interrupts();
             if (interval > 0 && cycle > ps.MIN_CYCLE && cycle < ps.MAX_CYCLE) { //check that interrupts didn't change one number but not the other, and that frequency is within range
-                if (resetAngleOnStart && firstAngle) {
+                if ((resetAngleOnStart && firstAngle) || setPosZero) {
                     zeroPos = 0;
                 }
                 angle = (constrain(interval * ps.PWM_STEPS / cycle - ps.MIN_STEPS, 0, ps.RESOLUTION - 1) + ps.RESOLUTION - zeroPos) % ps.RESOLUTION;
-                if (resetAngleOnStart && firstAngle) {
-                    zeroPos = angle;
+                if ((resetAngleOnStart && firstAngle) || setPosZero) {
+                    zeroPos = (angle) % ps.RESOLUTION;
                     firstAngle = false;
+                    lastAngle = 0;
+                    setPosZero = false;
+                    angle = 0;
                 }
                 if (abs((int16_t)angle - (int16_t)lastAngle) >= ps.RESOLUTION / 2) { // angle jump over half of circle is assummed to be the shorter crossing of 0
                     if (angle > lastAngle) {
