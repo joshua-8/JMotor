@@ -39,7 +39,7 @@ JVoltageCompMeasure<10> voltageComp = JVoltageCompMeasure<10>(batMonitorPin, dac
 JMotorCompStandardConfig ttConfig = JMotorCompStandardConfig(1.9, .5, 3.2, 1.1, 4.6, 1.7, 100);
 JMotorCompStandard myMotorCompensator = JMotorCompStandard(voltageComp, ttConfig, 1.0);
 JMotorDriverEsp32L293 myDriver = JMotorDriverEsp32L293(portD);
-JMotorControllerClosed myController = JMotorControllerClosed(myDriver, myMotorCompensator, encoder, INFINITY, .4, INFINITY);
+JMotorControllerClosed myController = JMotorControllerClosed(myDriver, myMotorCompensator, encoder, 1.5, .4, false, 1.5, 1.0);
 
 String inString = "";
 float value = 0;
@@ -63,15 +63,21 @@ void loop()
                 myController.resetPos();
             } else {
                 value = inString.toFloat();
-                myController.setVel(value, false);
+                myController.setVelTarget(value, false);
             }
             inString = "";
         }
     }
     myController.run();
 
-
-    
+    Serial.print(myController.getVelTarget());
+    Serial.print(",");
+    Serial.print(myController.getPosDeltaSetpoint());
+    Serial.print(",");
+    Serial.print(myController.getVelSetpoint());
+    Serial.print(",");
+    Serial.print(myController.getPosTarget());
+    Serial.print(",");
     Serial.println(myController.getPos());
 
     delay(1);
