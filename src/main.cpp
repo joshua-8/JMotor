@@ -30,7 +30,7 @@
 // JMotorDriverEsp32Servo myServo = JMotorDriverEsp32Servo(port1);
 // JServoCurrentSensor myServoCurrent = JServoCurrentSensor(port5Pin, 150);
 // JServoControllerStallProtected servoCtrl = JServoControllerStallProtected(JServoControllerAdvanced(myServo, .3, 0, 1, 0, false, 120, 75, 0, -90, 90, 0, -90, 90), myServoCurrent, .1, .4, 500, 1000);
-// JServoControllerAdvanced servoCtrl = JServoControllerAdvanced(myServo, .3, 0, 1, 1000, false, 120, 75, 0, -90, 90, 0, -90, 90);
+// JServoControllerAdvanced servoCtrl = JServoControllerAdvanced(myServo, .3, 0, 1, 1000, false, 120, 75, 0, -40, 40, 0, -90, 90, 544, 2400, true, true, 1.0);
 
 JEncoderPWMAbsoluteAttachInterrupt encoder = JEncoderPWMAbsoluteAttachInterrupt(inport1, JEncoderPWMAbsolute_AS5048settings, true, 1, 50000, 1000, true);
 IRAM_ATTR jENCODER_MAKE_ISR_MACRO(encoder);
@@ -39,18 +39,17 @@ JVoltageCompMeasure<10> voltageComp = JVoltageCompMeasure<10>(batMonitorPin, dac
 JMotorCompStandardConfig ttConfig = JMotorCompStandardConfig(1.9, .5, 3.2, 1.1, 4.6, 1.7, 100);
 JMotorCompStandard myMotorCompensator = JMotorCompStandard(voltageComp, ttConfig, 1.0);
 JMotorDriverEsp32L293 myDriver = JMotorDriverEsp32L293(portD);
-JMotorControllerClosed myController = JMotorControllerClosed(myDriver, myMotorCompensator, encoder, INFINITY, .4);
+JMotorControllerClosed myController = JMotorControllerClosed(myDriver, myMotorCompensator, encoder, INFINITY, .4, INFINITY);
 
 String inString = "";
 float value = 0;
+int mode = 0;
 
 void setup()
 {
     Serial.begin(9600);
     encoder.setUpInterrupts(encoder_jENCODER_ISR);
     myController.enable();
-    // myServo.enable();
-    // servoCtrl.enable();
 }
 void loop()
 {
@@ -60,24 +59,20 @@ void loop()
         if (inChar == '\n') {
             if (inString.equals("e\n")) {
                 myController.setEnable(!myController.getEnable());
-                //     servoCtrl.setEnable(!servoCtrl.getEnable());
-                // } else if (inString.equals("r\n")) {
-                //     servoCtrl.wake();
-                // } else if (inString.equals("w\n")) {
-                //     servoCtrl.setStrengthWeak();
-                // } else if (inString.equals("s\n")) {
-                //     servoCtrl.setStrengthNormal();
-                // } else if (inString.equals("p\n")) {
-                //     servoCtrl.setStallProtectionEnable(!servoCtrl.getStallProtectionEnable());
+            } else if (inString.equals("r\n")) {
+                myController.resetPos();
             } else {
                 value = inString.toFloat();
-                myController.setOpenVelTarget(value);
+                myController.setVel(value, false);
             }
             inString = "";
         }
     }
     myController.run();
 
-    Serial.println();
+
+    
+    Serial.println(myController.getPos());
+
     delay(1);
 }

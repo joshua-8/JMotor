@@ -103,7 +103,7 @@ public:
     {
         return tickCounter * reverse;
     }
-    float getDist()
+    float getPos()
     {
         return tickCounter * distPerCountFactor * reverse;
     }

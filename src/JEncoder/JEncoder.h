@@ -56,7 +56,7 @@ public:
      * @note   remember that variables overflow (counter) and that floats have limited precision
      * @retval (float) encoder ticks converted to distance
      */
-    virtual float getDist();
+    virtual float getPos();
 
     /**
      * @brief  returns a conversion factor between encoder ticks and distance that can be set for the encoder

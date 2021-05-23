@@ -112,7 +112,7 @@ public:
         return false;
     }
 
-    bool setPosDelta(float _posDelta, bool _resetPos = false, bool _run = true)
+    bool setPosDelta(float _posDelta, bool _run = true, bool _resetPos = false)
     {
         smoothedMode = false;
         posMode = true;

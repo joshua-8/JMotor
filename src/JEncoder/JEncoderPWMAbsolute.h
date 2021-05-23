@@ -140,7 +140,7 @@ public:
 
     /** 
      * @note divide by RESOLUTION to get fraction of full turn
-     * @retval the raw angle reading from the sensor (but negative if reverse is true)
+     * @retval the angle reading from the sensor [0, RESOLUTION) (but negative if reverse is true)
      */
 
     int rawReading()
@@ -150,7 +150,7 @@ public:
 
     /**
      * @brief  how many full turns the encoder has made.
-     * @note   this and rawReading can be used as an alternative to getDist if the limited precision of a float is a concert
+     * @note   this and rawReading can be used as an alternative to getPos if the limited precision of a float is a concern
      * @retval (long) how far the encoder has turned
      */
     long intTurns()
@@ -188,7 +188,7 @@ public:
         return (turns * ps.RESOLUTION + angle) * reverse;
     }
 
-    float getDist()
+    float getPos()
     {
         return (turns * ps.RESOLUTION + angle) * reverse * distPerCountFactor;
     }

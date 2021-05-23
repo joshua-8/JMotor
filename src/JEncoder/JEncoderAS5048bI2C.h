@@ -207,7 +207,7 @@ public:
 
     /**
      * @brief  how many full turns the encoder has made.
-     * @note   this and rawReading can be used as an alternative to getDist if the limited precision of a float is a concert
+     * @note   this and rawReading can be used as an alternative to getPos if the limited precision of a float is a concern
      * @retval (long) how far the encoder has turned
      */
     long intTurns()
@@ -245,7 +245,7 @@ public:
         return (turns * STEPS_PER_TURN + angle) * reverse;
     }
 
-    float getDist()
+    float getPos()
     {
         return (turns * STEPS_PER_TURN + angle) * reverse * distPerCountFactor;
     }

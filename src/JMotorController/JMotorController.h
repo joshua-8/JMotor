@@ -32,7 +32,7 @@ public:
      * @param  _run: (bool) default:true, true = call run() in this function, false = you'll call run() yourself
      * @retval  (bool) did the setting change?
      */
-    virtual bool setPosDelta(float _posDelta, bool _resetPos = false, bool _run = true) = 0;
+    virtual bool setPosDelta(float _posDelta, bool _run = true, bool _resetPos = false) = 0;
 
     /**
      * @brief  get position set as target
