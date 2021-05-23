@@ -57,13 +57,13 @@ protected:
      */
     bool rewriteToServo;
 
+public:
     /**
      * @brief  instance of Derivs_Limiter class used to smoothly move servo
      * @note   https://github.com/joshua-8/Derivs_Limiter 
      */
     Derivs_Limiter dL;
 
-public:
     /**
      * @brief  Constructor for JServoController, a class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting
      * @param  _servo: (JMotorDriverServo&) reference to an instance of a class that's a subclass of JMotorDriverServo
@@ -78,17 +78,19 @@ public:
      * @param  _maxSetAngle: (float) default: 180, when servo driver is set to its maximum (probably 1) what angle does the servo go to?
      * @param  minServoVal: (int) default: 544, microseconds for servo signal pulse for minimum angle
      * @param  maxServoVal: (int) default: 2400, microseconds for servo signal pulse for maximum angle
-     */
-    JServoController(JMotorDriverServo& _servo, bool _reverse = false, float velLimit = INFINITY, float accelLimit = INFINITY, unsigned long _disableTimeout = 0, float _minAngleLimit = 0, float _maxAngleLimit = 180, float _pos = 90, float _minSetAngle = 0, float _maxSetAngle = 180, int minServoVal = 544, int maxServoVal = 2400)
+     * @param  _preventGoingWrongWay (bool) default: true, immediately stop if going away from target
+     * @param  _preventGoingTooFast (bool) default: true, immediately slow down if set to a speed above velLimit
+     * @param  _stoppingAccelLimit (float) default: INFINITY, 
+     * */
+    JServoController(JMotorDriverServo& _servo, bool _reverse = false, float velLimit = INFINITY, float accelLimit = INFINITY, unsigned long _disableTimeout = 0, float _minAngleLimit = 0, float _maxAngleLimit = 180, float _pos = 90, float _minSetAngle = 0, float _maxSetAngle = 180, int minServoVal = 544, int maxServoVal = 2400, bool _preventGoingWrongWay = true, bool _preventGoingTooFast = true, float _stoppingAccelLimit = INFINITY)
         : servo(_servo)
-        , dL(Derivs_Limiter(max(velLimit, float(0.0)), max(accelLimit, float(0.0)), _pos, _pos))
+        , dL(Derivs_Limiter(max(velLimit, float(0.0)), max(accelLimit, float(0.0)), _pos, _pos, 0, _preventGoingWrongWay, _preventGoingTooFast, min(_minAngleLimit, _maxAngleLimit), max(_minAngleLimit, _maxAngleLimit), _stoppingAccelLimit))
     {
         enabled = false;
         sleeping = false;
         lastMovedMillis = 0;
         minAngleLimit = _minAngleLimit;
         maxAngleLimit = _maxAngleLimit;
-        servo.setServoValues(minServoVal, maxServoVal);
         disableTimeout = _disableTimeout;
         reverse = _reverse;
         minSetAngle = _minSetAngle;
@@ -103,8 +105,7 @@ public:
     {
         if (enabled)
             dL.calc();
-        dL.setPosition(constrain(dL.getPosition(), min(minAngleLimit, maxAngleLimit), max(minAngleLimit, maxAngleLimit)));
-        if (dL.getPosDelta() != 0) {
+        if (dL.getPositionDelta() != 0.0) {
             lastMovedMillis = millis();
         }
         if (disableTimeout != 0) {
@@ -120,7 +121,7 @@ public:
                 }
             }
         }
-        if (dL.getPosDelta() != 0) {
+        if (dL.getPositionDelta() != 0.0) {
             rewriteToServo = true;
         }
         if (servo.getEnable() && enabled) {
@@ -266,6 +267,7 @@ public:
             rewriteToServo = true;
             minAngleLimit = _minAngleLimit;
         }
+        dL.setPosLimits(min(minAngleLimit, maxAngleLimit), max(minAngleLimit, maxAngleLimit));
     }
     void setMaxAngleLimit(float _maxAngleLimit)
     {
@@ -273,6 +275,7 @@ public:
             rewriteToServo = true;
             maxAngleLimit = _maxAngleLimit;
         }
+        dL.setPosLimits(min(minAngleLimit, maxAngleLimit), max(minAngleLimit, maxAngleLimit));
     }
     float getMinAngleLimit()
     {
@@ -315,7 +318,7 @@ public:
     {
         return dL.getVelLimit();
     }
-    void setAccelLimit(float accelLim)
+        void setAccelLimit(float accelLim)
     {
         dL.setAccelLimit(accelLim);
     }
