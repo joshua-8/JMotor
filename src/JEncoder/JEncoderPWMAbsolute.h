@@ -262,6 +262,7 @@ public:
                         turns++;
                     }
                 }
+                lastAngle = angle;
             }
         }
         int64_t velDist = ((int16_t)angle - (int16_t)lastVelAngle) + (turns - lastVelTurns) * ps.RESOLUTION;
@@ -279,8 +280,6 @@ public:
         } else {
             newSpeed = false;
         }
-
-        lastAngle = angle;
     }
     void encoderISR()
     {

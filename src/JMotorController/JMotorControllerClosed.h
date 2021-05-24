@@ -60,6 +60,8 @@ public:
     {
         encoder.run();
         float time = (micros() - lastRunMicros) / 1000000.0;
+        if (time == 0)
+            return;
         lastRunMicros = micros();
         if (getEnable()) {
             if (open) {
@@ -77,35 +79,30 @@ public:
             } else { //closed loop
                 if (posMode) {
                     if (smoothed) { //setPosTarget
-                        posSetpointSmoother.setPosition(encoder.getPos());
                         posSetpoint = posSetpointSmoother.calc();
+                        if (limitSetpointDistFromCurrent) {
+                            posSetpoint = constrain(posSetpoint, encoder.getPos() - distFromSetpointLimit, encoder.getPos() + distFromSetpointLimit);
+                            posSetpointSmoother.setPosition(posSetpoint);
+                        }
                     } else { //setPosSetpoint
                         //nothing to do here, posSetpoint was set
                     }
                 } else { //posDelta
-                    //                 if (limitSetpointDistFromCurrent) {
-                    // posDeltaSetpoint=constrain(posDeltaSetpoint,)
-                    //                         }
                     if (posDeltaSetpoint != posDeltaSetpointTarget) {
                         if (posSetpointSmoother.getPreventGoingWrongWay() && posDeltaSetpointTarget != 0 && posDeltaSetpoint != 0 && ((posDeltaSetpointTarget > 0) != (posDeltaSetpoint > 0))) {
-                            posDeltaSetpoint = 0;
+                            posDeltaSetpoint = 0; //prevent going wrong way
                         }
                         posDeltaSetpointTarget = constrain(posDeltaSetpointTarget, -velLimit, velLimit);
                         posDeltaSetpointTarget = constrain(posDeltaSetpointTarget, -compensator.getMaxVel() * (getDriverMinRange() < 0), compensator.getMaxVel() * (getDriverMaxRange() > 0));
                         posDeltaSetpoint += constrain(posDeltaSetpointTarget - posDeltaSetpoint, -accelLimit * time, accelLimit * time);
                     }
 
-                    if (limitSetpointDistFromCurrent) {
-                        // posDeltaSetpoint = constrain(posDeltaSetpoint,encoder.getVel());
-                        if ((posSetpoint <= encoder.getPos() - distFromSetpointLimit && posDeltaSetpoint < 0) || (posSetpoint >= encoder.getPos() + distFromSetpointLimit && posDeltaSetpoint > 0)) {
-                            posDeltaSetpoint *= max((float)0, 1 - (abs(posSetpoint - encoder.getPos()) - distFromSetpointLimit) / distFromSetpointLimit);
-                        }
-                    }
-
                     posSetpoint += posDeltaSetpoint * time;
+                    if (limitSetpointDistFromCurrent)
+                        posSetpoint = constrain(posSetpoint, encoder.getPos() - distFromSetpointLimit, encoder.getPos() + distFromSetpointLimit);
                 }
                 //MAKE MOTOR GO TO posSetpoint, by setting velSetpointTarget
-                velSetpointTarget = constrain(10 * (posSetpoint - encoder.getPos()) + posDeltaSetpoint, -velLimit, velLimit);
+                velSetpointTarget = 10 * (posSetpoint - encoder.getPos()) + posDeltaSetpoint;
 
                 velSetpoint = velSetpointTarget; //open loop uses velSetpointTarget and velsetpoint for acceleration, but closed loop has posDeltaSetpointTarget and posDeltaSetpoint, so just set them equal
 
@@ -131,17 +128,35 @@ public:
     }
     bool setPosTarget(float _posTarget, bool _run = true)
     {
+        limitSetpointDistFromCurrent = false;
         open = false;
         if (posMode == false) {
             posSetpointSmoother.resetTime();
             posSetpointSmoother.setVelocity(velSetpoint);
         }
+        bool ret = posSetpointSmoother.getTarget() != _posTarget;
         posMode = true;
         smoothed = true;
         posSetpointSmoother.setTarget(_posTarget);
         if (_run)
             run();
-        return true; //did the target change?
+        return ret; //did the target change?
+    }
+    bool setPosTargetStallable(float _posTarget, bool _run = true)
+    {
+        limitSetpointDistFromCurrent = true;
+        open = false;
+        if (posMode == false) {
+            posSetpointSmoother.resetTime();
+            posSetpointSmoother.setVelocity(velSetpoint);
+        }
+        bool ret = posSetpointSmoother.getTarget() != _posTarget;
+        posMode = true;
+        smoothed = true;
+        posSetpointSmoother.setTarget(_posTarget);
+        if (_run)
+            run();
+        return ret; //did the target change?
     }
     bool setPosSetpoint(float _posSetpoint, bool _run = true)
     {
@@ -215,6 +230,11 @@ public:
         } else {
             return posSetpoint;
         }
+    }
+
+    float getPosSetpoint()
+    {
+        return posSetpoint;
     }
 
     float getVelTarget()
