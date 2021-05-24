@@ -102,9 +102,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a810fe7d9d28f4a0ab93255e913008e7e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller.html#a810fe7d9d28f4a0ab93255e913008e7e">setPosSetpoint</a> (float _posSetpoint, bool _run=true)=0</td></tr>
 <tr class="memdesc:a810fe7d9d28f4a0ab93255e913008e7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">set position for motor to drive towards position as fast as possible (setpoint for control loop if available)  <a href="class_j_motor_controller.html#a810fe7d9d28f4a0ab93255e913008e7e">More...</a><br /></td></tr>
 <tr class="separator:a810fe7d9d28f4a0ab93255e913008e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab324afa199f0643bd071eab1d91cb496"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller.html#ab324afa199f0643bd071eab1d91cb496">setPosDelta</a> (float _posDelta, bool _resetPos=false, bool _run=true)=0</td></tr>
-<tr class="memdesc:ab324afa199f0643bd071eab1d91cb496"><td class="mdescLeft">&#160;</td><td class="mdescRight">alternative method for setting velocity that uses setPosSetpoint  <a href="class_j_motor_controller.html#ab324afa199f0643bd071eab1d91cb496">More...</a><br /></td></tr>
-<tr class="separator:ab324afa199f0643bd071eab1d91cb496"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbd35fd91c445e113fed9c95447a996c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller.html#adbd35fd91c445e113fed9c95447a996c">setPosDelta</a> (float _posDelta, bool _run=true, bool _resetPos=false)=0</td></tr>
+<tr class="memdesc:adbd35fd91c445e113fed9c95447a996c"><td class="mdescLeft">&#160;</td><td class="mdescRight">alternative method for setting velocity that uses setPosSetpoint  <a href="class_j_motor_controller.html#adbd35fd91c445e113fed9c95447a996c">More...</a><br /></td></tr>
+<tr class="separator:adbd35fd91c445e113fed9c95447a996c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ff1187810db4bff53127d79d01978a8"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller.html#a2ff1187810db4bff53127d79d01978a8">getPosTarget</a> ()=0</td></tr>
 <tr class="memdesc:a2ff1187810db4bff53127d79d01978a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">get position set as target  <a href="class_j_motor_controller.html#a2ff1187810db4bff53127d79d01978a8">More...</a><br /></td></tr>
 <tr class="separator:a2ff1187810db4bff53127d79d01978a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,16 +117,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a28d7e68c1178c33f233499d1c7f92630"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller.html#a28d7e68c1178c33f233499d1c7f92630">setVelLimit</a> (float _velLimit)=0</td></tr>
 <tr class="memdesc:a28d7e68c1178c33f233499d1c7f92630"><td class="mdescLeft">&#160;</td><td class="mdescRight">set maximum motor speed  <a href="class_j_motor_controller.html#a28d7e68c1178c33f233499d1c7f92630">More...</a><br /></td></tr>
 <tr class="separator:a28d7e68c1178c33f233499d1c7f92630"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad804d498f8757e0923f81f15d2d4edf8"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller.html#ad804d498f8757e0923f81f15d2d4edf8">isPosModeNotVelocity</a> ()=0</td></tr>
+<tr class="memdesc:ad804d498f8757e0923f81f15d2d4edf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if controller is in position target mode, false if in velocity mode  <a href="class_j_motor_controller.html#ad804d498f8757e0923f81f15d2d4edf8">More...</a><br /></td></tr>
+<tr class="separator:ad804d498f8757e0923f81f15d2d4edf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_j_motor_controller_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_j_motor_controller_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_j_motor_controller_base.html">JMotorControllerBase</a></td></tr>
 <tr class="memitem:a28759c8046b25a124ff01c80344ce690 inherit pub_methods_class_j_motor_controller_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_base.html#a28759c8046b25a124ff01c80344ce690">setAccelLimit</a> (float _accelLimit)=0</td></tr>
 <tr class="memdesc:a28759c8046b25a124ff01c80344ce690 inherit pub_methods_class_j_motor_controller_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">set maximum rate that motor speed can be changed at  <a href="class_j_motor_controller_base.html#a28759c8046b25a124ff01c80344ce690">More...</a><br /></td></tr>
 <tr class="separator:a28759c8046b25a124ff01c80344ce690 inherit pub_methods_class_j_motor_controller_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17c92327cdde7e1a6e12dead8753242c inherit pub_methods_class_j_motor_controller_base"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_base.html#a17c92327cdde7e1a6e12dead8753242c">setVel</a> (float vel, bool _run=true)=0</td></tr>
-<tr class="memdesc:a17c92327cdde7e1a6e12dead8753242c inherit pub_methods_class_j_motor_controller_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">set velocity for controller  <a href="class_j_motor_controller_base.html#a17c92327cdde7e1a6e12dead8753242c">More...</a><br /></td></tr>
-<tr class="separator:a17c92327cdde7e1a6e12dead8753242c inherit pub_methods_class_j_motor_controller_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac40452425aaf60e8248bc87f29d427ee inherit pub_methods_class_j_motor_controller_base"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_base.html#ac40452425aaf60e8248bc87f29d427ee">setVelTarget</a> (float vel, bool _run=true)=0</td></tr>
-<tr class="memdesc:ac40452425aaf60e8248bc87f29d427ee inherit pub_methods_class_j_motor_controller_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">set target velocity for controller (acceleration limited)  <a href="class_j_motor_controller_base.html#ac40452425aaf60e8248bc87f29d427ee">More...</a><br /></td></tr>
-<tr class="separator:ac40452425aaf60e8248bc87f29d427ee inherit pub_methods_class_j_motor_controller_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49dacee10510d77e25564b14820dc154 inherit pub_methods_class_j_motor_controller_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_base.html#a49dacee10510d77e25564b14820dc154">setVel</a> (float vel, bool _run=true)=0</td></tr>
+<tr class="memdesc:a49dacee10510d77e25564b14820dc154 inherit pub_methods_class_j_motor_controller_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">set velocity for controller  <a href="class_j_motor_controller_base.html#a49dacee10510d77e25564b14820dc154">More...</a><br /></td></tr>
+<tr class="separator:a49dacee10510d77e25564b14820dc154 inherit pub_methods_class_j_motor_controller_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30166b969d806d615d7af4c641a69301 inherit pub_methods_class_j_motor_controller_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_base.html#a30166b969d806d615d7af4c641a69301">setVelTarget</a> (float vel, bool _run=true)=0</td></tr>
+<tr class="memdesc:a30166b969d806d615d7af4c641a69301 inherit pub_methods_class_j_motor_controller_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">set target velocity for controller (acceleration limited)  <a href="class_j_motor_controller_base.html#a30166b969d806d615d7af4c641a69301">More...</a><br /></td></tr>
+<tr class="separator:a30166b969d806d615d7af4c641a69301 inherit pub_methods_class_j_motor_controller_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a349dce8efe007dd9534dc2ecdf6c3912 inherit pub_methods_class_j_motor_controller_base"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_base.html#a349dce8efe007dd9534dc2ecdf6c3912">getVelTarget</a> ()=0</td></tr>
 <tr class="memdesc:a349dce8efe007dd9534dc2ecdf6c3912 inherit pub_methods_class_j_motor_controller_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">get target velocity for controller  <a href="class_j_motor_controller_base.html#a349dce8efe007dd9534dc2ecdf6c3912">More...</a><br /></td></tr>
 <tr class="separator:a349dce8efe007dd9534dc2ecdf6c3912 inherit pub_methods_class_j_motor_controller_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -243,6 +246,41 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ad804d498f8757e0923f81f15d2d4edf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad804d498f8757e0923f81f15d2d4edf8">&#9670;&nbsp;</a></span>isPosModeNotVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool JMotorController::isPosModeNotVelocity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>true if controller is in position target mode, false if in velocity mode </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#a4b8dde205404e021b0955c8f38f81cbd">JMotorControllerOpen</a>, and <a class="el" href="class_j_motor_controller_closed.html#a27a2111becac48d07782e30cfe46b2cf">JMotorControllerClosed</a>.</p>
+
+</div>
+</div>
 <a id="a07c8715135799319bae0d4a86751cab5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a07c8715135799319bae0d4a86751cab5">&#9670;&nbsp;</a></span>resetPos()</h2>
 
@@ -279,8 +317,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab324afa199f0643bd071eab1d91cb496"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab324afa199f0643bd071eab1d91cb496">&#9670;&nbsp;</a></span>setPosDelta()</h2>
+<a id="adbd35fd91c445e113fed9c95447a996c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbd35fd91c445e113fed9c95447a996c">&#9670;&nbsp;</a></span>setPosDelta()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -298,13 +336,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>_resetPos</em> = <code>false</code>, </td>
+          <td class="paramname"><em>_run</em> = <code>true</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>_run</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>_resetPos</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -336,7 +374,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_closed.html#a34b9a874846877ba5f2e229ad279d4c4">JMotorControllerClosed</a>, and <a class="el" href="class_j_motor_controller_open.html#a2fff42e1e435cafe638e792d699b56fb">JMotorControllerOpen</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#a4540afb89acd8ed881c79fca5ecc27df">JMotorControllerOpen</a>, and <a class="el" href="class_j_motor_controller_closed.html#a72281de777e19e8d76828c50601dcf0e">JMotorControllerClosed</a>.</p>
 
 </div>
 </div>
@@ -390,7 +428,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#a6389b6056bbc2a5e3cfe89ad73658880">JMotorControllerOpen</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#a6389b6056bbc2a5e3cfe89ad73658880">JMotorControllerOpen</a>, and <a class="el" href="class_j_motor_controller_closed.html#ad496ac823a16b23f0ed687e829012f2d">JMotorControllerClosed</a>.</p>
 
 </div>
 </div>
@@ -443,7 +481,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#a3e3d100832eda976980648ec08d7e7d6">JMotorControllerOpen</a>.</p>
+<p>Implemented in <a class="el" href="class_j_motor_controller_open.html#a3e3d100832eda976980648ec08d7e7d6">JMotorControllerOpen</a>, and <a class="el" href="class_j_motor_controller_closed.html#a4dd3798a9b1b5590a28e45c1e59b395a">JMotorControllerClosed</a>.</p>
 
 </div>
 </div>

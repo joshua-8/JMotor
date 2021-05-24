@@ -63,6 +63,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_j_servo_controller-members.html">List of all members</a>  </div>
@@ -80,8 +81,9 @@ Inheritance diagram for JServoController:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_servo_controller__inherit__graph.png" border="0" usemap="#a_j_servo_controller_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_j_servo_controller_inherit__map" id="a_j_servo_controller_inherit__map">
-<area shape="rect" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="46,5,165,32"/>
+<area shape="rect" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="141,5,259,32"/>
 <area shape="rect" href="class_j_servo_controller_advanced.html" title=" " alt="" coords="17,80,193,107"/>
+<area shape="rect" href="class_j_servo_controller_gentle.html" title=" " alt="" coords="218,80,374,107"/>
 <area shape="rect" href="class_j_servo_controller_stall_protected.html" title=" " alt="" coords="5,155,205,181"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -98,9 +100,9 @@ Collaboration diagram for JServoController:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6c5d31563b1988e7666590ffba4f5a3a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a6c5d31563b1988e7666590ffba4f5a3a">JServoController</a> (<a class="el" href="class_j_motor_driver_servo.html">JMotorDriverServo</a> &amp;_servo, bool _reverse=false, float velLimit=INFINITY, float accelLimit=INFINITY, unsigned long _disableTimeout=0, float _minAngleLimit=0, float _maxAngleLimit=180, float _pos=90, float _minSetAngle=0, float _maxSetAngle=180, int minServoVal=544, int maxServoVal=2400)</td></tr>
-<tr class="memdesc:a6c5d31563b1988e7666590ffba4f5a3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting">JServoController</a>, a class for controlling <a class="el" href="class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo">JMotorDriverServo</a>, with angle calibration and accel and velocity limiting.  <a href="class_j_servo_controller.html#a6c5d31563b1988e7666590ffba4f5a3a">More...</a><br /></td></tr>
-<tr class="separator:a6c5d31563b1988e7666590ffba4f5a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44355af01e54681967394a32bd6a2d02"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a44355af01e54681967394a32bd6a2d02">JServoController</a> (<a class="el" href="class_j_motor_driver_servo.html">JMotorDriverServo</a> &amp;_servo, bool _reverse=false, float velLimit=INFINITY, float accelLimit=INFINITY, unsigned long _disableTimeout=0, float _minAngleLimit=0, float _maxAngleLimit=180, float _pos=90, float _minSetAngle=0, float _maxSetAngle=180, int minServoVal=544, int maxServoVal=2400, bool _preventGoingWrongWay=true, bool _preventGoingTooFast=true, float _stoppingAccelLimit=INFINITY)</td></tr>
+<tr class="memdesc:a44355af01e54681967394a32bd6a2d02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting">JServoController</a>, a class for controlling <a class="el" href="class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo">JMotorDriverServo</a>, with angle calibration and accel and velocity limiting.  <a href="class_j_servo_controller.html#a44355af01e54681967394a32bd6a2d02">More...</a><br /></td></tr>
+<tr class="separator:a44355af01e54681967394a32bd6a2d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2aaa4c4bbc534a04bef7cad95c2c09a1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1">run</a> ()</td></tr>
 <tr class="memdesc:a2aaa4c4bbc534a04bef7cad95c2c09a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">call this in your main loop  <a href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1">More...</a><br /></td></tr>
 <tr class="separator:a2aaa4c4bbc534a04bef7cad95c2c09a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -201,6 +203,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a4146135df9f0ad6f209e9211bf68ee3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns difference (in microseconds) between longest and shortest servo pulse settings  <a href="class_j_servo_controller.html#a4146135df9f0ad6f209e9211bf68ee3e">More...</a><br /></td></tr>
 <tr class="separator:a4146135df9f0ad6f209e9211bf68ee3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:acef61a22e9827aac5e2f0523e9890385"><td class="memItemLeft" align="right" valign="top">Derivs_Limiter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#acef61a22e9827aac5e2f0523e9890385">dL</a></td></tr>
+<tr class="memdesc:acef61a22e9827aac5e2f0523e9890385"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance of Derivs_Limiter class used to smoothly move servo  <a href="class_j_servo_controller.html#acef61a22e9827aac5e2f0523e9890385">More...</a><br /></td></tr>
+<tr class="separator:acef61a22e9827aac5e2f0523e9890385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a934c27383f8568e2ccd9299c9f1a7a88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a934c27383f8568e2ccd9299c9f1a7a88">writeAngleToServo</a> (float ang)</td></tr>
@@ -213,9 +221,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:aed08c49c0044b8504abd73474af722bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_j_motor_driver_servo.html">JMotorDriverServo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#aed08c49c0044b8504abd73474af722bd">servo</a></td></tr>
 <tr class="memdesc:aed08c49c0044b8504abd73474af722bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">reference to driver that's a subclass of <a class="el" href="class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo">JMotorDriverServo</a>  <a href="class_j_servo_controller.html#aed08c49c0044b8504abd73474af722bd">More...</a><br /></td></tr>
 <tr class="separator:aed08c49c0044b8504abd73474af722bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c1f10a6a2eaec31f564eb587f02898e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a9c1f10a6a2eaec31f564eb587f02898e">disableTimeout</a></td></tr>
-<tr class="memdesc:a9c1f10a6a2eaec31f564eb587f02898e"><td class="mdescLeft">&#160;</td><td class="mdescRight">variable for how long to wait if not moved before disabling (default: 0, never disable)  <a href="class_j_servo_controller.html#a9c1f10a6a2eaec31f564eb587f02898e">More...</a><br /></td></tr>
-<tr class="separator:a9c1f10a6a2eaec31f564eb587f02898e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a7fe6b21b17c922359810ca92a8a939"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a9a7fe6b21b17c922359810ca92a8a939">disableTimeout</a></td></tr>
+<tr class="memdesc:a9a7fe6b21b17c922359810ca92a8a939"><td class="mdescLeft">&#160;</td><td class="mdescRight">variable for how long to wait if not moved before disabling (default: 0, never disable)  <a href="class_j_servo_controller.html#a9a7fe6b21b17c922359810ca92a8a939">More...</a><br /></td></tr>
+<tr class="separator:a9a7fe6b21b17c922359810ca92a8a939"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53b77bdea93dccfa5f52a97c6739dde4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a53b77bdea93dccfa5f52a97c6739dde4">minAngleLimit</a></td></tr>
 <tr class="memdesc:a53b77bdea93dccfa5f52a97c6739dde4"><td class="mdescLeft">&#160;</td><td class="mdescRight">lower limit for angle setpoint  <a href="class_j_servo_controller.html#a53b77bdea93dccfa5f52a97c6739dde4">More...</a><br /></td></tr>
 <tr class="separator:a53b77bdea93dccfa5f52a97c6739dde4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -243,15 +251,13 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a8d4118991e5a5e81273b77e7536d06c9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a8d4118991e5a5e81273b77e7536d06c9">rewriteToServo</a></td></tr>
 <tr class="memdesc:a8d4118991e5a5e81273b77e7536d06c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">used for telling if the driver needs to be set to a new value  <a href="class_j_servo_controller.html#a8d4118991e5a5e81273b77e7536d06c9">More...</a><br /></td></tr>
 <tr class="separator:a8d4118991e5a5e81273b77e7536d06c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acef61a22e9827aac5e2f0523e9890385"><td class="memItemLeft" align="right" valign="top">Derivs_Limiter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#acef61a22e9827aac5e2f0523e9890385">dL</a></td></tr>
-<tr class="memdesc:acef61a22e9827aac5e2f0523e9890385"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance of Derivs_Limiter class used to smoothly move servo  <a href="class_j_servo_controller.html#acef61a22e9827aac5e2f0523e9890385">More...</a><br /></td></tr>
-<tr class="separator:acef61a22e9827aac5e2f0523e9890385"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>class for controlling <a class="el" href="class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo">JMotorDriverServo</a>, with angle calibration and accel and velocity limiting </p>
+<dl class="section note"><dt>Note</dt><dd>after creating a ServoController object with a ServoDriver, using the Driver's methods directly is not recommended </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a6c5d31563b1988e7666590ffba4f5a3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c5d31563b1988e7666590ffba4f5a3a">&#9670;&nbsp;</a></span>JServoController()</h2>
+<a id="a44355af01e54681967394a32bd6a2d02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44355af01e54681967394a32bd6a2d02">&#9670;&nbsp;</a></span>JServoController()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -329,7 +335,25 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>maxServoVal</em> = <code>2400</code>&#160;</td>
+          <td class="paramname"><em>maxServoVal</em> = <code>2400</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_preventGoingWrongWay</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_preventGoingTooFast</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_stoppingAccelLimit</em> = <code>INFINITY</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -359,6 +383,9 @@ Protected Attributes</h2></td></tr>
     <tr><td class="paramname">_maxSetAngle</td><td>(float) default: 180, when servo driver is set to its maximum (probably 1) what angle does the servo go to? </td></tr>
     <tr><td class="paramname">minServoVal</td><td>(int) default: 544, microseconds for servo signal pulse for minimum angle </td></tr>
     <tr><td class="paramname">maxServoVal</td><td>(int) default: 2400, microseconds for servo signal pulse for maximum angle </td></tr>
+    <tr><td class="paramname">_preventGoingWrongWay</td><td>(bool) default: true, immediately stop if going away from target </td></tr>
+    <tr><td class="paramname">_preventGoingTooFast</td><td>(bool) default: true, immediately slow down if set to a speed above velLimit </td></tr>
+    <tr><td class="paramname">_stoppingAccelLimit</td><td>(float) default: INFINITY, </td></tr>
   </table>
   </dd>
 </dl>
@@ -1720,8 +1747,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a9c1f10a6a2eaec31f564eb587f02898e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c1f10a6a2eaec31f564eb587f02898e">&#9670;&nbsp;</a></span>disableTimeout</h2>
+<a id="a9a7fe6b21b17c922359810ca92a8a939"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a7fe6b21b17c922359810ca92a8a939">&#9670;&nbsp;</a></span>disableTimeout</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1730,7 +1757,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int JServoController::disableTimeout</td>
+          <td class="memname">unsigned long JServoController::disableTimeout</td>
         </tr>
       </table>
   </td>
@@ -1749,19 +1776,11 @@ Protected Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Derivs_Limiter JServoController::dL</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>instance of Derivs_Limiter class used to smoothly move servo </p>

@@ -107,9 +107,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acd0dfb836308ccf350d970d3129c8df3"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_quadrature.html#acd0dfb836308ccf350d970d3129c8df3">getCounter</a> ()</td></tr>
 <tr class="memdesc:acd0dfb836308ccf350d970d3129c8df3"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns how far the encoder has turned from the zero position  <a href="class_j_encoder_quadrature.html#acd0dfb836308ccf350d970d3129c8df3">More...</a><br /></td></tr>
 <tr class="separator:acd0dfb836308ccf350d970d3129c8df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc909c42a47c50d11b0fee76d99f8114"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_quadrature.html#acc909c42a47c50d11b0fee76d99f8114">getDist</a> ()</td></tr>
-<tr class="memdesc:acc909c42a47c50d11b0fee76d99f8114"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns how far the encoder has turned from the zero position converted to distance  <a href="class_j_encoder_quadrature.html#acc909c42a47c50d11b0fee76d99f8114">More...</a><br /></td></tr>
-<tr class="separator:acc909c42a47c50d11b0fee76d99f8114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de65ff698485d7e4f9b7cbb87210168"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_quadrature.html#a8de65ff698485d7e4f9b7cbb87210168">getPos</a> ()</td></tr>
+<tr class="memdesc:a8de65ff698485d7e4f9b7cbb87210168"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns how far the encoder has turned from the zero position converted to distance  <a href="class_j_encoder_quadrature.html#a8de65ff698485d7e4f9b7cbb87210168">More...</a><br /></td></tr>
+<tr class="separator:a8de65ff698485d7e4f9b7cbb87210168"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ed4f35554c2e7a2f940e1b66dcefea7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_quadrature.html#a2ed4f35554c2e7a2f940e1b66dcefea7">getDistPerCountFactor</a> ()</td></tr>
 <tr class="memdesc:a2ed4f35554c2e7a2f940e1b66dcefea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a conversion factor between encoder ticks and distance that can be set for the encoder  <a href="class_j_encoder_quadrature.html#a2ed4f35554c2e7a2f940e1b66dcefea7">More...</a><br /></td></tr>
 <tr class="separator:a2ed4f35554c2e7a2f940e1b66dcefea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -261,42 +261,6 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="acc909c42a47c50d11b0fee76d99f8114"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc909c42a47c50d11b0fee76d99f8114">&#9670;&nbsp;</a></span>getDist()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float JEncoderQuadrature::getDist </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>returns how far the encoder has turned from the zero position converted to distance </p>
-<dl class="section note"><dt>Note</dt><dd>remember that variables overflow (counter) and that floats have limited precision </dd></dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">(float)</td><td>encoder ticks converted to distance </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="class_j_encoder.html#a8b06b77c281d2228d7362c9ebc043405">JEncoder</a>.</p>
-
-</div>
-</div>
 <a id="a2ed4f35554c2e7a2f940e1b66dcefea7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2ed4f35554c2e7a2f940e1b66dcefea7">&#9670;&nbsp;</a></span>getDistPerCountFactor()</h2>
 
@@ -330,6 +294,42 @@ Protected Attributes</h2></td></tr>
 </dl>
 
 <p>Reimplemented from <a class="el" href="class_j_encoder.html#a0eda190de4c394c8d7a554203cdde5b1">JEncoder</a>.</p>
+
+</div>
+</div>
+<a id="a8de65ff698485d7e4f9b7cbb87210168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de65ff698485d7e4f9b7cbb87210168">&#9670;&nbsp;</a></span>getPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JEncoderQuadrature::getPos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>returns how far the encoder has turned from the zero position converted to distance </p>
+<dl class="section note"><dt>Note</dt><dd>remember that variables overflow (counter) and that floats have limited precision </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(float)</td><td>encoder ticks converted to distance </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="class_j_encoder.html#a68750221df8feb53053648686039fede">JEncoder</a>.</p>
 
 </div>
 </div>

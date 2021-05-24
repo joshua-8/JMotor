@@ -63,6 +63,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_j_motor_driver-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">JMotorDriver Class Reference</div>  </div>
@@ -118,6 +119,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a978c868297bf5ee5958d44764bb2bbda"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#a978c868297bf5ee5958d44764bb2bbda">disable</a> ()</td></tr>
 <tr class="memdesc:a978c868297bf5ee5958d44764bb2bbda"><td class="mdescLeft">&#160;</td><td class="mdescRight">disable motor  <a href="class_j_motor_driver.html#a978c868297bf5ee5958d44764bb2bbda">More...</a><br /></td></tr>
 <tr class="separator:a978c868297bf5ee5958d44764bb2bbda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfa0cc2fff07bf8833ad6206f3147f58"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#adfa0cc2fff07bf8833ad6206f3147f58">getLastSetVal</a> ()</td></tr>
+<tr class="memdesc:adfa0cc2fff07bf8833ad6206f3147f58"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns what value the driver was most recently set to  <a href="class_j_motor_driver.html#adfa0cc2fff07bf8833ad6206f3147f58">More...</a><br /></td></tr>
+<tr class="separator:adfa0cc2fff07bf8833ad6206f3147f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a92fe2099937a355886bff05062f1392d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#a92fe2099937a355886bff05062f1392d">lastSetVal</a> = 0</td></tr>
+<tr class="separator:a92fe2099937a355886bff05062f1392d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d65f6c4b6de9c37e8049a9b754d5abe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#a2d65f6c4b6de9c37e8049a9b754d5abe">justEnabled</a> = true</td></tr>
+<tr class="separator:a2d65f6c4b6de9c37e8049a9b754d5abe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>defines common interface for all types of JMotorDrivers </p>
@@ -223,6 +234,40 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Reimplemented in <a class="el" href="class_j_motor_driver_servo_dual.html#a9954706115138cb6c4e4e30bee3aec98">JMotorDriverServoDual</a>, <a class="el" href="class_j_motor_driver_servo_advanced_dual.html#ad9a025bda3ceb19c6e146781f1f9ed0f">JMotorDriverServoAdvancedDual</a>, <a class="el" href="class_j_motor_driver_esp32_servo.html#af463cca678ccbc99235f7159519d5784">JMotorDriverEsp32Servo</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m_dir.html#a4c079c6b3a2949006062fde1dd1341cf">JMotorDriverEsp32PWMDir</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m.html#acc8f4a05c147d20d5fdea46c245ac9ae">JMotorDriverEsp32PWM</a>, <a class="el" href="class_j_motor_driver_esp32_l293.html#a3339aa36c306437bd8ecd6cea3aceaca">JMotorDriverEsp32L293</a>, <a class="el" href="class_j_motor_driver_dual.html#ad352a0c48ed9ff973fb3d45ff6ba7e0a">JMotorDriverDual</a>, <a class="el" href="class_j_motor_driver_avr_servo.html#a37634be558fecac3744150459576c834">JMotorDriverAvrServo</a>, <a class="el" href="class_j_motor_driver_avr_p_w_m_dir.html#a97080f59d31c1c36e638249224ff62ef">JMotorDriverAvrPWMDir</a>, <a class="el" href="class_j_motor_driver_avr_p_w_m.html#aef7cb6edfa6150bca3a0eb08d28534d2">JMotorDriverAvrPWM</a>, and <a class="el" href="class_j_motor_driver_avr_l293.html#a99ae564d7274b0d60531a2769a9393dc">JMotorDriverAvrL293</a>.</p>
+
+</div>
+</div>
+<a id="adfa0cc2fff07bf8833ad6206f3147f58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfa0cc2fff07bf8833ad6206f3147f58">&#9670;&nbsp;</a></span>getLastSetVal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JMotorDriver::getLastSetVal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>returns what value the driver was most recently set to </p>
+<dl class="section note"><dt>Note</dt><dd>only updates when driver is enabled </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(float)</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -381,6 +426,51 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Reimplemented in <a class="el" href="class_j_motor_driver_servo_dual.html#ab083fe1ca606166e6cd09e97e025b8c7">JMotorDriverServoDual</a>, <a class="el" href="class_j_motor_driver_servo_advanced_dual.html#aa9f7e875013af8781a263c267574b175">JMotorDriverServoAdvancedDual</a>, <a class="el" href="class_j_motor_driver_esp32_servo.html#adf5de4f2276842480f038fbc62cf6f4a">JMotorDriverEsp32Servo</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m_dir.html#a0fc2d37d4aec674b33e115007ef55451">JMotorDriverEsp32PWMDir</a>, <a class="el" href="class_j_motor_driver_esp32_p_w_m.html#aea96e390987b41f398d1f56da711d7a9">JMotorDriverEsp32PWM</a>, <a class="el" href="class_j_motor_driver_esp32_l293.html#a6e1417cdb14b5ca814f7891a6cb46a1d">JMotorDriverEsp32L293</a>, <a class="el" href="class_j_motor_driver_dual.html#a0c54674252822ebec9091099c9ba6008">JMotorDriverDual</a>, <a class="el" href="class_j_motor_driver_avr_servo.html#a015bfbfde8b118e32cfe24b2a76bb35e">JMotorDriverAvrServo</a>, <a class="el" href="class_j_motor_driver_avr_p_w_m_dir.html#a7ff1e14775c87680fe74d0b872918676">JMotorDriverAvrPWMDir</a>, <a class="el" href="class_j_motor_driver_avr_p_w_m.html#a713be9a6dbb651d724d42a1178664d24">JMotorDriverAvrPWM</a>, and <a class="el" href="class_j_motor_driver_avr_l293.html#ad84d5f19c2dac5c80fdce28afd0eeda3">JMotorDriverAvrL293</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a2d65f6c4b6de9c37e8049a9b754d5abe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d65f6c4b6de9c37e8049a9b754d5abe">&#9670;&nbsp;</a></span>justEnabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool JMotorDriver::justEnabled = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a92fe2099937a355886bff05062f1392d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92fe2099937a355886bff05062f1392d">&#9670;&nbsp;</a></span>lastSetVal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JMotorDriver::lastSetVal = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

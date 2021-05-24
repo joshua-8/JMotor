@@ -90,9 +90,6 @@ $(function() {
 : <a class="el" href="class_j_motor_controller_basic.html#a4c1f4b702b721dd056c7dc5e01d3ee03">JMotorControllerBasic</a>
 , <a class="el" href="class_j_motor_controller_closed.html#abb6636240bf21f5663581dcb2b61b838">JMotorControllerClosed</a>
 </li>
-<li>currentSensor
-: <a class="el" href="class_j_servo_controller_stall_protected.html#a87f7c61b2c18cf3a667f9b34a67c4695">JServoControllerStallProtected</a>
-</li>
 </ul>
 
 
@@ -108,11 +105,13 @@ $(function() {
 , <a class="el" href="class_j_motor_driver_esp32_p_w_m.html#aa1a4281d58456ddc0aba8f7f9d184a0c">JMotorDriverEsp32PWM</a>
 </li>
 <li>disableTimeout
-: <a class="el" href="class_j_servo_controller.html#a9c1f10a6a2eaec31f564eb587f02898e">JServoController</a>
+: <a class="el" href="class_j_servo_controller.html#a9a7fe6b21b17c922359810ca92a8a939">JServoController</a>
+</li>
+<li>distFromSetpointLimit
+: <a class="el" href="class_j_motor_controller_closed.html#af6555ab2d5321d1fd24110938c2b30d7">JMotorControllerClosed</a>
 </li>
 <li>dL
-: <a class="el" href="class_j_motor_controller_closed.html#a80686714c04a9985ebaa545b9bb58b73">JMotorControllerClosed</a>
-, <a class="el" href="class_j_motor_controller_open.html#ac176d0c32c38755f61e5fc69d85c0219">JMotorControllerOpen</a>
+: <a class="el" href="class_j_motor_controller_open.html#ac176d0c32c38755f61e5fc69d85c0219">JMotorControllerOpen</a>
 , <a class="el" href="class_j_servo_controller.html#acef61a22e9827aac5e2f0523e9890385">JServoController</a>
 </li>
 <li>driver
@@ -153,6 +152,9 @@ $(function() {
 
 
 <h3><a id="index_j"></a>- j -</h3><ul>
+<li>justEnabled
+: <a class="el" href="class_j_motor_driver.html#a2d65f6c4b6de9c37e8049a9b754d5abe">JMotorDriver</a>
+</li>
 <li>justStarted
 : <a class="el" href="class_j_servo_current_sensor.html#aa712829ec49cec2733d06cd3ea222c89">JServoCurrentSensor</a>
 </li>
@@ -168,6 +170,13 @@ $(function() {
 </li>
 <li>lastRunMicros
 : <a class="el" href="class_j_motor_controller_basic.html#a175be0e9bf6befcedfe864696db78130">JMotorControllerBasic</a>
+, <a class="el" href="class_j_motor_controller_closed.html#a3211ccb69573ece34bdbf81de9bcaa1c">JMotorControllerClosed</a>
+</li>
+<li>lastSetVal
+: <a class="el" href="class_j_motor_driver.html#a92fe2099937a355886bff05062f1392d">JMotorDriver</a>
+</li>
+<li>limitSetpointDistFromCurrent
+: <a class="el" href="class_j_motor_controller_closed.html#afbd7ffede859faf8c514efcae0c2096e">JMotorControllerClosed</a>
 </li>
 </ul>
 
@@ -255,7 +264,7 @@ $(function() {
 
 <h3><a id="index_o"></a>- o -</h3><ul>
 <li>open
-: <a class="el" href="class_j_motor_controller_closed.html#a8a5d372bac5dd08ca90de3478dddc5cb">JMotorControllerClosed</a>
+: <a class="el" href="class_j_motor_controller_closed.html#a8eec494a29c294a6eaaa38deda8e0ca1">JMotorControllerClosed</a>
 </li>
 </ul>
 
@@ -264,6 +273,12 @@ $(function() {
 <li>posDelta
 : <a class="el" href="class_j_motor_controller_open.html#a6ef86624b07d5b5ea560d97b9f2e623e">JMotorControllerOpen</a>
 </li>
+<li>posDeltaSetpoint
+: <a class="el" href="class_j_motor_controller_closed.html#a421e4b9724bd8a278de9a73af300906f">JMotorControllerClosed</a>
+</li>
+<li>posDeltaSetpointTarget
+: <a class="el" href="class_j_motor_controller_closed.html#ad44bcf897edc79435cf18553baca7ac3">JMotorControllerClosed</a>
+</li>
 <li>position
 : <a class="el" href="class_j_motor_controller_open.html#a917a6564a342fffc14c31e3669e01cad">JMotorControllerOpen</a>
 </li>
@@ -271,7 +286,14 @@ $(function() {
 : <a class="el" href="class_j_motor_controller_open.html#a4c13006321b87236a3feb707df91258b">JMotorControllerOpen</a>
 </li>
 <li>posMode
-: <a class="el" href="class_j_motor_controller_open.html#a42adee6e39dfdffcf65854b588f47023">JMotorControllerOpen</a>
+: <a class="el" href="class_j_motor_controller_closed.html#acb6b92aa578cb11d656cd9277d33acbd">JMotorControllerClosed</a>
+, <a class="el" href="class_j_motor_controller_open.html#a42adee6e39dfdffcf65854b588f47023">JMotorControllerOpen</a>
+</li>
+<li>posSetpoint
+: <a class="el" href="class_j_motor_controller_closed.html#a1074b8eb61ab6ac936fd31b8938f6399">JMotorControllerClosed</a>
+</li>
+<li>posSetpointSmoother
+: <a class="el" href="class_j_motor_controller_closed.html#acd7412581aa88841f34424ec7c9a55bd">JMotorControllerClosed</a>
 </li>
 <li>PWM_RANGE
 : <a class="el" href="class_j_motor_driver_avr_p_w_m.html#a03a258f040596b9711fd2e773434bd54">JMotorDriverAvrPWM</a>
@@ -320,6 +342,9 @@ $(function() {
 <li>sleeping
 : <a class="el" href="class_j_servo_controller.html#a2d833287f0d9d943884fc1b5052eec1d">JServoController</a>
 </li>
+<li>smoothed
+: <a class="el" href="class_j_motor_controller_closed.html#a58f887d64bf50436887511d7777eb167">JMotorControllerClosed</a>
+</li>
 <li>smoothedMode
 : <a class="el" href="class_j_motor_controller_open.html#ade07985081b2676aa297abff051f3032">JMotorControllerOpen</a>
 </li>
@@ -337,6 +362,9 @@ $(function() {
 </li>
 <li>stallProtectionActivated
 : <a class="el" href="class_j_servo_controller_stall_protected.html#a55ab461b3a55e59c22787c514017bd72">JServoControllerStallProtected</a>
+</li>
+<li>stallSensor
+: <a class="el" href="class_j_servo_controller_stall_protected.html#abe5a1e639b751d0dfff75d360c18a64d">JServoControllerStallProtected</a>
 </li>
 <li>stallStateChangeMillis
 : <a class="el" href="class_j_servo_controller_stall_protected.html#ac85d438624e4e01838c133d54c269cd3">JServoControllerStallProtected</a>
@@ -380,6 +408,12 @@ $(function() {
 </li>
 <li>velocityTarget
 : <a class="el" href="class_j_motor_controller_basic.html#a3888a31cc6f05f4a78a0aaa10091cb94">JMotorControllerBasic</a>
+</li>
+<li>velSetpoint
+: <a class="el" href="class_j_motor_controller_closed.html#a5ce6245fa0025e8a06e0b453f819b509">JMotorControllerClosed</a>
+</li>
+<li>velSetpointTarget
+: <a class="el" href="class_j_motor_controller_closed.html#a25512423303d0f0d979e26e4994b09a6">JMotorControllerClosed</a>
 </li>
 </ul>
 

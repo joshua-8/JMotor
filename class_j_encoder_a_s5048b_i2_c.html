@@ -131,9 +131,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a046728560702239c1af7f4087df9e9f9"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a046728560702239c1af7f4087df9e9f9">getCounter</a> ()</td></tr>
 <tr class="memdesc:a046728560702239c1af7f4087df9e9f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns how far the encoder has turned from the zero position  <a href="class_j_encoder_a_s5048b_i2_c.html#a046728560702239c1af7f4087df9e9f9">More...</a><br /></td></tr>
 <tr class="separator:a046728560702239c1af7f4087df9e9f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abad14bb180b9435d2fd654c98eb56f76"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#abad14bb180b9435d2fd654c98eb56f76">getDist</a> ()</td></tr>
-<tr class="memdesc:abad14bb180b9435d2fd654c98eb56f76"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns how far the encoder has turned from the zero position converted to distance  <a href="class_j_encoder_a_s5048b_i2_c.html#abad14bb180b9435d2fd654c98eb56f76">More...</a><br /></td></tr>
-<tr class="separator:abad14bb180b9435d2fd654c98eb56f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a558ff2f63938716deee75373d43d1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a06a558ff2f63938716deee75373d43d1">getPos</a> ()</td></tr>
+<tr class="memdesc:a06a558ff2f63938716deee75373d43d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns how far the encoder has turned from the zero position converted to distance  <a href="class_j_encoder_a_s5048b_i2_c.html#a06a558ff2f63938716deee75373d43d1">More...</a><br /></td></tr>
+<tr class="separator:a06a558ff2f63938716deee75373d43d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5138a500cb0d24f47b29e9595a3aabb1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a5138a500cb0d24f47b29e9595a3aabb1">getDistPerCountFactor</a> ()</td></tr>
 <tr class="memdesc:a5138a500cb0d24f47b29e9595a3aabb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a conversion factor between encoder ticks and distance that can be set for the encoder  <a href="class_j_encoder_a_s5048b_i2_c.html#a5138a500cb0d24f47b29e9595a3aabb1">More...</a><br /></td></tr>
 <tr class="separator:a5138a500cb0d24f47b29e9595a3aabb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -263,42 +263,6 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="abad14bb180b9435d2fd654c98eb56f76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abad14bb180b9435d2fd654c98eb56f76">&#9670;&nbsp;</a></span>getDist()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float JEncoderAS5048bI2C::getDist </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>returns how far the encoder has turned from the zero position converted to distance </p>
-<dl class="section note"><dt>Note</dt><dd>remember that variables overflow (counter) and that floats have limited precision </dd></dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">(float)</td><td>encoder ticks converted to distance </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="class_j_encoder.html#a8b06b77c281d2228d7362c9ebc043405">JEncoder</a>.</p>
-
-</div>
-</div>
 <a id="a5138a500cb0d24f47b29e9595a3aabb1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5138a500cb0d24f47b29e9595a3aabb1">&#9670;&nbsp;</a></span>getDistPerCountFactor()</h2>
 
@@ -332,6 +296,42 @@ Static Public Attributes</h2></td></tr>
 </dl>
 
 <p>Reimplemented from <a class="el" href="class_j_encoder.html#a0eda190de4c394c8d7a554203cdde5b1">JEncoder</a>.</p>
+
+</div>
+</div>
+<a id="a06a558ff2f63938716deee75373d43d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06a558ff2f63938716deee75373d43d1">&#9670;&nbsp;</a></span>getPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JEncoderAS5048bI2C::getPos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>returns how far the encoder has turned from the zero position converted to distance </p>
+<dl class="section note"><dt>Note</dt><dd>remember that variables overflow (counter) and that floats have limited precision </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(float)</td><td>encoder ticks converted to distance </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="class_j_encoder.html#a68750221df8feb53053648686039fede">JEncoder</a>.</p>
 
 </div>
 </div>
@@ -429,7 +429,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>how many full turns the encoder has made. </p>
-<dl class="section note"><dt>Note</dt><dd>this and rawReading can be used as an alternative to getDist if the limited precision of a float is a concert </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>this and rawReading can be used as an alternative to getPos if the limited precision of a float is a concern </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">(long)</td><td>how far the encoder has turned </td></tr>
