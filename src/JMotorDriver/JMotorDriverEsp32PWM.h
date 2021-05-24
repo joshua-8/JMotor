@@ -50,9 +50,13 @@ public:
     }
     bool set(float _val)
     {
-        if (enabled) {
-            int val = constrain(_val * PWM_RANGE, 0, PWM_RANGE);
-            ledcWrite(ch, val);
+        if (justEnabled || _val != lastSetVal) {
+            if (enabled) {
+                lastSetVal = _val;
+                justEnabled = false;
+                int val = constrain(_val * PWM_RANGE, 0, PWM_RANGE);
+                ledcWrite(ch, val);
+            }
         }
         return (_val > 0) && (_val < 1.0);
     }
@@ -61,6 +65,7 @@ public:
         if (_enable) {
             if (!enabled) {
                 //actually enable
+                justEnabled = true;
                 enabled = true;
                 ledcSetup(ch, PWM_FREQ, PWM_RES);
                 ledcAttachPin(pin, ch);

@@ -27,31 +27,30 @@
 
 #include <JMotor.h>
 
-JMotorDriverEsp32Servo myServo = JMotorDriverEsp32Servo(port1);
-JServoCurrentSensor myServoCurrent = JServoCurrentSensor(port5Pin, 150);
-JServoControllerStallProtected servoCtrl = JServoControllerStallProtected(JServoControllerAdvanced(myServo, .3, 0, 1, 0, false, 120, 75, 0, -90, 90, 0, -90, 90), myServoCurrent, .1, .4, 500, 1000);
-// JServoControllerAdvanced servoCtrl = JServoControllerAdvanced(myServo, .3, 0, 1, 1000, false, 120, 75, 0, -90, 90, 0, -90, 90);
-// JEncoderPWMAbsoluteAttachInterrupt encoder = JEncoderPWMAbsoluteAttachInterrupt(inport1, JEncoderPWMAbsolute_AS5048settings, true, 1, 50000, 1000, true);
-// IRAM_ATTR jENCODER_MAKE_ISR_MACRO(encoder);
+// JMotorDriverEsp32Servo myServo = JMotorDriverEsp32Servo(port1);
+// JServoCurrentSensor myServoCurrent = JServoCurrentSensor(port5Pin, 150);
+// JServoControllerStallProtected servoCtrl = JServoControllerStallProtected(JServoControllerAdvanced(myServo, .3, 0, 1, 0, false, 120, 75, 0, -90, 90, 0, -90, 90), myServoCurrent, .1, .4, 500, 1000);
+// JServoControllerAdvanced servoCtrl = JServoControllerAdvanced(myServo, .3, 0, 1, 1000, false, 120, 75, 0, -40, 40, 0, -90, 90, 544, 2400, true, true, 1.0);
 
-// JVoltageCompMeasure<10> voltageComp = JVoltageCompMeasure<10>(batMonitorPin, dacUnitsPerVolt);
-// JMotorCompStandardConfig ttConfig = JMotorCompStandardConfig(1.9, .5, 3.2, 1.1, 4.6, 1.7, 100);
-// JMotorCompStandard myMotorCompensator = JMotorCompStandard(voltageComp, ttConfig, 1.0);
-// JMotorDriverEsp32L293 myDriver = JMotorDriverEsp32L293(portD);
-// JMotorControllerOpen myController = JMotorControllerOpen(myDriver, myMotorCompensator, INFINITY, .5);
+JEncoderPWMAbsoluteAttachInterrupt encoder = JEncoderPWMAbsoluteAttachInterrupt(inport2, JEncoderPWMAbsolute_AS5048settings, true, 1, 50000, 1000, true);
+IRAM_ATTR jENCODER_MAKE_ISR_MACRO(encoder);
 
+JVoltageCompMeasure<10> voltageComp = JVoltageCompMeasure<10>(batMonitorPin, dacUnitsPerVolt);
+JMotorCompStandardConfig ttConfig = JMotorCompStandardConfig(1.9, .5, 3.2, 1.1, 4.6, 1.7, 100);
+JMotorCompStandard myMotorCompensator = JMotorCompStandard(voltageComp, ttConfig, 1.0);
+JMotorDriverEsp32L293 myDriver = JMotorDriverEsp32L293(portD);
+JMotorControllerClosed myController = JMotorControllerClosed(myDriver, myMotorCompensator, encoder, 1.5, .4, true, 1.5, .25);
+// JMotorControllerOpen myController = JMotorControllerOpen(myDriver,myMotorCompensator);
 String inString = "";
 float value = 0;
-float sum = 0;
-bool inc = true;
+int mode = 0;
+
 void setup()
 {
-    Serial.begin(9600);
-    // encoder.setUpInterrupts(encoder_jENCODER_ISR);
-    // myController.enable();
-    // myServo.enable();
-    servoCtrl.enable();
-    // pinMode(port5Pin, INPUT);
+    Serial.begin(250000);
+    encoder.setUpInterrupts(encoder_jENCODER_ISR);
+    myController.enable();
+    // myDriver.enable();
 }
 void loop()
 {
@@ -60,35 +59,31 @@ void loop()
         inString += (char)inChar;
         if (inChar == '\n') {
             if (inString.equals("e\n")) {
-                servoCtrl.setEnable(!servoCtrl.getEnable());
+                myController.setEnable(!myController.getEnable());
             } else if (inString.equals("r\n")) {
-                servoCtrl.wake();
-            } else if (inString.equals("w\n")) {
-                servoCtrl.setStrengthWeak();
-            } else if (inString.equals("s\n")) {
-                servoCtrl.setStrengthNormal();
-            } else if (inString.equals("p\n")) {
-                servoCtrl.setStallProtectionEnable(!servoCtrl.getStallProtectionEnable());
+                myController.resetPos();
             } else {
                 value = inString.toFloat();
+                myController.setPosTargetStallable(value, false);
             }
             inString = "";
         }
     }
-
-    servoCtrl.setAngle(value);
-
-    Serial.print(servoCtrl.isStalled() * 3);
-    Serial.print(",");
-    Serial.print(servoCtrl.isStallProtectionActivated() * 3);
-    Serial.print(",");
-    Serial.println(servoCtrl.currentSensor.getMeasurement(false) * 10);
+    myController.run();
     // encoder.run();
-    // myController.run();
-    // Serial.print(myController.getPosTarget());
-    // Serial.print(",");
-    // Serial.print(myController.getPos());
-    // Serial.println();
 
-    delay(1);
+    Serial.print(myController.getVelTarget());
+    Serial.print(",");
+    Serial.print(myController.getPosDeltaSetpoint());
+    Serial.print(",");
+    Serial.print(myController.getVelSetpoint());
+    Serial.print(",");
+    Serial.print(myController.getPosTarget());
+    Serial.print(",");
+    Serial.print(myController.getPosSetpoint());
+    Serial.print(",");
+    Serial.print(myController.getPos());
+    Serial.println();
+
+    // delay(2);
 }

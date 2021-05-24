@@ -8,6 +8,10 @@
  * @note  JMotorDriver's functions are virtual, it can not be used directly
  */
 class JMotorDriver {
+protected:
+    float lastSetVal = 0;
+    bool justEnabled = true;
+
 public:
     /**
      * @brief  set motor power
@@ -64,6 +68,16 @@ public:
     {
         return setEnable(false);
     }
+
+    /**
+     * @brief  returns what value the driver was most recently set to
+     * @note  only updates when driver is enabled
+     * @retval (float)
+     */
+    float getLastSetVal()
+    {
+        return lastSetVal;
+    }
 };
 #if defined(ESP32)
 #include "JMotorDriverEsp32L293.h"
@@ -81,7 +95,7 @@ public:
 #endif
 #include "JMotorDriverDual.h"
 #include "JMotorDriverServo.h"
-#include "JMotorDriverServoDual.h"
 #include "JMotorDriverServoAdvancedDual.h"
+#include "JMotorDriverServoDual.h"
 
 #endif

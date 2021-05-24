@@ -53,21 +53,19 @@ public:
         velLimit = max(_velLimit, (float)0.0);
     }
 
-    bool setVel(float vel, bool _run = true)
+    void setVel(float vel, bool _run = true)
     {
         velocity = vel;
         velocityTarget = vel;
         if (_run)
             JMotorControllerBasic::run();
-        return velocity == vel;
     }
 
-    bool setVelTarget(float vel, bool _run = true)
+    void setVelTarget(float vel, bool _run = true)
     {
         velocityTarget = vel;
         if (_run)
             JMotorControllerBasic::run();
-        return velocity == vel;
     }
 
     float getVelTarget()
@@ -87,14 +85,18 @@ public:
 
     void run()
     {
+        float time = (micros() - lastRunMicros) / 1000000.0;
+        lastRunMicros = micros();
+        if (time == 0) {
+            return;
+        }
         if (getEnable()) {
             if (velocity != velocityTarget) {
-                velocity += constrain(velocityTarget - velocity, -accelLimit * (micros() - lastRunMicros) / 1000000.0, accelLimit * (micros() - lastRunMicros) / 1000000.0);
+                velocity += constrain(velocityTarget - velocity, -accelLimit * time, accelLimit * time);
             }
             driverInRange = (abs(velocity) < compensator.getMaxVel());
             velocity = constrain(velocity, -compensator.getMaxVel() * (getDriverMinRange() < 0), compensator.getMaxVel() * (getDriverMaxRange() > 0));
             velocity = constrain(velocity, -velLimit, velLimit);
-            lastRunMicros = micros();
             if (driver.getEnable()) {
                 float lastSetVal = setVal;
                 setVal = compensator.compensate(velocity);

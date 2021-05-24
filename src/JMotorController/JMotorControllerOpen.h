@@ -30,26 +30,24 @@ public:
 
     void run()
     {
+        float time = (micros() - lastRunMicros) / 1000000.0;
+        if (time == 0) {
+            return;
+        }
         if (getEnable()) {
             if (posMode) {
                 if (!smoothedMode) { //setPosSetpoint() mode
-                    float time = (micros() - lastRunMicros) / 1000000.0;
                     positionTarget += time * posDelta;
                     if (position == positionTarget) {
                         JMotorControllerBasic::setVel(0);
                     } else if (abs(positionTarget - position) <= getMinVel() * time) {
                         JMotorControllerBasic::setVel(0);
                     } else if (abs(positionTarget - position) < getMaxVel() * time) {
-                        if (time > 0) {
-                            JMotorControllerBasic::setVel((positionTarget - position) / time);
-                        } else {
-                            JMotorControllerBasic::setVel(0);
-                        }
+                        JMotorControllerBasic::setVel((positionTarget - position) / time);
                         position = positionTarget;
                     } else { //far away
-                        JMotorControllerBasic::setVel((((positionTarget - position) > 0) ? getMaxVel() : -getMaxVel()), false);
+                        JMotorControllerBasic::setVel((((positionTarget - position) > 0) ? getMaxVel() : -getMaxVel()));
                         position += velocity * time;
-                        JMotorControllerBasic::run();
                     }
                 } else { //setPosTarget() mode
                     dL.setPositionVelocity(position, velocity);
@@ -59,7 +57,6 @@ public:
                     JMotorControllerBasic::setVel(dL.getVelocity());
                 }
             } else { //not pos mode
-                float time = (micros() - lastRunMicros) / 1000000.0;
                 JMotorControllerBasic::run();
                 if (abs(velocity) > getMinVel()) {
                     position += velocity * time;
@@ -86,7 +83,7 @@ public:
         }
 
         if (position != _posTarget && velocity == 0) {
-            dL.setVelocity((_posTarget > position) ? getMaxVel() : -getMaxVel());
+            dL.setVelocity((_posTarget > position) ? getMinVel() : -getMinVel());
         }
         posMode = true;
         if (positionTarget != _posTarget) {
@@ -115,7 +112,7 @@ public:
         return false;
     }
 
-    bool setPosDelta(float _posDelta, bool _resetPos = false, bool _run = true)
+    bool setPosDelta(float _posDelta, bool _run = true, bool _resetPos = false)
     {
         smoothedMode = false;
         posMode = true;
@@ -147,23 +144,26 @@ public:
         return temp;
     }
 
+    bool isPosModeNotVelocity()
+    {
+        return posMode;
+    }
+
     //override basicOpen functions
-    bool setVel(float vel, bool _run = true)
+    void setVel(float vel, bool _run = true)
     {
         posMode = false;
         velocity = vel;
         velocityTarget = vel;
         if (_run)
             JMotorControllerOpen::run();
-        return velocity == vel;
     }
-    bool setVelTarget(float vel, bool _run = true)
+    void setVelTarget(float vel, bool _run = true)
     {
         posMode = false;
         velocityTarget = vel;
         if (_run)
             JMotorControllerOpen::run();
-        return velocity == vel;
     }
     void setVelLimit(float _velLimit)
     {
