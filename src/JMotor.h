@@ -8,6 +8,7 @@
 #ifndef J_MOTOR_LIB_H
 #define J_MOTOR_LIB_H
 #include "Derivs_Limiter.h" // https://github.com/joshua-8/Derivs_Limiter/releases
+#include "JControlLoop/JControlLoop.h"
 #include "JEncoder/JEncoder.h"
 #include "JMotorCompensator/JDeadzoneRemover.h"
 #include "JMotorCompensator/JMotorCompensator.h"

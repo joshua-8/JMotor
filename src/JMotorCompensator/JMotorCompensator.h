@@ -26,7 +26,7 @@ public:
      */
     void setMaxDriverRangeAmount(float _driverRangeAmount)
     {
-        maxDriverRange = constrain(_driverRangeAmount, 0.0, 1.0);
+        maxDriverRange = max(_driverRangeAmount, (float)0.0);
     }
     /**
      * @brief  calculate
@@ -47,6 +47,24 @@ public:
      * @retval  (float)
      */
     virtual float getMinVel();
+
+    /**
+     * @brief  get what value makes the driver output 100% of supply voltage
+     * @retval (float)
+     */
+    float getDriverRange()
+    {
+        return driverRange;
+    }
+
+    /**
+     * @brief  get what fraction of driverRange can be used
+     * @retval (float)
+     */
+    float getMaxDriverRangeAmount()
+    {
+        return maxDriverRange;
+    }
 };
 #include "JMotorCompDirect.h"
 #include "JMotorCompStandard.h"
