@@ -97,11 +97,11 @@ $(function() {
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">byte</span> AS5048B_ANGLMSB_REG = 0xFE;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">byte</span> AS5048B_GAIN_REG = 0xFA;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> writeRegister8(uint8_t reg, uint8_t <a class="code" href="main_8cpp.html#a17956fe0129d3d4c94ebc06cfef2ad82">value</a>)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> writeRegister8(uint8_t reg, uint8_t value)</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        wire-&gt;beginTransmission(address);</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        wire-&gt;write(reg);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        wire-&gt;write(<a class="code" href="main_8cpp.html#a17956fe0129d3d4c94ebc06cfef2ad82">value</a>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        wire-&gt;write(value);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        wire-&gt;endTransmission();</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
@@ -311,7 +311,6 @@ $(function() {
 <div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_adb8d9aa63811086e5f3fdcc733aa5b42"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#adb8d9aa63811086e5f3fdcc733aa5b42">JEncoderAS5048bI2C::hasDirection</a></div><div class="ttdeci">bool hasDirection()</div><div class="ttdoc">can this encoder mesure direction or just speed</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:267</div></div>
 <div class="ttc" id="aclass_j_encoder_a_s5048b_i2_c_html_aebeb1fdb74a4a5070f3a54b8ffdddbe4"><div class="ttname"><a href="class_j_encoder_a_s5048b_i2_c.html#aebeb1fdb74a4a5070f3a54b8ffdddbe4">JEncoderAS5048bI2C::getVel</a></div><div class="ttdeci">float getVel()</div><div class="ttdoc">calculates velocity in distance per second where distance was set by setCountsToDistFactor()</div><div class="ttdef"><b>Definition:</b> JEncoderAS5048bI2C.h:238</div></div>
 <div class="ttc" id="aclass_j_encoder_html"><div class="ttname"><a href="class_j_encoder.html">JEncoder</a></div><div class="ttdoc">defines common interface for JEncoder</div><div class="ttdef"><b>Definition:</b> JEncoder.h:33</div></div>
-<div class="ttc" id="amain_8cpp_html_a17956fe0129d3d4c94ebc06cfef2ad82"><div class="ttname"><a href="main_8cpp.html#a17956fe0129d3d4c94ebc06cfef2ad82">value</a></div><div class="ttdeci">float value</div><div class="ttdef"><b>Definition:</b> main.cpp:45</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

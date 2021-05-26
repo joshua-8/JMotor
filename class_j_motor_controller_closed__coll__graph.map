@@ -1,8 +1,9 @@
 <map id="JMotorControllerClosed" name="JMotorControllerClosed">
-<area shape="rect" id="node1" title=" " alt="" coords="211,171,368,197"/>
-<area shape="rect" id="node2" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="100,81,217,108"/>
+<area shape="rect" id="node1" title=" " alt="" coords="467,111,624,137"/>
+<area shape="rect" id="node2" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="212,35,329,61"/>
 <area shape="rect" id="node3" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="5,5,152,32"/>
-<area shape="rect" id="node4" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="241,81,337,108"/>
-<area shape="rect" id="node5" href="$class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="362,81,438,108"/>
-<area shape="rect" id="node6" href="$class_j_motor_compensator.html" title="This class defines a common interface for converting from speed to driver input. It should compensate..." alt="" coords="463,81,601,108"/>
+<area shape="rect" id="node4" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="223,85,319,112"/>
+<area shape="rect" id="node5" href="$class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="233,136,309,163"/>
+<area shape="rect" id="node6" href="$class_j_motor_compensator.html" title="This class defines a common interface for converting from speed to driver input. It should compensate..." alt="" coords="201,187,340,213"/>
+<area shape="rect" id="node7" href="$class_j_control_loop.html" title=" " alt="" coords="221,237,320,264"/>
 </map>

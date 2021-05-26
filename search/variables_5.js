@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['instring_608',['inString',['../main_8cpp.html#a3aec325742447d04899a52f801481456',1,'main.cpp']]]
+  ['justenabled_611',['justEnabled',['../class_j_motor_driver.html#a2d65f6c4b6de9c37e8049a9b754d5abe',1,'JMotorDriver']]],
+  ['juststarted_612',['justStarted',['../class_j_servo_current_sensor.html#aa712829ec49cec2733d06cd3ea222c89',1,'JServoCurrentSensor']]]
 ];

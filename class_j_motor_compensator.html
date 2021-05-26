@@ -102,6 +102,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8497819d10b2fa39b1b4062a7d99d6d1"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_compensator.html#a8497819d10b2fa39b1b4062a7d99d6d1">getMinVel</a> ()</td></tr>
 <tr class="memdesc:a8497819d10b2fa39b1b4062a7d99d6d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slowest speed motor can go.  <a href="class_j_motor_compensator.html#a8497819d10b2fa39b1b4062a7d99d6d1">More...</a><br /></td></tr>
 <tr class="separator:a8497819d10b2fa39b1b4062a7d99d6d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ee23cd19dc1806f191e813f24133774"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_compensator.html#a7ee23cd19dc1806f191e813f24133774">getDriverRange</a> ()</td></tr>
+<tr class="memdesc:a7ee23cd19dc1806f191e813f24133774"><td class="mdescLeft">&#160;</td><td class="mdescRight">get what value makes the driver output 100% of supply voltage  <a href="class_j_motor_compensator.html#a7ee23cd19dc1806f191e813f24133774">More...</a><br /></td></tr>
+<tr class="separator:a7ee23cd19dc1806f191e813f24133774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aace2e1126344e7a41731c858c2051eb3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_compensator.html#aace2e1126344e7a41731c858c2051eb3">getMaxDriverRangeAmount</a> ()</td></tr>
+<tr class="memdesc:aace2e1126344e7a41731c858c2051eb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">get what fraction of driverRange can be used  <a href="class_j_motor_compensator.html#aace2e1126344e7a41731c858c2051eb3">More...</a><br /></td></tr>
+<tr class="separator:aace2e1126344e7a41731c858c2051eb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -152,6 +158,72 @@ Protected Attributes</h2></td></tr>
 </dl>
 
 <p>Reimplemented in <a class="el" href="class_j_motor_comp_standard.html#a4efa9461ed6585844857a20fd9530580">JMotorCompStandard</a>, and <a class="el" href="class_j_motor_comp_direct.html#ad817d16fe4afb4df25363d9c0f26eb52">JMotorCompDirect</a>.</p>
+
+</div>
+</div>
+<a id="a7ee23cd19dc1806f191e813f24133774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ee23cd19dc1806f191e813f24133774">&#9670;&nbsp;</a></span>getDriverRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JMotorCompensator::getDriverRange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get what value makes the driver output 100% of supply voltage </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(float)</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aace2e1126344e7a41731c858c2051eb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aace2e1126344e7a41731c858c2051eb3">&#9670;&nbsp;</a></span>getMaxDriverRangeAmount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JMotorCompensator::getMaxDriverRangeAmount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get what fraction of driverRange can be used </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(float)</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

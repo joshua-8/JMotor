@@ -1,6 +1,16 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="5,31,124,57"/>
-<area shape="rect" id="node2" href="$class_j_servo_controller_advanced.html" title=" " alt="" coords="172,5,348,32"/>
-<area shape="rect" id="node4" href="$class_j_servo_controller_gentle.html" title=" " alt="" coords="182,56,338,83"/>
-<area shape="rect" id="node3" href="$class_j_servo_controller_stall_protected.html" title=" " alt="" coords="396,5,596,32"/>
+<area shape="rect" id="node1" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="5,183,101,209"/>
+<area shape="rect" id="node2" href="$class_j_motor_driver_avr_l293.html" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf." alt="" coords="167,5,312,32"/>
+<area shape="rect" id="node3" href="$class_j_motor_driver_avr_p_w_m.html" title="wrapper for analogWrite()" alt="" coords="165,56,313,83"/>
+<area shape="rect" id="node4" href="$class_j_motor_driver_avr_p_w_m_dir.html" title="for motor controllers with one direction input and one speed input pin" alt="" coords="157,107,321,133"/>
+<area shape="rect" id="node5" href="$class_j_motor_driver_dual.html" title="control two JMotorDrivers (of any type) as if they are one driver" alt="" coords="178,157,301,184"/>
+<area shape="rect" id="node6" href="$class_j_motor_driver_esp32_l293.html" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf." alt="" coords="159,208,320,235"/>
+<area shape="rect" id="node7" href="$class_j_motor_driver_esp32_p_w_m.html" title="uses ledc to output PWM approximation of an analog output" alt="" coords="157,259,321,285"/>
+<area shape="rect" id="node8" href="$class_j_motor_driver_esp32_p_w_m_dir.html" title="for motor controllers with one direction input and one speed input pin" alt="" coords="149,309,329,336"/>
+<area shape="rect" id="node9" href="$class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="174,360,305,387"/>
+<area shape="rect" id="node10" href="$class_j_motor_driver_avr_servo.html" title="wraps standard servo library. For servos and motor controllers that use servo signals (ESCs)" alt="" coords="396,309,547,336"/>
+<area shape="rect" id="node11" href="$class_j_motor_driver_servo_advanced.html" title="defines interface for servo driver with variable frequency, subclass of JMotorDriverServo and JMotorD..." alt="" coords="377,360,565,387"/>
+<area shape="rect" id="node14" href="$class_j_motor_driver_servo_dual.html" title="control two JMotorDriverServos as if they are one driver" alt="" coords="393,411,549,437"/>
+<area shape="rect" id="node12" href="$class_j_motor_driver_esp32_servo.html" title="For servos and motor controllers that use servo signals (ESCs)" alt="" coords="637,335,804,361"/>
+<area shape="rect" id="node13" href="$class_j_motor_driver_servo_advanced_dual.html" title="control two JMotorDriverServoAdvanced as if they are one driver" alt="" coords="613,385,828,412"/>
 </map>

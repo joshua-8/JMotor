@@ -87,19 +87,21 @@ Collaboration diagram for JMotorControllerClosed:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_motor_controller_closed__coll__graph.png" border="0" usemap="#a_j_motor_controller_closed_coll__map" alt="Collaboration graph"/></div>
 <map name="a_j_motor_controller_closed_coll__map" id="a_j_motor_controller_closed_coll__map">
-<area shape="rect" title=" " alt="" coords="211,171,368,197"/>
-<area shape="rect" href="class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="100,81,217,108"/>
+<area shape="rect" title=" " alt="" coords="467,111,624,137"/>
+<area shape="rect" href="class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="212,35,329,61"/>
 <area shape="rect" href="class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="5,5,152,32"/>
-<area shape="rect" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="241,81,337,108"/>
-<area shape="rect" href="class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="362,81,438,108"/>
-<area shape="rect" href="class_j_motor_compensator.html" title="This class defines a common interface for converting from speed to driver input. It should compensate..." alt="" coords="463,81,601,108"/>
+<area shape="rect" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="223,85,319,112"/>
+<area shape="rect" href="class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="233,136,309,163"/>
+<area shape="rect" href="class_j_motor_compensator.html" title="This class defines a common interface for converting from speed to driver input. It should compensate..." alt="" coords="201,187,340,213"/>
+<area shape="rect" href="class_j_control_loop.html" title=" " alt="" coords="221,237,320,264"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af639119c533e0c2f14671f7181197d8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_closed.html#af639119c533e0c2f14671f7181197d8b">JMotorControllerClosed</a> (<a class="el" href="class_j_motor_driver.html">JMotorDriver</a> &amp;_driver, <a class="el" href="class_j_motor_compensator.html">JMotorCompensator</a> &amp;_compensator, <a class="el" href="class_j_encoder.html">JEncoder</a> &amp;_encoder, float _velLimit=INFINITY, float _accelLimit=INFINITY, bool _preventGoingWrongWay=true, float _maxStoppingAccel=1.5, float _distFromSetpointLimit=0.25)</td></tr>
-<tr class="separator:af639119c533e0c2f14671f7181197d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4b63c69c4573e244fd2c9709a63981d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_closed.html#aa4b63c69c4573e244fd2c9709a63981d">JMotorControllerClosed</a> (<a class="el" href="class_j_motor_driver.html">JMotorDriver</a> &amp;_driver, <a class="el" href="class_j_motor_compensator.html">JMotorCompensator</a> &amp;_compensator, <a class="el" href="class_j_encoder.html">JEncoder</a> &amp;_encoder, <a class="el" href="class_j_control_loop.html">JControlLoop</a> &amp;_controlLoop, float _velLimit=INFINITY, float _accelLimit=INFINITY, float _distFromSetpointLimit=1, bool _preventGoingWrongWay=true, float _maxStoppingAccel=INFINITY)</td></tr>
+<tr class="memdesc:aa4b63c69c4573e244fd2c9709a63981d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for closed loop motor controller.  <a href="class_j_motor_controller_closed.html#aa4b63c69c4573e244fd2c9709a63981d">More...</a><br /></td></tr>
+<tr class="separator:aa4b63c69c4573e244fd2c9709a63981d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a370a479eb96acb2cb6ed059ce8710dd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_closed.html#a370a479eb96acb2cb6ed059ce8710dd3">run</a> ()</td></tr>
 <tr class="memdesc:a370a479eb96acb2cb6ed059ce8710dd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">update driver  <a href="class_j_motor_controller_closed.html#a370a479eb96acb2cb6ed059ce8710dd3">More...</a><br /></td></tr>
 <tr class="separator:a370a479eb96acb2cb6ed059ce8710dd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,6 +130,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3ad1e6c4104129bc1eda2acc50b9d22b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_closed.html#a3ad1e6c4104129bc1eda2acc50b9d22b">setOpenVelTarget</a> (float vel, bool _run=true)</td></tr>
 <tr class="memdesc:a3ad1e6c4104129bc1eda2acc50b9d22b"><td class="mdescLeft">&#160;</td><td class="mdescRight">set velocity without closed loop control, with limited acceleration  <a href="class_j_motor_controller_closed.html#a3ad1e6c4104129bc1eda2acc50b9d22b">More...</a><br /></td></tr>
 <tr class="separator:a3ad1e6c4104129bc1eda2acc50b9d22b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae244552a1a6db9e125ceedacaaedf888"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_closed.html#ae244552a1a6db9e125ceedacaaedf888">getSpeedError</a> ()</td></tr>
+<tr class="separator:ae244552a1a6db9e125ceedacaaedf888"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d2680eb0aa6d516ecbe8be0184a03ae"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_closed.html#a1d2680eb0aa6d516ecbe8be0184a03ae">getPosTarget</a> ()</td></tr>
 <tr class="memdesc:a1d2680eb0aa6d516ecbe8be0184a03ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">get position set as target  <a href="class_j_motor_controller_closed.html#a1d2680eb0aa6d516ecbe8be0184a03ae">More...</a><br /></td></tr>
 <tr class="separator:a1d2680eb0aa6d516ecbe8be0184a03ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,7 +143,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac428b548d0672b33390830eb3dfd48b0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_closed.html#ac428b548d0672b33390830eb3dfd48b0">getPosDeltaSetpoint</a> ()</td></tr>
 <tr class="separator:ac428b548d0672b33390830eb3dfd48b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abae4484d5ca32e28f920b304480faa08"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_closed.html#abae4484d5ca32e28f920b304480faa08">getVelSetpoint</a> ()</td></tr>
-<tr class="memdesc:abae4484d5ca32e28f920b304480faa08"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns how fast the motor driver is told to move (after compensator)  <a href="class_j_motor_controller_closed.html#abae4484d5ca32e28f920b304480faa08">More...</a><br /></td></tr>
+<tr class="memdesc:abae4484d5ca32e28f920b304480faa08"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns how fast the motor driver is told to move  <a href="class_j_motor_controller_closed.html#abae4484d5ca32e28f920b304480faa08">More...</a><br /></td></tr>
 <tr class="separator:abae4484d5ca32e28f920b304480faa08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac19400884c4cf9bbaa3011878a38b209"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_closed.html#ac19400884c4cf9bbaa3011878a38b209">getVel</a> ()</td></tr>
 <tr class="memdesc:ac19400884c4cf9bbaa3011878a38b209"><td class="mdescLeft">&#160;</td><td class="mdescRight">get current velocity of motor  <a href="class_j_motor_controller_closed.html#ac19400884c4cf9bbaa3011878a38b209">More...</a><br /></td></tr>
@@ -203,6 +207,8 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:acd7412581aa88841f34424ec7c9a55bd"><td class="memItemLeft" align="right" valign="top">Derivs_Limiter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_closed.html#acd7412581aa88841f34424ec7c9a55bd">posSetpointSmoother</a></td></tr>
 <tr class="separator:acd7412581aa88841f34424ec7c9a55bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9791f4a9c6b33ece354bd1ca13f9c87d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_j_control_loop.html">JControlLoop</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_closed.html#a9791f4a9c6b33ece354bd1ca13f9c87d">controlLoop</a></td></tr>
+<tr class="separator:a9791f4a9c6b33ece354bd1ca13f9c87d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -244,8 +250,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:af6555ab2d5321d1fd24110938c2b30d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af639119c533e0c2f14671f7181197d8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af639119c533e0c2f14671f7181197d8b">&#9670;&nbsp;</a></span>JMotorControllerClosed()</h2>
+<a id="aa4b63c69c4573e244fd2c9709a63981d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4b63c69c4573e244fd2c9709a63981d">&#9670;&nbsp;</a></span>JMotorControllerClosed()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -274,6 +280,12 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="class_j_control_loop.html">JControlLoop</a> &amp;&#160;</td>
+          <td class="paramname"><em>_controlLoop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>_velLimit</em> = <code>INFINITY</code>, </td>
         </tr>
@@ -286,6 +298,12 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_distFromSetpointLimit</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>_preventGoingWrongWay</em> = <code>true</code>, </td>
         </tr>
@@ -293,13 +311,7 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>_maxStoppingAccel</em> = <code>1.5</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>_distFromSetpointLimit</em> = <code>0.25</code>&#160;</td>
+          <td class="paramname"><em>_maxStoppingAccel</em> = <code>INFINITY</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -313,6 +325,22 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructor for closed loop motor controller. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_driver</td><td>(<a class="el" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers">JMotorDriver</a>&amp;) </td></tr>
+    <tr><td class="paramname">_compensator</td><td>(<a class="el" href="class_j_motor_compensator.html" title="This class defines a common interface for converting from speed to driver input. It should compensate...">JMotorCompensator</a>&amp;) </td></tr>
+    <tr><td class="paramname">_encoder</td><td>(<a class="el" href="class_j_encoder.html" title="defines common interface for JEncoder">JEncoder</a>) </td></tr>
+    <tr><td class="paramname">_controlLoop</td><td>(<a class="el" href="class_j_control_loop.html">JControlLoop</a>) </td></tr>
+    <tr><td class="paramname">_velLimit</td><td>(float) default=INFINITY, </td></tr>
+    <tr><td class="paramname">_accelLimit</td><td>(float) default=INFINITY, </td></tr>
+    <tr><td class="paramname">_distFromSetpointLimit</td><td>(float)= 1.0, </td></tr>
+    <tr><td class="paramname">_preventGoingWrongWay</td><td>(bool) default=true, </td></tr>
+    <tr><td class="paramname">_maxStoppingAccel</td><td>(float) default=INFINITY, </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -712,6 +740,31 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ae244552a1a6db9e125ceedacaaedf888"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae244552a1a6db9e125ceedacaaedf888">&#9670;&nbsp;</a></span>getSpeedError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JMotorControllerClosed::getSpeedError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ac19400884c4cf9bbaa3011878a38b209"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac19400884c4cf9bbaa3011878a38b209">&#9670;&nbsp;</a></span>getVel()</h2>
 
@@ -770,7 +823,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>returns how fast the motor driver is told to move (after compensator) </p>
+<p>returns how fast the motor driver is told to move </p>
 <dl class="section note"><dt>Note</dt><dd>use getVel for actual encoder reading </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -1659,6 +1712,20 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a9791f4a9c6b33ece354bd1ca13f9c87d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9791f4a9c6b33ece354bd1ca13f9c87d">&#9670;&nbsp;</a></span>controlLoop</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_j_control_loop.html">JControlLoop</a>&amp; JMotorControllerClosed::controlLoop</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af6555ab2d5321d1fd24110938c2b30d7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af6555ab2d5321d1fd24110938c2b30d7">&#9670;&nbsp;</a></span>distFromSetpointLimit</h2>
 
@@ -1912,7 +1979,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Derivs_Limiter object, used for smoothly driving to position, </p>
+<p>Derivs_Limiter object, used for smoothly driving to position </p>
 
 </div>
 </div>

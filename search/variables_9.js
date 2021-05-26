@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['numreadings_642',['numReadings',['../class_j_servo_current_sensor.html#a032d5b840c6ca02a5dc84983e5755d30',1,'JServoCurrentSensor']]]
+  ['open_641',['open',['../class_j_motor_controller_closed.html#a8eec494a29c294a6eaaa38deda8e0ca1',1,'JMotorControllerClosed']]]
 ];
