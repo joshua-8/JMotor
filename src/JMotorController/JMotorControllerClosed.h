@@ -1,6 +1,9 @@
 #ifndef J_MOTOR_CONTROLLER_CLOSED_H
 #define J_MOTOR_CONTROLLER_CLOSED_H
+#include "Derivs_Limiter.h"
+#include "JControlLoop/JControlLoop.h"
 #include "JEncoder/JEncoder.h"
+#include "JMotorCompensator/JMotorCompensator.h"
 #include "JMotorController.h"
 #include "JMotorControllerBasic.h"
 #include <Arduino.h>
@@ -28,15 +31,29 @@ protected:
 
 public:
     /**
-     * Derivs_Limiter object, used for smoothly driving to position, 
+     * Derivs_Limiter object, used for smoothly driving to position
      * */
     Derivs_Limiter posSetpointSmoother;
-    //JControlLoop
-    JMotorControllerClosed(JMotorDriver& _driver, JMotorCompensator& _compensator, JEncoder& _encoder, /*JControlLoop& _controllLoop,*/ float _velLimit = INFINITY, float _accelLimit = INFINITY, bool _preventGoingWrongWay = true, float _maxStoppingAccel = 1.5, float _distFromSetpointLimit = 0.25)
+    JControlLoop& controlLoop;
+
+    /**
+     * @brief  Constructor for closed loop motor controller
+     * @param  _driver: (JMotorDriver&)
+     * @param  _compensator: (JMotorCompensator&)
+     * @param  _encoder: (JEncoder)
+     * @param  _controlLoop: (JControlLoop)
+     * @param  _velLimit: (float) default=INFINITY, 
+     * @param  _accelLimit: (float) default=INFINITY,
+     * @param  _distFromSetpointLimit: (float)= 1.0,
+     * @param  _preventGoingWrongWay: (bool) default=true,
+     * @param  _maxStoppingAccel: (float) default=INFINITY,
+     */
+    JMotorControllerClosed(JMotorDriver& _driver, JMotorCompensator& _compensator, JEncoder& _encoder, JControlLoop& _controlLoop, float _velLimit = INFINITY, float _accelLimit = INFINITY, float _distFromSetpointLimit = 1, bool _preventGoingWrongWay = true, float _maxStoppingAccel = INFINITY)
         : driver(_driver)
         , compensator(_compensator)
         , encoder(_encoder)
         , posSetpointSmoother(Derivs_Limiter(_velLimit, _accelLimit))
+        , controlLoop(_controlLoop)
     {
         posSetpointSmoother.setPreventGoingWrongWay(_preventGoingWrongWay);
         posSetpointSmoother.setMaxStoppingAccel(_maxStoppingAccel);
@@ -73,8 +90,9 @@ public:
                 }
                 velSetpoint = constrain(velSetpoint, -compensator.getMaxVel() * (getDriverMinRange() < 0), compensator.getMaxVel() * (getDriverMaxRange() > 0));
                 velSetpoint = constrain(velSetpoint, -velLimit, velLimit);
+                driverInRange = velSetpoint > -compensator.getMaxVel() * (getDriverMinRange() < 0) && velSetpoint < compensator.getMaxVel() * (getDriverMaxRange() > 0);
                 setVal = compensator.compensate(velSetpoint);
-                driverInRange = driver.set(setVal);
+                driver.set(setVal);
                 posSetpoint = encoder.getPos();
             } else { //closed loop
                 if (posMode) {
@@ -102,10 +120,11 @@ public:
                         posSetpoint = constrain(posSetpoint, encoder.getPos() - distFromSetpointLimit, encoder.getPos() + distFromSetpointLimit);
                 }
                 //MAKE MOTOR GO TO posSetpoint, by setting velSetpointTarget
-                velSetpointTarget = 10 * (posSetpoint - encoder.getPos()) + posDeltaSetpoint;
+                velSetpointTarget = controlLoop.calc(this);
 
                 velSetpoint = velSetpointTarget; //open loop uses velSetpointTarget and velsetpoint for acceleration, but closed loop has posDeltaSetpointTarget and posDeltaSetpoint, so just set them equal
 
+                driverInRange = velSetpoint > -compensator.getMaxVel() * (getDriverMinRange() < 0) && velSetpoint < compensator.getMaxVel() * (getDriverMaxRange() > 0);
                 setVal = compensator.compensate(velSetpoint);
                 driverInRange = driver.set(setVal);
             } //end of closed loop mode
@@ -163,23 +182,25 @@ public:
         open = false;
         posMode = true;
         smoothed = false;
+        bool ret = posSetpoint != _posSetpoint;
         posSetpoint = _posSetpoint;
         if (_run)
             run();
-        return true; //did the setpoint change?
+        return ret; //did the setpoint change?
     }
     bool setPosDelta(float _posDelta, bool _run = true, bool _resetPos = false)
     {
         open = false;
         posMode = false;
         limitSetpointDistFromCurrent = false;
+        bool ret = posDeltaSetpointTarget != _posDelta;
         posDeltaSetpoint = _posDelta;
         posDeltaSetpointTarget = _posDelta;
         if (_resetPos)
             resetPos();
         if (_run)
             run();
-        return true; //did the setting change?
+        return ret; //did the setting change?
     }
     void setAccelPosDelta(float _posDelta, bool _run = true, bool _resetPos = false)
     {
@@ -223,6 +244,11 @@ public:
             run();
     }
 
+    float getSpeedError()
+    {
+        return (velSetpoint - encoder.getVel()) / velSetpoint;
+    }
+
     float getPosTarget()
     {
         if (posMode && smoothed) {
@@ -251,7 +277,7 @@ public:
     }
 
     /**
-     * @brief  returns how fast the motor driver is told to move (after compensator)
+     * @brief  returns how fast the motor driver is told to move
      * @note  use getVel for actual encoder reading
      * @retval  (float)
      */
@@ -272,6 +298,8 @@ public:
         float oldDist = encoder.getPos();
         encoder.zeroCounter();
         posSetpoint -= oldDist;
+        posSetpointSmoother.setPosition(posSetpointSmoother.getPosition() - oldDist);
+        posSetpointSmoother.setTarget(posSetpointSmoother.getTarget() - oldDist);
         return oldDist;
     }
     bool isPosModeNotVelocity()
@@ -340,12 +368,12 @@ public:
 
     float getDriverMinRange()
     {
-        return driver.getMinRange();
+        return driver.getMinRange() * compensator.getMaxDriverRangeAmount();
     }
 
     float getDriverMaxRange()
     {
-        return driver.getMaxRange();
+        return driver.getMaxRange() * compensator.getMaxDriverRangeAmount();
     }
 
     bool getEnable()

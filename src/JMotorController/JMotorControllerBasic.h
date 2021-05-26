@@ -139,7 +139,7 @@ public:
 
     float getDriverMaxRange()
     {
-        return driver.getMaxRange();
+        return driver.getMaxRange() * compensator.getMaxDriverRangeAmount();
     }
 
     bool getEnable()
