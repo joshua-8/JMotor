@@ -28,6 +28,8 @@ protected:
     float posDeltaSetpointTarget;
     bool limitSetpointDistFromCurrent;
     float distFromSetpointLimit;
+    float lastPosSetpoint;
+    float time;
 
 public:
     /**
@@ -65,6 +67,7 @@ public:
         lastRunMicros = micros();
         posMode = false;
         posSetpoint = 0;
+        lastPosSetpoint = 0;
         smoothed = false;
         posDeltaSetpoint = 0;
         posDeltaSetpointTarget = 0;
@@ -72,11 +75,12 @@ public:
         velSetpoint = 0;
         limitSetpointDistFromCurrent = false;
         distFromSetpointLimit = max(_distFromSetpointLimit, (float)0.0);
+        time = 0;
     }
     void run()
     {
         encoder.run();
-        float time = (micros() - lastRunMicros) / 1000000.0;
+        time = (micros() - lastRunMicros) / 1000000.0;
         if (time == 0)
             return;
         lastRunMicros = micros();
@@ -94,15 +98,19 @@ public:
                 setVal = compensator.compensate(velSetpoint);
                 driver.set(setVal);
                 posSetpoint = encoder.getPos();
+                posDeltaSetpoint = velSetpoint;
             } else { //closed loop
                 if (posMode) {
                     if (smoothed) { //setPosTarget
+                        posSetpointSmoother.setPosition(posSetpoint);
                         posSetpoint = posSetpointSmoother.calc();
+                        posDeltaSetpoint = posSetpointSmoother.getVelocity();
                         if (limitSetpointDistFromCurrent) {
                             posSetpoint = constrain(posSetpoint, encoder.getPos() - distFromSetpointLimit, encoder.getPos() + distFromSetpointLimit);
                             posSetpointSmoother.setPosition(posSetpoint);
                         }
                     } else { //setPosSetpoint
+                        posDeltaSetpoint = (posSetpoint - lastPosSetpoint) / time;
                         //nothing to do here, posSetpoint was set
                     }
                 } else { //posDelta
@@ -120,6 +128,8 @@ public:
                         posSetpoint = constrain(posSetpoint, encoder.getPos() - distFromSetpointLimit, encoder.getPos() + distFromSetpointLimit);
                 }
                 //MAKE MOTOR GO TO posSetpoint, by setting velSetpointTarget
+                lastPosSetpoint = posSetpoint;
+
                 velSetpointTarget = controlLoop.calc(this);
 
                 velSetpoint = velSetpointTarget; //open loop uses velSetpointTarget and velsetpoint for acceleration, but closed loop has posDeltaSetpointTarget and posDeltaSetpoint, so just set them equal
@@ -251,15 +261,6 @@ public:
 
     float getPosTarget()
     {
-        if (posMode && smoothed) {
-            return posSetpointSmoother.getTarget();
-        } else {
-            return posSetpoint;
-        }
-    }
-
-    float getPosSetpoint()
-    {
         return posSetpoint;
     }
 
@@ -274,6 +275,26 @@ public:
     float getPosDeltaSetpoint()
     {
         return posDeltaSetpoint;
+    }
+
+    float getLastPosSetpoint()
+    {
+        return lastPosSetpoint;
+    }
+
+    float getTime()
+    {
+        return time;
+    }
+
+    float getDistFromSetpointLimit()
+    {
+        return distFromSetpointLimit;
+    }
+
+    void setDistFromSetpointLimit(float _distFromSetpointLimit)
+    {
+        distFromSetpointLimit = max(_distFromSetpointLimit, (float)0.0);
     }
 
     /**

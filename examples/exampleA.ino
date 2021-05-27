@@ -39,9 +39,11 @@ JVoltageCompMeasure<10> voltageComp = JVoltageCompMeasure<10>(batMonitorPin, dac
 JMotorCompStandardConfig ttConfig = JMotorCompStandardConfig(1.9, .5, 3.2, 1.1, 4.6, 1.7, 100);
 JMotorCompStandard myMotorCompensator = JMotorCompStandard(voltageComp, ttConfig, 1.0);
 JMotorDriverEsp32L293 myDriver = JMotorDriverEsp32L293(portD);
-JControlLoopBasic myCtrlLoop = JControlLoopBasic(10);
+JControlLoopBasic myCtrlLoop = JControlLoopBasic(10, 1000);
 JMotorControllerClosed myController = JMotorControllerClosed(myDriver, myMotorCompensator, encoder, myCtrlLoop, 1.5, .4, true, 1.5, .25);
-// JMotorControllerOpen myController = JMotorControllerOpen(myDriver,myMotorCompensator);
+
+
+
 String inString = "";
 float value = 0;
 int mode = 0;
@@ -50,8 +52,6 @@ void setup()
 {
     Serial.begin(250000);
     encoder.setUpInterrupts(encoder_jENCODER_ISR);
-    myController.enable();
-    // myDriver.enable();
 }
 void loop()
 {
@@ -60,41 +60,17 @@ void loop()
         inString += (char)inChar;
         if (inChar == '\n') {
             if (inString.equals("e\n")) {
-                myController.setEnable(!myController.getEnable());
+
             } else if (inString.equals("r\n")) {
-                myController.resetPos();
+
             } else if (inString.equals("p\n")) {
-                mode = 1;
+
             } else if (inString.equals("v\n")) {
-                mode = 0;
+
             } else {
                 value = inString.toFloat();
-                if (mode == 1)
-                    myController.setPosSetpoint(value, false);
-                if (mode == 0)
-                    myController.setOpenVel(value, false);
             }
             inString = "";
         }
     }
-    myController.run();
-
-    Serial.print(myController.getVel());
-    Serial.print(",");
-    Serial.print(myController.getVelTarget());
-    Serial.print(",");
-    Serial.print(myController.getPosDeltaSetpoint());
-    Serial.print(",");
-    Serial.print(myController.getVelSetpoint());
-    Serial.print(",");
-    Serial.print(myController.getPosTarget());
-    Serial.print(",");
-    Serial.print(myController.getPosSetpoint());
-    Serial.print(",");
-    Serial.print(myController.getPos());
-    Serial.print(",");
-    Serial.print(myController.getVelSetpoint());
-    Serial.println();
-
-    // delay(2);
 }
