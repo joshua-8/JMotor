@@ -35,14 +35,12 @@
 JEncoderPWMAbsoluteAttachInterrupt encoder = JEncoderPWMAbsoluteAttachInterrupt(inport2, JEncoderPWMAbsolute_AS5048settings, true, 1, 50000, 1000, true);
 IRAM_ATTR jENCODER_MAKE_ISR_MACRO(encoder);
 
-JVoltageCompMeasure<10> voltageComp = JVoltageCompMeasure<10>(batMonitorPin, dacUnitsPerVolt);
+JVoltageCompMeasure<25> voltageComp = JVoltageCompMeasure<25>(batMonitorPin, dacUnitsPerVolt);
 JMotorCompStandardConfig ttConfig = JMotorCompStandardConfig(1.9, .5, 3.2, 1.1, 4.6, 1.7, 100);
 JMotorCompStandard myMotorCompensator = JMotorCompStandard(voltageComp, ttConfig, 1.0);
 JMotorDriverEsp32L293 myDriver = JMotorDriverEsp32L293(portD);
 JControlLoopBasic myCtrlLoop = JControlLoopBasic(10, 1000);
 JMotorControllerClosed myController = JMotorControllerClosed(myDriver, myMotorCompensator, encoder, myCtrlLoop, 1.5, .4, true, 1.5, .25);
-
-
 
 String inString = "";
 float value = 0;
