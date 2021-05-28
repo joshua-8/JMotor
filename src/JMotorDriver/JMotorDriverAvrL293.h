@@ -16,6 +16,7 @@ private:
 public:
     JMotorDriverAvrPWM pwmDriver;
     bool breakOn; // can be changed while running
+    bool reverse;
     /**
      * @brief  constructor, sets pins
      * @param  _en: enable(speed) pin on driver
@@ -23,17 +24,22 @@ public:
      * @param  _i2: input pin 2 (direction)
      * @param  _breakOn = true: if true (default), add extra resistance to motor when set to 0 power (by shorting motor terminals)
      * @param  breakWhenDisabled = false: if false (default) turn off break when disabled, if true, keep electrically breaking
+     * @param _reverse (bool) default=false, reverse direction of driver
      */
-    JMotorDriverAvrL293(byte _en, byte _i1, byte _i2, bool _breakOn = true, bool breakWhenDisabled = false)
+    JMotorDriverAvrL293(byte _en, byte _i1, byte _i2, bool _breakOn = true, bool breakWhenDisabled = false, bool _reverse = false)
         : pwmDriver { _en, breakWhenDisabled }
     {
         enabled = false;
         i1 = _i1;
         i2 = _i2;
         breakOn = _breakOn;
+        reverse = _reverse;
     }
     bool set(float val)
     {
+        if (reverse) {
+            val = -val;
+        }
         if (justEnabled || val != lastSetVal) {
             if (enabled) {
                 lastSetVal = val;
