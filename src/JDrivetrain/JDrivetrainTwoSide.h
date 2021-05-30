@@ -137,6 +137,7 @@ public:
             return leftVel;
         if (i == 1)
             return rightVel;
+        return 0;
     }
     unsigned char getNumberMotors()
     {
