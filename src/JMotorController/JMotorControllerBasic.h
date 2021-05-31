@@ -161,5 +161,15 @@ public:
     {
         compensator.setMaxDriverRangeAmount(_driverRangeAmount);
     }
+
+    float getVelLimit()
+    {
+        return velLimit;
+    }
+
+    float getAccelLimit()
+    {
+        return accelLimit;
+    }
 };
 #endif

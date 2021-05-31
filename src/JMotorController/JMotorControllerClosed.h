@@ -342,6 +342,15 @@ public:
         posSetpointSmoother.setVelLimit(velLimit);
     }
 
+    float getAccelLimit()
+    {
+        return accelLimit;
+    }
+    float getVelLimit()
+    {
+        return velLimit;
+    }
+
     void setPreventGoingWrongWay(bool _preventGoingWrongWay)
     {
         posSetpointSmoother.setPreventGoingWrongWay(_preventGoingWrongWay);

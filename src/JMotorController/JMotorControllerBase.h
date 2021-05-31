@@ -121,6 +121,18 @@ public:
      * @param  _driverRangeAmount: (float)
      */
     virtual void setMaxDriverRangeAmount(float _driverRangeAmount) = 0;
+
+    /**
+     * @brief  returns value of accelLimit
+     * @retval  (float)
+     */
+    virtual float getAccelLimit() = 0;
+
+    /**
+     * @brief  returns value of velLimit
+     * @retval  (float)
+     */
+    virtual float getVelLimit() = 0;
 };
 #include "JMotorControllerBasic.h"
 #endif
