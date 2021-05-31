@@ -49,5 +49,9 @@ public:
     {
         return multiplier;
     }
+    void setMinSpeed(float _speed)
+    {
+        minSpeed = abs(_speed);
+    }
 };
 #endif
