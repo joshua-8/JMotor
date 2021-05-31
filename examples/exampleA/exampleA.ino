@@ -27,10 +27,10 @@
 
 #include <JMotor.h>
 
-JMotorDriverEsp32Servo myServo = JMotorDriverEsp32Servo(port1);
-JServoCurrentSensor myServoCurrent = JServoCurrentSensor(port5Pin, 150);
-JServoControllerStallProtected servoCtrl = JServoControllerStallProtected(JServoControllerAdvanced(myServo, .3, 0, 1, 0, false, 120, 75, 0, -90, 90, 0, -90, 90), myServoCurrent, .1, .4, 500, 1000);
-JServoControllerAdvanced servoCtrl = JServoControllerAdvanced(myServo, .3, 0, 1, 1000, false, 120, 75, 0, -40, 40, 0, -90, 90, 544, 2400, true, true, 1.0);
+// JMotorDriverEsp32Servo myServo = JMotorDriverEsp32Servo(port1);
+// JServoCurrentSensor myServoCurrent = JServoCurrentSensor(port5Pin, 150);
+// JServoControllerStallProtected servoCtrl = JServoControllerStallProtected(JServoControllerAdvanced(myServo, .3, 0, 1, 0, false, 120, 75, 0, -90, 90, 0, -90, 90), myServoCurrent, .1, .4, 500, 1000);
+// JServoControllerAdvanced servoCtrl = JServoControllerAdvanced(myServo, .3, 0, 1, 1000, false, 120, 75, 0, -40, 40, 0, -90, 90, 544, 2400, true, true, 1.0);
 
 JEncoderPWMAbsoluteAttachInterrupt encoder = JEncoderPWMAbsoluteAttachInterrupt(inport2, JEncoderPWMAbsolute_AS5048settings, true, 1, 50000, 1000, true);
 IRAM_ATTR jENCODER_MAKE_ISR_MACRO(encoder);
@@ -41,6 +41,8 @@ JMotorCompStandard myMotorCompensator = JMotorCompStandard(voltageComp, ttConfig
 JMotorDriverEsp32L293 myDriver = JMotorDriverEsp32L293(portD);
 JControlLoopBasic myCtrlLoop = JControlLoopBasic(10, 1000);
 JMotorControllerClosed myController = JMotorControllerClosed(myDriver, myMotorCompensator, encoder, myCtrlLoop, 1.5, .4, true, 1.5, .25);
+JDrivetrainTwoSide drivetrain = JDrivetrainTwoSide(myController, myController, 1);
+JDrivetrainControllerBasic mydrvtrain = JDrivetrainControllerBasic(drivetrain, { 1, 1, 0 }, { 2, 2, 1 }, { .01, .01, .01 });
 
 String inString = "";
 float value = 0;
@@ -50,6 +52,7 @@ void setup()
 {
     Serial.begin(250000);
     encoder.setUpInterrupts(encoder_jENCODER_ISR);
+    mydrvtrain.enable();
 }
 void loop()
 {
@@ -71,4 +74,5 @@ void loop()
             inString = "";
         }
     }
+    mydrvtrain.run();
 }
