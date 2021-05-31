@@ -65,6 +65,7 @@ public:
      */
     virtual bool isPosModeNotVelocity() = 0;
 };
+#include "JControlLoop/JControlLoop.h"
 #include "JMotorControllerClosed.h"
 #include "JMotorControllerOpen.h"
 #endif

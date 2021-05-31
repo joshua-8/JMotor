@@ -8,6 +8,11 @@ protected:
     unsigned long lastMovedMillis;
 
 public:
+    /**
+     * @brief  constructor for control loop for use with JMotorControllerClosed
+     * @param  kP: (float) proportional to error
+     * @param  _timeout: (unsigned long) set output to zero if there's been no movement for this many milliseconds. 0=never timeout
+     */
     JControlLoopBasic(float kP, unsigned long _timeout)
     {
         P = kP;

@@ -66,6 +66,7 @@ public:
         return maxDriverRange;
     }
 };
+#include "JMotorCompBasic.h"
 #include "JMotorCompDirect.h"
 #include "JMotorCompStandard.h"
 #endif

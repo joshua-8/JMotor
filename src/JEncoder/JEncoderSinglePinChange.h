@@ -14,12 +14,12 @@ public:
     /**
      * @brief  constructor, sets pins and settings
      * @param  _encoderAPin: encoder input pin
-     * @param  _countsToDistFactor: conversion factor for getting distance in an actual unit
+     * @param  _distPerCountFactor: conversion factor for getting distance in an actual unit
      * @param  _reverse: false(default)
      * @param  _slowestIntervalMicros: after this many microseconds without an encoder tick velocity is set to zero.
      */
-    JEncoderSinglePinChange(byte _encoderPin, float _countsToDistFactor = 1.0, bool _reverse = false, unsigned long _slowestIntervalMicros = 100000UL)
-        : JEncoderSingle(_encoderPin, _countsToDistFactor, _reverse, _slowestIntervalMicros)
+    JEncoderSinglePinChange(byte _encoderPin, float _distPerCountFactor = 1.0, bool _reverse = false, unsigned long _slowestIntervalMicros = 100000UL)
+        : JEncoderSingle(_encoderPin, _distPerCountFactor, _reverse, _slowestIntervalMicros)
     {
     }
 

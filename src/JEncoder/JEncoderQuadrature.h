@@ -35,11 +35,11 @@ protected:
      * @note   
      * @param  _encoderAPin: one channel of quadrature encoder
      * @param  _encoderBPin: other channel of quadrature encoder
-     * @param  _countsToDistFactor: conversion factor for getting distance in an actual unit
+     * @param  _distPerCountFactor: conversion factor for getting distance in an actual unit
      * @param  _reverse: false(default)
      * @param  _slowestIntervalMicros: after this many microseconds without an encoder tick velocity is set to zero.
      */
-    JEncoderQuadrature(byte _encoderAPin, byte _encoderBPin, float _countsToDistFactor = 1.0, bool _reverse = false, unsigned long _slowestIntervalMicros = 100000UL)
+    JEncoderQuadrature(byte _encoderAPin, byte _encoderBPin, float _distPerCountFactor = 1.0, bool _reverse = false, unsigned long _slowestIntervalMicros = 100000UL)
     {
         encoderAPin = _encoderAPin;
         encoderBPin = _encoderBPin;
@@ -48,7 +48,7 @@ protected:
         } else {
             reverse = 1;
         }
-        distPerCountFactor = _countsToDistFactor;
+        distPerCountFactor = _distPerCountFactor;
         slowestIntervalMicros = _slowestIntervalMicros;
 
         velNew = false;
