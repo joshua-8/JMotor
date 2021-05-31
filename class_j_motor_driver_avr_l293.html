@@ -96,9 +96,9 @@ Collaboration diagram for JMotorDriverAvrL293:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2632b08bfc86803adaa1a1bf267cb91e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_l293.html#a2632b08bfc86803adaa1a1bf267cb91e">JMotorDriverAvrL293</a> (byte _en, byte _i1, byte _i2, bool _breakOn=true, bool breakWhenDisabled=false)</td></tr>
-<tr class="memdesc:a2632b08bfc86803adaa1a1bf267cb91e"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins  <a href="class_j_motor_driver_avr_l293.html#a2632b08bfc86803adaa1a1bf267cb91e">More...</a><br /></td></tr>
-<tr class="separator:a2632b08bfc86803adaa1a1bf267cb91e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aada2ec85c47f173bdd1476878c50ac00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_l293.html#aada2ec85c47f173bdd1476878c50ac00">JMotorDriverAvrL293</a> (byte _en, byte _i1, byte _i2, bool _breakOn=true, bool breakWhenDisabled=false, bool _reverse=false)</td></tr>
+<tr class="memdesc:aada2ec85c47f173bdd1476878c50ac00"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins  <a href="class_j_motor_driver_avr_l293.html#aada2ec85c47f173bdd1476878c50ac00">More...</a><br /></td></tr>
+<tr class="separator:aada2ec85c47f173bdd1476878c50ac00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac04aab386642b753efb04a62b1024b7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_l293.html#aac04aab386642b753efb04a62b1024b7">set</a> (float val)</td></tr>
 <tr class="memdesc:aac04aab386642b753efb04a62b1024b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">set motor power  <a href="class_j_motor_driver_avr_l293.html#aac04aab386642b753efb04a62b1024b7">More...</a><br /></td></tr>
 <tr class="separator:aac04aab386642b753efb04a62b1024b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,6 +131,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ac3693aaf5c9fba48882d1d713390c460"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4286bc05bd1c9b0f46f00130146eaea9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_l293.html#a4286bc05bd1c9b0f46f00130146eaea9">breakOn</a></td></tr>
 <tr class="separator:a4286bc05bd1c9b0f46f00130146eaea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa70bc7a4cdc0073e59a84c7f6b87b615"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_l293.html#aa70bc7a4cdc0073e59a84c7f6b87b615">reverse</a></td></tr>
+<tr class="separator:aa70bc7a4cdc0073e59a84c7f6b87b615"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -144,8 +146,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>L293 motor driver chip: <a href="https://www.ti.com/lit/ds/symlink/l293.pdf">https://www.ti.com/lit/ds/symlink/l293.pdf</a>. </p>
 <dl class="section note"><dt>Note</dt><dd>compatible with all boards that support analogWrite() </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a2632b08bfc86803adaa1a1bf267cb91e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2632b08bfc86803adaa1a1bf267cb91e">&#9670;&nbsp;</a></span>JMotorDriverAvrL293()</h2>
+<a id="aada2ec85c47f173bdd1476878c50ac00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aada2ec85c47f173bdd1476878c50ac00">&#9670;&nbsp;</a></span>JMotorDriverAvrL293()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -181,7 +183,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>breakWhenDisabled</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>breakWhenDisabled</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_reverse</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -204,6 +212,7 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">_i2</td><td>input pin 2 (direction) </td></tr>
     <tr><td class="paramname">_breakOn</td><td>= true: if true (default), add extra resistance to motor when set to 0 power (by shorting motor terminals) </td></tr>
     <tr><td class="paramname">breakWhenDisabled</td><td>= false: if false (default) turn off break when disabled, if true, keep electrically breaking </td></tr>
+    <tr><td class="paramname">_reverse</td><td>(bool) default=false, reverse direction of driver </td></tr>
   </table>
   </dd>
 </dl>
@@ -427,6 +436,20 @@ Additional Inherited Members</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_j_motor_driver_avr_p_w_m.html">JMotorDriverAvrPWM</a> JMotorDriverAvrL293::pwmDriver</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa70bc7a4cdc0073e59a84c7f6b87b615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa70bc7a4cdc0073e59a84c7f6b87b615">&#9670;&nbsp;</a></span>reverse</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool JMotorDriverAvrL293::reverse</td>
         </tr>
       </table>
 </div><div class="memdoc">

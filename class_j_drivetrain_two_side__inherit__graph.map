@@ -1,0 +1,4 @@
+<map id="JDrivetrainTwoSide" name="JDrivetrainTwoSide">
+<area shape="rect" id="node1" title="subclass of JDrivetrain for controlling a drivetrain with one JMotorController for each side of the d..." alt="" coords="5,80,140,107"/>
+<area shape="rect" id="node2" href="$class_j_drivetrain.html" title=" " alt="" coords="31,5,115,32"/>
+</map>

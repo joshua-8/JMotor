@@ -142,6 +142,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a69e70a259b49afbb240f03b3f46531e9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_base.html#a69e70a259b49afbb240f03b3f46531e9">setMaxDriverRangeAmount</a> (float _driverRangeAmount)=0</td></tr>
 <tr class="memdesc:a69e70a259b49afbb240f03b3f46531e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">set what fraction of driverRange can be used  <a href="class_j_motor_controller_base.html#a69e70a259b49afbb240f03b3f46531e9">More...</a><br /></td></tr>
 <tr class="separator:a69e70a259b49afbb240f03b3f46531e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af544bfd3696bcacfb02734999230242b"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_base.html#af544bfd3696bcacfb02734999230242b">getAccelLimit</a> ()=0</td></tr>
+<tr class="memdesc:af544bfd3696bcacfb02734999230242b"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns value of accelLimit  <a href="class_j_motor_controller_base.html#af544bfd3696bcacfb02734999230242b">More...</a><br /></td></tr>
+<tr class="separator:af544bfd3696bcacfb02734999230242b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf0c2acd4b8a16e797c381926f3c702a"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_base.html#aaf0c2acd4b8a16e797c381926f3c702a">getVelLimit</a> ()=0</td></tr>
+<tr class="memdesc:aaf0c2acd4b8a16e797c381926f3c702a"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns value of velLimit  <a href="class_j_motor_controller_base.html#aaf0c2acd4b8a16e797c381926f3c702a">More...</a><br /></td></tr>
+<tr class="separator:aaf0c2acd4b8a16e797c381926f3c702a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class defines a common interface for classes which control velocity of a motor controlled by a <a class="el" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers">JMotorDriver</a>. </p>
@@ -213,6 +219,41 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Implemented in <a class="el" href="class_j_motor_controller_closed.html#ac10af2f64b0ff551758cceca7e422433">JMotorControllerClosed</a>, and <a class="el" href="class_j_motor_controller_basic.html#a008ba2b28f33ca0fcabb89e1887fe6a7">JMotorControllerBasic</a>.</p>
+
+</div>
+</div>
+<a id="af544bfd3696bcacfb02734999230242b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af544bfd3696bcacfb02734999230242b">&#9670;&nbsp;</a></span>getAccelLimit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual float JMotorControllerBase::getAccelLimit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>returns value of accelLimit </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(float)</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_j_motor_controller_closed.html#a1bb0e52c3682fa2d9e84fbeafc18e38c">JMotorControllerClosed</a>, and <a class="el" href="class_j_motor_controller_basic.html#ac3c69e30f6fedf4e537459ee634de88f">JMotorControllerBasic</a>.</p>
 
 </div>
 </div>
@@ -453,6 +494,41 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Implemented in <a class="el" href="class_j_motor_controller_closed.html#ac19400884c4cf9bbaa3011878a38b209">JMotorControllerClosed</a>, and <a class="el" href="class_j_motor_controller_basic.html#a9fbc78e290359e23c452c8685a4b77d9">JMotorControllerBasic</a>.</p>
+
+</div>
+</div>
+<a id="aaf0c2acd4b8a16e797c381926f3c702a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf0c2acd4b8a16e797c381926f3c702a">&#9670;&nbsp;</a></span>getVelLimit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual float JMotorControllerBase::getVelLimit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>returns value of velLimit </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(float)</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_j_motor_controller_closed.html#a1536908c1912a322abe20c9fcfcc27f7">JMotorControllerClosed</a>, and <a class="el" href="class_j_motor_controller_basic.html#aabffcb827276905a615e14461d39f0c1">JMotorControllerBasic</a>.</p>
 
 </div>
 </div>

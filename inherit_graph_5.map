@@ -1,7 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="5,31,152,57"/>
-<area shape="rect" id="node2" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="217,31,334,57"/>
-<area shape="rect" id="node3" href="$class_j_motor_controller_closed.html" title=" " alt="" coords="399,5,556,32"/>
-<area shape="rect" id="node5" href="$class_j_motor_controller_basic.html" title="A motor controller object that uses a JMotorCompensator to set velocity of a motor." alt="" coords="200,81,351,108"/>
-<area shape="rect" id="node4" href="$class_j_motor_controller_open.html" title="This class controls velocity and position of a motor without any encoder feedback." alt="" coords="403,68,551,95"/>
+<area shape="rect" id="node1" href="$class_j_motor_compensator.html" title="This class defines a common interface for converting from speed to driver input. It should compensate..." alt="" coords="5,31,144,57"/>
+<area shape="rect" id="node2" href="$class_j_motor_comp_direct.html" title="Converts from speed to driver input with a simple multiplier." alt="" coords="201,5,331,32"/>
+<area shape="rect" id="node3" href="$class_j_motor_comp_standard.html" title="Converts from speed to driver input compensating for motors not being perfect." alt="" coords="192,56,340,83"/>
 </map>

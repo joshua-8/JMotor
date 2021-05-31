@@ -1,0 +1,6 @@
+<map id="JDrivetrainTwoSide" name="JDrivetrainTwoSide">
+<area shape="rect" id="node1" title="subclass of JDrivetrain for controlling a drivetrain with one JMotorController for each side of the d..." alt="" coords="5,185,140,212"/>
+<area shape="rect" id="node2" href="$class_j_drivetrain.html" title=" " alt="" coords="9,81,93,108"/>
+<area shape="rect" id="node3" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="118,81,235,108"/>
+<area shape="rect" id="node4" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="103,5,250,32"/>
+</map>
