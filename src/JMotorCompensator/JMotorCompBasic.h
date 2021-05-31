@@ -16,13 +16,13 @@ public:
     /**
      * @brief  Converts from speed to driver input compensating for variable supply voltage
      * @param  _voltComp: reference to JVoltageCompensator to convert voltage to driver input
-     * @param  _multiplier: multiplier for speed input, units: voltage per speed
+     * @param  _voltsPerSpeed: multiplier for speed input, units: voltage per speed
      * @param  _minSpeed: if the motor is told to go slower than this speed, just turn it off
      */
-    JMotorCompBasic(JVoltageCompensator& _voltComp, float _multiplier, float _minSpeed)
+    JMotorCompBasic(JVoltageCompensator& _voltComp, float _voltsPerSpeed, float _minSpeed)
         : voltComp(_voltComp)
     {
-        multiplier = _multiplier;
+        multiplier = _voltsPerSpeed;
         minSpeed = abs(_minSpeed);
     }
     float compensate(float val)
@@ -39,6 +39,15 @@ public:
     float getMinVel()
     {
         return minSpeed;
+    }
+
+    void setVoltsPerSpeed(float _voltsPerSpeed)
+    {
+        multiplier = _voltsPerSpeed;
+    }
+    float getVoltsPerSpeed()
+    {
+        return multiplier;
     }
 };
 #endif
