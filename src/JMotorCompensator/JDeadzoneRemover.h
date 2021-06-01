@@ -16,7 +16,7 @@ namespace JDeadzoneRemover {
  * @param  deadzone: (float, default=0) deadzone for the input value (if your joystick might not center perfectly)
  * @retval  (float) output value
  */
-float calculate(float value, float start, float max, float deadzone = 0)
+inline float calculate(float value, float start, float max, float deadzone = 0)
 {
     value = constrain(value, -1.0, 1.0);
     if (abs(value) <= abs(deadzone)) {
