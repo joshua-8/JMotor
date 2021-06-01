@@ -2,6 +2,7 @@
 #define _J_DRIVETRAIN_TWO_SIDE_H
 #include "JDrivetrain.h"
 #include "JMotorController/JMotorController.h"
+#include "JTwoDTransform.h"
 #include <Arduino.h>
 /**
  * @brief  subclass of JDrivetrain for controlling a drivetrain with one JMotorController for each side of the drivetrain
@@ -19,9 +20,9 @@ protected:
     float leftDist;
     float rightDist;
 
-    twoDTransform vel;
-    twoDTransform dist;
-    twoDTransform maxVel;
+    JTwoDTransform vel;
+    JTwoDTransform dist;
+    JTwoDTransform maxVel;
 
 public:
     JDrivetrainTwoSide(JMotorController& _left, JMotorController& _right, float _width)
@@ -65,19 +66,19 @@ public:
     {
         return left.getEnable() || right.getEnable();
     }
-    twoDTransform getVel(bool _run = false)
+    JTwoDTransform getVel(bool _run = false)
     {
         if (_run)
             run();
         return vel;
     }
-    twoDTransform getDist(bool _run = false)
+    JTwoDTransform getDist(bool _run = false)
     {
         if (_run)
             run();
         return dist;
     }
-    void setVel(twoDTransform _vel, bool _run = false)
+    void setVel(JTwoDTransform _vel, bool _run = false)
     {
         float rotation = _vel.rz * width / RAD_TO_DEG / 2;
         left.setVel(_vel.y + rotation, false);
@@ -85,7 +86,7 @@ public:
         if (_run)
             run();
     }
-    void setDistSetpoint(twoDTransform _dist, bool _run = false)
+    void setDistSetpoint(JTwoDTransform _dist, bool _run = false)
     {
         float rotation = _dist.rz * width / RAD_TO_DEG / 2;
         left.setPosSetpoint(_dist.y + rotation, false);
@@ -93,7 +94,7 @@ public:
         if (_run)
             run();
     }
-    void setDistDelta(twoDTransform _dist, bool _run = false)
+    void setDistDelta(JTwoDTransform _dist, bool _run = false)
     {
         float rotation = _dist.rz * width / RAD_TO_DEG / 2;
         left.setPosDelta(_dist.y + rotation, false);
@@ -106,7 +107,7 @@ public:
         left.resetPos();
         right.resetPos();
     }
-    twoDTransform getMaxVel()
+    JTwoDTransform getMaxVel()
     {
         return maxVel;
     }

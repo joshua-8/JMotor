@@ -16,4 +16,5 @@
 #include "JMotorController/JMotorController.h"
 #include "JMotorDriver/JMotorDriver.h"
 #include "JServoController/JServoController.h"
+#include "JTwoDTransform.h"
 #endif

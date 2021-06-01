@@ -1,28 +1,29 @@
 #ifndef J_DRIVETRAIN_CONTROLLER_BASIC_H
 #define J_DRIVETRAIN_CONTROLLER_BASIC_H
 #include "JDrivetrain/JDrivetrain.h"
+#include "JTwoDTransform.h"
 #include <Arduino.h>
 class JDrivetrainControllerBasic : public JDrivetrain {
 protected:
-    JDrivetrain& drivetrain;
-    twoDTransform distError;
     bool controlled;
     bool posMode;
     unsigned long lastCalcMillis;
 
-    twoDTransform velTarget;
+    JTwoDTransform velTarget;
 
 public:
+    JDrivetrain& drivetrain;
     Derivs_Limiter YLimiter;
     Derivs_Limiter RZLimiter;
     Derivs_Limiter XLimiter;
+    JTwoDTransform distError;
 
-    JDrivetrainControllerBasic(JDrivetrain& _drivetrain, twoDTransform _velLimit, twoDTransform _accelLimit, twoDTransform _distError)
+    JDrivetrainControllerBasic(JDrivetrain& _drivetrain, JTwoDTransform _velLimit, JTwoDTransform _accelLimit, JTwoDTransform _distError)
         : drivetrain(_drivetrain)
-        , distError(_distError)
         , YLimiter(Derivs_Limiter(_velLimit.y, _accelLimit.y))
         , RZLimiter(Derivs_Limiter(_velLimit.rz, _accelLimit.rz))
         , XLimiter(Derivs_Limiter(_velLimit.x, _accelLimit.x))
+        , distError(_distError)
     {
         YLimiter.setPreventGoingWrongWay(false);
         XLimiter.setPreventGoingWrongWay(false);
@@ -50,7 +51,7 @@ public:
                 RZLimiter.calc();
                 XLimiter.calc();
 
-                twoDTransform dist = getDist();
+                JTwoDTransform dist = getDist();
                 YLimiter.setPosition(constrain(YLimiter.getPosition(), dist.y - distError.y, dist.y + distError.y));
                 RZLimiter.setPosition(constrain(RZLimiter.getPosition(), dist.rz - distError.rz, dist.rz + distError.rz));
                 XLimiter.setPosition(constrain(XLimiter.getPosition(), dist.x - distError.x, dist.x + distError.x));
@@ -78,10 +79,10 @@ public:
         drivetrain.run();
     }
 
-    void moveVel(twoDTransform _vel, bool _run = false)
+    void moveVel(JTwoDTransform _vel, bool _run = false)
     {
         if (posMode || !controlled) {
-            twoDTransform vel = getVel();
+            JTwoDTransform vel = getVel();
             YLimiter.setVelocity(vel.y);
             RZLimiter.setVelocity(vel.rz);
             XLimiter.setVelocity(vel.x);
@@ -94,17 +95,17 @@ public:
             run();
     }
 
-    void movePos(twoDTransform _pos, bool _run = false)
+    void movePos(JTwoDTransform _pos, bool _run = false)
     {
         if (!posMode || !controlled) {
             YLimiter.resetTime();
             XLimiter.resetTime();
             RZLimiter.resetTime();
-            twoDTransform vel = getVel();
+            JTwoDTransform vel = getVel();
             YLimiter.setVelocity(vel.y);
             RZLimiter.setVelocity(vel.rz);
             XLimiter.setVelocity(vel.x);
-            twoDTransform dist = getDist();
+            JTwoDTransform dist = getDist();
             YLimiter.setPosition(dist.y);
             RZLimiter.setPosition(dist.rz);
             XLimiter.setPosition(dist.x);
@@ -130,22 +131,79 @@ public:
         return controlled;
     }
 
+    JTwoDTransform getTargetDist()
+    {
+        if (controlled && posMode) {
+            return { YLimiter.getTarget(), RZLimiter.getTarget(), XLimiter.getTarget() };
+        } else {
+            return getDist();
+        }
+    }
+
+    void setVelLimit(JTwoDTransform _velLim)
+    {
+        setVelLimitY(_velLim.y);
+        setVelLimitX(_velLim.x);
+        setVelLimitRZ(_velLim.rz);
+    }
+    void setAccelLimit(JTwoDTransform _accelLim)
+    {
+        setAccelLimitY(_accelLim.y);
+        setAccelLimitX(_accelLim.x);
+        setAccelLimitRZ(_accelLim.rz);
+    }
+
+    JTwoDTransform getVelLimit()
+    {
+        return { YLimiter.getVelLimit(), RZLimiter.getVelLimit(), XLimiter.getVelLimit() };
+    }
+
+    JTwoDTransform getAccelLimit()
+    {
+        return { YLimiter.getAccelLimit(), RZLimiter.getAccelLimit(), XLimiter.getAccelLimit() };
+    }
+
+    void setVelLimitY(float l)
+    {
+        YLimiter.setVelLimit(l);
+    }
+    void setVelLimitX(float l)
+    {
+        XLimiter.setVelLimit(l);
+    }
+    void setVelLimitRZ(float l)
+    {
+        RZLimiter.setVelLimit(l);
+    }
+    void setAccelLimitY(float l)
+    {
+        YLimiter.setAccelLimit(l);
+    }
+    void setAccelLimitX(float l)
+    {
+        XLimiter.setAccelLimit(l);
+    }
+    void setAccelLimitRZ(float l)
+    {
+        RZLimiter.setAccelLimit(l);
+    }
+
     ////JDrivetrain methods:
-    void setVel(twoDTransform _vel, bool _run = false)
+    void setVel(JTwoDTransform _vel, bool _run = false)
     {
         controlled = false;
         drivetrain.setVel(_vel, false);
         if (_run)
             run();
     }
-    void setDistSetpoint(twoDTransform _dist, bool _run = false)
+    void setDistSetpoint(JTwoDTransform _dist, bool _run = false)
     {
         controlled = false;
         drivetrain.setDistSetpoint(_dist, false);
         if (_run)
             run();
     }
-    void setDistDelta(twoDTransform _dist, bool _run = false)
+    void setDistDelta(JTwoDTransform _dist, bool _run = false)
     {
         controlled = false;
         drivetrain.setDistDelta(_dist, false);
@@ -154,25 +212,25 @@ public:
     }
     void resetDist()
     {
-        twoDTransform dist = getDist();
+        JTwoDTransform dist = getDist();
         YLimiter.setTarget(YLimiter.getTarget() - dist.y);
         RZLimiter.setTarget(RZLimiter.getTarget() - dist.rz);
         XLimiter.setTarget(XLimiter.getTarget() - dist.x);
         drivetrain.resetDist();
     }
-    twoDTransform getVel(bool _run = false)
+    JTwoDTransform getVel(bool _run = false)
     {
         if (_run)
             run();
         return drivetrain.getVel(false);
     }
-    twoDTransform getDist(bool _run = false)
+    JTwoDTransform getDist(bool _run = false)
     {
         if (_run)
             run();
         return drivetrain.getDist(false);
     }
-    twoDTransform getMaxVel()
+    JTwoDTransform getMaxVel()
     {
         return drivetrain.getMaxVel();
     }
