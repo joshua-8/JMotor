@@ -72,6 +72,10 @@ public:
                 RZLimiter.setVelocity(constrain(RZLimiter.getVelocity(), -RZLimiter.getVelLimit(), RZLimiter.getVelLimit()));
                 XLimiter.setVelocity(constrain(XLimiter.getVelocity(), -XLimiter.getVelLimit(), XLimiter.getVelLimit()));
 
+                YLimiter.setVelocity(constrain(YLimiter.getVelocity(), -getMaxVel().y, getMaxVel().y));
+                RZLimiter.setVelocity(constrain(RZLimiter.getVelocity(), -getMaxVel().rz, getMaxVel().rz));
+                XLimiter.setVelocity(constrain(XLimiter.getVelocity(), -getMaxVel().x, getMaxVel().x));
+
                 drivetrain.setVel({ YLimiter.getVelocity(), RZLimiter.getVelocity(), XLimiter.getVelocity() });
             }
         }

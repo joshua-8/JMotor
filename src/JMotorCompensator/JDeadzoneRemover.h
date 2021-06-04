@@ -32,6 +32,5 @@ inline float calculate(float value, float start, float max, float deadzone = 0)
     }
     return 0;
 }
-
-};
+} //end of namespace
 #endif
