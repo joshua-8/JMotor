@@ -21,13 +21,13 @@ public:
     }
     float calc(JMotorControllerClosed* controller)
     {
-        if (controller->getPosDeltaSetpoint() != 0 || abs(controller->getPosTarget() - controller->getPos()) > controller->getDistFromSetpointLimit() || abs(controller->getVel()) > controller->getMinVel()) {
+        if (controller->getPosDeltaSetpoint() != 0 || abs(controller->getPosSetpoint() - controller->getPos()) > controller->getDistFromSetpointLimit() || abs(controller->getVel()) > controller->getMinVel()) {
             lastMovedMillis = millis();
         }
         float ret = 0;
 
         if (timeout == 0 || millis() - lastMovedMillis <= timeout) {
-            ret = P * (controller->getPosTarget() - controller->getPos()) + controller->getPosDeltaSetpoint();
+            ret = P * (controller->getPosSetpoint() - controller->getPos()) + controller->getPosDeltaSetpoint();
         }
 
         return ret;
@@ -49,7 +49,7 @@ public:
     {
         return timeout;
     }
-    void wake()
+    void resetTime()
     {
         lastMovedMillis = millis();
     }

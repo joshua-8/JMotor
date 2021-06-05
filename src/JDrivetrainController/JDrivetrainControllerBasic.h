@@ -44,39 +44,40 @@ public:
             return;
         }
         lastCalcMillis = micros();
+        if (getEnable()) {
+            if (controlled) {
+                if (posMode) {
+                    YLimiter.calc();
+                    RZLimiter.calc();
+                    XLimiter.calc();
 
-        if (controlled) {
-            if (posMode) {
-                YLimiter.calc();
-                RZLimiter.calc();
-                XLimiter.calc();
+                    JTwoDTransform dist = getDist();
+                    YLimiter.setPosition(constrain(YLimiter.getPosition(), dist.y - distError.y, dist.y + distError.y));
+                    RZLimiter.setPosition(constrain(RZLimiter.getPosition(), dist.rz - distError.rz, dist.rz + distError.rz));
+                    XLimiter.setPosition(constrain(XLimiter.getPosition(), dist.x - distError.x, dist.x + distError.x));
 
-                JTwoDTransform dist = getDist();
-                YLimiter.setPosition(constrain(YLimiter.getPosition(), dist.y - distError.y, dist.y + distError.y));
-                RZLimiter.setPosition(constrain(RZLimiter.getPosition(), dist.rz - distError.rz, dist.rz + distError.rz));
-                XLimiter.setPosition(constrain(XLimiter.getPosition(), dist.x - distError.x, dist.x + distError.x));
+                    drivetrain.setDistSetpoint({ YLimiter.getPosition(), RZLimiter.getPosition(), XLimiter.getPosition() }, false);
+                } else {
+                    if (YLimiter.getVelocity() != velTarget.y) {
+                        YLimiter.setVelocity(YLimiter.getVelocity() + constrain(velTarget.y - YLimiter.getVelocity(), -YLimiter.getAccelLimit() * time, YLimiter.getAccelLimit() * time));
+                    }
+                    if (RZLimiter.getVelocity() != velTarget.rz) {
+                        RZLimiter.setVelocity(RZLimiter.getVelocity() + constrain(velTarget.rz - RZLimiter.getVelocity(), -RZLimiter.getAccelLimit() * time, RZLimiter.getAccelLimit() * time));
+                    }
+                    if (XLimiter.getVelocity() != velTarget.x) {
+                        XLimiter.setVelocity(XLimiter.getVelocity() + constrain(velTarget.x - XLimiter.getVelocity(), -XLimiter.getAccelLimit() * time, XLimiter.getAccelLimit() * time));
+                    }
 
-                drivetrain.setDistSetpoint({ YLimiter.getPosition(), RZLimiter.getPosition(), XLimiter.getPosition() }, false);
-            } else {
-                if (YLimiter.getVelocity() != velTarget.y) {
-                    YLimiter.setVelocity(YLimiter.getVelocity() + constrain(velTarget.y - YLimiter.getVelocity(), -YLimiter.getAcceleration() * time, YLimiter.getAcceleration() * time));
+                    YLimiter.setVelocity(constrain(YLimiter.getVelocity(), -YLimiter.getVelLimit(), YLimiter.getVelLimit()));
+                    RZLimiter.setVelocity(constrain(RZLimiter.getVelocity(), -RZLimiter.getVelLimit(), RZLimiter.getVelLimit()));
+                    XLimiter.setVelocity(constrain(XLimiter.getVelocity(), -XLimiter.getVelLimit(), XLimiter.getVelLimit()));
+
+                    YLimiter.setVelocity(constrain(YLimiter.getVelocity(), -getMaxVel().y, getMaxVel().y));
+                    RZLimiter.setVelocity(constrain(RZLimiter.getVelocity(), -getMaxVel().rz, getMaxVel().rz));
+                    XLimiter.setVelocity(constrain(XLimiter.getVelocity(), -getMaxVel().x, getMaxVel().x));
+
+                    drivetrain.setVel({ YLimiter.getVelocity(), RZLimiter.getVelocity(), XLimiter.getVelocity() });
                 }
-                if (RZLimiter.getVelocity() != velTarget.rz) {
-                    RZLimiter.setVelocity(RZLimiter.getVelocity() + constrain(velTarget.rz - RZLimiter.getVelocity(), -RZLimiter.getAcceleration() * time, RZLimiter.getAcceleration() * time));
-                }
-                if (XLimiter.getVelocity() != velTarget.x) {
-                    XLimiter.setVelocity(XLimiter.getVelocity() + constrain(velTarget.x - XLimiter.getVelocity(), -XLimiter.getAcceleration() * time, XLimiter.getAcceleration() * time));
-                }
-
-                YLimiter.setVelocity(constrain(YLimiter.getVelocity(), -YLimiter.getVelLimit(), YLimiter.getVelLimit()));
-                RZLimiter.setVelocity(constrain(RZLimiter.getVelocity(), -RZLimiter.getVelLimit(), RZLimiter.getVelLimit()));
-                XLimiter.setVelocity(constrain(XLimiter.getVelocity(), -XLimiter.getVelLimit(), XLimiter.getVelLimit()));
-
-                YLimiter.setVelocity(constrain(YLimiter.getVelocity(), -getMaxVel().y, getMaxVel().y));
-                RZLimiter.setVelocity(constrain(RZLimiter.getVelocity(), -getMaxVel().rz, getMaxVel().rz));
-                XLimiter.setVelocity(constrain(XLimiter.getVelocity(), -getMaxVel().x, getMaxVel().x));
-
-                drivetrain.setVel({ YLimiter.getVelocity(), RZLimiter.getVelocity(), XLimiter.getVelocity() });
             }
         }
 
@@ -94,6 +95,8 @@ public:
 
         controlled = true;
         posMode = false;
+
+        velTarget = _vel;
 
         if (_run)
             run();
@@ -123,6 +126,27 @@ public:
 
         if (_run)
             run();
+    }
+
+    void movePosY(float _y, bool _run = false)
+    {
+        JTwoDTransform targ = getTargetDist();
+        targ.y = _y;
+        movePos(targ, _run);
+    }
+
+    void movePosRZ(float _rz, bool _run = false)
+    {
+        JTwoDTransform targ = getTargetDist();
+        targ.rz = _rz;
+        movePos(targ, _run);
+    }
+
+    void movePosX(float _x, bool _run = false)
+    {
+        JTwoDTransform targ = getTargetDist();
+        targ.x = _x;
+        movePos(targ, _run);
     }
 
     bool getPosMode()
@@ -271,6 +295,19 @@ public:
 
     bool setEnable(bool _enable)
     {
+        if (_enable && !getEnable()) {
+            YLimiter.resetTime();
+            RZLimiter.resetTime();
+            XLimiter.resetTime();
+            JTwoDTransform vel = getVel();
+            YLimiter.setVelocity(vel.y);
+            RZLimiter.setVelocity(vel.rz);
+            XLimiter.setVelocity(vel.x);
+            JTwoDTransform dist = getDist();
+            YLimiter.setPosition(dist.y);
+            RZLimiter.setPosition(dist.rz);
+            XLimiter.setPosition(dist.x);
+        }
         return drivetrain.setEnable(_enable);
     }
     bool enable()

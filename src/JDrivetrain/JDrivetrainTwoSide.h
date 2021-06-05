@@ -48,11 +48,13 @@ public:
 
         vel = { (leftVel + rightVel) / (float)2.0, (leftVel - rightVel) / width * (float)RAD_TO_DEG, 0 };
         dist = { (leftDist + rightDist) / (float)2.0, (leftDist - rightDist) / width * (float)RAD_TO_DEG, 0 };
-        maxVel = { min(left.getMaxVel(), right.getMaxVel()), (left.getMaxVel() - right.getMaxVel()) / width * (float)RAD_TO_DEG, 0 };
+        maxVel = { min(left.getMaxVel(), right.getMaxVel()), min(left.getMaxVel(), right.getMaxVel()) * (float)2.0 / width * (float)RAD_TO_DEG, 0 };
     }
     bool setEnable(bool _enable)
     {
-        return left.setEnable(_enable) || right.setEnable(_enable);
+        bool retl = left.setEnable(_enable);
+        bool retr = right.setEnable(_enable);
+        return retl || retr;
     }
     bool enable()
     {

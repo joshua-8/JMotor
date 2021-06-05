@@ -4,6 +4,7 @@ class JMotorControllerClosed; //"forward declaration"
 class JControlLoop {
 public:
     virtual float calc(JMotorControllerClosed* controller) = 0;
+    virtual void resetTime() = 0;
 };
 #include "JMotorController/JMotorControllerClosed.h"
 

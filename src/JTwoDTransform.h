@@ -110,5 +110,22 @@ struct JTwoDTransform {
     {
         return abs(this->y) + abs(this->x) + abs(this->rz);
     }
+    void print(bool labels = true, bool newline = false, Stream* serial = &Serial)
+    {
+        if (labels)
+            serial->print("y:");
+        serial->print(y, 5);
+        serial->print(" ");
+        if (labels)
+            serial->print("rz:");
+        serial->print(rz, 5);
+        serial->print(" ");
+        if (labels)
+            serial->print("x:");
+        serial->print(x, 5);
+        serial->print(" ");
+        if (newline)
+            serial->print("\n");
+    }
 };
 #endif
