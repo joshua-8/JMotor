@@ -405,15 +405,6 @@ public:
         return servo.getServoValueRange();
     }
 
-    void setServoPin(byte _pin)
-    {
-        servo.setServoPin(_pin);
-    }
-    byte getServoPin()
-    {
-        return servo.getServoPin();
-    }
-
 protected:
     void writeAngleToServo(float ang)
     {

@@ -6,7 +6,7 @@
 class JDrivetrainControllerBasic : public JDrivetrain {
 protected:
     bool controlled;
-    bool posMode;
+    bool distMode;
     unsigned long lastCalcMillis;
 
     JTwoDTransform velTarget;
@@ -32,7 +32,7 @@ public:
         RZLimiter.setPreventGoingTooFast(true);
         XLimiter.setPreventGoingTooFast(true);
         controlled = false;
-        posMode = false;
+        distMode = false;
         lastCalcMillis = 0;
     }
 
@@ -52,7 +52,7 @@ public:
         lastCalcMillis = micros();
         if (getEnable()) {
             if (controlled) {
-                if (posMode) {
+                if (distMode) {
                     YLimiter.calc();
                     RZLimiter.calc();
                     XLimiter.calc();
@@ -97,7 +97,7 @@ public:
      */
     void moveVel(JTwoDTransform _vel, bool _run = false)
     {
-        if (posMode || !controlled) {
+        if (distMode || !controlled) {
             JTwoDTransform vel = getVel();
             YLimiter.setVelocity(vel.y);
             RZLimiter.setVelocity(vel.rz);
@@ -105,7 +105,7 @@ public:
         }
 
         controlled = true;
-        posMode = false;
+        distMode = false;
 
         velTarget = _vel;
 
@@ -115,13 +115,13 @@ public:
 
     /**
      * @brief  make each axis of the drivetrain go to target position, following accel and vel limits
-     * @note  each axis is controlled separately, you are not setting absolute position
-     * @param  _pos: (JTwoDTransform) target distance
+     * @note  each axis is controlled separately, you are not setting absolute position, just target distance for each axis
+     * @param  _dist: (JTwoDTransform) target distance
      * @param  _run: (bool) default=false, true=run gets called within this function, false=call run yourself outside this function
      */
-    void moveDist(JTwoDTransform _pos, bool _run = false)
+    void moveDist(JTwoDTransform _dist, bool _run = false)
     {
-        if (!posMode || !controlled) {
+        if (!distMode || !controlled) {
             YLimiter.resetTime();
             XLimiter.resetTime();
             RZLimiter.resetTime();
@@ -134,41 +134,41 @@ public:
             RZLimiter.setPosition(dist.rz);
             XLimiter.setPosition(dist.x);
         }
-        YLimiter.setTarget(_pos.y);
-        RZLimiter.setTarget(_pos.rz);
-        XLimiter.setTarget(_pos.x);
+        YLimiter.setTarget(_dist.y);
+        RZLimiter.setTarget(_dist.rz);
+        XLimiter.setTarget(_dist.x);
 
         controlled = true;
-        posMode = true;
+        distMode = true;
 
         if (_run)
             run();
     }
 
-    void movePosY(float _y, bool _run = false)
+    void moveDistY(float _y, bool _run = false)
     {
         JTwoDTransform targ = getTargetDist();
         targ.y = _y;
         moveDist(targ, _run);
     }
 
-    void movePosRZ(float _rz, bool _run = false)
+    void moveDistRZ(float _rz, bool _run = false)
     {
         JTwoDTransform targ = getTargetDist();
         targ.rz = _rz;
         moveDist(targ, _run);
     }
 
-    void movePosX(float _x, bool _run = false)
+    void moveDistX(float _x, bool _run = false)
     {
         JTwoDTransform targ = getTargetDist();
         targ.x = _x;
         moveDist(targ, _run);
     }
 
-    bool getPosMode()
+    bool getDistMode()
     {
-        return posMode;
+        return distMode;
     }
 
     /**
@@ -182,7 +182,7 @@ public:
 
     JTwoDTransform getTargetDist()
     {
-        if (controlled && posMode) {
+        if (controlled && distMode) {
             return { YLimiter.getTarget(), RZLimiter.getTarget(), XLimiter.getTarget() };
         } else {
             return getDist();
