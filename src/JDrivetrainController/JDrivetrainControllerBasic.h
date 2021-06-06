@@ -28,6 +28,9 @@ public:
         YLimiter.setPreventGoingWrongWay(false);
         XLimiter.setPreventGoingWrongWay(false);
         RZLimiter.setPreventGoingWrongWay(false);
+        YLimiter.setPreventGoingTooFast(true);
+        RZLimiter.setPreventGoingTooFast(true);
+        XLimiter.setPreventGoingTooFast(true);
         controlled = false;
         posMode = false;
         lastCalcMillis = 0;
@@ -307,6 +310,7 @@ public:
             YLimiter.setPosition(dist.y);
             RZLimiter.setPosition(dist.rz);
             XLimiter.setPosition(dist.x);
+            drivetrain.setDistSetpoint(dist);
         }
         return drivetrain.setEnable(_enable);
     }
