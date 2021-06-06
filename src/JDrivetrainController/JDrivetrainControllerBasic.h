@@ -36,6 +36,9 @@ public:
         lastCalcMillis = 0;
     }
 
+    /**
+     * @brief  run as frequently as possible
+     */
     void run()
     {
         float time = (micros() - lastCalcMillis) / 1000000.0;
@@ -87,6 +90,11 @@ public:
         drivetrain.run();
     }
 
+    /**
+     * @brief  make drivetrain approach set velocity following acceleration limits
+     * @param  _vel: (JTwoDTransform) target velocity
+     * @param  _run: (bool) default=false, true=run gets called within this function, false=call run yourself outside this function
+     */
     void moveVel(JTwoDTransform _vel, bool _run = false)
     {
         if (posMode || !controlled) {
@@ -105,7 +113,13 @@ public:
             run();
     }
 
-    void movePos(JTwoDTransform _pos, bool _run = false)
+    /**
+     * @brief  make each axis of the drivetrain go to target position, following accel and vel limits
+     * @note  each axis is controlled separately, you are not setting absolute position
+     * @param  _pos: (JTwoDTransform) target distance
+     * @param  _run: (bool) default=false, true=run gets called within this function, false=call run yourself outside this function
+     */
+    void moveDist(JTwoDTransform _pos, bool _run = false)
     {
         if (!posMode || !controlled) {
             YLimiter.resetTime();
@@ -135,21 +149,21 @@ public:
     {
         JTwoDTransform targ = getTargetDist();
         targ.y = _y;
-        movePos(targ, _run);
+        moveDist(targ, _run);
     }
 
     void movePosRZ(float _rz, bool _run = false)
     {
         JTwoDTransform targ = getTargetDist();
         targ.rz = _rz;
-        movePos(targ, _run);
+        moveDist(targ, _run);
     }
 
     void movePosX(float _x, bool _run = false)
     {
         JTwoDTransform targ = getTargetDist();
         targ.x = _x;
-        movePos(targ, _run);
+        moveDist(targ, _run);
     }
 
     bool getPosMode()
@@ -157,6 +171,10 @@ public:
         return posMode;
     }
 
+    /**
+     * @brief  true=velocity and acceleration is limited, false=writing directly to drivetrain
+     * @retval (bool)
+     */
     bool getIsControlled()
     {
         return controlled;
