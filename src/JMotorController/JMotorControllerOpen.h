@@ -130,6 +130,10 @@ public:
     {
         return positionTarget;
     }
+    float getPosSetpoint()
+    {
+        return position;
+    }
     float getPos()
     {
         return position;

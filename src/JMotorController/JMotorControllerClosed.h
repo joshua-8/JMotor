@@ -122,7 +122,6 @@ public:
                         posDeltaSetpointTarget = constrain(posDeltaSetpointTarget, -compensator.getMaxVel() * (getDriverMinRange() < 0), compensator.getMaxVel() * (getDriverMaxRange() > 0));
                         posDeltaSetpoint += constrain(posDeltaSetpointTarget - posDeltaSetpoint, -accelLimit * time, accelLimit * time);
                     }
-
                     posSetpoint += posDeltaSetpoint * time;
                     if (limitSetpointDistFromCurrent)
                         posSetpoint = constrain(posSetpoint, encoder.getPos() - distFromSetpointLimit, encoder.getPos() + distFromSetpointLimit);
@@ -158,6 +157,8 @@ public:
     bool setPosTarget(float _posTarget, bool _run = true)
     {
         limitSetpointDistFromCurrent = false;
+        if (open)
+            controlLoop.resetTime();
         open = false;
         if (posMode == false) {
             posSetpointSmoother.resetTime();
@@ -174,6 +175,8 @@ public:
     bool setPosTargetStallable(float _posTarget, bool _run = true)
     {
         limitSetpointDistFromCurrent = true;
+        if (open)
+            controlLoop.resetTime();
         open = false;
         if (posMode == false) {
             posSetpointSmoother.resetTime();
@@ -189,6 +192,8 @@ public:
     }
     bool setPosSetpoint(float _posSetpoint, bool _run = true)
     {
+        if (open)
+            controlLoop.resetTime();
         open = false;
         posMode = true;
         smoothed = false;
@@ -200,6 +205,8 @@ public:
     }
     bool setPosDelta(float _posDelta, bool _run = true, bool _resetPos = false)
     {
+        if (open)
+            controlLoop.resetTime();
         open = false;
         posMode = false;
         limitSetpointDistFromCurrent = false;
@@ -217,6 +224,8 @@ public:
         if (open == true || posMode == true) {
             posDeltaSetpoint = velSetpoint;
         }
+        if (open)
+            controlLoop.resetTime();
         open = false;
         posMode = false;
         limitSetpointDistFromCurrent = false;
@@ -260,6 +269,14 @@ public:
     }
 
     float getPosTarget()
+    {
+        if (!open && posMode && smoothed) {
+            return posSetpointSmoother.getTarget();
+        }
+        return posSetpoint;
+    }
+
+    float getPosSetpoint()
     {
         return posSetpoint;
     }
@@ -372,8 +389,11 @@ public:
             posSetpointSmoother.setVelocity(0);
             velSetpoint = 0;
         }
-        if (_enable == true)
+        if (_enable == true && !getEnable()) { //enabling
             lastRunMicros = micros();
+            controlLoop.resetTime();
+            posSetpointSmoother.resetTime();
+        }
         return driver.setEnable(_enable);
     }
     void setMaxDriverRangeAmount(float _driverRangeAmount)

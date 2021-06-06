@@ -39,7 +39,7 @@ public:
     virtual long zeroCounter();
 
     /**
-     * @brief  calculates velocity in distance per second where distance was set by setCountsToDistFactor()
+     * @brief  calculates velocity in distance per second where distance was set by setdistPerCountFactor()
      * @retval (float) velocity
      */
     virtual float getVel();

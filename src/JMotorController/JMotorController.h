@@ -35,10 +35,16 @@ public:
     virtual bool setPosDelta(float _posDelta, bool _run = true, bool _resetPos = false) = 0;
 
     /**
-     * @brief  get position set as target
+     * @brief  get position set as target (for smoothed position setting mode)
      * @retval (float)
      */
     virtual float getPosTarget() = 0;
+
+    /**
+     * @brief  get position controller is currently trying to get to
+     * @retval (float)
+     */
+    virtual float getPosSetpoint() = 0;
 
     /**
      * @brief  get what position the motor is currently at
@@ -65,6 +71,7 @@ public:
      */
     virtual bool isPosModeNotVelocity() = 0;
 };
+#include "JControlLoop/JControlLoop.h"
 #include "JMotorControllerClosed.h"
 #include "JMotorControllerOpen.h"
 #endif
