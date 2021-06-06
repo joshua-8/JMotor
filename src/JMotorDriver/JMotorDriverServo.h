@@ -61,5 +61,16 @@ public:
         setMinServoValue(min);
         setMaxServoValue(max);
     }
+    /**
+     * @brief  set what pin the servo is connected to
+     * @param  _pin: (byte)
+     */
+    virtual void setServoPin(byte _pin) = 0;
+
+    /**
+     * @brief  get what pin the servo is connected to
+     * @retval (byte)
+     */
+    virtual byte getServoPin() = 0;
 };
 #endif

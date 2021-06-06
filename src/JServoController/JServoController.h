@@ -318,7 +318,7 @@ public:
     {
         return dL.getVelLimit();
     }
-        void setAccelLimit(float accelLim)
+    void setAccelLimit(float accelLim)
     {
         dL.setAccelLimit(accelLim);
     }
@@ -403,6 +403,15 @@ public:
     int getServoValueRange()
     {
         return servo.getServoValueRange();
+    }
+
+    void setServoPin(byte _pin)
+    {
+        servo.setServoPin(_pin);
+    }
+    byte getServoPin()
+    {
+        return servo.getServoPin();
     }
 
 protected:

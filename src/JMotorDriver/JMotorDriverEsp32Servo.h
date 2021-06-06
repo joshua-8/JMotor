@@ -108,5 +108,14 @@ public:
     {
         return -1.0;
     }
+
+    void setServoPin(byte _pin)
+    {
+        servoPin = _pin;
+    }
+    byte getServoPin()
+    {
+        return servoPin;
+    }
 };
 #endif
