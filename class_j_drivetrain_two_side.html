@@ -89,10 +89,11 @@ Collaboration diagram for JDrivetrainTwoSide:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_drivetrain_two_side__coll__graph.png" border="0" usemap="#a_j_drivetrain_two_side_coll__map" alt="Collaboration graph"/></div>
 <map name="a_j_drivetrain_two_side_coll__map" id="a_j_drivetrain_two_side_coll__map">
-<area shape="rect" title="subclass of JDrivetrain for controlling a drivetrain with one JMotorController for each side of the d..." alt="" coords="5,185,140,212"/>
-<area shape="rect" href="class_j_drivetrain.html" title=" " alt="" coords="9,81,93,108"/>
-<area shape="rect" href="class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="118,81,235,108"/>
-<area shape="rect" href="class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="103,5,250,32"/>
+<area shape="rect" title="subclass of JDrivetrain for controlling a drivetrain with one JMotorController for each side of the d..." alt="" coords="105,200,240,227"/>
+<area shape="rect" href="class_j_drivetrain.html" title=" " alt="" coords="5,81,89,108"/>
+<area shape="rect" href="class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="114,81,231,108"/>
+<area shape="rect" href="class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="99,5,246,32"/>
+<area shape="rect" href="struct_j_two_d_transform.html" title=" " alt="" coords="255,81,378,108"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -101,6 +102,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a26f14ee644de433e597636047368d144"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a26f14ee644de433e597636047368d144">JDrivetrainTwoSide</a> (<a class="el" href="class_j_motor_controller.html">JMotorController</a> &amp;_left, <a class="el" href="class_j_motor_controller.html">JMotorController</a> &amp;_right, float _width)</td></tr>
 <tr class="separator:a26f14ee644de433e597636047368d144"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae886b9c61d0c2e11dd8c1314d5e67a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#aae886b9c61d0c2e11dd8c1314d5e67a5">run</a> ()</td></tr>
+<tr class="memdesc:aae886b9c61d0c2e11dd8c1314d5e67a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">defines two dimensoinal transformation. y(forward/backwards), rz(clockwise/ccw), x(right/left)  <a href="class_j_drivetrain_two_side.html#aae886b9c61d0c2e11dd8c1314d5e67a5">More...</a><br /></td></tr>
 <tr class="separator:aae886b9c61d0c2e11dd8c1314d5e67a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a431e805d4de6d037799dda23cb81cbed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a431e805d4de6d037799dda23cb81cbed">setEnable</a> (bool _enable)</td></tr>
 <tr class="separator:a431e805d4de6d037799dda23cb81cbed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,20 +112,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a99fbd82f022c6deb471c6dbc6f5261a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5638bc2403991ae56968206120a82081"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a5638bc2403991ae56968206120a82081">getEnable</a> ()</td></tr>
 <tr class="separator:a5638bc2403991ae56968206120a82081"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36005c92cea07c607db6fdd02355dd54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_j_drivetrain_1_1two_d_transform.html">twoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a36005c92cea07c607db6fdd02355dd54">getVel</a> (bool _run=false)</td></tr>
-<tr class="separator:a36005c92cea07c607db6fdd02355dd54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87f440f8f8e14d79dfdccfaa2710e3b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_j_drivetrain_1_1two_d_transform.html">twoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a87f440f8f8e14d79dfdccfaa2710e3b6">getDist</a> (bool _run=false)</td></tr>
-<tr class="separator:a87f440f8f8e14d79dfdccfaa2710e3b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e28d9eee5b50e71654e5ad224d496a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a9e28d9eee5b50e71654e5ad224d496a0">setVel</a> (<a class="el" href="struct_j_drivetrain_1_1two_d_transform.html">twoDTransform</a> _vel, bool _run=false)</td></tr>
-<tr class="separator:a9e28d9eee5b50e71654e5ad224d496a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8098d2d2c30a45af6aa3a0cc848df5e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a8098d2d2c30a45af6aa3a0cc848df5e2">setDistSetpoint</a> (<a class="el" href="struct_j_drivetrain_1_1two_d_transform.html">twoDTransform</a> _dist, bool _run=false)</td></tr>
-<tr class="separator:a8098d2d2c30a45af6aa3a0cc848df5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55717e48f58499c0b24d86ad96a51c90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a55717e48f58499c0b24d86ad96a51c90">setDistDelta</a> (<a class="el" href="struct_j_drivetrain_1_1two_d_transform.html">twoDTransform</a> _dist, bool _run=false)</td></tr>
-<tr class="separator:a55717e48f58499c0b24d86ad96a51c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54aee703a5000bb870489bbcf684fc4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a54aee703a5000bb870489bbcf684fc4f">getVel</a> (bool _run=false)</td></tr>
+<tr class="separator:a54aee703a5000bb870489bbcf684fc4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad67620985f2d31434e04f3232ca30645"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#ad67620985f2d31434e04f3232ca30645">getDist</a> (bool _run=false)</td></tr>
+<tr class="separator:ad67620985f2d31434e04f3232ca30645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dc09f4d6428adec3cabfb636d309d37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a9dc09f4d6428adec3cabfb636d309d37">setVel</a> (<a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> _vel, bool _run=false)</td></tr>
+<tr class="separator:a9dc09f4d6428adec3cabfb636d309d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b746bb06028ceaea2ffc6f151f6e16b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a6b746bb06028ceaea2ffc6f151f6e16b">setDistSetpoint</a> (<a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> _dist, bool _run=false)</td></tr>
+<tr class="separator:a6b746bb06028ceaea2ffc6f151f6e16b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb1440e3c90eeaae84cbcbdf6fe1cc87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#afb1440e3c90eeaae84cbcbdf6fe1cc87">setDistDelta</a> (<a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> _dist, bool _run=false)</td></tr>
+<tr class="separator:afb1440e3c90eeaae84cbcbdf6fe1cc87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cd38f99dd85ecaa747864fe4a301862"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a1cd38f99dd85ecaa747864fe4a301862">resetDist</a> ()</td></tr>
 <tr class="separator:a1cd38f99dd85ecaa747864fe4a301862"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4687a1a22854b338fc427a6cdbe5ff22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_j_drivetrain_1_1two_d_transform.html">twoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a4687a1a22854b338fc427a6cdbe5ff22">getMaxVel</a> ()</td></tr>
-<tr class="separator:a4687a1a22854b338fc427a6cdbe5ff22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d9eec3791596e11fb795dbc3a2942d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a2d9eec3791596e11fb795dbc3a2942d0">getMaxVel</a> ()</td></tr>
+<tr class="separator:a2d9eec3791596e11fb795dbc3a2942d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba210464488fe57a773028426b853e7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#aba210464488fe57a773028426b853e7f">setMotorVels</a> (float vels[2], bool _run=false)</td></tr>
 <tr class="separator:aba210464488fe57a773028426b853e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e1b0e351a756e783ec06d5100a32857"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a4e1b0e351a756e783ec06d5100a32857">setMotorDistSetpoints</a> (float vels[2], bool _run=false)</td></tr>
@@ -165,12 +167,12 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a12887b6921d902ac2e06ba32e92a7834"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9faf58b2854e99cdd0adb5c6b678f60"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#ad9faf58b2854e99cdd0adb5c6b678f60">rightDist</a></td></tr>
 <tr class="separator:ad9faf58b2854e99cdd0adb5c6b678f60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a185755e5662ec741bdce1577a78c2795"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_j_drivetrain_1_1two_d_transform.html">twoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a185755e5662ec741bdce1577a78c2795">vel</a></td></tr>
-<tr class="separator:a185755e5662ec741bdce1577a78c2795"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9891f1dbf483605fc29f286e7a5c239"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_j_drivetrain_1_1two_d_transform.html">twoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#ac9891f1dbf483605fc29f286e7a5c239">dist</a></td></tr>
-<tr class="separator:ac9891f1dbf483605fc29f286e7a5c239"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc151fd34e9ca614390e98dd2458431c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_j_drivetrain_1_1two_d_transform.html">twoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#afc151fd34e9ca614390e98dd2458431c">maxVel</a></td></tr>
-<tr class="separator:afc151fd34e9ca614390e98dd2458431c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ca51ef369bd0ab8f17af0cbfe5588b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a06ca51ef369bd0ab8f17af0cbfe5588b">vel</a></td></tr>
+<tr class="separator:a06ca51ef369bd0ab8f17af0cbfe5588b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca2d94987af36694307ac255120c9ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a6ca2d94987af36694307ac255120c9ea">dist</a></td></tr>
+<tr class="separator:a6ca2d94987af36694307ac255120c9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cab07a2a04311b24d9fe941f666a315"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a1cab07a2a04311b24d9fe941f666a315">maxVel</a></td></tr>
+<tr class="separator:a1cab07a2a04311b24d9fe941f666a315"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>subclass of <a class="el" href="class_j_drivetrain.html">JDrivetrain</a> for controlling a drivetrain with one <a class="el" href="class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont...">JMotorController</a> for each side of the drivetrain </p>
@@ -273,8 +275,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a87f440f8f8e14d79dfdccfaa2710e3b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87f440f8f8e14d79dfdccfaa2710e3b6">&#9670;&nbsp;</a></span>getDist()</h2>
+<a id="ad67620985f2d31434e04f3232ca30645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad67620985f2d31434e04f3232ca30645">&#9670;&nbsp;</a></span>getDist()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -283,7 +285,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_j_drivetrain_1_1two_d_transform.html">twoDTransform</a> JDrivetrainTwoSide::getDist </td>
+          <td class="memname"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> JDrivetrainTwoSide::getDist </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>_run</em> = <code>false</code></td><td>)</td>
@@ -297,7 +299,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_j_drivetrain.html#a8c68f4d279229961a2f72853d723fc0b">JDrivetrain</a>.</p>
+<p>Implements <a class="el" href="class_j_drivetrain.html#ac69ebb5aaba2bf8a66264e53bb89b4b5">JDrivetrain</a>.</p>
 
 </div>
 </div>
@@ -328,8 +330,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a4687a1a22854b338fc427a6cdbe5ff22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4687a1a22854b338fc427a6cdbe5ff22">&#9670;&nbsp;</a></span>getMaxVel()</h2>
+<a id="a2d9eec3791596e11fb795dbc3a2942d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d9eec3791596e11fb795dbc3a2942d0">&#9670;&nbsp;</a></span>getMaxVel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -338,7 +340,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_j_drivetrain_1_1two_d_transform.html">twoDTransform</a> JDrivetrainTwoSide::getMaxVel </td>
+          <td class="memname"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> JDrivetrainTwoSide::getMaxVel </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -351,7 +353,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_j_drivetrain.html#a6d99a2fe1e1fe25b09429dabd2c8ad0b">JDrivetrain</a>.</p>
+<p>Implements <a class="el" href="class_j_drivetrain.html#a9d89b5bb0238f73f7d4fc997e8dd153f">JDrivetrain</a>.</p>
 
 </div>
 </div>
@@ -410,8 +412,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a36005c92cea07c607db6fdd02355dd54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36005c92cea07c607db6fdd02355dd54">&#9670;&nbsp;</a></span>getVel()</h2>
+<a id="a54aee703a5000bb870489bbcf684fc4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54aee703a5000bb870489bbcf684fc4f">&#9670;&nbsp;</a></span>getVel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -420,7 +422,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_j_drivetrain_1_1two_d_transform.html">twoDTransform</a> JDrivetrainTwoSide::getVel </td>
+          <td class="memname"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> JDrivetrainTwoSide::getVel </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>_run</em> = <code>false</code></td><td>)</td>
@@ -434,7 +436,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_j_drivetrain.html#a82d084ed9be4be4ebd2a7cc965867a3b">JDrivetrain</a>.</p>
+<p>Implements <a class="el" href="class_j_drivetrain.html#ab4d1db247edf2941f809969faebbb025">JDrivetrain</a>.</p>
 
 </div>
 </div>
@@ -513,12 +515,14 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>defines two dimensoinal transformation. y(forward/backwards), rz(clockwise/ccw), x(right/left) </p>
+
 <p>Implements <a class="el" href="class_j_drivetrain.html#a76ad4edd018d911d67fe494ca4bbb541">JDrivetrain</a>.</p>
 
 </div>
 </div>
-<a id="a55717e48f58499c0b24d86ad96a51c90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55717e48f58499c0b24d86ad96a51c90">&#9670;&nbsp;</a></span>setDistDelta()</h2>
+<a id="afb1440e3c90eeaae84cbcbdf6fe1cc87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb1440e3c90eeaae84cbcbdf6fe1cc87">&#9670;&nbsp;</a></span>setDistDelta()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -529,7 +533,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">void JDrivetrainTwoSide::setDistDelta </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_j_drivetrain_1_1two_d_transform.html">twoDTransform</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td>
           <td class="paramname"><em>_dist</em>, </td>
         </tr>
         <tr>
@@ -551,12 +555,12 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_j_drivetrain.html#a39fd57bf9b2d6a79126e4bba33deed2f">JDrivetrain</a>.</p>
+<p>Implements <a class="el" href="class_j_drivetrain.html#a4d8a88550fd9547fce5f0b09e01dfe4b">JDrivetrain</a>.</p>
 
 </div>
 </div>
-<a id="a8098d2d2c30a45af6aa3a0cc848df5e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8098d2d2c30a45af6aa3a0cc848df5e2">&#9670;&nbsp;</a></span>setDistSetpoint()</h2>
+<a id="a6b746bb06028ceaea2ffc6f151f6e16b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b746bb06028ceaea2ffc6f151f6e16b">&#9670;&nbsp;</a></span>setDistSetpoint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -567,7 +571,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">void JDrivetrainTwoSide::setDistSetpoint </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_j_drivetrain_1_1two_d_transform.html">twoDTransform</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td>
           <td class="paramname"><em>_dist</em>, </td>
         </tr>
         <tr>
@@ -589,7 +593,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_j_drivetrain.html#ac477e261ba19a172f52383ab65ff79cb">JDrivetrain</a>.</p>
+<p>Implements <a class="el" href="class_j_drivetrain.html#af36a8da6a4217251065021c2ba987c2b">JDrivetrain</a>.</p>
 
 </div>
 </div>
@@ -729,8 +733,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a9e28d9eee5b50e71654e5ad224d496a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e28d9eee5b50e71654e5ad224d496a0">&#9670;&nbsp;</a></span>setVel()</h2>
+<a id="a9dc09f4d6428adec3cabfb636d309d37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dc09f4d6428adec3cabfb636d309d37">&#9670;&nbsp;</a></span>setVel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -741,7 +745,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">void JDrivetrainTwoSide::setVel </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_j_drivetrain_1_1two_d_transform.html">twoDTransform</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td>
           <td class="paramname"><em>_vel</em>, </td>
         </tr>
         <tr>
@@ -763,7 +767,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_j_drivetrain.html#aa4bd04c47857e23de48e856f48f304af">JDrivetrain</a>.</p>
+<p>Implements <a class="el" href="class_j_drivetrain.html#aa55166dffd87881fb81900ef726b8ffe">JDrivetrain</a>.</p>
 
 </div>
 </div>
@@ -794,8 +798,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ac9891f1dbf483605fc29f286e7a5c239"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9891f1dbf483605fc29f286e7a5c239">&#9670;&nbsp;</a></span>dist</h2>
+<a id="a6ca2d94987af36694307ac255120c9ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ca2d94987af36694307ac255120c9ea">&#9670;&nbsp;</a></span>dist</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -804,7 +808,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_j_drivetrain_1_1two_d_transform.html">twoDTransform</a> JDrivetrainTwoSide::dist</td>
+          <td class="memname"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> JDrivetrainTwoSide::dist</td>
         </tr>
       </table>
   </td>
@@ -874,8 +878,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="afc151fd34e9ca614390e98dd2458431c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc151fd34e9ca614390e98dd2458431c">&#9670;&nbsp;</a></span>maxVel</h2>
+<a id="a1cab07a2a04311b24d9fe941f666a315"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cab07a2a04311b24d9fe941f666a315">&#9670;&nbsp;</a></span>maxVel</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -884,7 +888,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_j_drivetrain_1_1two_d_transform.html">twoDTransform</a> JDrivetrainTwoSide::maxVel</td>
+          <td class="memname"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> JDrivetrainTwoSide::maxVel</td>
         </tr>
       </table>
   </td>
@@ -954,8 +958,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a185755e5662ec741bdce1577a78c2795"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a185755e5662ec741bdce1577a78c2795">&#9670;&nbsp;</a></span>vel</h2>
+<a id="a06ca51ef369bd0ab8f17af0cbfe5588b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06ca51ef369bd0ab8f17af0cbfe5588b">&#9670;&nbsp;</a></span>vel</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -964,7 +968,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_j_drivetrain_1_1two_d_transform.html">twoDTransform</a> JDrivetrainTwoSide::vel</td>
+          <td class="memname"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> JDrivetrainTwoSide::vel</td>
         </tr>
       </table>
   </td>

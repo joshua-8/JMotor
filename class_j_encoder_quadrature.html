@@ -102,7 +102,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2b1c12a242ff71f07fbb1aba866bd2e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset the counter of how far the encoder has turned  <a href="class_j_encoder_quadrature.html#a2b1c12a242ff71f07fbb1aba866bd2e3">More...</a><br /></td></tr>
 <tr class="separator:a2b1c12a242ff71f07fbb1aba866bd2e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3127c05f0e516540b3f7876dd07b5ad0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_quadrature.html#a3127c05f0e516540b3f7876dd07b5ad0">getVel</a> ()</td></tr>
-<tr class="memdesc:a3127c05f0e516540b3f7876dd07b5ad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculates velocity in distance per second where distance was set by setCountsToDistFactor()  <a href="class_j_encoder_quadrature.html#a3127c05f0e516540b3f7876dd07b5ad0">More...</a><br /></td></tr>
+<tr class="memdesc:a3127c05f0e516540b3f7876dd07b5ad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculates velocity in distance per second where distance was set by setdistPerCountFactor()  <a href="class_j_encoder_quadrature.html#a3127c05f0e516540b3f7876dd07b5ad0">More...</a><br /></td></tr>
 <tr class="separator:a3127c05f0e516540b3f7876dd07b5ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd0dfb836308ccf350d970d3129c8df3"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_quadrature.html#acd0dfb836308ccf350d970d3129c8df3">getCounter</a> ()</td></tr>
 <tr class="memdesc:acd0dfb836308ccf350d970d3129c8df3"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns how far the encoder has turned from the zero position  <a href="class_j_encoder_quadrature.html#acd0dfb836308ccf350d970d3129c8df3">More...</a><br /></td></tr>
@@ -135,9 +135,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a90840f97d7c5766b7ce8a88552cf4232"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_quadrature.html#a90840f97d7c5766b7ce8a88552cf4232">JEncoderQuadrature</a> (byte _encoderAPin, byte _encoderBPin, float _countsToDistFactor=1.0, bool _reverse=false, unsigned long _slowestIntervalMicros=100000UL)</td></tr>
-<tr class="memdesc:a90840f97d7c5766b7ce8a88552cf4232"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins and settings  <a href="class_j_encoder_quadrature.html#a90840f97d7c5766b7ce8a88552cf4232">More...</a><br /></td></tr>
-<tr class="separator:a90840f97d7c5766b7ce8a88552cf4232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68fbb51c5d5806c3eda0bd57e677afff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_quadrature.html#a68fbb51c5d5806c3eda0bd57e677afff">JEncoderQuadrature</a> (byte _encoderAPin, byte _encoderBPin, float _distPerCountFactor=1.0, bool _reverse=false, unsigned long _slowestIntervalMicros=100000UL)</td></tr>
+<tr class="memdesc:a68fbb51c5d5806c3eda0bd57e677afff"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins and settings  <a href="class_j_encoder_quadrature.html#a68fbb51c5d5806c3eda0bd57e677afff">More...</a><br /></td></tr>
+<tr class="separator:a68fbb51c5d5806c3eda0bd57e677afff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6407653772d422736cd786f8502be0ee"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_quadrature.html#a6407653772d422736cd786f8502be0ee">setUpInterrupts</a> (void(*_isrAPointer)(void), void(*_isrBPointer)(void))</td></tr>
 <tr class="memdesc:a6407653772d422736cd786f8502be0ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">set up pins and interrupts  <a href="class_j_encoder_quadrature.html#a6407653772d422736cd786f8502be0ee">More...</a><br /></td></tr>
 <tr class="separator:a6407653772d422736cd786f8502be0ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,8 +156,8 @@ Protected Attributes</h2></td></tr>
 <div class="textblock"><p>reads a quadrature (incremental) encoder </p>
 <p>speed calulation is done by measuring time between 4 encoder ticks (not between every tick since encoders may not have evenly spaced ticks) velocity is set to zero if the encoder has not turned in slowestIntervalMicros </p><dl class="section note"><dt>Note</dt><dd>don't use this class directly, use a subclass </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a90840f97d7c5766b7ce8a88552cf4232"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90840f97d7c5766b7ce8a88552cf4232">&#9670;&nbsp;</a></span>JEncoderQuadrature()</h2>
+<a id="a68fbb51c5d5806c3eda0bd57e677afff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68fbb51c5d5806c3eda0bd57e677afff">&#9670;&nbsp;</a></span>JEncoderQuadrature()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -181,7 +181,7 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>_countsToDistFactor</em> = <code>1.0</code>, </td>
+          <td class="paramname"><em>_distPerCountFactor</em> = <code>1.0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -215,7 +215,7 @@ Protected Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">_encoderAPin</td><td>one channel of quadrature encoder </td></tr>
     <tr><td class="paramname">_encoderBPin</td><td>other channel of quadrature encoder </td></tr>
-    <tr><td class="paramname">_countsToDistFactor</td><td>conversion factor for getting distance in an actual unit </td></tr>
+    <tr><td class="paramname">_distPerCountFactor</td><td>conversion factor for getting distance in an actual unit </td></tr>
     <tr><td class="paramname">_reverse</td><td>false(default) </td></tr>
     <tr><td class="paramname">_slowestIntervalMicros</td><td>after this many microseconds without an encoder tick velocity is set to zero. </td></tr>
   </table>
@@ -356,7 +356,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>calculates velocity in distance per second where distance was set by setCountsToDistFactor() </p>
+<p>calculates velocity in distance per second where distance was set by setdistPerCountFactor() </p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">(float)</td><td>velocity </td></tr>

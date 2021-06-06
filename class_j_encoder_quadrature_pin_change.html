@@ -96,9 +96,9 @@ Collaboration diagram for JEncoderQuadraturePinChange:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4dfb60df0927ea7eb09d043f67c73245"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_quadrature_pin_change.html#a4dfb60df0927ea7eb09d043f67c73245">JEncoderQuadraturePinChange</a> (byte _encoderAPin, byte _encoderBPin, float _countsToDistFactor=1.0, bool _reverse=false, unsigned long _slowestIntervalMicros=100000UL)</td></tr>
-<tr class="memdesc:a4dfb60df0927ea7eb09d043f67c73245"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins and settings  <a href="class_j_encoder_quadrature_pin_change.html#a4dfb60df0927ea7eb09d043f67c73245">More...</a><br /></td></tr>
-<tr class="separator:a4dfb60df0927ea7eb09d043f67c73245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8184a8b19262b768d773f59628ffff4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_quadrature_pin_change.html#ad8184a8b19262b768d773f59628ffff4">JEncoderQuadraturePinChange</a> (byte _encoderAPin, byte _encoderBPin, float _distPerCountFactor=1.0, bool _reverse=false, unsigned long _slowestIntervalMicros=100000UL)</td></tr>
+<tr class="memdesc:ad8184a8b19262b768d773f59628ffff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins and settings  <a href="class_j_encoder_quadrature_pin_change.html#ad8184a8b19262b768d773f59628ffff4">More...</a><br /></td></tr>
+<tr class="separator:ad8184a8b19262b768d773f59628ffff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4ee2e15c21b7e70ec3de80b4512e892"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_quadrature_pin_change.html#ae4ee2e15c21b7e70ec3de80b4512e892">setUpInterrupts</a> (void(*_isrAPointer)(void), void(*_isrBPointer)(void))</td></tr>
 <tr class="memdesc:ae4ee2e15c21b7e70ec3de80b4512e892"><td class="mdescLeft">&#160;</td><td class="mdescRight">set up pins and interrupts  <a href="class_j_encoder_quadrature_pin_change.html#ae4ee2e15c21b7e70ec3de80b4512e892">More...</a><br /></td></tr>
 <tr class="separator:ae4ee2e15c21b7e70ec3de80b4512e892"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,7 +110,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2b1c12a242ff71f07fbb1aba866bd2e3 inherit pub_methods_class_j_encoder_quadrature"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset the counter of how far the encoder has turned  <a href="class_j_encoder_quadrature.html#a2b1c12a242ff71f07fbb1aba866bd2e3">More...</a><br /></td></tr>
 <tr class="separator:a2b1c12a242ff71f07fbb1aba866bd2e3 inherit pub_methods_class_j_encoder_quadrature"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3127c05f0e516540b3f7876dd07b5ad0 inherit pub_methods_class_j_encoder_quadrature"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_quadrature.html#a3127c05f0e516540b3f7876dd07b5ad0">getVel</a> ()</td></tr>
-<tr class="memdesc:a3127c05f0e516540b3f7876dd07b5ad0 inherit pub_methods_class_j_encoder_quadrature"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculates velocity in distance per second where distance was set by setCountsToDistFactor()  <a href="class_j_encoder_quadrature.html#a3127c05f0e516540b3f7876dd07b5ad0">More...</a><br /></td></tr>
+<tr class="memdesc:a3127c05f0e516540b3f7876dd07b5ad0 inherit pub_methods_class_j_encoder_quadrature"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculates velocity in distance per second where distance was set by setdistPerCountFactor()  <a href="class_j_encoder_quadrature.html#a3127c05f0e516540b3f7876dd07b5ad0">More...</a><br /></td></tr>
 <tr class="separator:a3127c05f0e516540b3f7876dd07b5ad0 inherit pub_methods_class_j_encoder_quadrature"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd0dfb836308ccf350d970d3129c8df3 inherit pub_methods_class_j_encoder_quadrature"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_quadrature.html#acd0dfb836308ccf350d970d3129c8df3">getCounter</a> ()</td></tr>
 <tr class="memdesc:acd0dfb836308ccf350d970d3129c8df3 inherit pub_methods_class_j_encoder_quadrature"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns how far the encoder has turned from the zero position  <a href="class_j_encoder_quadrature.html#acd0dfb836308ccf350d970d3129c8df3">More...</a><br /></td></tr>
@@ -144,9 +144,9 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_j_encoder_quadrature"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_j_encoder_quadrature')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_j_encoder_quadrature.html">JEncoderQuadrature</a></td></tr>
-<tr class="memitem:a90840f97d7c5766b7ce8a88552cf4232 inherit pro_methods_class_j_encoder_quadrature"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_quadrature.html#a90840f97d7c5766b7ce8a88552cf4232">JEncoderQuadrature</a> (byte _encoderAPin, byte _encoderBPin, float _countsToDistFactor=1.0, bool _reverse=false, unsigned long _slowestIntervalMicros=100000UL)</td></tr>
-<tr class="memdesc:a90840f97d7c5766b7ce8a88552cf4232 inherit pro_methods_class_j_encoder_quadrature"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins and settings  <a href="class_j_encoder_quadrature.html#a90840f97d7c5766b7ce8a88552cf4232">More...</a><br /></td></tr>
-<tr class="separator:a90840f97d7c5766b7ce8a88552cf4232 inherit pro_methods_class_j_encoder_quadrature"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68fbb51c5d5806c3eda0bd57e677afff inherit pro_methods_class_j_encoder_quadrature"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_quadrature.html#a68fbb51c5d5806c3eda0bd57e677afff">JEncoderQuadrature</a> (byte _encoderAPin, byte _encoderBPin, float _distPerCountFactor=1.0, bool _reverse=false, unsigned long _slowestIntervalMicros=100000UL)</td></tr>
+<tr class="memdesc:a68fbb51c5d5806c3eda0bd57e677afff inherit pro_methods_class_j_encoder_quadrature"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins and settings  <a href="class_j_encoder_quadrature.html#a68fbb51c5d5806c3eda0bd57e677afff">More...</a><br /></td></tr>
+<tr class="separator:a68fbb51c5d5806c3eda0bd57e677afff inherit pro_methods_class_j_encoder_quadrature"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_j_encoder_quadrature"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_j_encoder_quadrature')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_j_encoder_quadrature.html">JEncoderQuadrature</a></td></tr>
 <tr class="memitem:acdfb2bd349c33f5e5119260dba04da3f inherit pro_attribs_class_j_encoder_quadrature"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_quadrature.html#acdfb2bd349c33f5e5119260dba04da3f">encoderAPin</a></td></tr>
 <tr class="separator:acdfb2bd349c33f5e5119260dba04da3f inherit pro_attribs_class_j_encoder_quadrature"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,8 +157,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>uses a pin change interrupt library to support more pins than attachInterrupt(). </p>
 <p>Interrupt library (tested with v1.1.0): <a href="https://github.com/GreyGnome/EnableInterrupt">https://github.com/GreyGnome/EnableInterrupt</a> </p><dl class="section note"><dt>Note</dt><dd>platform: AVR (standard Arduinos) </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a4dfb60df0927ea7eb09d043f67c73245"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4dfb60df0927ea7eb09d043f67c73245">&#9670;&nbsp;</a></span>JEncoderQuadraturePinChange()</h2>
+<a id="ad8184a8b19262b768d773f59628ffff4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8184a8b19262b768d773f59628ffff4">&#9670;&nbsp;</a></span>JEncoderQuadraturePinChange()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -182,7 +182,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>_countsToDistFactor</em> = <code>1.0</code>, </td>
+          <td class="paramname"><em>_distPerCountFactor</em> = <code>1.0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -216,7 +216,7 @@ Additional Inherited Members</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">_encoderAPin</td><td>one channel of quadrature encoder </td></tr>
     <tr><td class="paramname">_encoderBPin</td><td>other channel of quadrature encoder </td></tr>
-    <tr><td class="paramname">_countsToDistFactor</td><td>conversion factor for getting distance in an actual unit </td></tr>
+    <tr><td class="paramname">_distPerCountFactor</td><td>conversion factor for getting distance in an actual unit </td></tr>
     <tr><td class="paramname">_reverse</td><td>false(default) </td></tr>
     <tr><td class="paramname">_slowestIntervalMicros</td><td>after this many microseconds without an encoder tick velocity is set to zero. </td></tr>
   </table>

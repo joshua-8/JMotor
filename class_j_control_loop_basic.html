@@ -93,6 +93,7 @@ Collaboration diagram for JControlLoopBasic:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a54623247acdaa3d711ef4e40fe478566"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop_basic.html#a54623247acdaa3d711ef4e40fe478566">JControlLoopBasic</a> (float kP, unsigned long _timeout)</td></tr>
+<tr class="memdesc:a54623247acdaa3d711ef4e40fe478566"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor for control loop for use with <a class="el" href="class_j_motor_controller_closed.html">JMotorControllerClosed</a>  <a href="class_j_control_loop_basic.html#a54623247acdaa3d711ef4e40fe478566">More...</a><br /></td></tr>
 <tr class="separator:a54623247acdaa3d711ef4e40fe478566"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af866c812ae16b24d3f8c787bff146667"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop_basic.html#af866c812ae16b24d3f8c787bff146667">calc</a> (<a class="el" href="class_j_motor_controller_closed.html">JMotorControllerClosed</a> *controller)</td></tr>
 <tr class="separator:af866c812ae16b24d3f8c787bff146667"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -104,8 +105,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6c117fa51348214079e70e5a2246f3db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a293f40dc56b8070e0aeaa4843f2b4fad"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop_basic.html#a293f40dc56b8070e0aeaa4843f2b4fad">getTimeout</a> ()</td></tr>
 <tr class="separator:a293f40dc56b8070e0aeaa4843f2b4fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8d170c0a9ef7ac5b6e121a00644901c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop_basic.html#ac8d170c0a9ef7ac5b6e121a00644901c">wake</a> ()</td></tr>
-<tr class="separator:ac8d170c0a9ef7ac5b6e121a00644901c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3f943528df7a84b8dd65f73087264e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop_basic.html#ae3f943528df7a84b8dd65f73087264e5">resetTime</a> ()</td></tr>
+<tr class="separator:ae3f943528df7a84b8dd65f73087264e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -150,6 +151,15 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>constructor for control loop for use with <a class="el" href="class_j_motor_controller_closed.html">JMotorControllerClosed</a> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kP</td><td>(float) proportional to error </td></tr>
+    <tr><td class="paramname">_timeout</td><td>(unsigned long) set output to zero if there's been no movement for this many milliseconds. 0=never timeout </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -232,6 +242,33 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ae3f943528df7a84b8dd65f73087264e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3f943528df7a84b8dd65f73087264e5">&#9670;&nbsp;</a></span>resetTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JControlLoopBasic::resetTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_j_control_loop.html#a6eca601bfbecbc7c8d9e436a4ef6eaf1">JControlLoop</a>.</p>
+
+</div>
+</div>
 <a id="a313261f5702fed33ca1d2db03d8f61ec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a313261f5702fed33ca1d2db03d8f61ec">&#9670;&nbsp;</a></span>setKP()</h2>
 
@@ -272,31 +309,6 @@ Protected Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramtype">unsigned long&#160;</td>
           <td class="paramname"><em>_timeout</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac8d170c0a9ef7ac5b6e121a00644901c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8d170c0a9ef7ac5b6e121a00644901c">&#9670;&nbsp;</a></span>wake()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void JControlLoopBasic::wake </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -377,7 +389,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/JControlLoop/<a class="el" href="_j_control_loop_basic_8h_source.html">JControlLoopBasic.h</a></li>
+<li>src/JMotorController/JControlLoop/<a class="el" href="_j_control_loop_basic_8h_source.html">JControlLoopBasic.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

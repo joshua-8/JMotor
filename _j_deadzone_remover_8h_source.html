@@ -74,7 +74,7 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="namespace_j_deadzone_remover.html">    4</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_j_deadzone_remover.html">JDeadzoneRemover</a> {</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespace_j_deadzone_remover.html#a2bfa0983c968b342fd4a4fd9b4731876">   19</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="namespace_j_deadzone_remover.html#a2bfa0983c968b342fd4a4fd9b4731876">calculate</a>(<span class="keywordtype">float</span> value, <span class="keywordtype">float</span> start, <span class="keywordtype">float</span> max, <span class="keywordtype">float</span> deadzone = 0)</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespace_j_deadzone_remover.html#a2bfa0983c968b342fd4a4fd9b4731876">   19</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="namespace_j_deadzone_remover.html#a2bfa0983c968b342fd4a4fd9b4731876">calculate</a>(<span class="keywordtype">float</span> value, <span class="keywordtype">float</span> start, <span class="keywordtype">float</span> max, <span class="keywordtype">float</span> deadzone = 0)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    value = constrain(value, -1.0, 1.0);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span> (abs(value) &lt;= abs(deadzone)) {</div>
@@ -90,9 +90,8 @@ $(function() {
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;} <span class="comment">//end of namespace</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="anamespace_j_deadzone_remover_html"><div class="ttname"><a href="namespace_j_deadzone_remover.html">JDeadzoneRemover</a></div><div class="ttdef"><b>Definition:</b> JDeadzoneRemover.h:4</div></div>
 <div class="ttc" id="anamespace_j_deadzone_remover_html_a2bfa0983c968b342fd4a4fd9b4731876"><div class="ttname"><a href="namespace_j_deadzone_remover.html#a2bfa0983c968b342fd4a4fd9b4731876">JDeadzoneRemover::calculate</a></div><div class="ttdeci">float calculate(float value, float start, float max, float deadzone=0)</div><div class="ttdoc">If a motor's minimum speed is high, you can use this function to reduce the deadzone where nothing mo...</div><div class="ttdef"><b>Definition:</b> JDeadzoneRemover.h:19</div></div>
 </div><!-- fragment --></div><!-- contents -->

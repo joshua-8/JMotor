@@ -133,8 +133,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae244552a1a6db9e125ceedacaaedf888"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_closed.html#ae244552a1a6db9e125ceedacaaedf888">getSpeedError</a> ()</td></tr>
 <tr class="separator:ae244552a1a6db9e125ceedacaaedf888"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d2680eb0aa6d516ecbe8be0184a03ae"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_closed.html#a1d2680eb0aa6d516ecbe8be0184a03ae">getPosTarget</a> ()</td></tr>
-<tr class="memdesc:a1d2680eb0aa6d516ecbe8be0184a03ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">get position set as target  <a href="class_j_motor_controller_closed.html#a1d2680eb0aa6d516ecbe8be0184a03ae">More...</a><br /></td></tr>
+<tr class="memdesc:a1d2680eb0aa6d516ecbe8be0184a03ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">get position set as target (for smoothed position setting mode)  <a href="class_j_motor_controller_closed.html#a1d2680eb0aa6d516ecbe8be0184a03ae">More...</a><br /></td></tr>
 <tr class="separator:a1d2680eb0aa6d516ecbe8be0184a03ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f9674010fa4948ea38f00033b2ed0c6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_closed.html#a9f9674010fa4948ea38f00033b2ed0c6">getPosSetpoint</a> ()</td></tr>
+<tr class="memdesc:a9f9674010fa4948ea38f00033b2ed0c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">get position controller is currently trying to get to  <a href="class_j_motor_controller_closed.html#a9f9674010fa4948ea38f00033b2ed0c6">More...</a><br /></td></tr>
+<tr class="separator:a9f9674010fa4948ea38f00033b2ed0c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99057d0522731c8c9a24e04fc4c3950a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_closed.html#a99057d0522731c8c9a24e04fc4c3950a">getVelTarget</a> ()</td></tr>
 <tr class="memdesc:a99057d0522731c8c9a24e04fc4c3950a"><td class="mdescLeft">&#160;</td><td class="mdescRight">get target velocity for controller  <a href="class_j_motor_controller_closed.html#a99057d0522731c8c9a24e04fc4c3950a">More...</a><br /></td></tr>
 <tr class="separator:a99057d0522731c8c9a24e04fc4c3950a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -781,6 +784,41 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a9f9674010fa4948ea38f00033b2ed0c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f9674010fa4948ea38f00033b2ed0c6">&#9670;&nbsp;</a></span>getPosSetpoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JMotorControllerClosed::getPosSetpoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get position controller is currently trying to get to </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(float)</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller.html#a55608bfa43954871518da079f45f726c">JMotorController</a>.</p>
+
+</div>
+</div>
 <a id="a1d2680eb0aa6d516ecbe8be0184a03ae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d2680eb0aa6d516ecbe8be0184a03ae">&#9670;&nbsp;</a></span>getPosTarget()</h2>
 
@@ -804,7 +842,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>get position set as target </p>
+<p>get position set as target (for smoothed position setting mode) </p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">(float)</td><td></td></tr>

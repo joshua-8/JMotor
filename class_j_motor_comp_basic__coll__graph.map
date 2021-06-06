@@ -1,0 +1,4 @@
+<map id="JMotorCompBasic" name="JMotorCompBasic">
+<area shape="rect" id="node1" title="Converts from speed to driver input compensating for variable supply voltage." alt="" coords="10,80,139,107"/>
+<area shape="rect" id="node2" href="$class_j_motor_compensator.html" title="This class defines a common interface for converting from speed to driver input. It should compensate..." alt="" coords="5,5,144,32"/>
+</map>

@@ -81,12 +81,7 @@ $(function() {
 <area shape="rect" href="class_j_drivetrain_two_side.html" title="subclass of JDrivetrain for controlling a drivetrain with one JMotorController for each side of the d..." alt="" coords="156,56,291,83"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_2.png" border="0" usemap="#a_j_drivetrain_1_1two_d_transform" alt=""/>
-<map name="a_j_drivetrain_1_1two_d_transform" id="a_j_drivetrain_1_1two_d_transform">
-<area shape="rect" href="struct_j_drivetrain_1_1two_d_transform.html" title="defines two dimensoinal transformation. y(forward/backwards), rz(clockwise/ccw), x(right/left)" alt="" coords="5,5,184,32"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_3.png" border="0" usemap="#a_j_encoder" alt=""/>
+<tr><td><img src="inherit_graph_2.png" border="0" usemap="#a_j_encoder" alt=""/>
 <map name="a_j_encoder" id="a_j_encoder">
 <area shape="rect" href="class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="5,105,81,131"/>
 <area shape="rect" href="class_j_encoder_a_s5048b_i2_c.html" title="reads a type of absolute encoder https://ams.com/as0548b (uses I2C)" alt="" coords="134,25,283,51"/>
@@ -101,24 +96,25 @@ $(function() {
 <area shape="rect" href="class_j_encoder_single_pin_change.html" title="uses a pin change interrupt library to support more pins than attachInterrupt()." alt="" coords="360,290,535,317"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_4.png" border="0" usemap="#a_j_encoder_p_w_m_absolute_1_1pwm_settings" alt=""/>
+<tr><td><img src="inherit_graph_3.png" border="0" usemap="#a_j_encoder_p_w_m_absolute_1_1pwm_settings" alt=""/>
 <map name="a_j_encoder_p_w_m_absolute_1_1pwm_settings" id="a_j_encoder_p_w_m_absolute_1_1pwm_settings">
 <area shape="rect" href="struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html" title="struct for holding parameters for reading PWM Absolute Encoders" alt="" coords="5,5,164,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_5.png" border="0" usemap="#a_j_motor_compensator" alt=""/>
+<tr><td><img src="inherit_graph_4.png" border="0" usemap="#a_j_motor_compensator" alt=""/>
 <map name="a_j_motor_compensator" id="a_j_motor_compensator">
-<area shape="rect" href="class_j_motor_compensator.html" title="This class defines a common interface for converting from speed to driver input. It should compensate..." alt="" coords="5,31,144,57"/>
-<area shape="rect" href="class_j_motor_comp_direct.html" title="Converts from speed to driver input with a simple multiplier." alt="" coords="201,5,331,32"/>
-<area shape="rect" href="class_j_motor_comp_standard.html" title="Converts from speed to driver input compensating for motors not being perfect." alt="" coords="192,56,340,83"/>
+<area shape="rect" href="class_j_motor_compensator.html" title="This class defines a common interface for converting from speed to driver input. It should compensate..." alt="" coords="5,56,144,83"/>
+<area shape="rect" href="class_j_motor_comp_basic.html" title="Converts from speed to driver input compensating for variable supply voltage." alt="" coords="201,5,331,32"/>
+<area shape="rect" href="class_j_motor_comp_direct.html" title="Converts from speed to driver input with a simple multiplier." alt="" coords="201,56,331,83"/>
+<area shape="rect" href="class_j_motor_comp_standard.html" title="Converts from speed to driver input compensating for motors not being perfect." alt="" coords="192,107,340,133"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_6.png" border="0" usemap="#a_j_motor_comp_standard_config" alt=""/>
+<tr><td><img src="inherit_graph_5.png" border="0" usemap="#a_j_motor_comp_standard_config" alt=""/>
 <map name="a_j_motor_comp_standard_config" id="a_j_motor_comp_standard_config">
 <area shape="rect" href="struct_j_motor_comp_standard_config.html" title="struct for containing settings for JMotorCompStandard" alt="" coords="5,5,189,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_7.png" border="0" usemap="#a_j_motor_controller_base" alt=""/>
+<tr><td><img src="inherit_graph_6.png" border="0" usemap="#a_j_motor_controller_base" alt=""/>
 <map name="a_j_motor_controller_base" id="a_j_motor_controller_base">
 <area shape="rect" href="class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="5,31,152,57"/>
 <area shape="rect" href="class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="217,31,334,57"/>
@@ -127,7 +123,7 @@ $(function() {
 <area shape="rect" href="class_j_motor_controller_open.html" title="This class controls velocity and position of a motor without any encoder feedback." alt="" coords="403,68,551,95"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_8.png" border="0" usemap="#a_j_motor_driver" alt=""/>
+<tr><td><img src="inherit_graph_7.png" border="0" usemap="#a_j_motor_driver" alt=""/>
 <map name="a_j_motor_driver" id="a_j_motor_driver">
 <area shape="rect" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="5,183,101,209"/>
 <area shape="rect" href="class_j_motor_driver_avr_l293.html" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf." alt="" coords="167,5,312,32"/>
@@ -145,7 +141,7 @@ $(function() {
 <area shape="rect" href="class_j_motor_driver_servo_advanced_dual.html" title="control two JMotorDriverServoAdvanced as if they are one driver" alt="" coords="613,385,828,412"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_9.png" border="0" usemap="#a_j_servo_controller" alt=""/>
+<tr><td><img src="inherit_graph_8.png" border="0" usemap="#a_j_servo_controller" alt=""/>
 <map name="a_j_servo_controller" id="a_j_servo_controller">
 <area shape="rect" href="class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="5,31,124,57"/>
 <area shape="rect" href="class_j_servo_controller_advanced.html" title=" " alt="" coords="172,5,348,32"/>
@@ -153,10 +149,15 @@ $(function() {
 <area shape="rect" href="class_j_servo_controller_stall_protected.html" title=" " alt="" coords="396,5,596,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_10.png" border="0" usemap="#a_j_servo_stall_sensing" alt=""/>
+<tr><td><img src="inherit_graph_9.png" border="0" usemap="#a_j_servo_stall_sensing" alt=""/>
 <map name="a_j_servo_stall_sensing" id="a_j_servo_stall_sensing">
 <area shape="rect" href="class_j_servo_stall_sensing.html" title=" " alt="" coords="5,5,141,32"/>
 <area shape="rect" href="class_j_servo_current_sensor.html" title=" " alt="" coords="189,5,336,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_10.png" border="0" usemap="#a_j_two_d_transform" alt=""/>
+<map name="a_j_two_d_transform" id="a_j_two_d_transform">
+<area shape="rect" href="struct_j_two_d_transform.html" title=" " alt="" coords="5,5,128,32"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_11.png" border="0" usemap="#a_j_voltage_compensator" alt=""/>
