@@ -147,21 +147,21 @@ public:
 
     void moveDistY(float _y, bool _run = false)
     {
-        JTwoDTransform targ = getTargetDist();
+        JTwoDTransform targ = getDist();
         targ.y = _y;
         moveDist(targ, _run);
     }
 
     void moveDistRZ(float _rz, bool _run = false)
     {
-        JTwoDTransform targ = getTargetDist();
+        JTwoDTransform targ = getDist();
         targ.rz = _rz;
         moveDist(targ, _run);
     }
 
     void moveDistX(float _x, bool _run = false)
     {
-        JTwoDTransform targ = getTargetDist();
+        JTwoDTransform targ = getDist();
         targ.x = _x;
         moveDist(targ, _run);
     }
