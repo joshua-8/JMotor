@@ -106,9 +106,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2aaa4c4bbc534a04bef7cad95c2c09a1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1">run</a> ()</td></tr>
 <tr class="memdesc:a2aaa4c4bbc534a04bef7cad95c2c09a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">call this in your main loop  <a href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1">More...</a><br /></td></tr>
 <tr class="separator:a2aaa4c4bbc534a04bef7cad95c2c09a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20cb0bc64aaf91b5360c40b1c4cfb37b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a20cb0bc64aaf91b5360c40b1c4cfb37b">setAngle</a> (float angle, bool _run=true)</td></tr>
-<tr class="memdesc:a20cb0bc64aaf91b5360c40b1c4cfb37b"><td class="mdescLeft">&#160;</td><td class="mdescRight">set servo angle immediately, without velocity or acceleration limiting  <a href="class_j_servo_controller.html#a20cb0bc64aaf91b5360c40b1c4cfb37b">More...</a><br /></td></tr>
-<tr class="separator:a20cb0bc64aaf91b5360c40b1c4cfb37b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18aa2e5c9ac08bc53a06cec9348d16e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a18aa2e5c9ac08bc53a06cec9348d16e7">setAngleImmediate</a> (float angle, bool _run=true)</td></tr>
+<tr class="memdesc:a18aa2e5c9ac08bc53a06cec9348d16e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">set servo angle immediately, without velocity or acceleration limiting  <a href="class_j_servo_controller.html#a18aa2e5c9ac08bc53a06cec9348d16e7">More...</a><br /></td></tr>
+<tr class="separator:a18aa2e5c9ac08bc53a06cec9348d16e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1057966e570b7a55d6bf5ef33c4ccd4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a1057966e570b7a55d6bf5ef33c4ccd4c">setAngleSmoothed</a> (float angle, bool _run=true)</td></tr>
 <tr class="memdesc:a1057966e570b7a55d6bf5ef33c4ccd4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">set servo angle target, servo will move to target but at limited velocity and acceleration  <a href="class_j_servo_controller.html#a1057966e570b7a55d6bf5ef33c4ccd4c">More...</a><br /></td></tr>
 <tr class="separator:a1057966e570b7a55d6bf5ef33c4ccd4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,8 +130,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9e2ee41d91ec9c833f27157656175c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa66f13c46d1f4e89f0de72edc0566ec3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#aa66f13c46d1f4e89f0de72edc0566ec3">getEnable</a> ()</td></tr>
 <tr class="separator:aa66f13c46d1f4e89f0de72edc0566ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c85ae7d94b872277d610aac8e10864f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a7c85ae7d94b872277d610aac8e10864f">getTargetPos</a> ()</td></tr>
-<tr class="separator:a7c85ae7d94b872277d610aac8e10864f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a234a0d07ef4190701183f0a8b20ebdbc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a234a0d07ef4190701183f0a8b20ebdbc">getPosTarget</a> ()</td></tr>
+<tr class="separator:a234a0d07ef4190701183f0a8b20ebdbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80e157026e2f63f4fbd976f301c0883c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a80e157026e2f63f4fbd976f301c0883c">getPos</a> ()</td></tr>
 <tr class="separator:a80e157026e2f63f4fbd976f301c0883c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accd40e99c9ce3b47e5ae020d38fe31df"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#accd40e99c9ce3b47e5ae020d38fe31df">getVelocity</a> ()</td></tr>
@@ -838,6 +838,31 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a234a0d07ef4190701183f0a8b20ebdbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a234a0d07ef4190701183f0a8b20ebdbc">&#9670;&nbsp;</a></span>getPosTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JServoController::getPosTarget </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a4458ed1e67d666522e62f47c13e51bd6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4458ed1e67d666522e62f47c13e51bd6">&#9670;&nbsp;</a></span>getReverse()</h2>
 
@@ -893,31 +918,6 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a7c85ae7d94b872277d610aac8e10864f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c85ae7d94b872277d610aac8e10864f">&#9670;&nbsp;</a></span>getTargetPos()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float JServoController::getTargetPos </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -1103,8 +1103,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a20cb0bc64aaf91b5360c40b1c4cfb37b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20cb0bc64aaf91b5360c40b1c4cfb37b">&#9670;&nbsp;</a></span>setAngle()</h2>
+<a id="a18aa2e5c9ac08bc53a06cec9348d16e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18aa2e5c9ac08bc53a06cec9348d16e7">&#9670;&nbsp;</a></span>setAngleImmediate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1113,7 +1113,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void JServoController::setAngle </td>
+          <td class="memname">void JServoController::setAngleImmediate </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>angle</em>, </td>
