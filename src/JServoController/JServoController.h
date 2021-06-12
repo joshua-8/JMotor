@@ -133,7 +133,7 @@ public:
      * @param  angle: (float) angle to set
      * @param  _run: (bool) default: true, true = call run() in this function, false = you'll call run() yourself
      */
-    void setAngle(float angle, bool _run = true)
+    void setAngleImmediate(float angle, bool _run = true)
     {
         angle = constrain(angle, min(minAngleLimit, maxAngleLimit), max(minAngleLimit, maxAngleLimit));
         if (dL.getTarget() != angle) {
@@ -205,7 +205,7 @@ public:
     {
         return enabled;
     }
-    float getTargetPos()
+    float getPosTarget()
     {
         return dL.getTarget();
     }

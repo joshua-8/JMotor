@@ -55,7 +55,7 @@ int mode = 0;
 
 void setup()
 {
-    Serial.begin(250000);
+    Serial.begin(115200);
     encoder.setUpInterrupts(encoder_jENCODER_ISR);
     mydrvtrain.enable();
 }
@@ -77,6 +77,8 @@ void loop()
                 mode = 3;
             } else if (inString.equals(";\n")) {
                 mode = 4;
+            } else if (inString.equals("r\n")) {
+                mydrvtrain.resetDist();
             } else {
                 value = inString.toFloat();
                 if (mode == 1) { //s
@@ -89,14 +91,15 @@ void loop()
                     mydrvtrain.moveVel({ value, 0, 0 });
                 }
                 if (mode == 3) { //p
-                    mydrvtrain.movePosRZ(value);
+                    mydrvtrain.moveDistRZ(value);
                 }
                 if (mode == 4) { //;
-                    mydrvtrain.movePosY(value);
+                    mydrvtrain.moveDistY(value);
                 }
             }
             inString = "";
         }
     }
     mydrvtrain.run();
+    delay(5);
 }

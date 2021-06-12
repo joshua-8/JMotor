@@ -180,7 +180,7 @@ public:
         return controlled;
     }
 
-    JTwoDTransform getTargetDist()
+    JTwoDTransform getDistTarget()
     {
         if (controlled && distMode) {
             return { YLimiter.getTarget(), RZLimiter.getTarget(), XLimiter.getTarget() };
@@ -262,9 +262,16 @@ public:
     void resetDist()
     {
         JTwoDTransform dist = getDist();
-        YLimiter.setTarget(YLimiter.getTarget() - dist.y);
-        RZLimiter.setTarget(RZLimiter.getTarget() - dist.rz);
-        XLimiter.setTarget(XLimiter.getTarget() - dist.x);
+        JTwoDTransform offBy = { YLimiter.getTarget() - dist.y, RZLimiter.getTarget() - dist.rz, XLimiter.getTarget() - dist.x };
+
+        YLimiter.setTarget(offBy.y);
+        RZLimiter.setTarget(offBy.rz);
+        XLimiter.setTarget(offBy.x);
+
+        YLimiter.setPosition(YLimiter.getPosition() - dist.y);
+        RZLimiter.setPosition(RZLimiter.getPosition() - dist.rz);
+        XLimiter.setPosition(XLimiter.getPosition() - dist.x);
+
         drivetrain.resetDist();
     }
     JTwoDTransform getVel(bool _run = false)
@@ -278,6 +285,15 @@ public:
         if (_run)
             run();
         return drivetrain.getDist(false);
+    }
+    /**
+     * @brief returns what distances are being set as the setpoints for each axis of the drivetrain
+     * @note only works in controlled dist mode  
+     * @retval (JTwoDTransform)
+     */
+    JTwoDTransform getDistSetpoint()
+    {
+        return { YLimiter.getPosition(), RZLimiter.getPosition(), XLimiter.getPosition() };
     }
     JTwoDTransform getMaxVel()
     {

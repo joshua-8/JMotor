@@ -175,6 +175,7 @@ public:
         if (resetAngle) {
             setPosZero = true;
         }
+        justStartedVel = true;
         return (tTurns * ps.RESOLUTION) * reverse;
     }
 
