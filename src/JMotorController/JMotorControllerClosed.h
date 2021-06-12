@@ -127,9 +127,10 @@ public:
                         posSetpoint = constrain(posSetpoint, encoder.getPos() - distFromSetpointLimit, encoder.getPos() + distFromSetpointLimit);
                 }
                 //MAKE MOTOR GO TO posSetpoint, by setting velSetpointTarget
-                lastPosSetpoint = posSetpoint;
 
                 velSetpointTarget = controlLoop.calc(this);
+
+                lastPosSetpoint = posSetpoint;
 
                 velSetpoint = velSetpointTarget; //open loop uses velSetpointTarget and velsetpoint for acceleration, but closed loop has posDeltaSetpointTarget and posDeltaSetpoint, so just set them equal
 
@@ -336,8 +337,10 @@ public:
         float oldDist = encoder.getPos();
         encoder.zeroCounter();
         posSetpoint -= oldDist;
-        posSetpointSmoother.setPosition(posSetpointSmoother.getPosition() - oldDist);
+        lastPosSetpoint -= oldDist;
+        posSetpointSmoother.setPosition(0);
         posSetpointSmoother.setTarget(posSetpointSmoother.getTarget() - oldDist);
+
         return oldDist;
     }
     bool isPosModeNotVelocity()

@@ -106,6 +106,7 @@ public:
     }
     void resetDist()
     {
+        dist = { 0, 0, 0 };
         left.resetPos();
         right.resetPos();
     }
