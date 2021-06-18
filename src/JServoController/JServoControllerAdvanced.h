@@ -108,7 +108,6 @@ public:
     void adjustServoFrequency(float freq = 1.0)
     {
         adServo.adjustFrequency(freq);
-        rewriteToServo = true;
         writeAngleToServo(dL.getPosition());
     }
     /**

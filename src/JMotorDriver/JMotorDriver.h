@@ -8,10 +8,6 @@
  * @note  JMotorDriver's functions are virtual, it can not be used directly
  */
 class JMotorDriver {
-protected:
-    float lastSetVal = 0;
-    bool justEnabled = true;
-
 public:
     /**
      * @brief  set motor power
@@ -67,16 +63,6 @@ public:
     bool disable()
     {
         return setEnable(false);
-    }
-
-    /**
-     * @brief  returns what value the driver was most recently set to
-     * @note  only updates when driver is enabled
-     * @retval (float)
-     */
-    float getLastSetVal()
-    {
-        return lastSetVal;
     }
 };
 #if defined(ESP32)
