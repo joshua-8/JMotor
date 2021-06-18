@@ -98,11 +98,8 @@ public:
             velocity = constrain(velocity, -compensator.getMaxVel() * (getDriverMinRange() < 0), compensator.getMaxVel() * (getDriverMaxRange() > 0));
             velocity = constrain(velocity, -velLimit, velLimit);
             if (driver.getEnable()) {
-                float lastSetVal = setVal;
                 setVal = compensator.compensate(velocity);
-                if (setVal != lastSetVal) {
-                    driver.set(setVal);
-                }
+                driver.set(setVal);
             }
         }
     }

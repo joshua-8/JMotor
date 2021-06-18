@@ -52,10 +52,6 @@ protected:
      * @brief  has it been longer than disableTimeout since the servo has moved?
      */
     bool sleeping;
-    /**
-     * @brief  used for telling if the driver needs to be set to a new value
-     */
-    bool rewriteToServo;
 
 public:
     /**
@@ -96,7 +92,6 @@ public:
         minSetAngle = _minSetAngle;
         maxSetAngle = _maxSetAngle;
         servo.setServoValues(minServoVal, maxServoVal);
-        rewriteToServo = true;
     }
     /**
      * @brief  call this in your main loop
@@ -117,12 +112,10 @@ public:
             } else { //activate
                 if (servo.getEnable() == false && enabled) {
                     servo.enable();
-                    rewriteToServo = true;
                 }
             }
-        }
-        if (dL.getPositionDelta() != 0.0) {
-            rewriteToServo = true;
+        } else {
+            sleeping = false;
         }
         if (servo.getEnable() && enabled) {
             writeAngleToServo(dL.getPosition());
@@ -242,13 +235,11 @@ public:
     }
     void wake()
     {
-        rewriteToServo = true;
         lastMovedMillis = millis();
     }
     void setReverse(bool rev)
     {
         if (rev != reverse) {
-            rewriteToServo = true;
             reverse = rev;
         }
     }
@@ -264,7 +255,6 @@ public:
     void setMinAngleLimit(float _minAngleLimit)
     {
         if (minAngleLimit != _minAngleLimit) {
-            rewriteToServo = true;
             minAngleLimit = _minAngleLimit;
         }
         dL.setPosLimits(min(minAngleLimit, maxAngleLimit), max(minAngleLimit, maxAngleLimit));
@@ -272,7 +262,6 @@ public:
     void setMaxAngleLimit(float _maxAngleLimit)
     {
         if (maxAngleLimit != _maxAngleLimit) {
-            rewriteToServo = true;
             maxAngleLimit = _maxAngleLimit;
         }
         dL.setPosLimits(min(minAngleLimit, maxAngleLimit), max(minAngleLimit, maxAngleLimit));
@@ -298,14 +287,12 @@ public:
     void setMinSetAngle(float _minSetAngle)
     {
         if (minSetAngle != _minSetAngle) {
-            rewriteToServo = true;
             minSetAngle = _minSetAngle;
         }
     }
     void setMaxSetAngle(float _maxSetAngle)
     {
         if (maxSetAngle != _maxSetAngle) {
-            rewriteToServo = true;
             maxSetAngle = _maxSetAngle;
         }
     }
@@ -353,7 +340,6 @@ public:
     void setMinServoValue(int value)
     {
         if (servo.getMinServoValue() != value) {
-            rewriteToServo = true;
             servo.setMinServoValue(value);
         }
     }
@@ -364,7 +350,6 @@ public:
     void setMaxServoValue(int value)
     {
         if (servo.getMaxServoValue() != value) {
-            rewriteToServo = true;
             servo.setMaxServoValue(value);
         }
     }
@@ -414,9 +399,8 @@ protected:
         } else { //not reversed
             ang = floatMap(ang, minSetAngle, maxSetAngle, servo.getMinRange(), servo.getMaxRange());
         }
-        if (rewriteToServo && enabled && !sleeping) {
+        if (enabled && !sleeping) {
             servo.set(ang);
-            rewriteToServo = false;
         }
     }
     float floatMap(float x, float in_min, float in_max, float out_min, float out_max)

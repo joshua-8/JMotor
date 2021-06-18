@@ -32,13 +32,9 @@ public:
     }
     bool set(float _val)
     {
-        if (justEnabled || _val != lastSetVal) {
-            if (enabled) {
-                lastSetVal = _val;
-                justEnabled = false;
-                int val = constrain(_val * PWM_RANGE, 0, PWM_RANGE);
-                analogWrite(pin, val);
-            }
+        if (enabled) {
+            int val = constrain(_val * PWM_RANGE, 0, PWM_RANGE);
+            analogWrite(pin, val);
         }
         return (_val > 0.0) && (_val < 1.0);
     }
@@ -47,7 +43,6 @@ public:
         if (_enable) {
             if (!enabled) {
                 //actually enable
-                justEnabled = true;
                 enabled = true;
                 analogWrite(pin, !disableState ? 0 : PWM_RANGE);
                 return true;

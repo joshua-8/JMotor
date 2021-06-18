@@ -40,25 +40,21 @@ public:
         if (reverse) {
             val = -val;
         }
-        if (justEnabled || val != lastSetVal) {
-            if (enabled) {
-                lastSetVal = val;
-                justEnabled = false;
-                if (val > 0) {
-                    digitalWrite(i2, LOW);
-                    digitalWrite(i1, HIGH);
-                } else if (val < 0) {
-                    digitalWrite(i1, LOW);
-                    digitalWrite(i2, HIGH);
-                } else {
-                    digitalWrite(i1, HIGH);
-                    digitalWrite(i2, HIGH);
-                }
-                if (breakOn && val == 0) {
-                    pwmDriver.set(1); //activate break
-                } else {
-                    pwmDriver.set(abs(val));
-                }
+        if (enabled) {
+            if (val > 0) {
+                digitalWrite(i2, LOW);
+                digitalWrite(i1, HIGH);
+            } else if (val < 0) {
+                digitalWrite(i1, LOW);
+                digitalWrite(i2, HIGH);
+            } else {
+                digitalWrite(i1, HIGH);
+                digitalWrite(i2, HIGH);
+            }
+            if (breakOn && val == 0) {
+                pwmDriver.set(1); //activate break
+            } else {
+                pwmDriver.set(abs(val));
             }
         }
         return abs(val) < 1.0;
@@ -68,7 +64,6 @@ public:
         if (_enable) {
             if (!enabled) {
                 //actually enable
-                justEnabled = true;
                 enabled = true;
                 pinMode(i1, OUTPUT);
                 pinMode(i2, OUTPUT);
