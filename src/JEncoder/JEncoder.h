@@ -33,6 +33,12 @@
 class JEncoder {
 public:
     /**
+     * @brief  empty function for directionless encoders to override
+     */
+    virtual void setRev(bool _rev)
+    {
+    }
+    /**
      * @brief  reset the counter of how far the encoder has turned
      * @retval (long) returns value of counter before it is reset
      */

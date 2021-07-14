@@ -15,10 +15,11 @@
 class JEncoderSingle : public JEncoder {
 
 protected:
-    byte encoderPin;
+    unsigned char encoderPin;
 
 private:
-    int8_t reverse;
+    bool rev;
+    signed char reverse;
     float distPerCountFactor;
 
     volatile bool velNew;
@@ -39,6 +40,7 @@ protected:
      */
     JEncoderSingle(byte _encoderPin, float _distPerCountFactor = 1.0, bool _reverse = false, unsigned long _slowestIntervalMicros = 100000UL)
     {
+        rev = false;
         encoderPin = _encoderPin;
         distPerCountFactor = _distPerCountFactor;
         slowestIntervalMicros = _slowestIntervalMicros;
@@ -67,6 +69,23 @@ protected:
     virtual void turnOffInterrupts();
 
 public:
+    /**
+     * @brief  get whether the encoder is told it's going backwards currently
+     * @retval (bool)
+     */
+    bool getRev()
+    {
+        return rev;
+    }
+    /**
+     * @brief  set which direction the encoder is moving (if you have external information about direction (like motor power) and want getVel and getDist to go the right direciton even with this directionless encoder)
+     * @param  _rev: (bool) false=forwards true=backwards
+     */
+    void setRev(bool _rev)
+    {
+        rev = _rev;
+    }
+
     long zeroCounter()
     {
         long tempCounter = tickCounter * reverse;
@@ -87,7 +106,7 @@ public:
         if (tempInterval == 0) { //avoid divide by zero
             return 0.0;
         }
-        return reverse * 1000000.0 / tempInterval * distPerCountFactor * 2;
+        return (rev ? -1 : 1) * reverse * 1000000.0 / tempInterval * distPerCountFactor * 2;
     }
     long getCounter()
     {
@@ -154,7 +173,7 @@ public:
             lastEncoderTickMicros = tempMicros;
             newSpeed = true;
         }
-        tickCounter++;
+        tickCounter += (rev ? -1 : 1);
     }
 };
 #endif

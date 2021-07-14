@@ -94,9 +94,13 @@ public:
                 }
                 velSetpoint = constrain(velSetpoint, -compensator.getMaxVel() * (getDriverMinRange() < 0), compensator.getMaxVel() * (getDriverMaxRange() > 0));
                 velSetpoint = constrain(velSetpoint, -velLimit, velLimit);
-                driverInRange = velSetpoint > -compensator.getMaxVel() * (getDriverMinRange() < 0) && velSetpoint < compensator.getMaxVel() * (getDriverMaxRange() > 0);
                 setVal = compensator.compensate(velSetpoint);
-                driver.set(setVal);
+
+                if (!encoder.hasDirection()) {
+                    encoder.setRev((setVal <= 0));
+                }
+
+                driverInRange = driver.set(setVal);
                 posSetpoint = encoder.getPos();
                 posDeltaSetpoint = velSetpoint;
             } else { //closed loop
@@ -134,8 +138,12 @@ public:
 
                 velSetpoint = velSetpointTarget; //open loop uses velSetpointTarget and velsetpoint for acceleration, but closed loop has posDeltaSetpointTarget and posDeltaSetpoint, so just set them equal
 
-                driverInRange = velSetpoint > -compensator.getMaxVel() * (getDriverMinRange() < 0) && velSetpoint < compensator.getMaxVel() * (getDriverMaxRange() > 0);
                 setVal = compensator.compensate(velSetpoint);
+
+                if (!encoder.hasDirection()) {
+                    encoder.setRev((setVal < 0));
+                }
+
                 driverInRange = driver.set(setVal);
             } //end of closed loop mode
         } //enabled
