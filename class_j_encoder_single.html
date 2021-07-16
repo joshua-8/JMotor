@@ -98,6 +98,12 @@ Collaboration diagram for JEncoderSingle:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:acf17b3cd8975b96b4638d091543b78d1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#acf17b3cd8975b96b4638d091543b78d1">getRev</a> ()</td></tr>
+<tr class="memdesc:acf17b3cd8975b96b4638d091543b78d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">get whether the encoder is told it's going backwards currently  <a href="class_j_encoder_single.html#acf17b3cd8975b96b4638d091543b78d1">More...</a><br /></td></tr>
+<tr class="separator:acf17b3cd8975b96b4638d091543b78d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bca3d88a00e1b04bf7d52f8121f7d81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#a7bca3d88a00e1b04bf7d52f8121f7d81">setRev</a> (bool _rev)</td></tr>
+<tr class="memdesc:a7bca3d88a00e1b04bf7d52f8121f7d81"><td class="mdescLeft">&#160;</td><td class="mdescRight">set which direction the encoder is moving (if you have external information about direction (like motor power) and want getVel and getDist to go the right direciton even with this directionless encoder)  <a href="class_j_encoder_single.html#a7bca3d88a00e1b04bf7d52f8121f7d81">More...</a><br /></td></tr>
+<tr class="separator:a7bca3d88a00e1b04bf7d52f8121f7d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f02b28fd0d1421be8ff8402de6b5406"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#a7f02b28fd0d1421be8ff8402de6b5406">zeroCounter</a> ()</td></tr>
 <tr class="memdesc:a7f02b28fd0d1421be8ff8402de6b5406"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset the counter of how far the encoder has turned  <a href="class_j_encoder_single.html#a7f02b28fd0d1421be8ff8402de6b5406">More...</a><br /></td></tr>
 <tr class="separator:a7f02b28fd0d1421be8ff8402de6b5406"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,8 +151,8 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:aecf17461b8be58118af29feebb98dfaf"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#aecf17461b8be58118af29feebb98dfaf">encoderPin</a></td></tr>
-<tr class="separator:aecf17461b8be58118af29feebb98dfaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab025a271ff5007822fcc083a494bc3a8"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#ab025a271ff5007822fcc083a494bc3a8">encoderPin</a></td></tr>
+<tr class="separator:ab025a271ff5007822fcc083a494bc3a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>reads a single channel (incremental) encoder </p>
@@ -349,6 +355,39 @@ velocity is set to zero if the encoder has not turned in slowestIntervalMicros</
 
 </div>
 </div>
+<a id="acf17b3cd8975b96b4638d091543b78d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf17b3cd8975b96b4638d091543b78d1">&#9670;&nbsp;</a></span>getRev()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool JEncoderSingle::getRev </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get whether the encoder is told it's going backwards currently </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(bool)</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ab7f6ec3370553abc0af477522c9f4965"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab7f6ec3370553abc0af477522c9f4965">&#9670;&nbsp;</a></span>getVel()</h2>
 
@@ -520,6 +559,42 @@ velocity is set to zero if the encoder has not turned in slowestIntervalMicros</
 
 </div>
 </div>
+<a id="a7bca3d88a00e1b04bf7d52f8121f7d81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bca3d88a00e1b04bf7d52f8121f7d81">&#9670;&nbsp;</a></span>setRev()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JEncoderSingle::setRev </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_rev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set which direction the encoder is moving (if you have external information about direction (like motor power) and want getVel and getDist to go the right direciton even with this directionless encoder) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_rev</td><td>(bool) false=forwards true=backwards </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="class_j_encoder.html#a5603d9ce775828fa0379aaa4ca0bb9eb">JEncoder</a>.</p>
+
+</div>
+</div>
 <a id="a3a03b77cec5f67f36b7b0a69d187a679"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3a03b77cec5f67f36b7b0a69d187a679">&#9670;&nbsp;</a></span>setReverse()</h2>
 
@@ -662,8 +737,8 @@ velocity is set to zero if the encoder has not turned in slowestIntervalMicros</
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="aecf17461b8be58118af29feebb98dfaf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecf17461b8be58118af29feebb98dfaf">&#9670;&nbsp;</a></span>encoderPin</h2>
+<a id="ab025a271ff5007822fcc083a494bc3a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab025a271ff5007822fcc083a494bc3a8">&#9670;&nbsp;</a></span>encoderPin</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -672,7 +747,7 @@ velocity is set to zero if the encoder has not turned in slowestIntervalMicros</
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">byte JEncoderSingle::encoderPin</td>
+          <td class="memname">unsigned char JEncoderSingle::encoderPin</td>
         </tr>
       </table>
   </td>

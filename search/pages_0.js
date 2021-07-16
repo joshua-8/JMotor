@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jmotor_20library_857',['JMotor Library',['../md_readme.html',1,'']]]
+  ['jmotor_20library_861',['JMotor Library',['../md_readme.html',1,'']]]
 ];

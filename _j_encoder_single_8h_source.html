@@ -77,147 +77,160 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_j_encoder_single.html">JEncoderSingle</a> : <span class="keyword">public</span> <a class="code" href="class_j_encoder.html">JEncoder</a> {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#aecf17461b8be58118af29feebb98dfaf">   18</a></span>&#160;    <span class="keywordtype">byte</span> <a class="code" href="class_j_encoder_single.html#aecf17461b8be58118af29feebb98dfaf">encoderPin</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#ab025a271ff5007822fcc083a494bc3a8">   18</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="class_j_encoder_single.html#ab025a271ff5007822fcc083a494bc3a8">encoderPin</a>;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    int8_t reverse;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">float</span> distPerCountFactor;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">volatile</span> <span class="keywordtype">bool</span> velNew;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">volatile</span> <span class="keywordtype">long</span> tickCounter;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">volatile</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> lastEncoderTickMicros;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">volatile</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> encoderIntervalMicros;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">bool</span> newSpeed;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> slowestIntervalMicros;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">bool</span> wasTimedOut;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#ab59458f819435a1cbe88d4559a05d6f7">   40</a></span>&#160;    <a class="code" href="class_j_encoder_single.html#ab59458f819435a1cbe88d4559a05d6f7">JEncoderSingle</a>(<span class="keywordtype">byte</span> _encoderPin, <span class="keywordtype">float</span> _distPerCountFactor = 1.0, <span class="keywordtype">bool</span> _reverse = <span class="keyword">false</span>, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> _slowestIntervalMicros = 100000UL)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="class_j_encoder_single.html#aecf17461b8be58118af29feebb98dfaf">encoderPin</a> = _encoderPin;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        distPerCountFactor = _distPerCountFactor;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        slowestIntervalMicros = _slowestIntervalMicros;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">if</span> (_reverse) {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            reverse = -1;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            reverse = 1;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        velNew = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        tickCounter = 0;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        encoderIntervalMicros = 0;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        lastEncoderTickMicros = 0;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        newSpeed = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        wasTimedOut = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#ab706d2be983c478b389a67557bd8f0e2">   62</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_single.html#ab706d2be983c478b389a67557bd8f0e2">setUpInterrupts</a>(<span class="keywordtype">void</span> (*_isrPointer)(<span class="keywordtype">void</span>));</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#a1a276e36fe6393440ba92627c44decb3">   67</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_single.html#a1a276e36fe6393440ba92627c44decb3">turnOffInterrupts</a>();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#a7f02b28fd0d1421be8ff8402de6b5406">   70</a></span>&#160;    <span class="keywordtype">long</span> <a class="code" href="class_j_encoder_single.html#a7f02b28fd0d1421be8ff8402de6b5406">zeroCounter</a>()</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">long</span> tempCounter = tickCounter * reverse;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        tickCounter = 0;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">return</span> tempCounter;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#ab7f6ec3370553abc0af477522c9f4965">   76</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_encoder_single.html#ab7f6ec3370553abc0af477522c9f4965">getVel</a>()</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">bool</span> rev;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">signed</span> <span class="keywordtype">char</span> reverse;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">float</span> distPerCountFactor;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">volatile</span> <span class="keywordtype">bool</span> velNew;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">volatile</span> <span class="keywordtype">long</span> tickCounter;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">volatile</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> lastEncoderTickMicros;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">volatile</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> encoderIntervalMicros;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">bool</span> newSpeed;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> slowestIntervalMicros;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">bool</span> wasTimedOut;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#ab59458f819435a1cbe88d4559a05d6f7">   41</a></span>&#160;    <a class="code" href="class_j_encoder_single.html#ab59458f819435a1cbe88d4559a05d6f7">JEncoderSingle</a>(<span class="keywordtype">byte</span> _encoderPin, <span class="keywordtype">float</span> _distPerCountFactor = 1.0, <span class="keywordtype">bool</span> _reverse = <span class="keyword">false</span>, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> _slowestIntervalMicros = 100000UL)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        rev = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="class_j_encoder_single.html#ab025a271ff5007822fcc083a494bc3a8">encoderPin</a> = _encoderPin;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        distPerCountFactor = _distPerCountFactor;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        slowestIntervalMicros = _slowestIntervalMicros;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">if</span> (_reverse) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            reverse = -1;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            reverse = 1;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        velNew = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        tickCounter = 0;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        encoderIntervalMicros = 0;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        lastEncoderTickMicros = 0;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        newSpeed = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        wasTimedOut = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#ab706d2be983c478b389a67557bd8f0e2">   64</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_single.html#ab706d2be983c478b389a67557bd8f0e2">setUpInterrupts</a>(<span class="keywordtype">void</span> (*_isrPointer)(<span class="keywordtype">void</span>));</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#a1a276e36fe6393440ba92627c44decb3">   69</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_single.html#a1a276e36fe6393440ba92627c44decb3">turnOffInterrupts</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#acf17b3cd8975b96b4638d091543b78d1">   76</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_j_encoder_single.html#acf17b3cd8975b96b4638d091543b78d1">getRev</a>()</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="comment">//store temporary copies of variables set by ISR since they may be changed at any time</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> tempEncoderTickMicros = lastEncoderTickMicros;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> tempInterval = encoderIntervalMicros;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="comment">//occasionally micros seems to be smaller than tempEncoderTickMicros and there&#39;s an overflow</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="comment">//  adding tempInterval fixes the problem (looking back one more tick)</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">if</span> ((micros() - tempEncoderTickMicros + tempInterval) &gt; slowestIntervalMicros) {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">return</span> 0.0; <span class="comment">//set to zero if it&#39;s been a while since a tick</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">if</span> (tempInterval == 0) { <span class="comment">//avoid divide by zero</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">return</span> 0.0;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">return</span> reverse * 1000000.0 / tempInterval * distPerCountFactor * 2;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#afc1ca32f42e1c1c61d1c74dec5b3fd0e">   92</a></span>&#160;    <span class="keywordtype">long</span> <a class="code" href="class_j_encoder_single.html#afc1ca32f42e1c1c61d1c74dec5b3fd0e">getCounter</a>()</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">return</span> tickCounter * reverse;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#afb3a2ed294b896b07f45b956078ccc1c">   96</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_encoder_single.html#afb3a2ed294b896b07f45b956078ccc1c">getPos</a>()</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">return</span> tickCounter * distPerCountFactor * reverse;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#a8b45b1afa98689918c3577a11148ebb7">  100</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_encoder_single.html#a8b45b1afa98689918c3577a11148ebb7">getDistPerCountFactor</a>()</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">return</span> distPerCountFactor;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#a60420576d5cceac935716aa86f79cb2b">  104</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_single.html#a60420576d5cceac935716aa86f79cb2b">setDistPerCountFactor</a>(<span class="keywordtype">float</span> _factor)</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        distPerCountFactor = _factor;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
-<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#a3a03b77cec5f67f36b7b0a69d187a679">  113</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_single.html#a3a03b77cec5f67f36b7b0a69d187a679">setReverse</a>(<span class="keywordtype">bool</span> _reverse)</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">if</span> (_reverse) {</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            reverse = -1;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            reverse = 1;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
-<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#a597e7df58daf8ec2c2bae977e09bdeef">  121</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_j_encoder_single.html#a597e7df58daf8ec2c2bae977e09bdeef">hasDirection</a>()</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    {</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
-<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#afff3269442c9f7be35ee5450ad1db9f2">  125</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_j_encoder_single.html#afff3269442c9f7be35ee5450ad1db9f2">isVelNew</a>()</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    {</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="comment">//occasionally micros seems to be smaller than tempEncoderTickMicros and there&#39;s an overflow</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="comment">//  adding tempInterval fixes the problem (looking back one more tick)</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> tempEncoderTickMicros = lastEncoderTickMicros;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> tempInterval = encoderIntervalMicros;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">if</span> ((micros() - tempEncoderTickMicros + tempInterval) &gt; slowestIntervalMicros) {</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="keywordflow">if</span> (!wasTimedOut) {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                wasTimedOut = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            }</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            wasTimedOut = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        }</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordflow">if</span> (newSpeed) {</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            newSpeed = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        }</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
-<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#a88d5a8aa16bf1ff48727aea4f22fc1bf">  147</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_single.html#a88d5a8aa16bf1ff48727aea4f22fc1bf">run</a>() { }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> rev;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#a7bca3d88a00e1b04bf7d52f8121f7d81">   84</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_single.html#a7bca3d88a00e1b04bf7d52f8121f7d81">setRev</a>(<span class="keywordtype">bool</span> _rev)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        rev = _rev;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#a7f02b28fd0d1421be8ff8402de6b5406">   89</a></span>&#160;    <span class="keywordtype">long</span> <a class="code" href="class_j_encoder_single.html#a7f02b28fd0d1421be8ff8402de6b5406">zeroCounter</a>()</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">long</span> tempCounter = tickCounter * reverse;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        tickCounter = 0;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">return</span> tempCounter;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#ab7f6ec3370553abc0af477522c9f4965">   95</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_encoder_single.html#ab7f6ec3370553abc0af477522c9f4965">getVel</a>()</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="comment">//store temporary copies of variables set by ISR since they may be changed at any time</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> tempEncoderTickMicros = lastEncoderTickMicros;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> tempInterval = encoderIntervalMicros;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="comment">//occasionally micros seems to be smaller than tempEncoderTickMicros and there&#39;s an overflow</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="comment">//  adding tempInterval fixes the problem (looking back one more tick)</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">if</span> ((micros() - tempEncoderTickMicros + tempInterval) &gt; slowestIntervalMicros) {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">return</span> 0.0; <span class="comment">//set to zero if it&#39;s been a while since a tick</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">if</span> (tempInterval == 0) { <span class="comment">//avoid divide by zero</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keywordflow">return</span> 0.0;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">return</span> (rev ? -1 : 1) * reverse * 1000000.0 / tempInterval * distPerCountFactor * 2;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#afc1ca32f42e1c1c61d1c74dec5b3fd0e">  111</a></span>&#160;    <span class="keywordtype">long</span> <a class="code" href="class_j_encoder_single.html#afc1ca32f42e1c1c61d1c74dec5b3fd0e">getCounter</a>()</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">return</span> tickCounter * reverse;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#afb3a2ed294b896b07f45b956078ccc1c">  115</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_encoder_single.html#afb3a2ed294b896b07f45b956078ccc1c">getPos</a>()</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">return</span> tickCounter * distPerCountFactor * reverse;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#a8b45b1afa98689918c3577a11148ebb7">  119</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_encoder_single.html#a8b45b1afa98689918c3577a11148ebb7">getDistPerCountFactor</a>()</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">return</span> distPerCountFactor;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#a60420576d5cceac935716aa86f79cb2b">  123</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_single.html#a60420576d5cceac935716aa86f79cb2b">setDistPerCountFactor</a>(<span class="keywordtype">float</span> _factor)</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        distPerCountFactor = _factor;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#a3a03b77cec5f67f36b7b0a69d187a679">  132</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_single.html#a3a03b77cec5f67f36b7b0a69d187a679">setReverse</a>(<span class="keywordtype">bool</span> _reverse)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">if</span> (_reverse) {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            reverse = -1;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            reverse = 1;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    }</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#a597e7df58daf8ec2c2bae977e09bdeef">  140</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_j_encoder_single.html#a597e7df58daf8ec2c2bae977e09bdeef">hasDirection</a>()</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    }</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#afff3269442c9f7be35ee5450ad1db9f2">  144</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_j_encoder_single.html#afff3269442c9f7be35ee5450ad1db9f2">isVelNew</a>()</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="comment">//occasionally micros seems to be smaller than tempEncoderTickMicros and there&#39;s an overflow</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="comment">//  adding tempInterval fixes the problem (looking back one more tick)</span></div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
-<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#ab8a409d326be67c99c6841bbb11c6a29">  149</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_single.html#ab8a409d326be67c99c6841bbb11c6a29">encoderISR</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">if</span> (digitalRead(<a class="code" href="class_j_encoder_single.html#aecf17461b8be58118af29feebb98dfaf">encoderPin</a>) == HIGH) { <span class="comment">//once a cycle save values used for speed calculations</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> tempMicros = micros();</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            encoderIntervalMicros = tempMicros - lastEncoderTickMicros;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            lastEncoderTickMicros = tempMicros;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            newSpeed = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        }</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        tickCounter++;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;};</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> tempEncoderTickMicros = lastEncoderTickMicros;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> tempInterval = encoderIntervalMicros;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">if</span> ((micros() - tempEncoderTickMicros + tempInterval) &gt; slowestIntervalMicros) {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keywordflow">if</span> (!wasTimedOut) {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                wasTimedOut = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            wasTimedOut = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">if</span> (newSpeed) {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            newSpeed = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    }</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#a88d5a8aa16bf1ff48727aea4f22fc1bf">  166</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_single.html#a88d5a8aa16bf1ff48727aea4f22fc1bf">run</a>() { }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="class_j_encoder_single.html#ab8a409d326be67c99c6841bbb11c6a29">  168</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_single.html#ab8a409d326be67c99c6841bbb11c6a29">encoderISR</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">if</span> (digitalRead(<a class="code" href="class_j_encoder_single.html#ab025a271ff5007822fcc083a494bc3a8">encoderPin</a>) == HIGH) { <span class="comment">//once a cycle save values used for speed calculations</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> tempMicros = micros();</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            encoderIntervalMicros = tempMicros - lastEncoderTickMicros;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            lastEncoderTickMicros = tempMicros;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            newSpeed = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        tickCounter += (rev ? -1 : 1);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;};</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_j_encoder_8h_html"><div class="ttname"><a href="_j_encoder_8h.html">JEncoder.h</a></div></div>
 <div class="ttc" id="aclass_j_encoder_html"><div class="ttname"><a href="class_j_encoder.html">JEncoder</a></div><div class="ttdoc">defines common interface for JEncoder</div><div class="ttdef"><b>Definition:</b> JEncoder.h:33</div></div>
 <div class="ttc" id="aclass_j_encoder_single_html"><div class="ttname"><a href="class_j_encoder_single.html">JEncoderSingle</a></div><div class="ttdoc">reads a single channel (incremental) encoder</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:15</div></div>
 <div class="ttc" id="aclass_j_encoder_single_html_a1a276e36fe6393440ba92627c44decb3"><div class="ttname"><a href="class_j_encoder_single.html#a1a276e36fe6393440ba92627c44decb3">JEncoderSingle::turnOffInterrupts</a></div><div class="ttdeci">virtual void turnOffInterrupts()</div><div class="ttdoc">disable interrupts and stop monitoring encoder</div></div>
-<div class="ttc" id="aclass_j_encoder_single_html_a3a03b77cec5f67f36b7b0a69d187a679"><div class="ttname"><a href="class_j_encoder_single.html#a3a03b77cec5f67f36b7b0a69d187a679">JEncoderSingle::setReverse</a></div><div class="ttdeci">void setReverse(bool _reverse)</div><div class="ttdoc">reverse readings of encoder</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:113</div></div>
-<div class="ttc" id="aclass_j_encoder_single_html_a597e7df58daf8ec2c2bae977e09bdeef"><div class="ttname"><a href="class_j_encoder_single.html#a597e7df58daf8ec2c2bae977e09bdeef">JEncoderSingle::hasDirection</a></div><div class="ttdeci">bool hasDirection()</div><div class="ttdoc">can this encoder mesure direction or just speed</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:121</div></div>
-<div class="ttc" id="aclass_j_encoder_single_html_a60420576d5cceac935716aa86f79cb2b"><div class="ttname"><a href="class_j_encoder_single.html#a60420576d5cceac935716aa86f79cb2b">JEncoderSingle::setDistPerCountFactor</a></div><div class="ttdeci">void setDistPerCountFactor(float _factor)</div><div class="ttdoc">set the conversion factor between encoder ticks and distance</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:104</div></div>
-<div class="ttc" id="aclass_j_encoder_single_html_a7f02b28fd0d1421be8ff8402de6b5406"><div class="ttname"><a href="class_j_encoder_single.html#a7f02b28fd0d1421be8ff8402de6b5406">JEncoderSingle::zeroCounter</a></div><div class="ttdeci">long zeroCounter()</div><div class="ttdoc">reset the counter of how far the encoder has turned</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:70</div></div>
-<div class="ttc" id="aclass_j_encoder_single_html_a88d5a8aa16bf1ff48727aea4f22fc1bf"><div class="ttname"><a href="class_j_encoder_single.html#a88d5a8aa16bf1ff48727aea4f22fc1bf">JEncoderSingle::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">if an encoder needs to have some code called each loop (like absolute encoder polling encoder and cal...</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:147</div></div>
-<div class="ttc" id="aclass_j_encoder_single_html_a8b45b1afa98689918c3577a11148ebb7"><div class="ttname"><a href="class_j_encoder_single.html#a8b45b1afa98689918c3577a11148ebb7">JEncoderSingle::getDistPerCountFactor</a></div><div class="ttdeci">float getDistPerCountFactor()</div><div class="ttdoc">returns a conversion factor between encoder ticks and distance that can be set for the encoder</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:100</div></div>
-<div class="ttc" id="aclass_j_encoder_single_html_ab59458f819435a1cbe88d4559a05d6f7"><div class="ttname"><a href="class_j_encoder_single.html#ab59458f819435a1cbe88d4559a05d6f7">JEncoderSingle::JEncoderSingle</a></div><div class="ttdeci">JEncoderSingle(byte _encoderPin, float _distPerCountFactor=1.0, bool _reverse=false, unsigned long _slowestIntervalMicros=100000UL)</div><div class="ttdoc">constructor, sets pins and settings</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:40</div></div>
+<div class="ttc" id="aclass_j_encoder_single_html_a3a03b77cec5f67f36b7b0a69d187a679"><div class="ttname"><a href="class_j_encoder_single.html#a3a03b77cec5f67f36b7b0a69d187a679">JEncoderSingle::setReverse</a></div><div class="ttdeci">void setReverse(bool _reverse)</div><div class="ttdoc">reverse readings of encoder</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:132</div></div>
+<div class="ttc" id="aclass_j_encoder_single_html_a597e7df58daf8ec2c2bae977e09bdeef"><div class="ttname"><a href="class_j_encoder_single.html#a597e7df58daf8ec2c2bae977e09bdeef">JEncoderSingle::hasDirection</a></div><div class="ttdeci">bool hasDirection()</div><div class="ttdoc">can this encoder mesure direction or just speed</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:140</div></div>
+<div class="ttc" id="aclass_j_encoder_single_html_a60420576d5cceac935716aa86f79cb2b"><div class="ttname"><a href="class_j_encoder_single.html#a60420576d5cceac935716aa86f79cb2b">JEncoderSingle::setDistPerCountFactor</a></div><div class="ttdeci">void setDistPerCountFactor(float _factor)</div><div class="ttdoc">set the conversion factor between encoder ticks and distance</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:123</div></div>
+<div class="ttc" id="aclass_j_encoder_single_html_a7bca3d88a00e1b04bf7d52f8121f7d81"><div class="ttname"><a href="class_j_encoder_single.html#a7bca3d88a00e1b04bf7d52f8121f7d81">JEncoderSingle::setRev</a></div><div class="ttdeci">void setRev(bool _rev)</div><div class="ttdoc">set which direction the encoder is moving (if you have external information about direction (like mot...</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:84</div></div>
+<div class="ttc" id="aclass_j_encoder_single_html_a7f02b28fd0d1421be8ff8402de6b5406"><div class="ttname"><a href="class_j_encoder_single.html#a7f02b28fd0d1421be8ff8402de6b5406">JEncoderSingle::zeroCounter</a></div><div class="ttdeci">long zeroCounter()</div><div class="ttdoc">reset the counter of how far the encoder has turned</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:89</div></div>
+<div class="ttc" id="aclass_j_encoder_single_html_a88d5a8aa16bf1ff48727aea4f22fc1bf"><div class="ttname"><a href="class_j_encoder_single.html#a88d5a8aa16bf1ff48727aea4f22fc1bf">JEncoderSingle::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">if an encoder needs to have some code called each loop (like absolute encoder polling encoder and cal...</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:166</div></div>
+<div class="ttc" id="aclass_j_encoder_single_html_a8b45b1afa98689918c3577a11148ebb7"><div class="ttname"><a href="class_j_encoder_single.html#a8b45b1afa98689918c3577a11148ebb7">JEncoderSingle::getDistPerCountFactor</a></div><div class="ttdeci">float getDistPerCountFactor()</div><div class="ttdoc">returns a conversion factor between encoder ticks and distance that can be set for the encoder</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:119</div></div>
+<div class="ttc" id="aclass_j_encoder_single_html_ab025a271ff5007822fcc083a494bc3a8"><div class="ttname"><a href="class_j_encoder_single.html#ab025a271ff5007822fcc083a494bc3a8">JEncoderSingle::encoderPin</a></div><div class="ttdeci">unsigned char encoderPin</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:18</div></div>
+<div class="ttc" id="aclass_j_encoder_single_html_ab59458f819435a1cbe88d4559a05d6f7"><div class="ttname"><a href="class_j_encoder_single.html#ab59458f819435a1cbe88d4559a05d6f7">JEncoderSingle::JEncoderSingle</a></div><div class="ttdeci">JEncoderSingle(byte _encoderPin, float _distPerCountFactor=1.0, bool _reverse=false, unsigned long _slowestIntervalMicros=100000UL)</div><div class="ttdoc">constructor, sets pins and settings</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:41</div></div>
 <div class="ttc" id="aclass_j_encoder_single_html_ab706d2be983c478b389a67557bd8f0e2"><div class="ttname"><a href="class_j_encoder_single.html#ab706d2be983c478b389a67557bd8f0e2">JEncoderSingle::setUpInterrupts</a></div><div class="ttdeci">virtual void setUpInterrupts(void(*_isrPointer)(void))</div><div class="ttdoc">set up pins and interrupts</div></div>
-<div class="ttc" id="aclass_j_encoder_single_html_ab7f6ec3370553abc0af477522c9f4965"><div class="ttname"><a href="class_j_encoder_single.html#ab7f6ec3370553abc0af477522c9f4965">JEncoderSingle::getVel</a></div><div class="ttdeci">float getVel()</div><div class="ttdoc">calculates velocity in distance per second where distance was set by setdistPerCountFactor()</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:76</div></div>
-<div class="ttc" id="aclass_j_encoder_single_html_ab8a409d326be67c99c6841bbb11c6a29"><div class="ttname"><a href="class_j_encoder_single.html#ab8a409d326be67c99c6841bbb11c6a29">JEncoderSingle::encoderISR</a></div><div class="ttdeci">void encoderISR(void)</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:149</div></div>
-<div class="ttc" id="aclass_j_encoder_single_html_aecf17461b8be58118af29feebb98dfaf"><div class="ttname"><a href="class_j_encoder_single.html#aecf17461b8be58118af29feebb98dfaf">JEncoderSingle::encoderPin</a></div><div class="ttdeci">byte encoderPin</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:18</div></div>
-<div class="ttc" id="aclass_j_encoder_single_html_afb3a2ed294b896b07f45b956078ccc1c"><div class="ttname"><a href="class_j_encoder_single.html#afb3a2ed294b896b07f45b956078ccc1c">JEncoderSingle::getPos</a></div><div class="ttdeci">float getPos()</div><div class="ttdoc">returns how far the encoder has turned from the zero position converted to distance</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:96</div></div>
-<div class="ttc" id="aclass_j_encoder_single_html_afc1ca32f42e1c1c61d1c74dec5b3fd0e"><div class="ttname"><a href="class_j_encoder_single.html#afc1ca32f42e1c1c61d1c74dec5b3fd0e">JEncoderSingle::getCounter</a></div><div class="ttdeci">long getCounter()</div><div class="ttdoc">returns how far the encoder has turned from the zero position</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:92</div></div>
-<div class="ttc" id="aclass_j_encoder_single_html_afff3269442c9f7be35ee5450ad1db9f2"><div class="ttname"><a href="class_j_encoder_single.html#afff3269442c9f7be35ee5450ad1db9f2">JEncoderSingle::isVelNew</a></div><div class="ttdeci">bool isVelNew()</div><div class="ttdoc">could be useful for only recalculating a control loop if there's new velocity data</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:125</div></div>
+<div class="ttc" id="aclass_j_encoder_single_html_ab7f6ec3370553abc0af477522c9f4965"><div class="ttname"><a href="class_j_encoder_single.html#ab7f6ec3370553abc0af477522c9f4965">JEncoderSingle::getVel</a></div><div class="ttdeci">float getVel()</div><div class="ttdoc">calculates velocity in distance per second where distance was set by setdistPerCountFactor()</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:95</div></div>
+<div class="ttc" id="aclass_j_encoder_single_html_ab8a409d326be67c99c6841bbb11c6a29"><div class="ttname"><a href="class_j_encoder_single.html#ab8a409d326be67c99c6841bbb11c6a29">JEncoderSingle::encoderISR</a></div><div class="ttdeci">void encoderISR(void)</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:168</div></div>
+<div class="ttc" id="aclass_j_encoder_single_html_acf17b3cd8975b96b4638d091543b78d1"><div class="ttname"><a href="class_j_encoder_single.html#acf17b3cd8975b96b4638d091543b78d1">JEncoderSingle::getRev</a></div><div class="ttdeci">bool getRev()</div><div class="ttdoc">get whether the encoder is told it's going backwards currently</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:76</div></div>
+<div class="ttc" id="aclass_j_encoder_single_html_afb3a2ed294b896b07f45b956078ccc1c"><div class="ttname"><a href="class_j_encoder_single.html#afb3a2ed294b896b07f45b956078ccc1c">JEncoderSingle::getPos</a></div><div class="ttdeci">float getPos()</div><div class="ttdoc">returns how far the encoder has turned from the zero position converted to distance</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:115</div></div>
+<div class="ttc" id="aclass_j_encoder_single_html_afc1ca32f42e1c1c61d1c74dec5b3fd0e"><div class="ttname"><a href="class_j_encoder_single.html#afc1ca32f42e1c1c61d1c74dec5b3fd0e">JEncoderSingle::getCounter</a></div><div class="ttdeci">long getCounter()</div><div class="ttdoc">returns how far the encoder has turned from the zero position</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:111</div></div>
+<div class="ttc" id="aclass_j_encoder_single_html_afff3269442c9f7be35ee5450ad1db9f2"><div class="ttname"><a href="class_j_encoder_single.html#afff3269442c9f7be35ee5450ad1db9f2">JEncoderSingle::isVelNew</a></div><div class="ttdeci">bool isVelNew()</div><div class="ttdoc">could be useful for only recalculating a control loop if there's new velocity data</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:144</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

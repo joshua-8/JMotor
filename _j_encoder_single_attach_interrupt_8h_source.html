@@ -82,13 +82,13 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_j_encoder_single_attach_interrupt.html#a6fe08adf2221e5b3a011dff9bc47abc8">   26</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_single_attach_interrupt.html#a6fe08adf2221e5b3a011dff9bc47abc8">setUpInterrupts</a>(<span class="keywordtype">void</span> (*_isrPointer)(<span class="keywordtype">void</span>))</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        pinMode(<a class="code" href="class_j_encoder_single.html#aecf17461b8be58118af29feebb98dfaf">encoderPin</a>, INPUT);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        pinMode(<a class="code" href="class_j_encoder_single.html#ab025a271ff5007822fcc083a494bc3a8">encoderPin</a>, INPUT);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        attachInterrupt(<a class="code" href="class_j_encoder_single.html#aecf17461b8be58118af29feebb98dfaf">encoderPin</a>, _isrPointer, CHANGE);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        attachInterrupt(<a class="code" href="class_j_encoder_single.html#ab025a271ff5007822fcc083a494bc3a8">encoderPin</a>, _isrPointer, CHANGE);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
 <div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_j_encoder_single_attach_interrupt.html#a24a7a6391c09d68bcd02794c415c1d4c">   33</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_j_encoder_single_attach_interrupt.html#a24a7a6391c09d68bcd02794c415c1d4c">turnOffInterrupts</a>()</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        detachInterrupt(<a class="code" href="class_j_encoder_single.html#aecf17461b8be58118af29feebb98dfaf">encoderPin</a>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        detachInterrupt(<a class="code" href="class_j_encoder_single.html#ab025a271ff5007822fcc083a494bc3a8">encoderPin</a>);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
@@ -98,7 +98,7 @@ $(function() {
 <div class="ttc" id="aclass_j_encoder_single_attach_interrupt_html_a52e982b41aa93d7919046ef562e739e7"><div class="ttname"><a href="class_j_encoder_single_attach_interrupt.html#a52e982b41aa93d7919046ef562e739e7">JEncoderSingleAttachInterrupt::JEncoderSingleAttachInterrupt</a></div><div class="ttdeci">JEncoderSingleAttachInterrupt(byte _encoderPin, float _distPerCountFactor=1.0, bool _reverse=false, unsigned long _slowestIntervalMicros=100000UL)</div><div class="ttdoc">constructor, sets pins and settings</div><div class="ttdef"><b>Definition:</b> JEncoderSingleAttachInterrupt.h:19</div></div>
 <div class="ttc" id="aclass_j_encoder_single_attach_interrupt_html_a6fe08adf2221e5b3a011dff9bc47abc8"><div class="ttname"><a href="class_j_encoder_single_attach_interrupt.html#a6fe08adf2221e5b3a011dff9bc47abc8">JEncoderSingleAttachInterrupt::setUpInterrupts</a></div><div class="ttdeci">void setUpInterrupts(void(*_isrPointer)(void))</div><div class="ttdef"><b>Definition:</b> JEncoderSingleAttachInterrupt.h:26</div></div>
 <div class="ttc" id="aclass_j_encoder_single_html"><div class="ttname"><a href="class_j_encoder_single.html">JEncoderSingle</a></div><div class="ttdoc">reads a single channel (incremental) encoder</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:15</div></div>
-<div class="ttc" id="aclass_j_encoder_single_html_aecf17461b8be58118af29feebb98dfaf"><div class="ttname"><a href="class_j_encoder_single.html#aecf17461b8be58118af29feebb98dfaf">JEncoderSingle::encoderPin</a></div><div class="ttdeci">byte encoderPin</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:18</div></div>
+<div class="ttc" id="aclass_j_encoder_single_html_ab025a271ff5007822fcc083a494bc3a8"><div class="ttname"><a href="class_j_encoder_single.html#ab025a271ff5007822fcc083a494bc3a8">JEncoderSingle::encoderPin</a></div><div class="ttdeci">unsigned char encoderPin</div><div class="ttdef"><b>Definition:</b> JEncoderSingle.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
