@@ -20,7 +20,7 @@ public:
     }
     float compensate(float val)
     {
-        return constrain(val, -maxDriverRange, maxDriverRange) * multiplier;
+        return constrain(val * multiplier, -maxDriverRange, maxDriverRange);
     }
     /**
      * @param  _multiplier: (float) driver units per speed units

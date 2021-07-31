@@ -26,6 +26,7 @@ private:
     unsigned long lastVelTimeMicros;
     unsigned long velEnoughTime;
     unsigned long velEnoughTicks;
+    bool recognizeOutOfRange;
 
     const byte AS5048B_ZEROMSB_REG = 0x16;
     const byte AS5048B_ZEROLSB_REG = 0x17;
@@ -101,10 +102,11 @@ public:
      * @param  _reverse: (bool) reverse positive direction, default=false 
      * @param  _distPerCountFactor: (float) for the purposes of setting this factor a "count" is considered a full revolution of the absolute encoder
      * @param  _address: (byte) I2C address of 
-     * @param  _velEnoughTime: (default=0, no limit) shortest interval between velocity calculations, if run() is called faster the calculation will wait to run
+     * @param  _velEnoughTime: (default=0, no limit) shortest interval in microseconds between velocity calculations, if run() is called faster the calculation will wait to run
      * @param  _velEnoughTicks: (default=0, no limit) if the encoder turns more than this number of steps velocity calculations will be done even if velEnoughTime hasn't been reached
+     * @param  _recognizeOutOfRange: (boolean, default=true) set velocity to zero and stop updating position if encoder reports that it's out of range
      */
-    JEncoderAS5048bI2C(bool _reverse = false, float _distPerCountFactor = 1.0, uint8_t _address = 0x40, unsigned long _velEnoughTime = 0, unsigned long _velEnoughTicks = 0)
+    JEncoderAS5048bI2C(bool _reverse = false, float _distPerCountFactor = 1.0, uint8_t _address = 0x40, unsigned long _velEnoughTime = 0, unsigned long _velEnoughTicks = 0, bool _recognizeOutOfRange = true)
         : address(_address)
     {
         wire = &Wire;
@@ -124,6 +126,7 @@ public:
         lastVelTimeMicros = 0;
         velEnoughTime = _velEnoughTime;
         velEnoughTicks = _velEnoughTicks;
+        recognizeOutOfRange = _recognizeOutOfRange;
     }
 
     /**
@@ -141,27 +144,32 @@ public:
      */
     void run()
     {
-        angle = readAngle();
-        if (abs((int16_t)angle - (int16_t)lastAngle) > STEPS_PER_TURN / 2) { // angle jump over half of circle is assummed to be the shorter crossing of 0
-            if (angle > lastAngle) {
-                turns--;
-            } else {
-                turns++;
+        if (!(recognizeOutOfRange && !isMagnetInRange())) {
+
+            angle = readAngle();
+            if (abs((int16_t)angle - (int16_t)lastAngle) > STEPS_PER_TURN / 2) { // angle jump over half of circle is assummed to be the shorter crossing of 0
+                if (angle > lastAngle) {
+                    turns--;
+                } else {
+                    turns++;
+                }
             }
-        }
 
-        long velDist = ((int16_t)angle - (int16_t)lastVelAngle) + (turns - lastVelTurns) * STEPS_PER_TURN;
-        if (micros() - lastVelTimeMicros > velEnoughTime || abs(velDist) > velEnoughTicks) {
-            velocity = (double)1000000.0 * velDist / (micros() - lastVelTimeMicros) * distPerCountFactor * reverse;
-            lastVelTimeMicros = micros();
-            newSpeed = true;
-            lastVelAngle = angle;
-            lastVelTurns = turns;
+            long velDist = ((int16_t)angle - (int16_t)lastVelAngle) + (turns - lastVelTurns) * STEPS_PER_TURN;
+            if (micros() - lastVelTimeMicros > velEnoughTime || abs(velDist) > velEnoughTicks) {
+                velocity = (double)1000000.0 * velDist / (micros() - lastVelTimeMicros) * distPerCountFactor * reverse;
+                lastVelTimeMicros = micros();
+                newSpeed = true;
+                lastVelAngle = angle;
+                lastVelTurns = turns;
+            } else {
+                newSpeed = false;
+            }
+
+            lastAngle = angle;
         } else {
-            newSpeed = false;
+            velocity = 0;
         }
-
-        lastAngle = angle;
     }
 
     /**
@@ -247,7 +255,7 @@ public:
 
     float getPos()
     {
-        return (turns * STEPS_PER_TURN + angle) * reverse * distPerCountFactor;
+        return (int32_t)((turns * STEPS_PER_TURN + angle) * reverse) * distPerCountFactor;
     }
 
     float getDistPerCountFactor()
@@ -272,6 +280,21 @@ public:
     bool isVelNew()
     {
         return newSpeed;
+    }
+    void setVelEnoughTime(unsigned long _velEnoughTime)
+    {
+        velEnoughTime = _velEnoughTime;
+    }
+    void setVelEnoughTicks(unsigned long _velEnoughTicks)
+    {
+        velEnoughTicks = _velEnoughTicks;
+    }
+    /**
+     * @param  _recognizeOutOfRange: (boolean, default=true) set velocity to zero and stop updating position if encoder reports that it's out of range
+     */
+    void setRecognizeOutOfRange(bool _recognizeOutOfRange)
+    {
+        recognizeOutOfRange = _recognizeOutOfRange;
     }
 };
 #endif
