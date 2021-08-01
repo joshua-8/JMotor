@@ -15,7 +15,7 @@ var searchData=
   ['jdrivetraintwoside_2eh_126',['JDrivetrainTwoSide.h',['../_j_drivetrain_two_side_8h.html',1,'']]],
   ['jencoder_127',['JEncoder',['../class_j_encoder.html',1,'']]],
   ['jencoder_2eh_128',['JEncoder.h',['../_j_encoder_8h.html',1,'']]],
-  ['jencoderas5048bi2c_129',['JEncoderAS5048bI2C',['../class_j_encoder_a_s5048b_i2_c.html',1,'JEncoderAS5048bI2C'],['../class_j_encoder_a_s5048b_i2_c.html#a53ab756bc3a83aeae590de58684c2ab5',1,'JEncoderAS5048bI2C::JEncoderAS5048bI2C()']]],
+  ['jencoderas5048bi2c_129',['JEncoderAS5048bI2C',['../class_j_encoder_a_s5048b_i2_c.html',1,'JEncoderAS5048bI2C'],['../class_j_encoder_a_s5048b_i2_c.html#a1c74191640750fa1360ab2012c528d48',1,'JEncoderAS5048bI2C::JEncoderAS5048bI2C()']]],
   ['jencoderas5048bi2c_2eh_130',['JEncoderAS5048bI2C.h',['../_j_encoder_a_s5048b_i2_c_8h.html',1,'']]],
   ['jencoderpwmabsolute_131',['JEncoderPWMAbsolute',['../class_j_encoder_p_w_m_absolute.html',1,'JEncoderPWMAbsolute'],['../class_j_encoder_p_w_m_absolute.html#aa173a693abf81ec792c1a73841bf369b',1,'JEncoderPWMAbsolute::JEncoderPWMAbsolute()']]],
   ['jencoderpwmabsolute_2eh_132',['JEncoderPWMAbsolute.h',['../_j_encoder_p_w_m_absolute_8h.html',1,'']]],

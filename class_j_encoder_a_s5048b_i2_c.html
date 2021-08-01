@@ -96,9 +96,9 @@ Collaboration diagram for JEncoderAS5048bI2C:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a53ab756bc3a83aeae590de58684c2ab5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a53ab756bc3a83aeae590de58684c2ab5">JEncoderAS5048bI2C</a> (bool _reverse=false, float _distPerCountFactor=1.0, uint8_t _address=0x40, unsigned long _velEnoughTime=0, unsigned long _velEnoughTicks=0)</td></tr>
-<tr class="memdesc:a53ab756bc3a83aeae590de58684c2ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets pins and settings for reading the encoder  <a href="class_j_encoder_a_s5048b_i2_c.html#a53ab756bc3a83aeae590de58684c2ab5">More...</a><br /></td></tr>
-<tr class="separator:a53ab756bc3a83aeae590de58684c2ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c74191640750fa1360ab2012c528d48"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a1c74191640750fa1360ab2012c528d48">JEncoderAS5048bI2C</a> (bool _reverse=false, float _distPerCountFactor=1.0, uint8_t _address=0x40, unsigned long _velEnoughTime=0, unsigned long _velEnoughTicks=0, bool _recognizeOutOfRange=true)</td></tr>
+<tr class="memdesc:a1c74191640750fa1360ab2012c528d48"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets pins and settings for reading the encoder  <a href="class_j_encoder_a_s5048b_i2_c.html#a1c74191640750fa1360ab2012c528d48">More...</a><br /></td></tr>
+<tr class="separator:a1c74191640750fa1360ab2012c528d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad405ab13e47e798ecd8a6a501cda9e6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#ad405ab13e47e798ecd8a6a501cda9e6d">useCustomWire</a> (TwoWire &amp;_wire)</td></tr>
 <tr class="memdesc:ad405ab13e47e798ecd8a6a501cda9e6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set what Wire (I2C) bus to use (for microcontrollers with more than one)  <a href="class_j_encoder_a_s5048b_i2_c.html#ad405ab13e47e798ecd8a6a501cda9e6d">More...</a><br /></td></tr>
 <tr class="separator:ad405ab13e47e798ecd8a6a501cda9e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,6 +145,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a66600fc450d835b46c2c6245c92b6ebf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a66600fc450d835b46c2c6245c92b6ebf">isVelNew</a> ()</td></tr>
 <tr class="memdesc:a66600fc450d835b46c2c6245c92b6ebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">could be useful for only recalculating a control loop if there's new velocity data  <a href="class_j_encoder_a_s5048b_i2_c.html#a66600fc450d835b46c2c6245c92b6ebf">More...</a><br /></td></tr>
 <tr class="separator:a66600fc450d835b46c2c6245c92b6ebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7df2bb0f9c2126d1eb36f4ab7cd6ed58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a7df2bb0f9c2126d1eb36f4ab7cd6ed58">setVelEnoughTime</a> (unsigned long _velEnoughTime)</td></tr>
+<tr class="separator:a7df2bb0f9c2126d1eb36f4ab7cd6ed58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66c14ba233e9007fdef3dfdcb6488249"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a66c14ba233e9007fdef3dfdcb6488249">setVelEnoughTicks</a> (unsigned long _velEnoughTicks)</td></tr>
+<tr class="separator:a66c14ba233e9007fdef3dfdcb6488249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1f56f18af34bf1307833ef44db79ac5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#ad1f56f18af34bf1307833ef44db79ac5">setRecognizeOutOfRange</a> (bool _recognizeOutOfRange)</td></tr>
+<tr class="separator:ad1f56f18af34bf1307833ef44db79ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_j_encoder"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_j_encoder')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_j_encoder.html">JEncoder</a></td></tr>
 <tr class="memitem:a5603d9ce775828fa0379aaa4ca0bb9eb inherit pub_methods_class_j_encoder"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder.html#a5603d9ce775828fa0379aaa4ca0bb9eb">setRev</a> (bool _rev)</td></tr>
 <tr class="memdesc:a5603d9ce775828fa0379aaa4ca0bb9eb inherit pub_methods_class_j_encoder"><td class="mdescLeft">&#160;</td><td class="mdescRight">empty function for directionless encoders to override  <a href="class_j_encoder.html#a5603d9ce775828fa0379aaa4ca0bb9eb">More...</a><br /></td></tr>
@@ -164,8 +170,8 @@ Static Public Attributes</h2></td></tr>
 <div class="textblock"><p>reads a type of absolute encoder <a href="https://ams.com/as0548b">https://ams.com/as0548b</a> (uses I2C) </p>
 <p>based on work by sosandroid <a href="https://github.com/sosandroid/AMS_AS5048B">https://github.com/sosandroid/AMS_AS5048B</a> </p><dl class="section note"><dt>Note</dt><dd>remember to add pull up resistors on I2C lines (~4.7k for 5v, ~2.4k for 3.3v microcontrollers). </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a53ab756bc3a83aeae590de58684c2ab5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53ab756bc3a83aeae590de58684c2ab5">&#9670;&nbsp;</a></span>JEncoderAS5048bI2C()</h2>
+<a id="a1c74191640750fa1360ab2012c528d48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c74191640750fa1360ab2012c528d48">&#9670;&nbsp;</a></span>JEncoderAS5048bI2C()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,7 +207,13 @@ Static Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">unsigned long&#160;</td>
-          <td class="paramname"><em>_velEnoughTicks</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>_velEnoughTicks</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_recognizeOutOfRange</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -222,8 +234,9 @@ Static Public Attributes</h2></td></tr>
     <tr><td class="paramname">_reverse</td><td>(bool) reverse positive direction, default=false </td></tr>
     <tr><td class="paramname">_distPerCountFactor</td><td>(float) for the purposes of setting this factor a "count" is considered a full revolution of the absolute encoder </td></tr>
     <tr><td class="paramname">_address</td><td>(byte) I2C address of </td></tr>
-    <tr><td class="paramname">_velEnoughTime</td><td>(default=0, no limit) shortest interval between velocity calculations, if <a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b" title="communication is done over I2C and requires constant polling instead of being able to use interrupts">run()</a> is called faster the calculation will wait to run </td></tr>
+    <tr><td class="paramname">_velEnoughTime</td><td>(default=0, no limit) shortest interval in microseconds between velocity calculations, if <a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b" title="communication is done over I2C and requires constant polling instead of being able to use interrupts">run()</a> is called faster the calculation will wait to run </td></tr>
     <tr><td class="paramname">_velEnoughTicks</td><td>(default=0, no limit) if the encoder turns more than this number of steps velocity calculations will be done even if velEnoughTime hasn't been reached </td></tr>
+    <tr><td class="paramname">_recognizeOutOfRange</td><td>(boolean, default=true) set velocity to zero and stop updating position if encoder reports that it's out of range </td></tr>
   </table>
   </dd>
 </dl>
@@ -661,6 +674,90 @@ Static Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ad1f56f18af34bf1307833ef44db79ac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1f56f18af34bf1307833ef44db79ac5">&#9670;&nbsp;</a></span>setRecognizeOutOfRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JEncoderAS5048bI2C::setRecognizeOutOfRange </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_recognizeOutOfRange</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_recognizeOutOfRange</td><td>(boolean, default=true) set velocity to zero and stop updating position if encoder reports that it's out of range </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a66c14ba233e9007fdef3dfdcb6488249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66c14ba233e9007fdef3dfdcb6488249">&#9670;&nbsp;</a></span>setVelEnoughTicks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JEncoderAS5048bI2C::setVelEnoughTicks </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>_velEnoughTicks</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7df2bb0f9c2126d1eb36f4ab7cd6ed58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7df2bb0f9c2126d1eb36f4ab7cd6ed58">&#9670;&nbsp;</a></span>setVelEnoughTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JEncoderAS5048bI2C::setVelEnoughTime </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>_velEnoughTime</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
