@@ -7,6 +7,9 @@
 #include "JMotorController.h"
 #include "JMotorControllerBasic.h"
 #include <Arduino.h>
+/**
+ * @brief  closed loop (uses encoder) motor controller
+ */
 class JMotorControllerClosed : public virtual JMotorController, public virtual JMotorControllerBase {
 protected:
     JMotorDriver& driver;

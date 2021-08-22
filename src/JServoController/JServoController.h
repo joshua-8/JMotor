@@ -151,26 +151,50 @@ public:
         if (_run)
             run();
     }
+    /**
+     * @brief  default: 0, after how many milliseconds of no movement should the servo be disabled? 0=never disable
+     * @param  _timeout: (unsigned long)
+     */
     void setDisableTimeout(unsigned long _timeout)
     {
         disableTimeout = _timeout;
     }
+
     unsigned long getDisableTimeout()
     {
         return disableTimeout;
     }
+    /**
+     * @brief  returns the value of millis() when the servo last moved
+     * @retval (unsigned long)
+     */
     unsigned long getLastMovedMillis()
     {
         return lastMovedMillis;
     }
+    /**
+     * @brief  returns the number of milliseconds since the servo last moved
+     * @retval (unsigned long)
+     */
     unsigned long getMillisSinceMoved()
     {
         return millis() - lastMovedMillis;
     }
+    /**
+     * @brief  allows for changing the variable that stores when the servo last moved
+     * @note   use with caution: if you just want to make the servo start receiving signals again use wake()
+     * @param  mil: (unsigned long)
+     */
     void setLastMovedMillis(unsigned long mil)
     {
         lastMovedMillis = mil;
     }
+    /**
+     * @brief  enable or disable the servo (start or stop sending a signal to the servo)
+     * @note   some (nicer digital) servos may not turn off their motors when the signal is stopped, but cheap servos usually do
+     * @param  _enable: (bool) true=enable, false=disable
+     * @retval (bool) true if state changed, otherwise false
+     */
     virtual bool setEnable(bool _enable)
     {
 
@@ -186,38 +210,72 @@ public:
         } else
             return false;
     }
+    /**
+     * @brief  equivalent to setEnable(true)
+     */
     bool enable()
     {
         return setEnable(true);
     }
+    /**
+     * @brief  equivalent to setEnable(false)
+     */
     bool disable()
     {
         return setEnable(false);
     }
+    /**
+     * @brief  returns whether the servo is enabled or not
+     * @retval (bool)
+     */
     bool getEnable()
     {
         return enabled;
     }
+    /**
+     * @brief  what position is the servo moving towards or at
+     * @retval (float)
+     */
     float getPosTarget()
     {
         return dL.getTarget();
     }
+    /**
+     * @brief what position is the servo actually being set to? (slowly approaches target if smoothing is used)
+     * @retval (float)
+     */
     float getPos()
     {
         return dL.getPosition();
     }
+    /**
+     * @brief  what rate is servo position being changed at?
+     * @retval (float)
+     */
     float getVelocity()
     {
         return dL.getVelocity();
     }
+    /**
+     * @brief  true if position=target, false otherwise
+     * @retval (bool)
+     */
     bool isPosAtTarget()
     {
         return dL.isPosAtTarget();
     }
+    /**
+     * @brief  equivalent to !isPosAtTarget()
+     * @retval (bool)
+     */
     bool isPosNotAtTarget()
     {
         return dL.isPosNotAtTarget();
     }
+    /**
+     * @brief  returns target-position
+     * @retval (float)
+     */
     float distTotarget()
     {
         return dL.distToTarget();
@@ -229,10 +287,18 @@ public:
     {
         dL.resetTime();
     }
+    /**
+     * @brief  returns whether the servo is "awake" (whether signals are being sent)
+     * @retval (bool)
+     */
     bool getActive()
     {
         return !sleeping;
     }
+    /**
+     * @brief  if the servo has been disabled because of inactivity, calling this function simulates the servo being told to move and wakes it up
+     * @note   lastMovedMillis is set to millis() even though there was no movement
+     */
     void wake()
     {
         lastMovedMillis = millis();

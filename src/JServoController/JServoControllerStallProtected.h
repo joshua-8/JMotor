@@ -3,6 +3,9 @@
 #include "JServoControllerAdvanced.h"
 #include "JServoCurrentSensor.h"
 #include <Arduino.h>
+/**
+ * @brief  this child class of JServoController uses JServoStallSensing to reduce servo power
+ */
 class JServoControllerStallProtected : public JServoControllerAdvanced {
 protected:
     bool stalled;

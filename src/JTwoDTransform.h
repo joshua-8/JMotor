@@ -1,6 +1,9 @@
 #ifndef J_TWO_D_TRANSFORM_H
 #define J_TWO_D_TRANSFORM_H
 #include <Arduino.h>
+/**
+ * @brief  struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move.
+ */
 struct JTwoDTransform {
     /**
          * @brief  backwards- | forward+
@@ -106,10 +109,19 @@ struct JTwoDTransform {
         this->x /= v;
         return *this;
     }
+    /**
+     * @brief  sum of absolute value of the three values
+     */
     float sumAbs()
     {
         return abs(this->y) + abs(this->x) + abs(this->rz);
     }
+    /**
+     * @brief  use to print values of transform to serial port
+     * @param  labels: (bool, default=true) label what axis each value corresponds to
+     * @param  newline: (bool, default=false) send a newline character at the end
+     * @param  serial: (Stream*, default=Serial) what serial port to print to
+     */
     void print(bool labels = true, bool newline = false, Stream* serial = &Serial)
     {
         if (labels)

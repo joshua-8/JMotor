@@ -1,5 +1,7 @@
 #include <Arduino.h>
 
+//motor and encoder example (for AVR)
+
 #include <JMotor.h>
 
 JEncoderAS5048bI2C encoder = JEncoderAS5048bI2C(true, 3.0/37.5);

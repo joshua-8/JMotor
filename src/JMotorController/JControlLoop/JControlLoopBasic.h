@@ -1,6 +1,9 @@
 #ifndef J_CONTROL_LOOP_BASIC_H
 #define J_CONTROL_LOOP_BASIC_H
 #include "JControlLoop.h"
+/**
+ * @brief  simple control loop for use with JMotorControllerClosed, can turn off motor if nothing has moved for a while
+ */
 class JControlLoopBasic : public JControlLoop {
 protected:
     float P;
