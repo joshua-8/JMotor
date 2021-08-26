@@ -1,4 +1,4 @@
 <map id="JControlLoop" name="JControlLoop">
-<area shape="rect" id="node1" title=" " alt="" coords="22,5,121,32"/>
-<area shape="rect" id="node2" href="$class_j_control_loop_basic.html" title=" " alt="" coords="5,80,137,107"/>
+<area shape="rect" id="node1" title="interface for control loop used by JMotorControllerClosed" alt="" coords="22,5,121,32"/>
+<area shape="rect" id="node2" href="$class_j_control_loop_basic.html" title="simple control loop for use with JMotorControllerClosed, can turn off motor if nothing has moved for ..." alt="" coords="5,80,137,107"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="JMotorControllerClosed" name="JMotorControllerClosed">
-<area shape="rect" id="node1" title=" " alt="" coords="5,155,163,181"/>
+<area shape="rect" id="node1" title="closed loop (uses encoder) motor controller" alt="" coords="5,155,163,181"/>
 <area shape="rect" id="node2" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="73,80,191,107"/>
 <area shape="rect" id="node3" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="11,5,157,32"/>
 </map>

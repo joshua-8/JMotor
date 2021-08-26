@@ -1,5 +1,5 @@
 <map id="JServoControllerAdvanced" name="JServoControllerAdvanced">
-<area shape="rect" id="node1" title=" " alt="" coords="65,260,241,287"/>
+<area shape="rect" id="node1" title="class for controlling JMotorDriverServoAdvanced, with power reducing option along with standard JServ..." alt="" coords="65,260,241,287"/>
 <area shape="rect" id="node2" href="$class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="5,171,124,197"/>
 <area shape="rect" id="node3" href="$class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="87,81,218,108"/>
 <area shape="rect" id="node5" href="$class_j_motor_driver_servo_advanced.html" title="defines interface for servo driver with variable frequency, subclass of JMotorDriverServo and JMotorD..." alt="" coords="148,171,336,197"/>

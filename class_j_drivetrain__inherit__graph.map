@@ -1,5 +1,5 @@
 <map id="JDrivetrain" name="JDrivetrain">
-<area shape="rect" id="node1" title=" " alt="" coords="137,5,221,32"/>
-<area shape="rect" id="node2" href="$class_j_drivetrain_controller_basic.html" title=" " alt="" coords="5,80,177,107"/>
-<area shape="rect" id="node3" href="$class_j_drivetrain_two_side.html" title="subclass of JDrivetrain for controlling a drivetrain with one JMotorController for each side of the d..." alt="" coords="201,80,336,107"/>
+<area shape="rect" id="node1" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="137,5,221,32"/>
+<area shape="rect" id="node2" href="$class_j_drivetrain_controller_basic.html" title="basic drivetrain controller, supports smoothed movements on each axis" alt="" coords="5,80,177,107"/>
+<area shape="rect" id="node3" href="$class_j_drivetrain_two_side.html" title="child class of JDrivetrain for controlling a drivetrain with one JMotorController for each side of th..." alt="" coords="201,80,336,107"/>
 </map>

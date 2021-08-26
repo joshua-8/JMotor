@@ -71,14 +71,17 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>basic drivetrain controller, supports smoothed movements on each axis  
+ <a href="class_j_drivetrain_controller_basic.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_j_drivetrain_controller_basic_8h_source.html">JDrivetrainControllerBasic.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for JDrivetrainControllerBasic:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_drivetrain_controller_basic__inherit__graph.png" border="0" usemap="#a_j_drivetrain_controller_basic_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_j_drivetrain_controller_basic_inherit__map" id="a_j_drivetrain_controller_basic_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,80,177,107"/>
-<area shape="rect" href="class_j_drivetrain.html" title=" " alt="" coords="49,5,133,32"/>
+<area shape="rect" title="basic drivetrain controller, supports smoothed movements on each axis" alt="" coords="5,80,177,107"/>
+<area shape="rect" href="class_j_drivetrain.html" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="49,5,133,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -86,9 +89,9 @@ Collaboration diagram for JDrivetrainControllerBasic:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_drivetrain_controller_basic__coll__graph.png" border="0" usemap="#a_j_drivetrain_controller_basic_coll__map" alt="Collaboration graph"/></div>
 <map name="a_j_drivetrain_controller_basic_coll__map" id="a_j_drivetrain_controller_basic_coll__map">
-<area shape="rect" title=" " alt="" coords="5,109,177,136"/>
-<area shape="rect" href="class_j_drivetrain.html" title=" " alt="" coords="8,5,92,32"/>
-<area shape="rect" href="struct_j_two_d_transform.html" title=" " alt="" coords="118,5,241,32"/>
+<area shape="rect" title="basic drivetrain controller, supports smoothed movements on each axis" alt="" coords="5,109,177,136"/>
+<area shape="rect" href="class_j_drivetrain.html" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="8,5,92,32"/>
+<area shape="rect" href="struct_j_two_d_transform.html" title="struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move." alt="" coords="118,5,241,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -122,6 +125,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5bc6df1eba75e5c940a7602afed54f61"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_controller_basic.html#a5bc6df1eba75e5c940a7602afed54f61">isVelZero</a> ()</td></tr>
 <tr class="separator:a5bc6df1eba75e5c940a7602afed54f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5d3bceb0247351dd279df544b276d10"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_controller_basic.html#ac5d3bceb0247351dd279df544b276d10">getDistMode</a> ()</td></tr>
+<tr class="memdesc:ac5d3bceb0247351dd279df544b276d10"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if going to distance target, false if velocity based  <a href="class_j_drivetrain_controller_basic.html#ac5d3bceb0247351dd279df544b276d10">More...</a><br /></td></tr>
 <tr class="separator:ac5d3bceb0247351dd279df544b276d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ed014ba89267908d4e8219452a96339"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_controller_basic.html#a0ed014ba89267908d4e8219452a96339">getIsControlled</a> ()</td></tr>
 <tr class="memdesc:a0ed014ba89267908d4e8219452a96339"><td class="mdescLeft">&#160;</td><td class="mdescRight">true=velocity and acceleration is limited, false=writing directly to drivetrain  <a href="class_j_drivetrain_controller_basic.html#a0ed014ba89267908d4e8219452a96339">More...</a><br /></td></tr>
@@ -208,7 +212,10 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ac9a9175a91013283742ce80a5089b4a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_controller_basic.html#ac9a9175a91013283742ce80a5089b4a0">velTarget</a></td></tr>
 <tr class="separator:ac9a9175a91013283742ce80a5089b4a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>basic drivetrain controller, supports smoothed movements on each axis </p>
+<dl class="section note"><dt>Note</dt><dd>each axis is separate, this drivetrain controller doesn't use distances moved on each axis to actually know its position </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad4b9f6ee8858b6f2c2e3d6ee20cf1682"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4b9f6ee8858b6f2c2e3d6ee20cf1682">&#9670;&nbsp;</a></span>JDrivetrainControllerBasic()</h2>
 
@@ -387,6 +394,14 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>true if going to distance target, false if velocity based </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -708,7 +723,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>each axis is controlled separately, you are not setting absolute position, just target distance for each axis </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_dist</td><td>(<a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>) target distance </td></tr>
+    <tr><td class="paramname">_dist</td><td>(<a class="el" href="struct_j_two_d_transform.html" title="struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move.">JTwoDTransform</a>) target distance </td></tr>
     <tr><td class="paramname">_run</td><td>(bool) default=false, true=run gets called within this function, false=call run yourself outside this function </td></tr>
   </table>
   </dd>
@@ -1005,7 +1020,7 @@ Protected Attributes</h2></td></tr>
 <p>make drivetrain approach set velocity following acceleration limits </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_vel</td><td>(<a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>) target velocity </td></tr>
+    <tr><td class="paramname">_vel</td><td>(<a class="el" href="struct_j_two_d_transform.html" title="struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move.">JTwoDTransform</a>) target velocity </td></tr>
     <tr><td class="paramname">_run</td><td>(bool) default=false, true=run gets called within this function, false=call run yourself outside this function </td></tr>
   </table>
   </dd>

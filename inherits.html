@@ -70,15 +70,15 @@ $(function() {
 </div><table border="0" cellspacing="10" cellpadding="0">
 <tr><td><img src="inherit_graph_0.png" border="0" usemap="#a_j_control_loop" alt=""/>
 <map name="a_j_control_loop" id="a_j_control_loop">
-<area shape="rect" href="class_j_control_loop.html" title=" " alt="" coords="5,5,104,32"/>
-<area shape="rect" href="class_j_control_loop_basic.html" title=" " alt="" coords="152,5,284,32"/>
+<area shape="rect" href="class_j_control_loop.html" title="interface for control loop used by JMotorControllerClosed" alt="" coords="5,5,104,32"/>
+<area shape="rect" href="class_j_control_loop_basic.html" title="simple control loop for use with JMotorControllerClosed, can turn off motor if nothing has moved for ..." alt="" coords="152,5,284,32"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_1.png" border="0" usemap="#a_j_drivetrain" alt=""/>
 <map name="a_j_drivetrain" id="a_j_drivetrain">
-<area shape="rect" href="class_j_drivetrain.html" title=" " alt="" coords="5,31,89,57"/>
-<area shape="rect" href="class_j_drivetrain_controller_basic.html" title=" " alt="" coords="137,5,309,32"/>
-<area shape="rect" href="class_j_drivetrain_two_side.html" title="subclass of JDrivetrain for controlling a drivetrain with one JMotorController for each side of the d..." alt="" coords="156,56,291,83"/>
+<area shape="rect" href="class_j_drivetrain.html" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="5,31,89,57"/>
+<area shape="rect" href="class_j_drivetrain_controller_basic.html" title="basic drivetrain controller, supports smoothed movements on each axis" alt="" coords="137,5,309,32"/>
+<area shape="rect" href="class_j_drivetrain_two_side.html" title="child class of JDrivetrain for controlling a drivetrain with one JMotorController for each side of th..." alt="" coords="156,56,291,83"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_2.png" border="0" usemap="#a_j_encoder" alt=""/>
@@ -118,7 +118,7 @@ $(function() {
 <map name="a_j_motor_controller_base" id="a_j_motor_controller_base">
 <area shape="rect" href="class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="5,31,152,57"/>
 <area shape="rect" href="class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="217,31,334,57"/>
-<area shape="rect" href="class_j_motor_controller_closed.html" title=" " alt="" coords="399,5,556,32"/>
+<area shape="rect" href="class_j_motor_controller_closed.html" title="closed loop (uses encoder) motor controller" alt="" coords="399,5,556,32"/>
 <area shape="rect" href="class_j_motor_controller_basic.html" title="A motor controller object that uses a JMotorCompensator to set velocity of a motor." alt="" coords="200,81,351,108"/>
 <area shape="rect" href="class_j_motor_controller_open.html" title="This class controls velocity and position of a motor without any encoder feedback." alt="" coords="403,68,551,95"/>
 </map>
@@ -144,20 +144,20 @@ $(function() {
 <tr><td><img src="inherit_graph_8.png" border="0" usemap="#a_j_servo_controller" alt=""/>
 <map name="a_j_servo_controller" id="a_j_servo_controller">
 <area shape="rect" href="class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="5,31,124,57"/>
-<area shape="rect" href="class_j_servo_controller_advanced.html" title=" " alt="" coords="172,5,348,32"/>
+<area shape="rect" href="class_j_servo_controller_advanced.html" title="class for controlling JMotorDriverServoAdvanced, with power reducing option along with standard JServ..." alt="" coords="172,5,348,32"/>
 <area shape="rect" href="class_j_servo_controller_gentle.html" title=" " alt="" coords="182,56,338,83"/>
-<area shape="rect" href="class_j_servo_controller_stall_protected.html" title=" " alt="" coords="396,5,596,32"/>
+<area shape="rect" href="class_j_servo_controller_stall_protected.html" title="this child class of JServoController uses JServoStallSensing to reduce servo power" alt="" coords="396,5,596,32"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_9.png" border="0" usemap="#a_j_servo_stall_sensing" alt=""/>
 <map name="a_j_servo_stall_sensing" id="a_j_servo_stall_sensing">
-<area shape="rect" href="class_j_servo_stall_sensing.html" title=" " alt="" coords="5,5,141,32"/>
-<area shape="rect" href="class_j_servo_current_sensor.html" title=" " alt="" coords="189,5,336,32"/>
+<area shape="rect" href="class_j_servo_stall_sensing.html" title="defines interface for classes that can measure how hard a servo is working" alt="" coords="5,5,141,32"/>
+<area shape="rect" href="class_j_servo_current_sensor.html" title="implements JServoStallSensing interface. takes and filters current readings to calculate how hard a s..." alt="" coords="189,5,336,32"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_10.png" border="0" usemap="#a_j_two_d_transform" alt=""/>
 <map name="a_j_two_d_transform" id="a_j_two_d_transform">
-<area shape="rect" href="struct_j_two_d_transform.html" title=" " alt="" coords="5,5,128,32"/>
+<area shape="rect" href="struct_j_two_d_transform.html" title="struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move." alt="" coords="5,5,128,32"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_11.png" border="0" usemap="#a_j_voltage_compensator" alt=""/>

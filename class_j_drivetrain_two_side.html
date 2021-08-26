@@ -71,7 +71,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>subclass of <a class="el" href="class_j_drivetrain.html">JDrivetrain</a> for controlling a drivetrain with one <a class="el" href="class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont...">JMotorController</a> for each side of the drivetrain  
+<p>child class of <a class="el" href="class_j_drivetrain.html" title="defines interface for controlling any ground-based drivetrain">JDrivetrain</a> for controlling a drivetrain with one <a class="el" href="class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont...">JMotorController</a> for each side of the drivetrain  
  <a href="class_j_drivetrain_two_side.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_j_drivetrain_two_side_8h_source.html">JDrivetrainTwoSide.h</a>&gt;</code></p>
@@ -80,8 +80,8 @@ Inheritance diagram for JDrivetrainTwoSide:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_drivetrain_two_side__inherit__graph.png" border="0" usemap="#a_j_drivetrain_two_side_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_j_drivetrain_two_side_inherit__map" id="a_j_drivetrain_two_side_inherit__map">
-<area shape="rect" title="subclass of JDrivetrain for controlling a drivetrain with one JMotorController for each side of the d..." alt="" coords="5,80,140,107"/>
-<area shape="rect" href="class_j_drivetrain.html" title=" " alt="" coords="31,5,115,32"/>
+<area shape="rect" title="child class of JDrivetrain for controlling a drivetrain with one JMotorController for each side of th..." alt="" coords="5,80,140,107"/>
+<area shape="rect" href="class_j_drivetrain.html" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="31,5,115,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -89,11 +89,11 @@ Collaboration diagram for JDrivetrainTwoSide:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_drivetrain_two_side__coll__graph.png" border="0" usemap="#a_j_drivetrain_two_side_coll__map" alt="Collaboration graph"/></div>
 <map name="a_j_drivetrain_two_side_coll__map" id="a_j_drivetrain_two_side_coll__map">
-<area shape="rect" title="subclass of JDrivetrain for controlling a drivetrain with one JMotorController for each side of the d..." alt="" coords="105,200,240,227"/>
-<area shape="rect" href="class_j_drivetrain.html" title=" " alt="" coords="5,81,89,108"/>
+<area shape="rect" title="child class of JDrivetrain for controlling a drivetrain with one JMotorController for each side of th..." alt="" coords="105,200,240,227"/>
+<area shape="rect" href="class_j_drivetrain.html" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="5,81,89,108"/>
 <area shape="rect" href="class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="114,81,231,108"/>
 <area shape="rect" href="class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="99,5,246,32"/>
-<area shape="rect" href="struct_j_two_d_transform.html" title=" " alt="" coords="255,81,378,108"/>
+<area shape="rect" href="struct_j_two_d_transform.html" title="struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move." alt="" coords="255,81,378,108"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -102,7 +102,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a26f14ee644de433e597636047368d144"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a26f14ee644de433e597636047368d144">JDrivetrainTwoSide</a> (<a class="el" href="class_j_motor_controller.html">JMotorController</a> &amp;_left, <a class="el" href="class_j_motor_controller.html">JMotorController</a> &amp;_right, float _width)</td></tr>
 <tr class="separator:a26f14ee644de433e597636047368d144"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae886b9c61d0c2e11dd8c1314d5e67a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#aae886b9c61d0c2e11dd8c1314d5e67a5">run</a> ()</td></tr>
-<tr class="memdesc:aae886b9c61d0c2e11dd8c1314d5e67a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">defines two dimensoinal transformation. y(forward/backwards), rz(clockwise/ccw), x(right/left)  <a href="class_j_drivetrain_two_side.html#aae886b9c61d0c2e11dd8c1314d5e67a5">More...</a><br /></td></tr>
 <tr class="separator:aae886b9c61d0c2e11dd8c1314d5e67a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a431e805d4de6d037799dda23cb81cbed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a431e805d4de6d037799dda23cb81cbed">setEnable</a> (bool _enable)</td></tr>
 <tr class="separator:a431e805d4de6d037799dda23cb81cbed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,7 +174,7 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a1cab07a2a04311b24d9fe941f666a315"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>subclass of <a class="el" href="class_j_drivetrain.html">JDrivetrain</a> for controlling a drivetrain with one <a class="el" href="class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont...">JMotorController</a> for each side of the drivetrain </p>
+<div class="textblock"><p>child class of <a class="el" href="class_j_drivetrain.html" title="defines interface for controlling any ground-based drivetrain">JDrivetrain</a> for controlling a drivetrain with one <a class="el" href="class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont...">JMotorController</a> for each side of the drivetrain </p>
 <dl class="section note"><dt>Note</dt><dd>both sides should move forward when the controllers are given a positive speed </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a26f14ee644de433e597636047368d144"></a>
@@ -514,8 +513,6 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>defines two dimensoinal transformation. y(forward/backwards), rz(clockwise/ccw), x(right/left) </p>
 
 <p>Implements <a class="el" href="class_j_drivetrain.html#a76ad4edd018d911d67fe494ca4bbb541">JDrivetrain</a>.</p>
 

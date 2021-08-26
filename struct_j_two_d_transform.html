@@ -70,6 +70,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move.  
+ <a href="struct_j_two_d_transform.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_j_two_d_transform_8h_source.html">JTwoDTransform.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -101,8 +104,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3d4ce04f2c762f6dd8a5513fafa6918d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_j_two_d_transform.html#a3d4ce04f2c762f6dd8a5513fafa6918d">operator/=</a> (const float v)</td></tr>
 <tr class="separator:a3d4ce04f2c762f6dd8a5513fafa6918d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73264b163025dca258112be606c59fc1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_j_two_d_transform.html#a73264b163025dca258112be606c59fc1">sumAbs</a> ()</td></tr>
+<tr class="memdesc:a73264b163025dca258112be606c59fc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">sum of absolute value of the three values  <a href="struct_j_two_d_transform.html#a73264b163025dca258112be606c59fc1">More...</a><br /></td></tr>
 <tr class="separator:a73264b163025dca258112be606c59fc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2779a445c4493572818ab21bc5facd1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_j_two_d_transform.html#a2779a445c4493572818ab21bc5facd1a">print</a> (bool labels=true, bool newline=false, Stream *serial=&amp;Serial)</td></tr>
+<tr class="memdesc:a2779a445c4493572818ab21bc5facd1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">use to print values of transform to serial port  <a href="struct_j_two_d_transform.html#a2779a445c4493572818ab21bc5facd1a">More...</a><br /></td></tr>
 <tr class="separator:a2779a445c4493572818ab21bc5facd1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -117,7 +122,9 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a79b568ecd7b07ea12af392193abb7cfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">left- | backwards+  <a href="struct_j_two_d_transform.html#a79b568ecd7b07ea12af392193abb7cfd">More...</a><br /></td></tr>
 <tr class="separator:a79b568ecd7b07ea12af392193abb7cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a035c35618524e4ff7aad82ca92552fe7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a035c35618524e4ff7aad82ca92552fe7">&#9670;&nbsp;</a></span>operator*() <span class="overload">[1/2]</span></h2>
 
@@ -495,6 +502,16 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>use to print values of transform to serial port </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">labels</td><td>(bool, default=true) label what axis each value corresponds to </td></tr>
+    <tr><td class="paramname">newline</td><td>(bool, default=false) send a newline character at the end </td></tr>
+    <tr><td class="paramname">serial</td><td>(Stream*, default=Serial) what serial port to print to </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a73264b163025dca258112be606c59fc1"></a>
@@ -519,6 +536,8 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>sum of absolute value of the three values </p>
 
 </div>
 </div>

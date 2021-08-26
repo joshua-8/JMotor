@@ -69,22 +69,24 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>defines interface for controlling any ground-based drivetrain  
+ <a href="class_j_drivetrain.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_j_drivetrain_8h_source.html">JDrivetrain.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for JDrivetrain:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_drivetrain__inherit__graph.png" border="0" usemap="#a_j_drivetrain_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_j_drivetrain_inherit__map" id="a_j_drivetrain_inherit__map">
-<area shape="rect" title=" " alt="" coords="137,5,221,32"/>
-<area shape="rect" href="class_j_drivetrain_controller_basic.html" title=" " alt="" coords="5,80,177,107"/>
-<area shape="rect" href="class_j_drivetrain_two_side.html" title="subclass of JDrivetrain for controlling a drivetrain with one JMotorController for each side of the d..." alt="" coords="201,80,336,107"/>
+<area shape="rect" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="137,5,221,32"/>
+<area shape="rect" href="class_j_drivetrain_controller_basic.html" title="basic drivetrain controller, supports smoothed movements on each axis" alt="" coords="5,80,177,107"/>
+<area shape="rect" href="class_j_drivetrain_two_side.html" title="child class of JDrivetrain for controlling a drivetrain with one JMotorController for each side of th..." alt="" coords="201,80,336,107"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a76ad4edd018d911d67fe494ca4bbb541"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#a76ad4edd018d911d67fe494ca4bbb541">run</a> ()=0</td></tr>
-<tr class="memdesc:a76ad4edd018d911d67fe494ca4bbb541"><td class="mdescLeft">&#160;</td><td class="mdescRight">defines two dimensoinal transformation. y(forward/backwards), rz(clockwise/ccw), x(right/left)  <a href="class_j_drivetrain.html#a76ad4edd018d911d67fe494ca4bbb541">More...</a><br /></td></tr>
 <tr class="separator:a76ad4edd018d911d67fe494ca4bbb541"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a487d0c313f442c05b5829130d282547d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#a487d0c313f442c05b5829130d282547d">setEnable</a> (bool _enable)=0</td></tr>
 <tr class="separator:a487d0c313f442c05b5829130d282547d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -119,7 +121,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a620b5a3fee1ae4e68f5067c8418ab44f"><td class="memItemLeft" align="right" valign="top">virtual unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#a620b5a3fee1ae4e68f5067c8418ab44f">getNumberMotors</a> ()=0</td></tr>
 <tr class="separator:a620b5a3fee1ae4e68f5067c8418ab44f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>defines interface for controlling any ground-based drivetrain </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a920ff8ec4a580e72573f7957094ebb6c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a920ff8ec4a580e72573f7957094ebb6c">&#9670;&nbsp;</a></span>disable()</h2>
 
@@ -388,8 +392,6 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>defines two dimensoinal transformation. y(forward/backwards), rz(clockwise/ccw), x(right/left) </p>
 
 <p>Implemented in <a class="el" href="class_j_drivetrain_controller_basic.html#a2986758bdc883f337354b7ff296ef737">JDrivetrainControllerBasic</a>, and <a class="el" href="class_j_drivetrain_two_side.html#aae886b9c61d0c2e11dd8c1314d5e67a5">JDrivetrainTwoSide</a>.</p>
 

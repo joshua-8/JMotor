@@ -70,14 +70,17 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>class for controlling <a class="el" href="class_j_motor_driver_servo_advanced.html" title="defines interface for servo driver with variable frequency, subclass of JMotorDriverServo and JMotorD...">JMotorDriverServoAdvanced</a>, with power reducing option along with standard <a class="el" href="class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting">JServoController</a> features  
+ <a href="class_j_servo_controller_advanced.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_j_servo_controller_advanced_8h_source.html">JServoControllerAdvanced.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for JServoControllerAdvanced:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_servo_controller_advanced__inherit__graph.png" border="0" usemap="#a_j_servo_controller_advanced_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_j_servo_controller_advanced_inherit__map" id="a_j_servo_controller_advanced_inherit__map">
-<area shape="rect" title=" " alt="" coords="17,80,193,107"/>
-<area shape="rect" href="class_j_servo_controller_stall_protected.html" title=" " alt="" coords="5,155,205,181"/>
+<area shape="rect" title="class for controlling JMotorDriverServoAdvanced, with power reducing option along with standard JServ..." alt="" coords="17,80,193,107"/>
+<area shape="rect" href="class_j_servo_controller_stall_protected.html" title="this child class of JServoController uses JServoStallSensing to reduce servo power" alt="" coords="5,155,205,181"/>
 <area shape="rect" href="class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="46,5,165,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -86,7 +89,7 @@ Collaboration diagram for JServoControllerAdvanced:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_servo_controller_advanced__coll__graph.png" border="0" usemap="#a_j_servo_controller_advanced_coll__map" alt="Collaboration graph"/></div>
 <map name="a_j_servo_controller_advanced_coll__map" id="a_j_servo_controller_advanced_coll__map">
-<area shape="rect" title=" " alt="" coords="65,260,241,287"/>
+<area shape="rect" title="class for controlling JMotorDriverServoAdvanced, with power reducing option along with standard JServ..." alt="" coords="65,260,241,287"/>
 <area shape="rect" href="class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="5,171,124,197"/>
 <area shape="rect" href="class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="87,81,218,108"/>
 <area shape="rect" href="class_j_motor_driver_servo_advanced.html" title="defines interface for servo driver with variable frequency, subclass of JMotorDriverServo and JMotorD..." alt="" coords="148,171,336,197"/>
@@ -97,12 +100,13 @@ Collaboration diagram for JServoControllerAdvanced:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acb52f7a586fc4884db0084484728b09a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller_advanced.html#acb52f7a586fc4884db0084484728b09a">JServoControllerAdvanced</a> (<a class="el" href="class_j_motor_driver_servo_advanced.html">JMotorDriverServoAdvanced</a> &amp;_servo, float _weakFreq=.5, unsigned long _weakenTimeout=0, float _normalFreq=1.0, unsigned long _startWeakTimeout=0, bool _reverse=false, float velLimit=INFINITY, float accelLimit=INFINITY, unsigned long _disableTimeout=0, float _minAngleLimit=0, float _maxAngleLimit=180, float _pos=90, float _minSetAngle=0, float _maxSetAngle=180, int minServoVal=544, int maxServoVal=2400, bool _preventGoingWrongWay=true, bool _preventGoingTooFast=true, float _stoppingAccelLimit=INFINITY)</td></tr>
-<tr class="memdesc:acb52f7a586fc4884db0084484728b09a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="class_j_servo_controller_advanced.html">JServoControllerAdvanced</a>, a class for controlling <a class="el" href="class_j_motor_driver_servo_advanced.html" title="defines interface for servo driver with variable frequency, subclass of JMotorDriverServo and JMotorD...">JMotorDriverServoAdvanced</a>, with angle calibration and accel and velocity limiting.  <a href="class_j_servo_controller_advanced.html#acb52f7a586fc4884db0084484728b09a">More...</a><br /></td></tr>
+<tr class="memdesc:acb52f7a586fc4884db0084484728b09a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="class_j_servo_controller_advanced.html" title="class for controlling JMotorDriverServoAdvanced, with power reducing option along with standard JServ...">JServoControllerAdvanced</a>, a class for controlling <a class="el" href="class_j_motor_driver_servo_advanced.html" title="defines interface for servo driver with variable frequency, subclass of JMotorDriverServo and JMotorD...">JMotorDriverServoAdvanced</a>, with angle calibration and accel and velocity limiting.  <a href="class_j_servo_controller_advanced.html#acb52f7a586fc4884db0084484728b09a">More...</a><br /></td></tr>
 <tr class="separator:acb52f7a586fc4884db0084484728b09a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abead3a8ad2e1d1df22e8bc3457df891c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller_advanced.html#abead3a8ad2e1d1df22e8bc3457df891c">run</a> ()</td></tr>
 <tr class="memdesc:abead3a8ad2e1d1df22e8bc3457df891c"><td class="mdescLeft">&#160;</td><td class="mdescRight">call this in your main loop  <a href="class_j_servo_controller_advanced.html#abead3a8ad2e1d1df22e8bc3457df891c">More...</a><br /></td></tr>
 <tr class="separator:abead3a8ad2e1d1df22e8bc3457df891c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9191cf4a4ffadaf186737429d8324f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller_advanced.html#ab9191cf4a4ffadaf186737429d8324f1">setEnable</a> (bool _enable)</td></tr>
+<tr class="memdesc:ab9191cf4a4ffadaf186737429d8324f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable or disable the servo (start or stop sending a signal to the servo)  <a href="class_j_servo_controller_advanced.html#ab9191cf4a4ffadaf186737429d8324f1">More...</a><br /></td></tr>
 <tr class="separator:ab9191cf4a4ffadaf186737429d8324f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea70007ce42384457427599890d0ad6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller_advanced.html#aea70007ce42384457427599890d0ad6d">setStrengthWeak</a> ()</td></tr>
 <tr class="memdesc:aea70007ce42384457427599890d0ad6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">set servo to weaker setting  <a href="class_j_servo_controller_advanced.html#aea70007ce42384457427599890d0ad6d">More...</a><br /></td></tr>
@@ -139,39 +143,54 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1057966e570b7a55d6bf5ef33c4ccd4c inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">set servo angle target, servo will move to target but at limited velocity and acceleration  <a href="class_j_servo_controller.html#a1057966e570b7a55d6bf5ef33c4ccd4c">More...</a><br /></td></tr>
 <tr class="separator:a1057966e570b7a55d6bf5ef33c4ccd4c inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada7c8739cad8edf866f52cbc08b292f8 inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#ada7c8739cad8edf866f52cbc08b292f8">setDisableTimeout</a> (unsigned long _timeout)</td></tr>
+<tr class="memdesc:ada7c8739cad8edf866f52cbc08b292f8 inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">default: 0, after how many milliseconds of no movement should the servo be disabled? 0=never disable  <a href="class_j_servo_controller.html#ada7c8739cad8edf866f52cbc08b292f8">More...</a><br /></td></tr>
 <tr class="separator:ada7c8739cad8edf866f52cbc08b292f8 inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d9de7348ea879378c7874d605053281 inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a5d9de7348ea879378c7874d605053281">getDisableTimeout</a> ()</td></tr>
 <tr class="separator:a5d9de7348ea879378c7874d605053281 inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a776cc82a4434138c78149a52d08672e8 inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a776cc82a4434138c78149a52d08672e8">getLastMovedMillis</a> ()</td></tr>
+<tr class="memdesc:a776cc82a4434138c78149a52d08672e8 inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the value of millis() when the servo last moved  <a href="class_j_servo_controller.html#a776cc82a4434138c78149a52d08672e8">More...</a><br /></td></tr>
 <tr class="separator:a776cc82a4434138c78149a52d08672e8 inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14448b8186cc9c200bb7108314b3e2af inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a14448b8186cc9c200bb7108314b3e2af">getMillisSinceMoved</a> ()</td></tr>
+<tr class="memdesc:a14448b8186cc9c200bb7108314b3e2af inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the number of milliseconds since the servo last moved  <a href="class_j_servo_controller.html#a14448b8186cc9c200bb7108314b3e2af">More...</a><br /></td></tr>
 <tr class="separator:a14448b8186cc9c200bb7108314b3e2af inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0f744f43e72a2f4b0ce4d701ea4ba9c inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#ae0f744f43e72a2f4b0ce4d701ea4ba9c">setLastMovedMillis</a> (unsigned long mil)</td></tr>
+<tr class="memdesc:ae0f744f43e72a2f4b0ce4d701ea4ba9c inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">allows for changing the variable that stores when the servo last moved  <a href="class_j_servo_controller.html#ae0f744f43e72a2f4b0ce4d701ea4ba9c">More...</a><br /></td></tr>
 <tr class="separator:ae0f744f43e72a2f4b0ce4d701ea4ba9c inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa40bab9dc889c7b11f6af45b9015eefa inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#aa40bab9dc889c7b11f6af45b9015eefa">enable</a> ()</td></tr>
+<tr class="memdesc:aa40bab9dc889c7b11f6af45b9015eefa inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">equivalent to setEnable(true)  <a href="class_j_servo_controller.html#aa40bab9dc889c7b11f6af45b9015eefa">More...</a><br /></td></tr>
 <tr class="separator:aa40bab9dc889c7b11f6af45b9015eefa inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e2ee41d91ec9c833f27157656175c6a inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a9e2ee41d91ec9c833f27157656175c6a">disable</a> ()</td></tr>
+<tr class="memdesc:a9e2ee41d91ec9c833f27157656175c6a inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">equivalent to setEnable(false)  <a href="class_j_servo_controller.html#a9e2ee41d91ec9c833f27157656175c6a">More...</a><br /></td></tr>
 <tr class="separator:a9e2ee41d91ec9c833f27157656175c6a inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa66f13c46d1f4e89f0de72edc0566ec3 inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#aa66f13c46d1f4e89f0de72edc0566ec3">getEnable</a> ()</td></tr>
+<tr class="memdesc:aa66f13c46d1f4e89f0de72edc0566ec3 inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns whether the servo is enabled or not  <a href="class_j_servo_controller.html#aa66f13c46d1f4e89f0de72edc0566ec3">More...</a><br /></td></tr>
 <tr class="separator:aa66f13c46d1f4e89f0de72edc0566ec3 inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a234a0d07ef4190701183f0a8b20ebdbc inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a234a0d07ef4190701183f0a8b20ebdbc">getPosTarget</a> ()</td></tr>
+<tr class="memdesc:a234a0d07ef4190701183f0a8b20ebdbc inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">what position is the servo moving towards or at  <a href="class_j_servo_controller.html#a234a0d07ef4190701183f0a8b20ebdbc">More...</a><br /></td></tr>
 <tr class="separator:a234a0d07ef4190701183f0a8b20ebdbc inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80e157026e2f63f4fbd976f301c0883c inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a80e157026e2f63f4fbd976f301c0883c">getPos</a> ()</td></tr>
+<tr class="memdesc:a80e157026e2f63f4fbd976f301c0883c inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">what position is the servo actually being set to? (slowly approaches target if smoothing is used)  <a href="class_j_servo_controller.html#a80e157026e2f63f4fbd976f301c0883c">More...</a><br /></td></tr>
 <tr class="separator:a80e157026e2f63f4fbd976f301c0883c inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accd40e99c9ce3b47e5ae020d38fe31df inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#accd40e99c9ce3b47e5ae020d38fe31df">getVelocity</a> ()</td></tr>
+<tr class="memdesc:accd40e99c9ce3b47e5ae020d38fe31df inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">what rate is servo position being changed at?  <a href="class_j_servo_controller.html#accd40e99c9ce3b47e5ae020d38fe31df">More...</a><br /></td></tr>
 <tr class="separator:accd40e99c9ce3b47e5ae020d38fe31df inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab20ef1576ff0888cc869ab79f3ecc7f7 inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#ab20ef1576ff0888cc869ab79f3ecc7f7">isPosAtTarget</a> ()</td></tr>
+<tr class="memdesc:ab20ef1576ff0888cc869ab79f3ecc7f7 inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if position=target, false otherwise  <a href="class_j_servo_controller.html#ab20ef1576ff0888cc869ab79f3ecc7f7">More...</a><br /></td></tr>
 <tr class="separator:ab20ef1576ff0888cc869ab79f3ecc7f7 inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1e88aec27bf797d00ea477678c7b509 inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#ae1e88aec27bf797d00ea477678c7b509">isPosNotAtTarget</a> ()</td></tr>
+<tr class="memdesc:ae1e88aec27bf797d00ea477678c7b509 inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">equivalent to !isPosAtTarget()  <a href="class_j_servo_controller.html#ae1e88aec27bf797d00ea477678c7b509">More...</a><br /></td></tr>
 <tr class="separator:ae1e88aec27bf797d00ea477678c7b509 inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aece37aa8db4a983c04150fa0c2530069 inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#aece37aa8db4a983c04150fa0c2530069">distTotarget</a> ()</td></tr>
+<tr class="memdesc:aece37aa8db4a983c04150fa0c2530069 inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns target-position  <a href="class_j_servo_controller.html#aece37aa8db4a983c04150fa0c2530069">More...</a><br /></td></tr>
 <tr class="separator:aece37aa8db4a983c04150fa0c2530069 inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fc5a535f0913a3c88cd58dc9eb9acf0 inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a5fc5a535f0913a3c88cd58dc9eb9acf0">restartRun</a> ()</td></tr>
 <tr class="memdesc:a5fc5a535f0913a3c88cd58dc9eb9acf0 inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">if you stopped calling <a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1" title="call this in your main loop">run()</a> for a while, call this before restarting <a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1" title="call this in your main loop">run()</a> to avoid a big jump in movement  <a href="class_j_servo_controller.html#a5fc5a535f0913a3c88cd58dc9eb9acf0">More...</a><br /></td></tr>
 <tr class="separator:a5fc5a535f0913a3c88cd58dc9eb9acf0 inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedddfd833c0f7746981437bca8f61a28 inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#aedddfd833c0f7746981437bca8f61a28">getActive</a> ()</td></tr>
+<tr class="memdesc:aedddfd833c0f7746981437bca8f61a28 inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns whether the servo is "awake" (whether signals are being sent)  <a href="class_j_servo_controller.html#aedddfd833c0f7746981437bca8f61a28">More...</a><br /></td></tr>
 <tr class="separator:aedddfd833c0f7746981437bca8f61a28 inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace58c08fc110a921e3bc0173139d7cc7 inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#ace58c08fc110a921e3bc0173139d7cc7">wake</a> ()</td></tr>
+<tr class="memdesc:ace58c08fc110a921e3bc0173139d7cc7 inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">if the servo has been disabled because of inactivity, calling this function simulates the servo being told to move and wakes it up  <a href="class_j_servo_controller.html#ace58c08fc110a921e3bc0173139d7cc7">More...</a><br /></td></tr>
 <tr class="separator:ace58c08fc110a921e3bc0173139d7cc7 inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ac0722d6fa27463ea6ed284c6755174 inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a1ac0722d6fa27463ea6ed284c6755174">setReverse</a> (bool rev)</td></tr>
 <tr class="separator:a1ac0722d6fa27463ea6ed284c6755174 inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -288,7 +307,10 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a395110c7c94409a19d62f58441e50457 inherit pro_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a395110c7c94409a19d62f58441e50457">floatMap</a> (float x, float in_min, float in_max, float out_min, float out_max)</td></tr>
 <tr class="separator:a395110c7c94409a19d62f58441e50457 inherit pro_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>class for controlling <a class="el" href="class_j_motor_driver_servo_advanced.html" title="defines interface for servo driver with variable frequency, subclass of JMotorDriverServo and JMotorD...">JMotorDriverServoAdvanced</a>, with power reducing option along with standard <a class="el" href="class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting">JServoController</a> features </p>
+<dl class="section note"><dt>Note</dt><dd>this servo controller supports adjusting the servo signal frequency which for many servos can change how hard the servos push </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acb52f7a586fc4884db0084484728b09a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acb52f7a586fc4884db0084484728b09a">&#9670;&nbsp;</a></span>JServoControllerAdvanced()</h2>
 
@@ -425,7 +447,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructor for <a class="el" href="class_j_servo_controller_advanced.html">JServoControllerAdvanced</a>, a class for controlling <a class="el" href="class_j_motor_driver_servo_advanced.html" title="defines interface for servo driver with variable frequency, subclass of JMotorDriverServo and JMotorD...">JMotorDriverServoAdvanced</a>, with angle calibration and accel and velocity limiting. </p>
+<p>Constructor for <a class="el" href="class_j_servo_controller_advanced.html" title="class for controlling JMotorDriverServoAdvanced, with power reducing option along with standard JServ...">JServoControllerAdvanced</a>, a class for controlling <a class="el" href="class_j_motor_driver_servo_advanced.html" title="defines interface for servo driver with variable frequency, subclass of JMotorDriverServo and JMotorD...">JMotorDriverServoAdvanced</a>, with angle calibration and accel and velocity limiting. </p>
 <dl class="section note"><dt>Note</dt><dd>the "advanced" servo driver supports adjusting the servo signal frequency </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -616,6 +638,21 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>enable or disable the servo (start or stop sending a signal to the servo) </p>
+<dl class="section note"><dt>Note</dt><dd>some (nicer digital) servos may not turn off their motors when the signal is stopped, but cheap servos usually do </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_enable</td><td>(bool) true=enable, false=disable </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(bool)</td><td>true if state changed, otherwise false </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Reimplemented from <a class="el" href="class_j_servo_controller.html#abbe64e1c3087c9ca9c3dd887f0eaa554">JServoController</a>.</p>
 
