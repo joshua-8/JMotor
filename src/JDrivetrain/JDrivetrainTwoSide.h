@@ -5,7 +5,7 @@
 #include "JTwoDTransform.h"
 #include <Arduino.h>
 /**
- * @brief  subclass of JDrivetrain for controlling a drivetrain with one JMotorController for each side of the drivetrain
+ * @brief  child class of JDrivetrain for controlling a drivetrain with one JMotorController for each side of the drivetrain
  * @note   both sides should move forward when the controllers are given a positive speed
  */
 class JDrivetrainTwoSide : public JDrivetrain {

@@ -1,5 +1,7 @@
 #include <Arduino.h>
 
+//drivetrain example
+
 #define port1Pin 32
 #define port2Pin 33
 #define port3Pin 25
@@ -26,11 +28,6 @@
 #define dacUnitsPerVolt 380
 
 #include <JMotor.h>
-
-// JMotorDriverEsp32Servo myServo = JMotorDriverEsp32Servo(port1);
-// JServoCurrentSensor myServoCurrent = JServoCurrentSensor(port5Pin, 150);
-// JServoControllerStallProtected servoCtrl = JServoControllerStallProtected(JServoControllerAdvanced(myServo, .3, 0, 1, 0, false, 120, 75, 0, -90, 90, 0, -90, 90), myServoCurrent, .1, .4, 500, 1000);
-// JServoControllerAdvanced servoCtrl = JServoControllerAdvanced(myServo, .3, 0, 1, 1000, false, 120, 75, 0, -40, 40, 0, -90, 90, 544, 2400, true, true, 1.0);
 
 JEncoderPWMAbsoluteAttachInterrupt encoder = JEncoderPWMAbsoluteAttachInterrupt(inport2, JEncoderPWMAbsolute_AS5048settings, true, 1, 50000, 1000, true);
 IRAM_ATTR jENCODER_MAKE_ISR_MACRO(encoder);

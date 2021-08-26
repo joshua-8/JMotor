@@ -3,6 +3,10 @@
 #include "JDrivetrain/JDrivetrain.h"
 #include "JTwoDTransform.h"
 #include <Arduino.h>
+/**
+ * @brief  basic drivetrain controller, supports smoothed movements on each axis
+ * @note each axis is separate, this drivetrain controller doesn't use distances moved on each axis to actually know its position
+ */
 class JDrivetrainControllerBasic : public JDrivetrain {
 protected:
     bool controlled;
@@ -200,6 +204,10 @@ public:
         return (vel.x == 0 && vel.y == 0 && vel.rz == 0);
     }
 
+    /**
+     * @brief  true if going to distance target, false if velocity based
+     * @retval bool
+     */
     bool getDistMode()
     {
         return distMode;

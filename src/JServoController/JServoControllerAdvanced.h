@@ -3,6 +3,10 @@
 #include "JMotorDriver/JMotorDriverServoAdvanced.h"
 #include "JServoController.h"
 #include <Arduino.h>
+/**
+ * @brief  class for controlling JMotorDriverServoAdvanced, with power reducing option along with standard JServoController features
+ * @note this servo controller supports adjusting the servo signal frequency which for many servos can change how hard the servos push
+ */
 class JServoControllerAdvanced : public JServoController {
 protected:
     /**

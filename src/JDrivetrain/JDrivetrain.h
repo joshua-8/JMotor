@@ -2,11 +2,11 @@
 #define _J_DRIVETRAIN_H
 #include "JTwoDTransform.h"
 #include <Arduino.h>
+/**
+ * @brief  defines interface for controlling any ground-based drivetrain
+ */
 class JDrivetrain {
 public:
-    /**
-     * @brief  defines two dimensoinal transformation. y(forward/backwards), rz(clockwise/ccw), x(right/left)
-     */
     virtual void run() = 0;
     virtual bool setEnable(bool _enable) = 0;
     virtual bool enable() = 0;

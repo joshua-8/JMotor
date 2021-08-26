@@ -2,6 +2,11 @@
 #define J_SERVO_CURRENT_SENSOR_H
 #include "JServoStallSensing.h"
 #include <Arduino.h>
+/**
+ * @brief  implements JServoStallSensing interface. takes and filters current readings to calculate how hard a servo is working
+ * add a small amount of resistance to the negative power wire of a servo (a small bundle of wire can create enough resistance)
+ * connect the measuring pin to the negative wire close to the servo so the voltage drop across the resistance can be measured.
+ */
 class JServoCurrentSensor : public JServoStallSensing {
 protected:
     int measurePin;
