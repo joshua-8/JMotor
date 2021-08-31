@@ -3,16 +3,23 @@
 #include "JServoStallSensing.h"
 #include <Arduino.h>
 /**
- * @brief  implements JServoStallSensing interface. takes and filters current readings to calculate how hard a servo is working
+ * @brief  implements JServoStallSensing interface.
+ * 
+ * averages N number of readings, use like: JServoCurrentSensor<40> stallSensor = JServoCurrentSensor<40>(pin);
+ * 
+ * takes and filters current readings to calculate how hard a servo is working
  * add a small amount of resistance to the negative power wire of a servo (a small bundle of wire can create enough resistance)
  * connect the measuring pin to the negative wire close to the servo so the voltage drop across the resistance can be measured.
  */
+template <uint16_t N>
 class JServoCurrentSensor : public JServoStallSensing {
 protected:
     int measurePin;
     bool justStarted;
-    static const byte numReadings = 20;
-    int readings[numReadings]; // the readings from the analog input
+    /**
+     * the readings from the analog input 
+     */
+    int readings[N];
     byte readIndex; // the index of the current reading
     long total; // the running total
     unsigned long lastMeasurementMillis;
@@ -22,9 +29,8 @@ protected:
 
 public:
     /**
-     * @brief  
-     * @note   
-     * @param  _measurePin: 
+     * @brief  constructor for JServoCurrentSensor
+     * @param  _measurePin: analog pin reading signal that corresponds to how much current a servo is drawing
      * @param  _maxRange: 
      * @param  _minRange: 
      * @retval 
@@ -45,7 +51,7 @@ public:
         if (_run) {
             run();
         }
-        return constrain(map(measurementRaw, (long)minRange * numReadings, (long)maxRange * numReadings, 0, 10000), 0, 10000) / 10000.0;
+        return constrain(map(total, (long)minRange * N, (long)maxRange * N, 0, 10000), 0, 10000) / 10000.0;
     }
     int getUnscaledMeasurement()
     {
@@ -81,7 +87,7 @@ public:
     }
     void run()
     {
-        if (millis() - lastMeasurementMillis > 4) {
+        if (millis() - lastMeasurementMillis > 2) {
             lastMeasurementMillis = millis();
             if (!justStarted) {
                 // subtract the last reading:
@@ -95,7 +101,7 @@ public:
             readIndex = readIndex + 1;
 
             // if we're at the end of the array...
-            if (readIndex >= numReadings) {
+            if (readIndex >= N) {
                 justStarted = false;
                 // ...wrap around to the beginning:
                 readIndex = 0;
