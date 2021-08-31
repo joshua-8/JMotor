@@ -45,7 +45,7 @@ protected:
      */
     unsigned long lastMovedMillis;
     /**
-     * @brief  keep track of whether controller is enabled (since evne when controller is enabled driver might be disabled if timedout and sleeping)
+     * @brief  keep track of whether controller is enabled (since even when controller is enabled driver might be disabled if timedout and sleeping)
      */
     bool enabled;
     /**
@@ -129,6 +129,22 @@ public:
     void setAngleImmediate(float angle, bool _run = true)
     {
         angle = constrain(angle, min(minAngleLimit, maxAngleLimit), max(minAngleLimit, maxAngleLimit));
+        if (dL.getTarget() != angle) {
+            wake();
+        }
+        dL.setTarget(angle);
+        dL.setPosition(angle);
+        if (_run)
+            run();
+    }
+    /**
+     * @brief  increment servo angle and set immediately, without velocity or acceleration limiting
+     * @param  angleDiff: (float) angle change to set
+     * @param  _run: (bool) default: true, true = call run() in this function, false = you'll call run() yourself
+     */
+    void setAngleImmediateInc(float angleDiff, bool _run = true)
+    {
+        float angle = constrain(getPos() + angleDiff, min(minAngleLimit, maxAngleLimit), max(minAngleLimit, maxAngleLimit));
         if (dL.getTarget() != angle) {
             wake();
         }
@@ -276,7 +292,7 @@ public:
      * @brief  returns target-position
      * @retval (float)
      */
-    float distTotarget()
+    float distToTarget()
     {
         return dL.distToTarget();
     }
@@ -389,7 +405,7 @@ public:
      * @param  run: (bool) default: true, true = call run() in this function, false = you'll call run() yourself
      * 
      */
-    void setPosition(float pos, bool _run)
+    void setPosition(float pos, bool _run = true)
     {
         if (pos != dL.getPosition()) {
             wake();

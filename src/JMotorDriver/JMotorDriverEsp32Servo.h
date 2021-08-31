@@ -36,7 +36,7 @@ public:
 
     void adjustFrequency(float freq = 1.0)
     {
-        setFrequencyAndResolution(freq * 50);
+        setFrequencyAndResolution(freq * 50.0);
     }
 
     /**

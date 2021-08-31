@@ -74,10 +74,6 @@ public:
                 }
                 weakened = false;
             }
-        } else {
-            if (weakened) { }
-            setStrengthNormal();
-            weakened = false;
         }
         JServoController::run();
     }
@@ -136,6 +132,9 @@ public:
     {
         return weakened;
     }
+    /**
+     * @note   if set to zero (disabling weakening after a timeout) strength remains at the last set value until you use setStrengthWeak() or setStrengthNormal()
+     */
     void setWeakTimeout(unsigned long _timeout)
     {
         weakenTimeout = _timeout;
@@ -151,6 +150,14 @@ public:
     unsigned long getStartWeakTimeout()
     {
         return startWeakTimeout;
+    }
+    float getWeakFreq()
+    {
+        return weakFreq;
+    }
+    float getNormalFreq()
+    {
+        return defaultFreq;
     }
 };
 #endif

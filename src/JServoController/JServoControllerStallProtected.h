@@ -1,7 +1,7 @@
 #ifndef J_SERVO_CONTROLLER_STALL_PROTECTED_H
 #define J_SERVO_CONTROLLER_STALL_PROTECTED_H
 #include "JServoControllerAdvanced.h"
-#include "JServoCurrentSensor.h"
+#include "JServoStallSensing.h"
 #include <Arduino.h>
 /**
  * @brief  this child class of JServoController uses JServoStallSensing to reduce servo power
@@ -19,9 +19,9 @@ protected:
 
 public:
     JServoStallSensing& stallSensor;
-    JServoControllerStallProtected(JServoControllerAdvanced advancedServo, JServoStallSensing& servoCurrentSensor, float _unStallThreshold, float _stallThreshold, unsigned long _stallActivateTimeout, unsigned long _stallDeactivateTimeout)
+    JServoControllerStallProtected(JServoControllerAdvanced advancedServo, JServoStallSensing& servoStallSensor, float _unStallThreshold, float _stallThreshold, unsigned long _stallActivateTimeout, unsigned long _stallDeactivateTimeout)
         : JServoControllerAdvanced(advancedServo)
-        , stallSensor(servoCurrentSensor)
+        , stallSensor(servoStallSensor)
     {
         unStallThreshold = constrain(_unStallThreshold, 0, 1);
         stallThreshold = constrain(_stallThreshold, 0, 1);
@@ -32,7 +32,7 @@ public:
     }
     virtual void run()
     {
-        float measurementTemp = stallSensor.getMeasurement();
+        float measurementTemp = stallSensor.getMeasurement(true);
         if (measurementTemp > stallThreshold) {
             if (!stalled) {
                 stalled = true;
@@ -55,8 +55,9 @@ public:
             }
         }
         if (!stallProtectionActivated) {
-            if (stallProtected && weakened)
+            if (stallProtected && weakened) {
                 setStrengthNormal();
+            }
         }
 
         JServoControllerAdvanced::run();
