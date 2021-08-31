@@ -1,6 +1,7 @@
 <map id="JServoControllerGentle" name="JServoControllerGentle">
-<area shape="rect" id="node1" title=" " alt="" coords="5,247,161,273"/>
-<area shape="rect" id="node2" href="$class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="24,171,143,197"/>
-<area shape="rect" id="node3" href="$class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="18,81,149,108"/>
-<area shape="rect" id="node4" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="35,5,131,32"/>
+<area shape="rect" id="node1" title="JServoControllerGentle is an extension of JServoController that uses JServoStallSensing to make a ser..." alt="" coords="105,260,261,287"/>
+<area shape="rect" id="node2" href="$class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="11,171,130,197"/>
+<area shape="rect" id="node3" href="$class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="5,81,136,108"/>
+<area shape="rect" id="node4" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="23,5,119,32"/>
+<area shape="rect" id="node5" href="$class_j_servo_stall_sensing.html" title="defines interface for classes that can measure how hard a servo is working" alt="" coords="153,171,289,197"/>
 </map>

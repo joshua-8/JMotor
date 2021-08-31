@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>JMotor: JServoCurrentSensor Class Reference</title>
+<title>JMotor: JServoCurrentSensor&lt; N &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,103 +64,103 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="class_j_servo_current_sensor-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">JServoCurrentSensor Class Reference</div>  </div>
+<div class="title">JServoCurrentSensor&lt; N &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>implements <a class="el" href="class_j_servo_stall_sensing.html" title="defines interface for classes that can measure how hard a servo is working">JServoStallSensing</a> interface. takes and filters current readings to calculate how hard a servo is working add a small amount of resistance to the negative power wire of a servo (a small bundle of wire can create enough resistance) connect the measuring pin to the negative wire close to the servo so the voltage drop across the resistance can be measured.  
+<p>implements <a class="el" href="class_j_servo_stall_sensing.html" title="defines interface for classes that can measure how hard a servo is working">JServoStallSensing</a> interface.  
  <a href="class_j_servo_current_sensor.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_j_servo_current_sensor_8h_source.html">JServoCurrentSensor.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for JServoCurrentSensor:</div>
+Inheritance diagram for JServoCurrentSensor&lt; N &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_j_servo_current_sensor__inherit__graph.png" border="0" usemap="#a_j_servo_current_sensor_inherit__map" alt="Inheritance graph"/></div>
-<map name="a_j_servo_current_sensor_inherit__map" id="a_j_servo_current_sensor_inherit__map">
-<area shape="rect" title="implements JServoStallSensing interface. takes and filters current readings to calculate how hard a s..." alt="" coords="5,80,152,107"/>
-<area shape="rect" href="class_j_servo_stall_sensing.html" title="defines interface for classes that can measure how hard a servo is working" alt="" coords="11,5,147,32"/>
+<div class="center"><img src="class_j_servo_current_sensor__inherit__graph.png" border="0" usemap="#a_j_servo_current_sensor_3_01_n_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_j_servo_current_sensor_3_01_n_01_4_inherit__map" id="a_j_servo_current_sensor_3_01_n_01_4_inherit__map">
+<area shape="rect" title="implements JServoStallSensing interface." alt="" coords="5,80,184,107"/>
+<area shape="rect" href="class_j_servo_stall_sensing.html" title="defines interface for classes that can measure how hard a servo is working" alt="" coords="27,5,163,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
-Collaboration diagram for JServoCurrentSensor:</div>
+Collaboration diagram for JServoCurrentSensor&lt; N &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_j_servo_current_sensor__coll__graph.png" border="0" usemap="#a_j_servo_current_sensor_coll__map" alt="Collaboration graph"/></div>
-<map name="a_j_servo_current_sensor_coll__map" id="a_j_servo_current_sensor_coll__map">
-<area shape="rect" title="implements JServoStallSensing interface. takes and filters current readings to calculate how hard a s..." alt="" coords="5,80,152,107"/>
-<area shape="rect" href="class_j_servo_stall_sensing.html" title="defines interface for classes that can measure how hard a servo is working" alt="" coords="11,5,147,32"/>
+<div class="center"><img src="class_j_servo_current_sensor__coll__graph.png" border="0" usemap="#a_j_servo_current_sensor_3_01_n_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="a_j_servo_current_sensor_3_01_n_01_4_coll__map" id="a_j_servo_current_sensor_3_01_n_01_4_coll__map">
+<area shape="rect" title="implements JServoStallSensing interface." alt="" coords="5,80,184,107"/>
+<area shape="rect" href="class_j_servo_stall_sensing.html" title="defines interface for classes that can measure how hard a servo is working" alt="" coords="27,5,163,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1115090001ba30b67db3cc1804a01e43"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a1115090001ba30b67db3cc1804a01e43">JServoCurrentSensor</a> (int _measurePin, int _maxRange=1000, int _minRange=0)</td></tr>
-<tr class="memdesc:a1115090001ba30b67db3cc1804a01e43"><td class="mdescLeft">&#160;</td><td class="mdescRight"><br  />
-  <a href="class_j_servo_current_sensor.html#a1115090001ba30b67db3cc1804a01e43">More...</a><br /></td></tr>
-<tr class="separator:a1115090001ba30b67db3cc1804a01e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87802db6d230d1dd84e3e4e43e2b4f34"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a87802db6d230d1dd84e3e4e43e2b4f34">getMeasurement</a> (bool _run=true)</td></tr>
-<tr class="separator:a87802db6d230d1dd84e3e4e43e2b4f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a049b10c301a06fd82fdd5576ecd43cdd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a049b10c301a06fd82fdd5576ecd43cdd">getUnscaledMeasurement</a> ()</td></tr>
-<tr class="separator:a049b10c301a06fd82fdd5576ecd43cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5eb1a3c0e6953d5ef834437434f36446"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a5eb1a3c0e6953d5ef834437434f36446">getJustStarted</a> ()</td></tr>
-<tr class="separator:a5eb1a3c0e6953d5ef834437434f36446"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbaeb2912c404f380a3b4b4122e97cda"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#afbaeb2912c404f380a3b4b4122e97cda">getMinRange</a> ()</td></tr>
-<tr class="separator:afbaeb2912c404f380a3b4b4122e97cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81114045ef855dacb13fbc2d6b448f6f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a81114045ef855dacb13fbc2d6b448f6f">getMaxRange</a> ()</td></tr>
-<tr class="separator:a81114045ef855dacb13fbc2d6b448f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f91f7dd5c4bd213c228c73532ffc4ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a8f91f7dd5c4bd213c228c73532ffc4ef">setMinRange</a> (int min)</td></tr>
-<tr class="separator:a8f91f7dd5c4bd213c228c73532ffc4ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed5f3afceee6e6bc950f82880b502237"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#aed5f3afceee6e6bc950f82880b502237">setMaxRange</a> (int max)</td></tr>
-<tr class="separator:aed5f3afceee6e6bc950f82880b502237"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33f392139f810fe861f35b7f395dbecb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a33f392139f810fe861f35b7f395dbecb">setMeasurementPin</a> (byte _newPin)</td></tr>
-<tr class="separator:a33f392139f810fe861f35b7f395dbecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af31716e7df1a4096dd1d2d2b42efcc55"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#af31716e7df1a4096dd1d2d2b42efcc55">getMeasurementPin</a> ()</td></tr>
-<tr class="separator:af31716e7df1a4096dd1d2d2b42efcc55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67b399f023082d3fb4dffe5b0019cadc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a67b399f023082d3fb4dffe5b0019cadc">run</a> ()</td></tr>
-<tr class="separator:a67b399f023082d3fb4dffe5b0019cadc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b5a73a6c2dae6066f5c2dafaf10e090"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a6b5a73a6c2dae6066f5c2dafaf10e090">JServoCurrentSensor</a> (int _measurePin, int _maxRange=1000, int _minRange=0)</td></tr>
+<tr class="memdesc:a6b5a73a6c2dae6066f5c2dafaf10e090"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor for <a class="el" href="class_j_servo_current_sensor.html" title="implements JServoStallSensing interface.">JServoCurrentSensor</a>  <a href="class_j_servo_current_sensor.html#a6b5a73a6c2dae6066f5c2dafaf10e090">More...</a><br /></td></tr>
+<tr class="separator:a6b5a73a6c2dae6066f5c2dafaf10e090"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d4a1fc2e108a89bf363081258ee30bc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a4d4a1fc2e108a89bf363081258ee30bc">getMeasurement</a> (bool _run=true)</td></tr>
+<tr class="separator:a4d4a1fc2e108a89bf363081258ee30bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a773cb089411cb3f8c3546a2959f5ae23"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a773cb089411cb3f8c3546a2959f5ae23">getUnscaledMeasurement</a> ()</td></tr>
+<tr class="separator:a773cb089411cb3f8c3546a2959f5ae23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9441dd6276c8451beb364111f10afa4c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a9441dd6276c8451beb364111f10afa4c">getJustStarted</a> ()</td></tr>
+<tr class="separator:a9441dd6276c8451beb364111f10afa4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e347d085903bf425f49a117586cca30"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a6e347d085903bf425f49a117586cca30">getMinRange</a> ()</td></tr>
+<tr class="separator:a6e347d085903bf425f49a117586cca30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55fa11ed3fd6e407b42385b406dae10c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a55fa11ed3fd6e407b42385b406dae10c">getMaxRange</a> ()</td></tr>
+<tr class="separator:a55fa11ed3fd6e407b42385b406dae10c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fbf3c12705f39965ce7ed0aab4d0415"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a0fbf3c12705f39965ce7ed0aab4d0415">setMinRange</a> (int min)</td></tr>
+<tr class="separator:a0fbf3c12705f39965ce7ed0aab4d0415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a455019563214914e7ad4638567027567"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a455019563214914e7ad4638567027567">setMaxRange</a> (int max)</td></tr>
+<tr class="separator:a455019563214914e7ad4638567027567"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43d486bddb56d439cc4cf85fa67bd762"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a43d486bddb56d439cc4cf85fa67bd762">setMeasurementPin</a> (byte _newPin)</td></tr>
+<tr class="separator:a43d486bddb56d439cc4cf85fa67bd762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa166ab204d8b32f157ad33e858f0541f"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#aa166ab204d8b32f157ad33e858f0541f">getMeasurementPin</a> ()</td></tr>
+<tr class="separator:aa166ab204d8b32f157ad33e858f0541f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b62329b95ec78272d6b23fafaa84217"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a3b62329b95ec78272d6b23fafaa84217">run</a> ()</td></tr>
+<tr class="separator:a3b62329b95ec78272d6b23fafaa84217"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a4c3a0ccd8a6e03d22ee0919d0be2263b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a4c3a0ccd8a6e03d22ee0919d0be2263b">measurePin</a></td></tr>
-<tr class="separator:a4c3a0ccd8a6e03d22ee0919d0be2263b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa712829ec49cec2733d06cd3ea222c89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#aa712829ec49cec2733d06cd3ea222c89">justStarted</a></td></tr>
-<tr class="separator:aa712829ec49cec2733d06cd3ea222c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bd91e9f3b39e1b51953b56ee6f9f62a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a0bd91e9f3b39e1b51953b56ee6f9f62a">readings</a> [<a class="el" href="class_j_servo_current_sensor.html#a032d5b840c6ca02a5dc84983e5755d30">numReadings</a>]</td></tr>
-<tr class="separator:a0bd91e9f3b39e1b51953b56ee6f9f62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace0cca99d96814af6d6273fb01be58b9"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#ace0cca99d96814af6d6273fb01be58b9">readIndex</a></td></tr>
-<tr class="separator:ace0cca99d96814af6d6273fb01be58b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35a97c6c129944e7b00512df9ec41bcf"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a35a97c6c129944e7b00512df9ec41bcf">total</a></td></tr>
-<tr class="separator:a35a97c6c129944e7b00512df9ec41bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84cb8e5fddbce3c22c9625759a82f932"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a84cb8e5fddbce3c22c9625759a82f932">lastMeasurementMillis</a></td></tr>
-<tr class="separator:a84cb8e5fddbce3c22c9625759a82f932"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55aca58e73fc6fb026da30d5f93b19f0"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a55aca58e73fc6fb026da30d5f93b19f0">measurementRaw</a></td></tr>
-<tr class="separator:a55aca58e73fc6fb026da30d5f93b19f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52202a150e5b5e7b50cf4cdaae50c2a5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a52202a150e5b5e7b50cf4cdaae50c2a5">minRange</a></td></tr>
-<tr class="separator:a52202a150e5b5e7b50cf4cdaae50c2a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79dd0e0b6af5c9dbf8857a6982691ca7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a79dd0e0b6af5c9dbf8857a6982691ca7">maxRange</a></td></tr>
-<tr class="separator:a79dd0e0b6af5c9dbf8857a6982691ca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
-Static Protected Attributes</h2></td></tr>
-<tr class="memitem:a032d5b840c6ca02a5dc84983e5755d30"><td class="memItemLeft" align="right" valign="top">static const byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a032d5b840c6ca02a5dc84983e5755d30">numReadings</a> = 20</td></tr>
-<tr class="separator:a032d5b840c6ca02a5dc84983e5755d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4750756f51bb7fc01360546a3b398e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#aa4750756f51bb7fc01360546a3b398e9">measurePin</a></td></tr>
+<tr class="separator:aa4750756f51bb7fc01360546a3b398e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65597e4b21cb5675efbc8ddb4e25c7d9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a65597e4b21cb5675efbc8ddb4e25c7d9">justStarted</a></td></tr>
+<tr class="separator:a65597e4b21cb5675efbc8ddb4e25c7d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69de6581000a7ce0b1f31c81f6893a5b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a69de6581000a7ce0b1f31c81f6893a5b">readings</a> [N]</td></tr>
+<tr class="separator:a69de6581000a7ce0b1f31c81f6893a5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb7b024e129f44a829259d055632ad8b"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#aeb7b024e129f44a829259d055632ad8b">readIndex</a></td></tr>
+<tr class="separator:aeb7b024e129f44a829259d055632ad8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0aafa3a455170006f7605583c569826"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#ab0aafa3a455170006f7605583c569826">total</a></td></tr>
+<tr class="separator:ab0aafa3a455170006f7605583c569826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c90157fa33890f18c85284f8da75864"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a6c90157fa33890f18c85284f8da75864">lastMeasurementMillis</a></td></tr>
+<tr class="separator:a6c90157fa33890f18c85284f8da75864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e7792fb2e406b7ee0158dd5100a8150"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a9e7792fb2e406b7ee0158dd5100a8150">measurementRaw</a></td></tr>
+<tr class="separator:a9e7792fb2e406b7ee0158dd5100a8150"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae533075e4ef496ca7cad3afdd98de887"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#ae533075e4ef496ca7cad3afdd98de887">minRange</a></td></tr>
+<tr class="separator:ae533075e4ef496ca7cad3afdd98de887"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89bec4abc9424219e6e35f4d6835ff26"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_current_sensor.html#a89bec4abc9424219e6e35f4d6835ff26">maxRange</a></td></tr>
+<tr class="separator:a89bec4abc9424219e6e35f4d6835ff26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>implements <a class="el" href="class_j_servo_stall_sensing.html" title="defines interface for classes that can measure how hard a servo is working">JServoStallSensing</a> interface. takes and filters current readings to calculate how hard a servo is working add a small amount of resistance to the negative power wire of a servo (a small bundle of wire can create enough resistance) connect the measuring pin to the negative wire close to the servo so the voltage drop across the resistance can be measured. </p>
+<div class="textblock"><h3>template&lt;uint16_t N&gt;<br />
+class JServoCurrentSensor&lt; N &gt;</h3>
+
+<p>implements <a class="el" href="class_j_servo_stall_sensing.html" title="defines interface for classes that can measure how hard a servo is working">JServoStallSensing</a> interface. </p>
+<p>averages N number of readings, use like: JServoCurrentSensor&lt;40&gt; stallSensor = JServoCurrentSensor&lt;40&gt;(pin);</p>
+<p>takes and filters current readings to calculate how hard a servo is working add a small amount of resistance to the negative power wire of a servo (a small bundle of wire can create enough resistance) connect the measuring pin to the negative wire close to the servo so the voltage drop across the resistance can be measured. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a1115090001ba30b67db3cc1804a01e43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1115090001ba30b67db3cc1804a01e43">&#9670;&nbsp;</a></span>JServoCurrentSensor()</h2>
+<a id="a6b5a73a6c2dae6066f5c2dafaf10e090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b5a73a6c2dae6066f5c2dafaf10e090">&#9670;&nbsp;</a></span>JServoCurrentSensor()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">JServoCurrentSensor::JServoCurrentSensor </td>
+          <td class="memname"><a class="el" href="class_j_servo_current_sensor.html">JServoCurrentSensor</a>&lt; N &gt;::<a class="el" href="class_j_servo_current_sensor.html">JServoCurrentSensor</a> </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>_measurePin</em>, </td>
@@ -190,13 +190,10 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><br  />
- </p>
-<dl class="section note"><dt>Note</dt><dd><br  />
- </dd></dl>
+<p>constructor for <a class="el" href="class_j_servo_current_sensor.html" title="implements JServoStallSensing interface.">JServoCurrentSensor</a> </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_measurePin</td><td></td></tr>
+    <tr><td class="paramname">_measurePin</td><td>analog pin reading signal that corresponds to how much current a servo is drawing </td></tr>
     <tr><td class="paramname">_maxRange</td><td></td></tr>
     <tr><td class="paramname">_minRange</td><td></td></tr>
   </table>
@@ -212,17 +209,19 @@ Static Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5eb1a3c0e6953d5ef834437434f36446"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5eb1a3c0e6953d5ef834437434f36446">&#9670;&nbsp;</a></span>getJustStarted()</h2>
+<a id="a9441dd6276c8451beb364111f10afa4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9441dd6276c8451beb364111f10afa4c">&#9670;&nbsp;</a></span>getJustStarted()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool JServoCurrentSensor::getJustStarted </td>
+          <td class="memname">bool <a class="el" href="class_j_servo_current_sensor.html">JServoCurrentSensor</a>&lt; N &gt;::getJustStarted </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -237,17 +236,19 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a81114045ef855dacb13fbc2d6b448f6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81114045ef855dacb13fbc2d6b448f6f">&#9670;&nbsp;</a></span>getMaxRange()</h2>
+<a id="a55fa11ed3fd6e407b42385b406dae10c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55fa11ed3fd6e407b42385b406dae10c">&#9670;&nbsp;</a></span>getMaxRange()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int JServoCurrentSensor::getMaxRange </td>
+          <td class="memname">int <a class="el" href="class_j_servo_current_sensor.html">JServoCurrentSensor</a>&lt; N &gt;::getMaxRange </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -262,17 +263,19 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a87802db6d230d1dd84e3e4e43e2b4f34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87802db6d230d1dd84e3e4e43e2b4f34">&#9670;&nbsp;</a></span>getMeasurement()</h2>
+<a id="a4d4a1fc2e108a89bf363081258ee30bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d4a1fc2e108a89bf363081258ee30bc">&#9670;&nbsp;</a></span>getMeasurement()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float JServoCurrentSensor::getMeasurement </td>
+          <td class="memname">float <a class="el" href="class_j_servo_current_sensor.html">JServoCurrentSensor</a>&lt; N &gt;::getMeasurement </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>_run</em> = <code>true</code></td><td>)</td>
@@ -290,17 +293,19 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="af31716e7df1a4096dd1d2d2b42efcc55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af31716e7df1a4096dd1d2d2b42efcc55">&#9670;&nbsp;</a></span>getMeasurementPin()</h2>
+<a id="aa166ab204d8b32f157ad33e858f0541f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa166ab204d8b32f157ad33e858f0541f">&#9670;&nbsp;</a></span>getMeasurementPin()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">byte JServoCurrentSensor::getMeasurementPin </td>
+          <td class="memname">byte <a class="el" href="class_j_servo_current_sensor.html">JServoCurrentSensor</a>&lt; N &gt;::getMeasurementPin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -315,17 +320,19 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="afbaeb2912c404f380a3b4b4122e97cda"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afbaeb2912c404f380a3b4b4122e97cda">&#9670;&nbsp;</a></span>getMinRange()</h2>
+<a id="a6e347d085903bf425f49a117586cca30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e347d085903bf425f49a117586cca30">&#9670;&nbsp;</a></span>getMinRange()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int JServoCurrentSensor::getMinRange </td>
+          <td class="memname">int <a class="el" href="class_j_servo_current_sensor.html">JServoCurrentSensor</a>&lt; N &gt;::getMinRange </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -340,17 +347,19 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a049b10c301a06fd82fdd5576ecd43cdd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a049b10c301a06fd82fdd5576ecd43cdd">&#9670;&nbsp;</a></span>getUnscaledMeasurement()</h2>
+<a id="a773cb089411cb3f8c3546a2959f5ae23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a773cb089411cb3f8c3546a2959f5ae23">&#9670;&nbsp;</a></span>getUnscaledMeasurement()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int JServoCurrentSensor::getUnscaledMeasurement </td>
+          <td class="memname">int <a class="el" href="class_j_servo_current_sensor.html">JServoCurrentSensor</a>&lt; N &gt;::getUnscaledMeasurement </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -365,17 +374,19 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a67b399f023082d3fb4dffe5b0019cadc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67b399f023082d3fb4dffe5b0019cadc">&#9670;&nbsp;</a></span>run()</h2>
+<a id="a3b62329b95ec78272d6b23fafaa84217"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b62329b95ec78272d6b23fafaa84217">&#9670;&nbsp;</a></span>run()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void JServoCurrentSensor::run </td>
+          <td class="memname">void <a class="el" href="class_j_servo_current_sensor.html">JServoCurrentSensor</a>&lt; N &gt;::run </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -392,17 +403,19 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aed5f3afceee6e6bc950f82880b502237"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed5f3afceee6e6bc950f82880b502237">&#9670;&nbsp;</a></span>setMaxRange()</h2>
+<a id="a455019563214914e7ad4638567027567"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a455019563214914e7ad4638567027567">&#9670;&nbsp;</a></span>setMaxRange()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void JServoCurrentSensor::setMaxRange </td>
+          <td class="memname">void <a class="el" href="class_j_servo_current_sensor.html">JServoCurrentSensor</a>&lt; N &gt;::setMaxRange </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>max</em></td><td>)</td>
@@ -418,17 +431,19 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a33f392139f810fe861f35b7f395dbecb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33f392139f810fe861f35b7f395dbecb">&#9670;&nbsp;</a></span>setMeasurementPin()</h2>
+<a id="a43d486bddb56d439cc4cf85fa67bd762"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43d486bddb56d439cc4cf85fa67bd762">&#9670;&nbsp;</a></span>setMeasurementPin()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void JServoCurrentSensor::setMeasurementPin </td>
+          <td class="memname">void <a class="el" href="class_j_servo_current_sensor.html">JServoCurrentSensor</a>&lt; N &gt;::setMeasurementPin </td>
           <td>(</td>
           <td class="paramtype">byte&#160;</td>
           <td class="paramname"><em>_newPin</em></td><td>)</td>
@@ -444,17 +459,19 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a8f91f7dd5c4bd213c228c73532ffc4ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f91f7dd5c4bd213c228c73532ffc4ef">&#9670;&nbsp;</a></span>setMinRange()</h2>
+<a id="a0fbf3c12705f39965ce7ed0aab4d0415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fbf3c12705f39965ce7ed0aab4d0415">&#9670;&nbsp;</a></span>setMinRange()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void JServoCurrentSensor::setMinRange </td>
+          <td class="memname">void <a class="el" href="class_j_servo_current_sensor.html">JServoCurrentSensor</a>&lt; N &gt;::setMinRange </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>min</em></td><td>)</td>
@@ -471,17 +488,19 @@ Static Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="aa712829ec49cec2733d06cd3ea222c89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa712829ec49cec2733d06cd3ea222c89">&#9670;&nbsp;</a></span>justStarted</h2>
+<a id="a65597e4b21cb5675efbc8ddb4e25c7d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65597e4b21cb5675efbc8ddb4e25c7d9">&#9670;&nbsp;</a></span>justStarted</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool JServoCurrentSensor::justStarted</td>
+          <td class="memname">bool <a class="el" href="class_j_servo_current_sensor.html">JServoCurrentSensor</a>&lt; N &gt;::justStarted</td>
         </tr>
       </table>
   </td>
@@ -493,17 +512,19 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a84cb8e5fddbce3c22c9625759a82f932"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84cb8e5fddbce3c22c9625759a82f932">&#9670;&nbsp;</a></span>lastMeasurementMillis</h2>
+<a id="a6c90157fa33890f18c85284f8da75864"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c90157fa33890f18c85284f8da75864">&#9670;&nbsp;</a></span>lastMeasurementMillis</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned long JServoCurrentSensor::lastMeasurementMillis</td>
+          <td class="memname">unsigned long <a class="el" href="class_j_servo_current_sensor.html">JServoCurrentSensor</a>&lt; N &gt;::lastMeasurementMillis</td>
         </tr>
       </table>
   </td>
@@ -515,17 +536,19 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a79dd0e0b6af5c9dbf8857a6982691ca7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79dd0e0b6af5c9dbf8857a6982691ca7">&#9670;&nbsp;</a></span>maxRange</h2>
+<a id="a89bec4abc9424219e6e35f4d6835ff26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89bec4abc9424219e6e35f4d6835ff26">&#9670;&nbsp;</a></span>maxRange</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int JServoCurrentSensor::maxRange</td>
+          <td class="memname">int <a class="el" href="class_j_servo_current_sensor.html">JServoCurrentSensor</a>&lt; N &gt;::maxRange</td>
         </tr>
       </table>
   </td>
@@ -537,17 +560,19 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a55aca58e73fc6fb026da30d5f93b19f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55aca58e73fc6fb026da30d5f93b19f0">&#9670;&nbsp;</a></span>measurementRaw</h2>
+<a id="a9e7792fb2e406b7ee0158dd5100a8150"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e7792fb2e406b7ee0158dd5100a8150">&#9670;&nbsp;</a></span>measurementRaw</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long JServoCurrentSensor::measurementRaw</td>
+          <td class="memname">long <a class="el" href="class_j_servo_current_sensor.html">JServoCurrentSensor</a>&lt; N &gt;::measurementRaw</td>
         </tr>
       </table>
   </td>
@@ -559,17 +584,19 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a4c3a0ccd8a6e03d22ee0919d0be2263b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c3a0ccd8a6e03d22ee0919d0be2263b">&#9670;&nbsp;</a></span>measurePin</h2>
+<a id="aa4750756f51bb7fc01360546a3b398e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4750756f51bb7fc01360546a3b398e9">&#9670;&nbsp;</a></span>measurePin</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int JServoCurrentSensor::measurePin</td>
+          <td class="memname">int <a class="el" href="class_j_servo_current_sensor.html">JServoCurrentSensor</a>&lt; N &gt;::measurePin</td>
         </tr>
       </table>
   </td>
@@ -581,17 +608,19 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a52202a150e5b5e7b50cf4cdaae50c2a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52202a150e5b5e7b50cf4cdaae50c2a5">&#9670;&nbsp;</a></span>minRange</h2>
+<a id="ae533075e4ef496ca7cad3afdd98de887"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae533075e4ef496ca7cad3afdd98de887">&#9670;&nbsp;</a></span>minRange</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int JServoCurrentSensor::minRange</td>
+          <td class="memname">int <a class="el" href="class_j_servo_current_sensor.html">JServoCurrentSensor</a>&lt; N &gt;::minRange</td>
         </tr>
       </table>
   </td>
@@ -603,39 +632,19 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a032d5b840c6ca02a5dc84983e5755d30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a032d5b840c6ca02a5dc84983e5755d30">&#9670;&nbsp;</a></span>numReadings</h2>
+<a id="aeb7b024e129f44a829259d055632ad8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb7b024e129f44a829259d055632ad8b">&#9670;&nbsp;</a></span>readIndex</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const byte JServoCurrentSensor::numReadings = 20</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ace0cca99d96814af6d6273fb01be58b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace0cca99d96814af6d6273fb01be58b9">&#9670;&nbsp;</a></span>readIndex</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">byte JServoCurrentSensor::readIndex</td>
+          <td class="memname">byte <a class="el" href="class_j_servo_current_sensor.html">JServoCurrentSensor</a>&lt; N &gt;::readIndex</td>
         </tr>
       </table>
   </td>
@@ -647,17 +656,19 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a0bd91e9f3b39e1b51953b56ee6f9f62a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bd91e9f3b39e1b51953b56ee6f9f62a">&#9670;&nbsp;</a></span>readings</h2>
+<a id="a69de6581000a7ce0b1f31c81f6893a5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69de6581000a7ce0b1f31c81f6893a5b">&#9670;&nbsp;</a></span>readings</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int JServoCurrentSensor::readings[<a class="el" href="class_j_servo_current_sensor.html#a032d5b840c6ca02a5dc84983e5755d30">numReadings</a>]</td>
+          <td class="memname">int <a class="el" href="class_j_servo_current_sensor.html">JServoCurrentSensor</a>&lt; N &gt;::readings[N]</td>
         </tr>
       </table>
   </td>
@@ -666,20 +677,23 @@ Static Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>the readings from the analog input </p>
 
 </div>
 </div>
-<a id="a35a97c6c129944e7b00512df9ec41bcf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35a97c6c129944e7b00512df9ec41bcf">&#9670;&nbsp;</a></span>total</h2>
+<a id="ab0aafa3a455170006f7605583c569826"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0aafa3a455170006f7605583c569826">&#9670;&nbsp;</a></span>total</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;uint16_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long JServoCurrentSensor::total</td>
+          <td class="memname">long <a class="el" href="class_j_servo_current_sensor.html">JServoCurrentSensor</a>&lt; N &gt;::total</td>
         </tr>
       </table>
   </td>

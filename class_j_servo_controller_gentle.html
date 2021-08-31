@@ -62,11 +62,17 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_j_servo_controller_gentle-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">JServoControllerGentle Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_j_servo_controller_gentle.html" title="JServoControllerGentle is an extension of JServoController that uses JServoStallSensing to make a ser...">JServoControllerGentle</a> is an extension of <a class="el" href="class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting">JServoController</a> that uses <a class="el" href="class_j_servo_stall_sensing.html" title="defines interface for classes that can measure how hard a servo is working">JServoStallSensing</a> to make a servo grip with a specific amount of force.  
+ <a href="class_j_servo_controller_gentle.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_j_servo_controller_gentle_8h_source.html">JServoControllerGentle.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -74,7 +80,7 @@ Inheritance diagram for JServoControllerGentle:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_servo_controller_gentle__inherit__graph.png" border="0" usemap="#a_j_servo_controller_gentle_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_j_servo_controller_gentle_inherit__map" id="a_j_servo_controller_gentle_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,80,161,107"/>
+<area shape="rect" title="JServoControllerGentle is an extension of JServoController that uses JServoStallSensing to make a ser..." alt="" coords="5,80,161,107"/>
 <area shape="rect" href="class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="24,5,143,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -83,25 +89,43 @@ Collaboration diagram for JServoControllerGentle:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_servo_controller_gentle__coll__graph.png" border="0" usemap="#a_j_servo_controller_gentle_coll__map" alt="Collaboration graph"/></div>
 <map name="a_j_servo_controller_gentle_coll__map" id="a_j_servo_controller_gentle_coll__map">
-<area shape="rect" title=" " alt="" coords="5,247,161,273"/>
-<area shape="rect" href="class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="24,171,143,197"/>
-<area shape="rect" href="class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="18,81,149,108"/>
-<area shape="rect" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="35,5,131,32"/>
+<area shape="rect" title="JServoControllerGentle is an extension of JServoController that uses JServoStallSensing to make a ser..." alt="" coords="105,260,261,287"/>
+<area shape="rect" href="class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="11,171,130,197"/>
+<area shape="rect" href="class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="5,81,136,108"/>
+<area shape="rect" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="23,5,119,32"/>
+<area shape="rect" href="class_j_servo_stall_sensing.html" title="defines interface for classes that can measure how hard a servo is working" alt="" coords="153,171,289,197"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a0c0a47fab0f3fac578fb76725c18611e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller_gentle.html#a0c0a47fab0f3fac578fb76725c18611e">JServoControllerGentle</a> (<a class="el" href="class_j_servo_controller_advanced.html">JServoControllerAdvanced</a> <a class="el" href="class_j_servo_controller.html#aed08c49c0044b8504abd73474af722bd">servo</a>, <a class="el" href="class_j_servo_stall_sensing.html">JServoStallSensing</a> &amp;servoStallSensor, float _targetForce=.05, float _gripSpeed=30)</td></tr>
+<tr class="memdesc:a0c0a47fab0f3fac578fb76725c18611e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting">JServoController</a> Gentle (a child class of <a class="el" href="class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting">JServoController</a>)  <a href="class_j_servo_controller_gentle.html#a0c0a47fab0f3fac578fb76725c18611e">More...</a><br /></td></tr>
+<tr class="separator:a0c0a47fab0f3fac578fb76725c18611e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4cb54385e6c1107a06cd255154948bd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller_gentle.html#ad4cb54385e6c1107a06cd255154948bd">run</a> ()</td></tr>
+<tr class="memdesc:ad4cb54385e6c1107a06cd255154948bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">call this in your main loop  <a href="class_j_servo_controller_gentle.html#ad4cb54385e6c1107a06cd255154948bd">More...</a><br /></td></tr>
+<tr class="separator:ad4cb54385e6c1107a06cd255154948bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bab82edcf963abe375e26bf8463a6a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller_gentle.html#a9bab82edcf963abe375e26bf8463a6a0">gripGently</a> (bool _dirPos, float _targetForce=NAN, float _gripSpeed=NAN, bool _run=true)</td></tr>
+<tr class="memdesc:a9bab82edcf963abe375e26bf8463a6a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">have the servo move until it is pushing with a set amount of force  <a href="class_j_servo_controller_gentle.html#a9bab82edcf963abe375e26bf8463a6a0">More...</a><br /></td></tr>
+<tr class="separator:a9bab82edcf963abe375e26bf8463a6a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa109c91a94105a98d414fe5e42aa901"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller_gentle.html#afa109c91a94105a98d414fe5e42aa901">setPosition</a> (float pos, bool _run)</td></tr>
+<tr class="separator:afa109c91a94105a98d414fe5e42aa901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcba7f7e292a1bb5ae081f739f5f8a62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller_gentle.html#afcba7f7e292a1bb5ae081f739f5f8a62">setAngleImmediate</a> (float angle, bool _run=true)</td></tr>
+<tr class="separator:afcba7f7e292a1bb5ae081f739f5f8a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5346a0a8c0a9877de0f9bb1d85794eee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller_gentle.html#a5346a0a8c0a9877de0f9bb1d85794eee">setAngleImmediateInc</a> (float angleDiff, bool _run=true)</td></tr>
+<tr class="separator:a5346a0a8c0a9877de0f9bb1d85794eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a88263d03bf235142fea4c4df002fdf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller_gentle.html#a0a88263d03bf235142fea4c4df002fdf">setAngleSmoothed</a> (float angle, bool _run=true)</td></tr>
+<tr class="separator:a0a88263d03bf235142fea4c4df002fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_j_servo_controller"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_j_servo_controller')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_j_servo_controller.html">JServoController</a></td></tr>
 <tr class="memitem:a44355af01e54681967394a32bd6a2d02 inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a44355af01e54681967394a32bd6a2d02">JServoController</a> (<a class="el" href="class_j_motor_driver_servo.html">JMotorDriverServo</a> &amp;_servo, bool _reverse=false, float velLimit=INFINITY, float accelLimit=INFINITY, unsigned long _disableTimeout=0, float _minAngleLimit=0, float _maxAngleLimit=180, float _pos=90, float _minSetAngle=0, float _maxSetAngle=180, int minServoVal=544, int maxServoVal=2400, bool _preventGoingWrongWay=true, bool _preventGoingTooFast=true, float _stoppingAccelLimit=INFINITY)</td></tr>
 <tr class="memdesc:a44355af01e54681967394a32bd6a2d02 inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting">JServoController</a>, a class for controlling <a class="el" href="class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo">JMotorDriverServo</a>, with angle calibration and accel and velocity limiting.  <a href="class_j_servo_controller.html#a44355af01e54681967394a32bd6a2d02">More...</a><br /></td></tr>
 <tr class="separator:a44355af01e54681967394a32bd6a2d02 inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2aaa4c4bbc534a04bef7cad95c2c09a1 inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1">run</a> ()</td></tr>
-<tr class="memdesc:a2aaa4c4bbc534a04bef7cad95c2c09a1 inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">call this in your main loop  <a href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1">More...</a><br /></td></tr>
-<tr class="separator:a2aaa4c4bbc534a04bef7cad95c2c09a1 inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18aa2e5c9ac08bc53a06cec9348d16e7 inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a18aa2e5c9ac08bc53a06cec9348d16e7">setAngleImmediate</a> (float angle, bool _run=true)</td></tr>
 <tr class="memdesc:a18aa2e5c9ac08bc53a06cec9348d16e7 inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">set servo angle immediately, without velocity or acceleration limiting  <a href="class_j_servo_controller.html#a18aa2e5c9ac08bc53a06cec9348d16e7">More...</a><br /></td></tr>
 <tr class="separator:a18aa2e5c9ac08bc53a06cec9348d16e7 inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e59111756faff4699c93e3c35b1e1ca inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a4e59111756faff4699c93e3c35b1e1ca">setAngleImmediateInc</a> (float angleDiff, bool _run=true)</td></tr>
+<tr class="memdesc:a4e59111756faff4699c93e3c35b1e1ca inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">increment servo angle and set immediately, without velocity or acceleration limiting  <a href="class_j_servo_controller.html#a4e59111756faff4699c93e3c35b1e1ca">More...</a><br /></td></tr>
+<tr class="separator:a4e59111756faff4699c93e3c35b1e1ca inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1057966e570b7a55d6bf5ef33c4ccd4c inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a1057966e570b7a55d6bf5ef33c4ccd4c">setAngleSmoothed</a> (float angle, bool _run=true)</td></tr>
 <tr class="memdesc:a1057966e570b7a55d6bf5ef33c4ccd4c inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">set servo angle target, servo will move to target but at limited velocity and acceleration  <a href="class_j_servo_controller.html#a1057966e570b7a55d6bf5ef33c4ccd4c">More...</a><br /></td></tr>
 <tr class="separator:a1057966e570b7a55d6bf5ef33c4ccd4c inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,9 +170,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:ae1e88aec27bf797d00ea477678c7b509 inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#ae1e88aec27bf797d00ea477678c7b509">isPosNotAtTarget</a> ()</td></tr>
 <tr class="memdesc:ae1e88aec27bf797d00ea477678c7b509 inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">equivalent to !isPosAtTarget()  <a href="class_j_servo_controller.html#ae1e88aec27bf797d00ea477678c7b509">More...</a><br /></td></tr>
 <tr class="separator:ae1e88aec27bf797d00ea477678c7b509 inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aece37aa8db4a983c04150fa0c2530069 inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#aece37aa8db4a983c04150fa0c2530069">distTotarget</a> ()</td></tr>
-<tr class="memdesc:aece37aa8db4a983c04150fa0c2530069 inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns target-position  <a href="class_j_servo_controller.html#aece37aa8db4a983c04150fa0c2530069">More...</a><br /></td></tr>
-<tr class="separator:aece37aa8db4a983c04150fa0c2530069 inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af30051814fd7cd9ffabe08f6da0ff1f7 inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#af30051814fd7cd9ffabe08f6da0ff1f7">distToTarget</a> ()</td></tr>
+<tr class="memdesc:af30051814fd7cd9ffabe08f6da0ff1f7 inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns target-position  <a href="class_j_servo_controller.html#af30051814fd7cd9ffabe08f6da0ff1f7">More...</a><br /></td></tr>
+<tr class="separator:af30051814fd7cd9ffabe08f6da0ff1f7 inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fc5a535f0913a3c88cd58dc9eb9acf0 inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a5fc5a535f0913a3c88cd58dc9eb9acf0">restartRun</a> ()</td></tr>
 <tr class="memdesc:a5fc5a535f0913a3c88cd58dc9eb9acf0 inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">if you stopped calling <a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1" title="call this in your main loop">run()</a> for a while, call this before restarting <a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1" title="call this in your main loop">run()</a> to avoid a big jump in movement  <a href="class_j_servo_controller.html#a5fc5a535f0913a3c88cd58dc9eb9acf0">More...</a><br /></td></tr>
 <tr class="separator:a5fc5a535f0913a3c88cd58dc9eb9acf0 inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,9 +214,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a176439e84bed8cd26c7a612c388089f5 inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62ff2ff6acc897e57f84c12893f62861 inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a62ff2ff6acc897e57f84c12893f62861">setVelAccelLimits</a> (float velLim, float accelLim)</td></tr>
 <tr class="separator:a62ff2ff6acc897e57f84c12893f62861 inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afad4838a89a6b77615bdc2a6d6fb1cdc inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#afad4838a89a6b77615bdc2a6d6fb1cdc">setPosition</a> (float pos, bool _run)</td></tr>
-<tr class="memdesc:afad4838a89a6b77615bdc2a6d6fb1cdc inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets servo position, leaves target where it was  <a href="class_j_servo_controller.html#afad4838a89a6b77615bdc2a6d6fb1cdc">More...</a><br /></td></tr>
-<tr class="separator:afad4838a89a6b77615bdc2a6d6fb1cdc inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05367e6621ff9a8e2d146d6fdbac90ca inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a05367e6621ff9a8e2d146d6fdbac90ca">setPosition</a> (float pos, bool _run=true)</td></tr>
+<tr class="memdesc:a05367e6621ff9a8e2d146d6fdbac90ca inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets servo position, leaves target where it was  <a href="class_j_servo_controller.html#a05367e6621ff9a8e2d146d6fdbac90ca">More...</a><br /></td></tr>
+<tr class="separator:a05367e6621ff9a8e2d146d6fdbac90ca inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6f2e70f9a4b3fc48eb38622d21eee9d inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#ae6f2e70f9a4b3fc48eb38622d21eee9d">setMinServoValue</a> (int value)</td></tr>
 <tr class="memdesc:ae6f2e70f9a4b3fc48eb38622d21eee9d inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">microseconds for shortest servo pulse  <a href="class_j_servo_controller.html#ae6f2e70f9a4b3fc48eb38622d21eee9d">More...</a><br /></td></tr>
 <tr class="separator:ae6f2e70f9a4b3fc48eb38622d21eee9d inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,15 +235,27 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a4146135df9f0ad6f209e9211bf68ee3e inherit pub_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a4146135df9f0ad6f209e9211bf68ee3e">getServoValueRange</a> ()</td></tr>
 <tr class="memdesc:a4146135df9f0ad6f209e9211bf68ee3e inherit pub_methods_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns difference (in microseconds) between longest and shortest servo pulse settings  <a href="class_j_servo_controller.html#a4146135df9f0ad6f209e9211bf68ee3e">More...</a><br /></td></tr>
 <tr class="separator:a4146135df9f0ad6f209e9211bf68ee3e inherit pub_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a8c68c8ba44047246ab532cc6b640197f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller_gentle.html#a8c68c8ba44047246ab532cc6b640197f">grippingGently</a></td></tr>
+<tr class="memdesc:a8c68c8ba44047246ab532cc6b640197f"><td class="mdescLeft">&#160;</td><td class="mdescRight">true=gripping, false = other servo movmement set  <a href="class_j_servo_controller_gentle.html#a8c68c8ba44047246ab532cc6b640197f">More...</a><br /></td></tr>
+<tr class="separator:a8c68c8ba44047246ab532cc6b640197f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1be89ab6de214653adb726b1992ac8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_j_servo_stall_sensing.html">JServoStallSensing</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller_gentle.html#af1be89ab6de214653adb726b1992ac8e">stallSensor</a></td></tr>
+<tr class="separator:af1be89ab6de214653adb726b1992ac8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_j_servo_controller"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_j_servo_controller')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_j_servo_controller.html">JServoController</a></td></tr>
 <tr class="memitem:acef61a22e9827aac5e2f0523e9890385 inherit pub_attribs_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">Derivs_Limiter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#acef61a22e9827aac5e2f0523e9890385">dL</a></td></tr>
 <tr class="memdesc:acef61a22e9827aac5e2f0523e9890385 inherit pub_attribs_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance of Derivs_Limiter class used to smoothly move servo  <a href="class_j_servo_controller.html#acef61a22e9827aac5e2f0523e9890385">More...</a><br /></td></tr>
 <tr class="separator:acef61a22e9827aac5e2f0523e9890385 inherit pub_attribs_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_class_j_servo_controller"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_j_servo_controller')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_j_servo_controller.html">JServoController</a></td></tr>
-<tr class="memitem:a934c27383f8568e2ccd9299c9f1a7a88 inherit pro_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a934c27383f8568e2ccd9299c9f1a7a88">writeAngleToServo</a> (float ang)</td></tr>
-<tr class="separator:a934c27383f8568e2ccd9299c9f1a7a88 inherit pro_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a395110c7c94409a19d62f58441e50457 inherit pro_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a395110c7c94409a19d62f58441e50457">floatMap</a> (float x, float in_min, float in_max, float out_min, float out_max)</td></tr>
-<tr class="separator:a395110c7c94409a19d62f58441e50457 inherit pro_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a73238734a5271e8f3d457cdb49cfad0b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller_gentle.html#a73238734a5271e8f3d457cdb49cfad0b">gripDirPos</a></td></tr>
+<tr class="separator:a73238734a5271e8f3d457cdb49cfad0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a123a2e67a5138abf08de885d73685ab6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller_gentle.html#a123a2e67a5138abf08de885d73685ab6">targetForce</a></td></tr>
+<tr class="separator:a123a2e67a5138abf08de885d73685ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d45a94bb190c492cfc3bff3458cecc8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller_gentle.html#a7d45a94bb190c492cfc3bff3458cecc8">gripSpeed</a></td></tr>
+<tr class="separator:a7d45a94bb190c492cfc3bff3458cecc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_j_servo_controller"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_j_servo_controller')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_j_servo_controller.html">JServoController</a></td></tr>
 <tr class="memitem:aed08c49c0044b8504abd73474af722bd inherit pro_attribs_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_j_motor_driver_servo.html">JMotorDriverServo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#aed08c49c0044b8504abd73474af722bd">servo</a></td></tr>
 <tr class="memdesc:aed08c49c0044b8504abd73474af722bd inherit pro_attribs_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">reference to driver that's a subclass of <a class="el" href="class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo">JMotorDriverServo</a>  <a href="class_j_servo_controller.html#aed08c49c0044b8504abd73474af722bd">More...</a><br /></td></tr>
@@ -246,15 +282,413 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:ab8dc06266f3e731961348897d888134b inherit pro_attribs_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">variable used to keep track of how long the servo has been still for  <a href="class_j_servo_controller.html#ab8dc06266f3e731961348897d888134b">More...</a><br /></td></tr>
 <tr class="separator:ab8dc06266f3e731961348897d888134b inherit pro_attribs_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb7350b46d5a35930d546fe0b0bcb60d inherit pro_attribs_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#afb7350b46d5a35930d546fe0b0bcb60d">enabled</a></td></tr>
-<tr class="memdesc:afb7350b46d5a35930d546fe0b0bcb60d inherit pro_attribs_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">keep track of whether controller is enabled (since evne when controller is enabled driver might be disabled if timedout and sleeping)  <a href="class_j_servo_controller.html#afb7350b46d5a35930d546fe0b0bcb60d">More...</a><br /></td></tr>
+<tr class="memdesc:afb7350b46d5a35930d546fe0b0bcb60d inherit pro_attribs_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">keep track of whether controller is enabled (since even when controller is enabled driver might be disabled if timedout and sleeping)  <a href="class_j_servo_controller.html#afb7350b46d5a35930d546fe0b0bcb60d">More...</a><br /></td></tr>
 <tr class="separator:afb7350b46d5a35930d546fe0b0bcb60d inherit pro_attribs_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d833287f0d9d943884fc1b5052eec1d inherit pro_attribs_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a2d833287f0d9d943884fc1b5052eec1d">sleeping</a></td></tr>
 <tr class="memdesc:a2d833287f0d9d943884fc1b5052eec1d inherit pro_attribs_class_j_servo_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">has it been longer than disableTimeout since the servo has moved?  <a href="class_j_servo_controller.html#a2d833287f0d9d943884fc1b5052eec1d">More...</a><br /></td></tr>
 <tr class="separator:a2d833287f0d9d943884fc1b5052eec1d inherit pro_attribs_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_class_j_servo_controller"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_j_servo_controller')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_j_servo_controller.html">JServoController</a></td></tr>
+<tr class="memitem:a934c27383f8568e2ccd9299c9f1a7a88 inherit pro_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a934c27383f8568e2ccd9299c9f1a7a88">writeAngleToServo</a> (float ang)</td></tr>
+<tr class="separator:a934c27383f8568e2ccd9299c9f1a7a88 inherit pro_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a395110c7c94409a19d62f58441e50457 inherit pro_methods_class_j_servo_controller"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a395110c7c94409a19d62f58441e50457">floatMap</a> (float x, float in_min, float in_max, float out_min, float out_max)</td></tr>
+<tr class="separator:a395110c7c94409a19d62f58441e50457 inherit pro_methods_class_j_servo_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>TODO write this (issue #87) </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p><a class="el" href="class_j_servo_controller_gentle.html" title="JServoControllerGentle is an extension of JServoController that uses JServoStallSensing to make a ser...">JServoControllerGentle</a> is an extension of <a class="el" href="class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting">JServoController</a> that uses <a class="el" href="class_j_servo_stall_sensing.html" title="defines interface for classes that can measure how hard a servo is working">JServoStallSensing</a> to make a servo grip with a specific amount of force. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a0c0a47fab0f3fac578fb76725c18611e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c0a47fab0f3fac578fb76725c18611e">&#9670;&nbsp;</a></span>JServoControllerGentle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">JServoControllerGentle::JServoControllerGentle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_j_servo_controller_advanced.html">JServoControllerAdvanced</a>&#160;</td>
+          <td class="paramname"><em>servo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_j_servo_stall_sensing.html">JServoStallSensing</a> &amp;&#160;</td>
+          <td class="paramname"><em>servoStallSensor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_targetForce</em> = <code>.05</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_gripSpeed</em> = <code>30</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor for <a class="el" href="class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting">JServoController</a> Gentle (a child class of <a class="el" href="class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting">JServoController</a>) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">servo</td><td></td></tr>
+    <tr><td class="paramname">servoStallSensor</td><td></td></tr>
+    <tr><td class="paramname">_targetForce</td><td>target force as measured by <a class="el" href="class_j_servo_stall_sensing.html" title="defines interface for classes that can measure how hard a servo is working">JServoStallSensing</a> (if set too low, gripping may not work since just moving the servo could take more than the set power) </td></tr>
+    <tr><td class="paramname">_gripSpeed</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9bab82edcf963abe375e26bf8463a6a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bab82edcf963abe375e26bf8463a6a0">&#9670;&nbsp;</a></span>gripGently()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JServoControllerGentle::gripGently </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_dirPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_targetForce</em> = <code>NAN</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_gripSpeed</em> = <code>NAN</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_run</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>have the servo move until it is pushing with a set amount of force </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_dirPos</td><td>(bool) true = move in positive direction, false = move in negative direction </td></tr>
+    <tr><td class="paramname">_targetForce</td><td>(float, default NAN) if not NAN, override default setting for how hard to grip </td></tr>
+    <tr><td class="paramname">_gripSpeed</td><td>(float, default NAN) if not NAN, override default setting for how fast to move </td></tr>
+    <tr><td class="paramname">_run</td><td>(bool, default true) true = call <a class="el" href="class_j_servo_controller_gentle.html#ad4cb54385e6c1107a06cd255154948bd" title="call this in your main loop">run()</a> in this function, false = you'll call <a class="el" href="class_j_servo_controller_gentle.html#ad4cb54385e6c1107a06cd255154948bd" title="call this in your main loop">run()</a> yourself </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad4cb54385e6c1107a06cd255154948bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4cb54385e6c1107a06cd255154948bd">&#9670;&nbsp;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void JServoControllerGentle::run </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>call this in your main loop </p>
+
+<p>Reimplemented from <a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1">JServoController</a>.</p>
+
+</div>
+</div>
+<a id="afcba7f7e292a1bb5ae081f739f5f8a62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcba7f7e292a1bb5ae081f739f5f8a62">&#9670;&nbsp;</a></span>setAngleImmediate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JServoControllerGentle::setAngleImmediate </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_run</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5346a0a8c0a9877de0f9bb1d85794eee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5346a0a8c0a9877de0f9bb1d85794eee">&#9670;&nbsp;</a></span>setAngleImmediateInc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JServoControllerGentle::setAngleImmediateInc </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angleDiff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_run</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a88263d03bf235142fea4c4df002fdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a88263d03bf235142fea4c4df002fdf">&#9670;&nbsp;</a></span>setAngleSmoothed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JServoControllerGentle::setAngleSmoothed </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_run</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa109c91a94105a98d414fe5e42aa901"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa109c91a94105a98d414fe5e42aa901">&#9670;&nbsp;</a></span>setPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JServoControllerGentle::setPosition </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_run</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a73238734a5271e8f3d457cdb49cfad0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73238734a5271e8f3d457cdb49cfad0b">&#9670;&nbsp;</a></span>gripDirPos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool JServoControllerGentle::gripDirPos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c68c8ba44047246ab532cc6b640197f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c68c8ba44047246ab532cc6b640197f">&#9670;&nbsp;</a></span>grippingGently</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool JServoControllerGentle::grippingGently</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>true=gripping, false = other servo movmement set </p>
+
+</div>
+</div>
+<a id="a7d45a94bb190c492cfc3bff3458cecc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d45a94bb190c492cfc3bff3458cecc8">&#9670;&nbsp;</a></span>gripSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JServoControllerGentle::gripSpeed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af1be89ab6de214653adb726b1992ac8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1be89ab6de214653adb726b1992ac8e">&#9670;&nbsp;</a></span>stallSensor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_j_servo_stall_sensing.html">JServoStallSensing</a>&amp; JServoControllerGentle::stallSensor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a123a2e67a5138abf08de885d73685ab6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a123a2e67a5138abf08de885d73685ab6">&#9670;&nbsp;</a></span>targetForce</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JServoControllerGentle::targetForce</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/JServoController/<a class="el" href="_j_servo_controller_gentle_8h_source.html">JServoControllerGentle.h</a></li>
 </ul>
 </div><!-- contents -->

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['time_848',['time',['../class_j_motor_controller_closed.html#a858c50ddeb8fcaec06ebe9ba8aa2a884',1,'JMotorControllerClosed']]],
-  ['timeout_849',['timeout',['../class_j_control_loop_basic.html#a8749d890f9a1361a4c73a559a97968ea',1,'JControlLoopBasic']]],
-  ['total_850',['total',['../class_j_servo_current_sensor.html#a35a97c6c129944e7b00512df9ec41bcf',1,'JServoCurrentSensor']]]
+  ['targetforce_862',['targetForce',['../class_j_servo_controller_gentle.html#a123a2e67a5138abf08de885d73685ab6',1,'JServoControllerGentle']]],
+  ['time_863',['time',['../class_j_motor_controller_closed.html#a858c50ddeb8fcaec06ebe9ba8aa2a884',1,'JMotorControllerClosed']]],
+  ['timeout_864',['timeout',['../class_j_control_loop_basic.html#a8749d890f9a1361a4c73a559a97968ea',1,'JControlLoopBasic']]],
+  ['total_865',['total',['../class_j_servo_current_sensor.html#ab0aafa3a455170006f7605583c569826',1,'JServoCurrentSensor']]]
 ];

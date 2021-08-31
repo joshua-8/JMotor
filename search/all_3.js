@@ -9,7 +9,7 @@ var searchData=
   ['disterror_21',['distError',['../class_j_drivetrain_controller_basic.html#a14794f8e2f1f1a4ee1dc2fcb00f0d391',1,'JDrivetrainControllerBasic']]],
   ['distfromsetpointlimit_22',['distFromSetpointLimit',['../class_j_motor_controller_closed.html#af6555ab2d5321d1fd24110938c2b30d7',1,'JMotorControllerClosed']]],
   ['distmode_23',['distMode',['../class_j_drivetrain_controller_basic.html#a839545bb60fadca12633a45cbd590871',1,'JDrivetrainControllerBasic']]],
-  ['disttotarget_24',['distTotarget',['../class_j_servo_controller.html#aece37aa8db4a983c04150fa0c2530069',1,'JServoController']]],
+  ['disttotarget_24',['distToTarget',['../class_j_servo_controller.html#af30051814fd7cd9ffabe08f6da0ff1f7',1,'JServoController']]],
   ['dl_25',['dL',['../class_j_motor_controller_open.html#ac176d0c32c38755f61e5fc69d85c0219',1,'JMotorControllerOpen::dL()'],['../class_j_servo_controller.html#acef61a22e9827aac5e2f0523e9890385',1,'JServoController::dL()']]],
   ['driver_26',['driver',['../class_j_motor_controller_basic.html#a0d25da18c5598b083da74d3e037f48e2',1,'JMotorControllerBasic::driver()'],['../class_j_motor_controller_closed.html#ac60229735ab3ae658c29b48ee9899386',1,'JMotorControllerClosed::driver()']]],
   ['driverinrange_27',['driverInRange',['../class_j_motor_controller_basic.html#a2ab41fec4c2351b9ebaa9cba17a87479',1,'JMotorControllerBasic::driverInRange()'],['../class_j_motor_controller_closed.html#a206936d9d292bf5f848de2d9178ffa02',1,'JMotorControllerClosed::driverInRange()']]],

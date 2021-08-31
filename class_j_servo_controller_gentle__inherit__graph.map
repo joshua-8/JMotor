@@ -1,4 +1,4 @@
 <map id="JServoControllerGentle" name="JServoControllerGentle">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,161,107"/>
+<area shape="rect" id="node1" title="JServoControllerGentle is an extension of JServoController that uses JServoStallSensing to make a ser..." alt="" coords="5,80,161,107"/>
 <area shape="rect" id="node2" href="$class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="24,5,143,32"/>
 </map>
