@@ -147,7 +147,7 @@ public:
         if (!(recognizeOutOfRange && !isMagnetInRange())) {
 
             angle = readAngle();
-            if (abs((int16_t)angle - (int16_t)lastAngle) > STEPS_PER_TURN / 2) { // angle jump over half of circle is assummed to be the shorter crossing of 0
+            if (abs((int16_t)angle - (int16_t)lastAngle) > STEPS_PER_TURN / 2) { // angle jump over half of circle is assumed to be the shorter crossing of 0
                 if (angle > lastAngle) {
                     turns--;
                 } else {
