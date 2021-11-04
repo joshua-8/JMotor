@@ -96,9 +96,9 @@ Collaboration diagram for JMotorDriverAvrServo:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0b3e4711b0fd39d2e80247aed385fd73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_servo.html#a0b3e4711b0fd39d2e80247aed385fd73">JMotorDriverAvrServo</a> (byte _servoPin, int _minServoValue=544, int _maxServoValue=2400)</td></tr>
-<tr class="memdesc:a0b3e4711b0fd39d2e80247aed385fd73"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins  <a href="class_j_motor_driver_avr_servo.html#a0b3e4711b0fd39d2e80247aed385fd73">More...</a><br /></td></tr>
-<tr class="separator:a0b3e4711b0fd39d2e80247aed385fd73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21ce2ddd8faf3d3a691d9453f67a4c89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_servo.html#a21ce2ddd8faf3d3a691d9453f67a4c89">JMotorDriverAvrServo</a> (byte _servoPin, int _minServoValue=544, int _maxServoValue=2400, bool _constrainRange=true)</td></tr>
+<tr class="memdesc:a21ce2ddd8faf3d3a691d9453f67a4c89"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins  <a href="class_j_motor_driver_avr_servo.html#a21ce2ddd8faf3d3a691d9453f67a4c89">More...</a><br /></td></tr>
+<tr class="separator:a21ce2ddd8faf3d3a691d9453f67a4c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a482e65e081c58870c469d64d5b842787"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_avr_servo.html#a482e65e081c58870c469d64d5b842787">set</a> (float _val)</td></tr>
 <tr class="memdesc:a482e65e081c58870c469d64d5b842787"><td class="mdescLeft">&#160;</td><td class="mdescRight">set motor power  <a href="class_j_motor_driver_avr_servo.html#a482e65e081c58870c469d64d5b842787">More...</a><br /></td></tr>
 <tr class="separator:a482e65e081c58870c469d64d5b842787"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,6 +136,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9c567f1c5dfd7e68762156d2eea879fb inherit pub_methods_class_j_motor_driver_servo"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_servo.html#a9c567f1c5dfd7e68762156d2eea879fb">getSetMicroseconds</a> ()</td></tr>
 <tr class="memdesc:a9c567f1c5dfd7e68762156d2eea879fb inherit pub_methods_class_j_motor_driver_servo"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns how many microseconds the servo signal pulse was most recently set to  <a href="class_j_motor_driver_servo.html#a9c567f1c5dfd7e68762156d2eea879fb">More...</a><br /></td></tr>
 <tr class="separator:a9c567f1c5dfd7e68762156d2eea879fb inherit pub_methods_class_j_motor_driver_servo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf89635559441df8ee50cdd3a76527d1 inherit pub_methods_class_j_motor_driver_servo"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_servo.html#acf89635559441df8ee50cdd3a76527d1">getConstrainRange</a> ()</td></tr>
+<tr class="memdesc:acf89635559441df8ee50cdd3a76527d1 inherit pub_methods_class_j_motor_driver_servo"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns whether the range of <a class="el" href="class_j_motor_driver.html#a09ec56cc9c528c40e82c532f55fdaf70" title="set motor power">set()</a> will be constrained to within -1 and 1  <a href="class_j_motor_driver_servo.html#acf89635559441df8ee50cdd3a76527d1">More...</a><br /></td></tr>
+<tr class="separator:acf89635559441df8ee50cdd3a76527d1 inherit pub_methods_class_j_motor_driver_servo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8cbc3c69a58f384ee79ec7219de3011 inherit pub_methods_class_j_motor_driver_servo"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_servo.html#ae8cbc3c69a58f384ee79ec7219de3011">setConstrainRange</a> (bool _constrainRange)</td></tr>
+<tr class="memdesc:ae8cbc3c69a58f384ee79ec7219de3011 inherit pub_methods_class_j_motor_driver_servo"><td class="mdescLeft">&#160;</td><td class="mdescRight">set whether the range of <a class="el" href="class_j_motor_driver.html#a09ec56cc9c528c40e82c532f55fdaf70" title="set motor power">set()</a> will be constrained to within -1 and 1  <a href="class_j_motor_driver_servo.html#ae8cbc3c69a58f384ee79ec7219de3011">More...</a><br /></td></tr>
+<tr class="separator:ae8cbc3c69a58f384ee79ec7219de3011 inherit pub_methods_class_j_motor_driver_servo"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_j_motor_driver"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_j_motor_driver')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_j_motor_driver.html">JMotorDriver</a></td></tr>
 <tr class="memitem:afd7e4e04cc84b3eb41559f4c7bf38d43 inherit pub_methods_class_j_motor_driver"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#afd7e4e04cc84b3eb41559f4c7bf38d43">enable</a> ()</td></tr>
 <tr class="memdesc:afd7e4e04cc84b3eb41559f4c7bf38d43 inherit pub_methods_class_j_motor_driver"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable motor  <a href="class_j_motor_driver.html#afd7e4e04cc84b3eb41559f4c7bf38d43">More...</a><br /></td></tr>
@@ -153,13 +159,15 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a551c594a1944dd78b78764e3286ccbec inherit pro_attribs_class_j_motor_driver_servo"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8232622c0dc2a9fc5d0da3386f409ee4 inherit pro_attribs_class_j_motor_driver_servo"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_servo.html#a8232622c0dc2a9fc5d0da3386f409ee4">setMicroseconds</a> = 0</td></tr>
 <tr class="separator:a8232622c0dc2a9fc5d0da3386f409ee4 inherit pro_attribs_class_j_motor_driver_servo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e3bab89a79df5d9b7b53700bfc8f71e inherit pro_attribs_class_j_motor_driver_servo"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_servo.html#a6e3bab89a79df5d9b7b53700bfc8f71e">constrainRange</a></td></tr>
+<tr class="separator:a6e3bab89a79df5d9b7b53700bfc8f71e inherit pro_attribs_class_j_motor_driver_servo"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>wraps standard servo library. For servos and motor controllers that use servo signals (ESCs) </p>
 <dl class="section note"><dt>Note</dt><dd>compatible with all boards that support analogWrite() </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a0b3e4711b0fd39d2e80247aed385fd73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b3e4711b0fd39d2e80247aed385fd73">&#9670;&nbsp;</a></span>JMotorDriverAvrServo()</h2>
+<a id="a21ce2ddd8faf3d3a691d9453f67a4c89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21ce2ddd8faf3d3a691d9453f67a4c89">&#9670;&nbsp;</a></span>JMotorDriverAvrServo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -183,7 +191,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>_maxServoValue</em> = <code>2400</code>&#160;</td>
+          <td class="paramname"><em>_maxServoValue</em> = <code>2400</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_constrainRange</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -204,6 +218,7 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">_servoPin</td><td>pin to attach servo to </td></tr>
     <tr><td class="paramname">_minServoValue</td><td>(int) minimum servo pulse, default: 544 microseconds </td></tr>
     <tr><td class="paramname">_maxServoValue</td><td>(int) maximum servo pulse, default: 2400 microseconds </td></tr>
+    <tr><td class="paramname">_constrainRange</td><td>(bool) constrain range of <a class="el" href="class_j_motor_driver_avr_servo.html#a482e65e081c58870c469d64d5b842787" title="set motor power">set()</a> to within -1 and 1, default: true </td></tr>
   </table>
   </dd>
 </dl>

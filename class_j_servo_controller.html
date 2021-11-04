@@ -224,6 +224,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a823828d796bd5920ba95c0b945dab996"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a823828d796bd5920ba95c0b945dab996">getSetMicroseconds</a> ()</td></tr>
 <tr class="memdesc:a823828d796bd5920ba95c0b945dab996"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns how many microseconds the servo signal pulse was most recently set to  <a href="class_j_servo_controller.html#a823828d796bd5920ba95c0b945dab996">More...</a><br /></td></tr>
 <tr class="separator:a823828d796bd5920ba95c0b945dab996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d282a6796261c2a7fab300f71c8eea6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a6d282a6796261c2a7fab300f71c8eea6">getConstrainRange</a> ()</td></tr>
+<tr class="memdesc:a6d282a6796261c2a7fab300f71c8eea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns whether the range of set() will be constrained to within -1 and 1  <a href="class_j_servo_controller.html#a6d282a6796261c2a7fab300f71c8eea6">More...</a><br /></td></tr>
+<tr class="separator:a6d282a6796261c2a7fab300f71c8eea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d85aa9114764726887b2a34b7a880f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a2d85aa9114764726887b2a34b7a880f4">setConstrainRange</a> (bool _constrainRange)</td></tr>
+<tr class="memdesc:a2d85aa9114764726887b2a34b7a880f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">set whether the range of set() will be constrained to within -1 and 1  <a href="class_j_servo_controller.html#a2d85aa9114764726887b2a34b7a880f4">More...</a><br /></td></tr>
+<tr class="separator:a2d85aa9114764726887b2a34b7a880f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -633,6 +639,39 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d282a6796261c2a7fab300f71c8eea6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d282a6796261c2a7fab300f71c8eea6">&#9670;&nbsp;</a></span>getConstrainRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool JServoController::getConstrainRange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>returns whether the range of set() will be constrained to within -1 and 1 </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(bool)</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1404,6 +1443,40 @@ Protected Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">angle</td><td>(float) angle to set </td></tr>
     <tr><td class="paramname">_run</td><td>(bool) default: true, true = call <a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1" title="call this in your main loop">run()</a> in this function, false = you'll call <a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1" title="call this in your main loop">run()</a> yourself </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2d85aa9114764726887b2a34b7a880f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d85aa9114764726887b2a34b7a880f4">&#9670;&nbsp;</a></span>setConstrainRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JServoController::setConstrainRange </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_constrainRange</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set whether the range of set() will be constrained to within -1 and 1 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_constrainRange</td><td>(bool) </td></tr>
   </table>
   </dd>
 </dl>
