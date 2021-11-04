@@ -34,7 +34,8 @@ public:
             if (!motorServo.attached()) {
                 motorServo.attach(servoPin);
             }
-            motorServo.writeMicroseconds((maxServoValue + minServoValue) / 2 + (maxServoValue - minServoValue) * val / 2);
+            setMicroseconds = (maxServoValue + minServoValue) / 2 + (maxServoValue - minServoValue) * val / 2;
+            motorServo.writeMicroseconds(setMicroseconds);
         }
         return abs(_val) < 1.0;
     }

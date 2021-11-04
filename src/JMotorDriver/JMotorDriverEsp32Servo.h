@@ -65,7 +65,8 @@ public:
     bool set(float _val)
     {
         if (enabled) {
-            ledcWrite(pwmChannel, SERVO_TICKS_PER_MICROSECOND * ((maxServoValue + minServoValue) / 2 + (maxServoValue - minServoValue) * constrain(_val, -1.0, 1.0) / 2));
+            setMicroseconds = ((maxServoValue + minServoValue) / 2 + (maxServoValue - minServoValue) * constrain(_val, -1.0, 1.0) / 2);
+            ledcWrite(pwmChannel, SERVO_TICKS_PER_MICROSECOND * setMicroseconds);
         }
         return abs(_val) < 1.0;
     }
