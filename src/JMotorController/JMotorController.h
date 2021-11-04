@@ -61,7 +61,7 @@ public:
     /**
      * @brief  set maximum motor speed
      * @note   set to INFINITY to disable limit
-     * @param  _vellLimit: (float)
+     * @param  _velLimit: (float)
      */
     virtual void setVelLimit(float _velLimit) = 0;
 

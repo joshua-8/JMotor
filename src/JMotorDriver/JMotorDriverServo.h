@@ -9,6 +9,10 @@ class JMotorDriverServo : public JMotorDriver {
 protected:
     int minServoValue;
     int maxServoValue;
+    /**
+     * how many microseconds the servo signal pulse was most recently set to
+     */
+    int setMicroseconds = 0;
 
 public:
     /**
@@ -60,6 +64,15 @@ public:
     {
         setMinServoValue(min);
         setMaxServoValue(max);
+    }
+
+    /**
+     * @brief  returns how many microseconds the servo signal pulse was most recently set to
+     * @retval (int)
+     */
+    int getSetMicroseconds()
+    {
+        return setMicroseconds;
     }
 };
 #endif

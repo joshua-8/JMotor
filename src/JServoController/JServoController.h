@@ -472,6 +472,15 @@ public:
         return servo.getServoValueRange();
     }
 
+    /**
+     * @brief  returns how many microseconds the servo signal pulse was most recently set to
+     * @retval (int)
+     */
+    int getSetMicroseconds()
+    {
+        return servo.getSetMicroseconds();
+    }
+
 protected:
     void writeAngleToServo(float ang)
     {
