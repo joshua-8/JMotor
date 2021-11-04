@@ -13,6 +13,7 @@ protected:
      * how many microseconds the servo signal pulse was most recently set to
      */
     int setMicroseconds = 0;
+    bool constrainRange;
 
 public:
     /**
@@ -73,6 +74,22 @@ public:
     int getSetMicroseconds()
     {
         return setMicroseconds;
+    }
+    /**
+     * @brief  returns whether the range of set() will be constrained to within -1 and 1
+     * @retval (bool)
+     */
+    bool getConstrainRange()
+    {
+        return constrainRange;
+    }
+    /**
+     * @brief  set whether the range of set() will be constrained to within -1 and 1
+     * @param  _constrainRange: (bool)
+     */
+    void setConstrainRange(bool _constrainRange)
+    {
+        constrainRange = _constrainRange;
     }
 };
 #endif

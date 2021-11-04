@@ -480,6 +480,22 @@ public:
     {
         return servo.getSetMicroseconds();
     }
+    /**
+     * @brief  returns whether the range of set() will be constrained to within -1 and 1
+     * @retval (bool)
+     */
+    bool getConstrainRange()
+    {
+        return servo.getConstrainRange();
+    }
+    /**
+     * @brief  set whether the range of set() will be constrained to within -1 and 1
+     * @param  _constrainRange: (bool)
+     */
+    void setConstrainRange(bool _constrainRange)
+    {
+        servo.setConstrainRange(_constrainRange);
+    }
 
 protected:
     void writeAngleToServo(float ang)

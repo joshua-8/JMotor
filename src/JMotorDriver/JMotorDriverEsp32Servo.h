@@ -23,14 +23,16 @@ public:
      * @param  _servoPin: pin to output signal on
      * @param  _freq = 50: Hz (default 50) must be <= int(80E6 / 2^resBits)
      * @param  _resBits = 20: (default 20) tradeoff with max available frequency
+     * @param  _constrainRange: (bool) constrain range of set() to within -1 and 1, default: true
      */
-    JMotorDriverEsp32Servo(byte _pwmChannel, byte _servoPin, int _freq = 50, int _resBits = 20, int _minServoValue = 544, int _maxServoValue = 2400)
+    JMotorDriverEsp32Servo(byte _pwmChannel, byte _servoPin, int _freq = 50, int _resBits = 20, int _minServoValue = 544, int _maxServoValue = 2400, bool _constrainRange = true)
     {
         minServoValue = _minServoValue;
         maxServoValue = _maxServoValue;
         enabled = false;
         servoPin = _servoPin;
         pwmChannel = _pwmChannel;
+        constrainRange = _constrainRange;
         setFrequencyAndResolution(_freq, _resBits);
     }
 
@@ -65,7 +67,12 @@ public:
     bool set(float _val)
     {
         if (enabled) {
-            setMicroseconds = ((maxServoValue + minServoValue) / 2 + (maxServoValue - minServoValue) * constrain(_val, -1.0, 1.0) / 2);
+            float val;
+            if (constrainRange)
+                val = constrain(_val, -1.0, 1.0);
+            else
+                val = _val;
+            setMicroseconds = ((maxServoValue + minServoValue) / 2 + (maxServoValue - minServoValue) * val / 2);
             ledcWrite(pwmChannel, SERVO_TICKS_PER_MICROSECOND * setMicroseconds);
         }
         return abs(_val) < 1.0;

@@ -19,17 +19,23 @@ public:
      * @param  _servoPin: pin to attach servo to
      * @param  _minServoValue: (int) minimum servo pulse, default: 544 microseconds
      * @param  _maxServoValue: (int) maximum servo pulse, default: 2400 microseconds
+     * @param  _constrainRange: (bool) constrain range of set() to within -1 and 1, default: true
      */
-    JMotorDriverAvrServo(byte _servoPin, int _minServoValue = 544, int _maxServoValue = 2400)
+    JMotorDriverAvrServo(byte _servoPin, int _minServoValue = 544, int _maxServoValue = 2400, bool _constrainRange = true)
     {
         minServoValue = _minServoValue;
         maxServoValue = _maxServoValue;
         enabled = false;
         servoPin = _servoPin;
+        constrainRange = _constrainRange;
     }
     bool set(float _val)
     {
-        float val = constrain(_val, -1.0, 1.0);
+        float val;
+        if (constrainRange)
+            val = constrain(_val, -1.0, 1.0);
+        else
+            val = _val;
         if (enabled) {
             if (!motorServo.attached()) {
                 motorServo.attach(servoPin);
