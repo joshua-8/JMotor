@@ -192,7 +192,7 @@ $(function() {
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">if</span> (!(recognizeOutOfRange &amp;&amp; !<a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a9bddee33c164c2e930fb34a60e62f01a">isMagnetInRange</a>())) {</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            angle = readAngle();</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keywordflow">if</span> (abs((int16_t)angle - (int16_t)lastAngle) &gt; <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">STEPS_PER_TURN</a> / 2) { <span class="comment">// angle jump over half of circle is assummed to be the shorter crossing of 0</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keywordflow">if</span> (abs((int16_t)angle - (int16_t)lastAngle) &gt; <a class="code" href="class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85">STEPS_PER_TURN</a> / 2) { <span class="comment">// angle jump over half of circle is assumed to be the shorter crossing of 0</span></div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                <span class="keywordflow">if</span> (angle &gt; lastAngle) {</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                    turns--;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                } <span class="keywordflow">else</span> {</div>

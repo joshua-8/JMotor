@@ -118,6 +118,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a183dd6d775b842cddd2af8e940296232"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_servo.html#a183dd6d775b842cddd2af8e940296232">setServoValues</a> (int min, int max)</td></tr>
 <tr class="memdesc:a183dd6d775b842cddd2af8e940296232"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the settings for short and long servo pulses at the same time  <a href="class_j_motor_driver_servo.html#a183dd6d775b842cddd2af8e940296232">More...</a><br /></td></tr>
 <tr class="separator:a183dd6d775b842cddd2af8e940296232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c567f1c5dfd7e68762156d2eea879fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_servo.html#a9c567f1c5dfd7e68762156d2eea879fb">getSetMicroseconds</a> ()</td></tr>
+<tr class="memdesc:a9c567f1c5dfd7e68762156d2eea879fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns how many microseconds the servo signal pulse was most recently set to  <a href="class_j_motor_driver_servo.html#a9c567f1c5dfd7e68762156d2eea879fb">More...</a><br /></td></tr>
+<tr class="separator:a9c567f1c5dfd7e68762156d2eea879fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_j_motor_driver"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_j_motor_driver')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_j_motor_driver.html">JMotorDriver</a></td></tr>
 <tr class="memitem:a09ec56cc9c528c40e82c532f55fdaf70 inherit pub_methods_class_j_motor_driver"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver.html#a09ec56cc9c528c40e82c532f55fdaf70">set</a> (float val)</td></tr>
 <tr class="memdesc:a09ec56cc9c528c40e82c532f55fdaf70 inherit pub_methods_class_j_motor_driver"><td class="mdescLeft">&#160;</td><td class="mdescRight">set motor power  <a href="class_j_motor_driver.html#a09ec56cc9c528c40e82c532f55fdaf70">More...</a><br /></td></tr>
@@ -147,6 +150,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ac2a8c273b37817b7ac5485e3a20411f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a551c594a1944dd78b78764e3286ccbec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_servo.html#a551c594a1944dd78b78764e3286ccbec">maxServoValue</a></td></tr>
 <tr class="separator:a551c594a1944dd78b78764e3286ccbec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8232622c0dc2a9fc5d0da3386f409ee4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_servo.html#a8232622c0dc2a9fc5d0da3386f409ee4">setMicroseconds</a> = 0</td></tr>
+<tr class="separator:a8232622c0dc2a9fc5d0da3386f409ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>class that can be used to specify a driver that controls specifically a servo </p>
@@ -241,6 +246,39 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>returns difference (in microseconds) between longest and shortest servo pulse settings </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(int)</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9c567f1c5dfd7e68762156d2eea879fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c567f1c5dfd7e68762156d2eea879fb">&#9670;&nbsp;</a></span>getSetMicroseconds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int JMotorDriverServo::getSetMicroseconds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>returns how many microseconds the servo signal pulse was most recently set to </p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">(int)</td><td></td></tr>
@@ -405,6 +443,29 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8232622c0dc2a9fc5d0da3386f409ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8232622c0dc2a9fc5d0da3386f409ee4">&#9670;&nbsp;</a></span>setMicroseconds</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int JMotorDriverServo::setMicroseconds = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>how many microseconds the servo signal pulse was most recently set to </p>
 
 </div>
 </div>
