@@ -14,9 +14,9 @@ public:
     /**
      * @brief  constructor for control loop for use with JMotorControllerClosed
      * @param  kP: (float) proportional to error
-     * @param  _timeout: (unsigned long) set output to zero if there's been no movement for this many milliseconds. 0=never timeout
+     * @param  _timeout: (unsigned long) default: 0, set output to zero if there's been no movement for this many milliseconds. 0=never timeout
      */
-    JControlLoopBasic(float kP, unsigned long _timeout)
+    JControlLoopBasic(float kP, unsigned long _timeout = 0)
     {
         P = kP;
         timeout = _timeout;
@@ -27,13 +27,13 @@ public:
         if (controller->getPosDeltaSetpoint() != 0 || abs(controller->getPosSetpoint() - controller->getPos()) > controller->getDistFromSetpointLimit() || abs(controller->getVel()) > controller->getMinVel()) {
             lastMovedMillis = millis();
         }
-        float ret = 0;
-
+        result = 0;
         if (timeout == 0 || millis() - lastMovedMillis <= timeout) {
-            ret = P * (controller->getPosSetpoint() - controller->getPos()) + controller->getPosDeltaSetpoint();
+            error = (controller->getPosSetpoint() - controller->getPos());
+            result = P * error + controller->getPosDeltaSetpoint();
         }
 
-        return ret;
+        return result;
     }
 
     void setKP(float _p)
