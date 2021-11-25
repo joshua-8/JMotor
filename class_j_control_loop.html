@@ -63,6 +63,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_j_control_loop-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">JControlLoop Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -89,6 +90,19 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8ab934365e56d62d2ebb56dcecb28f8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6eca601bfbecbc7c8d9e436a4ef6eaf1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop.html#a6eca601bfbecbc7c8d9e436a4ef6eaf1">resetTime</a> ()=0</td></tr>
 <tr class="separator:a6eca601bfbecbc7c8d9e436a4ef6eaf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b7d51352c53e43051b45c303c236b00"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop.html#a0b7d51352c53e43051b45c303c236b00">getError</a> ()</td></tr>
+<tr class="memdesc:a0b7d51352c53e43051b45c303c236b00"><td class="mdescLeft">&#160;</td><td class="mdescRight">setpoint-position  <a href="class_j_control_loop.html#a0b7d51352c53e43051b45c303c236b00">More...</a><br /></td></tr>
+<tr class="separator:a0b7d51352c53e43051b45c303c236b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4097a63a6027eb899c196d7b80885b20"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop.html#a4097a63a6027eb899c196d7b80885b20">getResult</a> ()</td></tr>
+<tr class="memdesc:a4097a63a6027eb899c196d7b80885b20"><td class="mdescLeft">&#160;</td><td class="mdescRight">most recent value returned by <a class="el" href="class_j_control_loop.html#a8ab934365e56d62d2ebb56dcecb28f8d">calc()</a>  <a href="class_j_control_loop.html#a4097a63a6027eb899c196d7b80885b20">More...</a><br /></td></tr>
+<tr class="separator:a4097a63a6027eb899c196d7b80885b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a100befc78d818454698a2cccafeb9aa8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop.html#a100befc78d818454698a2cccafeb9aa8">error</a></td></tr>
+<tr class="separator:a100befc78d818454698a2cccafeb9aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eb3f38bab7c4044d2410b47d3577ce2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop.html#a3eb3f38bab7c4044d2410b47d3577ce2">result</a></td></tr>
+<tr class="separator:a3eb3f38bab7c4044d2410b47d3577ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>interface for control loop used by <a class="el" href="class_j_motor_controller_closed.html" title="closed loop (uses encoder) motor controller">JMotorControllerClosed</a> </p>
@@ -121,6 +135,72 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a0b7d51352c53e43051b45c303c236b00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b7d51352c53e43051b45c303c236b00">&#9670;&nbsp;</a></span>getError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JControlLoop::getError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>setpoint-position </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(float)</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4097a63a6027eb899c196d7b80885b20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4097a63a6027eb899c196d7b80885b20">&#9670;&nbsp;</a></span>getResult()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JControlLoop::getResult </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>most recent value returned by <a class="el" href="class_j_control_loop.html#a8ab934365e56d62d2ebb56dcecb28f8d">calc()</a> </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(float)</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a6eca601bfbecbc7c8d9e436a4ef6eaf1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6eca601bfbecbc7c8d9e436a4ef6eaf1">&#9670;&nbsp;</a></span>resetTime()</h2>
 
@@ -145,6 +225,51 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="class_j_control_loop_basic.html#ae3f943528df7a84b8dd65f73087264e5">JControlLoopBasic</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a100befc78d818454698a2cccafeb9aa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a100befc78d818454698a2cccafeb9aa8">&#9670;&nbsp;</a></span>error</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JControlLoop::error</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3eb3f38bab7c4044d2410b47d3577ce2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eb3f38bab7c4044d2410b47d3577ce2">&#9670;&nbsp;</a></span>result</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JControlLoop::result</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
