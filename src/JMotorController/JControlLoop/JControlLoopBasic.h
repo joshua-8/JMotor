@@ -30,7 +30,8 @@ public:
         result = 0;
         if (timeout == 0 || millis() - lastMovedMillis <= timeout) {
             error = (controller->getPosSetpoint() - controller->getPos());
-            result = P * error + controller->getPosDeltaSetpoint();
+            ctrlLoopOut = P * error;
+            result = ctrlLoopOut + controller->getPosDeltaSetpoint();
         }
 
         return result;

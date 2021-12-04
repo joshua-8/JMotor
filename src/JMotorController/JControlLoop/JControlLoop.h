@@ -7,6 +7,7 @@ class JMotorControllerClosed; //"forward declaration"
 class JControlLoop {
 protected:
     float error;
+    float ctrlLoopOut;
     float result;
 
 public:
@@ -21,7 +22,17 @@ public:
         return error;
     }
     /**
+     * @brief  most recent value calculated by control loop in response to error (but not including feedforward)
+     * For example, if the control loop is a proportional loop, this function returns P * error
+     * @retval (float)
+     */
+    float getCtrlLoopOut()
+    {
+        return result;
+    }
+    /**
      * @brief  most recent value returned by calc()
+     * overall output to motor
      * @retval (float)
      */
     float getResult()
