@@ -93,14 +93,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0b7d51352c53e43051b45c303c236b00"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop.html#a0b7d51352c53e43051b45c303c236b00">getError</a> ()</td></tr>
 <tr class="memdesc:a0b7d51352c53e43051b45c303c236b00"><td class="mdescLeft">&#160;</td><td class="mdescRight">setpoint-position  <a href="class_j_control_loop.html#a0b7d51352c53e43051b45c303c236b00">More...</a><br /></td></tr>
 <tr class="separator:a0b7d51352c53e43051b45c303c236b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48524e2f448f300bfd549445825b27bb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop.html#a48524e2f448f300bfd549445825b27bb">getCtrlLoopOut</a> ()</td></tr>
+<tr class="memdesc:a48524e2f448f300bfd549445825b27bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">most recent value calculated by control loop in response to error (but not including feedforward) For example, if the control loop is a proportional loop, this function returns P * error  <a href="class_j_control_loop.html#a48524e2f448f300bfd549445825b27bb">More...</a><br /></td></tr>
+<tr class="separator:a48524e2f448f300bfd549445825b27bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4097a63a6027eb899c196d7b80885b20"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop.html#a4097a63a6027eb899c196d7b80885b20">getResult</a> ()</td></tr>
-<tr class="memdesc:a4097a63a6027eb899c196d7b80885b20"><td class="mdescLeft">&#160;</td><td class="mdescRight">most recent value returned by <a class="el" href="class_j_control_loop.html#a8ab934365e56d62d2ebb56dcecb28f8d">calc()</a>  <a href="class_j_control_loop.html#a4097a63a6027eb899c196d7b80885b20">More...</a><br /></td></tr>
+<tr class="memdesc:a4097a63a6027eb899c196d7b80885b20"><td class="mdescLeft">&#160;</td><td class="mdescRight">most recent value returned by <a class="el" href="class_j_control_loop.html#a8ab934365e56d62d2ebb56dcecb28f8d">calc()</a> overall output to motor  <a href="class_j_control_loop.html#a4097a63a6027eb899c196d7b80885b20">More...</a><br /></td></tr>
 <tr class="separator:a4097a63a6027eb899c196d7b80885b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a100befc78d818454698a2cccafeb9aa8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop.html#a100befc78d818454698a2cccafeb9aa8">error</a></td></tr>
 <tr class="separator:a100befc78d818454698a2cccafeb9aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16dc27b3a6a83fc5ab2fe80aa690ef95"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop.html#a16dc27b3a6a83fc5ab2fe80aa690ef95">ctrlLoopOut</a></td></tr>
+<tr class="separator:a16dc27b3a6a83fc5ab2fe80aa690ef95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3eb3f38bab7c4044d2410b47d3577ce2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop.html#a3eb3f38bab7c4044d2410b47d3577ce2">result</a></td></tr>
 <tr class="separator:a3eb3f38bab7c4044d2410b47d3577ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -132,6 +137,39 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="class_j_control_loop_basic.html#af866c812ae16b24d3f8c787bff146667">JControlLoopBasic</a>.</p>
+
+</div>
+</div>
+<a id="a48524e2f448f300bfd549445825b27bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48524e2f448f300bfd549445825b27bb">&#9670;&nbsp;</a></span>getCtrlLoopOut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JControlLoop::getCtrlLoopOut </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>most recent value calculated by control loop in response to error (but not including feedforward) For example, if the control loop is a proportional loop, this function returns P * error </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(float)</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -191,7 +229,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>most recent value returned by <a class="el" href="class_j_control_loop.html#a8ab934365e56d62d2ebb56dcecb28f8d">calc()</a> </p>
+<p>most recent value returned by <a class="el" href="class_j_control_loop.html#a8ab934365e56d62d2ebb56dcecb28f8d">calc()</a> overall output to motor </p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">(float)</td><td></td></tr>
@@ -229,6 +267,28 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a16dc27b3a6a83fc5ab2fe80aa690ef95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16dc27b3a6a83fc5ab2fe80aa690ef95">&#9670;&nbsp;</a></span>ctrlLoopOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JControlLoop::ctrlLoopOut</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a100befc78d818454698a2cccafeb9aa8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a100befc78d818454698a2cccafeb9aa8">&#9670;&nbsp;</a></span>error</h2>
 

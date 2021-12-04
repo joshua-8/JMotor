@@ -233,7 +233,7 @@ Static Public Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">_reverse</td><td>(bool) reverse positive direction, default=false </td></tr>
     <tr><td class="paramname">_distPerCountFactor</td><td>(float) for the purposes of setting this factor a "count" is considered a full revolution of the absolute encoder </td></tr>
-    <tr><td class="paramname">_address</td><td>(byte) I2C address of </td></tr>
+    <tr><td class="paramname">_address</td><td>(byte) I2C address of encoder </td></tr>
     <tr><td class="paramname">_velEnoughTime</td><td>(default=0, no limit) shortest interval in microseconds between velocity calculations, if <a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a3ba89138c6c48820f16c8c874428180b" title="communication is done over I2C and requires constant polling instead of being able to use interrupts">run()</a> is called faster the calculation will wait to run </td></tr>
     <tr><td class="paramname">_velEnoughTicks</td><td>(default=0, no limit) if the encoder turns more than this number of steps velocity calculations will be done even if velEnoughTime hasn't been reached </td></tr>
     <tr><td class="paramname">_recognizeOutOfRange</td><td>(boolean, default=true) set velocity to zero and stop updating position if encoder reports that it's out of range </td></tr>
