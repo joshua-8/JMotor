@@ -101,6 +101,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3cd958f28273aa1226cbe03838fc474b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_p_w_m.html#a3cd958f28273aa1226cbe03838fc474b">JMotorDriverEsp32PWM</a> (byte _ch, byte _pin, int freq, int resolution, bool _disableState=LOW)</td></tr>
 <tr class="memdesc:a3cd958f28273aa1226cbe03838fc474b"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins, custom PWM settings  <a href="class_j_motor_driver_esp32_p_w_m.html#a3cd958f28273aa1226cbe03838fc474b">More...</a><br /></td></tr>
 <tr class="separator:a3cd958f28273aa1226cbe03838fc474b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c6aff4d0084547dfaef7d398aa509b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_p_w_m.html#a1c6aff4d0084547dfaef7d398aa509b8">setFrequencyAndResolution</a> (int freq=2000, int resBits=12)</td></tr>
+<tr class="memdesc:a1c6aff4d0084547dfaef7d398aa509b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">set frequency of pwm  <a href="class_j_motor_driver_esp32_p_w_m.html#a1c6aff4d0084547dfaef7d398aa509b8">More...</a><br /></td></tr>
+<tr class="separator:a1c6aff4d0084547dfaef7d398aa509b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abba2af7b8ece0bfd872ff0238c31d77f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_p_w_m.html#abba2af7b8ece0bfd872ff0238c31d77f">set</a> (float _val)</td></tr>
 <tr class="memdesc:abba2af7b8ece0bfd872ff0238c31d77f"><td class="mdescLeft">&#160;</td><td class="mdescRight">set motor power  <a href="class_j_motor_driver_esp32_p_w_m.html#abba2af7b8ece0bfd872ff0238c31d77f">More...</a><br /></td></tr>
 <tr class="separator:abba2af7b8ece0bfd872ff0238c31d77f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -442,6 +445,57 @@ Public Attributes</h2></td></tr>
 </dl>
 
 <p>Reimplemented from <a class="el" href="class_j_motor_driver.html#a2bc676fe29a60f49f488fc10fac07b11">JMotorDriver</a>.</p>
+
+</div>
+</div>
+<a id="a1c6aff4d0084547dfaef7d398aa509b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c6aff4d0084547dfaef7d398aa509b8">&#9670;&nbsp;</a></span>setFrequencyAndResolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JMotorDriverEsp32PWM::setFrequencyAndResolution </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>freq</em> = <code>2000</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>resBits</em> = <code>12</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set frequency of pwm </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">freq</td><td>Hz (default 2000) must be &lt;= int(80E6 / 2^resBits) </td></tr>
+    <tr><td class="paramname">resBits</td><td>(default 12) tradeoff with max available frequency </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

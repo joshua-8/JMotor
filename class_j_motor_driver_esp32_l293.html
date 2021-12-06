@@ -70,7 +70,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>L293 motor driver chip: <a href="https://www.ti.com/lit/ds/symlink/l293.pdf">https://www.ti.com/lit/ds/symlink/l293.pdf</a>.  
+<p>L293 motor driver chip: <a href="https://www.ti.com/lit/ds/symlink/l293.pdf">https://www.ti.com/lit/ds/symlink/l293.pdf</a> also works with L298 drivers or anything with two direction pins and an enable pin!  
  <a href="class_j_motor_driver_esp32_l293.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_j_motor_driver_esp32_l293_8h_source.html">JMotorDriverEsp32L293.h</a>&gt;</code></p>
@@ -79,7 +79,7 @@ Inheritance diagram for JMotorDriverEsp32L293:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_motor_driver_esp32_l293__inherit__graph.png" border="0" usemap="#a_j_motor_driver_esp32_l293_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_j_motor_driver_esp32_l293_inherit__map" id="a_j_motor_driver_esp32_l293_inherit__map">
-<area shape="rect" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf." alt="" coords="5,80,167,107"/>
+<area shape="rect" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf also works with L298 drivers or an..." alt="" coords="5,80,167,107"/>
 <area shape="rect" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="38,5,134,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -88,7 +88,7 @@ Collaboration diagram for JMotorDriverEsp32L293:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_motor_driver_esp32_l293__coll__graph.png" border="0" usemap="#a_j_motor_driver_esp32_l293_coll__map" alt="Collaboration graph"/></div>
 <map name="a_j_motor_driver_esp32_l293_coll__map" id="a_j_motor_driver_esp32_l293_coll__map">
-<area shape="rect" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf." alt="" coords="5,171,167,197"/>
+<area shape="rect" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf also works with L298 drivers or an..." alt="" coords="5,171,167,197"/>
 <area shape="rect" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="33,5,129,32"/>
 <area shape="rect" href="class_j_motor_driver_esp32_p_w_m.html" title="uses ledc to output PWM approximation of an analog output" alt="" coords="103,81,267,108"/>
 </map>
@@ -96,12 +96,9 @@ Collaboration diagram for JMotorDriverEsp32L293:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3da752f3af58e38646a081d2d4da6600"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_l293.html#a3da752f3af58e38646a081d2d4da6600">JMotorDriverEsp32L293</a> (byte _ch, byte _enablePin, byte _i1, byte _i2, bool _breakOn=true, bool breakWhenDisabled=false, bool _reverse=false)</td></tr>
-<tr class="memdesc:a3da752f3af58e38646a081d2d4da6600"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins, default PWM  <a href="class_j_motor_driver_esp32_l293.html#a3da752f3af58e38646a081d2d4da6600">More...</a><br /></td></tr>
-<tr class="separator:a3da752f3af58e38646a081d2d4da6600"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e259b72777701b09fb1d95a75c4988c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_l293.html#a0e259b72777701b09fb1d95a75c4988c">JMotorDriverEsp32L293</a> (byte _ch, byte _enPin, byte _i1, byte _i2, int freq, int resolution, bool _breakOn=true, bool breakWhenDisabled=false, bool _reverse=false)</td></tr>
-<tr class="memdesc:a0e259b72777701b09fb1d95a75c4988c"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins, custom PWM settings  <a href="class_j_motor_driver_esp32_l293.html#a0e259b72777701b09fb1d95a75c4988c">More...</a><br /></td></tr>
-<tr class="separator:a0e259b72777701b09fb1d95a75c4988c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e9126a6af13a6886139b8ab60051fda"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_l293.html#a9e9126a6af13a6886139b8ab60051fda">JMotorDriverEsp32L293</a> (byte _ch, byte _enablePin, byte _i1, byte _i2, bool _breakOn=true, bool breakWhenDisabled=false, bool _reverse=false, int freq=2000, int resolution=12)</td></tr>
+<tr class="memdesc:a9e9126a6af13a6886139b8ab60051fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins and other settings  <a href="class_j_motor_driver_esp32_l293.html#a9e9126a6af13a6886139b8ab60051fda">More...</a><br /></td></tr>
+<tr class="separator:a9e9126a6af13a6886139b8ab60051fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30fac2de0054d75f9a0960bd8eacf565"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_l293.html#a30fac2de0054d75f9a0960bd8eacf565">set</a> (float val)</td></tr>
 <tr class="memdesc:a30fac2de0054d75f9a0960bd8eacf565"><td class="mdescLeft">&#160;</td><td class="mdescRight">set motor power  <a href="class_j_motor_driver_esp32_l293.html#a30fac2de0054d75f9a0960bd8eacf565">More...</a><br /></td></tr>
 <tr class="separator:a30fac2de0054d75f9a0960bd8eacf565"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,16 +127,18 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a170b794230d12938e5f436a1cfdff407"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_j_motor_driver_esp32_p_w_m.html">JMotorDriverEsp32PWM</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_l293.html#a170b794230d12938e5f436a1cfdff407">pwmDriver</a></td></tr>
 <tr class="separator:a170b794230d12938e5f436a1cfdff407"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af38531466987540433a0cda2cad18c7e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_l293.html#af38531466987540433a0cda2cad18c7e">breakOn</a></td></tr>
+<tr class="memdesc:af38531466987540433a0cda2cad18c7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">add extra resistance to motor when set to 0 power (by shorting motor terminals)  <a href="class_j_motor_driver_esp32_l293.html#af38531466987540433a0cda2cad18c7e">More...</a><br /></td></tr>
 <tr class="separator:af38531466987540433a0cda2cad18c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab34aeddb63c805d54194e306dd00f3de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_l293.html#ab34aeddb63c805d54194e306dd00f3de">reverse</a></td></tr>
+<tr class="memdesc:ab34aeddb63c805d54194e306dd00f3de"><td class="mdescLeft">&#160;</td><td class="mdescRight">reverse direction of driver  <a href="class_j_motor_driver_esp32_l293.html#ab34aeddb63c805d54194e306dd00f3de">More...</a><br /></td></tr>
 <tr class="separator:ab34aeddb63c805d54194e306dd00f3de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>L293 motor driver chip: <a href="https://www.ti.com/lit/ds/symlink/l293.pdf">https://www.ti.com/lit/ds/symlink/l293.pdf</a>. </p>
+<div class="textblock"><p>L293 motor driver chip: <a href="https://www.ti.com/lit/ds/symlink/l293.pdf">https://www.ti.com/lit/ds/symlink/l293.pdf</a> also works with L298 drivers or anything with two direction pins and an enable pin! </p>
 <dl class="section note"><dt>Note</dt><dd>platform: ESP32 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a3da752f3af58e38646a081d2d4da6600"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3da752f3af58e38646a081d2d4da6600">&#9670;&nbsp;</a></span>JMotorDriverEsp32L293() <span class="overload">[1/2]</span></h2>
+<a id="a9e9126a6af13a6886139b8ab60051fda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e9126a6af13a6886139b8ab60051fda">&#9670;&nbsp;</a></span>JMotorDriverEsp32L293()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -187,7 +186,19 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>_reverse</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>_reverse</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>freq</em> = <code>2000</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>resolution</em> = <code>12</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -202,7 +213,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>constructor, sets pins, default PWM </p>
+<p>constructor, sets pins and other settings </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_ch</td><td>ledc channel (must be unique for each driver) </td></tr>
@@ -210,102 +221,10 @@ Public Attributes</h2></td></tr>
     <tr><td class="paramname">_i1</td><td>input pin 1 (direction) </td></tr>
     <tr><td class="paramname">_i2</td><td>input pin 2 (direction) </td></tr>
     <tr><td class="paramname">_breakOn</td><td>= true: if true (default), add extra resistance to motor when set to 0 power (by shorting motor terminals) </td></tr>
-    <tr><td class="paramname">breakWhenDisabled</td><td>= false: if false (default) turn off break when disabled, if true, keep electrically breaking </td></tr>
+    <tr><td class="paramname">_breakWhenDisabled</td><td>= false: if false (default) turn off break when disabled, if true, keep electrically breaking </td></tr>
     <tr><td class="paramname">_reverse</td><td>(bool) default=false, reverse direction of driver </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a0e259b72777701b09fb1d95a75c4988c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e259b72777701b09fb1d95a75c4988c">&#9670;&nbsp;</a></span>JMotorDriverEsp32L293() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">JMotorDriverEsp32L293::JMotorDriverEsp32L293 </td>
-          <td>(</td>
-          <td class="paramtype">byte&#160;</td>
-          <td class="paramname"><em>_ch</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">byte&#160;</td>
-          <td class="paramname"><em>_enPin</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">byte&#160;</td>
-          <td class="paramname"><em>_i1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">byte&#160;</td>
-          <td class="paramname"><em>_i2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>freq</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>resolution</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>_breakOn</em> = <code>true</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>breakWhenDisabled</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>_reverse</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>constructor, sets pins, custom PWM settings </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">_ch</td><td>ledc channel (must be unique for each driver) </td></tr>
-    <tr><td class="paramname">_enPin</td><td>enable(speed) pin on driver </td></tr>
-    <tr><td class="paramname">_i1</td><td>input pin 1 (direction) </td></tr>
-    <tr><td class="paramname">_i2</td><td>input pin 2 (direction) </td></tr>
-    <tr><td class="paramname">freq</td><td>&lt;= int(80E6 / 2^resolution), 2kHz default and recommended for motor PWM </td></tr>
-    <tr><td class="paramname">resolution</td><td>bits of resolution, tradeoff with frequency, default 12 </td></tr>
-    <tr><td class="paramname">_breakOn</td><td>= true: if true (default), add extra resistance to motor when set to 0 power (by shorting motor terminals) </td></tr>
-    <tr><td class="paramname">breakWhenDisabled</td><td>= false: if false (default) turn off break when disabled, if true, keep electrically breaking </td></tr>
-    <tr><td class="paramname">_reverse</td><td>(bool) default=false, reverse direction of driver </td></tr>
+    <tr><td class="paramname">_freq</td><td>&lt;= int(80E6 / 2^resolution), 2kHz default and recommended for motor PWM </td></tr>
+    <tr><td class="paramname">_resolution</td><td>bits of resolution, tradeoff with frequency, default 12 </td></tr>
   </table>
   </dd>
 </dl>
@@ -519,6 +438,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>add extra resistance to motor when set to 0 power (by shorting motor terminals) </p>
+
 </div>
 </div>
 <a id="a170b794230d12938e5f436a1cfdff407"></a>
@@ -546,6 +467,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>reverse direction of driver </p>
 
 </div>
 </div>
