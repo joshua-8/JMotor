@@ -6,6 +6,7 @@
 
 /**
  * @brief  L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf
+ * also works with L298 drivers or anything with two direction pins and an enable pin!
  * @note   platform: ESP32
  */
 class JMotorDriverEsp32L293 : public JMotorDriver {
@@ -16,41 +17,29 @@ private:
 
 public:
     JMotorDriverEsp32PWM pwmDriver;
+    /**
+     * @brief  add extra resistance to motor when set to 0 power (by shorting motor terminals)
+     */
     bool breakOn;
+    /**
+     * @brief  reverse direction of driver
+     */
     bool reverse;
+
     /**
- * @brief  constructor, sets pins, default PWM
- * @param  _ch: ledc channel (must be unique for each driver)
- * @param  _enablePin: enable(speed) pin on driver
- * @param  _i1: input pin 1 (direction)
- * @param  _i2: input pin 2 (direction)
- * @param  _breakOn = true: if true (default), add extra resistance to motor when set to 0 power (by shorting motor terminals)
- * @param  breakWhenDisabled = false: if false (default) turn off break when disabled, if true, keep electrically breaking
- * @param _reverse (bool) default=false, reverse direction of driver
- */
-    JMotorDriverEsp32L293(byte _ch, byte _enablePin, byte _i1, byte _i2, bool _breakOn = true, bool breakWhenDisabled = false, bool _reverse = false)
-        : pwmDriver { _ch, _enablePin, breakWhenDisabled }
-    {
-        enabled = false;
-        i1 = _i1;
-        i2 = _i2;
-        breakOn = _breakOn;
-        reverse = _reverse;
-    }
-    /**
-     * @brief  constructor, sets pins, custom PWM settings
+     * @brief  constructor, sets pins and other settings
      * @param  _ch: ledc channel (must be unique for each driver)
-     * @param  _enPin: enable(speed) pin on driver
+     * @param  _enablePin: enable(speed) pin on driver
      * @param  _i1: input pin 1 (direction)
      * @param  _i2: input pin 2 (direction)
-     * @param  freq: <= int(80E6 / 2^resolution), 2kHz default and recommended for motor PWM
-     * @param  resolution: bits of resolution, tradeoff with frequency, default 12
      * @param  _breakOn = true: if true (default), add extra resistance to motor when set to 0 power (by shorting motor terminals)
-     * @param  breakWhenDisabled = false: if false (default) turn off break when disabled, if true, keep electrically breaking
-     * @param _reverse (bool) default=false, reverse direction of driver
+     * @param  _breakWhenDisabled = false: if false (default) turn off break when disabled, if true, keep electrically breaking
+     * @param  _reverse (bool) default=false, reverse direction of driver
+     * @param  _freq: <= int(80E6 / 2^resolution), 2kHz default and recommended for motor PWM
+     * @param  _resolution: bits of resolution, tradeoff with frequency, default 12
      */
-    JMotorDriverEsp32L293(byte _ch, byte _enPin, byte _i1, byte _i2, int freq, int resolution, bool _breakOn = true, bool breakWhenDisabled = false, bool _reverse = false)
-        : pwmDriver { _ch, _enPin, freq, resolution, breakWhenDisabled }
+    JMotorDriverEsp32L293(byte _ch, byte _enablePin, byte _i1, byte _i2, bool _breakOn = true, bool breakWhenDisabled = false, bool _reverse = false, int freq = 2000, int resolution = 12)
+        : pwmDriver { _ch, _enablePin, freq, resolution, breakWhenDisabled }
     {
         enabled = false;
         i1 = _i1;

@@ -48,6 +48,25 @@ public:
         PWM_FREQ = freq;
         PWM_RANGE = (1 << PWM_RES) - 1;
     }
+    /**
+     * @brief  set frequency of pwm
+     * @param  freq: Hz (default 2000) must be <= int(80E6 / 2^resBits)
+     * @param  resBits: (default 12) tradeoff with max available frequency
+     * @retval none
+     */
+    void setFrequencyAndResolution(int freq = 2000, int resBits = 12)
+    {
+        if (freq == PWM_FREQ && resBits == PWM_RES) {
+            return; //already set
+        }
+        PWM_FREQ = freq;
+        PWM_RES = resBits;
+        ledcDetachPin(pin);
+        ledcSetup(ch, PWM_FREQ, PWM_RES);
+        if (enabled)
+            ledcAttachPin(pin, ch);
+        return;
+    }
     bool set(float _val)
     {
         if (enabled) {
