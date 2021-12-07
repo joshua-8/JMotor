@@ -33,7 +33,7 @@ private:
 protected:
     /**
      * @brief  constructor, sets pins and settings
-     * @param  _encoderAPin: encoder input pin
+     * @param  _encoderPin: encoder input pin
      * @param  _distPerCountFactor: conversion factor for getting distance in an actual unit
      * @param  _reverse: false(default)
      * @param  _slowestIntervalMicros: after this many microseconds without an encoder tick velocity is set to zero.

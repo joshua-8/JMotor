@@ -9,7 +9,7 @@ public:
     /**
      * @brief  do conversion
      * @param  voltage: (float) voltage wanted from motor driver output
-     * @brief  set what value makes the driver output 100% of supply voltage
+     * @param  driverRange: (float) set what value makes the driver output 100% of supply voltage
      * @retval (float) value to set driver at
      */
     virtual float adjust(float voltage, float driverRange);

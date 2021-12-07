@@ -38,8 +38,8 @@ public:
      * @param  _freq: <= int(80E6 / 2^resolution), 2kHz default and recommended for motor PWM
      * @param  _resolution: bits of resolution, tradeoff with frequency, default 12
      */
-    JMotorDriverEsp32L293(byte _ch, byte _enablePin, byte _i1, byte _i2, bool _breakOn = true, bool breakWhenDisabled = false, bool _reverse = false, int freq = 2000, int resolution = 12)
-        : pwmDriver { _ch, _enablePin, freq, resolution, breakWhenDisabled }
+    JMotorDriverEsp32L293(byte _ch, byte _enablePin, byte _i1, byte _i2, bool _breakOn = true, bool _breakWhenDisabled = false, bool _reverse = false, int _freq = 2000, int _resolution = 12)
+        : pwmDriver { _ch, _enablePin, _freq, _resolution, _breakWhenDisabled }
     {
         enabled = false;
         i1 = _i1;

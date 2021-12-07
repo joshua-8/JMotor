@@ -19,6 +19,12 @@ public:
     {
         supplyVoltage = _supplyVoltage;
     }
+    /**
+     * @brief  do conversion
+     * @param  voltage: (float) voltage wanted from motor driver output
+     * @param  driverRange: (float) set what value makes the driver output 100% of supply voltage
+     * @retval (float) value to set driver at
+     */
     float adjust(float voltage, float driverRange)
     {
         return voltage / supplyVoltage * driverRange;

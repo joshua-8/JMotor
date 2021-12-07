@@ -42,6 +42,10 @@ public:
      * @param  _maxSetAngle: (float) default: 180, when servo driver is set to its maximum (probably 1) what angle does the servo go to?
      * @param  minServoVal: (int) default: 544, microseconds for servo signal pulse for minimum angle
      * @param  maxServoVal: (int) default: 2400, microseconds for servo signal pulse for maximum angle
+     * @param  _preventGoingWrongWay (bool) default: true, immediately stop if going away from target
+     * @param  _preventGoingTooFast (bool) default: true, immediately slow down if set to a speed above velLimit
+     * @param  _stoppingAccelLimit (float) default: INFINITY, 
+
      */
     JServoControllerAdvanced(JMotorDriverServoAdvanced& _servo, float _weakFreq = .5, unsigned long _weakenTimeout = 0, float _normalFreq = 1.0, unsigned long _startWeakTimeout = 0, bool _reverse = false, float velLimit = INFINITY, float accelLimit = INFINITY, unsigned long _disableTimeout = 0, float _minAngleLimit = 0, float _maxAngleLimit = 180, float _pos = 90, float _minSetAngle = 0, float _maxSetAngle = 180, int minServoVal = 544, int maxServoVal = 2400, bool _preventGoingWrongWay = true, bool _preventGoingTooFast = true, float _stoppingAccelLimit = INFINITY)
         : JServoController(_servo, _reverse, velLimit, accelLimit, _disableTimeout, _minAngleLimit, _maxAngleLimit, _pos, _minSetAngle, _maxSetAngle, minServoVal, maxServoVal, _preventGoingWrongWay, _preventGoingTooFast, _stoppingAccelLimit)

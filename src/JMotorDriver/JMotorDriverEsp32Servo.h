@@ -23,6 +23,8 @@ public:
      * @param  _servoPin: pin to output signal on
      * @param  _freq = 50: Hz (default 50) must be <= int(80E6 / 2^resBits)
      * @param  _resBits = 20: (default 20) tradeoff with max available frequency
+     * @param  _minServoValue: (int) minimum servo pulse, default: 544 microseconds
+     * @param  _maxServoValue: (int) maximum servo pulse, default: 2400 microseconds
      * @param  _constrainRange: (bool) constrain range of set() to within -1 and 1, default: true
      */
     JMotorDriverEsp32Servo(byte _pwmChannel, byte _servoPin, int _freq = 50, int _resBits = 20, int _minServoValue = 544, int _maxServoValue = 2400, bool _constrainRange = true)

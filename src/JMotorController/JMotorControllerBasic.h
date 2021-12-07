@@ -27,6 +27,7 @@ public:
      * @brief  constructor
      * @param  _driver: (JMotorDriver)
      * @param  _compensator: (JMotorCompensator)
+     * @param  _velLimit: max velocity (default: INFINITY)
      * @param  _accelLimit: max acceleration allowed for approaching velocityTarget, set to INFINITY for unlimited (default: INFINITY)
      */
     JMotorControllerBasic(JMotorDriver& _driver, JMotorCompensator& _compensator, float _velLimit = INFINITY, float _accelLimit = INFINITY)

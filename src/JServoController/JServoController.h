@@ -402,7 +402,7 @@ public:
     /**
      * @brief  sets servo position, leaves target where it was
      * @param  pos: (float)
-     * @param  run: (bool) default: true, true = call run() in this function, false = you'll call run() yourself
+     * @param  _run: (bool) default: true, true = call run() in this function, false = you'll call run() yourself
      * 
      */
     void setPosition(float pos, bool _run = true)
