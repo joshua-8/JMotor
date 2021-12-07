@@ -128,23 +128,23 @@ $(function() {
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        lastMeasurementMillis = 0;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        measurementInterval = _measurementIntervalMillis;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_j_voltage_comp_measure.html#a26ab04667fbf1a62a289148debfbba58">   73</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_voltage_comp_measure.html#a26ab04667fbf1a62a289148debfbba58">adjust</a>(<span class="keywordtype">float</span> voltage, <span class="keywordtype">float</span> driverRange)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        measure();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> voltage / supplyVoltage * driverRange;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_j_voltage_comp_measure.html#ae473b0c8aaaa093deb6630aefaa1ef4b">   78</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_voltage_comp_measure.html#ae473b0c8aaaa093deb6630aefaa1ef4b">getSupplyVoltage</a>()</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        measure();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">return</span> supplyVoltage;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;};</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_j_voltage_comp_measure.html#a26ab04667fbf1a62a289148debfbba58">   79</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_voltage_comp_measure.html#a26ab04667fbf1a62a289148debfbba58">adjust</a>(<span class="keywordtype">float</span> voltage, <span class="keywordtype">float</span> driverRange)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        measure();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">return</span> voltage / supplyVoltage * driverRange;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_j_voltage_comp_measure.html#ae473b0c8aaaa093deb6630aefaa1ef4b">   84</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_j_voltage_comp_measure.html#ae473b0c8aaaa093deb6630aefaa1ef4b">getSupplyVoltage</a>()</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        measure();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> supplyVoltage;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_j_voltage_compensator_8h_html"><div class="ttname"><a href="_j_voltage_compensator_8h.html">JVoltageCompensator.h</a></div></div>
 <div class="ttc" id="aclass_j_voltage_comp_measure_html"><div class="ttname"><a href="class_j_voltage_comp_measure.html">JVoltageCompMeasure</a></div><div class="ttdoc">measure supply voltage with analogRead and use that to convert voltage to value needed to set driver ...</div><div class="ttdef"><b>Definition:</b> JVoltageCompMeasure.h:10</div></div>
-<div class="ttc" id="aclass_j_voltage_comp_measure_html_a26ab04667fbf1a62a289148debfbba58"><div class="ttname"><a href="class_j_voltage_comp_measure.html#a26ab04667fbf1a62a289148debfbba58">JVoltageCompMeasure::adjust</a></div><div class="ttdeci">float adjust(float voltage, float driverRange)</div><div class="ttdoc">do conversion</div><div class="ttdef"><b>Definition:</b> JVoltageCompMeasure.h:73</div></div>
+<div class="ttc" id="aclass_j_voltage_comp_measure_html_a26ab04667fbf1a62a289148debfbba58"><div class="ttname"><a href="class_j_voltage_comp_measure.html#a26ab04667fbf1a62a289148debfbba58">JVoltageCompMeasure::adjust</a></div><div class="ttdeci">float adjust(float voltage, float driverRange)</div><div class="ttdoc">do conversion</div><div class="ttdef"><b>Definition:</b> JVoltageCompMeasure.h:79</div></div>
 <div class="ttc" id="aclass_j_voltage_comp_measure_html_aad14f8ccee418a9bf7966cc3adb73da6"><div class="ttname"><a href="class_j_voltage_comp_measure.html#aad14f8ccee418a9bf7966cc3adb73da6">JVoltageCompMeasure::JVoltageCompMeasure</a></div><div class="ttdeci">JVoltageCompMeasure(byte _measurePin, float _DACUnitsPerVolt, unsigned int _measurementIntervalMillis=10)</div><div class="ttdoc">constructor</div><div class="ttdef"><b>Definition:</b> JVoltageCompMeasure.h:62</div></div>
-<div class="ttc" id="aclass_j_voltage_comp_measure_html_ae473b0c8aaaa093deb6630aefaa1ef4b"><div class="ttname"><a href="class_j_voltage_comp_measure.html#ae473b0c8aaaa093deb6630aefaa1ef4b">JVoltageCompMeasure::getSupplyVoltage</a></div><div class="ttdeci">float getSupplyVoltage()</div><div class="ttdef"><b>Definition:</b> JVoltageCompMeasure.h:78</div></div>
+<div class="ttc" id="aclass_j_voltage_comp_measure_html_ae473b0c8aaaa093deb6630aefaa1ef4b"><div class="ttname"><a href="class_j_voltage_comp_measure.html#ae473b0c8aaaa093deb6630aefaa1ef4b">JVoltageCompMeasure::getSupplyVoltage</a></div><div class="ttdeci">float getSupplyVoltage()</div><div class="ttdef"><b>Definition:</b> JVoltageCompMeasure.h:84</div></div>
 <div class="ttc" id="aclass_j_voltage_compensator_html"><div class="ttname"><a href="class_j_voltage_compensator.html">JVoltageCompensator</a></div><div class="ttdoc">convert voltage to value needed to set driver at to get that voltage</div><div class="ttdef"><b>Definition:</b> JVoltageCompensator.h:7</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

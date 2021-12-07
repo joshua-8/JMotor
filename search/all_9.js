@@ -68,7 +68,7 @@ var searchData=
   ['jmotordriveravrservo_2eh_193',['JMotorDriverAvrServo.h',['../_j_motor_driver_avr_servo_8h.html',1,'']]],
   ['jmotordriverdual_194',['JMotorDriverDual',['../class_j_motor_driver_dual.html',1,'JMotorDriverDual'],['../class_j_motor_driver_dual.html#a23fe7f7173680b4eac526d91f59c3fcb',1,'JMotorDriverDual::JMotorDriverDual()']]],
   ['jmotordriverdual_2eh_195',['JMotorDriverDual.h',['../_j_motor_driver_dual_8h.html',1,'']]],
-  ['jmotordriveresp32l293_196',['JMotorDriverEsp32L293',['../class_j_motor_driver_esp32_l293.html',1,'JMotorDriverEsp32L293'],['../class_j_motor_driver_esp32_l293.html#a9e9126a6af13a6886139b8ab60051fda',1,'JMotorDriverEsp32L293::JMotorDriverEsp32L293()']]],
+  ['jmotordriveresp32l293_196',['JMotorDriverEsp32L293',['../class_j_motor_driver_esp32_l293.html',1,'JMotorDriverEsp32L293'],['../class_j_motor_driver_esp32_l293.html#a4674f2ed90421e79f398b8d753b827f8',1,'JMotorDriverEsp32L293::JMotorDriverEsp32L293()']]],
   ['jmotordriveresp32l293_2eh_197',['JMotorDriverEsp32L293.h',['../_j_motor_driver_esp32_l293_8h.html',1,'']]],
   ['jmotordriveresp32pwm_198',['JMotorDriverEsp32PWM',['../class_j_motor_driver_esp32_p_w_m.html',1,'JMotorDriverEsp32PWM'],['../class_j_motor_driver_esp32_p_w_m.html#aab405776a6d6e281f1d3067599d45231',1,'JMotorDriverEsp32PWM::JMotorDriverEsp32PWM(byte _ch, byte _pin, bool _disableState=LOW)'],['../class_j_motor_driver_esp32_p_w_m.html#a3cd958f28273aa1226cbe03838fc474b',1,'JMotorDriverEsp32PWM::JMotorDriverEsp32PWM(byte _ch, byte _pin, int freq, int resolution, bool _disableState=LOW)']]],
   ['jmotordriveresp32pwm_2eh_199',['JMotorDriverEsp32PWM.h',['../_j_motor_driver_esp32_p_w_m_8h.html',1,'']]],

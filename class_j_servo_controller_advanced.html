@@ -483,6 +483,9 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">_maxSetAngle</td><td>(float) default: 180, when servo driver is set to its maximum (probably 1) what angle does the servo go to? </td></tr>
     <tr><td class="paramname">minServoVal</td><td>(int) default: 544, microseconds for servo signal pulse for minimum angle </td></tr>
     <tr><td class="paramname">maxServoVal</td><td>(int) default: 2400, microseconds for servo signal pulse for maximum angle </td></tr>
+    <tr><td class="paramname">_preventGoingWrongWay</td><td>(bool) default: true, immediately stop if going away from target </td></tr>
+    <tr><td class="paramname">_preventGoingTooFast</td><td>(bool) default: true, immediately slow down if set to a speed above velLimit </td></tr>
+    <tr><td class="paramname">_stoppingAccelLimit</td><td>(float) default: INFINITY, </td></tr>
   </table>
   </dd>
 </dl>
