@@ -67,7 +67,7 @@ public:
 
     /**
      * @brief  true if controller is in position target mode, false if in velocity  mode
-     * @retval 
+     * @retval (bool)
      */
     virtual bool isPosModeNotVelocity() = 0;
 };
