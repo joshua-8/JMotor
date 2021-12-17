@@ -15,7 +15,7 @@ This library defines common interfaces for reading encoders and controlling moto
 
 Supports reading the following kinds of encoders: quadrature, single pin, absolute with PWM output, AS5048b with I2C.
 
-Supports controlling the following kinds of motor drivers: single PWM pin, PWM and direction pins, servo signal, L293 driver. 
+Supports controlling the following kinds of motor drivers: single PWM pin, PWM and direction pins, servo signal, L293/L298 driver. 
 
 supports the following boards:   ESP32, Arduino AVR (tested on nano), Teensy (tested on LC), SAMD M0 boards (tested on feather m0)
 
