@@ -1,7 +1,7 @@
 # JMotor Library
 
 [![arduino-library-badge](https://www.ardu-badge.com/badge/JMotor.svg?)](https://www.ardu-badge.com/JMotor)
-Also available for [PlatformIO](https://platformio.org/lib/show/12230/JMotor)
+[![PlatformIO Registry](https://badges.registry.platformio.org/packages/joshua1024/library/JMotor.svg)](https://registry.platformio.org/libraries/joshua1024/JMotor)
 
 ## work in progress! Bug reports/fixes welcomed
 
