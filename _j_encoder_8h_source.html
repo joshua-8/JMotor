@@ -75,24 +75,24 @@ $(function() {
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//**********SEE BOTTOM OF THIS FILE FOR #INCLUDES OF SUBCLASSES**********//</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/* \def</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">    * Functions called by interrupts can&#39;t expect parameters or be functions of classes so a workaround is needed to use interrupts in a class.</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">    * The workaround that&#39;s used here is global functions need to be made when a new instance of this class is made.</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">    * The global function(s) get used when attaching interrupts, and the global function(s) can call a function inside the class.</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">    * The following macros makes it easy to make the global function(s).</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">    * </span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">    * Put IRAM_ATTR keyword before macro when calling on esp32</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * Functions called by interrupts can&#39;t expect parameters or be functions of classes so a workaround is needed to use interrupts in a class.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * The workaround that&#39;s used here is global functions need to be made when a new instance of this class is made.</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * The global function(s) get used when attaching interrupts, and the global function(s) can call a function inside the class.</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * The following macros makes it easy to make the global function(s).</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * Put IRAM_ATTR keyword before macro when calling on esp32</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define jENCODER_MAKE_ISR_MACRO(name) \</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">    void name##_jENCODER_ISR() { name.encoderISR(); }</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">/* \def</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">    * Functions called by interrupts can&#39;t expect parameters or be functions of classes so a workaround is needed to use interrupts in a class.</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">    * The workaround that&#39;s used here is global functions need to be made when a new instance of this class is made.</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">    * The global function(s) get used when attaching interrupts, and the global function(s) can call a function inside the class.</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    * The following macros makes it easy to make the global function(s).</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    * </span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">    * Put IRAM_ATTR keyword before macro when calling on esp32</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * Functions called by interrupts can&#39;t expect parameters or be functions of classes so a workaround is needed to use interrupts in a class.</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * The workaround that&#39;s used here is global functions need to be made when a new instance of this class is made.</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * The global function(s) get used when attaching interrupts, and the global function(s) can call a function inside the class.</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> * The following macros makes it easy to make the global function(s).</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> * Put IRAM_ATTR keyword before macro when calling on esp32</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define jENCODER_MAKE_ISRS_MACRO(name)            \</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">    void name##_jENCODER_ISR_A() { name.ISRA(); } \</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">    void name##_jENCODER_ISR_B() { name.ISRB(); }</span></div>
@@ -148,7 +148,7 @@ $(function() {
 <div class="ttc" id="aclass_j_encoder_html_a7208a3275ba13d484c712658b50a0699"><div class="ttname"><a href="class_j_encoder.html#a7208a3275ba13d484c712658b50a0699">JEncoder::getVel</a></div><div class="ttdeci">virtual float getVel()</div><div class="ttdoc">calculates velocity in distance per second where distance was set by setdistPerCountFactor()</div></div>
 <div class="ttc" id="aclass_j_encoder_html_a8164a9b44eebfe41365d6b8090c89891"><div class="ttname"><a href="class_j_encoder.html#a8164a9b44eebfe41365d6b8090c89891">JEncoder::isVelNew</a></div><div class="ttdeci">virtual bool isVelNew()</div><div class="ttdoc">could be useful for only recalculating a control loop if there's new velocity data</div></div>
 <div class="ttc" id="aclass_j_encoder_html_a9b924eeb11c622938a27c61d48aac8de"><div class="ttname"><a href="class_j_encoder.html#a9b924eeb11c622938a27c61d48aac8de">JEncoder::setDistPerCountFactor</a></div><div class="ttdeci">virtual void setDistPerCountFactor(float _factor)</div><div class="ttdoc">set the conversion factor between encoder ticks and distance</div></div>
-<div class="ttc" id="aclass_j_encoder_html_aca7315277c58c5f91f3faac84c048e31"><div class="ttname"><a href="class_j_encoder.html#aca7315277c58c5f91f3faac84c048e31">JEncoder::hasDirection</a></div><div class="ttdeci">virtual bool hasDirection()</div><div class="ttdoc">can this encoder mesure direction or just speed</div></div>
+<div class="ttc" id="aclass_j_encoder_html_aca7315277c58c5f91f3faac84c048e31"><div class="ttname"><a href="class_j_encoder.html#aca7315277c58c5f91f3faac84c048e31">JEncoder::hasDirection</a></div><div class="ttdeci">virtual bool hasDirection()</div><div class="ttdoc">can this encoder measure direction or just speed</div></div>
 <div class="ttc" id="aclass_j_encoder_html_aebd11e6e685427b4a1323fcc4b4e8e51"><div class="ttname"><a href="class_j_encoder.html#aebd11e6e685427b4a1323fcc4b4e8e51">JEncoder::zeroCounter</a></div><div class="ttdeci">virtual long zeroCounter()</div><div class="ttdoc">reset the counter of how far the encoder has turned</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

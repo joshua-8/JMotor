@@ -1,5 +1,5 @@
 <map id="JEncoderSingleAttachInterrupt" name="JEncoderSingleAttachInterrupt">
-<area shape="rect" id="node1" title="uses attachInterrupt() platform: esp32, teensy" alt="" coords="5,155,204,181"/>
+<area shape="rect" id="node1" title="uses attachInterrupt() platform: esp32, teensy (could be used with standard avr arduinos but only wit..." alt="" coords="5,155,204,181"/>
 <area shape="rect" id="node2" href="$class_j_encoder_single.html" title="reads a single channel (incremental) encoder" alt="" coords="49,80,161,107"/>
 <area shape="rect" id="node3" href="$class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="67,5,143,32"/>
 </map>

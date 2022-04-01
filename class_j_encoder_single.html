@@ -81,7 +81,7 @@ Inheritance diagram for JEncoderSingle:</div>
 <div class="center"><img src="class_j_encoder_single__inherit__graph.png" border="0" usemap="#a_j_encoder_single_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_j_encoder_single_inherit__map" id="a_j_encoder_single_inherit__map">
 <area shape="rect" title="reads a single channel (incremental) encoder" alt="" coords="154,80,266,107"/>
-<area shape="rect" href="class_j_encoder_single_attach_interrupt.html" title="uses attachInterrupt() platform: esp32, teensy" alt="" coords="5,155,204,181"/>
+<area shape="rect" href="class_j_encoder_single_attach_interrupt.html" title="uses attachInterrupt() platform: esp32, teensy (could be used with standard avr arduinos but only wit..." alt="" coords="5,155,204,181"/>
 <area shape="rect" href="class_j_encoder_single_pin_change.html" title="uses a pin change interrupt library to support more pins than attachInterrupt()." alt="" coords="228,155,403,181"/>
 <area shape="rect" href="class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="172,5,248,32"/>
 </map>
@@ -102,7 +102,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:acf17b3cd8975b96b4638d091543b78d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">get whether the encoder is told it's going backwards currently  <a href="class_j_encoder_single.html#acf17b3cd8975b96b4638d091543b78d1">More...</a><br /></td></tr>
 <tr class="separator:acf17b3cd8975b96b4638d091543b78d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bca3d88a00e1b04bf7d52f8121f7d81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#a7bca3d88a00e1b04bf7d52f8121f7d81">setRev</a> (bool _rev)</td></tr>
-<tr class="memdesc:a7bca3d88a00e1b04bf7d52f8121f7d81"><td class="mdescLeft">&#160;</td><td class="mdescRight">set which direction the encoder is moving (if you have external information about direction (like motor power) and want getVel and getDist to go the right direciton even with this directionless encoder)  <a href="class_j_encoder_single.html#a7bca3d88a00e1b04bf7d52f8121f7d81">More...</a><br /></td></tr>
+<tr class="memdesc:a7bca3d88a00e1b04bf7d52f8121f7d81"><td class="mdescLeft">&#160;</td><td class="mdescRight">set which direction the encoder is moving (if you have external information about direction (like motor power) and want getVel and getDist to go the right direction even with this directionless encoder)  <a href="class_j_encoder_single.html#a7bca3d88a00e1b04bf7d52f8121f7d81">More...</a><br /></td></tr>
 <tr class="separator:a7bca3d88a00e1b04bf7d52f8121f7d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f02b28fd0d1421be8ff8402de6b5406"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#a7f02b28fd0d1421be8ff8402de6b5406">zeroCounter</a> ()</td></tr>
 <tr class="memdesc:a7f02b28fd0d1421be8ff8402de6b5406"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset the counter of how far the encoder has turned  <a href="class_j_encoder_single.html#a7f02b28fd0d1421be8ff8402de6b5406">More...</a><br /></td></tr>
@@ -126,7 +126,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3a03b77cec5f67f36b7b0a69d187a679"><td class="mdescLeft">&#160;</td><td class="mdescRight">reverse readings of encoder  <a href="class_j_encoder_single.html#a3a03b77cec5f67f36b7b0a69d187a679">More...</a><br /></td></tr>
 <tr class="separator:a3a03b77cec5f67f36b7b0a69d187a679"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a597e7df58daf8ec2c2bae977e09bdeef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#a597e7df58daf8ec2c2bae977e09bdeef">hasDirection</a> ()</td></tr>
-<tr class="memdesc:a597e7df58daf8ec2c2bae977e09bdeef"><td class="mdescLeft">&#160;</td><td class="mdescRight">can this encoder mesure direction or just speed  <a href="class_j_encoder_single.html#a597e7df58daf8ec2c2bae977e09bdeef">More...</a><br /></td></tr>
+<tr class="memdesc:a597e7df58daf8ec2c2bae977e09bdeef"><td class="mdescLeft">&#160;</td><td class="mdescRight">can this encoder measure direction or just speed  <a href="class_j_encoder_single.html#a597e7df58daf8ec2c2bae977e09bdeef">More...</a><br /></td></tr>
 <tr class="separator:a597e7df58daf8ec2c2bae977e09bdeef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afff3269442c9f7be35ee5450ad1db9f2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#afff3269442c9f7be35ee5450ad1db9f2">isVelNew</a> ()</td></tr>
 <tr class="memdesc:afff3269442c9f7be35ee5450ad1db9f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">could be useful for only recalculating a control loop if there's new velocity data  <a href="class_j_encoder_single.html#afff3269442c9f7be35ee5450ad1db9f2">More...</a><br /></td></tr>
@@ -158,7 +158,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a9b924eeb11c622938a27c61d48aac8de"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the conversion factor between encoder ticks and distance  <a href="class_j_encoder.html#a9b924eeb11c622938a27c61d48aac8de">More...</a><br /></td></tr>
 <tr class="separator:a9b924eeb11c622938a27c61d48aac8de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca7315277c58c5f91f3faac84c048e31"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder.html#aca7315277c58c5f91f3faac84c048e31">hasDirection</a> ()</td></tr>
-<tr class="memdesc:aca7315277c58c5f91f3faac84c048e31"><td class="mdescLeft">&#160;</td><td class="mdescRight">can this encoder mesure direction or just speed  <a href="class_j_encoder.html#aca7315277c58c5f91f3faac84c048e31">More...</a><br /></td></tr>
+<tr class="memdesc:aca7315277c58c5f91f3faac84c048e31"><td class="mdescLeft">&#160;</td><td class="mdescRight">can this encoder measure direction or just speed  <a href="class_j_encoder.html#aca7315277c58c5f91f3faac84c048e31">More...</a><br /></td></tr>
 <tr class="separator:aca7315277c58c5f91f3faac84c048e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8164a9b44eebfe41365d6b8090c89891"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder.html#a8164a9b44eebfe41365d6b8090c89891">isVelNew</a> ()</td></tr>
 <tr class="memdesc:a8164a9b44eebfe41365d6b8090c89891"><td class="mdescLeft">&#160;</td><td class="mdescRight">could be useful for only recalculating a control loop if there's new velocity data  <a href="class_j_encoder.html#a8164a9b44eebfe41365d6b8090c89891">More...</a><br /></td></tr>
@@ -169,9 +169,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ab59458f819435a1cbe88d4559a05d6f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#ab59458f819435a1cbe88d4559a05d6f7">JEncoderSingle</a> (byte _encoderPin, float _distPerCountFactor=1.0, bool _reverse=false, unsigned long _slowestIntervalMicros=100000UL)</td></tr>
-<tr class="memdesc:ab59458f819435a1cbe88d4559a05d6f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins and settings  <a href="class_j_encoder_single.html#ab59458f819435a1cbe88d4559a05d6f7">More...</a><br /></td></tr>
-<tr class="separator:ab59458f819435a1cbe88d4559a05d6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa21be6f8083f84fe236c5684d1510c94"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#aa21be6f8083f84fe236c5684d1510c94">JEncoderSingle</a> (byte _encoderPin, float _distPerCountFactor, bool _reverse, unsigned long _slowestIntervalMicros, unsigned long _switchBounceIntervalMicros)</td></tr>
+<tr class="memdesc:aa21be6f8083f84fe236c5684d1510c94"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins and settings  <a href="class_j_encoder_single.html#aa21be6f8083f84fe236c5684d1510c94">More...</a><br /></td></tr>
+<tr class="separator:aa21be6f8083f84fe236c5684d1510c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab706d2be983c478b389a67557bd8f0e2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#ab706d2be983c478b389a67557bd8f0e2">setUpInterrupts</a> (void(*_isrPointer)(void))</td></tr>
 <tr class="memdesc:ab706d2be983c478b389a67557bd8f0e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">set up pins and interrupts  <a href="class_j_encoder_single.html#ab706d2be983c478b389a67557bd8f0e2">More...</a><br /></td></tr>
 <tr class="separator:ab706d2be983c478b389a67557bd8f0e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,12 +187,12 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >reads a single channel (incremental) encoder </p>
 <p >direction can't be calculated with a single channel encoder, only speed can be. <br  />
-speed calulation is done by measuring time between 2 encoder ticks (not between every tick since encoders may not have evenly spaced ticks) <br  />
+speed calculation is done by measuring time between 2 encoder ticks (not between every tick since encoders may not have evenly spaced ticks) <br  />
 velocity is set to zero if the encoder has not turned in slowestIntervalMicros</p>
 <dl class="section note"><dt>Note</dt><dd>don't use this class directly, use a subclass </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ab59458f819435a1cbe88d4559a05d6f7" name="ab59458f819435a1cbe88d4559a05d6f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab59458f819435a1cbe88d4559a05d6f7">&#9670;&nbsp;</a></span>JEncoderSingle()</h2>
+<a id="aa21be6f8083f84fe236c5684d1510c94" name="aa21be6f8083f84fe236c5684d1510c94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa21be6f8083f84fe236c5684d1510c94">&#9670;&nbsp;</a></span>JEncoderSingle()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -210,19 +210,25 @@ velocity is set to zero if the encoder has not turned in slowestIntervalMicros</
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>_distPerCountFactor</em> = <code>1.0</code>, </td>
+          <td class="paramname"><em>_distPerCountFactor</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>_reverse</em> = <code>false</code>, </td>
+          <td class="paramname"><em>_reverse</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">unsigned long&#160;</td>
-          <td class="paramname"><em>_slowestIntervalMicros</em> = <code>100000UL</code>&#160;</td>
+          <td class="paramname"><em>_slowestIntervalMicros</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>_switchBounceIntervalMicros</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -244,6 +250,7 @@ velocity is set to zero if the encoder has not turned in slowestIntervalMicros</
     <tr><td class="paramname">_distPerCountFactor</td><td>conversion factor for getting distance in an actual unit </td></tr>
     <tr><td class="paramname">_reverse</td><td>false(default) </td></tr>
     <tr><td class="paramname">_slowestIntervalMicros</td><td>after this many microseconds without an encoder tick velocity is set to zero. </td></tr>
+    <tr><td class="paramname">_switchBounceIntervalMicros</td><td>ignore additional pulses for this many microseconds after each pulse </td></tr>
   </table>
   </dd>
 </dl>
@@ -476,7 +483,7 @@ velocity is set to zero if the encoder has not turned in slowestIntervalMicros</
 </table>
 </div><div class="memdoc">
 
-<p>can this encoder mesure direction or just speed </p>
+<p>can this encoder measure direction or just speed </p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">(bool)</td><td>true = can measure direction </td></tr>
@@ -613,7 +620,7 @@ velocity is set to zero if the encoder has not turned in slowestIntervalMicros</
 </table>
 </div><div class="memdoc">
 
-<p>set which direction the encoder is moving (if you have external information about direction (like motor power) and want getVel and getDist to go the right direciton even with this directionless encoder) </p>
+<p>set which direction the encoder is moving (if you have external information about direction (like motor power) and want getVel and getDist to go the right direction even with this directionless encoder) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_rev</td><td>(bool) false=forwards true=backwards </td></tr>

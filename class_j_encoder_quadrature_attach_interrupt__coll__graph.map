@@ -1,5 +1,5 @@
 <map id="JEncoderQuadratureAttachInterrupt" name="JEncoderQuadratureAttachInterrupt">
-<area shape="rect" id="node1" title="uses attachInterrupt() platform: esp32, teensy" alt="" coords="5,155,184,196"/>
+<area shape="rect" id="node1" title="uses attachInterrupt() platform: esp32, teensy (could be used with standard avr arduinos but only wit..." alt="" coords="5,155,184,196"/>
 <area shape="rect" id="node2" href="$class_j_encoder_quadrature.html" title="reads a quadrature (incremental) encoder" alt="" coords="25,80,165,107"/>
 <area shape="rect" id="node3" href="$class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="57,5,133,32"/>
 </map>
