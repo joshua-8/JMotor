@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-//drivetrain example
+// drivetrain example
 
 #define port1Pin 32
 #define port2Pin 33
@@ -31,6 +31,8 @@
 
 JEncoderPWMAbsoluteAttachInterrupt encoder = JEncoderPWMAbsoluteAttachInterrupt(inport2, JEncoderPWMAbsolute_AS5048settings, true, 1, 50000, 1000, true);
 IRAM_ATTR jENCODER_MAKE_ISR_MACRO(encoder);
+
+JEncoderSingleAttachInterrupt end = JEncoderSingleAttachInterrupt(1);
 
 JVoltageCompMeasure<25> voltageComp = JVoltageCompMeasure<25>(batMonitorPin, dacUnitsPerVolt);
 JMotorCompStandardConfig ttConfig = JMotorCompStandardConfig(1.9, .5, 3.2, 1.1, 4.6, 1.7, 100);
@@ -78,16 +80,16 @@ void loop()
                 mydrvtrain.resetDist();
             } else {
                 value = inString.toFloat();
-                if (mode == 1) { //s
+                if (mode == 1) { // s
                     mydrvtrain.setVel({ value, 0, 0 });
                 }
-                if (mode == 0) { //x
+                if (mode == 0) { // x
                     mydrvtrain.setVel({ 0, value, 0 });
                 }
-                if (mode == 2) { //v
+                if (mode == 2) { // v
                     mydrvtrain.moveVel({ value, 0, 0 });
                 }
-                if (mode == 3) { //p
+                if (mode == 3) { // p
                     mydrvtrain.moveDistRZ(value);
                 }
                 if (mode == 4) { //;

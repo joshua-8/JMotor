@@ -5,11 +5,11 @@
 
 /**
  * @brief  reads a single channel (incremental) encoder
- * 
+ *
  * direction can't be calculated with a single channel encoder, only speed can be. \n
- * speed calulation is done by measuring time between 2 encoder ticks (not between every tick since encoders may not have evenly spaced ticks) \n
+ * speed calculation is done by measuring time between 2 encoder ticks (not between every tick since encoders may not have evenly spaced ticks) \n
  * velocity is set to zero if the encoder has not turned in slowestIntervalMicros
- * 
+ *
  * @note  don't use this class directly, use a subclass
  */
 class JEncoderSingle : public JEncoder {
@@ -29,6 +29,7 @@ private:
     bool newSpeed;
     unsigned long slowestIntervalMicros;
     bool wasTimedOut;
+    unsigned long switchBounceIntervalMicros;
 
 protected:
     /**
@@ -37,13 +38,15 @@ protected:
      * @param  _distPerCountFactor: conversion factor for getting distance in an actual unit
      * @param  _reverse: false(default)
      * @param  _slowestIntervalMicros: after this many microseconds without an encoder tick velocity is set to zero.
+     * @param  _switchBounceIntervalMicros: ignore additional pulses for this many microseconds after each pulse
      */
-    JEncoderSingle(byte _encoderPin, float _distPerCountFactor = 1.0, bool _reverse = false, unsigned long _slowestIntervalMicros = 100000UL)
+    JEncoderSingle(byte _encoderPin, float _distPerCountFactor, bool _reverse, unsigned long _slowestIntervalMicros, unsigned long _switchBounceIntervalMicros)
     {
         rev = false;
         encoderPin = _encoderPin;
         distPerCountFactor = _distPerCountFactor;
         slowestIntervalMicros = _slowestIntervalMicros;
+        switchBounceIntervalMicros = _switchBounceIntervalMicros;
         if (_reverse) {
             reverse = -1;
         } else {
@@ -78,7 +81,7 @@ public:
         return rev;
     }
     /**
-     * @brief  set which direction the encoder is moving (if you have external information about direction (like motor power) and want getVel and getDist to go the right direciton even with this directionless encoder)
+     * @brief  set which direction the encoder is moving (if you have external information about direction (like motor power) and want getVel and getDist to go the right direction even with this directionless encoder)
      * @param  _rev: (bool) false=forwards true=backwards
      */
     void setRev(bool _rev)
@@ -94,16 +97,16 @@ public:
     }
     float getVel()
     {
-        //store temporary copies of variables set by ISR since they may be changed at any time
+        // store temporary copies of variables set by ISR since they may be changed at any time
         unsigned long tempEncoderTickMicros = lastEncoderTickMicros;
         unsigned long tempInterval = encoderIntervalMicros;
 
-        //occasionally micros seems to be smaller than tempEncoderTickMicros and there's an overflow
-        //  adding tempInterval fixes the problem (looking back one more tick)
+        // occasionally micros seems to be smaller than tempEncoderTickMicros and there's an overflow
+        //   adding tempInterval fixes the problem (looking back one more tick)
         if ((micros() - tempEncoderTickMicros + tempInterval) > slowestIntervalMicros) {
-            return 0.0; //set to zero if it's been a while since a tick
+            return 0.0; // set to zero if it's been a while since a tick
         }
-        if (tempInterval == 0) { //avoid divide by zero
+        if (tempInterval == 0) { // avoid divide by zero
             return 0.0;
         }
         return (rev ? -1 : 1) * reverse * 1000000.0 / tempInterval * distPerCountFactor * 2;
@@ -143,8 +146,8 @@ public:
     }
     bool isVelNew()
     {
-        //occasionally micros seems to be smaller than tempEncoderTickMicros and there's an overflow
-        //  adding tempInterval fixes the problem (looking back one more tick)
+        // occasionally micros seems to be smaller than tempEncoderTickMicros and there's an overflow
+        //   adding tempInterval fixes the problem (looking back one more tick)
 
         unsigned long tempEncoderTickMicros = lastEncoderTickMicros;
         unsigned long tempInterval = encoderIntervalMicros;
@@ -167,13 +170,15 @@ public:
 
     void encoderISR(void)
     {
-        if (digitalRead(encoderPin) == HIGH) { //once a cycle save values used for speed calculations
-            unsigned long tempMicros = micros();
-            encoderIntervalMicros = tempMicros - lastEncoderTickMicros;
-            lastEncoderTickMicros = tempMicros;
-            newSpeed = true;
+        if (micros() - lastEncoderTickMicros >= switchBounceIntervalMicros) {
+            if (digitalRead(encoderPin) == HIGH) { // once a cycle save values used for speed calculations
+                unsigned long tempMicros = micros();
+                encoderIntervalMicros = tempMicros - lastEncoderTickMicros;
+                lastEncoderTickMicros = tempMicros;
+                newSpeed = true;
+            }
+            tickCounter += (rev ? -1 : 1);
         }
-        tickCounter += (rev ? -1 : 1);
     }
 };
 #endif

@@ -4,9 +4,10 @@
 #define J_ENCODER_PWM_ABSOLUTE_ATTACH_INTERRUPT_H
 
 /**
- * @brief uses attachInterrupt() 
- * (could be used with standard avr arduinos but only with pins that support attachInterrupt())
- * @note  platform: esp32, teensy
+ * @brief uses attachInterrupt()
+ * (could be used with standard avr arduinos but only with pins that support attachInterrupt()) \n
+ * platform: esp32, teensy
+ * @note make sure to call setUpInterrupts() when your code starts
  */
 
 class JEncoderPWMAbsoluteAttachInterrupt : public JEncoderPWMAbsolute {
@@ -15,7 +16,7 @@ public:
      * @brief  sets pins and settings for reading the encoder
      * @param  _encoderPin: pin to read encoder signal with
      * @param  _ps: (struct pwmSettings) parameters of encoder signal
-     * @param  _reverse: (bool) reverse positive direction, default=false 
+     * @param  _reverse: (bool) reverse positive direction, default=false
      * @param  _distPerCountFactor: (float) for the purposes of setting this factor a "count" is considered a full revolution of the absolute encoder
      * @param  _velEnoughTime: (default=0, no limit) shortest interval between velocity calculations, if run() is called faster the calculation will wait to run
      * @param  _velEnoughTicks: (default=0, no limit) if the encoder turns more than this number of steps velocity calculations will be done even if velEnoughTime hasn't been reached

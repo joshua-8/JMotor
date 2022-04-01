@@ -5,15 +5,15 @@
 #include <Arduino.h>
 /**
  * @brief  uses a pin change interrupt library to support more pins than attachInterrupt().
- * 
- * Interrupt library (tested with v1.1.0): https://github.com/GreyGnome/EnableInterrupt
- * @note platform: AVR (standard Arduinos)
+ *
+ * Interrupt library (tested with v1.1.0): https://github.com/GreyGnome/EnableInterrupt \n
+ * platform: AVR (standard Arduinos)
+ * @note make sure to call setUpInterrupts() when your code starts
  */
 class JEncoderQuadraturePinChange : public JEncoderQuadrature {
 public:
     /**
      * @brief  constructor, sets pins and settings
-     * @note   
      * @param  _encoderAPin: one channel of quadrature encoder
      * @param  _encoderBPin: other channel of quadrature encoder
      * @param  _distPerCountFactor: conversion factor for getting distance in an actual unit

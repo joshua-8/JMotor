@@ -5,9 +5,10 @@
 #define J_ENCODER_PWM_ABSOLUTE_PIN_CHANGE_H
 /**
  * @brief  uses a pin change interrupt library to support more pins than attachInterrupt().
- * 
- * Interrupt library (tested with v1.1.0): https://github.com/GreyGnome/EnableInterrupt
- * @note platform: AVR (standard Arduinos)
+ *
+ * Interrupt library (tested with v1.1.0): https://github.com/GreyGnome/EnableInterrupt \n
+ * platform: AVR (standard Arduinos)
+ * @note make sure to call setUpInterrupts() when your code starts
  */
 class JEncoderPWMAbsolutePinChange : public JEncoderPWMAbsolute {
 public:
@@ -15,7 +16,7 @@ public:
      * @brief  sets pins and settings for reading the encoder
      * @param  _encoderPin: pin to read encoder signal with
      * @param  _ps: (struct pwmSettings) parameters of encoder signal
-     * @param  _reverse: (bool) reverse positive direction, default=false 
+     * @param  _reverse: (bool) reverse positive direction, default=false
      * @param  _distPerCountFactor: (float) for the purposes of setting this factor a "count" is considered a full revolution of the absolute encoder
      * @param  _velEnoughTime: (default=0, no limit) shortest interval between velocity calculations, if run() is called faster the calculation will wait to run
      * @param  _velEnoughTicks: (default=0, no limit) if the encoder turns more than this number of steps velocity calculations will be done even if velEnoughTime hasn't been reached

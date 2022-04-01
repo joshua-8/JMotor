@@ -3,9 +3,9 @@
 #include "JEncoderQuadrature.h"
 #include <Arduino.h>
 /**
- * @brief  uses attachInterrupt() 
- * platform: esp32, teensy
- * @note (could be used with standard avr arduinos but only with pins that support attachInterrupt())
+ * @brief  uses attachInterrupt()
+ * platform: esp32, teensy (could be used with standard avr arduinos but only with pins that support attachInterrupt())
+ * @note make sure to call setUpInterrupts() when your code starts
  */
 
 class JEncoderQuadratureAttachInterrupt : public JEncoderQuadrature {
@@ -13,7 +13,6 @@ class JEncoderQuadratureAttachInterrupt : public JEncoderQuadrature {
 public:
     /**
      * @brief  constructor, sets pins and settings
-     * @note   
      * @param  _encoderAPin: one channel of quadrature encoder
      * @param  _encoderBPin: other channel of quadrature encoder
      * @param  _distPerCountFactor: conversion factor for getting distance in an actual unit
