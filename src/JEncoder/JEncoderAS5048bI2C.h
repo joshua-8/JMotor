@@ -5,8 +5,8 @@
 #include <Wire.h>
 /**
  * @brief reads a type of absolute encoder https://ams.com/as0548b (uses I2C)
- * 
- * based on work by sosandroid https://github.com/sosandroid/AMS_AS5048B 
+ *
+ * based on work by sosandroid https://github.com/sosandroid/AMS_AS5048B
  * @note remember to add pull up resistors on I2C lines (~4.7k for 5v, ~2.4k for 3.3v microcontrollers).
  */
 class JEncoderAS5048bI2C : public JEncoder {
@@ -43,7 +43,7 @@ private:
 
     uint16_t readRegister14(uint8_t reg)
     {
-        //16 bit value got from 2 8bits registers (7..0 MSB + 5..0 LSB) => 14 bits value
+        // 16 bit value got from 2 8bits registers (7..0 MSB + 5..0 LSB) => 14 bits value
         uint16_t readValue = 0;
         byte readArray[2];
 
@@ -81,8 +81,8 @@ private:
     }
 
     /**
-    * @note   bad if 255 (magnet too far) or 0 (magnet too close)
-    */
+     * @note   bad if 255 (magnet too far) or 0 (magnet too close)
+     */
     uint8_t getAutoGain()
     {
         return readRegister8(AS5048B_GAIN_REG);
@@ -94,12 +94,13 @@ private:
     }
 
 public:
-    const unsigned int STEPS_PER_TURN = 16384; //resolution of encoder
-    static const byte AS5048B_DEFAULT_ADDRESS = 0x40; //can be accessed as JEncoderAS5048bI2C::AS5048B_DEFAULT_ADDRESS
+    const unsigned int STEPS_PER_TURN = 16384; // resolution of encoder
+    static const byte AS5048B_DEFAULT_ADDRESS = 0x40; // can be accessed as JEncoderAS5048bI2C::AS5048B_DEFAULT_ADDRESS
 
     /**
-     * @brief  sets pins and settings for reading the encoder
-     * @param  _reverse: (bool) reverse positive direction, default=false 
+     * @brief  sets pins and settings for reading the encoder, remember to use Wire.begin()
+     * @note  remember to use Wire.begin()
+     * @param  _reverse: (bool) reverse positive direction, default=false
      * @param  _distPerCountFactor: (float) for the purposes of setting this factor a "count" is considered a full revolution of the absolute encoder
      * @param  _address: (byte) I2C address of encoder
      * @param  _velEnoughTime: (default=0, no limit) shortest interval in microseconds between velocity calculations, if run() is called faster the calculation will wait to run
@@ -191,7 +192,7 @@ public:
         writeToZeroRegister(zeroAngle);
     }
 
-    /** 
+    /**
      * @note divide by STEPS_PER_TURN to get fraction of full turn
      * @retval the raw angle reading from the sensor (0 to 16,383) (but negative if reverse is true)
      */
@@ -205,7 +206,7 @@ public:
      * @brief  is the magnet in the optimal position
      *          Unlike other functions, this function does not rely on run()
      * @note  if this is false, the encoder may still be providing angle information
-     * @retval  (bool) 
+     * @retval  (bool)
      */
     bool isMagnetInRange()
     {
