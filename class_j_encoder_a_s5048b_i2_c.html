@@ -97,7 +97,7 @@ Collaboration diagram for JEncoderAS5048bI2C:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1c74191640750fa1360ab2012c528d48"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a1c74191640750fa1360ab2012c528d48">JEncoderAS5048bI2C</a> (bool _reverse=false, float _distPerCountFactor=1.0, uint8_t _address=0x40, unsigned long _velEnoughTime=0, unsigned long _velEnoughTicks=0, bool _recognizeOutOfRange=true)</td></tr>
-<tr class="memdesc:a1c74191640750fa1360ab2012c528d48"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets pins and settings for reading the encoder  <a href="class_j_encoder_a_s5048b_i2_c.html#a1c74191640750fa1360ab2012c528d48">More...</a><br /></td></tr>
+<tr class="memdesc:a1c74191640750fa1360ab2012c528d48"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets pins and settings for reading the encoder, remember to use Wire.begin()  <a href="class_j_encoder_a_s5048b_i2_c.html#a1c74191640750fa1360ab2012c528d48">More...</a><br /></td></tr>
 <tr class="separator:a1c74191640750fa1360ab2012c528d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad405ab13e47e798ecd8a6a501cda9e6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#ad405ab13e47e798ecd8a6a501cda9e6d">useCustomWire</a> (TwoWire &amp;_wire)</td></tr>
 <tr class="memdesc:ad405ab13e47e798ecd8a6a501cda9e6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set what Wire (I2C) bus to use (for microcontrollers with more than one)  <a href="class_j_encoder_a_s5048b_i2_c.html#ad405ab13e47e798ecd8a6a501cda9e6d">More...</a><br /></td></tr>
@@ -255,7 +255,8 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>sets pins and settings for reading the encoder </p>
+<p>sets pins and settings for reading the encoder, remember to use Wire.begin() </p>
+<dl class="section note"><dt>Note</dt><dd>remember to use Wire.begin() </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_reverse</td><td>(bool) reverse positive direction, default=false </td></tr>
