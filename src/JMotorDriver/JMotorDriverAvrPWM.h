@@ -42,14 +42,14 @@ public:
     {
         if (_enable) {
             if (!enabled) {
-                //actually enable
+                // actually enable
                 enabled = true;
                 analogWrite(pin, !disableState ? 0 : PWM_RANGE);
                 return true;
             }
-        } else { //disable
+        } else { // disable
             if (enabled) {
-                //actually disable
+                // actually disable
                 enabled = false;
                 analogWrite(pin, !disableState ? 0 : PWM_RANGE);
                 return true;

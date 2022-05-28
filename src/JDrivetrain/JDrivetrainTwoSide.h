@@ -46,9 +46,9 @@ public:
         leftDist = left.getPos();
         rightDist = right.getPos();
 
-        vel = { (leftVel + rightVel) / (float)2.0, (leftVel - rightVel) / width * (float)RAD_TO_DEG, 0 };
-        dist = { (leftDist + rightDist) / (float)2.0, (leftDist - rightDist) / width * (float)RAD_TO_DEG, 0 };
-        maxVel = { min(left.getMaxVel(), right.getMaxVel()), min(left.getMaxVel(), right.getMaxVel()) * (float)2.0 / width * (float)RAD_TO_DEG, 0 };
+        vel = { (leftVel + rightVel) / (float)2.0, 0, (rightVel - leftVel) / width };
+        dist = { (leftDist + rightDist) / (float)2.0, 0, (rightDist - leftDist) / width };
+        maxVel = { min(left.getMaxVel(), right.getMaxVel()), 0, min(left.getMaxVel(), right.getMaxVel()) * (float)2.0 / width };
     }
     bool setEnable(bool _enable)
     {
@@ -82,25 +82,25 @@ public:
     }
     void setVel(JTwoDTransform _vel, bool _run = false)
     {
-        float rotation = _vel.rz * width / RAD_TO_DEG / 2;
-        left.setVel(_vel.y + rotation, false);
-        right.setVel(_vel.y - rotation, false);
+        float rotation = _vel.theta * width / 2;
+        left.setVel(_vel.x - rotation, false);
+        right.setVel(_vel.x + rotation, false);
         if (_run)
             run();
     }
     void setDistSetpoint(JTwoDTransform _dist, bool _run = false)
     {
-        float rotation = _dist.rz * width / RAD_TO_DEG / 2;
-        left.setPosSetpoint(_dist.y + rotation, false);
-        right.setPosSetpoint(_dist.y - rotation, false);
+        float rotation = _dist.theta * width / 2;
+        left.setPosSetpoint(_dist.x - rotation, false);
+        right.setPosSetpoint(_dist.x + rotation, false);
         if (_run)
             run();
     }
     void setDistDelta(JTwoDTransform _dist, bool _run = false)
     {
-        float rotation = _dist.rz * width / RAD_TO_DEG / 2;
-        left.setPosDelta(_dist.y + rotation, false);
-        right.setPosDelta(_dist.y - rotation, false);
+        float rotation = _dist.theta * width / RAD_TO_DEG / 2;
+        left.setPosDelta(_dist.x - rotation, false);
+        right.setPosDelta(_dist.x + rotation, false);
         if (_run)
             run();
     }

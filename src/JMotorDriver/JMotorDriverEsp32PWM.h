@@ -19,11 +19,11 @@ private:
 public:
     bool disableState = LOW;
     /**
-    * @brief  constructor, sets pins, default PWM
-    * @param  _ch: ledc channel (must be unique for each driver)
-    * @param  _pin: pin to output signal on
-    * @param  _disableState = LOW: when disabled, set pin LOW(default) or HIGH
-    */
+     * @brief  constructor, sets pins, default PWM
+     * @param  _ch: ledc channel (must be unique for each driver)
+     * @param  _pin: pin to output signal on
+     * @param  _disableState = LOW: when disabled, set pin LOW(default) or HIGH
+     */
     JMotorDriverEsp32PWM(byte _ch, byte _pin, bool _disableState = LOW)
     {
         enabled = false;
@@ -58,7 +58,7 @@ public:
     void setFrequencyAndResolution(int freq = 2000, int resBits = 12)
     {
         if (freq == PWM_FREQ && resBits == PWM_RES) {
-            return; //already set
+            return; // already set
         }
         PWM_FREQ = freq;
         PWM_RES = resBits;
@@ -80,16 +80,16 @@ public:
     {
         if (_enable) {
             if (!enabled) {
-                //actually enable
+                // actually enable
                 enabled = true;
                 ledcAttachPin(pin, ch);
                 ledcSetup(ch, PWM_FREQ, PWM_RES);
-                ledcWrite(ch, !disableState ? 0 : PWM_RANGE); //set disable state to start with
+                ledcWrite(ch, !disableState ? 0 : PWM_RANGE); // set disable state to start with
                 return true;
             }
-        } else { //disable
+        } else { // disable
             if (enabled) {
-                //actually disable
+                // actually disable
                 enabled = false;
                 ledcDetachPin(pin);
                 pinMode(pin, OUTPUT);

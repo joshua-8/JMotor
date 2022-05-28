@@ -64,7 +64,7 @@ public:
                 digitalWrite(i2, LOW);
             }
             if (breakOn && val == 0) {
-                pwmDriver.set(1); //activate break
+                pwmDriver.set(1); // activate break
             } else {
                 pwmDriver.set(abs(val));
             }
@@ -75,7 +75,7 @@ public:
     {
         if (_enable) {
             if (!enabled) {
-                //actually enable
+                // actually enable
                 enabled = true;
                 pinMode(i1, OUTPUT);
                 pinMode(i2, OUTPUT);
@@ -85,9 +85,9 @@ public:
 
                 return true;
             }
-        } else { //disable
+        } else { // disable
             if (enabled) {
-                //actually disable
+                // actually disable
                 enabled = false;
                 pinMode(i1, OUTPUT);
                 pinMode(i2, OUTPUT);

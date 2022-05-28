@@ -52,14 +52,14 @@ public:
     float setFrequencyAndResolution(int freq = 50, int resBits = 20)
     {
         if (freq == SERVO_FREQ && resBits == SERVO_RES) {
-            return SERVO_TICKS_PER_MICROSECOND; //already set
+            return SERVO_TICKS_PER_MICROSECOND; // already set
         }
         SERVO_FREQ = freq;
         SERVO_RES = resBits;
-        SERVO_TICKS_PER_MICROSECOND = (1 << SERVO_RES) * (float)SERVO_FREQ / 1000000; //DEFAULT=52.4288  2^SERVO_RES / 1E6 * SERVO_FREQ
+        SERVO_TICKS_PER_MICROSECOND = (1 << SERVO_RES) * (float)SERVO_FREQ / 1000000; // DEFAULT=52.4288  2^SERVO_RES / 1E6 * SERVO_FREQ
         unsigned long startMicros = micros();
         while (digitalRead(servoPin) == HIGH && micros() - startMicros <= maxServoValue)
-            ; //wait for pulse to go low to avoid cutting it short and causing the servo to twitch
+            ; // wait for pulse to go low to avoid cutting it short and causing the servo to twitch
         ledcDetachPin(servoPin);
         ledcSetup(pwmChannel, SERVO_FREQ, SERVO_RES);
         if (enabled)
@@ -83,20 +83,20 @@ public:
     {
         if (_enable) {
             if (!enabled) {
-                //actually enable
+                // actually enable
                 enabled = true;
                 pinMode(servoPin, OUTPUT);
                 ledcSetup(pwmChannel, SERVO_FREQ, SERVO_RES);
                 ledcAttachPin(servoPin, pwmChannel);
                 return true;
             }
-        } else { //disable
+        } else { // disable
             if (enabled) {
-                //actually disable
+                // actually disable
                 enabled = false;
                 unsigned long startMicros = micros();
                 while (digitalRead(servoPin) == HIGH && micros() - startMicros <= maxServoValue)
-                    ; //wait for pulse to go low to avoid cutting it short and causing the servo to twitch
+                    ; // wait for pulse to go low to avoid cutting it short and causing the servo to twitch
                 ledcDetachPin(servoPin);
                 pinMode(servoPin, OUTPUT);
                 digitalWrite(servoPin, LOW);

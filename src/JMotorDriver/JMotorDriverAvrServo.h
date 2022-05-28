@@ -49,13 +49,13 @@ public:
     {
         if (_enable) {
             if (!enabled) {
-                //actually enable
+                // actually enable
                 enabled = true;
                 return true;
             }
-        } else { //disable
+        } else { // disable
             if (enabled) {
-                //actually disable
+                // actually disable
                 motorServo.detach();
                 enabled = false;
                 return true;

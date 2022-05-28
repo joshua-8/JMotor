@@ -18,22 +18,22 @@ protected:
 public:
     JDrivetrain& drivetrain;
     Derivs_Limiter YLimiter;
-    Derivs_Limiter RZLimiter;
+    Derivs_Limiter ThetaLimiter;
     Derivs_Limiter XLimiter;
     JTwoDTransform distError;
 
     JDrivetrainControllerBasic(JDrivetrain& _drivetrain, JTwoDTransform _velLimit, JTwoDTransform _accelLimit, JTwoDTransform _distError)
         : drivetrain(_drivetrain)
-        , YLimiter(Derivs_Limiter(_velLimit.y, _accelLimit.y))
-        , RZLimiter(Derivs_Limiter(_velLimit.rz, _accelLimit.rz))
         , XLimiter(Derivs_Limiter(_velLimit.x, _accelLimit.x))
+        , YLimiter(Derivs_Limiter(_velLimit.y, _accelLimit.y))
+        , ThetaLimiter(Derivs_Limiter(_velLimit.theta, _accelLimit.theta))
         , distError(_distError)
     {
         YLimiter.setPreventGoingWrongWay(false);
         XLimiter.setPreventGoingWrongWay(false);
-        RZLimiter.setPreventGoingWrongWay(false);
+        ThetaLimiter.setPreventGoingWrongWay(false);
         YLimiter.setPreventGoingTooFast(true);
-        RZLimiter.setPreventGoingTooFast(true);
+        ThetaLimiter.setPreventGoingTooFast(true);
         XLimiter.setPreventGoingTooFast(true);
         controlled = false;
         distMode = false;
@@ -56,37 +56,38 @@ public:
         lastCalcMillis = micros();
         if (getEnable()) {
             if (controlled) {
-                if (distMode) {
+                if (distMode) { // go towards target position with smoothed velocity
                     YLimiter.calc();
-                    RZLimiter.calc();
+                    ThetaLimiter.calc();
                     XLimiter.calc();
 
-                    JTwoDTransform dist = getDist();
+                    JTwoDTransform dist = getDist(); // prevent setpoint from getting to far from actual
                     YLimiter.setPosition(constrain(YLimiter.getPosition(), dist.y - distError.y, dist.y + distError.y));
-                    RZLimiter.setPosition(constrain(RZLimiter.getPosition(), dist.rz - distError.rz, dist.rz + distError.rz));
+                    ThetaLimiter.setPosition(constrain(ThetaLimiter.getPosition(), dist.theta - distError.theta, dist.theta + distError.theta));
                     XLimiter.setPosition(constrain(XLimiter.getPosition(), dist.x - distError.x, dist.x + distError.x));
 
-                    drivetrain.setDistSetpoint({ YLimiter.getPosition(), RZLimiter.getPosition(), XLimiter.getPosition() }, false);
+                    drivetrain.setDistSetpoint({ XLimiter.getPosition(), YLimiter.getPosition(), ThetaLimiter.getPosition() }, false);
                 } else {
+                    // accelerate towards velocity target
                     if (YLimiter.getVelocity() != velTarget.y) {
                         YLimiter.setVelocity(YLimiter.getVelocity() + constrain(velTarget.y - YLimiter.getVelocity(), -YLimiter.getAccelLimit() * time, YLimiter.getAccelLimit() * time));
                     }
-                    if (RZLimiter.getVelocity() != velTarget.rz) {
-                        RZLimiter.setVelocity(RZLimiter.getVelocity() + constrain(velTarget.rz - RZLimiter.getVelocity(), -RZLimiter.getAccelLimit() * time, RZLimiter.getAccelLimit() * time));
+                    if (ThetaLimiter.getVelocity() != velTarget.theta) {
+                        ThetaLimiter.setVelocity(ThetaLimiter.getVelocity() + constrain(velTarget.theta - ThetaLimiter.getVelocity(), -ThetaLimiter.getAccelLimit() * time, ThetaLimiter.getAccelLimit() * time));
                     }
                     if (XLimiter.getVelocity() != velTarget.x) {
                         XLimiter.setVelocity(XLimiter.getVelocity() + constrain(velTarget.x - XLimiter.getVelocity(), -XLimiter.getAccelLimit() * time, XLimiter.getAccelLimit() * time));
                     }
 
                     YLimiter.setVelocity(constrain(YLimiter.getVelocity(), -YLimiter.getVelLimit(), YLimiter.getVelLimit()));
-                    RZLimiter.setVelocity(constrain(RZLimiter.getVelocity(), -RZLimiter.getVelLimit(), RZLimiter.getVelLimit()));
+                    ThetaLimiter.setVelocity(constrain(ThetaLimiter.getVelocity(), -ThetaLimiter.getVelLimit(), ThetaLimiter.getVelLimit()));
                     XLimiter.setVelocity(constrain(XLimiter.getVelocity(), -XLimiter.getVelLimit(), XLimiter.getVelLimit()));
 
                     YLimiter.setVelocity(constrain(YLimiter.getVelocity(), -getMaxVel().y, getMaxVel().y));
-                    RZLimiter.setVelocity(constrain(RZLimiter.getVelocity(), -getMaxVel().rz, getMaxVel().rz));
+                    ThetaLimiter.setVelocity(constrain(ThetaLimiter.getVelocity(), -getMaxVel().theta, getMaxVel().theta));
                     XLimiter.setVelocity(constrain(XLimiter.getVelocity(), -getMaxVel().x, getMaxVel().x));
 
-                    drivetrain.setVel({ YLimiter.getVelocity(), RZLimiter.getVelocity(), XLimiter.getVelocity() });
+                    drivetrain.setVel({ XLimiter.getVelocity(), YLimiter.getVelocity(), ThetaLimiter.getVelocity() });
                 }
             }
         }
@@ -104,7 +105,7 @@ public:
         if (distMode || !controlled) {
             JTwoDTransform vel = getVel();
             YLimiter.setVelocity(vel.y);
-            RZLimiter.setVelocity(vel.rz);
+            ThetaLimiter.setVelocity(vel.theta);
             XLimiter.setVelocity(vel.x);
         }
 
@@ -128,18 +129,18 @@ public:
         if (!distMode || !controlled) {
             YLimiter.resetTime();
             XLimiter.resetTime();
-            RZLimiter.resetTime();
+            ThetaLimiter.resetTime();
             JTwoDTransform vel = getVel();
             YLimiter.setVelocity(vel.y);
-            RZLimiter.setVelocity(vel.rz);
+            ThetaLimiter.setVelocity(vel.theta);
             XLimiter.setVelocity(vel.x);
             JTwoDTransform dist = getDist();
             YLimiter.setPosition(dist.y);
-            RZLimiter.setPosition(dist.rz);
+            ThetaLimiter.setPosition(dist.theta);
             XLimiter.setPosition(dist.x);
         }
         YLimiter.setTarget(_dist.y);
-        RZLimiter.setTarget(_dist.rz);
+        ThetaLimiter.setTarget(_dist.theta);
         XLimiter.setTarget(_dist.x);
 
         controlled = true;
@@ -156,10 +157,10 @@ public:
         moveDist(targ, _run);
     }
 
-    void moveDistRZ(float _rz, bool _run = false)
+    void moveDistTheta(float _theta, bool _run = false)
     {
         JTwoDTransform targ = getDist();
-        targ.rz = _rz;
+        targ.theta = _theta;
         moveDist(targ, _run);
     }
 
@@ -184,10 +185,10 @@ public:
         moveDist(targ, _run);
     }
 
-    void moveDistRZInc(float _rz, bool _run = false)
+    void moveDistThetaInc(float _theta, bool _run = false)
     {
         JTwoDTransform targ = getDist();
-        targ.rz += _rz;
+        targ.theta += _theta;
         moveDist(targ, _run);
     }
 
@@ -201,7 +202,7 @@ public:
     bool isVelZero()
     {
         JTwoDTransform vel = getVel(false);
-        return (vel.x == 0 && vel.y == 0 && vel.rz == 0);
+        return (vel.x == 0 && vel.y == 0 && vel.theta == 0);
     }
 
     /**
@@ -225,7 +226,7 @@ public:
     JTwoDTransform getDistTarget()
     {
         if (controlled && distMode) {
-            return { YLimiter.getTarget(), RZLimiter.getTarget(), XLimiter.getTarget() };
+            return { XLimiter.getTarget(), YLimiter.getTarget(), ThetaLimiter.getTarget() };
         } else {
             return getDist();
         }
@@ -235,23 +236,23 @@ public:
     {
         setVelLimitY(_velLim.y);
         setVelLimitX(_velLim.x);
-        setVelLimitRZ(_velLim.rz);
+        setVelLimitTheta(_velLim.theta);
     }
     void setAccelLimit(JTwoDTransform _accelLim)
     {
         setAccelLimitY(_accelLim.y);
         setAccelLimitX(_accelLim.x);
-        setAccelLimitRZ(_accelLim.rz);
+        setAccelLimitTheta(_accelLim.theta);
     }
 
     JTwoDTransform getVelLimit()
     {
-        return { YLimiter.getVelLimit(), RZLimiter.getVelLimit(), XLimiter.getVelLimit() };
+        return { XLimiter.getVelLimit(), YLimiter.getVelLimit(), ThetaLimiter.getVelLimit() };
     }
 
     JTwoDTransform getAccelLimit()
     {
-        return { YLimiter.getAccelLimit(), RZLimiter.getAccelLimit(), XLimiter.getAccelLimit() };
+        return { XLimiter.getAccelLimit(), YLimiter.getAccelLimit(), ThetaLimiter.getAccelLimit() };
     }
 
     void setVelLimitY(float l)
@@ -262,9 +263,9 @@ public:
     {
         XLimiter.setVelLimit(l);
     }
-    void setVelLimitRZ(float l)
+    void setVelLimitTheta(float l)
     {
-        RZLimiter.setVelLimit(l);
+        ThetaLimiter.setVelLimit(l);
     }
     void setAccelLimitY(float l)
     {
@@ -274,9 +275,9 @@ public:
     {
         XLimiter.setAccelLimit(l);
     }
-    void setAccelLimitRZ(float l)
+    void setAccelLimitTheta(float l)
     {
-        RZLimiter.setAccelLimit(l);
+        ThetaLimiter.setAccelLimit(l);
     }
 
     ////JDrivetrain methods:
@@ -304,14 +305,14 @@ public:
     void resetDist()
     {
         JTwoDTransform dist = getDist();
-        JTwoDTransform offBy = { YLimiter.getTarget() - dist.y, RZLimiter.getTarget() - dist.rz, XLimiter.getTarget() - dist.x };
+        JTwoDTransform offBy = { XLimiter.getTarget() - dist.x, YLimiter.getTarget() - dist.y, ThetaLimiter.getTarget() - dist.theta };
 
         YLimiter.setTarget(offBy.y);
-        RZLimiter.setTarget(offBy.rz);
+        ThetaLimiter.setTarget(offBy.theta);
         XLimiter.setTarget(offBy.x);
 
         YLimiter.setPosition(YLimiter.getPosition() - dist.y);
-        RZLimiter.setPosition(RZLimiter.getPosition() - dist.rz);
+        ThetaLimiter.setPosition(ThetaLimiter.getPosition() - dist.theta);
         XLimiter.setPosition(XLimiter.getPosition() - dist.x);
 
         drivetrain.resetDist();
@@ -330,12 +331,12 @@ public:
     }
     /**
      * @brief returns what distances are being set as the setpoints for each axis of the drivetrain
-     * @note only works in controlled dist mode  
+     * @note only works in controlled dist mode
      * @retval (JTwoDTransform)
      */
     JTwoDTransform getDistSetpoint()
     {
-        return { YLimiter.getPosition(), RZLimiter.getPosition(), XLimiter.getPosition() };
+        return { XLimiter.getPosition(), YLimiter.getPosition(), ThetaLimiter.getPosition() };
     }
     JTwoDTransform getMaxVel()
     {
@@ -376,15 +377,15 @@ public:
     {
         if (_enable && !getEnable()) {
             YLimiter.resetTime();
-            RZLimiter.resetTime();
+            ThetaLimiter.resetTime();
             XLimiter.resetTime();
             JTwoDTransform vel = getVel();
             YLimiter.setVelocity(vel.y);
-            RZLimiter.setVelocity(vel.rz);
+            ThetaLimiter.setVelocity(vel.theta);
             XLimiter.setVelocity(vel.x);
             JTwoDTransform dist = getDist();
             YLimiter.setPosition(dist.y);
-            RZLimiter.setPosition(dist.rz);
+            ThetaLimiter.setPosition(dist.theta);
             XLimiter.setPosition(dist.x);
             drivetrain.setDistSetpoint(dist);
         }
