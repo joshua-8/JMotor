@@ -64,19 +64,23 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="struct_j_two_d_transform-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">JTwoDTransform Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move.  
+<p>struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move. Follows ROS conventions for coordinate system: forward is positive, rotation CCW is positive, left is positive  
  <a href="struct_j_two_d_transform.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_j_two_d_transform_8h_source.html">JTwoDTransform.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a8de5f7804ff2b60c4845bd0c799cb136"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_j_two_d_transform.html#a8de5f7804ff2b60c4845bd0c799cb136">operator&amp;</a> (const <a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> &amp;t)</td></tr>
+<tr class="memdesc:a8de5f7804ff2b60c4845bd0c799cb136"><td class="mdescLeft">&#160;</td><td class="mdescRight">adds the second transform after the first, assuming movement, then rotation  <a href="struct_j_two_d_transform.html#a8de5f7804ff2b60c4845bd0c799cb136">More...</a><br /></td></tr>
+<tr class="separator:a8de5f7804ff2b60c4845bd0c799cb136"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adca0eb4dcea043a876d6fa36f856aa42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_j_two_d_transform.html#adca0eb4dcea043a876d6fa36f856aa42">operator+</a> (const <a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> &amp;t)</td></tr>
 <tr class="separator:adca0eb4dcea043a876d6fa36f856aa42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab99bdeff9f6611c877b77784d03d07ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_j_two_d_transform.html#ab99bdeff9f6611c877b77784d03d07ce">operator-</a> (const <a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> &amp;t)</td></tr>
@@ -110,21 +114,204 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2779a445c4493572818ab21bc5facd1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">use to print values of transform to serial port  <a href="struct_j_two_d_transform.html#a2779a445c4493572818ab21bc5facd1a">More...</a><br /></td></tr>
 <tr class="separator:a2779a445c4493572818ab21bc5facd1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a2947afd38a63b01d5e9357f585e09df4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_j_two_d_transform.html#a2947afd38a63b01d5e9357f585e09df4">fromNice</a> (float fb, float sideways, float turn)</td></tr>
+<tr class="memdesc:a2947afd38a63b01d5e9357f585e09df4"><td class="mdescLeft">&#160;</td><td class="mdescRight">converts from a coordinate system that might be more intuitive for some people  <a href="struct_j_two_d_transform.html#a2947afd38a63b01d5e9357f585e09df4">More...</a><br /></td></tr>
+<tr class="separator:a2947afd38a63b01d5e9357f585e09df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada1c0b4d0b5f7c09f453a7ba67d0a5f3"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_j_two_d_transform.html#ada1c0b4d0b5f7c09f453a7ba67d0a5f3">getForwards</a> (<a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> t)</td></tr>
+<tr class="separator:ada1c0b4d0b5f7c09f453a7ba67d0a5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e6b03756ef3ddddd57eec35703769d1"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_j_two_d_transform.html#a1e6b03756ef3ddddd57eec35703769d1">getRight</a> (<a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> t)</td></tr>
+<tr class="separator:a1e6b03756ef3ddddd57eec35703769d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38c116c4c5229167696bf74b0c8e120d"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_j_two_d_transform.html#a38c116c4c5229167696bf74b0c8e120d">getTurnDegreesCW</a> (<a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> t)</td></tr>
+<tr class="separator:a38c116c4c5229167696bf74b0c8e120d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ae9c7cab664a00beb0b8e44b3d98eabc6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_j_two_d_transform.html#ae9c7cab664a00beb0b8e44b3d98eabc6">y</a></td></tr>
-<tr class="memdesc:ae9c7cab664a00beb0b8e44b3d98eabc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">backwards- | forward+  <a href="struct_j_two_d_transform.html#ae9c7cab664a00beb0b8e44b3d98eabc6">More...</a><br /></td></tr>
-<tr class="separator:ae9c7cab664a00beb0b8e44b3d98eabc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41b16aac33d2313d407ee15dd34b46bb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_j_two_d_transform.html#a41b16aac33d2313d407ee15dd34b46bb">rz</a></td></tr>
-<tr class="memdesc:a41b16aac33d2313d407ee15dd34b46bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">counterclockwise- | clockwise+  <a href="struct_j_two_d_transform.html#a41b16aac33d2313d407ee15dd34b46bb">More...</a><br /></td></tr>
-<tr class="separator:a41b16aac33d2313d407ee15dd34b46bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79b568ecd7b07ea12af392193abb7cfd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_j_two_d_transform.html#a79b568ecd7b07ea12af392193abb7cfd">x</a></td></tr>
-<tr class="memdesc:a79b568ecd7b07ea12af392193abb7cfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">left- | backwards+  <a href="struct_j_two_d_transform.html#a79b568ecd7b07ea12af392193abb7cfd">More...</a><br /></td></tr>
+<tr class="memdesc:a79b568ecd7b07ea12af392193abb7cfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">backwards- | forward+  <a href="struct_j_two_d_transform.html#a79b568ecd7b07ea12af392193abb7cfd">More...</a><br /></td></tr>
 <tr class="separator:a79b568ecd7b07ea12af392193abb7cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9c7cab664a00beb0b8e44b3d98eabc6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_j_two_d_transform.html#ae9c7cab664a00beb0b8e44b3d98eabc6">y</a></td></tr>
+<tr class="memdesc:ae9c7cab664a00beb0b8e44b3d98eabc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">right- | left+  <a href="struct_j_two_d_transform.html#ae9c7cab664a00beb0b8e44b3d98eabc6">More...</a><br /></td></tr>
+<tr class="separator:ae9c7cab664a00beb0b8e44b3d98eabc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1030cca71ae11d4f2e540f253152dc20"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_j_two_d_transform.html#a1030cca71ae11d4f2e540f253152dc20">theta</a></td></tr>
+<tr class="memdesc:a1030cca71ae11d4f2e540f253152dc20"><td class="mdescLeft">&#160;</td><td class="mdescRight">clockwise- | counterclockwise+  <a href="struct_j_two_d_transform.html#a1030cca71ae11d4f2e540f253152dc20">More...</a><br /></td></tr>
+<tr class="separator:a1030cca71ae11d4f2e540f253152dc20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move. </p>
+<div class="textblock"><p >struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move. Follows ROS conventions for coordinate system: forward is positive, rotation CCW is positive, left is positive </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2947afd38a63b01d5e9357f585e09df4" name="a2947afd38a63b01d5e9357f585e09df4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2947afd38a63b01d5e9357f585e09df4">&#9670;&nbsp;</a></span>fromNice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> JTwoDTransform::fromNice </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>fb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>sideways</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>turn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>converts from a coordinate system that might be more intuitive for some people </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fb</td><td>backwards- | forward+ </td></tr>
+    <tr><td class="paramname">sideways</td><td>left- | right+ </td></tr>
+    <tr><td class="paramname">turn</td><td>CCW- | CW+ in DEGREES </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">converted</td><td><a class="el" href="struct_j_two_d_transform.html" title="struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move....">JTwoDTransform</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ada1c0b4d0b5f7c09f453a7ba67d0a5f3" name="ada1c0b4d0b5f7c09f453a7ba67d0a5f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada1c0b4d0b5f7c09f453a7ba67d0a5f3">&#9670;&nbsp;</a></span>getForwards()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float JTwoDTransform::getForwards </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e6b03756ef3ddddd57eec35703769d1" name="a1e6b03756ef3ddddd57eec35703769d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e6b03756ef3ddddd57eec35703769d1">&#9670;&nbsp;</a></span>getRight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float JTwoDTransform::getRight </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38c116c4c5229167696bf74b0c8e120d" name="a38c116c4c5229167696bf74b0c8e120d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38c116c4c5229167696bf74b0c8e120d">&#9670;&nbsp;</a></span>getTurnDegreesCW()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float JTwoDTransform::getTurnDegreesCW </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8de5f7804ff2b60c4845bd0c799cb136" name="a8de5f7804ff2b60c4845bd0c799cb136"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de5f7804ff2b60c4845bd0c799cb136">&#9670;&nbsp;</a></span>operator&amp;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> JTwoDTransform::operator&amp; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> &amp;&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>adds the second transform after the first, assuming movement, then rotation </p>
+<dl class="section note"><dt>Note</dt><dd>assumes radians </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">combined</td><td>transform </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a035c35618524e4ff7aad82ca92552fe7" name="a035c35618524e4ff7aad82ca92552fe7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a035c35618524e4ff7aad82ca92552fe7">&#9670;&nbsp;</a></span>operator*() <span class="overload">[1/2]</span></h2>
 
@@ -542,19 +729,19 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a41b16aac33d2313d407ee15dd34b46bb" name="a41b16aac33d2313d407ee15dd34b46bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41b16aac33d2313d407ee15dd34b46bb">&#9670;&nbsp;</a></span>rz</h2>
+<a id="a1030cca71ae11d4f2e540f253152dc20" name="a1030cca71ae11d4f2e540f253152dc20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1030cca71ae11d4f2e540f253152dc20">&#9670;&nbsp;</a></span>theta</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float JTwoDTransform::rz</td>
+          <td class="memname">float JTwoDTransform::theta</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>counterclockwise- | clockwise+ </p>
+<p>clockwise- | counterclockwise+ </p>
 
 </div>
 </div>
@@ -570,7 +757,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>left- | backwards+ </p>
+<p>backwards- | forward+ </p>
 
 </div>
 </div>
@@ -586,7 +773,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>backwards- | forward+ </p>
+<p>right- | left+ </p>
 
 </div>
 </div>

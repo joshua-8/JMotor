@@ -103,14 +103,14 @@ $(function() {
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_j_motor_driver_esp32_servo.html#a56b7ca1961e67c647afb5aba9ae2f7c2">   52</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_j_motor_driver_esp32_servo.html#a56b7ca1961e67c647afb5aba9ae2f7c2">setFrequencyAndResolution</a>(<span class="keywordtype">int</span> freq = 50, <span class="keywordtype">int</span> resBits = 20)</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    {</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">if</span> (freq == SERVO_FREQ &amp;&amp; resBits == SERVO_RES) {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">return</span> SERVO_TICKS_PER_MICROSECOND; <span class="comment">//already set</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">return</span> SERVO_TICKS_PER_MICROSECOND; <span class="comment">// already set</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        }</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        SERVO_FREQ = freq;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        SERVO_RES = resBits;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        SERVO_TICKS_PER_MICROSECOND = (1 &lt;&lt; SERVO_RES) * (<span class="keywordtype">float</span>)SERVO_FREQ / 1000000; <span class="comment">//DEFAULT=52.4288  2^SERVO_RES / 1E6 * SERVO_FREQ</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        SERVO_TICKS_PER_MICROSECOND = (1 &lt;&lt; SERVO_RES) * (<span class="keywordtype">float</span>)SERVO_FREQ / 1000000; <span class="comment">// DEFAULT=52.4288  2^SERVO_RES / 1E6 * SERVO_FREQ</span></div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> startMicros = micros();</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">while</span> (digitalRead(servoPin) == HIGH &amp;&amp; micros() - startMicros &lt;= <a class="code hl_variable" href="class_j_motor_driver_servo.html#a551c594a1944dd78b78764e3286ccbec">maxServoValue</a>)</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            ; <span class="comment">//wait for pulse to go low to avoid cutting it short and causing the servo to twitch</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            ; <span class="comment">// wait for pulse to go low to avoid cutting it short and causing the servo to twitch</span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        ledcDetachPin(servoPin);</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        ledcSetup(pwmChannel, SERVO_FREQ, SERVO_RES);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">if</span> (enabled)</div>
@@ -134,20 +134,20 @@ $(function() {
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    {</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">if</span> (_enable) {</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keywordflow">if</span> (!enabled) {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                <span class="comment">//actually enable</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                <span class="comment">// actually enable</span></div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                enabled = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                pinMode(servoPin, OUTPUT);</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                ledcSetup(pwmChannel, SERVO_FREQ, SERVO_RES);</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                ledcAttachPin(servoPin, pwmChannel);</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            }</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        } <span class="keywordflow">else</span> { <span class="comment">//disable</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        } <span class="keywordflow">else</span> { <span class="comment">// disable</span></div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            <span class="keywordflow">if</span> (enabled) {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                <span class="comment">//actually disable</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                <span class="comment">// actually disable</span></div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                enabled = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> startMicros = micros();</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                <span class="keywordflow">while</span> (digitalRead(servoPin) == HIGH &amp;&amp; micros() - startMicros &lt;= <a class="code hl_variable" href="class_j_motor_driver_servo.html#a551c594a1944dd78b78764e3286ccbec">maxServoValue</a>)</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                    ; <span class="comment">//wait for pulse to go low to avoid cutting it short and causing the servo to twitch</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                    ; <span class="comment">// wait for pulse to go low to avoid cutting it short and causing the servo to twitch</span></div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                ledcDetachPin(servoPin);</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                pinMode(servoPin, OUTPUT);</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                digitalWrite(servoPin, LOW);</div>

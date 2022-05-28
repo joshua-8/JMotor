@@ -110,7 +110,7 @@ $(function() {
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                digitalWrite(i2, HIGH);</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            }</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_j_motor_driver_avr_l293.html#a4286bc05bd1c9b0f46f00130146eaea9">breakOn</a> &amp;&amp; val == 0) {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                <a class="code hl_variable" href="class_j_motor_driver_avr_l293.html#ac3693aaf5c9fba48882d1d713390c460">pwmDriver</a>.<a class="code hl_function" href="class_j_motor_driver_avr_p_w_m.html#aa072df575d6fe96ca627c80b1510d360">set</a>(1); <span class="comment">//activate break</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                <a class="code hl_variable" href="class_j_motor_driver_avr_l293.html#ac3693aaf5c9fba48882d1d713390c460">pwmDriver</a>.<a class="code hl_function" href="class_j_motor_driver_avr_p_w_m.html#aa072df575d6fe96ca627c80b1510d360">set</a>(1); <span class="comment">// activate break</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                <a class="code hl_variable" href="class_j_motor_driver_avr_l293.html#ac3693aaf5c9fba48882d1d713390c460">pwmDriver</a>.<a class="code hl_function" href="class_j_motor_driver_avr_p_w_m.html#aa072df575d6fe96ca627c80b1510d360">set</a>(abs(val));</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            }</div>
@@ -121,7 +121,7 @@ $(function() {
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    {</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">if</span> (_enable) {</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">if</span> (!enabled) {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                <span class="comment">//actually enable</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                <span class="comment">// actually enable</span></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                enabled = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                pinMode(i1, OUTPUT);</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                pinMode(i2, OUTPUT);</div>
@@ -130,9 +130,9 @@ $(function() {
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                <a class="code hl_variable" href="class_j_motor_driver_avr_l293.html#ac3693aaf5c9fba48882d1d713390c460">pwmDriver</a>.<a class="code hl_function" href="class_j_motor_driver_avr_p_w_m.html#a713be9a6dbb651d724d42a1178664d24">setEnable</a>(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            }</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        } <span class="keywordflow">else</span> { <span class="comment">//disable</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        } <span class="keywordflow">else</span> { <span class="comment">// disable</span></div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">if</span> (enabled) {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                <span class="comment">//actually disable</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                <span class="comment">// actually disable</span></div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                enabled = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                pinMode(i1, OUTPUT);</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                pinMode(i2, OUTPUT);</div>
