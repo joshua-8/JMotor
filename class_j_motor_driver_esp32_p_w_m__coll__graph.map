@@ -1,4 +1,4 @@
 <map id="JMotorDriverEsp32PWM" name="JMotorDriverEsp32PWM">
-<area shape="rect" id="node1" title="uses ledc to output PWM approximation of an analog output" alt="" coords="5,80,169,107"/>
+<area shape="rect" id="node1" title="uses ledc to output PWM approximation of an analog output ESP32s now have normal analogWrite() so the..." alt="" coords="5,80,169,107"/>
 <area shape="rect" id="node2" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="39,5,135,32"/>
 </map>
