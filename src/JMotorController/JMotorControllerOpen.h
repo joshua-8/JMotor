@@ -9,7 +9,6 @@
  */
 class JMotorControllerOpen : public virtual JMotorController, public JMotorControllerBasic {
 protected:
-    Derivs_Limiter dL;
     bool posMode;
     bool smoothedMode;
     float position;
@@ -17,6 +16,11 @@ protected:
     float posDelta;
 
 public:
+    /**
+     * @brief  use functions from JMotorControllerOpen whenever possible, but the Derivs_Limiter object is public in case you need to change a setting like dL.setPreventGoingWrongWay()
+     * @note   https://github.com/joshua-8/Derivs_Limiter
+     */
+    Derivs_Limiter dL;
     JMotorControllerOpen(JMotorDriver& _driver, JMotorCompensator& _compensator, float _velLimit = INFINITY, float _accelLimit = INFINITY)
         : JMotorControllerBasic(_driver, _compensator, _velLimit, _accelLimit)
         , dL(Derivs_Limiter(_velLimit, _accelLimit))
@@ -36,7 +40,7 @@ public:
         }
         if (getEnable()) {
             if (posMode) {
-                if (!smoothedMode) { //setPosSetpoint() mode
+                if (!smoothedMode) { // setPosSetpoint() mode
                     positionTarget += time * posDelta;
                     if (position == positionTarget) {
                         JMotorControllerBasic::setVel(0);
@@ -45,18 +49,18 @@ public:
                     } else if (abs(positionTarget - position) < getMaxVel() * time) {
                         JMotorControllerBasic::setVel((positionTarget - position) / time);
                         position = positionTarget;
-                    } else { //far away
+                    } else { // far away
                         JMotorControllerBasic::setVel((((positionTarget - position) > 0) ? getMaxVel() : -getMaxVel()));
                         position += velocity * time;
                     }
-                } else { //setPosTarget() mode
+                } else { // setPosTarget() mode
                     dL.setPositionVelocity(position, velocity);
                     dL.setVelLimit(min(velLimit, getMaxVel()));
                     dL.calc(positionTarget);
                     position = dL.getPosition();
                     JMotorControllerBasic::setVel(dL.getVelocity());
                 }
-            } else { //not pos mode
+            } else { // not pos mode
                 JMotorControllerBasic::run();
                 if (abs(velocity) > getMinVel()) {
                     position += velocity * time;
@@ -153,7 +157,7 @@ public:
         return posMode;
     }
 
-    //override basicOpen functions
+    // override basicOpen functions
     void setVel(float vel, bool _run = true)
     {
         posMode = false;

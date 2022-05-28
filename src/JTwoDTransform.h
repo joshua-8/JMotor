@@ -28,7 +28,7 @@ struct JTwoDTransform {
      */
     static JTwoDTransform fromNice(float fb, float sideways, float turn)
     {
-        return { fb, -sideways, radians(-turn) };
+        return { fb, -sideways, (float)radians(-turn) };
     }
 
     static float getForwards(JTwoDTransform t)
