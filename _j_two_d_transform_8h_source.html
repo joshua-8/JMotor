@@ -79,7 +79,7 @@ $(function() {
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_j_two_d_transform.html#a2947afd38a63b01d5e9357f585e09df4">   29</a></span>    <span class="keyword">static</span> <a class="code hl_struct" href="struct_j_two_d_transform.html">JTwoDTransform</a> <a class="code hl_function" href="struct_j_two_d_transform.html#a2947afd38a63b01d5e9357f585e09df4">fromNice</a>(<span class="keywordtype">float</span> fb, <span class="keywordtype">float</span> sideways, <span class="keywordtype">float</span> turn)</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">return</span> { fb, -sideways, radians(-turn) };</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">return</span> { fb, -sideways, (float)radians(-turn) };</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="struct_j_two_d_transform.html#ada1c0b4d0b5f7c09f453a7ba67d0a5f3">   34</a></span>    <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code hl_function" href="struct_j_two_d_transform.html#ada1c0b4d0b5f7c09f453a7ba67d0a5f3">getForwards</a>(<a class="code hl_struct" href="struct_j_two_d_transform.html">JTwoDTransform</a> t)</div>
