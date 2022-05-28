@@ -4,6 +4,7 @@
 #include <Arduino.h>
 /**
  * @brief  uses ledc to output PWM approximation of an analog output
+ * ESP32s now have normal analogWrite() so the "Avr" driver will work, but this driver gives a bit more control over resolution and frequency.
  * @note   platform: ESP32
  */
 class JMotorDriverEsp32PWM : public JMotorDriver {
@@ -81,9 +82,8 @@ public:
             if (!enabled) {
                 //actually enable
                 enabled = true;
-                ledcSetup(ch, PWM_FREQ, PWM_RES);
                 ledcAttachPin(pin, ch);
-                pinMode(pin, OUTPUT);
+                ledcSetup(ch, PWM_FREQ, PWM_RES);
                 ledcWrite(ch, !disableState ? 0 : PWM_RANGE); //set disable state to start with
                 return true;
             }
