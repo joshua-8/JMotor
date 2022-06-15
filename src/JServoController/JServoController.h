@@ -1,14 +1,15 @@
 #ifndef J_SERVO_CONTROLLER_H
 #define J_SERVO_CONTROLLER_H
 #include "Derivs_Limiter.h"
+#include "JMotorController/JMotorController.h"
 #include "JMotorDriver/JMotorDriverServo.h"
 #include <Arduino.h>
-//see bottom of file for #includes of subclasses and other JServoController relevant files
+// see bottom of file for #includes of subclasses and other JServoController relevant files
 /**
  * @brief  class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting
  * @note  after creating a ServoController object with a ServoDriver, using the Driver's methods directly is not recommended
  */
-class JServoController {
+class JServoController : public JMotorController {
 protected:
     /**
      * @brief  reference to driver that's a subclass of JMotorDriverServo
@@ -56,7 +57,8 @@ protected:
 public:
     /**
      * @brief  instance of Derivs_Limiter class used to smoothly move servo
-     * @note   https://github.com/joshua-8/Derivs_Limiter 
+     * @note   use ServoController functions whenever possible rather than directly accessing this.
+     * @note   https://github.com/joshua-8/Derivs_Limiter
      */
     Derivs_Limiter dL;
 
@@ -76,11 +78,11 @@ public:
      * @param  maxServoVal: (int) default: 2400, microseconds for servo signal pulse for maximum angle
      * @param  _preventGoingWrongWay (bool) default: true, immediately stop if going away from target
      * @param  _preventGoingTooFast (bool) default: true, immediately slow down if set to a speed above velLimit
-     * @param  _stoppingAccelLimit (float) default: INFINITY, 
+     * @param  _stoppingDecelLimit (float) default: INFINITY, how much extra deceleration can be used to stop the servo in time (if the target moves towards the servo's position)
      * */
-    JServoController(JMotorDriverServo& _servo, bool _reverse = false, float velLimit = INFINITY, float accelLimit = INFINITY, unsigned long _disableTimeout = 0, float _minAngleLimit = 0, float _maxAngleLimit = 180, float _pos = 90, float _minSetAngle = 0, float _maxSetAngle = 180, int minServoVal = 544, int maxServoVal = 2400, bool _preventGoingWrongWay = true, bool _preventGoingTooFast = true, float _stoppingAccelLimit = INFINITY)
+    JServoController(JMotorDriverServo& _servo, bool _reverse = false, float velLimit = INFINITY, float accelLimit = INFINITY, unsigned long _disableTimeout = 0, float _minAngleLimit = 0, float _maxAngleLimit = 180, float _pos = 90, float _minSetAngle = 0, float _maxSetAngle = 180, int minServoVal = 544, int maxServoVal = 2400, bool _preventGoingWrongWay = true, bool _preventGoingTooFast = true, float _stoppingDecelLimit = INFINITY)
         : servo(_servo)
-        , dL(Derivs_Limiter(max(velLimit, float(0.0)), max(accelLimit, float(0.0)), _pos, _pos, 0, _preventGoingWrongWay, _preventGoingTooFast, min(_minAngleLimit, _maxAngleLimit), max(_minAngleLimit, _maxAngleLimit), _stoppingAccelLimit))
+        , dL(Derivs_Limiter(max(velLimit, float(0.0)), max(accelLimit, float(0.0)), max(accelLimit, float(0.0)), _pos, _pos, 0, _preventGoingWrongWay, _preventGoingTooFast, min(_minAngleLimit, _maxAngleLimit), max(_minAngleLimit, _maxAngleLimit), _stoppingDecelLimit))
     {
         enabled = false;
         sleeping = false;
@@ -109,7 +111,7 @@ public:
                 if (servo.getEnable() == true) {
                     servo.disable();
                 }
-            } else { //activate
+            } else { // activate
                 if (servo.getEnable() == false && enabled) {
                     servo.enable();
                 }
@@ -403,7 +405,7 @@ public:
      * @brief  sets servo position, leaves target where it was
      * @param  pos: (float)
      * @param  _run: (bool) default: true, true = call run() in this function, false = you'll call run() yourself
-     * 
+     *
      */
     void setPosition(float pos, bool _run = true)
     {
@@ -497,13 +499,99 @@ public:
         servo.setConstrainRange(_constrainRange);
     }
 
+    /////////// for compatibility with motor controllers though a bit strange for servos////////////
+    void setVel(float vel, bool _run = true)
+    {
+        dL.setVelConstant(vel);
+        if (_run) {
+            run();
+        }
+    }
+    void setVelTarget(float vel, bool _run = true)
+    {
+        dL.setVelTarget(vel);
+        if (_run) {
+            run();
+        }
+    }
+    float getVelTarget()
+    {
+        return dL.getVelTarget();
+    }
+    float getVel()
+    {
+        return dL.getVelocity();
+    }
+    float getDriverSetVal()
+    {
+        // TODO: fix placeholder (JServoController and JServoControllerAdvanced seem to have some issues with sharing some functions but having different driver types
+        return NAN;
+    }
+    bool isDriverInRange()
+    {
+        // TODO: fix placeholder
+        return true;
+    }
+    float getDriverMinRange()
+    {
+        return min(minAngleLimit, maxAngleLimit);
+    }
+    float getDriverMaxRange()
+    {
+        return max(minAngleLimit, maxAngleLimit);
+    }
+    float getMaxVel()
+    {
+        return dL.getVelLimit();
+    }
+    float getMinVel()
+    {
+        return 0;
+    }
+    void setMaxDriverRangeAmount(float _driverRangeAmount)
+    {
+        // TODO: might not make sense for a servo, but should this do anything?
+    }
+    bool setPosTarget(float _posTarget, bool _run = true)
+    {
+        float tempTarget = getPosTarget();
+        setAngleSmoothed(_posTarget, _run);
+        return tempTarget != getPosTarget();
+    }
+    bool setPosSetpoint(float _posSetpoint, bool _run = true)
+    {
+        float tempPos = getPos();
+        setAngleImmediate(_posSetpoint, _run);
+        return tempPos != getPos();
+    }
+    bool setPosDelta(float _posDelta, bool _run = true, bool _resetPos = false)
+    {
+        setVel(_posDelta, _run);
+        // TODO: resetting the position doesn't make much sense for a servo, so it isn't handled here.
+        return true;
+    }
+    float getPosSetpoint()
+    {
+        return getPos();
+    }
+    float resetPos()
+    {
+        // TODO: not handled by a servo
+        return 0;
+    }
+    bool isPosModeNotVelocity()
+    {
+        return dL.isPosModeNotVelocity();
+    }
+
 protected:
-    void writeAngleToServo(float ang)
+    void
+    writeAngleToServo(float ang)
     {
         ang = constrain(ang, min(minAngleLimit, maxAngleLimit), max(minAngleLimit, maxAngleLimit));
         if ((reverse) != (minAngleLimit < maxAngleLimit)) {
             ang = floatMap(ang, maxSetAngle, minSetAngle, servo.getMinRange(), servo.getMaxRange());
-        } else { //not reversed
+        } else { // not reversed
             ang = floatMap(ang, minSetAngle, maxSetAngle, servo.getMinRange(), servo.getMaxRange());
         }
         if (enabled && !sleeping) {

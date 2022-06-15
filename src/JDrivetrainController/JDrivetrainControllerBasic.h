@@ -5,8 +5,9 @@
 #include <Arduino.h>
 /**
  * @brief  basic drivetrain controller, supports smoothed movements on each axis
- * @note each axis is separate, this drivetrain controller doesn't use distances moved on each axis to actually know its position
+ * @note each axis is separate, this drivetrain controller doesn't combine movements over time to actually calculate its position
  */
+//TODO: comments
 class JDrivetrainControllerBasic : public JDrivetrain {
 protected:
     bool controlled;
@@ -281,6 +282,12 @@ public:
     }
 
     ////JDrivetrain methods:
+    /**
+     * @brief  sets drivetrain velocity immediately
+     * @param  _vel: JTwoDTransform of velocity wanted for drivetrain
+     * @param  _run: (bool) default=false, true=run gets called within this function, false=call run yourself outside this function
+     * @retval None
+     */
     void setVel(JTwoDTransform _vel, bool _run = false)
     {
         controlled = false;
