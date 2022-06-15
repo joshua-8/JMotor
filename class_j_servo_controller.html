@@ -81,10 +81,12 @@ Inheritance diagram for JServoController:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_servo_controller__inherit__graph.png" border="0" usemap="#a_j_servo_controller_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_j_servo_controller_inherit__map" id="a_j_servo_controller_inherit__map">
-<area shape="rect" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="141,5,259,32"/>
-<area shape="rect" href="class_j_servo_controller_advanced.html" title="class for controlling JMotorDriverServoAdvanced, with power reducing option along with standard JServ..." alt="" coords="17,80,193,107"/>
-<area shape="rect" href="class_j_servo_controller_gentle.html" title="JServoControllerGentle is an extension of JServoController that uses JServoStallSensing to make a ser..." alt="" coords="218,80,374,107"/>
-<area shape="rect" href="class_j_servo_controller_stall_protected.html" title="this child class of JServoController uses JServoStallSensing to reduce servo power" alt="" coords="5,155,205,181"/>
+<area shape="rect" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="141,155,259,181"/>
+<area shape="rect" href="class_j_servo_controller_advanced.html" title="class for controlling JMotorDriverServoAdvanced, with power reducing option along with standard JServ..." alt="" coords="17,229,193,256"/>
+<area shape="rect" href="class_j_servo_controller_gentle.html" title="JServoControllerGentle is an extension of JServoController that uses JServoStallSensing to make a ser..." alt="" coords="218,229,374,256"/>
+<area shape="rect" href="class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="141,80,259,107"/>
+<area shape="rect" href="class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="127,5,273,32"/>
+<area shape="rect" href="class_j_servo_controller_stall_protected.html" title="this child class of JServoController uses JServoStallSensing to reduce servo power" alt="" coords="5,304,205,331"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -92,17 +94,19 @@ Collaboration diagram for JServoController:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_servo_controller__coll__graph.png" border="0" usemap="#a_j_servo_controller_coll__map" alt="Collaboration graph"/></div>
 <map name="a_j_servo_controller_coll__map" id="a_j_servo_controller_coll__map">
-<area shape="rect" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="11,171,130,197"/>
-<area shape="rect" href="class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="5,81,136,108"/>
-<area shape="rect" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="23,5,119,32"/>
+<area shape="rect" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="93,171,211,197"/>
+<area shape="rect" href="class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="20,81,137,108"/>
+<area shape="rect" href="class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="5,5,152,32"/>
+<area shape="rect" href="class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="161,81,292,108"/>
+<area shape="rect" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="179,5,275,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a44355af01e54681967394a32bd6a2d02"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a44355af01e54681967394a32bd6a2d02">JServoController</a> (<a class="el" href="class_j_motor_driver_servo.html">JMotorDriverServo</a> &amp;_servo, bool _reverse=false, float velLimit=INFINITY, float accelLimit=INFINITY, unsigned long _disableTimeout=0, float _minAngleLimit=0, float _maxAngleLimit=180, float _pos=90, float _minSetAngle=0, float _maxSetAngle=180, int minServoVal=544, int maxServoVal=2400, bool _preventGoingWrongWay=true, bool _preventGoingTooFast=true, float _stoppingAccelLimit=INFINITY)</td></tr>
-<tr class="memdesc:a44355af01e54681967394a32bd6a2d02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting">JServoController</a>, a class for controlling <a class="el" href="class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo">JMotorDriverServo</a>, with angle calibration and accel and velocity limiting.  <a href="class_j_servo_controller.html#a44355af01e54681967394a32bd6a2d02">More...</a><br /></td></tr>
-<tr class="separator:a44355af01e54681967394a32bd6a2d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0a030cf14869bc0eea819c18042f316"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#aa0a030cf14869bc0eea819c18042f316">JServoController</a> (<a class="el" href="class_j_motor_driver_servo.html">JMotorDriverServo</a> &amp;_servo, bool _reverse=false, float velLimit=INFINITY, float accelLimit=INFINITY, unsigned long _disableTimeout=0, float _minAngleLimit=0, float _maxAngleLimit=180, float _pos=90, float _minSetAngle=0, float _maxSetAngle=180, int minServoVal=544, int maxServoVal=2400, bool _preventGoingWrongWay=true, bool _preventGoingTooFast=true, float _stoppingDecelLimit=INFINITY)</td></tr>
+<tr class="memdesc:aa0a030cf14869bc0eea819c18042f316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting">JServoController</a>, a class for controlling <a class="el" href="class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo">JMotorDriverServo</a>, with angle calibration and accel and velocity limiting.  <a href="class_j_servo_controller.html#aa0a030cf14869bc0eea819c18042f316">More...</a><br /></td></tr>
+<tr class="separator:aa0a030cf14869bc0eea819c18042f316"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2aaa4c4bbc534a04bef7cad95c2c09a1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1">run</a> ()</td></tr>
 <tr class="memdesc:a2aaa4c4bbc534a04bef7cad95c2c09a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">call this in your main loop  <a href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1">More...</a><br /></td></tr>
 <tr class="separator:a2aaa4c4bbc534a04bef7cad95c2c09a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,12 +195,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:addc55e933cd46882773d86c8cb7fad12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#addc55e933cd46882773d86c8cb7fad12">setMaxSetAngle</a> (float _maxSetAngle)</td></tr>
 <tr class="separator:addc55e933cd46882773d86c8cb7fad12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3039d7dee57f4a7ae5cc4529450d143"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#af3039d7dee57f4a7ae5cc4529450d143">getAccelLimit</a> ()</td></tr>
+<tr class="memdesc:af3039d7dee57f4a7ae5cc4529450d143"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns value of accelLimit  <a href="class_j_servo_controller.html#af3039d7dee57f4a7ae5cc4529450d143">More...</a><br /></td></tr>
 <tr class="separator:af3039d7dee57f4a7ae5cc4529450d143"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2621e82b1b3071dedf5a2917653356b8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a2621e82b1b3071dedf5a2917653356b8">getVelLimit</a> ()</td></tr>
+<tr class="memdesc:a2621e82b1b3071dedf5a2917653356b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns value of velLimit  <a href="class_j_servo_controller.html#a2621e82b1b3071dedf5a2917653356b8">More...</a><br /></td></tr>
 <tr class="separator:a2621e82b1b3071dedf5a2917653356b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a39f5552cc476bdb3c5e2aa43e57e17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a5a39f5552cc476bdb3c5e2aa43e57e17">setAccelLimit</a> (float accelLim)</td></tr>
+<tr class="memdesc:a5a39f5552cc476bdb3c5e2aa43e57e17"><td class="mdescLeft">&#160;</td><td class="mdescRight">set maximum rate that motor speed can be changed at  <a href="class_j_servo_controller.html#a5a39f5552cc476bdb3c5e2aa43e57e17">More...</a><br /></td></tr>
 <tr class="separator:a5a39f5552cc476bdb3c5e2aa43e57e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a176439e84bed8cd26c7a612c388089f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a176439e84bed8cd26c7a612c388089f5">setVelLimit</a> (float velLim)</td></tr>
+<tr class="memdesc:a176439e84bed8cd26c7a612c388089f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">set maximum motor speed  <a href="class_j_servo_controller.html#a176439e84bed8cd26c7a612c388089f5">More...</a><br /></td></tr>
 <tr class="separator:a176439e84bed8cd26c7a612c388089f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62ff2ff6acc897e57f84c12893f62861"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a62ff2ff6acc897e57f84c12893f62861">setVelAccelLimits</a> (float velLim, float accelLim)</td></tr>
 <tr class="separator:a62ff2ff6acc897e57f84c12893f62861"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -230,6 +238,57 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2d85aa9114764726887b2a34b7a880f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a2d85aa9114764726887b2a34b7a880f4">setConstrainRange</a> (bool _constrainRange)</td></tr>
 <tr class="memdesc:a2d85aa9114764726887b2a34b7a880f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">set whether the range of set() will be constrained to within -1 and 1  <a href="class_j_servo_controller.html#a2d85aa9114764726887b2a34b7a880f4">More...</a><br /></td></tr>
 <tr class="separator:a2d85aa9114764726887b2a34b7a880f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a702f3a3c30deb5d177341607cfc59b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a8a702f3a3c30deb5d177341607cfc59b">setVel</a> (float vel, bool _run=true)</td></tr>
+<tr class="memdesc:a8a702f3a3c30deb5d177341607cfc59b"><td class="mdescLeft">&#160;</td><td class="mdescRight">set velocity for controller  <a href="class_j_servo_controller.html#a8a702f3a3c30deb5d177341607cfc59b">More...</a><br /></td></tr>
+<tr class="separator:a8a702f3a3c30deb5d177341607cfc59b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae61d39630fbd21514d7ef1ca13e9b946"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#ae61d39630fbd21514d7ef1ca13e9b946">setVelTarget</a> (float vel, bool _run=true)</td></tr>
+<tr class="memdesc:ae61d39630fbd21514d7ef1ca13e9b946"><td class="mdescLeft">&#160;</td><td class="mdescRight">set target velocity for controller (acceleration limited)  <a href="class_j_servo_controller.html#ae61d39630fbd21514d7ef1ca13e9b946">More...</a><br /></td></tr>
+<tr class="separator:ae61d39630fbd21514d7ef1ca13e9b946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a714746bb34678afd34f4412dba2904d3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a714746bb34678afd34f4412dba2904d3">getVelTarget</a> ()</td></tr>
+<tr class="memdesc:a714746bb34678afd34f4412dba2904d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">get target velocity for controller  <a href="class_j_servo_controller.html#a714746bb34678afd34f4412dba2904d3">More...</a><br /></td></tr>
+<tr class="separator:a714746bb34678afd34f4412dba2904d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adba23d59ba3e39cdfd852c6d6223a43e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#adba23d59ba3e39cdfd852c6d6223a43e">getVel</a> ()</td></tr>
+<tr class="memdesc:adba23d59ba3e39cdfd852c6d6223a43e"><td class="mdescLeft">&#160;</td><td class="mdescRight">get current velocity of motor  <a href="class_j_servo_controller.html#adba23d59ba3e39cdfd852c6d6223a43e">More...</a><br /></td></tr>
+<tr class="separator:adba23d59ba3e39cdfd852c6d6223a43e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa828ed6729263b972b903dc2dd7a5664"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#aa828ed6729263b972b903dc2dd7a5664">getDriverSetVal</a> ()</td></tr>
+<tr class="memdesc:aa828ed6729263b972b903dc2dd7a5664"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the value the motor driver is being set to  <a href="class_j_servo_controller.html#aa828ed6729263b972b903dc2dd7a5664">More...</a><br /></td></tr>
+<tr class="separator:aa828ed6729263b972b903dc2dd7a5664"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c9f778d2e6d25a0746ba27a1d5bb4d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a2c9f778d2e6d25a0746ba27a1d5bb4d2">isDriverInRange</a> ()</td></tr>
+<tr class="memdesc:a2c9f778d2e6d25a0746ba27a1d5bb4d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if motor driver is being set to within its range, false if driver is at a maximum  <a href="class_j_servo_controller.html#a2c9f778d2e6d25a0746ba27a1d5bb4d2">More...</a><br /></td></tr>
+<tr class="separator:a2c9f778d2e6d25a0746ba27a1d5bb4d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a666ac37d883fbb5cf8ccf90c19d9596a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a666ac37d883fbb5cf8ccf90c19d9596a">getDriverMinRange</a> ()</td></tr>
+<tr class="memdesc:a666ac37d883fbb5cf8ccf90c19d9596a"><td class="mdescLeft">&#160;</td><td class="mdescRight">if getDriverSetVal goes below this, isDriverInRange will go false  <a href="class_j_servo_controller.html#a666ac37d883fbb5cf8ccf90c19d9596a">More...</a><br /></td></tr>
+<tr class="separator:a666ac37d883fbb5cf8ccf90c19d9596a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f7342bf8a38f2d3e2cb8f4509b7d2c3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a3f7342bf8a38f2d3e2cb8f4509b7d2c3">getDriverMaxRange</a> ()</td></tr>
+<tr class="memdesc:a3f7342bf8a38f2d3e2cb8f4509b7d2c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">if getDriverSetVal exceeds this, isDriverInRange will go false  <a href="class_j_servo_controller.html#a3f7342bf8a38f2d3e2cb8f4509b7d2c3">More...</a><br /></td></tr>
+<tr class="separator:a3f7342bf8a38f2d3e2cb8f4509b7d2c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0bc9e6a1cc61fd021cabefe1bade378"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#ab0bc9e6a1cc61fd021cabefe1bade378">getMaxVel</a> ()</td></tr>
+<tr class="memdesc:ab0bc9e6a1cc61fd021cabefe1bade378"><td class="mdescLeft">&#160;</td><td class="mdescRight">How fast of a motor speed setting would get adjusted to full motor power.  <a href="class_j_servo_controller.html#ab0bc9e6a1cc61fd021cabefe1bade378">More...</a><br /></td></tr>
+<tr class="separator:ab0bc9e6a1cc61fd021cabefe1bade378"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4e447e44b21d1a4b9e9c968a80d1898"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#ac4e447e44b21d1a4b9e9c968a80d1898">getMinVel</a> ()</td></tr>
+<tr class="memdesc:ac4e447e44b21d1a4b9e9c968a80d1898"><td class="mdescLeft">&#160;</td><td class="mdescRight">slowest speed motor can go  <a href="class_j_servo_controller.html#ac4e447e44b21d1a4b9e9c968a80d1898">More...</a><br /></td></tr>
+<tr class="separator:ac4e447e44b21d1a4b9e9c968a80d1898"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dbacc35b5765660899b293dd140cedb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a6dbacc35b5765660899b293dd140cedb">setMaxDriverRangeAmount</a> (float _driverRangeAmount)</td></tr>
+<tr class="memdesc:a6dbacc35b5765660899b293dd140cedb"><td class="mdescLeft">&#160;</td><td class="mdescRight">set what fraction of driverRange can be used  <a href="class_j_servo_controller.html#a6dbacc35b5765660899b293dd140cedb">More...</a><br /></td></tr>
+<tr class="separator:a6dbacc35b5765660899b293dd140cedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a170fea3784ceb8653ecd53a53a49d081"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a170fea3784ceb8653ecd53a53a49d081">setPosTarget</a> (float _posTarget, bool _run=true)</td></tr>
+<tr class="memdesc:a170fea3784ceb8653ecd53a53a49d081"><td class="mdescLeft">&#160;</td><td class="mdescRight">set target position (motor drives towards position, following acceleration profile)  <a href="class_j_servo_controller.html#a170fea3784ceb8653ecd53a53a49d081">More...</a><br /></td></tr>
+<tr class="separator:a170fea3784ceb8653ecd53a53a49d081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a006d1f4414fdb47ec23250aa3fe258e1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a006d1f4414fdb47ec23250aa3fe258e1">setPosSetpoint</a> (float _posSetpoint, bool _run=true)</td></tr>
+<tr class="memdesc:a006d1f4414fdb47ec23250aa3fe258e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">set position for motor to drive towards position as fast as possible (setpoint for control loop if available)  <a href="class_j_servo_controller.html#a006d1f4414fdb47ec23250aa3fe258e1">More...</a><br /></td></tr>
+<tr class="separator:a006d1f4414fdb47ec23250aa3fe258e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a751af76719a1a1573cb77448ba8f089f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a751af76719a1a1573cb77448ba8f089f">setPosDelta</a> (float _posDelta, bool _run=true, bool _resetPos=false)</td></tr>
+<tr class="memdesc:a751af76719a1a1573cb77448ba8f089f"><td class="mdescLeft">&#160;</td><td class="mdescRight">alternative method for setting velocity that uses setPosSetpoint  <a href="class_j_servo_controller.html#a751af76719a1a1573cb77448ba8f089f">More...</a><br /></td></tr>
+<tr class="separator:a751af76719a1a1573cb77448ba8f089f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac7bd7c99a45d1e8702ef84a5d335164"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#aac7bd7c99a45d1e8702ef84a5d335164">getPosSetpoint</a> ()</td></tr>
+<tr class="memdesc:aac7bd7c99a45d1e8702ef84a5d335164"><td class="mdescLeft">&#160;</td><td class="mdescRight">get position controller is currently trying to get to  <a href="class_j_servo_controller.html#aac7bd7c99a45d1e8702ef84a5d335164">More...</a><br /></td></tr>
+<tr class="separator:aac7bd7c99a45d1e8702ef84a5d335164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74ade27816312f15a32e21992f98a5e1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#a74ade27816312f15a32e21992f98a5e1">resetPos</a> ()</td></tr>
+<tr class="memdesc:a74ade27816312f15a32e21992f98a5e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset what position the controller thinks it's in  <a href="class_j_servo_controller.html#a74ade27816312f15a32e21992f98a5e1">More...</a><br /></td></tr>
+<tr class="separator:a74ade27816312f15a32e21992f98a5e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad524a517d79d6b5a6f31f47c3e9a0c68"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller.html#ad524a517d79d6b5a6f31f47c3e9a0c68">isPosModeNotVelocity</a> ()</td></tr>
+<tr class="memdesc:ad524a517d79d6b5a6f31f47c3e9a0c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if controller is in position target mode, false if in velocity mode  <a href="class_j_servo_controller.html#ad524a517d79d6b5a6f31f47c3e9a0c68">More...</a><br /></td></tr>
+<tr class="separator:ad524a517d79d6b5a6f31f47c3e9a0c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -281,8 +340,8 @@ Protected Attributes</h2></td></tr>
 <div class="textblock"><p >class for controlling <a class="el" href="class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo">JMotorDriverServo</a>, with angle calibration and accel and velocity limiting </p>
 <dl class="section note"><dt>Note</dt><dd>after creating a ServoController object with a ServoDriver, using the Driver's methods directly is not recommended </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a44355af01e54681967394a32bd6a2d02" name="a44355af01e54681967394a32bd6a2d02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44355af01e54681967394a32bd6a2d02">&#9670;&nbsp;</a></span>JServoController()</h2>
+<a id="aa0a030cf14869bc0eea819c18042f316" name="aa0a030cf14869bc0eea819c18042f316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0a030cf14869bc0eea819c18042f316">&#9670;&nbsp;</a></span>JServoController()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -378,7 +437,7 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>_stoppingAccelLimit</em> = <code>INFINITY</code>&#160;</td>
+          <td class="paramname"><em>_stoppingDecelLimit</em> = <code>INFINITY</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -410,7 +469,7 @@ Protected Attributes</h2></td></tr>
     <tr><td class="paramname">maxServoVal</td><td>(int) default: 2400, microseconds for servo signal pulse for maximum angle </td></tr>
     <tr><td class="paramname">_preventGoingWrongWay</td><td>(bool) default: true, immediately stop if going away from target </td></tr>
     <tr><td class="paramname">_preventGoingTooFast</td><td>(bool) default: true, immediately slow down if set to a speed above velLimit </td></tr>
-    <tr><td class="paramname">_stoppingAccelLimit</td><td>(float) default: INFINITY, </td></tr>
+    <tr><td class="paramname">_stoppingDecelLimit</td><td>(float) default: INFINITY, how much extra deceleration can be used to stop the servo in time (if the target moves towards the servo's position) </td></tr>
   </table>
   </dd>
 </dl>
@@ -436,12 +495,14 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>equivalent to setEnable(false) </p>
+
+<p>Implements <a class="el" href="class_j_motor_controller_base.html#a4e3bc50d683df07a866d626f4ac9d080">JMotorControllerBase</a>.</p>
 
 </div>
 </div>
@@ -496,12 +557,14 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>equivalent to setEnable(true) </p>
+
+<p>Implements <a class="el" href="class_j_motor_controller_base.html#a3dc05bc56857e08cb6a3b8f7f779ba7d">JMotorControllerBase</a>.</p>
 
 </div>
 </div>
@@ -577,10 +640,20 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>returns value of accelLimit </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(float)</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller_base.html#af544bfd3696bcacfb02734999230242b">JMotorControllerBase</a>.</p>
 
 </div>
 </div>
@@ -700,6 +773,111 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a3f7342bf8a38f2d3e2cb8f4509b7d2c3" name="a3f7342bf8a38f2d3e2cb8f4509b7d2c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f7342bf8a38f2d3e2cb8f4509b7d2c3">&#9670;&nbsp;</a></span>getDriverMaxRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JServoController::getDriverMaxRange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>if getDriverSetVal exceeds this, isDriverInRange will go false </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(float)</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller_base.html#a6763e24b878a30b09f37d04e05c11a21">JMotorControllerBase</a>.</p>
+
+</div>
+</div>
+<a id="a666ac37d883fbb5cf8ccf90c19d9596a" name="a666ac37d883fbb5cf8ccf90c19d9596a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a666ac37d883fbb5cf8ccf90c19d9596a">&#9670;&nbsp;</a></span>getDriverMinRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JServoController::getDriverMinRange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>if getDriverSetVal goes below this, isDriverInRange will go false </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(float)</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller_base.html#a72b67735c75358fc5e0f6128af278d72">JMotorControllerBase</a>.</p>
+
+</div>
+</div>
+<a id="aa828ed6729263b972b903dc2dd7a5664" name="aa828ed6729263b972b903dc2dd7a5664"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa828ed6729263b972b903dc2dd7a5664">&#9670;&nbsp;</a></span>getDriverSetVal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JServoController::getDriverSetVal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>returns the value the motor driver is being set to </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(float)</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller_base.html#acc0e2d370e97ff0e8b176d49fabaaf73">JMotorControllerBase</a>.</p>
+
+</div>
+</div>
 <a id="aa66f13c46d1f4e89f0de72edc0566ec3" name="aa66f13c46d1f4e89f0de72edc0566ec3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa66f13c46d1f4e89f0de72edc0566ec3">&#9670;&nbsp;</a></span>getEnable()</h2>
 
@@ -718,7 +896,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -730,6 +908,8 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller_base.html#a86dd60cda0072e5a2cdcd83f9ba5fa45">JMotorControllerBase</a>.</p>
 
 </div>
 </div>
@@ -824,6 +1004,42 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ab0bc9e6a1cc61fd021cabefe1bade378" name="ab0bc9e6a1cc61fd021cabefe1bade378"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0bc9e6a1cc61fd021cabefe1bade378">&#9670;&nbsp;</a></span>getMaxVel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JServoController::getMaxVel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>How fast of a motor speed setting would get adjusted to full motor power. </p>
+<dl class="section note"><dt>Note</dt><dd>may change as battery voltage changes </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(float)</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller_base.html#a95c2fc47d95720f39564dac4d4c4da69">JMotorControllerBase</a>.</p>
+
+</div>
+</div>
 <a id="a14448b8186cc9c200bb7108314b3e2af" name="a14448b8186cc9c200bb7108314b3e2af"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a14448b8186cc9c200bb7108314b3e2af">&#9670;&nbsp;</a></span>getMillisSinceMoved()</h2>
 
@@ -915,6 +1131,35 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ac4e447e44b21d1a4b9e9c968a80d1898" name="ac4e447e44b21d1a4b9e9c968a80d1898"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4e447e44b21d1a4b9e9c968a80d1898">&#9670;&nbsp;</a></span>getMinVel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JServoController::getMinVel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>slowest speed motor can go </p>
+
+<p>Implements <a class="el" href="class_j_motor_controller_base.html#ad7fb53f36fcbcde9e2756c63fb41e536">JMotorControllerBase</a>.</p>
+
+</div>
+</div>
 <a id="a80e157026e2f63f4fbd976f301c0883c" name="a80e157026e2f63f4fbd976f301c0883c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a80e157026e2f63f4fbd976f301c0883c">&#9670;&nbsp;</a></span>getPos()</h2>
 
@@ -933,7 +1178,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -945,6 +1190,43 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller.html#a0808e304ca6a0934aa7072d1ca57dd77">JMotorController</a>.</p>
+
+</div>
+</div>
+<a id="aac7bd7c99a45d1e8702ef84a5d335164" name="aac7bd7c99a45d1e8702ef84a5d335164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac7bd7c99a45d1e8702ef84a5d335164">&#9670;&nbsp;</a></span>getPosSetpoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JServoController::getPosSetpoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get position controller is currently trying to get to </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(float)</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller.html#a55608bfa43954871518da079f45f726c">JMotorController</a>.</p>
 
 </div>
 </div>
@@ -966,7 +1248,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -978,6 +1260,8 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller.html#a2ff1187810db4bff53127d79d01978a8">JMotorController</a>.</p>
 
 </div>
 </div>
@@ -1072,6 +1356,41 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="adba23d59ba3e39cdfd852c6d6223a43e" name="adba23d59ba3e39cdfd852c6d6223a43e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adba23d59ba3e39cdfd852c6d6223a43e">&#9670;&nbsp;</a></span>getVel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JServoController::getVel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get current velocity of motor </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(float)</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller_base.html#a33268cbe87efb49e93bc749cfc73d585">JMotorControllerBase</a>.</p>
+
+</div>
+</div>
 <a id="a2621e82b1b3071dedf5a2917653356b8" name="a2621e82b1b3071dedf5a2917653356b8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2621e82b1b3071dedf5a2917653356b8">&#9670;&nbsp;</a></span>getVelLimit()</h2>
 
@@ -1090,10 +1409,20 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>returns value of velLimit </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(float)</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller_base.html#aaf0c2acd4b8a16e797c381926f3c702a">JMotorControllerBase</a>.</p>
 
 </div>
 </div>
@@ -1130,6 +1459,76 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a714746bb34678afd34f4412dba2904d3" name="a714746bb34678afd34f4412dba2904d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a714746bb34678afd34f4412dba2904d3">&#9670;&nbsp;</a></span>getVelTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JServoController::getVelTarget </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get target velocity for controller </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(float)</td><td>current velocity target </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller_base.html#a349dce8efe007dd9534dc2ecdf6c3912">JMotorControllerBase</a>.</p>
+
+</div>
+</div>
+<a id="a2c9f778d2e6d25a0746ba27a1d5bb4d2" name="a2c9f778d2e6d25a0746ba27a1d5bb4d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c9f778d2e6d25a0746ba27a1d5bb4d2">&#9670;&nbsp;</a></span>isDriverInRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool JServoController::isDriverInRange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>true if motor driver is being set to within its range, false if driver is at a maximum </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(bool)</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller_base.html#a770c6b052245e393a9f1fa348868d91a">JMotorControllerBase</a>.</p>
+
+</div>
+</div>
 <a id="ab20ef1576ff0888cc869ab79f3ecc7f7" name="ab20ef1576ff0888cc869ab79f3ecc7f7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab20ef1576ff0888cc869ab79f3ecc7f7">&#9670;&nbsp;</a></span>isPosAtTarget()</h2>
 
@@ -1163,6 +1562,41 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ad524a517d79d6b5a6f31f47c3e9a0c68" name="ad524a517d79d6b5a6f31f47c3e9a0c68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad524a517d79d6b5a6f31f47c3e9a0c68">&#9670;&nbsp;</a></span>isPosModeNotVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool JServoController::isPosModeNotVelocity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>true if controller is in position target mode, false if in velocity mode </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(bool)</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller.html#ad804d498f8757e0923f81f15d2d4edf8">JMotorController</a>.</p>
+
+</div>
+</div>
 <a id="ae1e88aec27bf797d00ea477678c7b509" name="ae1e88aec27bf797d00ea477678c7b509"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1e88aec27bf797d00ea477678c7b509">&#9670;&nbsp;</a></span>isPosNotAtTarget()</h2>
 
@@ -1193,6 +1627,42 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a74ade27816312f15a32e21992f98a5e1" name="a74ade27816312f15a32e21992f98a5e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74ade27816312f15a32e21992f98a5e1">&#9670;&nbsp;</a></span>resetPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float JServoController::resetPos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>reset what position the controller thinks it's in </p>
+<dl class="section note"><dt>Note</dt><dd>don't drive too far without resetting this so that the limited precision of floats doesn't become a problem. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(float)</td><td>returns old position </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller.html#a07c8715135799319bae0d4a86751cab5">JMotorController</a>.</p>
 
 </div>
 </div>
@@ -1248,6 +1718,8 @@ Protected Attributes</h2></td></tr>
 
 <p>call this in your main loop </p>
 
+<p>Implements <a class="el" href="class_j_motor_controller_base.html#adfd3be6aaf5534f049ac60ffc053bc11">JMotorControllerBase</a>.</p>
+
 <p>Reimplemented in <a class="el" href="class_j_servo_controller_advanced.html#abead3a8ad2e1d1df22e8bc3457df891c">JServoControllerAdvanced</a>, <a class="el" href="class_j_servo_controller_gentle.html#ad4cb54385e6c1107a06cd255154948bd">JServoControllerGentle</a>, and <a class="el" href="class_j_servo_controller_stall_protected.html#a8fab5ba1ce403c3b61e5318316ffbec7">JServoControllerStallProtected</a>.</p>
 
 </div>
@@ -1265,16 +1737,27 @@ Protected Attributes</h2></td></tr>
           <td class="memname">void JServoController::setAccelLimit </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>accelLim</em></td><td>)</td>
+          <td class="paramname"><em>_accelLimit</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>set maximum rate that motor speed can be changed at </p>
+<dl class="section note"><dt>Note</dt><dd>set to INFINITY to disable acceleration limiting </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_accelLimit</td><td>(float) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller_base.html#a28759c8046b25a124ff01c80344ce690">JMotorControllerBase</a>.</p>
 
 </div>
 </div>
@@ -1556,6 +2039,8 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
+<p>Implements <a class="el" href="class_j_motor_controller_base.html#afb6d5d8401b3bd775531516f7836f7c9">JMotorControllerBase</a>.</p>
+
 <p>Reimplemented in <a class="el" href="class_j_servo_controller_advanced.html#ab9191cf4a4ffadaf186737429d8324f1">JServoControllerAdvanced</a>.</p>
 
 </div>
@@ -1618,6 +2103,42 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6dbacc35b5765660899b293dd140cedb" name="a6dbacc35b5765660899b293dd140cedb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dbacc35b5765660899b293dd140cedb">&#9670;&nbsp;</a></span>setMaxDriverRangeAmount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JServoController::setMaxDriverRangeAmount </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_driverRangeAmount</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set what fraction of driverRange can be used </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_driverRangeAmount</td><td>(float) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller_base.html#a69e70a259b49afbb240f03b3f46531e9">JMotorControllerBase</a>.</p>
 
 </div>
 </div>
@@ -1767,6 +2288,67 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a751af76719a1a1573cb77448ba8f089f" name="a751af76719a1a1573cb77448ba8f089f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a751af76719a1a1573cb77448ba8f089f">&#9670;&nbsp;</a></span>setPosDelta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool JServoController::setPosDelta </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_posDelta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_run</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_resetPos</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>alternative method for setting velocity that uses setPosSetpoint </p>
+<dl class="section note"><dt>Note</dt><dd>handles velocities below <a class="el" href="class_j_servo_controller.html#ac4e447e44b21d1a4b9e9c968a80d1898" title="slowest speed motor can go">getMinVel()</a>, and may have better distance accuracy, doesn't smooth velocity </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_posDelta</td><td>(float) basically velocity </td></tr>
+    <tr><td class="paramname">_resetPos</td><td>(bool) default=false, keep setting current position to zero </td></tr>
+    <tr><td class="paramname">_run</td><td>(bool) default:true, true = call <a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1" title="call this in your main loop">run()</a> in this function, false = you'll call <a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1" title="call this in your main loop">run()</a> yourself </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(bool)</td><td>did the setting change? </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller.html#adbd35fd91c445e113fed9c95447a996c">JMotorController</a>.</p>
+
+</div>
+</div>
 <a id="a05367e6621ff9a8e2d146d6fdbac90ca" name="a05367e6621ff9a8e2d146d6fdbac90ca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a05367e6621ff9a8e2d146d6fdbac90ca">&#9670;&nbsp;</a></span>setPosition()</h2>
 
@@ -1809,6 +2391,113 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a006d1f4414fdb47ec23250aa3fe258e1" name="a006d1f4414fdb47ec23250aa3fe258e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a006d1f4414fdb47ec23250aa3fe258e1">&#9670;&nbsp;</a></span>setPosSetpoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool JServoController::setPosSetpoint </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_posSetpoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_run</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set position for motor to drive towards position as fast as possible (setpoint for control loop if available) </p>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1" title="call this in your main loop">run()</a> needs to be called in order for the motor to move </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_posSetpoint</td><td>(float) position setpoint </td></tr>
+    <tr><td class="paramname">_run</td><td>(bool) default:true, true = call <a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1" title="call this in your main loop">run()</a> in this function, false = you'll call <a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1" title="call this in your main loop">run()</a> yourself </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(bool)</td><td>did the setpoint change? </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller.html#a810fe7d9d28f4a0ab93255e913008e7e">JMotorController</a>.</p>
+
+</div>
+</div>
+<a id="a170fea3784ceb8653ecd53a53a49d081" name="a170fea3784ceb8653ecd53a53a49d081"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a170fea3784ceb8653ecd53a53a49d081">&#9670;&nbsp;</a></span>setPosTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool JServoController::setPosTarget </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_posTarget</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_run</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set target position (motor drives towards position, following acceleration profile) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_posTarget</td><td>(float) target position </td></tr>
+    <tr><td class="paramname">_run</td><td>(bool) default:true, true = call <a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1" title="call this in your main loop">run()</a> in this function, false = you'll call <a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1" title="call this in your main loop">run()</a> yourself </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(bool)</td><td>did the target change? </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller.html#a611f04b0814aefeae0c635f4f827b1c1">JMotorController</a>.</p>
 
 </div>
 </div>
@@ -1919,6 +2608,54 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a8a702f3a3c30deb5d177341607cfc59b" name="a8a702f3a3c30deb5d177341607cfc59b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a702f3a3c30deb5d177341607cfc59b">&#9670;&nbsp;</a></span>setVel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JServoController::setVel </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_run</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set velocity for controller </p>
+<dl class="section note"><dt>Note</dt><dd>this function can be called repeatedly, or just once if <a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1" title="call this in your main loop">run()</a> is called frequently </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vel</td><td>(float) </td></tr>
+    <tr><td class="paramname">_run</td><td>(bool) default:true, true = call <a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1" title="call this in your main loop">run()</a> in this function, false = you'll call <a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1" title="call this in your main loop">run()</a> yourself </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller_base.html#a49dacee10510d77e25564b14820dc154">JMotorControllerBase</a>.</p>
+
+</div>
+</div>
 <a id="a62ff2ff6acc897e57f84c12893f62861" name="a62ff2ff6acc897e57f84c12893f62861"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a62ff2ff6acc897e57f84c12893f62861">&#9670;&nbsp;</a></span>setVelAccelLimits()</h2>
 
@@ -1968,16 +2705,75 @@ Protected Attributes</h2></td></tr>
           <td class="memname">void JServoController::setVelLimit </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>velLim</em></td><td>)</td>
+          <td class="paramname"><em>_velLimit</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>set maximum motor speed </p>
+<dl class="section note"><dt>Note</dt><dd>set to INFINITY to disable limit </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_velLimit</td><td>(float) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller.html#a28d7e68c1178c33f233499d1c7f92630">JMotorController</a>.</p>
+
+</div>
+</div>
+<a id="ae61d39630fbd21514d7ef1ca13e9b946" name="ae61d39630fbd21514d7ef1ca13e9b946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae61d39630fbd21514d7ef1ca13e9b946">&#9670;&nbsp;</a></span>setVelTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JServoController::setVelTarget </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_run</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set target velocity for controller (acceleration limited) </p>
+<dl class="section note"><dt>Note</dt><dd>this function can be called repeatedly, or just once if <a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1" title="call this in your main loop">run()</a> is called frequently </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vel</td><td>(float) target velocity </td></tr>
+    <tr><td class="paramname">_run</td><td>(bool) default:true, true = call <a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1" title="call this in your main loop">run()</a> in this function, false = you'll call <a class="el" href="class_j_servo_controller.html#a2aaa4c4bbc534a04bef7cad95c2c09a1" title="call this in your main loop">run()</a> yourself </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_motor_controller_base.html#a30166b969d806d615d7af4c641a69301">JMotorControllerBase</a>.</p>
 
 </div>
 </div>
@@ -2073,7 +2869,9 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>instance of Derivs_Limiter class used to smoothly move servo </p>
-<dl class="section note"><dt>Note</dt><dd><a href="https://github.com/joshua-8/Derivs_Limiter">https://github.com/joshua-8/Derivs_Limiter</a> </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>use ServoController functions whenever possible rather than directly accessing this. </dd>
+<dd>
+<a href="https://github.com/joshua-8/Derivs_Limiter">https://github.com/joshua-8/Derivs_Limiter</a> </dd></dl>
 
 </div>
 </div>

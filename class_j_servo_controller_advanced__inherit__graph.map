@@ -1,5 +1,7 @@
 <map id="JServoControllerAdvanced" name="JServoControllerAdvanced">
-<area shape="rect" id="node1" title="class for controlling JMotorDriverServoAdvanced, with power reducing option along with standard JServ..." alt="" coords="17,80,193,107"/>
-<area shape="rect" id="node3" href="$class_j_servo_controller_stall_protected.html" title="this child class of JServoController uses JServoStallSensing to reduce servo power" alt="" coords="5,155,205,181"/>
-<area shape="rect" id="node2" href="$class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="46,5,165,32"/>
+<area shape="rect" id="node1" title="class for controlling JMotorDriverServoAdvanced, with power reducing option along with standard JServ..." alt="" coords="17,229,193,256"/>
+<area shape="rect" id="node5" href="$class_j_servo_controller_stall_protected.html" title="this child class of JServoController uses JServoStallSensing to reduce servo power" alt="" coords="5,304,205,331"/>
+<area shape="rect" id="node2" href="$class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="46,155,165,181"/>
+<area shape="rect" id="node3" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="47,80,164,107"/>
+<area shape="rect" id="node4" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="32,5,179,32"/>
 </map>

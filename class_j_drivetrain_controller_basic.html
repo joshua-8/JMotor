@@ -153,6 +153,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a32dba8e8c4d1d708eab90b2a7dfbf9db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_controller_basic.html#a32dba8e8c4d1d708eab90b2a7dfbf9db">setAccelLimitTheta</a> (float l)</td></tr>
 <tr class="separator:a32dba8e8c4d1d708eab90b2a7dfbf9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad2ce3c9d92fa0e0c16e2498165c693b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_controller_basic.html#aad2ce3c9d92fa0e0c16e2498165c693b">setVel</a> (<a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> _vel, bool _run=false)</td></tr>
+<tr class="memdesc:aad2ce3c9d92fa0e0c16e2498165c693b"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets drivetrain velocity immediately  <a href="class_j_drivetrain_controller_basic.html#aad2ce3c9d92fa0e0c16e2498165c693b">More...</a><br /></td></tr>
 <tr class="separator:aad2ce3c9d92fa0e0c16e2498165c693b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af75a47b8f1adcb2c54b2abbd147de7a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_controller_basic.html#af75a47b8f1adcb2c54b2abbd147de7a8">setDistSetpoint</a> (<a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> _dist, bool _run=false)</td></tr>
 <tr class="separator:af75a47b8f1adcb2c54b2abbd147de7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,7 +215,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >basic drivetrain controller, supports smoothed movements on each axis </p>
-<dl class="section note"><dt>Note</dt><dd>each axis is separate, this drivetrain controller doesn't use distances moved on each axis to actually know its position </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>each axis is separate, this drivetrain controller doesn't combine movements over time to actually calculate its position </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad4b9f6ee8858b6f2c2e3d6ee20cf1682" name="ad4b9f6ee8858b6f2c2e3d6ee20cf1682"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4b9f6ee8858b6f2c2e3d6ee20cf1682">&#9670;&nbsp;</a></span>JDrivetrainControllerBasic()</h2>
@@ -1438,6 +1439,21 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>sets drivetrain velocity immediately </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_vel</td><td><a class="el" href="struct_j_two_d_transform.html" title="struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move....">JTwoDTransform</a> of velocity wanted for drivetrain </td></tr>
+    <tr><td class="paramname">_run</td><td>(bool) default=false, true=run gets called within this function, false=call run yourself outside this function </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="class_j_drivetrain.html#aa55166dffd87881fb81900ef726b8ffe">JDrivetrain</a>.</p>
 
