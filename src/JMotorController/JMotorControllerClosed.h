@@ -47,13 +47,13 @@ public:
      * @param  _compensator: (JMotorCompensator&)
      * @param  _encoder: (JEncoder)
      * @param  _controlLoop: (JControlLoop)
-     * @param  _velLimit: (float) default=INFINITY, 
+     * @param  _velLimit: (float) default=INFINITY,
      * @param  _accelLimit: (float) default=INFINITY,
      * @param  _distFromSetpointLimit: (float)= 1.0,
      * @param  _preventGoingWrongWay: (bool) default=true,
-     * @param  _maxStoppingAccel: (float) default=INFINITY,
+     * @param  _maxStoppingDecel: (float) default=2,
      */
-    JMotorControllerClosed(JMotorDriver& _driver, JMotorCompensator& _compensator, JEncoder& _encoder, JControlLoop& _controlLoop, float _velLimit = INFINITY, float _accelLimit = INFINITY, float _distFromSetpointLimit = 1, bool _preventGoingWrongWay = true, float _maxStoppingAccel = INFINITY)
+    JMotorControllerClosed(JMotorDriver& _driver, JMotorCompensator& _compensator, JEncoder& _encoder, JControlLoop& _controlLoop, float _velLimit = INFINITY, float _accelLimit = INFINITY, float _distFromSetpointLimit = 1, bool _preventGoingWrongWay = true, float _maxStoppingDecel = 2)
         : driver(_driver)
         , compensator(_compensator)
         , encoder(_encoder)
@@ -61,7 +61,7 @@ public:
         , controlLoop(_controlLoop)
     {
         posSetpointSmoother.setPreventGoingWrongWay(_preventGoingWrongWay);
-        posSetpointSmoother.setMaxStoppingAccel(_maxStoppingAccel);
+        posSetpointSmoother.setMaxStoppingDecel(_maxStoppingDecel);
         compensator.setDriverRange(driver.getMaxRange());
         velLimit = max(_velLimit, (float)0.0);
         accelLimit = max(_accelLimit, (float)0.0);
@@ -106,9 +106,9 @@ public:
                 driverInRange = driver.set(setVal);
                 posSetpoint = encoder.getPos();
                 posDeltaSetpoint = velSetpoint;
-            } else { //closed loop
+            } else { // closed loop
                 if (posMode) {
-                    if (smoothed) { //setPosTarget
+                    if (smoothed) { // setPosTarget
                         posSetpointSmoother.setPosition(posSetpoint);
                         posSetpoint = posSetpointSmoother.calc();
                         posDeltaSetpoint = posSetpointSmoother.getVelocity();
@@ -116,14 +116,14 @@ public:
                             posSetpoint = constrain(posSetpoint, encoder.getPos() - distFromSetpointLimit, encoder.getPos() + distFromSetpointLimit);
                             posSetpointSmoother.setPosition(posSetpoint);
                         }
-                    } else { //setPosSetpoint
+                    } else { // setPosSetpoint
                         posDeltaSetpoint = (posSetpoint - lastPosSetpoint) / time;
-                        //nothing to do here, posSetpoint was set
+                        // nothing to do here, posSetpoint was set
                     }
-                } else { //posDelta
+                } else { // posDelta
                     if (posDeltaSetpoint != posDeltaSetpointTarget) {
                         if (posSetpointSmoother.getPreventGoingWrongWay() && posDeltaSetpointTarget != 0 && posDeltaSetpoint != 0 && ((posDeltaSetpointTarget > 0) != (posDeltaSetpoint > 0))) {
-                            posDeltaSetpoint = 0; //prevent going wrong way
+                            posDeltaSetpoint = 0; // prevent going wrong way
                         }
                         posDeltaSetpointTarget = constrain(posDeltaSetpointTarget, -velLimit, velLimit);
                         posDeltaSetpointTarget = constrain(posDeltaSetpointTarget, -compensator.getMaxVel() * (getDriverMinRange() < 0), compensator.getMaxVel() * (getDriverMaxRange() > 0));
@@ -133,13 +133,13 @@ public:
                     if (limitSetpointDistFromCurrent)
                         posSetpoint = constrain(posSetpoint, encoder.getPos() - distFromSetpointLimit, encoder.getPos() + distFromSetpointLimit);
                 }
-                //MAKE MOTOR GO TO posSetpoint, by setting velSetpointTarget
+                // MAKE MOTOR GO TO posSetpoint, by setting velSetpointTarget
 
                 velSetpointTarget = controlLoop.calc(this);
 
                 lastPosSetpoint = posSetpoint;
 
-                velSetpoint = velSetpointTarget; //open loop uses velSetpointTarget and velsetpoint for acceleration, but closed loop has posDeltaSetpointTarget and posDeltaSetpoint, so just set them equal
+                velSetpoint = velSetpointTarget; // open loop uses velSetpointTarget and velsetpoint for acceleration, but closed loop has posDeltaSetpointTarget and posDeltaSetpoint, so just set them equal
 
                 setVal = compensator.compensate(velSetpoint);
 
@@ -148,8 +148,8 @@ public:
                 }
 
                 driverInRange = driver.set(setVal);
-            } //end of closed loop mode
-        } //enabled
+            } // end of closed loop mode
+        } // enabled
     }
 
     void setVel(float vel, bool _run = true)
@@ -182,7 +182,7 @@ public:
         posSetpointSmoother.setTarget(_posTarget);
         if (_run)
             run();
-        return ret; //did the target change?
+        return ret; // did the target change?
     }
     bool setPosTargetStallable(float _posTarget, bool _run = true)
     {
@@ -200,7 +200,7 @@ public:
         posSetpointSmoother.setTarget(_posTarget);
         if (_run)
             run();
-        return ret; //did the target change?
+        return ret; // did the target change?
     }
     bool setPosSetpoint(float _posSetpoint, bool _run = true)
     {
@@ -213,7 +213,7 @@ public:
         posSetpoint = _posSetpoint;
         if (_run)
             run();
-        return ret; //did the setpoint change?
+        return ret; // did the setpoint change?
     }
     bool setPosDelta(float _posDelta, bool _run = true, bool _resetPos = false)
     {
@@ -229,7 +229,7 @@ public:
             resetPos();
         if (_run)
             run();
-        return ret; //did the setting change?
+        return ret; // did the setting change?
     }
     void setAccelPosDelta(float _posDelta, bool _run = true, bool _resetPos = false)
     {
@@ -387,9 +387,9 @@ public:
         posSetpointSmoother.setPreventGoingWrongWay(_preventGoingWrongWay);
     }
 
-    void setMaxStoppingAccel(float _maxStoppingAccel)
+    void setMaxStoppingDecel(float _maxStoppingDecel)
     {
-        posSetpointSmoother.setMaxStoppingAccel(_maxStoppingAccel);
+        posSetpointSmoother.setMaxStoppingDecel(_maxStoppingDecel);
     }
 
     float getDriverSetVal()
@@ -403,7 +403,7 @@ public:
             posSetpointSmoother.setVelocity(0);
             velSetpoint = 0;
         }
-        if (_enable == true && !getEnable()) { //enabling
+        if (_enable == true && !getEnable()) { // enabling
             lastRunMicros = micros();
             controlLoop.resetTime();
             posSetpointSmoother.resetTime();
