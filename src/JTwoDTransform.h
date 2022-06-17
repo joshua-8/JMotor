@@ -3,6 +3,7 @@
 #include <Arduino.h>
 /**
  * @brief  struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move.
+ * @note  {forwards,left,CCW}
  * Follows ROS conventions for coordinate system: forward is positive, rotation CCW is positive, left is positive
  */
 struct JTwoDTransform {
@@ -151,6 +152,37 @@ struct JTwoDTransform {
         this->x /= v;
         return *this;
     }
+
+    /**
+     * @brief  access the three values based on a numerical index
+     * @param  index: 0 returns x, 1 returns y, 2 returns z, other numbers returns NAN
+     * @retval (float)
+     */
+    float getByNumber(int8_t index)
+    {
+        if (index == 0)
+            return this->x;
+        if (index == 1)
+            return this->y;
+        if (index == 2)
+            return this->theta;
+        return NAN;
+    }
+
+    /**
+     * @brief  sets one of the three values based on a numerical index
+     * @param  index: 0 sets x, 1 sets y, 2 sets z, other numbers have no effect
+     */
+    void setByNumber(int8_t index, float value)
+    {
+        if (index == 0)
+            this->x = value;
+        if (index == 1)
+            this->y = value;
+        if (index == 2)
+            this->theta = value;
+    }
+
     /**
      * @brief  sum of absolute value of the three values
      */

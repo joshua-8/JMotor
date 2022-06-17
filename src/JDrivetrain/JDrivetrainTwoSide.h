@@ -98,7 +98,7 @@ public:
     }
     void setDistDelta(JTwoDTransform _dist, bool _run = false)
     {
-        float rotation = _dist.theta * width / RAD_TO_DEG / 2;
+        float rotation = _dist.theta * width / 2;
         left.setPosDelta(_dist.x - rotation, false);
         right.setPosDelta(_dist.x + rotation, false);
         if (_run)
