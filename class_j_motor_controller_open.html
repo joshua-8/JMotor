@@ -151,7 +151,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a104abd09f04d7135ccf37499498de27b"><td class="mdescLeft">&#160;</td><td class="mdescRight">set velocity and acceleration limits for motor  <a href="class_j_motor_controller_open.html#a104abd09f04d7135ccf37499498de27b">More...</a><br /></td></tr>
 <tr class="separator:a104abd09f04d7135ccf37499498de27b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e31d6bbad862983240a174e425f12b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller_open.html#a8e31d6bbad862983240a174e425f12b6">setMinMotorPulseTime</a> (unsigned long _minMotorPulseTime)</td></tr>
-<tr class="memdesc:a8e31d6bbad862983240a174e425f12b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">At low speeds in setPosDelta the motor cycles between min speed and stopped. What is the minimum pulse that makes the motor move, in milliseconds?  <a href="class_j_motor_controller_open.html#a8e31d6bbad862983240a174e425f12b6">More...</a><br /></td></tr>
+<tr class="memdesc:a8e31d6bbad862983240a174e425f12b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">At low speeds in setPosDelta the motor cycles between min speed and stopped. What is the minimum pulse that makes the motor move, in MICROseconds?  <a href="class_j_motor_controller_open.html#a8e31d6bbad862983240a174e425f12b6">More...</a><br /></td></tr>
 <tr class="separator:a8e31d6bbad862983240a174e425f12b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a611f04b0814aefeae0c635f4f827b1c1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_controller.html#a611f04b0814aefeae0c635f4f827b1c1">setPosTarget</a> (float _posTarget, bool _run=true)=0</td></tr>
 <tr class="memdesc:a611f04b0814aefeae0c635f4f827b1c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">set target position (motor drives towards position, following acceleration profile)  <a href="class_j_motor_controller.html#a611f04b0814aefeae0c635f4f827b1c1">More...</a><br /></td></tr>
@@ -411,7 +411,7 @@ Protected Attributes</h2></td></tr>
     <tr><td class="paramname">_compensator</td><td>reference to a <a class="el" href="class_j_motor_compensator.html" title="This class defines a common interface for converting from speed to driver input. It should compensate...">JMotorCompensator</a> </td></tr>
     <tr><td class="paramname">_velLimit</td><td>float, default INFINITY </td></tr>
     <tr><td class="paramname">_accelLimit</td><td>float, default INFINITY </td></tr>
-    <tr><td class="paramname">_minMotorPulseTime</td><td>unsigned long, default 0. At low speeds in setPosDelta the motor cycles between min speed and stopped. What is the minimum pulse that makes the motor move, in milliseconds? </td></tr>
+    <tr><td class="paramname">_minMotorPulseTime</td><td>unsigned long, default 0. At low speeds in setPosDelta the motor cycles between min speed and stopped. What is the minimum pulse that makes the motor move, in MICROseconds? </td></tr>
   </table>
   </dd>
 </dl>
@@ -729,7 +729,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>At low speeds in setPosDelta the motor cycles between min speed and stopped. What is the minimum pulse that makes the motor move, in milliseconds? </p>
+<p>At low speeds in setPosDelta the motor cycles between min speed and stopped. What is the minimum pulse that makes the motor move, in MICROseconds? </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_minMotorPulseTime</td><td>unsigned long </td></tr>
