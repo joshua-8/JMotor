@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-//drivetrain example
+// drivetrain example
 
 #define port1Pin 32
 #define port2Pin 33
@@ -78,17 +78,17 @@ void loop()
                 mydrvtrain.resetDist();
             } else {
                 value = inString.toFloat();
-                if (mode == 1) { //s
+                if (mode == 1) { // s
                     mydrvtrain.setVel({ value, 0, 0 });
                 }
-                if (mode == 0) { //x
+                if (mode == 0) { // x
                     mydrvtrain.setVel({ 0, value, 0 });
                 }
-                if (mode == 2) { //v
+                if (mode == 2) { // v
                     mydrvtrain.moveVel({ value, 0, 0 });
                 }
-                if (mode == 3) { //p
-                    mydrvtrain.moveDistRZ(value);
+                if (mode == 3) { // p
+                    mydrvtrain.moveDistTheta(value);
                 }
                 if (mode == 4) { //;
                     mydrvtrain.moveDistY(value);

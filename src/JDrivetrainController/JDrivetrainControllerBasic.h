@@ -7,7 +7,7 @@
  * @brief  basic drivetrain controller, supports smoothed movements on each axis
  * @note each axis is separate, this drivetrain controller doesn't combine movements over time to actually calculate its position
  */
-//TODO: comments
+// TODO: comments
 class JDrivetrainControllerBasic : public JDrivetrain {
 protected:
     bool controlled;
