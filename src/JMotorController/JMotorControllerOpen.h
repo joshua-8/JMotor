@@ -14,6 +14,9 @@ protected:
     float position;
     float positionTarget;
     float posDelta;
+    unsigned long lastRunOpenMicros;
+    unsigned long minMotorPulseTime;
+    unsigned long lastPosDeltaWrite;
 
 public:
     /**
@@ -21,7 +24,15 @@ public:
      * @note   https://github.com/joshua-8/Derivs_Limiter
      */
     Derivs_Limiter dL;
-    JMotorControllerOpen(JMotorDriver& _driver, JMotorCompensator& _compensator, float _velLimit = INFINITY, float _accelLimit = INFINITY)
+    /**
+     * @brief  Constructor for an object that controls a motor, and can smooth the motion of the motor and go approximately to a position.
+     * @param  _driver: reference to a JMotorDriver
+     * @param  _compensator: reference to a JMotorCompensator
+     * @param  _velLimit: float, default INFINITY
+     * @param  _accelLimit: float, default INFINITY
+     * @param  _minMotorPulseTime: unsigned long, default 0. At low speeds in setPosDelta the motor cycles between min speed and stopped. What is the minimum pulse that makes the motor move, in milliseconds?
+     */
+    JMotorControllerOpen(JMotorDriver& _driver, JMotorCompensator& _compensator, float _velLimit = INFINITY, float _accelLimit = INFINITY, unsigned long _minMotorPulseTime = 0)
         : JMotorControllerBasic(_driver, _compensator, _velLimit, _accelLimit)
         , dL(Derivs_Limiter(_velLimit, _accelLimit))
     {
@@ -30,11 +41,15 @@ public:
         posMode = false;
         smoothedMode = true;
         posDelta = 0;
+        lastRunOpenMicros = 0;
+        minMotorPulseTime = _minMotorPulseTime;
+        lastPosDeltaWrite = 0;
     }
 
     void run()
     {
-        float time = (micros() - lastRunMicros) / 1000000.0;
+        float time = (micros() - lastRunOpenMicros) / 1000000.0;
+        lastRunOpenMicros = micros();
         if (time == 0) {
             return;
         }
@@ -42,23 +57,27 @@ public:
             if (posMode) {
                 if (!smoothedMode) { // setPosSetpoint() mode
                     positionTarget += time * posDelta;
-                    if (position == positionTarget) {
-                        JMotorControllerBasic::setVel(0);
-                    } else if (abs(positionTarget - position) <= getMinVel() * time) {
-                        JMotorControllerBasic::setVel(0);
-                    } else if (abs(positionTarget - position) < getMaxVel() * time) {
-                        JMotorControllerBasic::setVel((positionTarget - position) / time);
-                        position = positionTarget;
-                    } else { // far away
-                        JMotorControllerBasic::setVel((((positionTarget - position) > 0) ? getMaxVel() : -getMaxVel()));
-                        position += velocity * time;
+                    if (millis() - lastPosDeltaWrite > minMotorPulseTime) {
+                        lastPosDeltaWrite = millis();
+                        if (position == positionTarget) {
+                            JMotorControllerBasic::setVel(0, false);
+                        } else if (abs(positionTarget - position) <= getMinVel() * time) { // TODO: no limit on how frequently this can happen
+                            JMotorControllerBasic::setVel(0, false);
+                        } else if (abs(positionTarget - position) < getMaxVel() * time) {
+                            JMotorControllerBasic::setVel((positionTarget - position) / time, false);
+                            position = positionTarget;
+                        } else { // far away
+                            JMotorControllerBasic::setVel((((positionTarget - position) > 0) ? getMaxVel() : -getMaxVel()), false);
+                            position += velocity * time;
+                        }
                     }
+
                 } else { // setPosTarget() mode
                     dL.setPositionVelocity(position, velocity);
                     dL.setVelLimit(min(velLimit, getMaxVel()));
                     dL.calc(positionTarget);
                     position = dL.getPosition();
-                    JMotorControllerBasic::setVel(dL.getVelocity());
+                    JMotorControllerBasic::setVel(dL.getVelocity(), true);
                 }
             } else { // not pos mode
                 JMotorControllerBasic::run();
@@ -194,5 +213,15 @@ public:
         setVelLimit(_vel);
         setAccelLimit(_accel);
     }
+
+    /**
+     * @brief At low speeds in setPosDelta the motor cycles between min speed and stopped. What is the minimum pulse that makes the motor move, in milliseconds?
+     * @param  _minMotorPulseTime: unsigned long
+     */
+    void setMinMotorPulseTime(unsigned long _minMotorPulseTime)
+    {
+        minMotorPulseTime = _minMotorPulseTime;
+    }
 };
+
 #endif

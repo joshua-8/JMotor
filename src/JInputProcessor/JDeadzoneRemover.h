@@ -1,5 +1,5 @@
 #ifndef J_DEADZONE_REMOVER_H
-#define J_DEADZONE_REMVOER_H
+#define J_DEADZONE_REMOVER_H
 #include "JTwoDTransform.h"
 #include <Arduino.h>
 namespace JDeadzoneRemover {
