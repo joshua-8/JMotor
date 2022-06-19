@@ -18,9 +18,9 @@ protected:
 
 public:
     JDrivetrain& drivetrain;
+    Derivs_Limiter XLimiter;
     Derivs_Limiter YLimiter;
     Derivs_Limiter ThetaLimiter;
-    Derivs_Limiter XLimiter;
     JTwoDTransform distError;
 
     JDrivetrainControllerBasic(JDrivetrain& _drivetrain, JTwoDTransform _velLimit, JTwoDTransform _accelLimit, JTwoDTransform _distError)

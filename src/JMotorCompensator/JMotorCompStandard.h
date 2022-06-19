@@ -8,14 +8,6 @@
  */
 struct JMotorCompStandardConfig {
     /**
-     * @brief  voltage at which the motor can start turning
-     */
-    float motor_start_voltage;
-    /**
-     * @brief  speed the motor turns at motor_start_voltage
-     */
-    float motor_start_speed;
-    /**
      * @brief  voltage at which the motor stops turning
      */
     float motor_stop_voltage;
@@ -23,6 +15,14 @@ struct JMotorCompStandardConfig {
      * @brief  speed the motor turns at motor_stop_voltage
      */
     float motor_stop_speed;
+    /**
+     * @brief  voltage at which the motor can start turning
+     */
+    float motor_start_voltage;
+    /**
+     * @brief  speed the motor turns at motor_start_voltage
+     */
+    float motor_start_speed;
     /**
      * @brief  voltage used for calibration point towards fastest speed of motor
      */
@@ -127,7 +127,7 @@ public:
 
     float getMaxVel()
     {
-        if (voltComp.getSupplyVoltage()*maxDriverRange < config.motor_stop_voltage) {
+        if (voltComp.getSupplyVoltage() * maxDriverRange < config.motor_stop_voltage) {
             return 0;
         } else if (voltComp.getSupplyVoltage() < config.motor_start_voltage) {
             return floatMap(voltComp.getSupplyVoltage(), config.motor_stop_voltage, config.motor_start_voltage, config.motor_stop_speed, config.motor_start_speed) / multiplier;
@@ -145,7 +145,7 @@ private:
     float calcSlope(float ret)
     {
         if (ret <= config.motor_stop_speed) {
-            ret = 0; //can't turn the motor this slowly
+            ret = 0; // can't turn the motor this slowly
         } else if (ret <= config.motor_start_speed) {
             ret = floatMap(ret, config.motor_stop_speed, config.motor_start_speed, config.motor_stop_voltage, config.motor_start_voltage);
         } else {

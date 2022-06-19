@@ -11,7 +11,7 @@
 #include "JDrivetrain/JDrivetrain.h"
 #include "JDrivetrainController/JDrivetrainController.h"
 #include "JEncoder/JEncoder.h"
-#include "JMotorCompensator/JDeadzoneRemover.h"
+#include "JInputProcessor/JInputProcessor.h"
 #include "JMotorCompensator/JMotorCompensator.h"
 #include "JMotorController/JMotorController.h"
 #include "JMotorDriver/JMotorDriver.h"
