@@ -3,5 +3,5 @@
 <area shape="rect" id="node2" href="$class_j_drivetrain.html" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="5,81,89,108"/>
 <area shape="rect" id="node3" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="114,81,231,108"/>
 <area shape="rect" id="node4" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="99,5,246,32"/>
-<area shape="rect" id="node5" href="$struct_j_two_d_transform.html" title="struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move...." alt="" coords="255,81,378,108"/>
+<area shape="rect" id="node5" href="$struct_j_two_d_transform.html" title="struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move." alt="" coords="255,81,378,108"/>
 </map>

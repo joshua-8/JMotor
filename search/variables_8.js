@@ -14,13 +14,14 @@ var searchData=
   ['min_5fcycle_11',['MIN_CYCLE',['../struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#ae298b8d5967515c32130ba9c431b8e5d',1,'JEncoderPWMAbsolute::pwmSettings']]],
   ['min_5fsteps_12',['MIN_STEPS',['../struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#a7479527686a611225b8cfdf24a23d461',1,'JEncoderPWMAbsolute::pwmSettings']]],
   ['minanglelimit_13',['minAngleLimit',['../class_j_servo_controller.html#a53b77bdea93dccfa5f52a97c6739dde4',1,'JServoController']]],
-  ['minrange_14',['minRange',['../class_j_servo_current_sensor.html#ae533075e4ef496ca7cad3afdd98de887',1,'JServoCurrentSensor']]],
-  ['minservovalue_15',['minServoValue',['../class_j_motor_driver_servo.html#ac2a8c273b37817b7ac5485e3a20411f4',1,'JMotorDriverServo']]],
-  ['minsetangle_16',['minSetAngle',['../class_j_servo_controller.html#a7c4551f9f2707bc9c70a4c624d105c90',1,'JServoController']]],
-  ['motor_5fhigh_5fspeed_17',['motor_high_speed',['../struct_j_motor_comp_standard_config.html#a5c40b1acbdaba6fe1a41d99e94a42856',1,'JMotorCompStandardConfig']]],
-  ['motor_5fhigh_5fvoltage_18',['motor_high_voltage',['../struct_j_motor_comp_standard_config.html#ab8b71fb056bf30ac44c679169a497dcc',1,'JMotorCompStandardConfig']]],
-  ['motor_5fstart_5fspeed_19',['motor_start_speed',['../struct_j_motor_comp_standard_config.html#a4a3ee3032fa11d28ba5430a4307eebd8',1,'JMotorCompStandardConfig']]],
-  ['motor_5fstart_5fvoltage_20',['motor_start_voltage',['../struct_j_motor_comp_standard_config.html#a21d9286c0287624a359721087c15a501',1,'JMotorCompStandardConfig']]],
-  ['motor_5fstop_5fspeed_21',['motor_stop_speed',['../struct_j_motor_comp_standard_config.html#a903f50b35310a4cd99d6e067a99eac6e',1,'JMotorCompStandardConfig']]],
-  ['motor_5fstop_5fvoltage_22',['motor_stop_voltage',['../struct_j_motor_comp_standard_config.html#af0257de8802e34cd3876fefa3977a278',1,'JMotorCompStandardConfig']]]
+  ['minmotorpulsetime_14',['minMotorPulseTime',['../class_j_motor_controller_open.html#aad64498911ddb78b2564b868ec6e2c79',1,'JMotorControllerOpen']]],
+  ['minrange_15',['minRange',['../class_j_servo_current_sensor.html#ae533075e4ef496ca7cad3afdd98de887',1,'JServoCurrentSensor']]],
+  ['minservovalue_16',['minServoValue',['../class_j_motor_driver_servo.html#ac2a8c273b37817b7ac5485e3a20411f4',1,'JMotorDriverServo']]],
+  ['minsetangle_17',['minSetAngle',['../class_j_servo_controller.html#a7c4551f9f2707bc9c70a4c624d105c90',1,'JServoController']]],
+  ['motor_5fhigh_5fspeed_18',['motor_high_speed',['../struct_j_motor_comp_standard_config.html#a5c40b1acbdaba6fe1a41d99e94a42856',1,'JMotorCompStandardConfig']]],
+  ['motor_5fhigh_5fvoltage_19',['motor_high_voltage',['../struct_j_motor_comp_standard_config.html#ab8b71fb056bf30ac44c679169a497dcc',1,'JMotorCompStandardConfig']]],
+  ['motor_5fstart_5fspeed_20',['motor_start_speed',['../struct_j_motor_comp_standard_config.html#a4a3ee3032fa11d28ba5430a4307eebd8',1,'JMotorCompStandardConfig']]],
+  ['motor_5fstart_5fvoltage_21',['motor_start_voltage',['../struct_j_motor_comp_standard_config.html#a21d9286c0287624a359721087c15a501',1,'JMotorCompStandardConfig']]],
+  ['motor_5fstop_5fspeed_22',['motor_stop_speed',['../struct_j_motor_comp_standard_config.html#a903f50b35310a4cd99d6e067a99eac6e',1,'JMotorCompStandardConfig']]],
+  ['motor_5fstop_5fvoltage_23',['motor_stop_voltage',['../struct_j_motor_comp_standard_config.html#af0257de8802e34cd3876fefa3977a278',1,'JMotorCompStandardConfig']]]
 ];

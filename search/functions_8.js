@@ -19,7 +19,7 @@ var searchData=
   ['jmotorcompstandardconfig_16',['JMotorCompStandardConfig',['../struct_j_motor_comp_standard_config.html#a222009ee606dabd699714c18272655cc',1,'JMotorCompStandardConfig']]],
   ['jmotorcontrollerbasic_17',['JMotorControllerBasic',['../class_j_motor_controller_basic.html#a5c4913adde8ced42890b18958d23e830',1,'JMotorControllerBasic']]],
   ['jmotorcontrollerclosed_18',['JMotorControllerClosed',['../class_j_motor_controller_closed.html#aee03a69044533e0e7e30d6d8255d0c86',1,'JMotorControllerClosed']]],
-  ['jmotorcontrolleropen_19',['JMotorControllerOpen',['../class_j_motor_controller_open.html#a156b499fc8e30c48049192cb39e69055',1,'JMotorControllerOpen']]],
+  ['jmotorcontrolleropen_19',['JMotorControllerOpen',['../class_j_motor_controller_open.html#ad543d931a9c84181492a23335dfe14bc',1,'JMotorControllerOpen']]],
   ['jmotordriveravrl293_20',['JMotorDriverAvrL293',['../class_j_motor_driver_avr_l293.html#aada2ec85c47f173bdd1476878c50ac00',1,'JMotorDriverAvrL293']]],
   ['jmotordriveravrpwm_21',['JMotorDriverAvrPWM',['../class_j_motor_driver_avr_p_w_m.html#ace8bd58bf25264b24458382c781d9ca5',1,'JMotorDriverAvrPWM']]],
   ['jmotordriveravrpwmdir_22',['JMotorDriverAvrPWMDir',['../class_j_motor_driver_avr_p_w_m_dir.html#ae76377254ee0c74d68c8afd8b1428657',1,'JMotorDriverAvrPWMDir']]],
