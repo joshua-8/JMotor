@@ -79,6 +79,7 @@ public:
                     dL.setVelLimit(min(velLimit, getMaxVel()));
                     dL.calc(positionTarget);
                     position = dL.getPosition();
+                    // TODO: it would be better to use posSetpoint mode
                     JMotorControllerBasic::setVel(dL.getVelocity(), true);
                 }
             } else { // not pos mode

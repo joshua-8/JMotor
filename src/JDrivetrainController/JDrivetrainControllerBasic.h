@@ -16,14 +16,15 @@ protected:
 
     JTwoDTransform velTarget;
 
+    bool velNotPosDelta;
+
 public:
     JDrivetrain& drivetrain;
     Derivs_Limiter XLimiter;
     Derivs_Limiter YLimiter;
     Derivs_Limiter ThetaLimiter;
     JTwoDTransform distError;
-
-    JDrivetrainControllerBasic(JDrivetrain& _drivetrain, JTwoDTransform _velLimit, JTwoDTransform _accelLimit, JTwoDTransform _distError)
+    JDrivetrainControllerBasic(JDrivetrain& _drivetrain, JTwoDTransform _velLimit, JTwoDTransform _accelLimit, JTwoDTransform _distError, bool _velNotPosDelta)
         : drivetrain(_drivetrain)
         , XLimiter(Derivs_Limiter(_velLimit.x, _accelLimit.x))
         , YLimiter(Derivs_Limiter(_velLimit.y, _accelLimit.y))
@@ -39,6 +40,7 @@ public:
         controlled = false;
         distMode = false;
         lastCalcMillis = 0;
+        velNotPosDelta = _velNotPosDelta;
     }
 
     /**
@@ -88,7 +90,11 @@ public:
                     ThetaLimiter.setVelocity(constrain(ThetaLimiter.getVelocity(), -getMaxVel().theta, getMaxVel().theta));
                     XLimiter.setVelocity(constrain(XLimiter.getVelocity(), -getMaxVel().x, getMaxVel().x));
 
-                    drivetrain.setVel({ XLimiter.getVelocity(), YLimiter.getVelocity(), ThetaLimiter.getVelocity() });
+                    if (!velNotPosDelta) {
+                        drivetrain.setVel({ XLimiter.getVelocity(), YLimiter.getVelocity(), ThetaLimiter.getVelocity() });
+                    } else {
+                        drivetrain.setDistDelta({ XLimiter.getVelocity(), YLimiter.getVelocity(), ThetaLimiter.getVelocity() });
+                    }
                 }
             }
         }
@@ -279,6 +285,15 @@ public:
     void setAccelLimitTheta(float l)
     {
         ThetaLimiter.setAccelLimit(l);
+    }
+
+    /**
+     * @brief true = uses setVel() when setting drivetrain velocity, false = uses setPosDelta() when setting drivetrain velocity
+     * @param  _velNotPosDelta: (bool)
+     */
+    void setVelNotPosDelta(bool _velNotPosDelta)
+    {
+        velNotPosDelta = _velNotPosDelta;
     }
 
     ////JDrivetrain methods:
