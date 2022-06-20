@@ -1,7 +1,7 @@
 var searchData=
 [
   ['jcontrolloopbasic_0',['JControlLoopBasic',['../class_j_control_loop_basic.html#ac76a673cd3068ab7d820edda3782bdf9',1,'JControlLoopBasic']]],
-  ['jdrivetraincontrollerbasic_1',['JDrivetrainControllerBasic',['../class_j_drivetrain_controller_basic.html#a096fc26d4964b1dba46b6c8347f7f69f',1,'JDrivetrainControllerBasic']]],
+  ['jdrivetraincontrollerbasic_1',['JDrivetrainControllerBasic',['../class_j_drivetrain_controller_basic.html#abc23245170bed8710869c56ae4a36612',1,'JDrivetrainControllerBasic']]],
   ['jdrivetraintwoside_2',['JDrivetrainTwoSide',['../class_j_drivetrain_two_side.html#a26f14ee644de433e597636047368d144',1,'JDrivetrainTwoSide']]],
   ['jencoderas5048bi2c_3',['JEncoderAS5048bI2C',['../class_j_encoder_a_s5048b_i2_c.html#a1c74191640750fa1360ab2012c528d48',1,'JEncoderAS5048bI2C']]],
   ['jencoderpwmabsolute_4',['JEncoderPWMAbsolute',['../class_j_encoder_p_w_m_absolute.html#aa173a693abf81ec792c1a73841bf369b',1,'JEncoderPWMAbsolute']]],
