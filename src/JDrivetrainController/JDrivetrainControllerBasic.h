@@ -24,7 +24,7 @@ public:
     Derivs_Limiter YLimiter;
     Derivs_Limiter ThetaLimiter;
     JTwoDTransform distError;
-    JDrivetrainControllerBasic(JDrivetrain& _drivetrain, JTwoDTransform _velLimit, JTwoDTransform _accelLimit, JTwoDTransform _distError, bool _velNotPosDelta)
+    JDrivetrainControllerBasic(JDrivetrain& _drivetrain, JTwoDTransform _velLimit, JTwoDTransform _accelLimit, JTwoDTransform _distError, bool _velNotPosDelta = true)
         : drivetrain(_drivetrain)
         , XLimiter(Derivs_Limiter(_velLimit.x, _accelLimit.x))
         , YLimiter(Derivs_Limiter(_velLimit.y, _accelLimit.y))
@@ -90,7 +90,7 @@ public:
                     ThetaLimiter.setVelocity(constrain(ThetaLimiter.getVelocity(), -getMaxVel().theta, getMaxVel().theta));
                     XLimiter.setVelocity(constrain(XLimiter.getVelocity(), -getMaxVel().x, getMaxVel().x));
 
-                    if (!velNotPosDelta) {
+                    if (velNotPosDelta) {
                         drivetrain.setVel({ XLimiter.getVelocity(), YLimiter.getVelocity(), ThetaLimiter.getVelocity() });
                     } else {
                         drivetrain.setDistDelta({ XLimiter.getVelocity(), YLimiter.getVelocity(), ThetaLimiter.getVelocity() });
