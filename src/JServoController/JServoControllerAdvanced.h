@@ -34,6 +34,7 @@ public:
      * @param  _reverse: (bool) default: false, use to reverse direction of servo
      * @param  velLimit: (float) default: INFINITY, maximum velocity you want the servo to move at in limited mode
      * @param  accelLimit: (float) default: INFINITY, maximum acceleration you want the servo to move at in limited mode
+     * @param  decelLimit: (float) default: NAN, maximum deceleration you want the servo to move at in limited mode, NAN= use accelLimit
      * @param  _disableTimeout: (unsigned long) default: 0, after how many milliseconds of no movement should the servo be disabled? 0=never disable
      * @param  _minAngleLimit: (float) minimum angle limit for servo
      * @param  _maxAngleLimit: (float) maximum angle limit for servo
@@ -47,8 +48,8 @@ public:
      * @param  _stoppingDecelLimit (float) default: INFINITY, how much extra deceleration can be used to stop the servo in time (if the target moves towards the servo's position)
 
      */
-    JServoControllerAdvanced(JMotorDriverServoAdvanced& _servo, float _weakFreq = .5, unsigned long _weakenTimeout = 0, float _normalFreq = 1.0, unsigned long _startWeakTimeout = 0, bool _reverse = false, float velLimit = INFINITY, float accelLimit = INFINITY, unsigned long _disableTimeout = 0, float _minAngleLimit = 0, float _maxAngleLimit = 180, float _pos = 90, float _minSetAngle = 0, float _maxSetAngle = 180, int minServoVal = 544, int maxServoVal = 2400, bool _preventGoingWrongWay = true, bool _preventGoingTooFast = true, float _stoppingDecelLimit = INFINITY)
-        : JServoController(_servo, _reverse, velLimit, accelLimit, _disableTimeout, _minAngleLimit, _maxAngleLimit, _pos, _minSetAngle, _maxSetAngle, minServoVal, maxServoVal, _preventGoingWrongWay, _preventGoingTooFast, _stoppingDecelLimit)
+    JServoControllerAdvanced(JMotorDriverServoAdvanced& _servo, float _weakFreq = .5, unsigned long _weakenTimeout = 0, float _normalFreq = 1.0, unsigned long _startWeakTimeout = 0, bool _reverse = false, float velLimit = INFINITY, float accelLimit = INFINITY, float decelLimit = NAN, unsigned long _disableTimeout = 0, float _minAngleLimit = 0, float _maxAngleLimit = 180, float _pos = 90, float _minSetAngle = 0, float _maxSetAngle = 180, int minServoVal = 544, int maxServoVal = 2400, bool _preventGoingWrongWay = true, bool _preventGoingTooFast = true, float _stoppingDecelLimit = INFINITY)
+        : JServoController(_servo, _reverse, velLimit, accelLimit, decelLimit, _disableTimeout, _minAngleLimit, _maxAngleLimit, _pos, _minSetAngle, _maxSetAngle, minServoVal, maxServoVal, _preventGoingWrongWay, _preventGoingTooFast, _stoppingDecelLimit)
         , adServo(_servo)
     {
         weakenTimeout = _weakenTimeout;

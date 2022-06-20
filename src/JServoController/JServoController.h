@@ -68,6 +68,7 @@ public:
      * @param  _reverse: (bool) default: false, use to reverse direction of servo
      * @param  velLimit: (float) default: INFINITY, maximum velocity you want the servo to move at in limited mode
      * @param  accelLimit: (float) default: INFINITY, maximum acceleration you want the servo to move at in limited mode
+     * @param  decelLimit: (float) default: NAN, maximum deceleration you want the servo to move at in limited mode, NAN= use accelLimit
      * @param  _disableTimeout: (unsigned long) default: 0, after how many milliseconds of no movement should the servo be disabled? 0=never disable
      * @param  _minAngleLimit: (float) minimum angle limit for servo
      * @param  _maxAngleLimit: (float) maximum angle limit for servo
@@ -80,9 +81,9 @@ public:
      * @param  _preventGoingTooFast (bool) default: true, immediately slow down if set to a speed above velLimit
      * @param  _stoppingDecelLimit (float) default: INFINITY, how much extra deceleration can be used to stop the servo in time (if the target moves towards the servo's position)
      * */
-    JServoController(JMotorDriverServo& _servo, bool _reverse = false, float velLimit = INFINITY, float accelLimit = INFINITY, unsigned long _disableTimeout = 0, float _minAngleLimit = 0, float _maxAngleLimit = 180, float _pos = 90, float _minSetAngle = 0, float _maxSetAngle = 180, int minServoVal = 544, int maxServoVal = 2400, bool _preventGoingWrongWay = true, bool _preventGoingTooFast = true, float _stoppingDecelLimit = INFINITY)
+    JServoController(JMotorDriverServo& _servo, bool _reverse = false, float velLimit = INFINITY, float accelLimit = INFINITY, float decelLimit = NAN, unsigned long _disableTimeout = 0, float _minAngleLimit = 0, float _maxAngleLimit = 180, float _pos = 90, float _minSetAngle = 0, float _maxSetAngle = 180, int minServoVal = 544, int maxServoVal = 2400, bool _preventGoingWrongWay = true, bool _preventGoingTooFast = true, float _stoppingDecelLimit = INFINITY)
         : servo(_servo)
-        , dL(Derivs_Limiter(max(velLimit, float(0.0)), max(accelLimit, float(0.0)), max(accelLimit, float(0.0)), _pos, _pos, 0, _preventGoingWrongWay, _preventGoingTooFast, min(_minAngleLimit, _maxAngleLimit), max(_minAngleLimit, _maxAngleLimit), _stoppingDecelLimit))
+        , dL(Derivs_Limiter(max(velLimit, float(0.0)), accelLimit, decelLimit, _pos, _pos, 0, _preventGoingWrongWay, _preventGoingTooFast, min(_minAngleLimit, _maxAngleLimit), max(_minAngleLimit, _maxAngleLimit), _stoppingDecelLimit))
     {
         enabled = false;
         sleeping = false;
@@ -385,6 +386,10 @@ public:
     {
         return dL.getAccelLimit();
     }
+    float getDecelLimit()
+    {
+        return dL.getDecelLimit();
+    }
     float getVelLimit()
     {
         return dL.getVelLimit();
@@ -393,13 +398,21 @@ public:
     {
         dL.setAccelLimit(accelLim);
     }
+    void setAccelAndDecelLimits(float accelLim, float decelLim = NAN)
+    {
+        dL.setAccelAndDecelLimits(accelLim, decelLim);
+    }
+    void setDecelLimit(float decelLim = NAN)
+    {
+        dL.setDecelLimit(decelLim);
+    }
     void setVelLimit(float velLim)
     {
         dL.setVelLimit(velLim);
     }
-    void setVelAccelLimits(float velLim, float accelLim)
+    void setVelAccelLimits(float velLim, float accelLim, float decelLim = NAN)
     {
-        dL.setVelAccelLimits(velLim, accelLim);
+        dL.setVelAccelLimits(velLim, accelLim, decelLim);
     }
     /**
      * @brief  sets servo position, leaves target where it was
