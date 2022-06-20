@@ -57,7 +57,7 @@ public:
             if (posMode) {
                 if (!smoothedMode) { // setPosSetpoint() mode
                     positionTarget += time * posDelta;
-                    if (millis() - lastPosDeltaWrite > minMotorPulseTime) {
+                    if (micros() - lastPosDeltaWrite > minMotorPulseTime) {
                         float posDeltaTime = (micros() - lastPosDeltaWrite) / 1000000.0;
                         lastPosDeltaWrite = micros();
                         if (position == positionTarget) {
@@ -72,6 +72,7 @@ public:
                             position += velocity * posDeltaTime;
                         }
                     }
+                    JMotorControllerBasic::run();
 
                 } else { // setPosTarget() mode
                     dL.setPositionVelocity(position, velocity);
