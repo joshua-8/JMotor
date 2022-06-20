@@ -11,7 +11,7 @@ var searchData=
   ['jdrivetrain_8',['JDrivetrain',['../class_j_drivetrain.html',1,'']]],
   ['jdrivetrain_2eh_9',['JDrivetrain.h',['../_j_drivetrain_8h.html',1,'']]],
   ['jdrivetraincontroller_2eh_10',['JDrivetrainController.h',['../_j_drivetrain_controller_8h.html',1,'']]],
-  ['jdrivetraincontrollerbasic_11',['JDrivetrainControllerBasic',['../class_j_drivetrain_controller_basic.html',1,'JDrivetrainControllerBasic'],['../class_j_drivetrain_controller_basic.html#ad4b9f6ee8858b6f2c2e3d6ee20cf1682',1,'JDrivetrainControllerBasic::JDrivetrainControllerBasic()']]],
+  ['jdrivetraincontrollerbasic_11',['JDrivetrainControllerBasic',['../class_j_drivetrain_controller_basic.html',1,'JDrivetrainControllerBasic'],['../class_j_drivetrain_controller_basic.html#a096fc26d4964b1dba46b6c8347f7f69f',1,'JDrivetrainControllerBasic::JDrivetrainControllerBasic()']]],
   ['jdrivetraincontrollerbasic_2eh_12',['JDrivetrainControllerBasic.h',['../_j_drivetrain_controller_basic_8h.html',1,'']]],
   ['jdrivetraintwoside_13',['JDrivetrainTwoSide',['../class_j_drivetrain_two_side.html#a26f14ee644de433e597636047368d144',1,'JDrivetrainTwoSide::JDrivetrainTwoSide()'],['../class_j_drivetrain_two_side.html',1,'JDrivetrainTwoSide']]],
   ['jdrivetraintwoside_2eh_14',['JDrivetrainTwoSide.h',['../_j_drivetrain_two_side_8h.html',1,'']]],
