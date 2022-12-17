@@ -62,7 +62,7 @@ public:
                         lastPosDeltaWrite = micros();
                         if (position == positionTarget) {
                             JMotorControllerBasic::setVel(0, false);
-                        } else if (abs(positionTarget - position) <= getMinVel() * posDeltaTime) { // TODO: no limit on how frequently this can happen
+                        } else if (abs(positionTarget - position) <= getMinVel() * posDeltaTime) {
                             JMotorControllerBasic::setVel(0, false);
                         } else if (abs(positionTarget - position) < getMaxVel() * posDeltaTime) {
                             JMotorControllerBasic::setVel((positionTarget - position) / posDeltaTime, false);

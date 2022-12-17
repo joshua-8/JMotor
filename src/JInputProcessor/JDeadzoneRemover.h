@@ -27,7 +27,7 @@ inline float calculate(float value, float start, float max, float deadzone = 0)
         // return floatMap(value, deadzone, 1.0, start, max);
         return (value - deadzone) * (max - start) / (1.0 - deadzone) + start;
     }
-    if (value < deadzone) {
+    if (value < -deadzone) {
         // return floatMap(value, -deadzone, -1.0, -start, -max);
         return (value + deadzone) * (-max + start) / (-1.0 + deadzone) - start;
     }
@@ -63,7 +63,7 @@ inline JTwoDTransform calculate(JTwoDTransform value, JTwoDTransform start, JTwo
             // return floatMap(value, deadzone, 1.0, start, max);
             ret = (currentValue - currentDeadzone) * (currentMax - currentStart) / (1.0 - currentDeadzone) + currentStart;
         }
-        if (currentValue < currentDeadzone) {
+        if (currentValue < -currentDeadzone) {
             // return floatMap(value, -deadzone, -1.0, -start, -max);
             ret = (currentValue + currentDeadzone) * (-currentMax + currentStart) / (-1.0 + currentDeadzone) - currentStart;
         }
