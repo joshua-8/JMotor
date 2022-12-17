@@ -141,6 +141,11 @@ public:
         return config.motor_stop_speed / multiplier;
     }
 
+    void setMultiplier(float _multiplier)
+    {
+        multiplier = _multiplier;
+    }
+
 private:
     float calcSlope(float ret)
     {
