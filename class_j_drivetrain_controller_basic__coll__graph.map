@@ -1,5 +1,5 @@
 <map id="JDrivetrainControllerBasic" name="JDrivetrainControllerBasic">
-<area shape="rect" id="node1" title="basic drivetrain controller, supports smoothed movements on each axis" alt="" coords="5,109,177,136"/>
-<area shape="rect" id="node2" href="$class_j_drivetrain.html" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="8,5,92,32"/>
-<area shape="rect" id="node3" href="$struct_j_two_d_transform.html" title="struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move." alt="" coords="118,5,241,32"/>
+<area shape="rect" id="node1" title="basic drivetrain controller, supports smoothed movements on each axis" alt="" coords="5,108,177,133"/>
+<area shape="rect" id="node2" href="$class_j_drivetrain.html" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="8,5,92,31"/>
+<area shape="rect" id="node3" href="$struct_j_two_d_transform.html" title="struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move." alt="" coords="118,5,241,31"/>
 </map>

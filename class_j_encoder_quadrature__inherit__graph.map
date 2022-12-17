@@ -1,6 +1,6 @@
 <map id="JEncoderQuadrature" name="JEncoderQuadrature">
-<area shape="rect" id="node1" title="reads a quadrature (incremental) encoder" alt="" coords="131,80,271,107"/>
-<area shape="rect" id="node3" href="$class_j_encoder_quadrature_attach_interrupt.html" title="uses attachInterrupt() platform: esp32, teensy (could be used with standard avr arduinos but only wit..." alt="" coords="5,155,184,196"/>
-<area shape="rect" id="node4" href="$class_j_encoder_quadrature_pin_change.html" title="uses a pin change interrupt library to support more pins than attachInterrupt()." alt="" coords="208,162,411,189"/>
-<area shape="rect" id="node2" href="$class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="163,5,239,32"/>
+<area shape="rect" id="node1" title="reads a quadrature (incremental) encoder" alt="" coords="131,79,271,104"/>
+<area shape="rect" id="node3" href="$class_j_encoder_quadrature_attach_interrupt.html" title="uses attachInterrupt() platform: esp32, teensy (could be used with standard avr arduinos but only wit..." alt="" coords="5,152,184,192"/>
+<area shape="rect" id="node4" href="$class_j_encoder_quadrature_pin_change.html" title="uses a pin change interrupt library to support more pins than attachInterrupt()." alt="" coords="208,159,411,185"/>
+<area shape="rect" id="node2" href="$class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="163,5,239,31"/>
 </map>

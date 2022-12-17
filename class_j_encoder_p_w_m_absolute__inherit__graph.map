@@ -1,6 +1,6 @@
 <map id="JEncoderPWMAbsolute" name="JEncoderPWMAbsolute">
-<area shape="rect" id="node1" title="reads a PWM signal from an absolute encoder" alt="" coords="142,80,301,107"/>
-<area shape="rect" id="node3" href="$class_j_encoder_p_w_m_absolute_attach_interrupt.html" title="uses attachInterrupt() (could be used with standard avr arduinos but only with pins that support atta..." alt="" coords="5,155,203,196"/>
-<area shape="rect" id="node4" href="$class_j_encoder_p_w_m_absolute_pin_change.html" title="uses a pin change interrupt library to support more pins than attachInterrupt()." alt="" coords="227,162,450,189"/>
-<area shape="rect" id="node2" href="$class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="183,5,259,32"/>
+<area shape="rect" id="node1" title="reads a PWM signal from an absolute encoder" alt="" coords="142,79,301,104"/>
+<area shape="rect" id="node3" href="$class_j_encoder_p_w_m_absolute_attach_interrupt.html" title="uses attachInterrupt() (could be used with standard avr arduinos but only with pins that support atta..." alt="" coords="5,152,203,192"/>
+<area shape="rect" id="node4" href="$class_j_encoder_p_w_m_absolute_pin_change.html" title="uses a pin change interrupt library to support more pins than attachInterrupt()." alt="" coords="227,159,450,185"/>
+<area shape="rect" id="node2" href="$class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="183,5,259,31"/>
 </map>

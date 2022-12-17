@@ -1,4 +1,4 @@
 <map id="JDrivetrainControllerBasic" name="JDrivetrainControllerBasic">
-<area shape="rect" id="node1" title="basic drivetrain controller, supports smoothed movements on each axis" alt="" coords="5,80,177,107"/>
-<area shape="rect" id="node2" href="$class_j_drivetrain.html" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="49,5,133,32"/>
+<area shape="rect" id="node1" title="basic drivetrain controller, supports smoothed movements on each axis" alt="" coords="5,79,177,104"/>
+<area shape="rect" id="node2" href="$class_j_drivetrain.html" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="49,5,133,31"/>
 </map>

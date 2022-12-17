@@ -1,11 +1,11 @@
 <map id="JMotorControllerBase" name="JMotorControllerBase">
-<area shape="rect" id="node1" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="172,5,319,32"/>
-<area shape="rect" id="node2" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="187,80,304,107"/>
-<area shape="rect" id="node3" href="$class_j_motor_controller_closed.html" title="closed loop (uses encoder) motor controller" alt="" coords="5,155,163,181"/>
-<area shape="rect" id="node9" href="$class_j_motor_controller_basic.html" title="A motor controller object that uses a JMotorCompensator to set velocity of a motor." alt="" coords="329,80,479,107"/>
-<area shape="rect" id="node4" href="$class_j_motor_controller_open.html" title="This class controls velocity and position of a motor without any encoder feedback." alt="" coords="330,155,478,181"/>
-<area shape="rect" id="node5" href="$class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="187,155,306,181"/>
-<area shape="rect" id="node6" href="$class_j_servo_controller_advanced.html" title="class for controlling JMotorDriverServoAdvanced, with power reducing option along with standard JServ..." alt="" coords="64,229,240,256"/>
-<area shape="rect" id="node8" href="$class_j_servo_controller_gentle.html" title="JServoControllerGentle is an extension of JServoController that uses JServoStallSensing to make a ser..." alt="" coords="265,229,421,256"/>
-<area shape="rect" id="node7" href="$class_j_servo_controller_stall_protected.html" title="this child class of JServoController uses JServoStallSensing to reduce servo power" alt="" coords="52,304,252,331"/>
+<area shape="rect" id="node1" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="172,5,319,31"/>
+<area shape="rect" id="node2" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="187,79,304,104"/>
+<area shape="rect" id="node3" href="$class_j_motor_controller_closed.html" title="closed loop (uses encoder) motor controller" alt="" coords="5,152,163,177"/>
+<area shape="rect" id="node9" href="$class_j_motor_controller_basic.html" title="A motor controller object that uses a JMotorCompensator to set velocity of a motor." alt="" coords="329,79,479,104"/>
+<area shape="rect" id="node4" href="$class_j_motor_controller_open.html" title="This class controls velocity and position of a motor without any encoder feedback." alt="" coords="330,152,478,177"/>
+<area shape="rect" id="node5" href="$class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="187,152,306,177"/>
+<area shape="rect" id="node6" href="$class_j_servo_controller_advanced.html" title="class for controlling JMotorDriverServoAdvanced, with power reducing option along with standard JServ..." alt="" coords="64,225,240,251"/>
+<area shape="rect" id="node8" href="$class_j_servo_controller_gentle.html" title="JServoControllerGentle is an extension of JServoController that uses JServoStallSensing to make a ser..." alt="" coords="265,225,421,251"/>
+<area shape="rect" id="node7" href="$class_j_servo_controller_stall_protected.html" title="this child class of JServoController uses JServoStallSensing to reduce servo power" alt="" coords="52,299,252,324"/>
 </map>

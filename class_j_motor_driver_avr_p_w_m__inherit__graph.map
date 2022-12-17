@@ -1,4 +1,4 @@
 <map id="JMotorDriverAvrPWM" name="JMotorDriverAvrPWM">
-<area shape="rect" id="node1" title="wrapper for analogWrite()" alt="" coords="5,80,153,107"/>
-<area shape="rect" id="node2" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="31,5,127,32"/>
+<area shape="rect" id="node1" title="wrapper for analogWrite()" alt="" coords="5,79,153,104"/>
+<area shape="rect" id="node2" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="31,5,127,31"/>
 </map>

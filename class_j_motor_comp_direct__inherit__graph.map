@@ -1,4 +1,4 @@
 <map id="JMotorCompDirect" name="JMotorCompDirect">
-<area shape="rect" id="node1" title="Converts from speed to driver input with a simple multiplier." alt="" coords="9,80,140,107"/>
-<area shape="rect" id="node2" href="$class_j_motor_compensator.html" title="This class defines a common interface for converting from speed to driver input. It should compensate..." alt="" coords="5,5,144,32"/>
+<area shape="rect" id="node1" title="Converts from speed to driver input with a simple multiplier." alt="" coords="9,79,140,104"/>
+<area shape="rect" id="node2" href="$class_j_motor_compensator.html" title="This class defines a common interface for converting from speed to driver input. It should compensate..." alt="" coords="5,5,144,31"/>
 </map>

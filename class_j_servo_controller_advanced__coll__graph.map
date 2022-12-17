@@ -1,9 +1,9 @@
 <map id="JServoControllerAdvanced" name="JServoControllerAdvanced">
-<area shape="rect" id="node1" title="class for controlling JMotorDriverServoAdvanced, with power reducing option along with standard JServ..." alt="" coords="79,260,255,287"/>
-<area shape="rect" id="node2" href="$class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="19,171,138,197"/>
-<area shape="rect" id="node3" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="20,81,137,108"/>
-<area shape="rect" id="node4" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="5,5,152,32"/>
-<area shape="rect" id="node5" href="$class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="176,81,307,108"/>
-<area shape="rect" id="node7" href="$class_j_motor_driver_servo_advanced.html" title="defines interface for servo driver with variable frequency, subclass of JMotorDriverServo and JMotorD..." alt="" coords="162,171,350,197"/>
-<area shape="rect" id="node6" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="193,5,289,32"/>
+<area shape="rect" id="node1" title="class for controlling JMotorDriverServoAdvanced, with power reducing option along with standard JServ..." alt="" coords="79,256,255,281"/>
+<area shape="rect" id="node2" href="$class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="19,168,138,193"/>
+<area shape="rect" id="node3" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="20,80,137,105"/>
+<area shape="rect" id="node4" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="5,5,152,31"/>
+<area shape="rect" id="node5" href="$class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="168,80,299,105"/>
+<area shape="rect" id="node7" href="$class_j_motor_driver_servo_advanced.html" title="defines interface for servo driver with variable frequency, subclass of JMotorDriverServo and JMotorD..." alt="" coords="162,168,350,193"/>
+<area shape="rect" id="node6" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="185,5,281,31"/>
 </map>
