@@ -176,9 +176,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:aa21be6f8083f84fe236c5684d1510c94"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#aa21be6f8083f84fe236c5684d1510c94">JEncoderSingle</a> (byte _encoderPin, float _distPerCountFactor, bool _reverse, unsigned long _slowestIntervalMicros, unsigned long _switchBounceIntervalMicros)</td></tr>
-<tr class="memdesc:aa21be6f8083f84fe236c5684d1510c94"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins and settings  <a href="class_j_encoder_single.html#aa21be6f8083f84fe236c5684d1510c94">More...</a><br /></td></tr>
-<tr class="separator:aa21be6f8083f84fe236c5684d1510c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7d0d2a92c13e78689e0e2c235e7433b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#af7d0d2a92c13e78689e0e2c235e7433b">JEncoderSingle</a> (byte _encoderPin, float _distPerCountFactor, bool _reverse, unsigned long _slowestIntervalMicros, unsigned long _switchBounceIntervalMicros, byte _interruptType)</td></tr>
+<tr class="memdesc:af7d0d2a92c13e78689e0e2c235e7433b"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins and settings  <a href="class_j_encoder_single.html#af7d0d2a92c13e78689e0e2c235e7433b">More...</a><br /></td></tr>
+<tr class="separator:af7d0d2a92c13e78689e0e2c235e7433b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab706d2be983c478b389a67557bd8f0e2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#ab706d2be983c478b389a67557bd8f0e2">setUpInterrupts</a> (void(*_isrPointer)(void))</td></tr>
 <tr class="memdesc:ab706d2be983c478b389a67557bd8f0e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">set up pins and interrupts  <a href="class_j_encoder_single.html#ab706d2be983c478b389a67557bd8f0e2">More...</a><br /></td></tr>
 <tr class="separator:ab706d2be983c478b389a67557bd8f0e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,6 +190,8 @@ Protected Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ab025a271ff5007822fcc083a494bc3a8"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#ab025a271ff5007822fcc083a494bc3a8">encoderPin</a></td></tr>
 <tr class="separator:ab025a271ff5007822fcc083a494bc3a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b0f4c37bca242eb4d3f0303e3426c2f"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_single.html#a3b0f4c37bca242eb4d3f0303e3426c2f">interruptType</a></td></tr>
+<tr class="separator:a3b0f4c37bca242eb4d3f0303e3426c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >reads a single channel (incremental) encoder </p>
@@ -198,8 +200,8 @@ speed calculation is done by measuring time between 2 encoder ticks (not between
 velocity is set to zero if the encoder has not turned in slowestIntervalMicros</p>
 <dl class="section note"><dt>Note</dt><dd>don't use this class directly, use a subclass </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aa21be6f8083f84fe236c5684d1510c94" name="aa21be6f8083f84fe236c5684d1510c94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa21be6f8083f84fe236c5684d1510c94">&#9670;&#160;</a></span>JEncoderSingle()</h2>
+<a id="af7d0d2a92c13e78689e0e2c235e7433b" name="af7d0d2a92c13e78689e0e2c235e7433b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7d0d2a92c13e78689e0e2c235e7433b">&#9670;&#160;</a></span>JEncoderSingle()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -235,7 +237,13 @@ velocity is set to zero if the encoder has not turned in slowestIntervalMicros</
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">unsigned long&#160;</td>
-          <td class="paramname"><em>_switchBounceIntervalMicros</em>&#160;</td>
+          <td class="paramname"><em>_switchBounceIntervalMicros</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>_interruptType</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -792,6 +800,28 @@ velocity is set to zero if the encoder has not turned in slowestIntervalMicros</
       <table class="memname">
         <tr>
           <td class="memname">unsigned char JEncoderSingle::encoderPin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b0f4c37bca242eb4d3f0303e3426c2f" name="a3b0f4c37bca242eb4d3f0303e3426c2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b0f4c37bca242eb4d3f0303e3426c2f">&#9670;&#160;</a></span>interruptType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte JEncoderSingle::interruptType</td>
         </tr>
       </table>
   </td>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['juststarted_0',['justStarted',['../class_j_servo_current_sensor.html#a65597e4b21cb5675efbc8ddb4e25c7d9',1,'JServoCurrentSensor']]]
+  ['interrupttype_0',['interruptType',['../class_j_encoder_single.html#a3b0f4c37bca242eb4d3f0303e3426c2f',1,'JEncoderSingle']]]
 ];
