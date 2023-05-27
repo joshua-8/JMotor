@@ -19,9 +19,10 @@ public:
      * @param  _reverse: false(default)
      * @param  _slowestIntervalMicros: after this many microseconds without an encoder tick velocity is set to zero.
      * @param  _switchBounceIntervalMicros: ignore additional pulses for this many microseconds after each pulse
+     * @param  _interruptType: counts on RISING, FALLING, or CHANGE interrupt
      */
-    JEncoderSinglePinChange(byte _encoderPin, float _distPerCountFactor = 1.0, bool _reverse = false, unsigned long _slowestIntervalMicros = 100000UL, unsigned long _switchBounceIntervalMicros = 0)
-        : JEncoderSingle(_encoderPin, _distPerCountFactor, _reverse, _slowestIntervalMicros, _switchBounceIntervalMicros)
+    JEncoderSinglePinChange(byte _encoderPin, float _distPerCountFactor = 1.0, bool _reverse = false, unsigned long _slowestIntervalMicros = 100000UL, unsigned long _switchBounceIntervalMicros = 0, byte _interruptType = CHANGE)
+        : JEncoderSingle(_encoderPin, _distPerCountFactor, _reverse, _slowestIntervalMicros, _switchBounceIntervalMicros, _interruptType)
     {
     }
 
@@ -32,7 +33,7 @@ public:
     {
         pinMode(encoderPin, INPUT);
 
-        enableInterrupt(encoderPin, _isrPointer, CHANGE);
+        enableInterrupt(encoderPin, _isrPointer, interruptType);
     }
     void turnOffInterrupts()
     {

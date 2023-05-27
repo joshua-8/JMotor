@@ -16,6 +16,7 @@ class JEncoderSingle : public JEncoder {
 
 protected:
     unsigned char encoderPin;
+    byte interruptType;
 
 private:
     bool rev;
@@ -40,7 +41,7 @@ protected:
      * @param  _slowestIntervalMicros: after this many microseconds without an encoder tick velocity is set to zero.
      * @param  _switchBounceIntervalMicros: ignore additional pulses for this many microseconds after each pulse
      */
-    JEncoderSingle(byte _encoderPin, float _distPerCountFactor, bool _reverse, unsigned long _slowestIntervalMicros, unsigned long _switchBounceIntervalMicros)
+    JEncoderSingle(byte _encoderPin, float _distPerCountFactor, bool _reverse, unsigned long _slowestIntervalMicros, unsigned long _switchBounceIntervalMicros, byte _interruptType)
     {
         rev = false;
         encoderPin = _encoderPin;
@@ -52,6 +53,7 @@ protected:
         } else {
             reverse = 1;
         }
+        interruptType = _interruptType;
 
         velNew = false;
         tickCounter = 0;
