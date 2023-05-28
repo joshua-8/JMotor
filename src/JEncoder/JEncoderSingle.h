@@ -111,7 +111,7 @@ public:
         if (tempInterval == 0) { // avoid divide by zero
             return 0.0;
         }
-        return (rev ? -1 : 1) * reverse * 1000000.0 / tempInterval * distPerCountFactor * 2;
+        return (rev ? -1 : 1) * reverse * 1000000.0 / tempInterval * distPerCountFactor * (interruptType == CHANGE ? 2 : 1);
     }
     long getCounter()
     {
