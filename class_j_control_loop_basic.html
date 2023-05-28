@@ -102,9 +102,9 @@ Collaboration diagram for JControlLoopBasic:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac76a673cd3068ab7d820edda3782bdf9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop_basic.html#ac76a673cd3068ab7d820edda3782bdf9">JControlLoopBasic</a> (float kP, unsigned long _timeout=0)</td></tr>
-<tr class="memdesc:ac76a673cd3068ab7d820edda3782bdf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor for control loop for use with <a class="el" href="class_j_motor_controller_closed.html" title="closed loop (uses encoder) motor controller">JMotorControllerClosed</a>  <a href="class_j_control_loop_basic.html#ac76a673cd3068ab7d820edda3782bdf9">More...</a><br /></td></tr>
-<tr class="separator:ac76a673cd3068ab7d820edda3782bdf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7694706381282a90c983243a07874c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop_basic.html#aa7694706381282a90c983243a07874c1">JControlLoopBasic</a> (float kP, unsigned long _timeout=0, bool _noReverseVoltage=false)</td></tr>
+<tr class="memdesc:aa7694706381282a90c983243a07874c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor for control loop for use with <a class="el" href="class_j_motor_controller_closed.html" title="closed loop (uses encoder) motor controller">JMotorControllerClosed</a>  <a href="class_j_control_loop_basic.html#aa7694706381282a90c983243a07874c1">More...</a><br /></td></tr>
+<tr class="separator:aa7694706381282a90c983243a07874c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af866c812ae16b24d3f8c787bff146667"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop_basic.html#af866c812ae16b24d3f8c787bff146667">calc</a> (<a class="el" href="class_j_motor_controller_closed.html">JMotorControllerClosed</a> *controller)</td></tr>
 <tr class="separator:af866c812ae16b24d3f8c787bff146667"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a313261f5702fed33ca1d2db03d8f61ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop_basic.html#a313261f5702fed33ca1d2db03d8f61ec">setKP</a> (float _p)</td></tr>
@@ -140,6 +140,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a8749d890f9a1361a4c73a559a97968ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbc723bc1b730de4069ef451e650ccc8"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop_basic.html#adbc723bc1b730de4069ef451e650ccc8">lastMovedMillis</a></td></tr>
 <tr class="separator:adbc723bc1b730de4069ef451e650ccc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c50054b71f70b885a05bcae3a83277a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop_basic.html#a1c50054b71f70b885a05bcae3a83277a">noReverseVoltage</a></td></tr>
+<tr class="separator:a1c50054b71f70b885a05bcae3a83277a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_j_control_loop"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_j_control_loop')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_j_control_loop.html">JControlLoop</a></td></tr>
 <tr class="memitem:a100befc78d818454698a2cccafeb9aa8 inherit pro_attribs_class_j_control_loop"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_control_loop.html#a100befc78d818454698a2cccafeb9aa8">error</a></td></tr>
 <tr class="separator:a100befc78d818454698a2cccafeb9aa8 inherit pro_attribs_class_j_control_loop"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,8 +153,8 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >simple control loop for use with <a class="el" href="class_j_motor_controller_closed.html" title="closed loop (uses encoder) motor controller">JMotorControllerClosed</a>, can turn off motor if nothing has moved for a while </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac76a673cd3068ab7d820edda3782bdf9" name="ac76a673cd3068ab7d820edda3782bdf9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac76a673cd3068ab7d820edda3782bdf9">&#9670;&#160;</a></span>JControlLoopBasic()</h2>
+<a id="aa7694706381282a90c983243a07874c1" name="aa7694706381282a90c983243a07874c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7694706381282a90c983243a07874c1">&#9670;&#160;</a></span>JControlLoopBasic()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -170,7 +172,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">unsigned long&#160;</td>
-          <td class="paramname"><em>_timeout</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>_timeout</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_noReverseVoltage</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -190,6 +198,7 @@ Protected Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">kP</td><td>(float) proportional to error </td></tr>
     <tr><td class="paramname">_timeout</td><td>(unsigned long) default: 0, set output to zero if there's been no movement for this many milliseconds. 0=never timeout </td></tr>
+    <tr><td class="paramname">_noReverseVoltage</td><td>(bool) default: false, if true, don't apply voltage in reverse direction to target velocity (recommended only for non-directional encoders) </td></tr>
   </table>
   </dd>
 </dl>
@@ -366,6 +375,28 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">unsigned long JControlLoopBasic::lastMovedMillis</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c50054b71f70b885a05bcae3a83277a" name="a1c50054b71f70b885a05bcae3a83277a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c50054b71f70b885a05bcae3a83277a">&#9670;&#160;</a></span>noReverseVoltage</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool JControlLoopBasic::noReverseVoltage</td>
         </tr>
       </table>
   </td>

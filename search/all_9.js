@@ -2,7 +2,7 @@ var searchData=
 [
   ['jcontrolloop_0',['JControlLoop',['../class_j_control_loop.html',1,'']]],
   ['jcontrolloop_2eh_1',['JControlLoop.h',['../_j_control_loop_8h.html',1,'']]],
-  ['jcontrolloopbasic_2',['JControlLoopBasic',['../class_j_control_loop_basic.html',1,'JControlLoopBasic'],['../class_j_control_loop_basic.html#ac76a673cd3068ab7d820edda3782bdf9',1,'JControlLoopBasic::JControlLoopBasic()']]],
+  ['jcontrolloopbasic_2',['JControlLoopBasic',['../class_j_control_loop_basic.html',1,'JControlLoopBasic'],['../class_j_control_loop_basic.html#aa7694706381282a90c983243a07874c1',1,'JControlLoopBasic::JControlLoopBasic()']]],
   ['jcontrolloopbasic_2eh_3',['JControlLoopBasic.h',['../_j_control_loop_basic_8h.html',1,'']]],
   ['jcurvaturedrive_4',['JCurvatureDrive',['../namespace_j_curvature_drive.html',1,'']]],
   ['jcurvaturedrive_2eh_5',['JCurvatureDrive.h',['../_j_curvature_drive_8h.html',1,'']]],
