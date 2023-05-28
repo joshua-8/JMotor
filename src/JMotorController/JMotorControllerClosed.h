@@ -100,7 +100,10 @@ public:
                 setVal = compensator.compensate(velSetpoint);
 
                 if (!encoder.hasDirection()) {
-                    encoder.setRev((setVal <= 0));
+                    if (setVal > 0)
+                        encoder.setRev(false);
+                    if (setVal < 0)
+                        encoder.setRev(true);
                 }
 
                 driverInRange = driver.set(setVal);
@@ -144,7 +147,10 @@ public:
                 setVal = compensator.compensate(velSetpoint);
 
                 if (!encoder.hasDirection()) {
-                    encoder.setRev((setVal < 0));
+                    if (setVal > 0)
+                        encoder.setRev(false);
+                    if (setVal < 0)
+                        encoder.setRev(true);
                 }
 
                 driverInRange = driver.set(setVal);

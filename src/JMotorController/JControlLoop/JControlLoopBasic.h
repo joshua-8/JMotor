@@ -9,18 +9,21 @@ protected:
     float P;
     float timeout;
     unsigned long lastMovedMillis;
+    bool noReverseVoltage;
 
 public:
     /**
      * @brief  constructor for control loop for use with JMotorControllerClosed
      * @param  kP: (float) proportional to error
      * @param  _timeout: (unsigned long) default: 0, set output to zero if there's been no movement for this many milliseconds. 0=never timeout
+     * @param  _noReverseVoltage: (bool) default: false, if true, don't apply voltage in reverse direction to target velocity (recommended only for non-directional encoders)
      */
-    JControlLoopBasic(float kP, unsigned long _timeout = 0)
+    JControlLoopBasic(float kP, unsigned long _timeout = 0, bool _noReverseVoltage = false)
     {
         P = kP;
         timeout = _timeout;
         lastMovedMillis = 0;
+        noReverseVoltage = _noReverseVoltage;
     }
     float calc(JMotorControllerClosed* controller)
     {
@@ -30,7 +33,17 @@ public:
         result = 0;
         if (timeout == 0 || millis() - lastMovedMillis <= timeout) {
             error = (controller->getPosSetpoint() - controller->getPos());
-            ctrlLoopOut = P * error;
+            if (noReverseVoltage) {
+                if (controller->getPosDeltaSetpoint() > 0) {
+                    ctrlLoopOut = max(P * error, (float)0);
+                } else if (controller->getPosDeltaSetpoint() < 0) {
+                    ctrlLoopOut = min(P * error, (float)0);
+                } else {
+                    ctrlLoopOut = 0;
+                }
+            } else {
+                ctrlLoopOut = P * error;
+            }
             result = ctrlLoopOut + controller->getPosDeltaSetpoint();
         }
 
