@@ -40,6 +40,7 @@ protected:
      * @param  _reverse: false(default)
      * @param  _slowestIntervalMicros: after this many microseconds without an encoder tick velocity is set to zero.
      * @param  _switchBounceIntervalMicros: ignore additional pulses for this many microseconds after each pulse
+     * @param  _interruptType: CHANGE, RISING, FALLING
      */
     JEncoderSingle(byte _encoderPin, float _distPerCountFactor, bool _reverse, unsigned long _slowestIntervalMicros, unsigned long _switchBounceIntervalMicros, byte _interruptType)
     {
@@ -111,7 +112,7 @@ public:
         if (tempInterval == 0) { // avoid divide by zero
             return 0.0;
         }
-        return (rev ? -1 : 1) * reverse * 1000000.0 / tempInterval * distPerCountFactor * (interruptType == CHANGE ? 2 : 1);
+        return (rev ? -1 : 1) * reverse * 1000000.0 / tempInterval * distPerCountFactor;
     }
     long getCounter()
     {
@@ -173,12 +174,10 @@ public:
     void encoderISR(void)
     {
         if (micros() - lastEncoderTickMicros >= switchBounceIntervalMicros) {
-            if (digitalRead(encoderPin) == HIGH) { // once a cycle save values used for speed calculations
-                unsigned long tempMicros = micros();
-                encoderIntervalMicros = tempMicros - lastEncoderTickMicros;
-                lastEncoderTickMicros = tempMicros;
-                newSpeed = true;
-            }
+            unsigned long tempMicros = micros();
+            encoderIntervalMicros = tempMicros - lastEncoderTickMicros;
+            lastEncoderTickMicros = tempMicros;
+            newSpeed = true;
             tickCounter += (rev ? -1 : 1);
         }
     }
