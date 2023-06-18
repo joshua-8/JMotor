@@ -16,5 +16,7 @@
 #include "JMotorController/JMotorController.h"
 #include "JMotorDriver/JMotorDriver.h"
 #include "JServoController/JServoController.h"
+#include "JSwerve/JSwerveModule.h"
+#include "JSwerve/JSwerveAngleControlLoop.h"
 #include "JTwoDTransform.h"
 #endif

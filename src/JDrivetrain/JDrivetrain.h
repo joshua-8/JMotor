@@ -27,4 +27,5 @@ public:
     virtual unsigned char getNumberMotors() = 0;
 };
 #include "JDrivetrainTwoSide.h"
+#include "JDrivetrainSwerve.h"
 #endif
