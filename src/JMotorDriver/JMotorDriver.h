@@ -65,13 +65,16 @@ public:
         return setEnable(false);
     }
 };
+
 #if defined(ESP32)
+#include "JMotorDriverEsp32HBridge.h"
 #include "JMotorDriverEsp32L293.h"
 #include "JMotorDriverEsp32PWM.h"
 #include "JMotorDriverEsp32PWMDir.h"
 #include "JMotorDriverEsp32Servo.h"
 #endif
-#if !defined(ESP32) || defined(J_MOTOR_DRIVER_FORCE_ANALOGWRITE) || defined(_ESP32_ESP32S2_ANALOG_WRITE_)
+#if !defined(ESP32) || defined(J_MOTOR_DRIVER_FORCE_ANALOGWRITE)
+#include "JMotorDriverAvrHBridge.h"
 #include "JMotorDriverAvrL293.h"
 #include "JMotorDriverAvrPWM.h"
 #include "JMotorDriverAvrPWMDir.h"
