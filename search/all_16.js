@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['y_0',['y',['../struct_j_two_d_transform.html#ae9c7cab664a00beb0b8e44b3d98eabc6',1,'JTwoDTransform']]],
-  ['ylimiter_1',['YLimiter',['../class_j_drivetrain_controller_basic.html#ab553130c220080ad3c3f2a4d2d067d1d',1,'JDrivetrainControllerBasic']]]
+  ['x_0',['x',['../struct_j_two_d_transform.html#a79b568ecd7b07ea12af392193abb7cfd',1,'JTwoDTransform']]],
+  ['xlimiter_1',['XLimiter',['../class_j_drivetrain_controller_basic.html#a71b1dd526404417be8fa85a92c7e275c',1,'JDrivetrainControllerBasic']]]
 ];

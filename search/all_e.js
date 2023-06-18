@@ -1,17 +1,13 @@
 var searchData=
 [
-  ['p_0',['P',['../class_j_control_loop_basic.html#a5378d02c0c49f2056db5507b3f4cc632',1,'JControlLoopBasic']]],
-  ['posdelta_1',['posDelta',['../class_j_motor_controller_open.html#a6ef86624b07d5b5ea560d97b9f2e623e',1,'JMotorControllerOpen']]],
-  ['posdeltasetpoint_2',['posDeltaSetpoint',['../class_j_motor_controller_closed.html#a421e4b9724bd8a278de9a73af300906f',1,'JMotorControllerClosed']]],
-  ['posdeltasetpointtarget_3',['posDeltaSetpointTarget',['../class_j_motor_controller_closed.html#ad44bcf897edc79435cf18553baca7ac3',1,'JMotorControllerClosed']]],
-  ['position_4',['position',['../class_j_motor_controller_open.html#a917a6564a342fffc14c31e3669e01cad',1,'JMotorControllerOpen']]],
-  ['positiontarget_5',['positionTarget',['../class_j_motor_controller_open.html#a4c13006321b87236a3feb707df91258b',1,'JMotorControllerOpen']]],
-  ['posmode_6',['posMode',['../class_j_motor_controller_closed.html#acb6b92aa578cb11d656cd9277d33acbd',1,'JMotorControllerClosed::posMode()'],['../class_j_motor_controller_open.html#a42adee6e39dfdffcf65854b588f47023',1,'JMotorControllerOpen::posMode()']]],
-  ['possetpoint_7',['posSetpoint',['../class_j_motor_controller_closed.html#a1074b8eb61ab6ac936fd31b8938f6399',1,'JMotorControllerClosed']]],
-  ['possetpointsmoother_8',['posSetpointSmoother',['../class_j_motor_controller_closed.html#acd7412581aa88841f34424ec7c9a55bd',1,'JMotorControllerClosed']]],
-  ['print_9',['print',['../struct_j_two_d_transform.html#a2779a445c4493572818ab21bc5facd1a',1,'JTwoDTransform']]],
-  ['pwm_5frange_10',['PWM_RANGE',['../class_j_motor_driver_avr_p_w_m.html#a03a258f040596b9711fd2e773434bd54',1,'JMotorDriverAvrPWM']]],
-  ['pwm_5fsteps_11',['PWM_STEPS',['../struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aff02616f61cfef0904b0e7a41d57b187',1,'JEncoderPWMAbsolute::pwmSettings']]],
-  ['pwmdriver_12',['pwmDriver',['../class_j_motor_driver_avr_l293.html#ac3693aaf5c9fba48882d1d713390c460',1,'JMotorDriverAvrL293::pwmDriver()'],['../class_j_motor_driver_avr_p_w_m_dir.html#a405440d1a48c7c755118dc099ceac969',1,'JMotorDriverAvrPWMDir::pwmDriver()'],['../class_j_motor_driver_esp32_l293.html#a170b794230d12938e5f436a1cfdff407',1,'JMotorDriverEsp32L293::pwmDriver()'],['../class_j_motor_driver_esp32_p_w_m_dir.html#a26da30d40f1c0d90c9b32df8b3089293',1,'JMotorDriverEsp32PWMDir::pwmDriver()']]],
-  ['pwmsettings_13',['pwmSettings',['../struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html',1,'JEncoderPWMAbsolute']]]
+  ['open_0',['open',['../class_j_motor_controller_closed.html#a8eec494a29c294a6eaaa38deda8e0ca1',1,'JMotorControllerClosed']]],
+  ['operator_26_1',['operator&amp;',['../struct_j_two_d_transform.html#a8de5f7804ff2b60c4845bd0c799cb136',1,'JTwoDTransform']]],
+  ['operator_2a_2',['operator*',['../struct_j_two_d_transform.html#af56db671fda1cf69d976421a5f89f0d9',1,'JTwoDTransform::operator*(const JTwoDTransform &amp;t)'],['../struct_j_two_d_transform.html#a035c35618524e4ff7aad82ca92552fe7',1,'JTwoDTransform::operator*(const float v)']]],
+  ['operator_2a_3d_3',['operator*=',['../struct_j_two_d_transform.html#aceda283816826ded9112064338ba71d2',1,'JTwoDTransform::operator*=(const JTwoDTransform &amp;t)'],['../struct_j_two_d_transform.html#a4467499217b381efbdcf6496ea6ebb80',1,'JTwoDTransform::operator*=(const float v)']]],
+  ['operator_2b_4',['operator+',['../struct_j_two_d_transform.html#adca0eb4dcea043a876d6fa36f856aa42',1,'JTwoDTransform']]],
+  ['operator_2b_3d_5',['operator+=',['../struct_j_two_d_transform.html#a70a5477ffb0d4088cef9bdb95f2ccbbe',1,'JTwoDTransform']]],
+  ['operator_2d_6',['operator-',['../struct_j_two_d_transform.html#ab99bdeff9f6611c877b77784d03d07ce',1,'JTwoDTransform::operator-(const JTwoDTransform &amp;t)'],['../struct_j_two_d_transform.html#a4d96e0389c8b5146212bce5aecdad516',1,'JTwoDTransform::operator-()']]],
+  ['operator_2d_3d_7',['operator-=',['../struct_j_two_d_transform.html#a844f12ec5ecd23ca6b0f6d0eb4bbb231',1,'JTwoDTransform']]],
+  ['operator_2f_8',['operator/',['../struct_j_two_d_transform.html#a6270bce57ff06e7ecbc737e9cbe73011',1,'JTwoDTransform::operator/(const JTwoDTransform &amp;t)'],['../struct_j_two_d_transform.html#a102b0c4e1fb6862f0470bceaf1152863',1,'JTwoDTransform::operator/(const float v)']]],
+  ['operator_2f_3d_9',['operator/=',['../struct_j_two_d_transform.html#a02c8b955abc7eef5707715f6bfdd8610',1,'JTwoDTransform::operator/=(const JTwoDTransform &amp;t)'],['../struct_j_two_d_transform.html#a3d4ce04f2c762f6dd8a5513fafa6918d',1,'JTwoDTransform::operator/=(const float v)']]]
 ];

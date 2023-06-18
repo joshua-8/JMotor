@@ -1,11 +1,17 @@
 var searchData=
 [
-  ['readindex_0',['readIndex',['../class_j_servo_current_sensor.html#aeb7b024e129f44a829259d055632ad8b',1,'JServoCurrentSensor']]],
-  ['readings_1',['readings',['../class_j_servo_current_sensor.html#a69de6581000a7ce0b1f31c81f6893a5b',1,'JServoCurrentSensor']]],
-  ['resolution_2',['RESOLUTION',['../struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aaeaa01d54add313c783c532f654651e6',1,'JEncoderPWMAbsolute::pwmSettings']]],
-  ['result_3',['result',['../class_j_control_loop.html#a3eb3f38bab7c4044d2410b47d3577ce2',1,'JControlLoop']]],
-  ['reverse_4',['reverse',['../class_j_motor_driver_avr_l293.html#aa70bc7a4cdc0073e59a84c7f6b87b615',1,'JMotorDriverAvrL293::reverse()'],['../class_j_motor_driver_avr_p_w_m_dir.html#a66cd529eff178ee36cb9cc4edf53f54e',1,'JMotorDriverAvrPWMDir::reverse()'],['../class_j_motor_driver_esp32_l293.html#ab34aeddb63c805d54194e306dd00f3de',1,'JMotorDriverEsp32L293::reverse()'],['../class_j_motor_driver_esp32_p_w_m_dir.html#ab502afbb0bbaf46a9c786affeb5d3eff',1,'JMotorDriverEsp32PWMDir::reverse()'],['../class_j_servo_controller.html#a83958607b1088df4ab52015986734807',1,'JServoController::reverse()']]],
-  ['right_5',['right',['../class_j_drivetrain_two_side.html#afbd846b24c7751008beea16e5a431f3a',1,'JDrivetrainTwoSide']]],
-  ['rightdist_6',['rightDist',['../class_j_drivetrain_two_side.html#ad9faf58b2854e99cdd0adb5c6b678f60',1,'JDrivetrainTwoSide']]],
-  ['rightvel_7',['rightVel',['../class_j_drivetrain_two_side.html#a35d6741156b84bd874973d82cd7f95ae',1,'JDrivetrainTwoSide']]]
+  ['p_0',['P',['../class_j_control_loop_basic.html#a5378d02c0c49f2056db5507b3f4cc632',1,'JControlLoopBasic']]],
+  ['posdelta_1',['posDelta',['../class_j_motor_controller_open.html#a6ef86624b07d5b5ea560d97b9f2e623e',1,'JMotorControllerOpen']]],
+  ['posdeltasetpoint_2',['posDeltaSetpoint',['../class_j_motor_controller_closed.html#a421e4b9724bd8a278de9a73af300906f',1,'JMotorControllerClosed']]],
+  ['posdeltasetpointtarget_3',['posDeltaSetpointTarget',['../class_j_motor_controller_closed.html#ad44bcf897edc79435cf18553baca7ac3',1,'JMotorControllerClosed']]],
+  ['position_4',['position',['../class_j_motor_controller_open.html#a917a6564a342fffc14c31e3669e01cad',1,'JMotorControllerOpen']]],
+  ['positiontarget_5',['positionTarget',['../class_j_motor_controller_open.html#a4c13006321b87236a3feb707df91258b',1,'JMotorControllerOpen']]],
+  ['posmode_6',['posMode',['../class_j_motor_controller_closed.html#acb6b92aa578cb11d656cd9277d33acbd',1,'JMotorControllerClosed::posMode()'],['../class_j_motor_controller_open.html#a42adee6e39dfdffcf65854b588f47023',1,'JMotorControllerOpen::posMode()']]],
+  ['possetpoint_7',['posSetpoint',['../class_j_motor_controller_closed.html#a1074b8eb61ab6ac936fd31b8938f6399',1,'JMotorControllerClosed']]],
+  ['possetpointsmoother_8',['posSetpointSmoother',['../class_j_motor_controller_closed.html#acd7412581aa88841f34424ec7c9a55bd',1,'JMotorControllerClosed']]],
+  ['pwm_5frange_9',['PWM_RANGE',['../class_j_motor_driver_avr_p_w_m.html#a03a258f040596b9711fd2e773434bd54',1,'JMotorDriverAvrPWM']]],
+  ['pwm_5fsteps_10',['PWM_STEPS',['../struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aff02616f61cfef0904b0e7a41d57b187',1,'JEncoderPWMAbsolute::pwmSettings']]],
+  ['pwmdriver_11',['pwmDriver',['../class_j_motor_driver_avr_l293.html#ac3693aaf5c9fba48882d1d713390c460',1,'JMotorDriverAvrL293::pwmDriver()'],['../class_j_motor_driver_avr_p_w_m_dir.html#a405440d1a48c7c755118dc099ceac969',1,'JMotorDriverAvrPWMDir::pwmDriver()'],['../class_j_motor_driver_esp32_l293.html#a170b794230d12938e5f436a1cfdff407',1,'JMotorDriverEsp32L293::pwmDriver()'],['../class_j_motor_driver_esp32_p_w_m_dir.html#a26da30d40f1c0d90c9b32df8b3089293',1,'JMotorDriverEsp32PWMDir::pwmDriver()']]],
+  ['pwmdriverneg_12',['pwmDriverNeg',['../class_j_motor_driver_avr_h_bridge.html#a8799617f6403cb0adf50fb8f056dd81b',1,'JMotorDriverAvrHBridge::pwmDriverNeg()'],['../class_j_motor_driver_esp32_h_bridge.html#aefe84d075ab6a4a99ca08a5485ef7ca6',1,'JMotorDriverEsp32HBridge::pwmDriverNeg()']]],
+  ['pwmdriverpos_13',['pwmDriverPos',['../class_j_motor_driver_avr_h_bridge.html#a9e04227f6b913c19bf7088c1db6741f9',1,'JMotorDriverAvrHBridge::pwmDriverPos()'],['../class_j_motor_driver_esp32_h_bridge.html#a381f35c9e10ca890d2e7bafbe0f8eb4f',1,'JMotorDriverEsp32HBridge::pwmDriverPos()']]]
 ];
