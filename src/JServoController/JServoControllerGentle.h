@@ -20,10 +20,10 @@ public:
 
     /**
      * @brief  Constructor for JServoController Gentle (a child class of JServoController)
-     * @param  servo: 
-     * @param  servoStallSensor: 
+     * @param  servo:
+     * @param  servoStallSensor:
      * @param  _targetForce: target force as measured by JServoStallSensing (if set too low, gripping may not work since just moving the servo could take more than the set power)
-     * @param  _gripSpeed: 
+     * @param  _gripSpeed:
      */
     JServoControllerGentle(JServoControllerAdvanced servo, JServoStallSensing& servoStallSensor, float _targetForce = .05, float _gripSpeed = 30)
         : JServoController(servo)
@@ -54,14 +54,14 @@ public:
      * @param  _dirPos: (bool) true = move in positive direction, false = move in negative direction
      * @param  _targetForce: (float, default NAN) if not NAN, override default setting for how hard to grip
      * @param  _gripSpeed: (float, default NAN) if not NAN, override default setting for how fast to move
-     * @param  _run: (bool, default true) true = call run() in this function, false = you'll call run() yourself
+     * @param  _run: (bool, default false) true = call run() in this function, false = you'll call run() yourself
      */
-    void gripGently(bool _dirPos, float _targetForce = NAN, float _gripSpeed = NAN, bool _run = true)
+    void gripGently(bool _dirPos, float _targetForce = NAN, float _gripSpeed = NAN, bool _run = false)
     {
-        if (isnan(_targetForce))
-            _targetForce = targetForce;
-        if (isnan(_targetForce))
-            _targetForce = targetForce;
+        if (!isnan(_targetForce))
+            targetForce = _targetForce;
+        if (!isnan(_gripSpeed))
+            gripSpeed = _gripSpeed;
         gripDirPos = _dirPos;
         grippingGently = true;
         if (_run)
@@ -76,7 +76,7 @@ public:
     void setAngleImmediate(float angle, bool _run = true)
     {
         grippingGently = false;
-        JServoController::setAngleImmediate(angle, _run = true);
+        JServoController::setAngleImmediate(angle, _run);
     }
     void setAngleImmediateInc(float angleDiff, bool _run = true)
     {
