@@ -75,5 +75,5 @@ var searchData=
   ['getweakentimeout_72',['getWeakenTimeout',['../class_j_servo_controller_advanced.html#a41b7a3017483591e31e4da4bddf39be0',1,'JServoControllerAdvanced']]],
   ['getweakfreq_73',['getWeakFreq',['../class_j_servo_controller_advanced.html#a1d74ccd6e457e6886f9c68aa8ddcf083',1,'JServoControllerAdvanced']]],
   ['getwidth_74',['getWidth',['../class_j_drivetrain_two_side.html#a83595216cd0393fbb15487bd0d7b329d',1,'JDrivetrainTwoSide']]],
-  ['gripgently_75',['gripGently',['../class_j_servo_controller_gentle.html#a9bab82edcf963abe375e26bf8463a6a0',1,'JServoControllerGentle']]]
+  ['gripgently_75',['gripGently',['../class_j_servo_controller_gentle.html#aa1c42a0f9e912c6fe380269e8f0a56fe',1,'JServoControllerGentle']]]
 ];

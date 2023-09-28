@@ -116,9 +116,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad4cb54385e6c1107a06cd255154948bd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller_gentle.html#ad4cb54385e6c1107a06cd255154948bd">run</a> ()</td></tr>
 <tr class="memdesc:ad4cb54385e6c1107a06cd255154948bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">call this in your main loop  <a href="class_j_servo_controller_gentle.html#ad4cb54385e6c1107a06cd255154948bd">More...</a><br /></td></tr>
 <tr class="separator:ad4cb54385e6c1107a06cd255154948bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bab82edcf963abe375e26bf8463a6a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller_gentle.html#a9bab82edcf963abe375e26bf8463a6a0">gripGently</a> (bool _dirPos, float _targetForce=NAN, float _gripSpeed=NAN, bool _run=true)</td></tr>
-<tr class="memdesc:a9bab82edcf963abe375e26bf8463a6a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">have the servo move until it is pushing with a set amount of force  <a href="class_j_servo_controller_gentle.html#a9bab82edcf963abe375e26bf8463a6a0">More...</a><br /></td></tr>
-<tr class="separator:a9bab82edcf963abe375e26bf8463a6a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1c42a0f9e912c6fe380269e8f0a56fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller_gentle.html#aa1c42a0f9e912c6fe380269e8f0a56fe">gripGently</a> (bool _dirPos, float _targetForce=NAN, float _gripSpeed=NAN, bool _run=false)</td></tr>
+<tr class="memdesc:aa1c42a0f9e912c6fe380269e8f0a56fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">have the servo move until it is pushing with a set amount of force  <a href="class_j_servo_controller_gentle.html#aa1c42a0f9e912c6fe380269e8f0a56fe">More...</a><br /></td></tr>
+<tr class="separator:aa1c42a0f9e912c6fe380269e8f0a56fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa109c91a94105a98d414fe5e42aa901"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller_gentle.html#afa109c91a94105a98d414fe5e42aa901">setPosition</a> (float pos, bool _run)</td></tr>
 <tr class="separator:afa109c91a94105a98d414fe5e42aa901"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcba7f7e292a1bb5ae081f739f5f8a62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_servo_controller_gentle.html#afcba7f7e292a1bb5ae081f739f5f8a62">setAngleImmediate</a> (float angle, bool _run=true)</td></tr>
@@ -530,8 +530,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a9bab82edcf963abe375e26bf8463a6a0" name="a9bab82edcf963abe375e26bf8463a6a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9bab82edcf963abe375e26bf8463a6a0">&#9670;&#160;</a></span>gripGently()</h2>
+<a id="aa1c42a0f9e912c6fe380269e8f0a56fe" name="aa1c42a0f9e912c6fe380269e8f0a56fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1c42a0f9e912c6fe380269e8f0a56fe">&#9670;&#160;</a></span>gripGently()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -561,7 +561,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>_run</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>_run</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -582,7 +582,7 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">_dirPos</td><td>(bool) true = move in positive direction, false = move in negative direction </td></tr>
     <tr><td class="paramname">_targetForce</td><td>(float, default NAN) if not NAN, override default setting for how hard to grip </td></tr>
     <tr><td class="paramname">_gripSpeed</td><td>(float, default NAN) if not NAN, override default setting for how fast to move </td></tr>
-    <tr><td class="paramname">_run</td><td>(bool, default true) true = call <a class="el" href="class_j_servo_controller_gentle.html#ad4cb54385e6c1107a06cd255154948bd" title="call this in your main loop">run()</a> in this function, false = you'll call <a class="el" href="class_j_servo_controller_gentle.html#ad4cb54385e6c1107a06cd255154948bd" title="call this in your main loop">run()</a> yourself </td></tr>
+    <tr><td class="paramname">_run</td><td>(bool, default false) true = call <a class="el" href="class_j_servo_controller_gentle.html#ad4cb54385e6c1107a06cd255154948bd" title="call this in your main loop">run()</a> in this function, false = you'll call <a class="el" href="class_j_servo_controller_gentle.html#ad4cb54385e6c1107a06cd255154948bd" title="call this in your main loop">run()</a> yourself </td></tr>
   </table>
   </dd>
 </dl>
