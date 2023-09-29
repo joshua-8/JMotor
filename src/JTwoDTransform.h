@@ -20,6 +20,11 @@ struct JTwoDTransform {
      */
     float theta;
 
+    static JTwoDTransform rotate(JTwoDTransform tIn, float theta)
+    {
+        return { tIn.x * cos(-theta) - tIn.y * sin(-theta), tIn.x * sin(-theta) + tIn.y * cos(-theta), theta };
+    }
+
     /**
      * @brief converts from a coordinate system that might be more intuitive for some people
      * @param  fb: backwards- | forward+

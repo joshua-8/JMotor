@@ -1,5 +1,5 @@
-#ifndef _J_DRIVETRAIN_TWO_SIDE_H
-#define _J_DRIVETRAIN_TWO_SIDE_H
+#ifndef JDRIVETRAIN_TWO_SIDE_H
+#define JDRIVETRAIN_TWO_SIDE_H
 #include "JDrivetrain.h"
 #include "JMotorController/JMotorController.h"
 #include "JTwoDTransform.h"
@@ -114,27 +114,6 @@ public:
     {
         return maxVel;
     }
-    void setMotorVels(float vels[2], bool _run = false)
-    {
-        left.setVel(vels[0]);
-        right.setVel(vels[1]);
-        if (_run)
-            run();
-    }
-    void setMotorDistSetpoints(float vels[2], bool _run = false)
-    {
-        left.setPosSetpoint(vels[0]);
-        right.setPosSetpoint(vels[1]);
-        if (_run)
-            run();
-    }
-    void setMotorDistDeltas(float vels[2], bool _run = false)
-    {
-        left.setPosDelta(vels[0]);
-        right.setPosDelta(vels[1]);
-        if (_run)
-            run();
-    }
     float getMotorVel(unsigned char i)
     {
         if (i == 0)
@@ -142,6 +121,27 @@ public:
         if (i == 1)
             return rightVel;
         return 0;
+    }
+    void setMotorVel(float vel, unsigned char i, bool _run = false)
+    {
+        if (i == 0)
+            left.setVel(vel, _run);
+        if (i == 1)
+            right.setVel(vel, _run);
+    }
+    void setMotorDistSetpoint(float distSetpoint, unsigned char i, bool _run = false)
+    {
+        if (i == 0)
+            left.setPosSetpoint(distSetpoint, _run);
+        if (i == 1)
+            right.setPosSetpoint(distSetpoint, _run);
+    }
+    void setMotorDistDelta(float distDelta, unsigned char i, bool _run = false)
+    {
+        if (i == 0)
+            left.setPosDelta(distDelta, _run);
+        if (i == 1)
+            right.setPosDelta(distDelta, _run);
     }
     unsigned char getNumberMotors()
     {
@@ -158,4 +158,4 @@ public:
         width = _width;
     }
 };
-#endif
+#endif // JDRIVETRAIN_TWO_SIDE_H

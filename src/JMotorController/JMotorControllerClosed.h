@@ -371,7 +371,7 @@ public:
     void setAccelLimit(float _accelLimit)
     {
         accelLimit = max(_accelLimit, (float)0.0);
-        posSetpointSmoother.setAccelLimit(accelLimit);
+        posSetpointSmoother.setAccelAndDecelLimits(accelLimit, accelLimit);
     }
     void setVelLimit(float _velLimit)
     {

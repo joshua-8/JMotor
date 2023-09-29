@@ -1,12 +1,20 @@
 #ifndef JDRIVETRAIN_SWERVE_H
 #define JDRIVETRAIN_SWERVE_H
-#include "JDrivetrain.h"
+#include "JDrivetrainBasic.h"
 #include "JSwerve/JSwerveModule.h"
 #include "JTwoDTransform.h"
 #include <Arduino.h>
 // TODO: COMMENT
-template <byte N> // number of swerve modules
-class JDrivetrainSwerve {
+/**
+ * @brief  number of swerve modules
+ */
+template <byte N>
+/**
+ * @brief  swerve drivetrain.
+ * @note not actually a subclass of JDrivetrain, since currently only velocity control is implemented
+ * The code for calculating speed and angles for each wheel is in this file.
+ */
+class JDrivetrainSwerve : public JDrivetrainBasic {
 public:
     JSwerveModule* swerveModule[N];
     float modPosL[N]; // left right position of swerve modules

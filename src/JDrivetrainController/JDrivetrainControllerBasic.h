@@ -364,31 +364,21 @@ public:
     {
         return drivetrain.getMaxVel();
     }
-    void setMotorVels(float vels[], bool _run = false)
-    {
-        controlled = false;
-        drivetrain.setMotorVels(vels, false);
-        if (_run)
-            run();
-    }
-    void setMotorDistSetpoints(float vels[], bool _run = false)
-    {
-        controlled = false;
-        drivetrain.setMotorDistSetpoints(vels, false);
-        if (_run)
-            run();
-    }
-    void setMotorDistDeltas(float vels[], bool _run = false)
-    {
-        controlled = false;
-        drivetrain.setMotorDistDeltas(vels, false);
-        if (_run)
-            run();
-    }
-
     float getMotorVel(unsigned char i)
     {
         return drivetrain.getMotorVel(i);
+    }
+    void setMotorVel(float vel, unsigned char i, bool _run = false)
+    {
+        drivetrain.setMotorVel(vel, i, _run);
+    }
+    void setMotorDistSetpoint(float distSetpoint, unsigned char i, bool _run = false)
+    {
+        drivetrain.setMotorDistSetpoint(distSetpoint, i, _run);
+    }
+    void setMotorDistDelta(float distDelta, unsigned char i, bool _run = false)
+    {
+        drivetrain.setMotorDistDelta(distDelta, i, _run);
     }
     unsigned char getNumberMotors()
     {
