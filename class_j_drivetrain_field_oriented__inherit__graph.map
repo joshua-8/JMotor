@@ -1,0 +1,5 @@
+<map id="JDrivetrainFieldOriented" name="JDrivetrainFieldOriented">
+<area shape="rect" id="node1" title="interface for a drivetrain that makes it into field oriented" alt="" coords="5,152,167,177"/>
+<area shape="rect" id="node2" href="$class_j_drivetrain.html" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="44,79,128,104"/>
+<area shape="rect" id="node3" href="$class_j_drivetrain_basic.html" title="interface for a drivetrain with only simple velocity control" alt="" coords="27,5,145,31"/>
+</map>

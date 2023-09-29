@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kp_0',['kP',['../class_j_swerve_angle_control_loop_p.html#aad852c9e5beb5d7f6ae864b455f18348',1,'JSwerveAngleControlLoopP']]]
+  ['juststarted_0',['justStarted',['../class_j_servo_current_sensor.html#a65597e4b21cb5675efbc8ddb4e25c7d9',1,'JServoCurrentSensor']]]
 ];

@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_j_servo_stall_sensing.html" title="defines interface for classes that can measure how hard a servo is working" alt="" coords="5,5,141,31"/>
-<area shape="rect" id="node2" href="$class_j_servo_current_sensor.html" title="implements JServoStallSensing interface." alt="" coords="189,5,368,31"/>
+<area shape="rect" id="node1" href="$class_j_swerve_angle_control_loop.html" title=" " alt="" coords="5,5,181,31"/>
+<area shape="rect" id="node2" href="$class_j_swerve_angle_control_loop_p.html" title=" " alt="" coords="229,5,415,31"/>
 </map>

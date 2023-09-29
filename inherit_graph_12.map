@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$struct_j_two_d_transform.html" title="struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move." alt="" coords="5,5,128,31"/>
+<area shape="rect" id="node1" href="$class_j_voltage_compensator.html" title="convert voltage to value needed to set driver at to get that voltage" alt="" coords="5,55,156,80"/>
+<area shape="rect" id="node2" href="$class_j_voltage_comp_adjust.html" title="convert voltage to value needed to set driver at to get that voltage, uses reference to variable that..." alt="" coords="227,5,371,31"/>
+<area shape="rect" id="node3" href="$class_j_voltage_comp_const.html" title="convert voltage to value needed to set driver at to get that voltage, with constant value for what su..." alt="" coords="228,55,369,80"/>
+<area shape="rect" id="node4" href="$class_j_voltage_comp_measure.html" title="measure supply voltage with analogRead and use that to convert voltage to value needed to set driver ..." alt="" coords="204,104,393,129"/>
 </map>

@@ -87,8 +87,9 @@ Inheritance diagram for JDrivetrainTwoSide:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_drivetrain_two_side__inherit__graph.png" border="0" usemap="#a_j_drivetrain_two_side_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_j_drivetrain_two_side_inherit__map" id="a_j_drivetrain_two_side_inherit__map">
-<area shape="rect" title="child class of JDrivetrain for controlling a drivetrain with one JMotorController for each side of th..." alt="" coords="5,79,140,104"/>
-<area shape="rect" href="class_j_drivetrain.html" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="31,5,115,31"/>
+<area shape="rect" title="child class of JDrivetrain for controlling a drivetrain with one JMotorController for each side of th..." alt="" coords="5,152,140,177"/>
+<area shape="rect" href="class_j_drivetrain.html" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="31,79,115,104"/>
+<area shape="rect" href="class_j_drivetrain_basic.html" title="interface for a drivetrain with only simple velocity control" alt="" coords="14,5,131,31"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -96,11 +97,12 @@ Collaboration diagram for JDrivetrainTwoSide:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_drivetrain_two_side__coll__graph.png" border="0" usemap="#a_j_drivetrain_two_side_coll__map" alt="Collaboration graph"/></div>
 <map name="a_j_drivetrain_two_side_coll__map" id="a_j_drivetrain_two_side_coll__map">
-<area shape="rect" title="child class of JDrivetrain for controlling a drivetrain with one JMotorController for each side of th..." alt="" coords="105,197,240,223"/>
-<area shape="rect" href="class_j_drivetrain.html" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="5,80,89,105"/>
-<area shape="rect" href="class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="114,80,231,105"/>
-<area shape="rect" href="class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="99,5,246,31"/>
-<area shape="rect" href="struct_j_two_d_transform.html" title="struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move." alt="" coords="255,80,378,105"/>
+<area shape="rect" title="child class of JDrivetrain for controlling a drivetrain with one JMotorController for each side of th..." alt="" coords="145,197,279,223"/>
+<area shape="rect" href="class_j_drivetrain.html" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="30,80,114,105"/>
+<area shape="rect" href="class_j_drivetrain_basic.html" title="interface for a drivetrain with only simple velocity control" alt="" coords="5,5,123,31"/>
+<area shape="rect" href="class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="153,80,271,105"/>
+<area shape="rect" href="class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="147,5,293,31"/>
+<area shape="rect" href="struct_j_two_d_transform.html" title="struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move." alt="" coords="295,80,417,105"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -109,20 +111,26 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a26f14ee644de433e597636047368d144"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a26f14ee644de433e597636047368d144">JDrivetrainTwoSide</a> (<a class="el" href="class_j_motor_controller.html">JMotorController</a> &amp;_left, <a class="el" href="class_j_motor_controller.html">JMotorController</a> &amp;_right, float _width)</td></tr>
 <tr class="separator:a26f14ee644de433e597636047368d144"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae886b9c61d0c2e11dd8c1314d5e67a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#aae886b9c61d0c2e11dd8c1314d5e67a5">run</a> ()</td></tr>
+<tr class="memdesc:aae886b9c61d0c2e11dd8c1314d5e67a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">call this in loop. it calls any encoder or motor update functions  <a href="class_j_drivetrain_two_side.html#aae886b9c61d0c2e11dd8c1314d5e67a5">More...</a><br /></td></tr>
 <tr class="separator:aae886b9c61d0c2e11dd8c1314d5e67a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a431e805d4de6d037799dda23cb81cbed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a431e805d4de6d037799dda23cb81cbed">setEnable</a> (bool _enable)</td></tr>
+<tr class="memdesc:a431e805d4de6d037799dda23cb81cbed"><td class="mdescLeft">&#160;</td><td class="mdescRight">enables or disables movement  <a href="class_j_drivetrain_two_side.html#a431e805d4de6d037799dda23cb81cbed">More...</a><br /></td></tr>
 <tr class="separator:a431e805d4de6d037799dda23cb81cbed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad27bced90555db5d1a5119cc750c6ee2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#ad27bced90555db5d1a5119cc750c6ee2">enable</a> ()</td></tr>
+<tr class="memdesc:ad27bced90555db5d1a5119cc750c6ee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">enables movement  <a href="class_j_drivetrain_two_side.html#ad27bced90555db5d1a5119cc750c6ee2">More...</a><br /></td></tr>
 <tr class="separator:ad27bced90555db5d1a5119cc750c6ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99fbd82f022c6deb471c6dbc6f5261a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a99fbd82f022c6deb471c6dbc6f5261a0">disable</a> ()</td></tr>
+<tr class="memdesc:a99fbd82f022c6deb471c6dbc6f5261a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">disables movement  <a href="class_j_drivetrain_two_side.html#a99fbd82f022c6deb471c6dbc6f5261a0">More...</a><br /></td></tr>
 <tr class="separator:a99fbd82f022c6deb471c6dbc6f5261a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5638bc2403991ae56968206120a82081"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a5638bc2403991ae56968206120a82081">getEnable</a> ()</td></tr>
+<tr class="memdesc:a5638bc2403991ae56968206120a82081"><td class="mdescLeft">&#160;</td><td class="mdescRight">gets the current state (enabled or disabled)  <a href="class_j_drivetrain_two_side.html#a5638bc2403991ae56968206120a82081">More...</a><br /></td></tr>
 <tr class="separator:a5638bc2403991ae56968206120a82081"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54aee703a5000bb870489bbcf684fc4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a54aee703a5000bb870489bbcf684fc4f">getVel</a> (bool _run=false)</td></tr>
 <tr class="separator:a54aee703a5000bb870489bbcf684fc4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad67620985f2d31434e04f3232ca30645"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#ad67620985f2d31434e04f3232ca30645">getDist</a> (bool _run=false)</td></tr>
 <tr class="separator:ad67620985f2d31434e04f3232ca30645"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dc09f4d6428adec3cabfb636d309d37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a9dc09f4d6428adec3cabfb636d309d37">setVel</a> (<a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> _vel, bool _run=false)</td></tr>
+<tr class="memdesc:a9dc09f4d6428adec3cabfb636d309d37"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets a velocity for the drivetrain to move at  <a href="class_j_drivetrain_two_side.html#a9dc09f4d6428adec3cabfb636d309d37">More...</a><br /></td></tr>
 <tr class="separator:a9dc09f4d6428adec3cabfb636d309d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b746bb06028ceaea2ffc6f151f6e16b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a6b746bb06028ceaea2ffc6f151f6e16b">setDistSetpoint</a> (<a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> _dist, bool _run=false)</td></tr>
 <tr class="separator:a6b746bb06028ceaea2ffc6f151f6e16b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,56 +139,63 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1cd38f99dd85ecaa747864fe4a301862"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a1cd38f99dd85ecaa747864fe4a301862">resetDist</a> ()</td></tr>
 <tr class="separator:a1cd38f99dd85ecaa747864fe4a301862"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d9eec3791596e11fb795dbc3a2942d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a2d9eec3791596e11fb795dbc3a2942d0">getMaxVel</a> ()</td></tr>
+<tr class="memdesc:a2d9eec3791596e11fb795dbc3a2942d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the approximate maximum velocity of the drivetrain, if the drivetrain is told to move at max velocity, it should set the motors to full power.  <a href="class_j_drivetrain_two_side.html#a2d9eec3791596e11fb795dbc3a2942d0">More...</a><br /></td></tr>
 <tr class="separator:a2d9eec3791596e11fb795dbc3a2942d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba210464488fe57a773028426b853e7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#aba210464488fe57a773028426b853e7f">setMotorVels</a> (float vels[2], bool _run=false)</td></tr>
-<tr class="separator:aba210464488fe57a773028426b853e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e1b0e351a756e783ec06d5100a32857"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a4e1b0e351a756e783ec06d5100a32857">setMotorDistSetpoints</a> (float vels[2], bool _run=false)</td></tr>
-<tr class="separator:a4e1b0e351a756e783ec06d5100a32857"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56e9720124ca7c3016f3666ac1be664a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a56e9720124ca7c3016f3666ac1be664a">setMotorDistDeltas</a> (float vels[2], bool _run=false)</td></tr>
-<tr class="separator:a56e9720124ca7c3016f3666ac1be664a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accfd641f154bfa921d7f92e73c59d93f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#accfd641f154bfa921d7f92e73c59d93f">getMotorVel</a> (unsigned char i)</td></tr>
 <tr class="separator:accfd641f154bfa921d7f92e73c59d93f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36504df9da38a34be86afb58860a8259"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a36504df9da38a34be86afb58860a8259">setMotorVel</a> (float <a class="el" href="class_j_drivetrain_two_side.html#a06ca51ef369bd0ab8f17af0cbfe5588b">vel</a>, unsigned char i, bool _run=false)</td></tr>
+<tr class="separator:a36504df9da38a34be86afb58860a8259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26935d7d7f3c0a07f7afb9839a636abe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a26935d7d7f3c0a07f7afb9839a636abe">setMotorDistSetpoint</a> (float distSetpoint, unsigned char i, bool _run=false)</td></tr>
+<tr class="separator:a26935d7d7f3c0a07f7afb9839a636abe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adafe7c3a88fc9d18e85935f93fe89e4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#adafe7c3a88fc9d18e85935f93fe89e4c">setMotorDistDelta</a> (float distDelta, unsigned char i, bool _run=false)</td></tr>
+<tr class="separator:adafe7c3a88fc9d18e85935f93fe89e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adeaa8bda7b42feb2454ae545aa331b71"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#adeaa8bda7b42feb2454ae545aa331b71">getNumberMotors</a> ()</td></tr>
 <tr class="separator:adeaa8bda7b42feb2454ae545aa331b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83595216cd0393fbb15487bd0d7b329d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#a83595216cd0393fbb15487bd0d7b329d">getWidth</a> ()</td></tr>
 <tr class="separator:a83595216cd0393fbb15487bd0d7b329d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5ec6df733027b5e573fd8f1771887d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_two_side.html#ac5ec6df733027b5e573fd8f1771887d1">setWidth</a> (float _width)</td></tr>
 <tr class="separator:ac5ec6df733027b5e573fd8f1771887d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_j_drivetrain"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_j_drivetrain')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_j_drivetrain.html">JDrivetrain</a></td></tr>
-<tr class="memitem:a76ad4edd018d911d67fe494ca4bbb541 inherit pub_methods_class_j_drivetrain"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#a76ad4edd018d911d67fe494ca4bbb541">run</a> ()=0</td></tr>
-<tr class="separator:a76ad4edd018d911d67fe494ca4bbb541 inherit pub_methods_class_j_drivetrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a487d0c313f442c05b5829130d282547d inherit pub_methods_class_j_drivetrain"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#a487d0c313f442c05b5829130d282547d">setEnable</a> (bool _enable)=0</td></tr>
-<tr class="separator:a487d0c313f442c05b5829130d282547d inherit pub_methods_class_j_drivetrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c6027d1c0f4af7c312e671d6a7715ff inherit pub_methods_class_j_drivetrain"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#a8c6027d1c0f4af7c312e671d6a7715ff">enable</a> ()=0</td></tr>
-<tr class="separator:a8c6027d1c0f4af7c312e671d6a7715ff inherit pub_methods_class_j_drivetrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a920ff8ec4a580e72573f7957094ebb6c inherit pub_methods_class_j_drivetrain"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#a920ff8ec4a580e72573f7957094ebb6c">disable</a> ()=0</td></tr>
-<tr class="separator:a920ff8ec4a580e72573f7957094ebb6c inherit pub_methods_class_j_drivetrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adad25cf33ed341755fffdd6fed5001c1 inherit pub_methods_class_j_drivetrain"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#adad25cf33ed341755fffdd6fed5001c1">getEnable</a> ()=0</td></tr>
-<tr class="separator:adad25cf33ed341755fffdd6fed5001c1 inherit pub_methods_class_j_drivetrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4d1db247edf2941f809969faebbb025 inherit pub_methods_class_j_drivetrain"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#ab4d1db247edf2941f809969faebbb025">getVel</a> (bool _run=false)=0</td></tr>
-<tr class="separator:ab4d1db247edf2941f809969faebbb025 inherit pub_methods_class_j_drivetrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac69ebb5aaba2bf8a66264e53bb89b4b5 inherit pub_methods_class_j_drivetrain"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#ac69ebb5aaba2bf8a66264e53bb89b4b5">getDist</a> (bool _run=false)=0</td></tr>
-<tr class="separator:ac69ebb5aaba2bf8a66264e53bb89b4b5 inherit pub_methods_class_j_drivetrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa55166dffd87881fb81900ef726b8ffe inherit pub_methods_class_j_drivetrain"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#aa55166dffd87881fb81900ef726b8ffe">setVel</a> (<a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> _vel, bool _run=true)=0</td></tr>
-<tr class="separator:aa55166dffd87881fb81900ef726b8ffe inherit pub_methods_class_j_drivetrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af36a8da6a4217251065021c2ba987c2b inherit pub_methods_class_j_drivetrain"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#af36a8da6a4217251065021c2ba987c2b">setDistSetpoint</a> (<a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> _dist, bool _run=true)=0</td></tr>
-<tr class="separator:af36a8da6a4217251065021c2ba987c2b inherit pub_methods_class_j_drivetrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d8a88550fd9547fce5f0b09e01dfe4b inherit pub_methods_class_j_drivetrain"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#a4d8a88550fd9547fce5f0b09e01dfe4b">setDistDelta</a> (<a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> _dist, bool _run=true)=0</td></tr>
-<tr class="separator:a4d8a88550fd9547fce5f0b09e01dfe4b inherit pub_methods_class_j_drivetrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81968fe28c3eb1e1007ca3ca172034b6 inherit pub_methods_class_j_drivetrain"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#a81968fe28c3eb1e1007ca3ca172034b6">resetDist</a> ()=0</td></tr>
-<tr class="separator:a81968fe28c3eb1e1007ca3ca172034b6 inherit pub_methods_class_j_drivetrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d89b5bb0238f73f7d4fc997e8dd153f inherit pub_methods_class_j_drivetrain"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#a9d89b5bb0238f73f7d4fc997e8dd153f">getMaxVel</a> ()=0</td></tr>
-<tr class="separator:a9d89b5bb0238f73f7d4fc997e8dd153f inherit pub_methods_class_j_drivetrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2db51b64ce25af78d92e0f656dd3b609 inherit pub_methods_class_j_drivetrain"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#a2db51b64ce25af78d92e0f656dd3b609">setMotorVels</a> (float[], bool _run=false)=0</td></tr>
-<tr class="separator:a2db51b64ce25af78d92e0f656dd3b609 inherit pub_methods_class_j_drivetrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e820c6e736ddf22a61a8d4f0cd81604 inherit pub_methods_class_j_drivetrain"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#a8e820c6e736ddf22a61a8d4f0cd81604">setMotorDistSetpoints</a> (float[], bool _run=false)=0</td></tr>
-<tr class="separator:a8e820c6e736ddf22a61a8d4f0cd81604 inherit pub_methods_class_j_drivetrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fca9c860e7f3a9cc9148be8fa3f3bec inherit pub_methods_class_j_drivetrain"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#a5fca9c860e7f3a9cc9148be8fa3f3bec">setMotorDistDeltas</a> (float[], bool _run=false)=0</td></tr>
-<tr class="separator:a5fca9c860e7f3a9cc9148be8fa3f3bec inherit pub_methods_class_j_drivetrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae45bc7148627a7efdaa9b16f27609095 inherit pub_methods_class_j_drivetrain"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#ae45bc7148627a7efdaa9b16f27609095">getMotorVel</a> (unsigned char i)=0</td></tr>
-<tr class="separator:ae45bc7148627a7efdaa9b16f27609095 inherit pub_methods_class_j_drivetrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a620b5a3fee1ae4e68f5067c8418ab44f inherit pub_methods_class_j_drivetrain"><td class="memItemLeft" align="right" valign="top">virtual unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#a620b5a3fee1ae4e68f5067c8418ab44f">getNumberMotors</a> ()=0</td></tr>
-<tr class="separator:a620b5a3fee1ae4e68f5067c8418ab44f inherit pub_methods_class_j_drivetrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c878e994cf12c2c9a047ac40f2ddf5b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#a2c878e994cf12c2c9a047ac40f2ddf5b">getVel</a> (bool _run=false)</td></tr>
+<tr class="separator:a2c878e994cf12c2c9a047ac40f2ddf5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fcbd290d7d75c41100c714b58067a15"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#a2fcbd290d7d75c41100c714b58067a15">getDist</a> (bool _run=false)</td></tr>
+<tr class="separator:a2fcbd290d7d75c41100c714b58067a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe9be0d0b061724b7f2f65fcbb5f9f86"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#afe9be0d0b061724b7f2f65fcbb5f9f86">setDistSetpoint</a> (<a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> _dist, bool _run=false)</td></tr>
+<tr class="separator:afe9be0d0b061724b7f2f65fcbb5f9f86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d8ba87a8a2c14318802641944e61d61"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#a9d8ba87a8a2c14318802641944e61d61">setDistDelta</a> (<a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> _dist, bool _run=false)</td></tr>
+<tr class="separator:a9d8ba87a8a2c14318802641944e61d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb9a34fd0508d2518b4ea818b2023694"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#acb9a34fd0508d2518b4ea818b2023694">resetDist</a> ()</td></tr>
+<tr class="separator:acb9a34fd0508d2518b4ea818b2023694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67e6aede70014a745a7b208fcf0f5d0b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#a67e6aede70014a745a7b208fcf0f5d0b">setMotorVel</a> (float vel, unsigned char i, bool _run=false)</td></tr>
+<tr class="separator:a67e6aede70014a745a7b208fcf0f5d0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af62f17c9ab5aeea55baa3f7ddcfe1001"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#af62f17c9ab5aeea55baa3f7ddcfe1001">setMotorDistSetpoint</a> (float distSetpoint, unsigned char i, bool _run=false)</td></tr>
+<tr class="separator:af62f17c9ab5aeea55baa3f7ddcfe1001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cdc92001c7d6b1662706a846245c276"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#a1cdc92001c7d6b1662706a846245c276">setMotorDistDelta</a> (float distDelta, unsigned char i, bool _run=false)</td></tr>
+<tr class="separator:a1cdc92001c7d6b1662706a846245c276"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca733a216459d71ebb34288379d502b6"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#aca733a216459d71ebb34288379d502b6">getMotorVel</a> (unsigned char i)</td></tr>
+<tr class="separator:aca733a216459d71ebb34288379d502b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d0abc230f03eae6a87c6cc4dd2cdde2"><td class="memItemLeft" align="right" valign="top">virtual unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain.html#a5d0abc230f03eae6a87c6cc4dd2cdde2">getNumberMotors</a> ()</td></tr>
+<tr class="separator:a5d0abc230f03eae6a87c6cc4dd2cdde2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a898cd2afa62e7411c7f0515452fc6239"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_basic.html#a898cd2afa62e7411c7f0515452fc6239">run</a> ()=0</td></tr>
+<tr class="memdesc:a898cd2afa62e7411c7f0515452fc6239"><td class="mdescLeft">&#160;</td><td class="mdescRight">call this in loop. it calls any encoder or motor update functions  <a href="class_j_drivetrain_basic.html#a898cd2afa62e7411c7f0515452fc6239">More...</a><br /></td></tr>
+<tr class="separator:a898cd2afa62e7411c7f0515452fc6239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa061532bcd1eabe62a226f9f6f8253d2"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_basic.html#aa061532bcd1eabe62a226f9f6f8253d2">setEnable</a> (bool _enable)=0</td></tr>
+<tr class="memdesc:aa061532bcd1eabe62a226f9f6f8253d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">enables or disables movement  <a href="class_j_drivetrain_basic.html#aa061532bcd1eabe62a226f9f6f8253d2">More...</a><br /></td></tr>
+<tr class="separator:aa061532bcd1eabe62a226f9f6f8253d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a941f3df52103024e4cc6de95f0c939"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_basic.html#a5a941f3df52103024e4cc6de95f0c939">enable</a> ()=0</td></tr>
+<tr class="memdesc:a5a941f3df52103024e4cc6de95f0c939"><td class="mdescLeft">&#160;</td><td class="mdescRight">enables movement  <a href="class_j_drivetrain_basic.html#a5a941f3df52103024e4cc6de95f0c939">More...</a><br /></td></tr>
+<tr class="separator:a5a941f3df52103024e4cc6de95f0c939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af198bbccfd219c2830251842230c7194"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_basic.html#af198bbccfd219c2830251842230c7194">disable</a> ()=0</td></tr>
+<tr class="memdesc:af198bbccfd219c2830251842230c7194"><td class="mdescLeft">&#160;</td><td class="mdescRight">disables movement  <a href="class_j_drivetrain_basic.html#af198bbccfd219c2830251842230c7194">More...</a><br /></td></tr>
+<tr class="separator:af198bbccfd219c2830251842230c7194"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45465efb78f007da623cb784e8430ae4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_basic.html#a45465efb78f007da623cb784e8430ae4">getEnable</a> ()=0</td></tr>
+<tr class="memdesc:a45465efb78f007da623cb784e8430ae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">gets the current state (enabled or disabled)  <a href="class_j_drivetrain_basic.html#a45465efb78f007da623cb784e8430ae4">More...</a><br /></td></tr>
+<tr class="separator:a45465efb78f007da623cb784e8430ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a539e53d2e24b6372fbd52c49c9046dd4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_basic.html#a539e53d2e24b6372fbd52c49c9046dd4">setVel</a> (<a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> _vel, bool _run=false)=0</td></tr>
+<tr class="memdesc:a539e53d2e24b6372fbd52c49c9046dd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets a velocity for the drivetrain to move at  <a href="class_j_drivetrain_basic.html#a539e53d2e24b6372fbd52c49c9046dd4">More...</a><br /></td></tr>
+<tr class="separator:a539e53d2e24b6372fbd52c49c9046dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add0b2157a97f4321e24af46e9a75e15d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_basic.html#add0b2157a97f4321e24af46e9a75e15d">getMaxVel</a> ()=0</td></tr>
+<tr class="memdesc:add0b2157a97f4321e24af46e9a75e15d"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the approximate maximum velocity of the drivetrain, if the drivetrain is told to move at max velocity, it should set the motors to full power.  <a href="class_j_drivetrain_basic.html#add0b2157a97f4321e24af46e9a75e15d">More...</a><br /></td></tr>
+<tr class="separator:add0b2157a97f4321e24af46e9a75e15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -278,7 +293,15 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_j_drivetrain.html#a920ff8ec4a580e72573f7957094ebb6c">JDrivetrain</a>.</p>
+<p>disables movement </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">did</td><td>the state change </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_drivetrain_basic.html#af198bbccfd219c2830251842230c7194">JDrivetrainBasic</a>.</p>
 
 </div>
 </div>
@@ -305,7 +328,15 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_j_drivetrain.html#a8c6027d1c0f4af7c312e671d6a7715ff">JDrivetrain</a>.</p>
+<p>enables movement </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">did</td><td>the state change </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_drivetrain_basic.html#a5a941f3df52103024e4cc6de95f0c939">JDrivetrainBasic</a>.</p>
 
 </div>
 </div>
@@ -333,7 +364,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_j_drivetrain.html#ac69ebb5aaba2bf8a66264e53bb89b4b5">JDrivetrain</a>.</p>
+<p>Reimplemented from <a class="el" href="class_j_drivetrain.html#a2fcbd290d7d75c41100c714b58067a15">JDrivetrain</a>.</p>
 
 </div>
 </div>
@@ -360,7 +391,15 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_j_drivetrain.html#adad25cf33ed341755fffdd6fed5001c1">JDrivetrain</a>.</p>
+<p>gets the current state (enabled or disabled) </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(bool)</td><td>true=enabled false=movement disabled </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_drivetrain_basic.html#a45465efb78f007da623cb784e8430ae4">JDrivetrainBasic</a>.</p>
 
 </div>
 </div>
@@ -387,7 +426,16 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_j_drivetrain.html#a9d89b5bb0238f73f7d4fc997e8dd153f">JDrivetrain</a>.</p>
+<p>returns the approximate maximum velocity of the drivetrain, if the drivetrain is told to move at max velocity, it should set the motors to full power. </p>
+<dl class="section note"><dt>Note</dt><dd>depends on how well calibrated the motor compensators are </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(JTwoDTransform)</td><td>maximum velocity (in whatever units your drivetrain and motors are set up for) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_drivetrain_basic.html#add0b2157a97f4321e24af46e9a75e15d">JDrivetrainBasic</a>.</p>
 
 </div>
 </div>
@@ -415,7 +463,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_j_drivetrain.html#ae45bc7148627a7efdaa9b16f27609095">JDrivetrain</a>.</p>
+<p>Reimplemented from <a class="el" href="class_j_drivetrain.html#aca733a216459d71ebb34288379d502b6">JDrivetrain</a>.</p>
 
 </div>
 </div>
@@ -442,7 +490,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_j_drivetrain.html#a620b5a3fee1ae4e68f5067c8418ab44f">JDrivetrain</a>.</p>
+<p>Reimplemented from <a class="el" href="class_j_drivetrain.html#a5d0abc230f03eae6a87c6cc4dd2cdde2">JDrivetrain</a>.</p>
 
 </div>
 </div>
@@ -470,7 +518,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_j_drivetrain.html#ab4d1db247edf2941f809969faebbb025">JDrivetrain</a>.</p>
+<p>Reimplemented from <a class="el" href="class_j_drivetrain.html#a2c878e994cf12c2c9a047ac40f2ddf5b">JDrivetrain</a>.</p>
 
 </div>
 </div>
@@ -522,7 +570,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_j_drivetrain.html#a81968fe28c3eb1e1007ca3ca172034b6">JDrivetrain</a>.</p>
+<p>Reimplemented from <a class="el" href="class_j_drivetrain.html#acb9a34fd0508d2518b4ea818b2023694">JDrivetrain</a>.</p>
 
 </div>
 </div>
@@ -549,7 +597,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_j_drivetrain.html#a76ad4edd018d911d67fe494ca4bbb541">JDrivetrain</a>.</p>
+<p>call this in loop. it calls any encoder or motor update functions </p>
+
+<p>Implements <a class="el" href="class_j_drivetrain_basic.html#a898cd2afa62e7411c7f0515452fc6239">JDrivetrainBasic</a>.</p>
 
 </div>
 </div>
@@ -587,7 +637,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_j_drivetrain.html#a4d8a88550fd9547fce5f0b09e01dfe4b">JDrivetrain</a>.</p>
+<p>Reimplemented from <a class="el" href="class_j_drivetrain.html#a9d8ba87a8a2c14318802641944e61d61">JDrivetrain</a>.</p>
 
 </div>
 </div>
@@ -625,7 +675,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_j_drivetrain.html#af36a8da6a4217251065021c2ba987c2b">JDrivetrain</a>.</p>
+<p>Reimplemented from <a class="el" href="class_j_drivetrain.html#afe9be0d0b061724b7f2f65fcbb5f9f86">JDrivetrain</a>.</p>
 
 </div>
 </div>
@@ -653,12 +703,26 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_j_drivetrain.html#a487d0c313f442c05b5829130d282547d">JDrivetrain</a>.</p>
+<p>enables or disables movement </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_enable</td><td>(bool) true=enabled false=movement disabled </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">did</td><td>the state change </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_drivetrain_basic.html#aa061532bcd1eabe62a226f9f6f8253d2">JDrivetrainBasic</a>.</p>
 
 </div>
 </div>
-<a id="a56e9720124ca7c3016f3666ac1be664a" name="a56e9720124ca7c3016f3666ac1be664a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56e9720124ca7c3016f3666ac1be664a">&#9670;&#160;</a></span>setMotorDistDeltas()</h2>
+<a id="adafe7c3a88fc9d18e85935f93fe89e4c" name="adafe7c3a88fc9d18e85935f93fe89e4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adafe7c3a88fc9d18e85935f93fe89e4c">&#9670;&#160;</a></span>setMotorDistDelta()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -667,10 +731,16 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void JDrivetrainTwoSide::setMotorDistDeltas </td>
+          <td class="memname">void JDrivetrainTwoSide::setMotorDistDelta </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>vels</em>[2], </td>
+          <td class="paramname"><em>distDelta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -686,15 +756,17 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>Reimplemented from <a class="el" href="class_j_drivetrain.html#a1cdc92001c7d6b1662706a846245c276">JDrivetrain</a>.</p>
+
 </div>
 </div>
-<a id="a4e1b0e351a756e783ec06d5100a32857" name="a4e1b0e351a756e783ec06d5100a32857"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e1b0e351a756e783ec06d5100a32857">&#9670;&#160;</a></span>setMotorDistSetpoints()</h2>
+<a id="a26935d7d7f3c0a07f7afb9839a636abe" name="a26935d7d7f3c0a07f7afb9839a636abe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26935d7d7f3c0a07f7afb9839a636abe">&#9670;&#160;</a></span>setMotorDistSetpoint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -703,10 +775,16 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void JDrivetrainTwoSide::setMotorDistSetpoints </td>
+          <td class="memname">void JDrivetrainTwoSide::setMotorDistSetpoint </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>vels</em>[2], </td>
+          <td class="paramname"><em>distSetpoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -722,15 +800,17 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>Reimplemented from <a class="el" href="class_j_drivetrain.html#af62f17c9ab5aeea55baa3f7ddcfe1001">JDrivetrain</a>.</p>
+
 </div>
 </div>
-<a id="aba210464488fe57a773028426b853e7f" name="aba210464488fe57a773028426b853e7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba210464488fe57a773028426b853e7f">&#9670;&#160;</a></span>setMotorVels()</h2>
+<a id="a36504df9da38a34be86afb58860a8259" name="a36504df9da38a34be86afb58860a8259"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36504df9da38a34be86afb58860a8259">&#9670;&#160;</a></span>setMotorVel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -739,10 +819,16 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void JDrivetrainTwoSide::setMotorVels </td>
+          <td class="memname">void JDrivetrainTwoSide::setMotorVel </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>vels</em>[2], </td>
+          <td class="paramname"><em>vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -758,10 +844,12 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="class_j_drivetrain.html#a67e6aede70014a745a7b208fcf0f5d0b">JDrivetrain</a>.</p>
 
 </div>
 </div>
@@ -799,7 +887,22 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_j_drivetrain.html#aa55166dffd87881fb81900ef726b8ffe">JDrivetrain</a>.</p>
+<p>sets a velocity for the drivetrain to move at </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_vel</td><td>(<a class="el" href="struct_j_two_d_transform.html" title="struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move.">JTwoDTransform</a>) velocity to move at </td></tr>
+    <tr><td class="paramname">_run</td><td>(bool, default=true) if true setVel will call <a class="el" href="class_j_drivetrain_two_side.html#aae886b9c61d0c2e11dd8c1314d5e67a5" title="call this in loop. it calls any encoder or motor update functions">run()</a> for you, if false you must call it yourself </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_j_drivetrain_basic.html#a539e53d2e24b6372fbd52c49c9046dd4">JDrivetrainBasic</a>.</p>
 
 </div>
 </div>

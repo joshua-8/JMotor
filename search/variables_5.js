@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['gripdirpos_0',['gripDirPos',['../class_j_servo_controller_gentle.html#a73238734a5271e8f3d457cdb49cfad0b',1,'JServoControllerGentle']]],
-  ['grippinggently_1',['grippingGently',['../class_j_servo_controller_gentle.html#a8c68c8ba44047246ab532cc6b640197f',1,'JServoControllerGentle']]],
-  ['gripspeed_2',['gripSpeed',['../class_j_servo_controller_gentle.html#a7d45a94bb190c492cfc3bff3458cecc8',1,'JServoControllerGentle']]]
+  ['fullrotations_0',['fullRotations',['../class_j_drivetrain_field_oriented.html#adc89f93f0f823caddbee7153744372e9',1,'JDrivetrainFieldOriented']]]
 ];

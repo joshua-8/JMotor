@@ -1,23 +1,12 @@
 var searchData=
 [
-  ['servo_0',['servo',['../class_j_servo_controller.html#aed08c49c0044b8504abd73474af722bd',1,'JServoController']]],
-  ['setmicroseconds_1',['setMicroseconds',['../class_j_motor_driver_servo.html#a8232622c0dc2a9fc5d0da3386f409ee4',1,'JMotorDriverServo']]],
-  ['setval_2',['setVal',['../class_j_motor_controller_basic.html#a78ec46745ef557731e4446906842fe50',1,'JMotorControllerBasic::setVal()'],['../class_j_motor_controller_closed.html#a6ff14ee4e1cd88922363a715550cde8f',1,'JMotorControllerClosed::setVal()']]],
-  ['sleeping_3',['sleeping',['../class_j_servo_controller.html#a2d833287f0d9d943884fc1b5052eec1d',1,'JServoController']]],
-  ['smoothed_4',['smoothed',['../class_j_motor_controller_closed.html#a58f887d64bf50436887511d7777eb167',1,'JMotorControllerClosed']]],
-  ['smoothedmode_5',['smoothedMode',['../class_j_motor_controller_open.html#ade07985081b2676aa297abff051f3032',1,'JMotorControllerOpen']]],
-  ['speedsetpoint_6',['speedSetpoint',['../class_j_swerve_module_differential.html#a27f03515c6e4d360ab3919030630d124',1,'JSwerveModuleDifferential']]],
-  ['stallactivatetimeout_7',['stallActivateTimeout',['../class_j_servo_controller_stall_protected.html#a5b7755b43e650a3143b7053c44e3a874',1,'JServoControllerStallProtected']]],
-  ['stalldeactivatetimeout_8',['stallDeactivateTimeout',['../class_j_servo_controller_stall_protected.html#a907b9dadb87fce7851d4b1472e471eda',1,'JServoControllerStallProtected']]],
-  ['stalled_9',['stalled',['../class_j_servo_controller_stall_protected.html#a77da2266b44a74d3ece498f54ca99fb1',1,'JServoControllerStallProtected']]],
-  ['stallprotected_10',['stallProtected',['../class_j_servo_controller_stall_protected.html#a4a8b93643b550486af5d8444cda5a575',1,'JServoControllerStallProtected']]],
-  ['stallprotectionactivated_11',['stallProtectionActivated',['../class_j_servo_controller_stall_protected.html#a55ab461b3a55e59c22787c514017bd72',1,'JServoControllerStallProtected']]],
-  ['stallsensor_12',['stallSensor',['../class_j_servo_controller_gentle.html#af1be89ab6de214653adb726b1992ac8e',1,'JServoControllerGentle::stallSensor()'],['../class_j_servo_controller_stall_protected.html#abe5a1e639b751d0dfff75d360c18a64d',1,'JServoControllerStallProtected::stallSensor()']]],
-  ['stallstatechangemillis_13',['stallStateChangeMillis',['../class_j_servo_controller_stall_protected.html#ac85d438624e4e01838c133d54c269cd3',1,'JServoControllerStallProtected']]],
-  ['stallthreshold_14',['stallThreshold',['../class_j_servo_controller_stall_protected.html#abcc586af6168787a75e2962588b52d34',1,'JServoControllerStallProtected']]],
-  ['start_5fboost_5ftime_15',['start_boost_time',['../struct_j_motor_comp_standard_config.html#a21505f58d6c72bcba622f64f044d4848',1,'JMotorCompStandardConfig']]],
-  ['startweaktimeout_16',['startWeakTimeout',['../class_j_servo_controller_advanced.html#aff63e6a32d7402b8d7c8f6f13a801a7d',1,'JServoControllerAdvanced']]],
-  ['steeringratio_17',['steeringRatio',['../class_j_swerve_module_differential.html#a42081479cbe1ddfef1bee185d40c9e24',1,'JSwerveModuleDifferential']]],
-  ['steps_5fper_5fturn_18',['STEPS_PER_TURN',['../class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85',1,'JEncoderAS5048bI2C']]],
-  ['swervemodule_19',['swerveModule',['../class_j_drivetrain_swerve.html#ae8790b24120be775bcba75cd2727123e',1,'JDrivetrainSwerve']]]
+  ['range_0',['range',['../class_j_swerve_angle_control_loop_p.html#a0c5664e7071a701775144173fd52eed2',1,'JSwerveAngleControlLoopP']]],
+  ['readindex_1',['readIndex',['../class_j_servo_current_sensor.html#aeb7b024e129f44a829259d055632ad8b',1,'JServoCurrentSensor']]],
+  ['readings_2',['readings',['../class_j_servo_current_sensor.html#a69de6581000a7ce0b1f31c81f6893a5b',1,'JServoCurrentSensor']]],
+  ['resolution_3',['RESOLUTION',['../struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#aaeaa01d54add313c783c532f654651e6',1,'JEncoderPWMAbsolute::pwmSettings']]],
+  ['result_4',['result',['../class_j_control_loop.html#a3eb3f38bab7c4044d2410b47d3577ce2',1,'JControlLoop']]],
+  ['reverse_5',['reverse',['../class_j_motor_driver_avr_h_bridge.html#a8c15383290e86b438c4f82b22f192dba',1,'JMotorDriverAvrHBridge::reverse()'],['../class_j_motor_driver_avr_l293.html#aa70bc7a4cdc0073e59a84c7f6b87b615',1,'JMotorDriverAvrL293::reverse()'],['../class_j_motor_driver_avr_p_w_m_dir.html#a66cd529eff178ee36cb9cc4edf53f54e',1,'JMotorDriverAvrPWMDir::reverse()'],['../class_j_motor_driver_esp32_h_bridge.html#a61e285d2e8d0923b62cb09f35744fc25',1,'JMotorDriverEsp32HBridge::reverse()'],['../class_j_motor_driver_esp32_l293.html#ab34aeddb63c805d54194e306dd00f3de',1,'JMotorDriverEsp32L293::reverse()'],['../class_j_motor_driver_esp32_p_w_m_dir.html#ab502afbb0bbaf46a9c786affeb5d3eff',1,'JMotorDriverEsp32PWMDir::reverse()'],['../class_j_servo_controller.html#a83958607b1088df4ab52015986734807',1,'JServoController::reverse()']]],
+  ['right_6',['right',['../class_j_drivetrain_two_side.html#afbd846b24c7751008beea16e5a431f3a',1,'JDrivetrainTwoSide']]],
+  ['rightdist_7',['rightDist',['../class_j_drivetrain_two_side.html#ad9faf58b2854e99cdd0adb5c6b678f60',1,'JDrivetrainTwoSide']]],
+  ['rightvel_8',['rightVel',['../class_j_drivetrain_two_side.html#a35d6741156b84bd874973d82cd7f95ae',1,'JDrivetrainTwoSide']]]
 ];

@@ -1,0 +1,8 @@
+<map id="JDrivetrainBasic" name="JDrivetrainBasic">
+<area shape="rect" id="node1" title="interface for a drivetrain with only simple velocity control" alt="" coords="297,5,414,31"/>
+<area shape="rect" id="node2" href="$class_j_drivetrain.html" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="240,79,324,104"/>
+<area shape="rect" id="node6" href="$class_j_drivetrain_swerve.html" title="number of swerve modules" alt="" coords="349,79,509,104"/>
+<area shape="rect" id="node3" href="$class_j_drivetrain_controller_basic.html" title="basic drivetrain controller, supports smoothed movements on each axis" alt="" coords="5,152,177,177"/>
+<area shape="rect" id="node4" href="$class_j_drivetrain_field_oriented.html" title="interface for a drivetrain that makes it into field oriented" alt="" coords="201,152,363,177"/>
+<area shape="rect" id="node5" href="$class_j_drivetrain_two_side.html" title="child class of JDrivetrain for controlling a drivetrain with one JMotorController for each side of th..." alt="" coords="387,152,521,177"/>
+</map>

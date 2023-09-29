@@ -1,3 +1,11 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$struct_j_motor_comp_standard_config.html" title="struct for containing settings for JMotorCompStandard" alt="" coords="5,5,189,31"/>
+<area shape="rect" id="node1" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="5,55,152,80"/>
+<area shape="rect" id="node2" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="217,55,334,80"/>
+<area shape="rect" id="node3" href="$class_j_motor_controller_closed.html" title="closed loop (uses encoder) motor controller" alt="" coords="399,5,556,31"/>
+<area shape="rect" id="node9" href="$class_j_motor_controller_basic.html" title="A motor controller object that uses a JMotorCompensator to set velocity of a motor." alt="" coords="200,104,351,129"/>
+<area shape="rect" id="node4" href="$class_j_motor_controller_open.html" title="This class controls velocity and position of a motor without any encoder feedback." alt="" coords="403,104,551,129"/>
+<area shape="rect" id="node5" href="$class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="418,55,537,80"/>
+<area shape="rect" id="node6" href="$class_j_servo_controller_advanced.html" title="class for controlling JMotorDriverServoAdvanced, with power reducing option along with standard JServ..." alt="" coords="604,29,780,55"/>
+<area shape="rect" id="node8" href="$class_j_servo_controller_gentle.html" title="JServoControllerGentle is an extension of JServoController that uses JServoStallSensing to make a ser..." alt="" coords="614,79,770,104"/>
+<area shape="rect" id="node7" href="$class_j_servo_controller_stall_protected.html" title="this child class of JServoController uses JServoStallSensing to reduce servo power" alt="" coords="828,29,1028,55"/>
 </map>
