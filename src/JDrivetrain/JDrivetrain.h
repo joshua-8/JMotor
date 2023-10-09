@@ -21,6 +21,7 @@ public:
     virtual unsigned char getNumberMotors();
 };
 #include "JDrivetrainFieldOriented.h"
+#include "JDrivetrainMecanum.h"
 #include "JDrivetrainSwerve.h"
 #include "JDrivetrainTwoSide.h"
 #endif // JDRIVETRAIN_H
