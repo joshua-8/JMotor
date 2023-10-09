@@ -1,5 +1,0 @@
-<map id="JDriveTrainMecanum" name="JDriveTrainMecanum">
-<area shape="rect" id="node1" title=" " alt="" coords="5,152,151,177"/>
-<area shape="rect" id="node2" href="$class_j_drivetrain.html" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="36,79,120,104"/>
-<area shape="rect" id="node3" href="$class_j_drivetrain_basic.html" title="interface for a drivetrain with only simple velocity control" alt="" coords="19,5,137,31"/>
-</map>

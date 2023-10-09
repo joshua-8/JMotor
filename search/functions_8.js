@@ -3,7 +3,7 @@ var searchData=
   ['jcontrolloopbasic_0',['JControlLoopBasic',['../class_j_control_loop_basic.html#aa7694706381282a90c983243a07874c1',1,'JControlLoopBasic']]],
   ['jdrivetraincontrollerbasic_1',['JDrivetrainControllerBasic',['../class_j_drivetrain_controller_basic.html#abc23245170bed8710869c56ae4a36612',1,'JDrivetrainControllerBasic']]],
   ['jdrivetrainfieldoriented_2',['JDrivetrainFieldOriented',['../class_j_drivetrain_field_oriented.html#aa4494229b104eddbeb1e40f04274883d',1,'JDrivetrainFieldOriented']]],
-  ['jdrivetrainmecanum_3',['JDrivetrainMecanum',['../class_j_drive_train_mecanum.html#a589bab24b9f22df6f61139188243aef9',1,'JDriveTrainMecanum']]],
+  ['jdrivetrainmecanum_3',['JDrivetrainMecanum',['../class_j_drivetrain_mecanum.html#a14c0e4d3e341eb51e1f432a25f00c8a2',1,'JDrivetrainMecanum']]],
   ['jdrivetrainswerve_4',['JDrivetrainSwerve',['../class_j_drivetrain_swerve.html#a6077ae5af6df953bef0d1a00eeaa494e',1,'JDrivetrainSwerve']]],
   ['jdrivetraintwoside_5',['JDrivetrainTwoSide',['../class_j_drivetrain_two_side.html#a26f14ee644de433e597636047368d144',1,'JDrivetrainTwoSide']]],
   ['jencoderas5048bi2c_6',['JEncoderAS5048bI2C',['../class_j_encoder_a_s5048b_i2_c.html#a1c74191640750fa1360ab2012c528d48',1,'JEncoderAS5048bI2C']]],

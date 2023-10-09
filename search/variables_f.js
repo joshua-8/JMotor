@@ -9,5 +9,5 @@ var searchData=
   ['right_6',['right',['../class_j_drivetrain_two_side.html#afbd846b24c7751008beea16e5a431f3a',1,'JDrivetrainTwoSide']]],
   ['rightdist_7',['rightDist',['../class_j_drivetrain_two_side.html#ad9faf58b2854e99cdd0adb5c6b678f60',1,'JDrivetrainTwoSide']]],
   ['rightvel_8',['rightVel',['../class_j_drivetrain_two_side.html#a35d6741156b84bd874973d82cd7f95ae',1,'JDrivetrainTwoSide']]],
-  ['robottowheelscalar_9',['robotToWheelScalar',['../class_j_drive_train_mecanum.html#aaa83394088be6623bc72609e25a1a2fd',1,'JDriveTrainMecanum']]]
+  ['robottowheelscalar_9',['robotToWheelScalar',['../class_j_drivetrain_mecanum.html#a6e101477d6fdef650009bf1dada97caa',1,'JDrivetrainMecanum']]]
 ];

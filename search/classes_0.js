@@ -6,7 +6,7 @@ var searchData=
   ['jdrivetrainbasic_3',['JDrivetrainBasic',['../class_j_drivetrain_basic.html',1,'']]],
   ['jdrivetraincontrollerbasic_4',['JDrivetrainControllerBasic',['../class_j_drivetrain_controller_basic.html',1,'']]],
   ['jdrivetrainfieldoriented_5',['JDrivetrainFieldOriented',['../class_j_drivetrain_field_oriented.html',1,'']]],
-  ['jdrivetrainmecanum_6',['JDriveTrainMecanum',['../class_j_drive_train_mecanum.html',1,'']]],
+  ['jdrivetrainmecanum_6',['JDrivetrainMecanum',['../class_j_drivetrain_mecanum.html',1,'']]],
   ['jdrivetrainswerve_7',['JDrivetrainSwerve',['../class_j_drivetrain_swerve.html',1,'']]],
   ['jdrivetraintwoside_8',['JDrivetrainTwoSide',['../class_j_drivetrain_two_side.html',1,'']]],
   ['jencoder_9',['JEncoder',['../class_j_encoder.html',1,'']]],

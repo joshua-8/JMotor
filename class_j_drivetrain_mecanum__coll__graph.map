@@ -1,9 +1,9 @@
-<map id="JDriveTrainMecanum" name="JDriveTrainMecanum">
-<area shape="rect" id="node1" title=" " alt="" coords="131,315,277,340"/>
+<map id="JDrivetrainMecanum" name="JDrivetrainMecanum">
+<area shape="rect" id="node1" title=" " alt="" coords="133,315,275,340"/>
 <area shape="rect" id="node2" href="$class_j_drivetrain.html" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="23,219,107,245"/>
 <area shape="rect" id="node3" href="$class_j_drivetrain_basic.html" title="interface for a drivetrain with only simple velocity control" alt="" coords="5,80,123,105"/>
-<area shape="rect" id="node4" href="$struct_j_drive_train_mecanum_1_1_motors.html" title=" " alt="" coords="131,212,277,252"/>
+<area shape="rect" id="node4" href="$struct_j_drivetrain_mecanum_1_1_motors.html" title=" " alt="" coords="133,212,275,252"/>
 <area shape="rect" id="node5" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="147,80,264,105"/>
 <area shape="rect" id="node6" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="132,5,279,31"/>
-<area shape="rect" id="node7" href="$struct_j_two_d_transform.html" title="struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move." alt="" coords="301,219,424,245"/>
+<area shape="rect" id="node7" href="$struct_j_two_d_transform.html" title="struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move." alt="" coords="299,219,421,245"/>
 </map>
