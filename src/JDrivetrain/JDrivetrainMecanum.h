@@ -4,7 +4,7 @@
 #include "JMotorController/JMotorController.h"
 #include "JTwoDTransform.h"
 #include <Arduino.h>
-class JDriveTrainMecanum : public JDrivetrain {
+class JDrivetrainMecanum : public JDrivetrain {
 public:
     struct Motors {
         JMotorController& FRmotor;
