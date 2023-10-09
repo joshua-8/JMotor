@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['pwmsettings_0',['pwmSettings',['../struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html',1,'JEncoderPWMAbsolute']]]
+  ['motorfloats_0',['MotorFloats',['../struct_j_drive_train_mecanum_1_1_motor_floats.html',1,'JDriveTrainMecanum']]],
+  ['motors_1',['Motors',['../struct_j_drive_train_mecanum_1_1_motors.html',1,'JDriveTrainMecanum']]]
 ];

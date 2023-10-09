@@ -277,7 +277,7 @@ platform: esp32, teensy </p>
 <p>sets pins and settings for reading the encoder </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_encoderPin</td><td>pin to read encoder signal with </td></tr>
+    <tr><td class="paramname">_encoderPin</td><td>pin to read encoder signal with, or, if they are different, interrupt number </td></tr>
     <tr><td class="paramname">_ps</td><td>(struct pwmSettings) parameters of encoder signal </td></tr>
     <tr><td class="paramname">_reverse</td><td>(bool) reverse positive direction, default=false </td></tr>
     <tr><td class="paramname">_distPerCountFactor</td><td>(float) for the purposes of setting this factor a "count" is considered a full revolution of the absolute encoder </td></tr>

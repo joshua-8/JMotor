@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['m1_0',['m1',['../class_j_motor_driver_servo_advanced_dual.html#aef0551ed66347fcc22071bd1fe1c0890',1,'JMotorDriverServoAdvancedDual::m1()'],['../class_j_motor_driver_dual.html#a85e4cc7428e5dcde08c8d524d8d5799e',1,'JMotorDriverDual::m1()'],['../class_j_swerve_module_differential.html#a77d58dd85ed062d9fc0b0a4bfb2d775b',1,'JSwerveModuleDifferential::m1()'],['../class_j_motor_driver_servo_dual.html#a8b03c9e495eb03734dfcb1e4155bf6ce',1,'JMotorDriverServoDual::m1()']]],
+  ['m1_0',['m1',['../class_j_motor_driver_dual.html#a85e4cc7428e5dcde08c8d524d8d5799e',1,'JMotorDriverDual::m1()'],['../class_j_motor_driver_servo_advanced_dual.html#aef0551ed66347fcc22071bd1fe1c0890',1,'JMotorDriverServoAdvancedDual::m1()'],['../class_j_motor_driver_servo_dual.html#a8b03c9e495eb03734dfcb1e4155bf6ce',1,'JMotorDriverServoDual::m1()'],['../class_j_swerve_module_differential.html#a77d58dd85ed062d9fc0b0a4bfb2d775b',1,'JSwerveModuleDifferential::m1()']]],
   ['m2_1',['m2',['../class_j_motor_driver_dual.html#acdc948a8735bb3b70e88454ef1074b45',1,'JMotorDriverDual::m2()'],['../class_j_motor_driver_servo_advanced_dual.html#ae970f8e6148e4ae6256b9749709921ca',1,'JMotorDriverServoAdvancedDual::m2()'],['../class_j_motor_driver_servo_dual.html#ad015f665868eefedb13cd00977dcf68a',1,'JMotorDriverServoDual::m2()'],['../class_j_swerve_module_differential.html#af065b8df03a9711cb2723636725390cb',1,'JSwerveModuleDifferential::m2()']]],
   ['max_5fcycle_2',['MAX_CYCLE',['../struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#a99db41a37254e7ca74e50b56ef0d81fe',1,'JEncoderPWMAbsolute::pwmSettings']]],
   ['maxanglelimit_3',['maxAngleLimit',['../class_j_servo_controller.html#a40bb469140701dbd64692743df9e93a2',1,'JServoController']]],
@@ -26,13 +26,16 @@ var searchData=
   ['motor_5fstart_5fvoltage_23',['motor_start_voltage',['../struct_j_motor_comp_standard_config.html#a21d9286c0287624a359721087c15a501',1,'JMotorCompStandardConfig']]],
   ['motor_5fstop_5fspeed_24',['motor_stop_speed',['../struct_j_motor_comp_standard_config.html#a903f50b35310a4cd99d6e067a99eac6e',1,'JMotorCompStandardConfig']]],
   ['motor_5fstop_5fvoltage_25',['motor_stop_voltage',['../struct_j_motor_comp_standard_config.html#af0257de8802e34cd3876fefa3977a278',1,'JMotorCompStandardConfig']]],
-  ['movedist_26',['moveDist',['../class_j_drivetrain_controller_basic.html#afab4fc90308864422082e429d5d52797',1,'JDrivetrainControllerBasic']]],
-  ['movedistinc_27',['moveDistInc',['../class_j_drivetrain_controller_basic.html#afb2265bac0ecd529379712968df6d140',1,'JDrivetrainControllerBasic']]],
-  ['movedisttheta_28',['moveDistTheta',['../class_j_drivetrain_controller_basic.html#aa1a06f4066a783379bfdb007c54543a8',1,'JDrivetrainControllerBasic']]],
-  ['movedistthetainc_29',['moveDistThetaInc',['../class_j_drivetrain_controller_basic.html#a371287e240dedca845b6ada564d67328',1,'JDrivetrainControllerBasic']]],
-  ['movedistx_30',['moveDistX',['../class_j_drivetrain_controller_basic.html#a204f23e925cb4cd84a9854297b273977',1,'JDrivetrainControllerBasic']]],
-  ['movedistxinc_31',['moveDistXInc',['../class_j_drivetrain_controller_basic.html#af1de1c4b237b4b640d70dedf9f0f4d0c',1,'JDrivetrainControllerBasic']]],
-  ['movedisty_32',['moveDistY',['../class_j_drivetrain_controller_basic.html#ae606a390a14e586df3b11badf4a6b326',1,'JDrivetrainControllerBasic']]],
-  ['movedistyinc_33',['moveDistYInc',['../class_j_drivetrain_controller_basic.html#a16fad1e072a51d646bd8c61a19b8bf12',1,'JDrivetrainControllerBasic']]],
-  ['movevel_34',['moveVel',['../class_j_drivetrain_controller_basic.html#a7b41c1ff01b3bb81dad9c3dc4ff8bb5d',1,'JDrivetrainControllerBasic']]]
+  ['motorfloats_26',['MotorFloats',['../struct_j_drive_train_mecanum_1_1_motor_floats.html',1,'JDriveTrainMecanum']]],
+  ['motors_27',['Motors',['../struct_j_drive_train_mecanum_1_1_motors.html',1,'JDriveTrainMecanum']]],
+  ['motors_28',['motors',['../class_j_drive_train_mecanum.html#a04951886e79742a2a78f99d9a06e035a',1,'JDriveTrainMecanum']]],
+  ['movedist_29',['moveDist',['../class_j_drivetrain_controller_basic.html#afab4fc90308864422082e429d5d52797',1,'JDrivetrainControllerBasic']]],
+  ['movedistinc_30',['moveDistInc',['../class_j_drivetrain_controller_basic.html#afb2265bac0ecd529379712968df6d140',1,'JDrivetrainControllerBasic']]],
+  ['movedisttheta_31',['moveDistTheta',['../class_j_drivetrain_controller_basic.html#aa1a06f4066a783379bfdb007c54543a8',1,'JDrivetrainControllerBasic']]],
+  ['movedistthetainc_32',['moveDistThetaInc',['../class_j_drivetrain_controller_basic.html#a371287e240dedca845b6ada564d67328',1,'JDrivetrainControllerBasic']]],
+  ['movedistx_33',['moveDistX',['../class_j_drivetrain_controller_basic.html#a204f23e925cb4cd84a9854297b273977',1,'JDrivetrainControllerBasic']]],
+  ['movedistxinc_34',['moveDistXInc',['../class_j_drivetrain_controller_basic.html#af1de1c4b237b4b640d70dedf9f0f4d0c',1,'JDrivetrainControllerBasic']]],
+  ['movedisty_35',['moveDistY',['../class_j_drivetrain_controller_basic.html#ae606a390a14e586df3b11badf4a6b326',1,'JDrivetrainControllerBasic']]],
+  ['movedistyinc_36',['moveDistYInc',['../class_j_drivetrain_controller_basic.html#a16fad1e072a51d646bd8c61a19b8bf12',1,'JDrivetrainControllerBasic']]],
+  ['movevel_37',['moveVel',['../class_j_drivetrain_controller_basic.html#a7b41c1ff01b3bb81dad9c3dc4ff8bb5d',1,'JDrivetrainControllerBasic']]]
 ];

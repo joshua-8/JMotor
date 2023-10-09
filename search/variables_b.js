@@ -25,5 +25,6 @@ var searchData=
   ['motor_5fstart_5fspeed_22',['motor_start_speed',['../struct_j_motor_comp_standard_config.html#a4a3ee3032fa11d28ba5430a4307eebd8',1,'JMotorCompStandardConfig']]],
   ['motor_5fstart_5fvoltage_23',['motor_start_voltage',['../struct_j_motor_comp_standard_config.html#a21d9286c0287624a359721087c15a501',1,'JMotorCompStandardConfig']]],
   ['motor_5fstop_5fspeed_24',['motor_stop_speed',['../struct_j_motor_comp_standard_config.html#a903f50b35310a4cd99d6e067a99eac6e',1,'JMotorCompStandardConfig']]],
-  ['motor_5fstop_5fvoltage_25',['motor_stop_voltage',['../struct_j_motor_comp_standard_config.html#af0257de8802e34cd3876fefa3977a278',1,'JMotorCompStandardConfig']]]
+  ['motor_5fstop_5fvoltage_25',['motor_stop_voltage',['../struct_j_motor_comp_standard_config.html#af0257de8802e34cd3876fefa3977a278',1,'JMotorCompStandardConfig']]],
+  ['motors_26',['motors',['../class_j_drive_train_mecanum.html#a04951886e79742a2a78f99d9a06e035a',1,'JDriveTrainMecanum']]]
 ];
