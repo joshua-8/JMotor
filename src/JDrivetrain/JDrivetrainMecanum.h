@@ -13,7 +13,7 @@ public:
         JMotorController& BRmotor;
     } motors;
 
-    JDriveTrainMecanum(JMotorController& _FRmotor, JMotorController& _FLmotor, JMotorController& _BLmotor, JMotorController& _BRmotor, JTwoDTransform _robotToWheelScalar)
+    JDrivetrainMecanum(JMotorController& _FRmotor, JMotorController& _FLmotor, JMotorController& _BLmotor, JMotorController& _BRmotor, JTwoDTransform _robotToWheelScalar)
         : motors({ _FRmotor, _FLmotor, _BLmotor, _BRmotor })
     {
         robotToWheelScalar = _robotToWheelScalar;
