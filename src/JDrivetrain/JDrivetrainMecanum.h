@@ -27,12 +27,11 @@ public:
     }
     bool setEnable(bool _enable)
     {
-        bool ret = false;
-        ret = ret || motors.FRmotor.setEnable(_enable);
-        ret = ret || motors.FLmotor.setEnable(_enable);
-        ret = ret || motors.BLmotor.setEnable(_enable);
-        ret = ret || motors.BRmotor.setEnable(_enable);
-        return ret;
+        bool ret1 = motors.FRmotor.setEnable(_enable);
+        bool ret2 = motors.FLmotor.setEnable(_enable);
+        bool ret3 = motors.BLmotor.setEnable(_enable);
+        bool ret4 = motors.BRmotor.setEnable(_enable);
+        return ret1 || ret2 || ret3 || ret4;
     }
     bool enable()
     {
@@ -44,12 +43,11 @@ public:
     }
     bool getEnable()
     {
-        bool ret = false;
-        ret = ret || motors.FRmotor.getEnable();
-        ret = ret || motors.FLmotor.getEnable();
-        ret = ret || motors.BLmotor.getEnable();
-        ret = ret || motors.BRmotor.getEnable();
-        return ret;
+        bool ret1 = motors.FRmotor.getEnable();
+        bool ret2 = motors.FLmotor.getEnable();
+        bool ret3 = motors.BLmotor.getEnable();
+        bool ret4 = motors.BRmotor.getEnable();
+        return ret1 || ret2 || ret3 || ret4;
     }
     JTwoDTransform getVel(bool _run = false)
     {
