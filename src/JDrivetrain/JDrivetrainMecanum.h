@@ -4,6 +4,10 @@
 #include "JMotorController/JMotorController.h"
 #include "JTwoDTransform.h"
 #include <Arduino.h>
+/**
+ * @brief Drivetrain that controls a mecanum wheeled robot
+ */
+// TODO: COMMENT
 class JDrivetrainMecanum : public JDrivetrain {
 public:
     struct Motors {
@@ -117,14 +121,13 @@ public:
     }
     JTwoDTransform getMaxVel()
     {
-        // assumes all the maxvels are similar, doesn't find a minimum
+        // assumes all the max vels are similar, doesn't find a minimum
+        // can't use toTransform since toTransform adds negatives that causes calculations to say x and theta max vel are zero
         JTwoDTransform t;
-        MotorFloats m;
-        m.FRmotor = motors.FRmotor.getMaxVel();
-        m.FLmotor = motors.FLmotor.getMaxVel();
-        m.BLmotor = motors.BLmotor.getMaxVel();
-        m.BRmotor = motors.BRmotor.getMaxVel();
-        toTransform(m, t);
+        float v = abs(motors.FRmotor.getMaxVel()) + abs(motors.FLmotor.getMaxVel()) + abs(motors.BLmotor.getMaxVel()) + abs(motors.BRmotor.getMaxVel());
+        t.x = v / 4.0 / robotToWheelScalar.x;
+        t.y = v / 4.0 / robotToWheelScalar.y;
+        t.theta = v / 4.0 / robotToWheelScalar.theta;
         return t;
     }
     float getMotorVel(unsigned char i)
