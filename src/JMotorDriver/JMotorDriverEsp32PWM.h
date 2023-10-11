@@ -82,8 +82,9 @@ public:
             if (!enabled) {
                 // actually enable
                 enabled = true;
-                ledcAttachPin(pin, ch);
+                ledcDetachPin(pin);
                 ledcSetup(ch, PWM_FREQ, PWM_RES);
+                ledcAttachPin(pin, ch);
                 ledcWrite(ch, !disableState ? 0 : PWM_RANGE); // set disable state to start with
                 return true;
             }
