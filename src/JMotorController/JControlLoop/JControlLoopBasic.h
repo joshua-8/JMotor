@@ -7,7 +7,7 @@
 class JControlLoopBasic : public JControlLoop {
 protected:
     float P;
-    float timeout;
+    unsigned long timeout;
     unsigned long lastMovedMillis;
     bool noReverseVoltage;
 
