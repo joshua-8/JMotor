@@ -56,12 +56,12 @@ public:
     void giveHeading(float _heading)
     {
         imuHeading = _heading - imuHeadingOffset;
-        if (imuHeading - lastImuHeading > 180)
+        if (imuHeading - lastImuHeading > PI)
             fullRotations--;
-        else if (imuHeading - lastImuHeading < -180)
+        else if (imuHeading - lastImuHeading < -PI)
             fullRotations++;
         lastImuHeading = imuHeading;
-        theta = imuHeading + fullRotations * 360;
+        theta = imuHeading + fullRotations * TWO_PI;
     }
     void run()
     {
