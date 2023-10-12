@@ -22,7 +22,7 @@ struct JTwoDTransform {
 
     static JTwoDTransform rotate(JTwoDTransform tIn, float theta)
     {
-        return { tIn.x * cos(-theta) - tIn.y * sin(-theta), tIn.x * sin(-theta) + tIn.y * cos(-theta), theta };
+        return { tIn.x * cos(-theta) - tIn.y * sin(-theta), tIn.x * sin(-theta) + tIn.y * cos(-theta), tIn.theta };
     }
 
     /**
