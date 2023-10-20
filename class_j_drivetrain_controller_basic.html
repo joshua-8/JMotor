@@ -114,6 +114,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7b41c1ff01b3bb81dad9c3dc4ff8bb5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_controller_basic.html#a7b41c1ff01b3bb81dad9c3dc4ff8bb5d">moveVel</a> (<a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> _vel, bool _run=false)</td></tr>
 <tr class="memdesc:a7b41c1ff01b3bb81dad9c3dc4ff8bb5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">make drivetrain approach set velocity following acceleration limits  <a href="class_j_drivetrain_controller_basic.html#a7b41c1ff01b3bb81dad9c3dc4ff8bb5d">More...</a><br /></td></tr>
 <tr class="separator:a7b41c1ff01b3bb81dad9c3dc4ff8bb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a511f4f409c1f07d4368bd11893ddd126"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_controller_basic.html#a511f4f409c1f07d4368bd11893ddd126">isDrivetrainAtTarget</a> ()</td></tr>
+<tr class="memdesc:a511f4f409c1f07d4368bd11893ddd126"><td class="mdescLeft">&#160;</td><td class="mdescRight">are all the drivetrain distance Derivs_Limiters at their position targets?  <a href="class_j_drivetrain_controller_basic.html#a511f4f409c1f07d4368bd11893ddd126">More...</a><br /></td></tr>
+<tr class="separator:a511f4f409c1f07d4368bd11893ddd126"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afab4fc90308864422082e429d5d52797"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_drivetrain_controller_basic.html#afab4fc90308864422082e429d5d52797">moveDist</a> (<a class="el" href="struct_j_two_d_transform.html">JTwoDTransform</a> _dist, bool _run=false)</td></tr>
 <tr class="memdesc:afab4fc90308864422082e429d5d52797"><td class="mdescLeft">&#160;</td><td class="mdescRight">make each axis of the drivetrain go to target position, following accel and vel limits  <a href="class_j_drivetrain_controller_basic.html#afab4fc90308864422082e429d5d52797">More...</a><br /></td></tr>
 <tr class="separator:afab4fc90308864422082e429d5d52797"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -756,6 +759,40 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a511f4f409c1f07d4368bd11893ddd126" name="a511f4f409c1f07d4368bd11893ddd126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a511f4f409c1f07d4368bd11893ddd126">&#9670;&#160;</a></span>isDrivetrainAtTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean JDrivetrainControllerBasic::isDrivetrainAtTarget </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>are all the drivetrain distance Derivs_Limiters at their position targets? </p>
+<dl class="section note"><dt>Note</dt><dd>doesn't check whether in position control mode </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">boolean</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
