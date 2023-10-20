@@ -126,6 +126,16 @@ public:
     }
 
     /**
+     * @brief  are all the drivetrain distance Derivs_Limiters at their position targets?
+     * @note   doesn't check whether in position control mode
+     * @retval boolean
+    */
+    boolean isDrivetrainAtTarget()
+    {
+        return XLimiter.isPosAtTarget() && YLimiter.isPosAtTarget() && ThetaLimiter.isPosAtTarget();
+    }
+
+    /**
      * @brief  make each axis of the drivetrain go to target position, following accel and vel limits
      * @note  each axis is controlled separately, you are not setting absolute position, just target distance for each axis
      * @param  _dist: (JTwoDTransform) target distance
