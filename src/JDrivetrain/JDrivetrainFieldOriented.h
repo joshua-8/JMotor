@@ -68,7 +68,7 @@ public:
     {
         drivetrain.run();
         JTwoDTransform drivetrainMovement = drivetrain.getDist(false) - lastDrivetrainDist;
-        dist += JTwoDTransform::rotate(drivetrainMovement, theta);
+        dist += JTwoDTransform::rotate(drivetrainMovement, -theta);
         dist.theta = theta;
         theta += drivetrainMovement.theta;
         lastDrivetrainDist = drivetrain.getDist(false);
