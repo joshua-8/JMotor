@@ -126,8 +126,8 @@ public:
     void resetDist()
     {
         drivetrain.resetDist();
-        JTwoDTransform dist = { 0, 0, 0 };
-        JTwoDTransform lastDrivetrainDist = { 0, 0, 0 };
+        dist = { 0, 0, 0 };
+        lastDrivetrainDist = { 0, 0, 0 };
         fullRotations = 0;
         theta = 0;
     }
