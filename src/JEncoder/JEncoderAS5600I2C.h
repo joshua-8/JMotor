@@ -1,5 +1,5 @@
-#ifndef JENCODER_AS5600_I2C_H
-#define JENCODER_AS5600_I2C_H
+#ifndef JENCODER_AS5600I2C_H
+#define JENCODER_AS5600I2C_H
 #include "JEncoder.h"
 #include <Arduino.h>
 #include <Wire.h>
@@ -236,10 +236,18 @@ public:
 
     /**
      * @brief  reset the counter of how far the encoder has turned
+     * @retval (long) returns value of counter before it is reset
+     */
+    long zeroCounter(){
+        return zeroCounter(true);
+    }
+
+    /**
+     * @brief  reset the counter of how far the encoder has turned
      * @param  _resetAngle: (bool) default: true=zero absolute angle measurement and set current position to zero. false= zero out number of turns, but angle stays relative to absolute encoder's zero point
      * @retval (long) returns value of counter before it is reset
      */
-    long zeroCounter(bool _resetAngle=true)
+    long zeroCounter(bool _resetAngle)
     {
         long tTurns = turns;
         turns = 0;
@@ -303,4 +311,4 @@ public:
         recognizeOutOfRange = _recognizeOutOfRange;
     }
 };
-#endif
+#endif // JENCODER_AS5600I2C_H
