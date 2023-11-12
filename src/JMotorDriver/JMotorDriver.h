@@ -86,5 +86,6 @@ public:
 #include "JMotorDriverServo.h"
 #include "JMotorDriverServoAdvancedDual.h"
 #include "JMotorDriverServoDual.h"
+#include "JMotorDriverTMC7300.h"
 
 #endif

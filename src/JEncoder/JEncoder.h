@@ -109,5 +109,6 @@ public:
 #include "JEncoderSinglePinChange.h"
 #endif
 #include "JEncoderAS5048bI2C.h"
+#include "JEncoderAS5600I2C.h"
 
 #endif
