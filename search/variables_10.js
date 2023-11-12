@@ -17,7 +17,8 @@ var searchData=
   ['stallthreshold_14',['stallThreshold',['../class_j_servo_controller_stall_protected.html#abcc586af6168787a75e2962588b52d34',1,'JServoControllerStallProtected']]],
   ['start_5fboost_5ftime_15',['start_boost_time',['../struct_j_motor_comp_standard_config.html#a21505f58d6c72bcba622f64f044d4848',1,'JMotorCompStandardConfig']]],
   ['startweaktimeout_16',['startWeakTimeout',['../class_j_servo_controller_advanced.html#aff63e6a32d7402b8d7c8f6f13a801a7d',1,'JServoControllerAdvanced']]],
-  ['steeringratio_17',['steeringRatio',['../class_j_swerve_module_differential.html#a42081479cbe1ddfef1bee185d40c9e24',1,'JSwerveModuleDifferential']]],
-  ['steps_5fper_5fturn_18',['STEPS_PER_TURN',['../class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85',1,'JEncoderAS5048bI2C']]],
-  ['swervemodule_19',['swerveModule',['../class_j_drivetrain_swerve.html#ae8790b24120be775bcba75cd2727123e',1,'JDrivetrainSwerve']]]
+  ['status_5freg_17',['STATUS_REG',['../class_j_encoder_a_s5600_i2_c.html#aa2689879934aa374b236037db0331435',1,'JEncoderAS5600I2C']]],
+  ['steeringratio_18',['steeringRatio',['../class_j_swerve_module_differential.html#a42081479cbe1ddfef1bee185d40c9e24',1,'JSwerveModuleDifferential']]],
+  ['steps_5fper_5fturn_19',['STEPS_PER_TURN',['../class_j_encoder_a_s5048b_i2_c.html#a02b5a5ddc6653586bfa7bf95f070ae85',1,'JEncoderAS5048bI2C::STEPS_PER_TURN()'],['../class_j_encoder_a_s5600_i2_c.html#ac849f52074094efdbc345744149c725b',1,'JEncoderAS5600I2C::STEPS_PER_TURN()']]],
+  ['swervemodule_20',['swerveModule',['../class_j_drivetrain_swerve.html#ae8790b24120be775bcba75cd2727123e',1,'JDrivetrainSwerve']]]
 ];
