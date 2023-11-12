@@ -139,9 +139,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0f2da02ba3be5f6060081e3a109d1fc2"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5600_i2_c.html#a0f2da02ba3be5f6060081e3a109d1fc2">intTurns</a> ()</td></tr>
 <tr class="memdesc:a0f2da02ba3be5f6060081e3a109d1fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">how many full turns the encoder has made.  <a href="class_j_encoder_a_s5600_i2_c.html#a0f2da02ba3be5f6060081e3a109d1fc2">More...</a><br /></td></tr>
 <tr class="separator:a0f2da02ba3be5f6060081e3a109d1fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77a235d3225e290e7d096fb5d0c641e2"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5600_i2_c.html#a77a235d3225e290e7d096fb5d0c641e2">zeroCounter</a> (bool _resetAngle=true)</td></tr>
-<tr class="memdesc:a77a235d3225e290e7d096fb5d0c641e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset the counter of how far the encoder has turned  <a href="class_j_encoder_a_s5600_i2_c.html#a77a235d3225e290e7d096fb5d0c641e2">More...</a><br /></td></tr>
-<tr class="separator:a77a235d3225e290e7d096fb5d0c641e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe03deaadc2c81c1574ce03f8e640ed6"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5600_i2_c.html#abe03deaadc2c81c1574ce03f8e640ed6">zeroCounter</a> ()</td></tr>
+<tr class="memdesc:abe03deaadc2c81c1574ce03f8e640ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset the counter of how far the encoder has turned  <a href="class_j_encoder_a_s5600_i2_c.html#abe03deaadc2c81c1574ce03f8e640ed6">More...</a><br /></td></tr>
+<tr class="separator:abe03deaadc2c81c1574ce03f8e640ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38bb80615df0e743d863a2a141f1bcd7"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5600_i2_c.html#a38bb80615df0e743d863a2a141f1bcd7">zeroCounter</a> (bool _resetAngle)</td></tr>
+<tr class="memdesc:a38bb80615df0e743d863a2a141f1bcd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset the counter of how far the encoder has turned  <a href="class_j_encoder_a_s5600_i2_c.html#a38bb80615df0e743d863a2a141f1bcd7">More...</a><br /></td></tr>
+<tr class="separator:a38bb80615df0e743d863a2a141f1bcd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acaac396d411df89b5973e4feaf71bc0c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5600_i2_c.html#acaac396d411df89b5973e4feaf71bc0c">getVel</a> ()</td></tr>
 <tr class="memdesc:acaac396d411df89b5973e4feaf71bc0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculates velocity in distance per second where distance was set by setdistPerCountFactor()  <a href="class_j_encoder_a_s5600_i2_c.html#acaac396d411df89b5973e4feaf71bc0c">More...</a><br /></td></tr>
 <tr class="separator:acaac396d411df89b5973e4feaf71bc0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1045,8 +1048,43 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a77a235d3225e290e7d096fb5d0c641e2" name="a77a235d3225e290e7d096fb5d0c641e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77a235d3225e290e7d096fb5d0c641e2">&#9670;&#160;</a></span>zeroCounter()</h2>
+<a id="abe03deaadc2c81c1574ce03f8e640ed6" name="abe03deaadc2c81c1574ce03f8e640ed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe03deaadc2c81c1574ce03f8e640ed6">&#9670;&#160;</a></span>zeroCounter() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long JEncoderAS5600I2C::zeroCounter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>reset the counter of how far the encoder has turned </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">(long)</td><td>returns value of counter before it is reset </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="class_j_encoder.html#aebd11e6e685427b4a1323fcc4b4e8e51">JEncoder</a>.</p>
+
+</div>
+</div>
+<a id="a38bb80615df0e743d863a2a141f1bcd7" name="a38bb80615df0e743d863a2a141f1bcd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38bb80615df0e743d863a2a141f1bcd7">&#9670;&#160;</a></span>zeroCounter() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1058,7 +1096,7 @@ Static Public Attributes</h2></td></tr>
           <td class="memname">long JEncoderAS5600I2C::zeroCounter </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>_resetAngle</em> = <code>true</code></td><td>)</td>
+          <td class="paramname"><em>_resetAngle</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
