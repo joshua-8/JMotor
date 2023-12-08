@@ -238,7 +238,8 @@ public:
      * @brief  reset the counter of how far the encoder has turned
      * @retval (long) returns value of counter before it is reset
      */
-    long zeroCounter(){
+    long zeroCounter()
+    {
         return zeroCounter(true);
     }
 
