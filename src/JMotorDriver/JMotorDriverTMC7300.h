@@ -13,7 +13,7 @@
 class JMotorDriverTMC7300 : public JMotorDriver {
 protected:
     boolean enabled;
-    boolean channel = false;
+    boolean channel;
 
 public:
     /**
@@ -36,7 +36,7 @@ public:
     bool set(float val)
     {
         val = constrain(val, -255, 255);
-        uint32_t value = (uint32_t)(val * 255);
+        int32_t value = (val * 255);
         if (enabled) {
 
             if (!channel) {
@@ -49,7 +49,15 @@ public:
     }
     bool setEnable(bool _enable)
     {
+        // TODO: is there another way?
         enabled = _enable;
+        if (enabled == false) {
+            if (!channel) {
+                ic.writeField(TMC7300_PWM_A, 0);
+            } else {
+                ic.writeField(TMC7300_PWM_B, 0);
+            }
+        }
         return true;
     }
     bool getEnable()
