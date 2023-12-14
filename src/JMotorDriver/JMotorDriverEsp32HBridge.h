@@ -27,7 +27,7 @@ public:
             val = -val;
         }
         if (enabled) {
-            if (invertSignals == false) {
+            if (invertSignals == true) {
                 float maxRangeN = pwmDriverNeg.getMaxRange();
                 float maxRangeP = pwmDriverPos.getMaxRange();
                 if (val > 0) {
