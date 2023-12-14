@@ -100,8 +100,8 @@ Collaboration diagram for JMotorDriverEsp32HBridge:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a074a4b8641f6229c12a970b8d4807aad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge.html#a074a4b8641f6229c12a970b8d4807aad">JMotorDriverEsp32HBridge</a> (byte _pinPosCh, byte _pinPos, byte _pinNeg, byte _pinNegCh, bool _reverse=false, int _freq=2000, int _resolution=12)</td></tr>
-<tr class="separator:a074a4b8641f6229c12a970b8d4807aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e517ab619cfdf8d409cbd70fe5c97d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge.html#a0e517ab619cfdf8d409cbd70fe5c97d1">JMotorDriverEsp32HBridge</a> (byte _pinPosCh, byte _pinPos, byte _pinNeg, byte _pinNegCh, bool _reverse=false, int _freq=2000, int _resolution=12, bool _invertSignals=false)</td></tr>
+<tr class="separator:a0e517ab619cfdf8d409cbd70fe5c97d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a422c891e71dcffc495d325fcd5233ccb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge.html#a422c891e71dcffc495d325fcd5233ccb">set</a> (float val)</td></tr>
 <tr class="memdesc:a422c891e71dcffc495d325fcd5233ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">set motor power  <a href="class_j_motor_driver_esp32_h_bridge.html#a422c891e71dcffc495d325fcd5233ccb">More...</a><br /></td></tr>
 <tr class="separator:a422c891e71dcffc495d325fcd5233ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,8 +150,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a61e285d2e8d0923b62cb09f35744fc25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a074a4b8641f6229c12a970b8d4807aad" name="a074a4b8641f6229c12a970b8d4807aad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a074a4b8641f6229c12a970b8d4807aad">&#9670;&#160;</a></span>JMotorDriverEsp32HBridge()</h2>
+<a id="a0e517ab619cfdf8d409cbd70fe5c97d1" name="a0e517ab619cfdf8d409cbd70fe5c97d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e517ab619cfdf8d409cbd70fe5c97d1">&#9670;&#160;</a></span>JMotorDriverEsp32HBridge()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -199,7 +199,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>_resolution</em> = <code>12</code>&#160;</td>
+          <td class="paramname"><em>_resolution</em> = <code>12</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_invertSignals</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

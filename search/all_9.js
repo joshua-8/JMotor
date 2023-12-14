@@ -84,7 +84,7 @@ var searchData=
   ['jmotordriveravrservo_2eh_81',['JMotorDriverAvrServo.h',['../_j_motor_driver_avr_servo_8h.html',1,'']]],
   ['jmotordriverdual_82',['JMotorDriverDual',['../class_j_motor_driver_dual.html',1,'JMotorDriverDual'],['../class_j_motor_driver_dual.html#a23fe7f7173680b4eac526d91f59c3fcb',1,'JMotorDriverDual::JMotorDriverDual()']]],
   ['jmotordriverdual_2eh_83',['JMotorDriverDual.h',['../_j_motor_driver_dual_8h.html',1,'']]],
-  ['jmotordriveresp32hbridge_84',['JMotorDriverEsp32HBridge',['../class_j_motor_driver_esp32_h_bridge.html#a074a4b8641f6229c12a970b8d4807aad',1,'JMotorDriverEsp32HBridge::JMotorDriverEsp32HBridge()'],['../class_j_motor_driver_esp32_h_bridge.html',1,'JMotorDriverEsp32HBridge']]],
+  ['jmotordriveresp32hbridge_84',['JMotorDriverEsp32HBridge',['../class_j_motor_driver_esp32_h_bridge.html#a0e517ab619cfdf8d409cbd70fe5c97d1',1,'JMotorDriverEsp32HBridge::JMotorDriverEsp32HBridge()'],['../class_j_motor_driver_esp32_h_bridge.html',1,'JMotorDriverEsp32HBridge']]],
   ['jmotordriveresp32hbridge_2eh_85',['JMotorDriverEsp32HBridge.h',['../_j_motor_driver_esp32_h_bridge_8h.html',1,'']]],
   ['jmotordriveresp32l293_86',['JMotorDriverEsp32L293',['../class_j_motor_driver_esp32_l293.html',1,'JMotorDriverEsp32L293'],['../class_j_motor_driver_esp32_l293.html#a4674f2ed90421e79f398b8d753b827f8',1,'JMotorDriverEsp32L293::JMotorDriverEsp32L293()']]],
   ['jmotordriveresp32l293_2eh_87',['JMotorDriverEsp32L293.h',['../_j_motor_driver_esp32_l293_8h.html',1,'']]],
