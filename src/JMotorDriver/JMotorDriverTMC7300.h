@@ -36,7 +36,7 @@ public:
     bool set(float val)
     {
         val = constrain(val, -255, 255);
-        int32_t value = (val * 255);
+        int32_t value = val;
         if (enabled) {
 
             if (!channel) {
