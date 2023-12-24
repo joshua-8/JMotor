@@ -35,8 +35,8 @@ public:
     }
     bool set(float val)
     {
-        val = constrain(val, -255, 255);
-        int32_t value = val;
+        val = constrain(val, -1, 1);
+        int32_t value = val * 255;
         if (enabled) {
 
             if (!channel) {
@@ -45,7 +45,7 @@ public:
                 ic.writeField(TMC7300_PWM_B, value);
             }
         }
-        return abs(value) < 255;
+        return abs(value) < 1;
     }
     bool setEnable(bool _enable)
     {
@@ -66,11 +66,11 @@ public:
     }
     float getMaxRange()
     {
-        return 255;
+        return 1;
     }
     float getMinRange()
     {
-        return -255;
+        return -1;
     }
     bool enable()
     {
