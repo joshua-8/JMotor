@@ -12,9 +12,9 @@ private:
     bool enabled = false;
     byte servoPin;
     byte pwmChannel;
-    float SERVO_TICKS_PER_MICROSECOND = 52.4288;
+    float SERVO_TICKS_PER_MICROSECOND = 1;
     int SERVO_FREQ = 50;
-    int SERVO_RES = 20;
+    int SERVO_RES = 14;
 
 public:
     /**
@@ -22,12 +22,12 @@ public:
      * @param  _pwmChannel: ledc channel (must be unique for each driver)
      * @param  _servoPin: pin to output signal on
      * @param  _freq = 50: Hz (default 50) must be <= int(80E6 / 2^resBits)
-     * @param  _resBits = 20: (default 20) tradeoff with max available frequency
+     * @param  _resBits = 14: (default 14) tradeoff with max available frequency
      * @param  _minServoValue: (int) minimum servo pulse, default: 544 microseconds
      * @param  _maxServoValue: (int) maximum servo pulse, default: 2400 microseconds
      * @param  _constrainRange: (bool) constrain range of set() to within -1 and 1, default: true
      */
-    JMotorDriverEsp32Servo(byte _pwmChannel, byte _servoPin, int _freq = 50, int _resBits = 20, int _minServoValue = 544, int _maxServoValue = 2400, bool _constrainRange = true)
+    JMotorDriverEsp32Servo(byte _pwmChannel, byte _servoPin, int _freq = 50, int _resBits = 14, int _minServoValue = 544, int _maxServoValue = 2400, bool _constrainRange = true)
     {
         minServoValue = _minServoValue;
         maxServoValue = _maxServoValue;
@@ -35,9 +35,16 @@ public:
         servoPin = _servoPin;
         pwmChannel = _pwmChannel;
         constrainRange = _constrainRange;
-        setFrequencyAndResolution(_freq, _resBits);
+        SERVO_FREQ = _freq;
+        SERVO_RES = _resBits;
+        SERVO_TICKS_PER_MICROSECOND = (float)(1 << SERVO_RES) * SERVO_FREQ / 1000000.0;
     }
 
+    /**
+     * @brief  helper function for adjusting the frequency that the servo signal pulse is repeated at
+     * For some servos this can be used to adjust the strength of the servo ( <1.0 makes it weaker)
+     * @param  freq: default 1.0, freq*50 is sent to setFrequencyAndResolution
+     */
     void adjustFrequency(float freq = 1.0)
     {
         setFrequencyAndResolution(freq * 50.0);
@@ -45,25 +52,27 @@ public:
 
     /**
      * @brief  set frequency that servo signal pulse is repeated at and how many bits are used internally for resolution
-     * @param  freq: Hz (default 50) must be <= int(80E6 / 2^resBits)
-     * @param  resBits: (default 20) tradeoff with max available frequency
+     * @param  freq: Hz (default 50)
+     * @param  resBits: (default 14) tradeoff with max available frequency
      * @retval (float) returns PWM cycles per microsecond-used in ledcWrite call, returned for debugging purposes
      */
-    float setFrequencyAndResolution(int freq = 50, int resBits = 20)
+    float setFrequencyAndResolution(int freq = 50, int resBits = 14)
     {
         if (freq == SERVO_FREQ && resBits == SERVO_RES) {
             return SERVO_TICKS_PER_MICROSECOND; // already set
         }
         SERVO_FREQ = freq;
         SERVO_RES = resBits;
-        SERVO_TICKS_PER_MICROSECOND = (1 << SERVO_RES) * (float)SERVO_FREQ / 1000000; // DEFAULT=52.4288  2^SERVO_RES / 1E6 * SERVO_FREQ
+        SERVO_TICKS_PER_MICROSECOND = (float)(1 << SERVO_RES) * SERVO_FREQ / 1000000.0;
         unsigned long startMicros = micros();
         while (digitalRead(servoPin) == HIGH && micros() - startMicros <= maxServoValue)
             ; // wait for pulse to go low to avoid cutting it short and causing the servo to twitch
         ledcDetachPin(servoPin);
         ledcSetup(pwmChannel, SERVO_FREQ, SERVO_RES);
-        if (enabled)
+        if (enabled) {
             ledcAttachPin(servoPin, pwmChannel);
+            ledcWrite(pwmChannel, SERVO_TICKS_PER_MICROSECOND * setMicroseconds);
+        }
         return SERVO_TICKS_PER_MICROSECOND;
     }
     bool set(float _val)
