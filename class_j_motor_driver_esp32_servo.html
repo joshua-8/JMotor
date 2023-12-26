@@ -105,15 +105,15 @@ Collaboration diagram for JMotorDriverEsp32Servo:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a669ce0414b66e03e9d335210692ce1ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_servo.html#a669ce0414b66e03e9d335210692ce1ee">JMotorDriverEsp32Servo</a> (byte _pwmChannel, byte _servoPin, int _freq=50, int _resBits=20, int _minServoValue=544, int _maxServoValue=2400, bool _constrainRange=true)</td></tr>
-<tr class="memdesc:a669ce0414b66e03e9d335210692ce1ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins, custom frequency and resolution optional  <a href="class_j_motor_driver_esp32_servo.html#a669ce0414b66e03e9d335210692ce1ee">More...</a><br /></td></tr>
-<tr class="separator:a669ce0414b66e03e9d335210692ce1ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac62623e030d03461f309803103d7e16b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_servo.html#ac62623e030d03461f309803103d7e16b">JMotorDriverEsp32Servo</a> (byte _pwmChannel, byte _servoPin, int _freq=50, int _resBits=14, int _minServoValue=544, int _maxServoValue=2400, bool _constrainRange=true)</td></tr>
+<tr class="memdesc:ac62623e030d03461f309803103d7e16b"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, sets pins, custom frequency and resolution optional  <a href="class_j_motor_driver_esp32_servo.html#ac62623e030d03461f309803103d7e16b">More...</a><br /></td></tr>
+<tr class="separator:ac62623e030d03461f309803103d7e16b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a848cb5a390c8d2fbac8dd0eb60c0cbf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_servo.html#a848cb5a390c8d2fbac8dd0eb60c0cbf2">adjustFrequency</a> (float freq=1.0)</td></tr>
-<tr class="memdesc:a848cb5a390c8d2fbac8dd0eb60c0cbf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">adjust frequency as a fraction of standard 50hz frequency lower frequencies (try .75) may let you reduce how strongly the servo holds its position  <a href="class_j_motor_driver_esp32_servo.html#a848cb5a390c8d2fbac8dd0eb60c0cbf2">More...</a><br /></td></tr>
+<tr class="memdesc:a848cb5a390c8d2fbac8dd0eb60c0cbf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">helper function for adjusting the frequency that the servo signal pulse is repeated at For some servos this can be used to adjust the strength of the servo ( &lt;1.0 makes it weaker)  <a href="class_j_motor_driver_esp32_servo.html#a848cb5a390c8d2fbac8dd0eb60c0cbf2">More...</a><br /></td></tr>
 <tr class="separator:a848cb5a390c8d2fbac8dd0eb60c0cbf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56b7ca1961e67c647afb5aba9ae2f7c2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_servo.html#a56b7ca1961e67c647afb5aba9ae2f7c2">setFrequencyAndResolution</a> (int freq=50, int resBits=20)</td></tr>
-<tr class="memdesc:a56b7ca1961e67c647afb5aba9ae2f7c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">set frequency that servo signal pulse is repeated at and how many bits are used internally for resolution  <a href="class_j_motor_driver_esp32_servo.html#a56b7ca1961e67c647afb5aba9ae2f7c2">More...</a><br /></td></tr>
-<tr class="separator:a56b7ca1961e67c647afb5aba9ae2f7c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaec526b283ae9eb57b2b1ec34ce1de3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_servo.html#aaaec526b283ae9eb57b2b1ec34ce1de3">setFrequencyAndResolution</a> (int freq=50, int resBits=14)</td></tr>
+<tr class="memdesc:aaaec526b283ae9eb57b2b1ec34ce1de3"><td class="mdescLeft">&#160;</td><td class="mdescRight">set frequency that servo signal pulse is repeated at and how many bits are used internally for resolution  <a href="class_j_motor_driver_esp32_servo.html#aaaec526b283ae9eb57b2b1ec34ce1de3">More...</a><br /></td></tr>
+<tr class="separator:aaaec526b283ae9eb57b2b1ec34ce1de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69c38d3e07ccedaefe563730714d46c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_servo.html#a69c38d3e07ccedaefe563730714d46c8">set</a> (float _val)</td></tr>
 <tr class="memdesc:a69c38d3e07ccedaefe563730714d46c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">set motor power  <a href="class_j_motor_driver_esp32_servo.html#a69c38d3e07ccedaefe563730714d46c8">More...</a><br /></td></tr>
 <tr class="separator:a69c38d3e07ccedaefe563730714d46c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,8 +199,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p >For servos and motor controllers that use servo signals (ESCs) </p>
 <dl class="section note"><dt>Note</dt><dd>platform: ESP32 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a669ce0414b66e03e9d335210692ce1ee" name="a669ce0414b66e03e9d335210692ce1ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a669ce0414b66e03e9d335210692ce1ee">&#9670;&#160;</a></span>JMotorDriverEsp32Servo()</h2>
+<a id="ac62623e030d03461f309803103d7e16b" name="ac62623e030d03461f309803103d7e16b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac62623e030d03461f309803103d7e16b">&#9670;&#160;</a></span>JMotorDriverEsp32Servo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -230,7 +230,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>_resBits</em> = <code>20</code>, </td>
+          <td class="paramname"><em>_resBits</em> = <code>14</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -269,7 +269,7 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">_pwmChannel</td><td>ledc channel (must be unique for each driver) </td></tr>
     <tr><td class="paramname">_servoPin</td><td>pin to output signal on </td></tr>
     <tr><td class="paramname">_freq</td><td>= 50: Hz (default 50) must be &lt;= int(80E6 / 2^resBits) </td></tr>
-    <tr><td class="paramname">_resBits</td><td>= 20: (default 20) tradeoff with max available frequency </td></tr>
+    <tr><td class="paramname">_resBits</td><td>= 14: (default 14) tradeoff with max available frequency </td></tr>
     <tr><td class="paramname">_minServoValue</td><td>(int) minimum servo pulse, default: 544 microseconds </td></tr>
     <tr><td class="paramname">_maxServoValue</td><td>(int) maximum servo pulse, default: 2400 microseconds </td></tr>
     <tr><td class="paramname">_constrainRange</td><td>(bool) constrain range of <a class="el" href="class_j_motor_driver_esp32_servo.html#a69c38d3e07ccedaefe563730714d46c8" title="set motor power">set()</a> to within -1 and 1, default: true </td></tr>
@@ -304,11 +304,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>adjust frequency as a fraction of standard 50hz frequency lower frequencies (try .75) may let you reduce how strongly the servo holds its position </p>
-<dl class="section note"><dt>Note</dt><dd>different servos may respond differently, possibly including being damaged, so use at your own risk! </dd></dl>
+<p>helper function for adjusting the frequency that the servo signal pulse is repeated at For some servos this can be used to adjust the strength of the servo ( &lt;1.0 makes it weaker) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">freq</td><td>(float) freq*50=setFrequency </td></tr>
+    <tr><td class="paramname">freq</td><td>default 1.0, freq*50 is sent to setFrequencyAndResolution </td></tr>
   </table>
   </dd>
 </dl>
@@ -510,8 +509,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a56b7ca1961e67c647afb5aba9ae2f7c2" name="a56b7ca1961e67c647afb5aba9ae2f7c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56b7ca1961e67c647afb5aba9ae2f7c2">&#9670;&#160;</a></span>setFrequencyAndResolution()</h2>
+<a id="aaaec526b283ae9eb57b2b1ec34ce1de3" name="aaaec526b283ae9eb57b2b1ec34ce1de3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaec526b283ae9eb57b2b1ec34ce1de3">&#9670;&#160;</a></span>setFrequencyAndResolution()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -529,7 +528,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>resBits</em> = <code>20</code>&#160;</td>
+          <td class="paramname"><em>resBits</em> = <code>14</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -547,8 +546,8 @@ Additional Inherited Members</h2></td></tr>
 <p>set frequency that servo signal pulse is repeated at and how many bits are used internally for resolution </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">freq</td><td>Hz (default 50) must be &lt;= int(80E6 / 2^resBits) </td></tr>
-    <tr><td class="paramname">resBits</td><td>(default 20) tradeoff with max available frequency </td></tr>
+    <tr><td class="paramname">freq</td><td>Hz (default 50) </td></tr>
+    <tr><td class="paramname">resBits</td><td>(default 14) tradeoff with max available frequency </td></tr>
   </table>
   </dd>
 </dl>

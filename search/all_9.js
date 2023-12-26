@@ -92,7 +92,7 @@ var searchData=
   ['jmotordriveresp32pwm_2eh_89',['JMotorDriverEsp32PWM.h',['../_j_motor_driver_esp32_p_w_m_8h.html',1,'']]],
   ['jmotordriveresp32pwmdir_90',['JMotorDriverEsp32PWMDir',['../class_j_motor_driver_esp32_p_w_m_dir.html',1,'JMotorDriverEsp32PWMDir'],['../class_j_motor_driver_esp32_p_w_m_dir.html#a6e3c20537c15afa1e5642df0ab28274c',1,'JMotorDriverEsp32PWMDir::JMotorDriverEsp32PWMDir(byte _ch, byte _enPin, byte _dirPin, int freq, int resolution, bool _rev=false)'],['../class_j_motor_driver_esp32_p_w_m_dir.html#abcc34ebfbbdd5f37b2ed0313350d3c18',1,'JMotorDriverEsp32PWMDir::JMotorDriverEsp32PWMDir(byte _ch, byte _enablePin, byte _dirPin, bool _rev=false)']]],
   ['jmotordriveresp32pwmdir_2eh_91',['JMotorDriverEsp32PWMDir.h',['../_j_motor_driver_esp32_p_w_m_dir_8h.html',1,'']]],
-  ['jmotordriveresp32servo_92',['JMotorDriverEsp32Servo',['../class_j_motor_driver_esp32_servo.html#a669ce0414b66e03e9d335210692ce1ee',1,'JMotorDriverEsp32Servo::JMotorDriverEsp32Servo()'],['../class_j_motor_driver_esp32_servo.html',1,'JMotorDriverEsp32Servo']]],
+  ['jmotordriveresp32servo_92',['JMotorDriverEsp32Servo',['../class_j_motor_driver_esp32_servo.html#ac62623e030d03461f309803103d7e16b',1,'JMotorDriverEsp32Servo::JMotorDriverEsp32Servo()'],['../class_j_motor_driver_esp32_servo.html',1,'JMotorDriverEsp32Servo']]],
   ['jmotordriveresp32servo_2eh_93',['JMotorDriverEsp32Servo.h',['../_j_motor_driver_esp32_servo_8h.html',1,'']]],
   ['jmotordriverservo_94',['JMotorDriverServo',['../class_j_motor_driver_servo.html',1,'']]],
   ['jmotordriverservo_2eh_95',['JMotorDriverServo.h',['../_j_motor_driver_servo_8h.html',1,'']]],
