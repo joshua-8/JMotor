@@ -40,9 +40,13 @@ public:
         if (enabled) {
 
             if (!channel) {
-                ic.writeField(TMC7300_PWM_A, value);
+                if (ic.readField(TMC7300_PWM_A, false) != value) {
+                    ic.writeField(TMC7300_PWM_A, value, true);
+                }
             } else {
-                ic.writeField(TMC7300_PWM_B, value);
+                if (ic.readField(TMC7300_PWM_B, false) != value) {
+                    ic.writeField(TMC7300_PWM_B, value, true);
+                }
             }
         }
         return abs(value) < 1;
@@ -50,14 +54,21 @@ public:
     bool setEnable(bool _enable)
     {
         // TODO: is there another way?
-        enabled = _enable;
-        if (enabled == false) {
+        if (_enable == false) {
             if (!channel) {
                 ic.writeField(TMC7300_PWM_A, 0);
             } else {
                 ic.writeField(TMC7300_PWM_B, 0);
             }
         }
+        if (_enable == true && enabled == false) {
+            if (!channel) {
+                ic.writeField(TMC7300_PWM_A, 0);
+            } else {
+                ic.writeField(TMC7300_PWM_B, 0);
+            }
+        }
+        enabled = _enable;
         return true;
     }
     bool getEnable()
