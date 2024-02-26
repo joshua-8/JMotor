@@ -1,5 +1,7 @@
 <map id="JDrivetrainSwerve&lt; N &gt;" name="JDrivetrainSwerve&lt; N &gt;">
-<area shape="rect" id="node1" title="number of swerve modules" alt="" coords="53,93,213,119"/>
-<area shape="rect" id="node2" href="$class_j_drivetrain_basic.html" title="interface for a drivetrain with only simple velocity control" alt="" coords="5,5,123,31"/>
-<area shape="rect" id="node3" href="$class_j_swerve_module.html" title="defines a common interface for swerve modules" alt="" coords="147,5,261,31"/>
+<area shape="rect" id="Node000001" title="number of swerve modules" alt="" coords="53,94,213,120"/>
+<area shape="rect" id="Node000002" href="$class_j_drivetrain_basic.html" title="interface for a drivetrain with only simple velocity control" alt="" coords="5,5,122,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,42,125,92,121,95,81,45"/>
+<area shape="rect" id="Node000003" href="$class_j_swerve_module.html" title="defines a common interface for swerve modules" alt="" coords="146,5,261,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,45,145,95,141,92,182,41"/>
 </map>

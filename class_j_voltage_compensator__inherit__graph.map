@@ -1,6 +1,9 @@
 <map id="JVoltageCompensator" name="JVoltageCompensator">
-<area shape="rect" id="node1" title="convert voltage to value needed to set driver at to get that voltage" alt="" coords="169,5,319,31"/>
-<area shape="rect" id="node2" href="$class_j_voltage_comp_adjust.html" title="convert voltage to value needed to set driver at to get that voltage, uses reference to variable that..." alt="" coords="5,79,149,104"/>
-<area shape="rect" id="node3" href="$class_j_voltage_comp_const.html" title="convert voltage to value needed to set driver at to get that voltage, with constant value for what su..." alt="" coords="173,79,315,104"/>
-<area shape="rect" id="node4" href="$class_j_voltage_comp_measure.html" title="measure supply voltage with analogRead and use that to convert voltage to value needed to set driver ..." alt="" coords="339,79,528,104"/>
+<area shape="rect" id="Node000001" title="convert voltage to value needed to set driver at to get that voltage" alt="" coords="168,5,317,31"/>
+<area shape="rect" id="Node000002" href="$class_j_voltage_comp_adjust.html" title="convert voltage to value needed to set driver at to get that voltage, uses reference to variable that..." alt="" coords="5,79,149,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,40,106,81,104,76,199,35"/>
+<area shape="rect" id="Node000003" href="$class_j_voltage_comp_const.html" title="convert voltage to value needed to set driver at to get that voltage, with constant value for what su..." alt="" coords="172,79,313,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="245,46,245,79,240,79,240,46"/>
+<area shape="rect" id="Node000004" href="$class_j_voltage_comp_measure.html" title="measure supply voltage with analogRead and use that to convert voltage to value needed to set driver ..." alt="" coords="336,79,525,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="289,34,399,76,397,81,288,39"/>
 </map>

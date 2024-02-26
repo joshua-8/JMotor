@@ -1,11 +1,20 @@
 <map id="JServoControllerStallProtected" name="JServoControllerStallProtected">
-<area shape="rect" id="node1" title="this child class of JServoController uses JServoStallSensing to reduce servo power" alt="" coords="201,344,401,369"/>
-<area shape="rect" id="node2" href="$class_j_servo_controller_advanced.html" title="class for controlling JMotorDriverServoAdvanced, with power reducing option along with standard JServ..." alt="" coords="79,256,255,281"/>
-<area shape="rect" id="node3" href="$class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="19,168,138,193"/>
-<area shape="rect" id="node4" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="20,80,137,105"/>
-<area shape="rect" id="node5" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="5,5,152,31"/>
-<area shape="rect" id="node6" href="$class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="176,80,307,105"/>
-<area shape="rect" id="node8" href="$class_j_motor_driver_servo_advanced.html" title="defines interface for servo driver with variable frequency, subclass of JMotorDriverServo and JMotorD..." alt="" coords="162,168,350,193"/>
-<area shape="rect" id="node7" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="193,5,289,31"/>
-<area shape="rect" id="node9" href="$class_j_servo_stall_sensing.html" title="defines interface for classes that can measure how hard a servo is working" alt="" coords="279,256,415,281"/>
+<area shape="rect" id="Node000001" title="this child class of JServoController uses JServoStallSensing to reduce servo power" alt="" coords="155,346,354,372"/>
+<area shape="rect" id="Node000002" href="$class_j_servo_controller_advanced.html" title="class for controlling JMotorDriverServoAdvanced, with power reducing option along with standard JServ..." alt="" coords="78,258,253,283"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,292,244,344,240,348,187,296"/>
+<area shape="rect" id="Node000003" href="$class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="20,169,137,195"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="103,204,155,255,151,259,99,207"/>
+<area shape="rect" id="Node000004" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="20,80,137,106"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="81,122,81,169,76,169,76,122"/>
+<area shape="rect" id="Node000005" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="5,5,152,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="81,46,81,80,76,80,76,46"/>
+<area shape="rect" id="Node000006" href="$class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="175,80,305,106"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="205,116,102,171,100,166,202,111"/>
+<area shape="rect" id="Node000008" href="$class_j_motor_driver_servo_advanced.html" title="defines interface for servo driver with variable frequency, subclass of JMotorDriverServo and JMotorD..." alt="" coords="161,169,348,195"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="247,121,255,168,250,169,242,122"/>
+<area shape="rect" id="Node000007" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="192,5,288,31"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="243,46,243,80,237,80,237,46"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="233,207,179,259,176,255,229,204"/>
+<area shape="rect" id="Node000009" href="$class_j_servo_stall_sensing.html" title="defines interface for classes that can measure how hard a servo is working" alt="" coords="278,258,413,283"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="323,296,269,348,265,344,320,292"/>
 </map>

@@ -1,5 +1,7 @@
 <map id="JEncoderPWMAbsoluteAttachInterrupt" name="JEncoderPWMAbsoluteAttachInterrupt">
-<area shape="rect" id="node1" title="uses attachInterrupt() (could be used with standard avr arduinos but only with pins that support atta..." alt="" coords="5,152,203,192"/>
-<area shape="rect" id="node2" href="$class_j_encoder_p_w_m_absolute.html" title="reads a PWM signal from an absolute encoder" alt="" coords="25,79,183,104"/>
-<area shape="rect" id="node3" href="$class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="66,5,142,31"/>
+<area shape="rect" id="Node000001" title="uses attachInterrupt() (could be used with standard avr arduinos but only with pins that support atta..." alt="" coords="5,153,202,193"/>
+<area shape="rect" id="Node000002" href="$class_j_encoder_p_w_m_absolute.html" title="reads a PWM signal from an absolute encoder" alt="" coords="24,79,183,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,120,106,152,101,152,101,120"/>
+<area shape="rect" id="Node000003" href="$class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="66,5,141,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="106,46,106,79,101,79,101,46"/>
 </map>

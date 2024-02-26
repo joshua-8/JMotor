@@ -1,8 +1,13 @@
 <map id="JDrivetrain" name="JDrivetrain">
-<area shape="rect" id="node1" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="171,80,255,105"/>
-<area shape="rect" id="node3" href="$class_j_drivetrain_controller_basic.html" title="basic drivetrain controller, supports smoothed movements on each axis" alt="" coords="303,5,475,31"/>
-<area shape="rect" id="node4" href="$class_j_drivetrain_field_oriented.html" title="interface for a drivetrain that makes it into field oriented" alt="" coords="308,55,469,80"/>
-<area shape="rect" id="node5" href="$class_j_drivetrain_mecanum.html" title="Drivetrain that controls a mecanum wheeled robot." alt="" coords="318,104,459,129"/>
-<area shape="rect" id="node6" href="$class_j_drivetrain_two_side.html" title="child class of JDrivetrain for controlling a drivetrain with one JMotorController for each side of th..." alt="" coords="321,153,456,179"/>
-<area shape="rect" id="node2" href="$class_j_drivetrain_basic.html" title="interface for a drivetrain with only simple velocity control" alt="" coords="5,80,123,105"/>
+<area shape="rect" id="Node000001" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="170,80,253,106"/>
+<area shape="rect" id="Node000003" href="$class_j_drivetrain_controller_basic.html" title="basic drivetrain controller, supports smoothed movements on each axis" alt="" coords="301,5,472,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="244,69,300,40,330,29,332,34,302,45,246,74"/>
+<area shape="rect" id="Node000004" href="$class_j_drivetrain_field_oriented.html" title="interface for a drivetrain that makes it into field oriented" alt="" coords="307,55,467,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="268,82,306,76,306,82,269,87"/>
+<area shape="rect" id="Node000005" href="$class_j_drivetrain_mecanum.html" title="Drivetrain that controls a mecanum wheeled robot." alt="" coords="317,104,457,130"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="269,98,316,105,316,110,268,103"/>
+<area shape="rect" id="Node000006" href="$class_j_drivetrain_two_side.html" title="child class of JDrivetrain for controlling a drivetrain with one JMotorController for each side of th..." alt="" coords="320,153,454,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="248,112,302,140,332,150,330,155,300,145,245,117"/>
+<area shape="rect" id="Node000002" href="$class_j_drivetrain_basic.html" title="interface for a drivetrain with only simple velocity control" alt="" coords="5,80,122,106"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,90,169,90,169,96,137,96"/>
 </map>

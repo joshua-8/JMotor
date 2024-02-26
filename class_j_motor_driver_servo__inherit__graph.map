@@ -1,9 +1,15 @@
 <map id="JMotorDriverServo" name="JMotorDriverServo">
-<area shape="rect" id="node1" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="209,79,339,104"/>
-<area shape="rect" id="node3" href="$class_j_motor_driver_avr_servo.html" title="wraps standard servo library. For servos and motor controllers that use servo signals (ESCs)" alt="" coords="5,152,156,177"/>
-<area shape="rect" id="node4" href="$class_j_motor_driver_servo_advanced.html" title="defines interface for servo driver with variable frequency, subclass of JMotorDriverServo and JMotorD..." alt="" coords="180,152,368,177"/>
-<area shape="rect" id="node7" href="$class_j_motor_driver_servo_dual.html" title="control two JMotorDriverServos as if they are one driver" alt="" coords="392,152,548,177"/>
-<area shape="rect" id="node2" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="226,5,322,31"/>
-<area shape="rect" id="node5" href="$class_j_motor_driver_esp32_servo.html" title="For servos and motor controllers that use servo signals (ESCs)" alt="" coords="83,225,249,251"/>
-<area shape="rect" id="node6" href="$class_j_motor_driver_servo_advanced_dual.html" title="control two JMotorDriverServoAdvanced as if they are one driver" alt="" coords="273,225,488,251"/>
+<area shape="rect" id="Node000001" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="207,79,337,105"/>
+<area shape="rect" id="Node000003" href="$class_j_motor_driver_avr_servo.html" title="wraps standard servo library. For servos and motor controllers that use servo signals (ESCs)" alt="" coords="5,153,155,178"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="226,113,114,155,112,150,224,108"/>
+<area shape="rect" id="Node000004" href="$class_j_motor_driver_servo_advanced.html" title="defines interface for servo driver with variable frequency, subclass of JMotorDriverServo and JMotorD..." alt="" coords="178,153,366,178"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="275,120,275,152,269,152,269,120"/>
+<area shape="rect" id="Node000007" href="$class_j_motor_driver_servo_dual.html" title="control two JMotorDriverServos as if they are one driver" alt="" coords="390,153,546,178"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="321,108,435,150,434,155,319,113"/>
+<area shape="rect" id="Node000002" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="224,5,320,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="275,46,275,79,269,79,269,46"/>
+<area shape="rect" id="Node000005" href="$class_j_motor_driver_esp32_servo.html" title="For servos and motor controllers that use servo signals (ESCs)" alt="" coords="83,226,248,252"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="243,190,185,228,182,224,240,185"/>
+<area shape="rect" id="Node000006" href="$class_j_motor_driver_servo_advanced_dual.html" title="control two JMotorDriverServoAdvanced as if they are one driver" alt="" coords="272,226,485,252"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="304,185,362,224,359,228,301,190"/>
 </map>

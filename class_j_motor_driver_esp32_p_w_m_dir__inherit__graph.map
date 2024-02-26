@@ -1,4 +1,5 @@
 <map id="JMotorDriverEsp32PWMDir" name="JMotorDriverEsp32PWMDir">
-<area shape="rect" id="node1" title="for motor controllers with one direction input and one speed input pin" alt="" coords="5,79,185,104"/>
-<area shape="rect" id="node2" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="47,5,143,31"/>
+<area shape="rect" id="Node000001" title="for motor controllers with one direction input and one speed input pin" alt="" coords="5,79,185,105"/>
+<area shape="rect" id="Node000002" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="47,5,143,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,46,98,79,92,79,92,46"/>
 </map>

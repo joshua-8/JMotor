@@ -1,6 +1,10 @@
 <map id="JDrivetrainFieldOriented" name="JDrivetrainFieldOriented">
-<area shape="rect" id="node1" title="interface for a drivetrain that makes it into field oriented" alt="" coords="25,183,186,208"/>
-<area shape="rect" id="node2" href="$class_j_drivetrain.html" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="22,80,106,105"/>
-<area shape="rect" id="node3" href="$class_j_drivetrain_basic.html" title="interface for a drivetrain with only simple velocity control" alt="" coords="5,5,123,31"/>
-<area shape="rect" id="node4" href="$struct_j_two_d_transform.html" title="struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move." alt="" coords="132,80,255,105"/>
+<area shape="rect" id="Node000001" title="interface for a drivetrain that makes it into field oriented" alt="" coords="25,184,185,210"/>
+<area shape="rect" id="Node000002" href="$class_j_drivetrain.html" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="22,80,105,106"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,121,82,159,97,182,92,185,77,161,65,122"/>
+<area shape="poly" id="edge3_Node000001_Node000002" title=" " alt="" coords="77,119,102,183,97,185,72,121"/>
+<area shape="rect" id="Node000003" href="$class_j_drivetrain_basic.html" title="interface for a drivetrain with only simple velocity control" alt="" coords="5,5,122,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="66,46,66,80,61,80,61,46"/>
+<area shape="rect" id="Node000004" href="$struct_j_two_d_transform.html" title="struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move." alt="" coords="131,80,252,106"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="181,122,153,162,126,185,122,181,150,158,177,119"/>
 </map>

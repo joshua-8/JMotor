@@ -1,5 +1,7 @@
 <map id="JEncoderPWMAbsolutePinChange" name="JEncoderPWMAbsolutePinChange">
-<area shape="rect" id="node1" title="uses a pin change interrupt library to support more pins than attachInterrupt()." alt="" coords="5,152,228,177"/>
-<area shape="rect" id="node2" href="$class_j_encoder_p_w_m_absolute.html" title="reads a PWM signal from an absolute encoder" alt="" coords="37,79,196,104"/>
-<area shape="rect" id="node3" href="$class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="79,5,155,31"/>
+<area shape="rect" id="Node000001" title="uses a pin change interrupt library to support more pins than attachInterrupt()." alt="" coords="5,153,227,178"/>
+<area shape="rect" id="Node000002" href="$class_j_encoder_p_w_m_absolute.html" title="reads a PWM signal from an absolute encoder" alt="" coords="37,79,195,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,120,119,152,113,152,113,120"/>
+<area shape="rect" id="Node000003" href="$class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="78,5,154,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="119,46,119,79,113,79,113,46"/>
 </map>

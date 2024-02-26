@@ -1,7 +1,11 @@
 <map id="JServoControllerStallProtected" name="JServoControllerStallProtected">
-<area shape="rect" id="node1" title="this child class of JServoController uses JServoStallSensing to reduce servo power" alt="" coords="5,299,205,324"/>
-<area shape="rect" id="node2" href="$class_j_servo_controller_advanced.html" title="class for controlling JMotorDriverServoAdvanced, with power reducing option along with standard JServ..." alt="" coords="17,225,193,251"/>
-<area shape="rect" id="node3" href="$class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="46,152,165,177"/>
-<area shape="rect" id="node4" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="47,79,164,104"/>
-<area shape="rect" id="node5" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="32,5,179,31"/>
+<area shape="rect" id="Node000001" title="this child class of JServoController uses JServoStallSensing to reduce servo power" alt="" coords="5,300,205,326"/>
+<area shape="rect" id="Node000002" href="$class_j_servo_controller_advanced.html" title="class for controlling JMotorDriverServoAdvanced, with power reducing option along with standard JServ..." alt="" coords="17,226,193,252"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,267,108,300,102,300,102,267"/>
+<area shape="rect" id="Node000003" href="$class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="46,153,164,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="108,194,108,226,102,226,102,194"/>
+<area shape="rect" id="Node000004" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="47,79,163,105"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="108,120,108,152,102,152,102,120"/>
+<area shape="rect" id="Node000005" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="32,5,178,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="108,46,108,79,102,79,102,46"/>
 </map>

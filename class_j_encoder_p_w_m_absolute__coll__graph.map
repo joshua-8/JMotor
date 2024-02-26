@@ -1,4 +1,5 @@
 <map id="JEncoderPWMAbsolute" name="JEncoderPWMAbsolute">
-<area shape="rect" id="node1" title="reads a PWM signal from an absolute encoder" alt="" coords="5,79,164,104"/>
-<area shape="rect" id="node2" href="$class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="47,5,123,31"/>
+<area shape="rect" id="Node000001" title="reads a PWM signal from an absolute encoder" alt="" coords="5,79,164,105"/>
+<area shape="rect" id="Node000002" href="$class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="47,5,122,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,46,87,79,82,79,82,46"/>
 </map>

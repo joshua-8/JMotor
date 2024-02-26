@@ -1,4 +1,6 @@
 <map id="JMotorDriverDual" name="JMotorDriverDual">
-<area shape="rect" id="node1" title="control two JMotorDrivers (of any type) as if they are one driver" alt="" coords="5,108,128,133"/>
-<area shape="rect" id="node2" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="19,5,115,31"/>
+<area shape="rect" id="Node000001" title="control two JMotorDrivers (of any type) as if they are one driver" alt="" coords="5,109,127,135"/>
+<area shape="rect" id="Node000002" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="18,5,114,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,47,66,55,66,85,68,109,62,109,61,85,61,55,61,46"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="69,47,69,109,63,109,63,47"/>
 </map>

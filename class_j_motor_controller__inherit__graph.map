@@ -1,10 +1,17 @@
 <map id="JMotorController" name="JMotorController">
-<area shape="rect" id="node1" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="203,79,320,104"/>
-<area shape="rect" id="node3" href="$class_j_motor_controller_closed.html" title="closed loop (uses encoder) motor controller" alt="" coords="5,152,163,177"/>
-<area shape="rect" id="node4" href="$class_j_motor_controller_open.html" title="This class controls velocity and position of a motor without any encoder feedback." alt="" coords="187,152,335,177"/>
-<area shape="rect" id="node5" href="$class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="359,152,478,177"/>
-<area shape="rect" id="node2" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="188,5,335,31"/>
-<area shape="rect" id="node6" href="$class_j_servo_controller_advanced.html" title="class for controlling JMotorDriverServoAdvanced, with power reducing option along with standard JServ..." alt="" coords="235,225,411,251"/>
-<area shape="rect" id="node8" href="$class_j_servo_controller_gentle.html" title="JServoControllerGentle is an extension of JServoController that uses JServoStallSensing to make a ser..." alt="" coords="435,225,591,251"/>
-<area shape="rect" id="node7" href="$class_j_servo_controller_stall_protected.html" title="this child class of JServoController uses JServoStallSensing to reduce servo power" alt="" coords="223,299,423,324"/>
+<area shape="rect" id="Node000001" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="201,79,318,105"/>
+<area shape="rect" id="Node000003" href="$class_j_motor_controller_closed.html" title="closed loop (uses encoder) motor controller" alt="" coords="5,153,162,178"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="217,113,115,155,113,150,215,108"/>
+<area shape="rect" id="Node000004" href="$class_j_motor_controller_open.html" title="This class controls velocity and position of a motor without any encoder feedback." alt="" coords="186,153,333,178"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="262,120,262,152,257,152,257,120"/>
+<area shape="rect" id="Node000005" href="$class_j_servo_controller.html" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="357,153,474,178"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="301,109,390,150,388,154,299,114"/>
+<area shape="rect" id="Node000002" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="186,5,333,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,46,262,79,257,79,257,46"/>
+<area shape="rect" id="Node000006" href="$class_j_servo_controller_advanced.html" title="class for controlling JMotorDriverServoAdvanced, with power reducing option along with standard JServ..." alt="" coords="233,226,409,252"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="389,190,338,228,335,224,386,186"/>
+<area shape="rect" id="Node000008" href="$class_j_servo_controller_gentle.html" title="JServoControllerGentle is an extension of JServoController that uses JServoStallSensing to make a ser..." alt="" coords="433,226,588,252"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="445,186,496,224,493,228,442,190"/>
+<area shape="rect" id="Node000007" href="$class_j_servo_controller_stall_protected.html" title="this child class of JServoController uses JServoStallSensing to reduce servo power" alt="" coords="221,300,421,326"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="324,267,324,300,318,300,318,267"/>
 </map>

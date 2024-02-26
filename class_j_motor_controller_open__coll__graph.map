@@ -1,8 +1,14 @@
 <map id="JMotorControllerOpen" name="JMotorControllerOpen">
-<area shape="rect" id="node1" title="This class controls velocity and position of a motor without any encoder feedback." alt="" coords="74,168,222,193"/>
-<area shape="rect" id="node2" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="11,93,128,119"/>
-<area shape="rect" id="node3" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="5,5,152,31"/>
-<area shape="rect" id="node4" href="$class_j_motor_controller_basic.html" title="A motor controller object that uses a JMotorCompensator to set velocity of a motor." alt="" coords="153,93,303,119"/>
-<area shape="rect" id="node5" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="177,5,273,31"/>
-<area shape="rect" id="node6" href="$class_j_motor_compensator.html" title="This class defines a common interface for converting from speed to driver input. It should compensate..." alt="" coords="297,5,436,31"/>
+<area shape="rect" id="Node000001" title="This class controls velocity and position of a motor without any encoder feedback." alt="" coords="74,169,222,195"/>
+<area shape="rect" id="Node000002" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="12,94,129,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,128,137,167,133,171,92,132"/>
+<area shape="rect" id="Node000003" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="5,5,152,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="79,47,74,94,69,93,73,46"/>
+<area shape="rect" id="Node000004" href="$class_j_motor_controller_basic.html" title="A motor controller object that uses a JMotorCompensator to set velocity of a motor." alt="" coords="153,94,303,120"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="114,37,208,91,205,96,111,41"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="205,132,163,171,159,167,201,128"/>
+<area shape="rect" id="Node000005" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="178,5,273,31"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="229,46,230,94,225,94,223,46"/>
+<area shape="rect" id="Node000006" href="$class_j_motor_compensator.html" title="This class defines a common interface for converting from speed to driver input. It should compensate..." alt="" coords="297,5,436,31"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="336,42,249,96,246,91,333,37"/>
 </map>

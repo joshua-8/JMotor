@@ -1,6 +1,9 @@
 <map id="JEncoderSingle" name="JEncoderSingle">
-<area shape="rect" id="node1" title="reads a single channel (incremental) encoder" alt="" coords="154,79,266,104"/>
-<area shape="rect" id="node3" href="$class_j_encoder_single_attach_interrupt.html" title="uses attachInterrupt() platform: esp32, teensy (could be used with standard avr arduinos but only wit..." alt="" coords="5,152,204,177"/>
-<area shape="rect" id="node4" href="$class_j_encoder_single_pin_change.html" title="uses a pin change interrupt library to support more pins than attachInterrupt()." alt="" coords="228,152,403,177"/>
-<area shape="rect" id="node2" href="$class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="172,5,248,31"/>
+<area shape="rect" id="Node000001" title="reads a single channel (incremental) encoder" alt="" coords="152,79,264,105"/>
+<area shape="rect" id="Node000003" href="$class_j_encoder_single_attach_interrupt.html" title="uses attachInterrupt() platform: esp32, teensy (could be used with standard avr arduinos but only wit..." alt="" coords="5,153,203,178"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,116,123,154,120,150,177,111"/>
+<area shape="rect" id="Node000004" href="$class_j_encoder_single_pin_change.html" title="uses a pin change interrupt library to support more pins than attachInterrupt()." alt="" coords="226,153,401,178"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="240,111,297,150,294,154,237,116"/>
+<area shape="rect" id="Node000002" href="$class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="170,5,246,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,46,211,79,205,79,205,46"/>
 </map>

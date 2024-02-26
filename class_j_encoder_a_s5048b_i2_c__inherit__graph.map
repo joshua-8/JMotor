@@ -1,4 +1,5 @@
 <map id="JEncoderAS5048bI2C" name="JEncoderAS5048bI2C">
-<area shape="rect" id="node1" title="reads a type of absolute encoder https://ams.com/as0548b (uses I2C)" alt="" coords="5,79,155,104"/>
-<area shape="rect" id="node2" href="$class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="42,5,118,31"/>
+<area shape="rect" id="Node000001" title="reads a type of absolute encoder https://ams.com/as0548b (uses I2C)" alt="" coords="5,79,154,105"/>
+<area shape="rect" id="Node000002" href="$class_j_encoder.html" title="defines common interface for JEncoder" alt="" coords="42,5,117,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,46,82,79,77,79,77,46"/>
 </map>

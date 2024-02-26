@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['m1_0',['m1',['../class_j_motor_driver_servo_dual.html#a8b03c9e495eb03734dfcb1e4155bf6ce',1,'JMotorDriverServoDual::m1()'],['../class_j_motor_driver_servo_advanced_dual.html#aef0551ed66347fcc22071bd1fe1c0890',1,'JMotorDriverServoAdvancedDual::m1()'],['../class_j_swerve_module_differential.html#a77d58dd85ed062d9fc0b0a4bfb2d775b',1,'JSwerveModuleDifferential::m1()'],['../class_j_motor_driver_dual.html#a85e4cc7428e5dcde08c8d524d8d5799e',1,'JMotorDriverDual::m1()']]],
-  ['m2_1',['m2',['../class_j_motor_driver_servo_advanced_dual.html#ae970f8e6148e4ae6256b9749709921ca',1,'JMotorDriverServoAdvancedDual::m2()'],['../class_j_motor_driver_servo_dual.html#ad015f665868eefedb13cd00977dcf68a',1,'JMotorDriverServoDual::m2()'],['../class_j_motor_driver_dual.html#acdc948a8735bb3b70e88454ef1074b45',1,'JMotorDriverDual::m2()'],['../class_j_swerve_module_differential.html#af065b8df03a9711cb2723636725390cb',1,'JSwerveModuleDifferential::m2()']]],
+  ['m1_0',['m1',['../class_j_motor_driver_servo_dual.html#a8b03c9e495eb03734dfcb1e4155bf6ce',1,'JMotorDriverServoDual::m1'],['../class_j_motor_driver_servo_advanced_dual.html#aef0551ed66347fcc22071bd1fe1c0890',1,'JMotorDriverServoAdvancedDual::m1'],['../class_j_swerve_module_differential.html#a77d58dd85ed062d9fc0b0a4bfb2d775b',1,'JSwerveModuleDifferential::m1'],['../class_j_motor_driver_dual.html#a85e4cc7428e5dcde08c8d524d8d5799e',1,'JMotorDriverDual::m1']]],
+  ['m2_1',['m2',['../class_j_motor_driver_servo_advanced_dual.html#ae970f8e6148e4ae6256b9749709921ca',1,'JMotorDriverServoAdvancedDual::m2'],['../class_j_motor_driver_servo_dual.html#ad015f665868eefedb13cd00977dcf68a',1,'JMotorDriverServoDual::m2'],['../class_j_motor_driver_dual.html#acdc948a8735bb3b70e88454ef1074b45',1,'JMotorDriverDual::m2'],['../class_j_swerve_module_differential.html#af065b8df03a9711cb2723636725390cb',1,'JSwerveModuleDifferential::m2']]],
   ['magnitude_5freg_2',['MAGNITUDE_REG',['../class_j_encoder_a_s5600_i2_c.html#a3aeb170bf62003e5341716f66392e220',1,'JEncoderAS5600I2C']]],
   ['mang_5freg_3',['MANG_REG',['../class_j_encoder_a_s5600_i2_c.html#aeeb41447f0a642877c5f7136e723c64e',1,'JEncoderAS5600I2C']]],
   ['max_5fcycle_4',['MAX_CYCLE',['../struct_j_encoder_p_w_m_absolute_1_1pwm_settings.html#a99db41a37254e7ca74e50b56ef0d81fe',1,'JEncoderPWMAbsolute::pwmSettings']]],
@@ -29,16 +29,15 @@ var searchData=
   ['motor_5fstop_5fspeed_26',['motor_stop_speed',['../struct_j_motor_comp_standard_config.html#a903f50b35310a4cd99d6e067a99eac6e',1,'JMotorCompStandardConfig']]],
   ['motor_5fstop_5fvoltage_27',['motor_stop_voltage',['../struct_j_motor_comp_standard_config.html#af0257de8802e34cd3876fefa3977a278',1,'JMotorCompStandardConfig']]],
   ['motorfloats_28',['MotorFloats',['../struct_j_drivetrain_mecanum_1_1_motor_floats.html',1,'JDrivetrainMecanum']]],
-  ['motors_29',['Motors',['../struct_j_drivetrain_mecanum_1_1_motors.html',1,'JDrivetrainMecanum']]],
-  ['motors_30',['motors',['../class_j_drivetrain_mecanum.html#ac46b0c0abd445b64d4e12d696d128e1c',1,'JDrivetrainMecanum']]],
-  ['movedist_31',['moveDist',['../class_j_drivetrain_controller_basic.html#afab4fc90308864422082e429d5d52797',1,'JDrivetrainControllerBasic']]],
-  ['movedistinc_32',['moveDistInc',['../class_j_drivetrain_controller_basic.html#afb2265bac0ecd529379712968df6d140',1,'JDrivetrainControllerBasic']]],
-  ['movedisttheta_33',['moveDistTheta',['../class_j_drivetrain_controller_basic.html#aa1a06f4066a783379bfdb007c54543a8',1,'JDrivetrainControllerBasic']]],
-  ['movedistthetainc_34',['moveDistThetaInc',['../class_j_drivetrain_controller_basic.html#a371287e240dedca845b6ada564d67328',1,'JDrivetrainControllerBasic']]],
-  ['movedistx_35',['moveDistX',['../class_j_drivetrain_controller_basic.html#a204f23e925cb4cd84a9854297b273977',1,'JDrivetrainControllerBasic']]],
-  ['movedistxinc_36',['moveDistXInc',['../class_j_drivetrain_controller_basic.html#af1de1c4b237b4b640d70dedf9f0f4d0c',1,'JDrivetrainControllerBasic']]],
-  ['movedisty_37',['moveDistY',['../class_j_drivetrain_controller_basic.html#ae606a390a14e586df3b11badf4a6b326',1,'JDrivetrainControllerBasic']]],
-  ['movedistyinc_38',['moveDistYInc',['../class_j_drivetrain_controller_basic.html#a16fad1e072a51d646bd8c61a19b8bf12',1,'JDrivetrainControllerBasic']]],
-  ['movevel_39',['moveVel',['../class_j_drivetrain_controller_basic.html#a7b41c1ff01b3bb81dad9c3dc4ff8bb5d',1,'JDrivetrainControllerBasic']]],
-  ['mposmsb_5freg_40',['MPOSMSB_REG',['../class_j_encoder_a_s5600_i2_c.html#a5160efb70aa75155b3c647c8d3db9270',1,'JEncoderAS5600I2C']]]
+  ['motors_29',['motors',['../struct_j_drivetrain_mecanum_1_1_motors.html',1,'JDrivetrainMecanum::Motors'],['../class_j_drivetrain_mecanum.html#ac46b0c0abd445b64d4e12d696d128e1c',1,'JDrivetrainMecanum::motors']]],
+  ['movedist_30',['moveDist',['../class_j_drivetrain_controller_basic.html#afab4fc90308864422082e429d5d52797',1,'JDrivetrainControllerBasic']]],
+  ['movedistinc_31',['moveDistInc',['../class_j_drivetrain_controller_basic.html#afb2265bac0ecd529379712968df6d140',1,'JDrivetrainControllerBasic']]],
+  ['movedisttheta_32',['moveDistTheta',['../class_j_drivetrain_controller_basic.html#aa1a06f4066a783379bfdb007c54543a8',1,'JDrivetrainControllerBasic']]],
+  ['movedistthetainc_33',['moveDistThetaInc',['../class_j_drivetrain_controller_basic.html#a371287e240dedca845b6ada564d67328',1,'JDrivetrainControllerBasic']]],
+  ['movedistx_34',['moveDistX',['../class_j_drivetrain_controller_basic.html#a204f23e925cb4cd84a9854297b273977',1,'JDrivetrainControllerBasic']]],
+  ['movedistxinc_35',['moveDistXInc',['../class_j_drivetrain_controller_basic.html#af1de1c4b237b4b640d70dedf9f0f4d0c',1,'JDrivetrainControllerBasic']]],
+  ['movedisty_36',['moveDistY',['../class_j_drivetrain_controller_basic.html#ae606a390a14e586df3b11badf4a6b326',1,'JDrivetrainControllerBasic']]],
+  ['movedistyinc_37',['moveDistYInc',['../class_j_drivetrain_controller_basic.html#a16fad1e072a51d646bd8c61a19b8bf12',1,'JDrivetrainControllerBasic']]],
+  ['movevel_38',['moveVel',['../class_j_drivetrain_controller_basic.html#a7b41c1ff01b3bb81dad9c3dc4ff8bb5d',1,'JDrivetrainControllerBasic']]],
+  ['mposmsb_5freg_39',['MPOSMSB_REG',['../class_j_encoder_a_s5600_i2_c.html#a5160efb70aa75155b3c647c8d3db9270',1,'JEncoderAS5600I2C']]]
 ];

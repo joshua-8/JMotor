@@ -1,5 +1,8 @@
 <map id="JMotorDriverServoDual" name="JMotorDriverServoDual">
-<area shape="rect" id="node1" title="control two JMotorDriverServos as if they are one driver" alt="" coords="5,183,161,208"/>
-<area shape="rect" id="node2" href="$class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="18,80,149,105"/>
-<area shape="rect" id="node3" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="35,5,131,31"/>
+<area shape="rect" id="Node000001" title="control two JMotorDriverServos as if they are one driver" alt="" coords="5,184,161,210"/>
+<area shape="rect" id="Node000002" href="$class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="18,80,148,106"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,122,83,130,83,160,85,184,79,184,78,160,78,130,78,121"/>
+<area shape="poly" id="edge3_Node000001_Node000002" title=" " alt="" coords="86,122,86,184,80,184,80,122"/>
+<area shape="rect" id="Node000003" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="35,5,131,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="86,46,86,80,80,80,80,46"/>
 </map>

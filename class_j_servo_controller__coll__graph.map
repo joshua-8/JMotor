@@ -1,7 +1,11 @@
 <map id="JServoController" name="JServoController">
-<area shape="rect" id="node1" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="93,168,211,193"/>
-<area shape="rect" id="node2" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="20,80,137,105"/>
-<area shape="rect" id="node3" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="5,5,152,31"/>
-<area shape="rect" id="node4" href="$class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="161,80,292,105"/>
-<area shape="rect" id="node5" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="179,5,275,31"/>
+<area shape="rect" id="Node000001" title="class for controlling JMotorDriverServo, with angle calibration and accel and velocity limiting" alt="" coords="92,169,209,195"/>
+<area shape="rect" id="Node000002" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="20,80,137,106"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,116,143,167,139,170,96,120"/>
+<area shape="rect" id="Node000003" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="5,5,152,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="81,46,81,80,76,80,76,46"/>
+<area shape="rect" id="Node000004" href="$class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="161,80,290,106"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="207,120,163,170,159,167,203,116"/>
+<area shape="rect" id="Node000005" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="178,5,273,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="228,46,228,80,223,80,223,46"/>
 </map>

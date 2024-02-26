@@ -1,8 +1,13 @@
 <map id="JDrivetrainTwoSide" name="JDrivetrainTwoSide">
-<area shape="rect" id="node1" title="child class of JDrivetrain for controlling a drivetrain with one JMotorController for each side of th..." alt="" coords="145,197,279,223"/>
-<area shape="rect" id="node2" href="$class_j_drivetrain.html" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="30,80,114,105"/>
-<area shape="rect" id="node3" href="$class_j_drivetrain_basic.html" title="interface for a drivetrain with only simple velocity control" alt="" coords="5,5,123,31"/>
-<area shape="rect" id="node4" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="153,80,271,105"/>
-<area shape="rect" id="node5" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="147,5,293,31"/>
-<area shape="rect" id="node6" href="$struct_j_two_d_transform.html" title="struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move." alt="" coords="295,80,417,105"/>
+<area shape="rect" id="Node000001" title="child class of JDrivetrain for controlling a drivetrain with one JMotorController for each side of th..." alt="" coords="144,199,279,225"/>
+<area shape="rect" id="Node000002" href="$class_j_drivetrain.html" title="defines interface for controlling any ground&#45;based drivetrain" alt="" coords="30,80,113,106"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,114,199,196,195,200,96,118"/>
+<area shape="rect" id="Node000003" href="$class_j_drivetrain_basic.html" title="interface for a drivetrain with only simple velocity control" alt="" coords="5,5,122,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="69,46,73,80,68,80,64,47"/>
+<area shape="rect" id="Node000004" href="$class_j_motor_controller.html" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="153,80,270,106"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="214,122,214,198,209,198,209,122"/>
+<area shape="rect" id="Node000005" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="146,5,293,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="219,47,215,80,210,80,214,46"/>
+<area shape="rect" id="Node000006" href="$struct_j_two_d_transform.html" title="struct for storing a 2 dimensional transformation. Used for telling a drivetrain how to move." alt="" coords="294,80,415,106"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="330,118,228,200,225,196,326,114"/>
 </map>

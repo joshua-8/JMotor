@@ -1,4 +1,5 @@
 <map id="JMotorController" name="JMotorController">
-<area shape="rect" id="node1" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="20,79,137,104"/>
-<area shape="rect" id="node2" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="5,5,152,31"/>
+<area shape="rect" id="Node000001" title="This class defines a common interface for classes which control velocity and position of a motor cont..." alt="" coords="20,79,137,105"/>
+<area shape="rect" id="Node000002" href="$class_j_motor_controller_base.html" title="This class defines a common interface for classes which control velocity of a motor controlled by a J..." alt="" coords="5,5,152,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,46,81,79,76,79,76,46"/>
 </map>

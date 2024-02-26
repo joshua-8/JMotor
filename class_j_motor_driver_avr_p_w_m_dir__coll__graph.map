@@ -1,5 +1,8 @@
 <map id="JMotorDriverAvrPWMDir" name="JMotorDriverAvrPWMDir">
-<area shape="rect" id="node1" title="for motor controllers with one direction input and one speed input pin" alt="" coords="5,168,169,193"/>
-<area shape="rect" id="node2" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="34,5,130,31"/>
-<area shape="rect" id="node3" href="$class_j_motor_driver_avr_p_w_m.html" title="wrapper for analogWrite()" alt="" coords="104,80,252,105"/>
+<area shape="rect" id="Node000001" title="for motor controllers with one direction input and one speed input pin" alt="" coords="5,169,169,195"/>
+<area shape="rect" id="Node000002" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="34,5,129,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,47,89,169,84,169,80,47"/>
+<area shape="rect" id="Node000003" href="$class_j_motor_driver_avr_p_w_m.html" title="wrapper for analogWrite()" alt="" coords="103,80,250,106"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="111,38,163,78,159,82,108,43"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,119,101,171,97,167,151,115"/>
 </map>

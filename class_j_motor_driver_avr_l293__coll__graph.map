@@ -1,5 +1,8 @@
 <map id="JMotorDriverAvrL293" name="JMotorDriverAvrL293">
-<area shape="rect" id="node1" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf." alt="" coords="5,168,151,193"/>
-<area shape="rect" id="node2" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="25,5,121,31"/>
-<area shape="rect" id="node3" href="$class_j_motor_driver_avr_p_w_m.html" title="wrapper for analogWrite()" alt="" coords="95,80,243,105"/>
+<area shape="rect" id="Node000001" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf." alt="" coords="5,169,150,195"/>
+<area shape="rect" id="Node000002" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="25,5,120,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,47,80,169,74,169,70,47"/>
+<area shape="rect" id="Node000003" href="$class_j_motor_driver_avr_p_w_m.html" title="wrapper for analogWrite()" alt="" coords="93,80,241,106"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="101,38,153,78,150,82,98,43"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="145,119,92,171,88,167,142,115"/>
 </map>
