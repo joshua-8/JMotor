@@ -18,7 +18,7 @@ Supports reading the following kinds of encoders: quadrature, single pin, absolu
 
 Supports controlling the following kinds of motor drivers: single PWM pin, PWM and direction pins, servo signal, L293/L298 driver. 
 
-supports the following boards:   ESP32, Arduino AVR (tested on nano), Teensy (tested on LC), SAMD M0 boards (tested on feather m0)
+supports the following boards: ESP32, ESP32S3 Arduino AVR (tested on nano), Teensy (tested on LC), SAMD M0 boards (tested on feather m0)
 
 Why do all the classes start with J? It's to avoid name conflicts with other libraries (and J is my first initial).
 
