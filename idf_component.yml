@@ -4,6 +4,6 @@ documentation: https://joshua-8.github.io/JMotor/md_readme.html
 discussion: https://github.com/joshua-8/JMotor/discussions
 issues: https://github.com/joshua-8/JMotor/issues
 dependencies:
-  espressif/arduino-esp32: ">2.0"
+  espressif/arduino-esp32: "~2.0"
   joshua-8/tmc7300: ">=0.3.4"
   joshua-8/derivs_limiter: ">=3.1.3"
