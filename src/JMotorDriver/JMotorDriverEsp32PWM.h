@@ -62,6 +62,7 @@ public:
         }
         PWM_FREQ = freq;
         PWM_RES = resBits;
+        PWM_RANGE = (1 << PWM_RES) - 1;
         ledcDetachPin(pin);
         ledcSetup(ch, PWM_FREQ, PWM_RES);
         if (enabled)
