@@ -68,8 +68,8 @@ public:
 
 #if defined(ESP32)
 #include "JMotorDriverEsp32HBridge.h"
+#include "JMotorDriverEsp32HBridgeTwoLedcChannels.h"
 #include "JMotorDriverEsp32L293.h"
-#include "JMotorDriverEsp32L293TwoPins.h"
 #include "JMotorDriverEsp32PWM.h"
 #include "JMotorDriverEsp32PWMDir.h"
 #include "JMotorDriverEsp32Servo.h"
