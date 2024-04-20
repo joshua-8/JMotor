@@ -2,7 +2,7 @@ var searchData=
 [
   ['centerf_0',['centerF',['../class_j_drivetrain_swerve.html#a3dfbd81b58cc0ca2e2568011975c5bf6',1,'JDrivetrainSwerve']]],
   ['centerl_1',['centerL',['../class_j_drivetrain_swerve.html#aeab68aa4aec3d69a0e7e566d12128185',1,'JDrivetrainSwerve']]],
-  ['ch_2',['ch',['../class_j_motor_driver_esp32_l293_two_pins.html#a0ca66e6200d4286522f3ef77aa8d0085',1,'JMotorDriverEsp32L293TwoPins']]],
+  ['ch_2',['ch',['../class_j_motor_driver_esp32_h_bridge.html#a125685329fdd86a8eb39e659ae061a75',1,'JMotorDriverEsp32HBridge']]],
   ['channel_3',['channel',['../class_j_motor_driver_t_m_c7300.html#a6d9085fe1b959d83e338deeeeda59856',1,'JMotorDriverTMC7300']]],
   ['compensator_4',['compensator',['../class_j_motor_controller_basic.html#a4c1f4b702b721dd056c7dc5e01d3ee03',1,'JMotorControllerBasic::compensator'],['../class_j_motor_controller_closed.html#abb6636240bf21f5663581dcb2b61b838',1,'JMotorControllerClosed::compensator']]],
   ['conf_5freg_5',['CONF_REG',['../class_j_encoder_a_s5600_i2_c.html#a8e4e8e1fefeb53a9dcb6de83ac9d36f8',1,'JEncoderAS5600I2C']]],

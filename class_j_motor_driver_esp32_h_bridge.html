@@ -71,11 +71,15 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_j_motor_driver_esp32_h_bridge-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">JMotorDriverEsp32HBridge Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Controls an H-bridge motor driver with two pins When wiring to an L293D or similar motor driver, connect the enable pin to 5 volts, and the two other input pins to the ESP32. Unlike <a class="el" href="class_j_motor_driver_esp32_l293.html" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf also works with L298 drivers or an...">JMotorDriverEsp32L293</a>, this driver uses two pins to control the motor. Unlike <a class="el" href="class_j_motor_driver_esp32_h_bridge_two_ledc_channels.html" title="in most cases, JMotorDriverESP32HBridge is better, this driver uses two ledc (pwm) channels instead o...">JMotorDriverEsp32HBridgeTwoLedcChannels</a>, this driver uses a single LEDc channel, so this is better than <a class="el" href="class_j_motor_driver_esp32_h_bridge_two_ledc_channels.html" title="in most cases, JMotorDriverESP32HBridge is better, this driver uses two ledc (pwm) channels instead o...">JMotorDriverEsp32HBridgeTwoLedcChannels</a>.  
+ <a href="class_j_motor_driver_esp32_h_bridge.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_j_motor_driver_esp32_h_bridge_8h_source.html">JMotorDriverEsp32HBridge.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -83,7 +87,7 @@ Inheritance diagram for JMotorDriverEsp32HBridge:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_motor_driver_esp32_h_bridge__inherit__graph.png" border="0" usemap="#a_j_motor_driver_esp32_h_bridge_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_j_motor_driver_esp32_h_bridge_inherit__map" id="a_j_motor_driver_esp32_h_bridge_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,79,184,105"/>
+<area shape="rect" title="Controls an H&#45;bridge motor driver with two pins When wiring to an L293D or similar motor driver,..." alt="" coords="5,79,184,105"/>
 <area shape="rect" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="47,5,142,31"/>
 <area shape="poly" title=" " alt="" coords="97,46,97,79,92,79,92,46"/>
 </map>
@@ -93,25 +97,26 @@ Collaboration diagram for JMotorDriverEsp32HBridge:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_j_motor_driver_esp32_h_bridge__coll__graph.png" border="0" usemap="#a_j_motor_driver_esp32_h_bridge_coll__map" alt="Collaboration graph"/></div>
 <map name="a_j_motor_driver_esp32_h_bridge_coll__map" id="a_j_motor_driver_esp32_h_bridge_coll__map">
-<area shape="rect" title=" " alt="" coords="5,184,184,210"/>
-<area shape="rect" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="42,5,137,31"/>
-<area shape="poly" title=" " alt="" coords="93,47,97,184,91,184,87,47"/>
-<area shape="rect" href="class_j_motor_driver_esp32_p_w_m.html" title="uses ledc to output PWM approximation of an analog output ESP32s now have normal analogWrite() so the..." alt="" coords="110,80,274,106"/>
-<area shape="poly" title=" " alt="" coords="120,38,176,78,173,82,117,42"/>
-<area shape="poly" title=" " alt="" coords="172,119,108,185,104,182,168,116"/>
+<area shape="rect" title="Controls an H&#45;bridge motor driver with two pins When wiring to an L293D or similar motor driver,..." alt="" coords="5,79,184,105"/>
+<area shape="rect" href="class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="47,5,142,31"/>
+<area shape="poly" title=" " alt="" coords="97,46,97,79,92,79,92,46"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0e517ab619cfdf8d409cbd70fe5c97d1" id="r_a0e517ab619cfdf8d409cbd70fe5c97d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge.html#a0e517ab619cfdf8d409cbd70fe5c97d1">JMotorDriverEsp32HBridge</a> (byte _pinPosCh, byte _pinPos, byte _pinNeg, byte _pinNegCh, bool _reverse=false, int _freq=2000, int _resolution=12, bool _invertSignals=false)</td></tr>
-<tr class="separator:a0e517ab619cfdf8d409cbd70fe5c97d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38dabe5086d2ecd7bbeb628753b556df" id="r_a38dabe5086d2ecd7bbeb628753b556df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge.html#a38dabe5086d2ecd7bbeb628753b556df">JMotorDriverEsp32HBridge</a> (byte _ledCChannel, byte _pinPos, byte _pinNeg, bool _reverse=false, int _freq=2000, int _resolution=12, bool _invertSignals=false)</td></tr>
+<tr class="memdesc:a38dabe5086d2ecd7bbeb628753b556df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls an H-bridge motor driver with two pins When wiring to an L293D or similar motor driver, connect the enable pin to 5 volts, and the two other input pins to the ESP32. Unlike <a class="el" href="class_j_motor_driver_esp32_l293.html" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf also works with L298 drivers or an...">JMotorDriverEsp32L293</a>, this driver uses two pins to control the motor. Unlike JMotorDriverEsp32HBridgeTwoChannels, this driver uses a single LEDc channel, so this is better than <a class="el" href="class_j_motor_driver_esp32_h_bridge.html" title="Controls an H-bridge motor driver with two pins When wiring to an L293D or similar motor driver,...">JMotorDriverEsp32HBridge</a>.  <br /></td></tr>
+<tr class="separator:a38dabe5086d2ecd7bbeb628753b556df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a422c891e71dcffc495d325fcd5233ccb" id="r_a422c891e71dcffc495d325fcd5233ccb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge.html#a422c891e71dcffc495d325fcd5233ccb">set</a> (float val)</td></tr>
 <tr class="memdesc:a422c891e71dcffc495d325fcd5233ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">set motor power  <br /></td></tr>
 <tr class="separator:a422c891e71dcffc495d325fcd5233ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56105df969c27fac2acd8edf5357b5d8" id="r_a56105df969c27fac2acd8edf5357b5d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge.html#a56105df969c27fac2acd8edf5357b5d8">setEnable</a> (bool _enable)</td></tr>
 <tr class="memdesc:a56105df969c27fac2acd8edf5357b5d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">use to enable or disable a motor, and sets up pin states  <br /></td></tr>
 <tr class="separator:a56105df969c27fac2acd8edf5357b5d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace5f41253d242503c93b25047b970815" id="r_ace5f41253d242503c93b25047b970815"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge.html#ace5f41253d242503c93b25047b970815">setFrequencyAndResolution</a> (int freq=2000, int resBits=12)</td></tr>
+<tr class="memdesc:ace5f41253d242503c93b25047b970815"><td class="mdescLeft">&#160;</td><td class="mdescRight">set frequency of pwm  <br /></td></tr>
+<tr class="separator:ace5f41253d242503c93b25047b970815"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4f0c7067708256d2d6e55b3a122d4f0" id="r_ab4f0c7067708256d2d6e55b3a122d4f0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge.html#ab4f0c7067708256d2d6e55b3a122d4f0">getEnable</a> ()</td></tr>
 <tr class="memdesc:ab4f0c7067708256d2d6e55b3a122d4f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the enable state of the driver  <br /></td></tr>
 <tr class="separator:ab4f0c7067708256d2d6e55b3a122d4f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,18 +134,41 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a978c868297bf5ee5958d44764bb2bbda inherit pub_methods_class_j_motor_driver"><td class="mdescLeft">&#160;</td><td class="mdescRight">disable motor  <br /></td></tr>
 <tr class="separator:a978c868297bf5ee5958d44764bb2bbda inherit pub_methods_class_j_motor_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a381f35c9e10ca890d2e7bafbe0f8eb4f" id="r_a381f35c9e10ca890d2e7bafbe0f8eb4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_j_motor_driver_esp32_p_w_m.html">JMotorDriverEsp32PWM</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge.html#a381f35c9e10ca890d2e7bafbe0f8eb4f">pwmDriverPos</a></td></tr>
-<tr class="separator:a381f35c9e10ca890d2e7bafbe0f8eb4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefe84d075ab6a4a99ca08a5485ef7ca6" id="r_aefe84d075ab6a4a99ca08a5485ef7ca6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_j_motor_driver_esp32_p_w_m.html">JMotorDriverEsp32PWM</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge.html#aefe84d075ab6a4a99ca08a5485ef7ca6">pwmDriverNeg</a></td></tr>
-<tr class="separator:aefe84d075ab6a4a99ca08a5485ef7ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:aff054e866fc8bf420b3e3b9c68c9e327" id="r_aff054e866fc8bf420b3e3b9c68c9e327"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge.html#aff054e866fc8bf420b3e3b9c68c9e327">write</a> (byte pin, bool state)</td></tr>
+<tr class="memdesc:aff054e866fc8bf420b3e3b9c68c9e327"><td class="mdescLeft">&#160;</td><td class="mdescRight">just digitalWrite, but with invertSignals  <br /></td></tr>
+<tr class="separator:aff054e866fc8bf420b3e3b9c68c9e327"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71e9bed07cd1cf4296b8d51dd29852f9" id="r_a71e9bed07cd1cf4296b8d51dd29852f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge.html#a71e9bed07cd1cf4296b8d51dd29852f9">writePWM</a> (byte <a class="el" href="class_j_motor_driver_esp32_h_bridge.html#a125685329fdd86a8eb39e659ae061a75">ch</a>, int val)</td></tr>
+<tr class="memdesc:a71e9bed07cd1cf4296b8d51dd29852f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">just ledcWrite, but with invertSignals  <br /></td></tr>
+<tr class="separator:a71e9bed07cd1cf4296b8d51dd29852f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:ac33f9b2d8122b057a1e5066e92a2ba67" id="r_ac33f9b2d8122b057a1e5066e92a2ba67"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge.html#ac33f9b2d8122b057a1e5066e92a2ba67">enabled</a> = false</td></tr>
+<tr class="separator:ac33f9b2d8122b057a1e5066e92a2ba67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61e285d2e8d0923b62cb09f35744fc25" id="r_a61e285d2e8d0923b62cb09f35744fc25"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge.html#a61e285d2e8d0923b62cb09f35744fc25">reverse</a></td></tr>
 <tr class="separator:a61e285d2e8d0923b62cb09f35744fc25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a437e6cac2fc034efa67f578d837f91ce" id="r_a437e6cac2fc034efa67f578d837f91ce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge.html#a437e6cac2fc034efa67f578d837f91ce">invertSignals</a></td></tr>
+<tr class="separator:a437e6cac2fc034efa67f578d837f91ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7b1fe4dfb58039aaba4cb6e5308251d" id="r_ab7b1fe4dfb58039aaba4cb6e5308251d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge.html#ab7b1fe4dfb58039aaba4cb6e5308251d">PWM_FREQ</a></td></tr>
+<tr class="separator:ab7b1fe4dfb58039aaba4cb6e5308251d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a071277122d41f8b044df57c369ba30a5" id="r_a071277122d41f8b044df57c369ba30a5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge.html#a071277122d41f8b044df57c369ba30a5">PWM_RES</a></td></tr>
+<tr class="separator:a071277122d41f8b044df57c369ba30a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3438e0930e97cd80c1b33a040cdd2712" id="r_a3438e0930e97cd80c1b33a040cdd2712"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge.html#a3438e0930e97cd80c1b33a040cdd2712">PWM_RANGE</a></td></tr>
+<tr class="separator:a3438e0930e97cd80c1b33a040cdd2712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade340c6bc1db6340051ea3cfc42dbf16" id="r_ade340c6bc1db6340051ea3cfc42dbf16"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge.html#ade340c6bc1db6340051ea3cfc42dbf16">pinPos</a></td></tr>
+<tr class="separator:ade340c6bc1db6340051ea3cfc42dbf16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cbda6ab237b3a4eccea0c3410ca2697" id="r_a9cbda6ab237b3a4eccea0c3410ca2697"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge.html#a9cbda6ab237b3a4eccea0c3410ca2697">pinNeg</a></td></tr>
+<tr class="separator:a9cbda6ab237b3a4eccea0c3410ca2697"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a125685329fdd86a8eb39e659ae061a75" id="r_a125685329fdd86a8eb39e659ae061a75"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge.html#a125685329fdd86a8eb39e659ae061a75">ch</a></td></tr>
+<tr class="separator:a125685329fdd86a8eb39e659ae061a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a0e517ab619cfdf8d409cbd70fe5c97d1" name="a0e517ab619cfdf8d409cbd70fe5c97d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e517ab619cfdf8d409cbd70fe5c97d1">&#9670;&#160;</a></span>JMotorDriverEsp32HBridge()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Controls an H-bridge motor driver with two pins When wiring to an L293D or similar motor driver, connect the enable pin to 5 volts, and the two other input pins to the ESP32. Unlike <a class="el" href="class_j_motor_driver_esp32_l293.html" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf also works with L298 drivers or an...">JMotorDriverEsp32L293</a>, this driver uses two pins to control the motor. Unlike <a class="el" href="class_j_motor_driver_esp32_h_bridge_two_ledc_channels.html" title="in most cases, JMotorDriverESP32HBridge is better, this driver uses two ledc (pwm) channels instead o...">JMotorDriverEsp32HBridgeTwoLedcChannels</a>, this driver uses a single LEDc channel, so this is better than <a class="el" href="class_j_motor_driver_esp32_h_bridge_two_ledc_channels.html" title="in most cases, JMotorDriverESP32HBridge is better, this driver uses two ledc (pwm) channels instead o...">JMotorDriverEsp32HBridgeTwoLedcChannels</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a38dabe5086d2ecd7bbeb628753b556df" name="a38dabe5086d2ecd7bbeb628753b556df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38dabe5086d2ecd7bbeb628753b556df">&#9670;&#160;</a></span>JMotorDriverEsp32HBridge()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -152,7 +180,7 @@ Public Attributes</h2></td></tr>
           <td class="memname">JMotorDriverEsp32HBridge::JMotorDriverEsp32HBridge </td>
           <td>(</td>
           <td class="paramtype">byte&#160;</td>
-          <td class="paramname"><em>_pinPosCh</em>, </td>
+          <td class="paramname"><em>_ledCChannel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -165,12 +193,6 @@ Public Attributes</h2></td></tr>
           <td></td>
           <td class="paramtype">byte&#160;</td>
           <td class="paramname"><em>_pinNeg</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">byte&#160;</td>
-          <td class="paramname"><em>_pinNegCh</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -208,6 +230,20 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Controls an H-bridge motor driver with two pins When wiring to an L293D or similar motor driver, connect the enable pin to 5 volts, and the two other input pins to the ESP32. Unlike <a class="el" href="class_j_motor_driver_esp32_l293.html" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf also works with L298 drivers or an...">JMotorDriverEsp32L293</a>, this driver uses two pins to control the motor. Unlike JMotorDriverEsp32HBridgeTwoChannels, this driver uses a single LEDc channel, so this is better than <a class="el" href="class_j_motor_driver_esp32_h_bridge.html" title="Controls an H-bridge motor driver with two pins When wiring to an L293D or similar motor driver,...">JMotorDriverEsp32HBridge</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_ledCChannel</td><td>ledc channel (must be unique for each driver) </td></tr>
+    <tr><td class="paramname">_pinPos</td><td>positive direction pin of motor driver </td></tr>
+    <tr><td class="paramname">_pinNeg</td><td>negative direction pin of motor driver </td></tr>
+    <tr><td class="paramname">_reverse</td><td>invert values (default false) </td></tr>
+    <tr><td class="paramname">_freq</td><td>Hz (default 2000) must be &lt;= int(80E6 / 2^resBits) </td></tr>
+    <tr><td class="paramname">_resolution</td><td>bits of resolution, tradeoff with frequency, default 12 </td></tr>
+    <tr><td class="paramname">_invertSignals</td><td>invert signals on both pinPos and pinNeg (default false) </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -405,31 +441,307 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="aefe84d075ab6a4a99ca08a5485ef7ca6" name="aefe84d075ab6a4a99ca08a5485ef7ca6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefe84d075ab6a4a99ca08a5485ef7ca6">&#9670;&#160;</a></span>pwmDriverNeg</h2>
+<a id="ace5f41253d242503c93b25047b970815" name="ace5f41253d242503c93b25047b970815"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace5f41253d242503c93b25047b970815">&#9670;&#160;</a></span>setFrequencyAndResolution()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_j_motor_driver_esp32_p_w_m.html">JMotorDriverEsp32PWM</a> JMotorDriverEsp32HBridge::pwmDriverNeg</td>
+          <td class="memname">void JMotorDriverEsp32HBridge::setFrequencyAndResolution </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>freq</em> = <code>2000</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>resBits</em> = <code>12</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set frequency of pwm </p>
+<dl class="section note"><dt>Note</dt><dd>side effect: this function turns the motor off, so call set again right after this if you want the motor to turn on again. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">freq</td><td>Hz (default 2000) must be &lt;= int(80E6 / 2^resBits) </td></tr>
+    <tr><td class="paramname">resBits</td><td>(default 12) tradeoff with max available frequency </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aff054e866fc8bf420b3e3b9c68c9e327" name="aff054e866fc8bf420b3e3b9c68c9e327"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff054e866fc8bf420b3e3b9c68c9e327">&#9670;&#160;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JMotorDriverEsp32HBridge::write </td>
+          <td>(</td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>just digitalWrite, but with invertSignals </p>
+
+</div>
+</div>
+<a id="a71e9bed07cd1cf4296b8d51dd29852f9" name="a71e9bed07cd1cf4296b8d51dd29852f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71e9bed07cd1cf4296b8d51dd29852f9">&#9670;&#160;</a></span>writePWM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JMotorDriverEsp32HBridge::writePWM </td>
+          <td>(</td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>ch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>just ledcWrite, but with invertSignals </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a125685329fdd86a8eb39e659ae061a75" name="a125685329fdd86a8eb39e659ae061a75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a125685329fdd86a8eb39e659ae061a75">&#9670;&#160;</a></span>ch</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte JMotorDriverEsp32HBridge::ch</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a381f35c9e10ca890d2e7bafbe0f8eb4f" name="a381f35c9e10ca890d2e7bafbe0f8eb4f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a381f35c9e10ca890d2e7bafbe0f8eb4f">&#9670;&#160;</a></span>pwmDriverPos</h2>
+<a id="ac33f9b2d8122b057a1e5066e92a2ba67" name="ac33f9b2d8122b057a1e5066e92a2ba67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac33f9b2d8122b057a1e5066e92a2ba67">&#9670;&#160;</a></span>enabled</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_j_motor_driver_esp32_p_w_m.html">JMotorDriverEsp32PWM</a> JMotorDriverEsp32HBridge::pwmDriverPos</td>
+          <td class="memname">bool JMotorDriverEsp32HBridge::enabled = false</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a437e6cac2fc034efa67f578d837f91ce" name="a437e6cac2fc034efa67f578d837f91ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a437e6cac2fc034efa67f578d837f91ce">&#9670;&#160;</a></span>invertSignals</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool JMotorDriverEsp32HBridge::invertSignals</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9cbda6ab237b3a4eccea0c3410ca2697" name="a9cbda6ab237b3a4eccea0c3410ca2697"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cbda6ab237b3a4eccea0c3410ca2697">&#9670;&#160;</a></span>pinNeg</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte JMotorDriverEsp32HBridge::pinNeg</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade340c6bc1db6340051ea3cfc42dbf16" name="ade340c6bc1db6340051ea3cfc42dbf16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade340c6bc1db6340051ea3cfc42dbf16">&#9670;&#160;</a></span>pinPos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte JMotorDriverEsp32HBridge::pinPos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab7b1fe4dfb58039aaba4cb6e5308251d" name="ab7b1fe4dfb58039aaba4cb6e5308251d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7b1fe4dfb58039aaba4cb6e5308251d">&#9670;&#160;</a></span>PWM_FREQ</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int JMotorDriverEsp32HBridge::PWM_FREQ</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3438e0930e97cd80c1b33a040cdd2712" name="a3438e0930e97cd80c1b33a040cdd2712"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3438e0930e97cd80c1b33a040cdd2712">&#9670;&#160;</a></span>PWM_RANGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int JMotorDriverEsp32HBridge::PWM_RANGE</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a071277122d41f8b044df57c369ba30a5" name="a071277122d41f8b044df57c369ba30a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a071277122d41f8b044df57c369ba30a5">&#9670;&#160;</a></span>PWM_RES</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int JMotorDriverEsp32HBridge::PWM_RES</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -439,11 +751,19 @@ Public Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool JMotorDriverEsp32HBridge::reverse</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

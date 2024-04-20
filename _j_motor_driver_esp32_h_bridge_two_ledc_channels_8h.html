@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>JMotor: src/JMotorDriver/JMotorDriverEsp32L293TwoPins.h File Reference</title>
+<title>JMotor: src/JMotorDriver/JMotorDriverEsp32HBridgeTwoLedcChannels.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -75,16 +75,16 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a>  </div>
-  <div class="headertitle"><div class="title">JMotorDriverEsp32L293TwoPins.h File Reference</div></div>
+  <div class="headertitle"><div class="title">JMotorDriverEsp32HBridgeTwoLedcChannels.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><a href="_j_motor_driver_esp32_l293_two_pins_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="_j_motor_driver_esp32_h_bridge_two_ledc_channels_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_l293_two_pins.html">JMotorDriverEsp32L293TwoPins</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls an H-bridge motor driver with two pins When wiring to an L293D or similar motor driver, connect the enable pin to 5 volts, and the two other input pins to the ESP32. Unlike <a class="el" href="class_j_motor_driver_esp32_l293.html" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf also works with L298 drivers or an...">JMotorDriverEsp32L293</a>, this driver uses two pins to control the motor. Unlike <a class="el" href="class_j_motor_driver_esp32_h_bridge.html">JMotorDriverEsp32HBridge</a>, this driver uses a single LEDc channel, so this is better than <a class="el" href="class_j_motor_driver_esp32_h_bridge.html">JMotorDriverEsp32HBridge</a>.  <a href="class_j_motor_driver_esp32_l293_two_pins.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_esp32_h_bridge_two_ledc_channels.html">JMotorDriverEsp32HBridgeTwoLedcChannels</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">in most cases, JMotorDriverESP32HBridge is better, this driver uses two ledc (pwm) channels instead of efficiently using just one.  <a href="class_j_motor_driver_esp32_h_bridge_two_ledc_channels.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

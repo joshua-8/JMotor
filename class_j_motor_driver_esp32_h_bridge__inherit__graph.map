@@ -1,5 +1,5 @@
 <map id="JMotorDriverEsp32HBridge" name="JMotorDriverEsp32HBridge">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,184,105"/>
+<area shape="rect" id="Node000001" title="Controls an H&#45;bridge motor driver with two pins When wiring to an L293D or similar motor driver,..." alt="" coords="5,79,184,105"/>
 <area shape="rect" id="Node000002" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="47,5,142,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,46,97,79,92,79,92,46"/>
 </map>

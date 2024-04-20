@@ -5,7 +5,7 @@ var searchData=
   ['calculate_2',['calculate',['../class_j_swerve_angle_control_loop.html#a782ba3c8e2c5893b61c7ee5a0ff6d8f2',1,'JSwerveAngleControlLoop::calculate()'],['../class_j_swerve_angle_control_loop_p.html#a6b442061205afdc416cf2da22f99031b',1,'JSwerveAngleControlLoopP::calculate()'],['../namespace_j_deadzone_remover.html#a5444e5cd270d86a85d1367e578599324',1,'JDeadzoneRemover::calculate(JTwoDTransform value, JTwoDTransform start, JTwoDTransform max, JTwoDTransform deadzone={ 0, 0, 0 })'],['../namespace_j_deadzone_remover.html#a2bfa0983c968b342fd4a4fd9b4731876',1,'JDeadzoneRemover::calculate(float value, float start, float max, float deadzone=0)'],['../namespace_j_curvature_drive.html#a4435b4b1bce5ffb49f2c5cdf03b74bb6',1,'JCurvatureDrive::calculate()']]],
   ['centerf_3',['centerF',['../class_j_drivetrain_swerve.html#a3dfbd81b58cc0ca2e2568011975c5bf6',1,'JDrivetrainSwerve']]],
   ['centerl_4',['centerL',['../class_j_drivetrain_swerve.html#aeab68aa4aec3d69a0e7e566d12128185',1,'JDrivetrainSwerve']]],
-  ['ch_5',['ch',['../class_j_motor_driver_esp32_l293_two_pins.html#a0ca66e6200d4286522f3ef77aa8d0085',1,'JMotorDriverEsp32L293TwoPins']]],
+  ['ch_5',['ch',['../class_j_motor_driver_esp32_h_bridge.html#a125685329fdd86a8eb39e659ae061a75',1,'JMotorDriverEsp32HBridge']]],
   ['changes_20between_20some_20versions_6',['there will be backwards compatible breaking changes between some versions',['../md_readme.html#autotoc_md2',1,'']]],
   ['changesupplyvoltagesetting_7',['changeSupplyVoltageSetting',['../class_j_voltage_comp_const.html#a5200fd8e1e894a45ec817944cbb8f8e4',1,'JVoltageCompConst']]],
   ['changesupplyvoltagevariable_8',['changeSupplyVoltageVariable',['../class_j_voltage_comp_adjust.html#aca1ee78f945cbf6ea7929a4e2715d4eb',1,'JVoltageCompAdjust']]],
