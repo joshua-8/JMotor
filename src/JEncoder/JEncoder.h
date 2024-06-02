@@ -110,5 +110,6 @@ public:
 #endif
 #include "JEncoderAS5048bI2C.h"
 #include "JEncoderAS5600I2C.h"
+#include "JEncoderBSED.h"
 
-#endif
+#endif // J_ENCODER_H
