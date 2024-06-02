@@ -1,37 +1,37 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="Node000000" href="$class_j_motor_driver.html" title="defines common interface for all types of JMotorDrivers" alt="" coords="5,281,101,307"/>
 <area shape="rect" id="Node000001" href="$class_j_motor_driver_avr_h_bridge.html" title=" " alt="" coords="157,5,320,31"/>
-<area shape="poly" id="edge32_Node000000_Node000001" title=" " alt="" coords="54,266,62,217,78,156,105,94,124,65,147,40,163,29,166,34,150,44,128,69,110,97,83,158,67,218,59,266"/>
+<area shape="poly" id="edge33_Node000000_Node000001" title=" " alt="" coords="54,266,62,217,78,156,105,94,124,65,147,40,163,29,166,34,150,44,128,69,110,97,83,158,67,218,59,266"/>
 <area shape="rect" id="Node000002" href="$class_j_motor_driver_avr_l293.html" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf." alt="" coords="166,55,311,80"/>
-<area shape="poly" id="edge33_Node000000_Node000002" title=" " alt="" coords="57,266,67,226,85,179,111,131,128,109,147,89,164,79,167,83,150,94,132,112,115,134,90,181,72,228,62,267"/>
+<area shape="poly" id="edge34_Node000000_Node000002" title=" " alt="" coords="57,266,67,226,85,179,111,131,128,109,147,89,164,79,167,83,150,94,132,112,115,134,90,181,72,228,62,267"/>
 <area shape="rect" id="Node000003" href="$class_j_motor_driver_avr_p_w_m.html" title="wrapper for analogWrite()" alt="" coords="165,104,312,130"/>
-<area shape="poly" id="edge34_Node000000_Node000003" title=" " alt="" coords="62,266,93,202,117,168,147,139,166,128,168,133,150,143,121,171,97,204,66,268"/>
+<area shape="poly" id="edge35_Node000000_Node000003" title=" " alt="" coords="62,266,93,202,117,168,147,139,166,128,168,133,150,143,121,171,97,204,66,268"/>
 <area shape="rect" id="Node000004" href="$class_j_motor_driver_avr_p_w_m_dir.html" title="for motor controllers with one direction input and one speed input pin" alt="" coords="157,153,320,179"/>
-<area shape="poly" id="edge35_Node000000_Node000004" title=" " alt="" coords="69,267,102,226,124,205,147,188,170,177,172,182,150,192,127,209,106,230,73,270"/>
+<area shape="poly" id="edge36_Node000000_Node000004" title=" " alt="" coords="69,267,102,226,124,205,147,188,170,177,172,182,150,192,127,209,106,230,73,270"/>
 <area shape="rect" id="Node000005" href="$class_j_motor_driver_dual.html" title="control two JMotorDrivers (of any type) as if they are one driver" alt="" coords="178,203,299,228"/>
-<area shape="poly" id="edge36_Node000000_Node000005" title=" " alt="" coords="85,270,148,237,178,226,180,231,150,242,88,275"/>
+<area shape="poly" id="edge37_Node000000_Node000005" title=" " alt="" coords="85,270,148,237,178,226,180,231,150,242,88,275"/>
 <area shape="rect" id="Node000006" href="$class_j_motor_driver_esp32_h_bridge.html" title="Controls an H&#45;bridge motor driver with two pins When wiring to an L293D or similar motor driver,..." alt="" coords="149,252,328,278"/>
-<area shape="poly" id="edge37_Node000000_Node000006" title=" " alt="" coords="115,282,153,276,154,281,116,287"/>
+<area shape="poly" id="edge38_Node000000_Node000006" title=" " alt="" coords="115,282,153,276,154,281,116,287"/>
 <area shape="rect" id="Node000007" href="$class_j_motor_driver_esp32_h_bridge_two_ledc_channels.html" title="in most cases, JMotorDriverESP32HBridge is better, this driver uses two ledc (pwm) channels instead o..." alt="" coords="149,302,328,343"/>
-<area shape="poly" id="edge38_Node000000_Node000007" title=" " alt="" coords="116,301,149,306,148,311,115,306"/>
+<area shape="poly" id="edge39_Node000000_Node000007" title=" " alt="" coords="116,301,149,306,148,311,115,306"/>
 <area shape="rect" id="Node000008" href="$class_j_motor_driver_esp32_l293.html" title="L293 motor driver chip: https://www.ti.com/lit/ds/symlink/l293.pdf also works with L298 drivers or an..." alt="" coords="158,367,319,392"/>
-<area shape="poly" id="edge39_Node000000_Node000008" title=" " alt="" coords="86,314,116,334,150,352,182,364,180,369,148,357,113,338,83,319"/>
+<area shape="poly" id="edge40_Node000000_Node000008" title=" " alt="" coords="86,314,116,334,150,352,182,364,180,369,148,357,113,338,83,319"/>
 <area shape="rect" id="Node000009" href="$class_j_motor_driver_esp32_p_w_m.html" title="uses ledc to output PWM approximation of an analog output ESP32s now have normal analogWrite() so the..." alt="" coords="157,416,320,442"/>
-<area shape="poly" id="edge40_Node000000_Node000009" title=" " alt="" coords="72,319,105,362,126,384,150,403,172,413,169,418,147,407,123,388,101,366,68,322"/>
+<area shape="poly" id="edge41_Node000000_Node000009" title=" " alt="" coords="72,319,105,362,126,384,150,403,172,413,169,418,147,407,123,388,101,366,68,322"/>
 <area shape="rect" id="Node000010" href="$class_j_motor_driver_esp32_p_w_m_dir.html" title="for motor controllers with one direction input and one speed input pin" alt="" coords="149,465,328,491"/>
-<area shape="poly" id="edge41_Node000000_Node000010" title=" " alt="" coords="66,321,78,352,96,387,120,422,150,452,168,462,166,467,147,456,116,426,92,390,73,354,61,323"/>
+<area shape="poly" id="edge42_Node000000_Node000010" title=" " alt="" coords="66,321,78,352,96,387,120,422,150,452,168,462,166,467,147,456,116,426,92,390,73,354,61,323"/>
 <area shape="rect" id="Node000011" href="$class_j_motor_driver_servo.html" title="class that can be used to specify a driver that controls specifically a servo" alt="" coords="174,515,303,540"/>
-<area shape="poly" id="edge42_Node000000_Node000011" title=" " alt="" coords="62,322,72,362,89,411,114,460,131,482,150,501,175,515,172,520,147,506,127,486,110,463,84,413,66,364,56,323"/>
+<area shape="poly" id="edge43_Node000000_Node000011" title=" " alt="" coords="62,322,72,362,89,411,114,460,131,482,150,501,175,515,172,520,147,506,127,486,110,463,84,413,66,364,56,323"/>
 <area shape="rect" id="Node000017" href="$class_j_motor_driver_t_m_c7300.html" title="control a motor connected to a TMC7300 motor driver chip" alt="" coords="163,564,314,590"/>
-<area shape="poly" id="edge48_Node000000_Node000017" title=" " alt="" coords="59,322,66,372,82,433,109,497,128,526,150,551,166,561,163,566,147,555,123,529,104,499,77,435,61,373,54,323"/>
+<area shape="poly" id="edge49_Node000000_Node000017" title=" " alt="" coords="59,322,66,372,82,433,109,497,128,526,150,551,166,561,163,566,147,555,123,529,104,499,77,435,61,373,54,323"/>
 <area shape="rect" id="Node000012" href="$class_j_motor_driver_avr_servo.html" title="wraps standard servo library. For servos and motor controllers that use servo signals (ESCs)" alt="" coords="395,465,544,491"/>
-<area shape="poly" id="edge43_Node000011_Node000012" title=" " alt="" coords="316,508,405,489,406,494,317,513"/>
+<area shape="poly" id="edge44_Node000011_Node000012" title=" " alt="" coords="316,508,405,489,406,494,317,513"/>
 <area shape="rect" id="Node000013" href="$class_j_motor_driver_servo_advanced.html" title="defines interface for servo driver with variable frequency, subclass of JMotorDriverServo and JMotorD..." alt="" coords="376,515,563,540"/>
-<area shape="poly" id="edge44_Node000011_Node000013" title=" " alt="" coords="318,525,375,525,375,530,318,530"/>
+<area shape="poly" id="edge45_Node000011_Node000013" title=" " alt="" coords="318,525,375,525,375,530,318,530"/>
 <area shape="rect" id="Node000016" href="$class_j_motor_driver_servo_dual.html" title="control two JMotorDriverServos as if they are one driver" alt="" coords="392,564,547,590"/>
-<area shape="poly" id="edge47_Node000011_Node000016" title=" " alt="" coords="317,542,406,561,405,566,316,547"/>
+<area shape="poly" id="edge48_Node000011_Node000016" title=" " alt="" coords="317,542,406,561,405,566,316,547"/>
 <area shape="rect" id="Node000014" href="$class_j_motor_driver_esp32_servo.html" title="For servos and motor controllers that use servo signals (ESCs)" alt="" coords="635,489,801,515"/>
-<area shape="poly" id="edge45_Node000013_Node000014" title=" " alt="" coords="579,514,635,508,635,513,579,519"/>
+<area shape="poly" id="edge46_Node000013_Node000014" title=" " alt="" coords="579,514,635,508,635,513,579,519"/>
 <area shape="rect" id="Node000015" href="$class_j_motor_driver_servo_advanced_dual.html" title="control two JMotorDriverServoAdvanced as if they are one driver" alt="" coords="611,539,825,564"/>
-<area shape="poly" id="edge46_Node000013_Node000015" title=" " alt="" coords="579,535,611,539,611,544,579,541"/>
+<area shape="poly" id="edge47_Node000013_Node000015" title=" " alt="" coords="579,535,611,539,611,544,579,541"/>
 </map>

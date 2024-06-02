@@ -9,10 +9,11 @@ var searchData=
   ['disterror_6',['distError',['../class_j_drivetrain_controller_basic.html#a14794f8e2f1f1a4ee1dc2fcb00f0d391',1,'JDrivetrainControllerBasic']]],
   ['distfromsetpointlimit_7',['distFromSetpointLimit',['../class_j_motor_controller_closed.html#af6555ab2d5321d1fd24110938c2b30d7',1,'JMotorControllerClosed']]],
   ['distmode_8',['distMode',['../class_j_drivetrain_controller_basic.html#a839545bb60fadca12633a45cbd590871',1,'JDrivetrainControllerBasic']]],
-  ['dl_9',['dl',['../class_j_motor_controller_open.html#ac176d0c32c38755f61e5fc69d85c0219',1,'JMotorControllerOpen::dL'],['../class_j_servo_controller.html#acef61a22e9827aac5e2f0523e9890385',1,'JServoController::dL']]],
-  ['driver_10',['driver',['../class_j_motor_controller_basic.html#a0d25da18c5598b083da74d3e037f48e2',1,'JMotorControllerBasic::driver'],['../class_j_motor_controller_closed.html#ac60229735ab3ae658c29b48ee9899386',1,'JMotorControllerClosed::driver']]],
-  ['driveratio_11',['driveRatio',['../class_j_swerve_module_differential.html#ae1cf74c1dc0321d5ae0eebfced5944fc',1,'JSwerveModuleDifferential']]],
-  ['driverinrange_12',['driverinrange',['../class_j_motor_controller_basic.html#a2ab41fec4c2351b9ebaa9cba17a87479',1,'JMotorControllerBasic::driverInRange'],['../class_j_motor_controller_closed.html#a206936d9d292bf5f848de2d9178ffa02',1,'JMotorControllerClosed::driverInRange']]],
-  ['driverrange_13',['driverRange',['../class_j_motor_compensator.html#ae8b662f96f137bf8c75957dafb0c9ec3',1,'JMotorCompensator']]],
-  ['drivetrain_14',['drivetrain',['../class_j_drivetrain_field_oriented.html#aab40a91ed9da119898a9d6a766baed3e',1,'JDrivetrainFieldOriented::drivetrain'],['../class_j_drivetrain_controller_basic.html#a7f8e95bac7c9e16b9df923d2f8f2f527',1,'JDrivetrainControllerBasic::drivetrain']]]
+  ['distpercountfactor_9',['distPerCountFactor',['../class_j_encoder_b_s_e_d.html#a83932bf65d59832b94f8696532ca6b2e',1,'JEncoderBSED']]],
+  ['dl_10',['dl',['../class_j_motor_controller_open.html#ac176d0c32c38755f61e5fc69d85c0219',1,'JMotorControllerOpen::dL'],['../class_j_servo_controller.html#acef61a22e9827aac5e2f0523e9890385',1,'JServoController::dL']]],
+  ['driver_11',['driver',['../class_j_motor_controller_basic.html#a0d25da18c5598b083da74d3e037f48e2',1,'JMotorControllerBasic::driver'],['../class_j_motor_controller_closed.html#ac60229735ab3ae658c29b48ee9899386',1,'JMotorControllerClosed::driver']]],
+  ['driveratio_12',['driveRatio',['../class_j_swerve_module_differential.html#ae1cf74c1dc0321d5ae0eebfced5944fc',1,'JSwerveModuleDifferential']]],
+  ['driverinrange_13',['driverinrange',['../class_j_motor_controller_basic.html#a2ab41fec4c2351b9ebaa9cba17a87479',1,'JMotorControllerBasic::driverInRange'],['../class_j_motor_controller_closed.html#a206936d9d292bf5f848de2d9178ffa02',1,'JMotorControllerClosed::driverInRange']]],
+  ['driverrange_14',['driverRange',['../class_j_motor_compensator.html#ae8b662f96f137bf8c75957dafb0c9ec3',1,'JMotorCompensator']]],
+  ['drivetrain_15',['drivetrain',['../class_j_drivetrain_field_oriented.html#aab40a91ed9da119898a9d6a766baed3e',1,'JDrivetrainFieldOriented::drivetrain'],['../class_j_drivetrain_controller_basic.html#a7f8e95bac7c9e16b9df923d2f8f2f527',1,'JDrivetrainControllerBasic::drivetrain']]]
 ];
