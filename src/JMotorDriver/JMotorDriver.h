@@ -74,7 +74,7 @@ public:
 #include "JMotorDriverEsp32PWMDir.h"
 #include "JMotorDriverEsp32Servo.h"
 #endif
-#if !defined(ESP32) || defined(J_MOTOR_DRIVER_FORCE_ANALOGWRITE)
+#if !defined(ESP32) || defined(J_MOTOR_DRIVER_FORCE_ANALOGWRITE) || defined(ESP8266)
 #include "JMotorDriverAvrHBridge.h"
 #include "JMotorDriverAvrL293.h"
 #include "JMotorDriverAvrPWM.h"
