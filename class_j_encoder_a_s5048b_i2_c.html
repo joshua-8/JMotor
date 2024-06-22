@@ -108,6 +108,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1c74191640750fa1360ab2012c528d48" id="r_a1c74191640750fa1360ab2012c528d48"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a1c74191640750fa1360ab2012c528d48">JEncoderAS5048bI2C</a> (bool _reverse=false, float _distPerCountFactor=1.0, uint8_t _address=0x40, unsigned long _velEnoughTime=0, unsigned long _velEnoughTicks=0, bool _recognizeOutOfRange=true)</td></tr>
 <tr class="memdesc:a1c74191640750fa1360ab2012c528d48"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets pins and settings for reading the encoder, remember to use Wire.begin()  <br /></td></tr>
 <tr class="separator:a1c74191640750fa1360ab2012c528d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aceca1e10ab658e0b97fd7b0385fa81" id="r_a6aceca1e10ab658e0b97fd7b0385fa81"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#a6aceca1e10ab658e0b97fd7b0385fa81">getAutoGain</a> ()</td></tr>
+<tr class="memdesc:a6aceca1e10ab658e0b97fd7b0385fa81"><td class="mdescLeft">&#160;</td><td class="mdescRight">read the gain setting of the sensor  <br /></td></tr>
+<tr class="separator:a6aceca1e10ab658e0b97fd7b0385fa81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad405ab13e47e798ecd8a6a501cda9e6d" id="r_ad405ab13e47e798ecd8a6a501cda9e6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_encoder_a_s5048b_i2_c.html#ad405ab13e47e798ecd8a6a501cda9e6d">useCustomWire</a> (TwoWire &amp;_wire)</td></tr>
 <tr class="memdesc:ad405ab13e47e798ecd8a6a501cda9e6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set what Wire (I2C) bus to use (for microcontrollers with more than one)  <br /></td></tr>
 <tr class="separator:ad405ab13e47e798ecd8a6a501cda9e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -254,6 +257,34 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6aceca1e10ab658e0b97fd7b0385fa81" name="a6aceca1e10ab658e0b97fd7b0385fa81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aceca1e10ab658e0b97fd7b0385fa81">&#9670;&#160;</a></span>getAutoGain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t JEncoderAS5048bI2C::getAutoGain </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>read the gain setting of the sensor </p>
+<dl class="section note"><dt>Note</dt><dd>bad if 255 (magnet too far) or 0 (magnet too close) </dd></dl>
+
+</div>
+</div>
 <a id="a046728560702239c1af7f4087df9e9f9" name="a046728560702239c1af7f4087df9e9f9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a046728560702239c1af7f4087df9e9f9">&#9670;&#160;</a></span>getCounter()</h2>
 
