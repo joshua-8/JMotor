@@ -80,14 +80,6 @@ private:
         writeRegister8(AS5048B_ZEROLSB_REG, (uint8_t)(val & 0b00111111));
     }
 
-    /**
-     * @note   bad if 255 (magnet too far) or 0 (magnet too close)
-     */
-    uint8_t getAutoGain()
-    {
-        return readRegister8(AS5048B_GAIN_REG);
-    }
-
     uint16_t readAngle()
     {
         return readRegister14(AS5048B_ANGLMSB_REG);
@@ -128,6 +120,15 @@ public:
         velEnoughTime = _velEnoughTime;
         velEnoughTicks = _velEnoughTicks;
         recognizeOutOfRange = _recognizeOutOfRange;
+    }
+
+    /**
+     * @brief  read the gain setting of the sensor
+     * @note   bad if 255 (magnet too far) or 0 (magnet too close)
+     */
+    uint8_t getAutoGain()
+    {
+        return readRegister8(AS5048B_GAIN_REG);
     }
 
     /**
