@@ -2,7 +2,6 @@
 
 [![arduino-library-badge](https://www.ardu-badge.com/badge/JMotor.svg?)](https://www.ardu-badge.com/JMotor)
 [![PlatformIO Registry](https://badges.registry.platformio.org/packages/joshua1024/library/JMotor.svg?)](https://registry.platformio.org/libraries/joshua1024/JMotor)
-[![ESP32 Component Registry](https://components.espressif.com/components/joshua-8/jmotor/badge.svg)](https://components.espressif.com/components/joshua-8/jmotor)
 
 ## work in progress! Bug reports and suggestions welcomed
 ### there will be backwards compatible breaking changes between some versions
@@ -20,9 +19,6 @@ Supports reading the following kinds of encoders: quadrature, single pin, absolu
 Supports controlling the following kinds of motor drivers: single PWM pin, PWM and direction pins, servo signal, L293/L298 driver. 
 
 supports the following boards: ESP32, ESP32S3, Arduino AVR (tested on nano), Teensy (tested on LC), SAMD M0 boards (tested on feather m0)
-
-available as an Espressif IDF Component: https://components.espressif.com/components/joshua-8/jmotor
-
 
 Why do all the classes start with J? It's to avoid name conflicts with other libraries (and J is my first initial).
 
