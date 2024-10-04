@@ -39,11 +39,11 @@ public:
         uint32_t value = (uint32_t)(val * 255) & 0b111111111;
         if (enabled) {
             if (!channel) {
-                if (ic.readField(TMC7300_PWM_A, false) != (value >= 0 ? value : (value & 0xFF) | 1 << 9)) {
+                if (ic.readField(TMC7300_PWM_A, false) != value) {
                     ic.writeField(TMC7300_PWM_A, value, true);
                 }
             } else {
-                if (ic.readField(TMC7300_PWM_B, false) != (value >= 0 ? value : (value & 0xFF) | 1 << 9)) {
+                if (ic.readField(TMC7300_PWM_B, false) != value) {
                     ic.writeField(TMC7300_PWM_B, value, true);
                 }
             }
