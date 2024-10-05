@@ -14,6 +14,7 @@ class JMotorDriverTMC7300 : public JMotorDriver {
 protected:
     boolean enabled;
     boolean channel;
+    unsigned long lastCheckedIC = 0;
 
 public:
     /**
@@ -35,6 +36,11 @@ public:
     }
     bool set(float val)
     {
+        if ((millis() + (channel * 500 + ic.getChipAddress() * 125) - lastCheckedIC) > 1000) {
+            // check on drivers twice per second, staggered for the 4 possible drivers
+            ic.checkDriver();
+            lastCheckedIC = millis();
+        }
         val = constrain(val, -1, 1);
         uint32_t value = (uint32_t)(val * 255) & 0b111111111;
         if (enabled) {
