@@ -105,9 +105,9 @@ Collaboration diagram for JMotorDriverTMC7300:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a60a93cad5d67d20d164febffb7f6e82e" id="r_a60a93cad5d67d20d164febffb7f6e82e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_t_m_c7300.html#a60a93cad5d67d20d164febffb7f6e82e">JMotorDriverTMC7300</a> (TMC7300IC &amp;_ic, boolean _channel)</td></tr>
-<tr class="memdesc:a60a93cad5d67d20d164febffb7f6e82e"><td class="mdescLeft">&#160;</td><td class="mdescRight">control a motor connected to a TMC7300 dual motor driver chip  <br /></td></tr>
-<tr class="separator:a60a93cad5d67d20d164febffb7f6e82e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa16038ac3cb88dbdb726562a8e34e051" id="r_aa16038ac3cb88dbdb726562a8e34e051"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_t_m_c7300.html#aa16038ac3cb88dbdb726562a8e34e051">JMotorDriverTMC7300</a> (TMC7300IC &amp;_ic, boolean _channel, boolean _checkDriver=true)</td></tr>
+<tr class="memdesc:aa16038ac3cb88dbdb726562a8e34e051"><td class="mdescLeft">&#160;</td><td class="mdescRight">control a motor connected to a TMC7300 dual motor driver chip  <br /></td></tr>
+<tr class="separator:aa16038ac3cb88dbdb726562a8e34e051"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11e9d3de625311a70273258746be7e57" id="r_a11e9d3de625311a70273258746be7e57"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_t_m_c7300.html#a11e9d3de625311a70273258746be7e57">set</a> (float val)</td></tr>
 <tr class="memdesc:a11e9d3de625311a70273258746be7e57"><td class="mdescLeft">&#160;</td><td class="mdescRight">set motor power  <br /></td></tr>
 <tr class="separator:a11e9d3de625311a70273258746be7e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,6 +147,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a4786e43c5d19ce8b227dde0edeaf6d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d9085fe1b959d83e338deeeeda59856" id="r_a6d9085fe1b959d83e338deeeeda59856"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_t_m_c7300.html#a6d9085fe1b959d83e338deeeeda59856">channel</a></td></tr>
 <tr class="separator:a6d9085fe1b959d83e338deeeeda59856"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeb1d70d1bae15d7ce5b39a6ccedaabd" id="r_adeb1d70d1bae15d7ce5b39a6ccedaabd"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_t_m_c7300.html#adeb1d70d1bae15d7ce5b39a6ccedaabd">checkDriver</a></td></tr>
+<tr class="separator:adeb1d70d1bae15d7ce5b39a6ccedaabd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bd35692d26ad39abed904bc306da69c" id="r_a3bd35692d26ad39abed904bc306da69c"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_t_m_c7300.html#a3bd35692d26ad39abed904bc306da69c">lastCheckedIC</a> = 0</td></tr>
 <tr class="separator:a3bd35692d26ad39abed904bc306da69c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -154,8 +156,8 @@ Protected Attributes</h2></td></tr>
 <div class="textblock"><p>control a motor connected to a TMC7300 motor driver chip </p>
 <dl class="section note"><dt>Note</dt><dd>make sure to call ic.begin() for each tmc7300 chip before enabling a motor driver. <a href="https://github.com/joshua-8/TMC7300">https://github.com/joshua-8/TMC7300</a> <a href="https://www.analog.com/media/en/technical-documentation/data-sheets/TMC7300_datasheet_rev1.08.pdf">https://www.analog.com/media/en/technical-documentation/data-sheets/TMC7300_datasheet_rev1.08.pdf</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a60a93cad5d67d20d164febffb7f6e82e" name="a60a93cad5d67d20d164febffb7f6e82e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60a93cad5d67d20d164febffb7f6e82e">&#9670;&#160;</a></span>JMotorDriverTMC7300()</h2>
+<a id="aa16038ac3cb88dbdb726562a8e34e051" name="aa16038ac3cb88dbdb726562a8e34e051"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa16038ac3cb88dbdb726562a8e34e051">&#9670;&#160;</a></span>JMotorDriverTMC7300()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,7 +175,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>_channel</em>&#160;</td>
+          <td class="paramname"><em>_channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>_checkDriver</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -455,6 +463,28 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">boolean JMotorDriverTMC7300::channel</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adeb1d70d1bae15d7ce5b39a6ccedaabd" name="adeb1d70d1bae15d7ce5b39a6ccedaabd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeb1d70d1bae15d7ce5b39a6ccedaabd">&#9670;&#160;</a></span>checkDriver</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean JMotorDriverTMC7300::checkDriver</td>
         </tr>
       </table>
   </td>

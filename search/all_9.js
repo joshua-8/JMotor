@@ -106,7 +106,7 @@ var searchData=
   ['jmotordriverservoadvanceddual_2eh_103',['JMotorDriverServoAdvancedDual.h',['../_j_motor_driver_servo_advanced_dual_8h.html',1,'']]],
   ['jmotordriverservodual_104',['jmotordriverservodual',['../class_j_motor_driver_servo_dual.html#afe5d1ae8be269250d6ece269ee32cdc4',1,'JMotorDriverServoDual::JMotorDriverServoDual()'],['../class_j_motor_driver_servo_dual.html',1,'JMotorDriverServoDual']]],
   ['jmotordriverservodual_2eh_105',['JMotorDriverServoDual.h',['../_j_motor_driver_servo_dual_8h.html',1,'']]],
-  ['jmotordrivertmc7300_106',['jmotordrivertmc7300',['../class_j_motor_driver_t_m_c7300.html#a60a93cad5d67d20d164febffb7f6e82e',1,'JMotorDriverTMC7300::JMotorDriverTMC7300()'],['../class_j_motor_driver_t_m_c7300.html',1,'JMotorDriverTMC7300']]],
+  ['jmotordrivertmc7300_106',['jmotordrivertmc7300',['../class_j_motor_driver_t_m_c7300.html#aa16038ac3cb88dbdb726562a8e34e051',1,'JMotorDriverTMC7300::JMotorDriverTMC7300()'],['../class_j_motor_driver_t_m_c7300.html',1,'JMotorDriverTMC7300']]],
   ['jmotordrivertmc7300_2eh_107',['JMotorDriverTMC7300.h',['../_j_motor_driver_t_m_c7300_8h.html',1,'']]],
   ['jservocontroller_108',['jservocontroller',['../class_j_servo_controller.html#a1704da79c93d1507e0cbe070330d9cf2',1,'JServoController::JServoController()'],['../class_j_servo_controller.html',1,'JServoController']]],
   ['jservocontroller_2eh_109',['JServoController.h',['../_j_servo_controller_8h.html',1,'']]],
