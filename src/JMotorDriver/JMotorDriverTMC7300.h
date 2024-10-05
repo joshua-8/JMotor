@@ -43,13 +43,16 @@ public:
     bool set(float val)
     {
         if (checkDriver) {
-            if (millis() - lastCheckedIC > 125) { // attempt to spread out driver checks across the 4 drivers that might be connected
-                lastCheckedIC = millis();
-                lastCheckedICCounter++;
-                if (lastCheckedICCounter == 8) {
-                    ic.checkDriver();
-                    lastCheckedICCounter = 0;
-                    Serial.printf("checked %d %d %d\n", channel, ic.getChipAddress(), millis());
+            // spread out driver checks across the 4 drivers that might be connected
+            if ((millis() + ic.getChipAddress() + 4 * channel) % 1000 <= 125) {
+                if (millis() - lastCheckedIC > 900) {
+                    lastCheckedIC = millis();
+                    lastCheckedICCounter++;
+                    if (lastCheckedICCounter >= 8) {
+                        ic.checkDriver();
+                        lastCheckedICCounter = 0;
+                        Serial.printf("checked %d %d %d\n", channel, ic.getChipAddress(), millis());
+                    }
                 }
             }
         }
