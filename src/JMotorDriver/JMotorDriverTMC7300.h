@@ -43,7 +43,8 @@ public:
             if ((millis() + (channel * 500 + ic.getChipAddress() * 125) - lastCheckedIC) > 1000) {
                 // check on drivers twice per second, staggered for the 4 possible drivers
                 ic.checkDriver();
-                lastCheckedIC = millis() + (channel * 500 + ic.getChipAddress() * 125);
+                lastCheckedIC += 1000;
+                Serial.printf("checked %d %d %d\n", channel, ic.getChipAddress(), millis());
             }
         }
         val = constrain(val, -1, 1);
