@@ -14,6 +14,7 @@ class JMotorDriverTMC7300 : public JMotorDriver {
 protected:
     boolean enabled;
     boolean channel;
+    boolean checkDriver;
     unsigned long lastCheckedIC = 0;
 
 public:
@@ -28,18 +29,21 @@ public:
      * @param  _ic: an instance of the TMC7300IC class, for communicating with the motor driver chip
      * @param  _channel: 0 or 1, which motor?
      */
-    JMotorDriverTMC7300(TMC7300IC& _ic, boolean _channel)
+    JMotorDriverTMC7300(TMC7300IC& _ic, boolean _channel, boolean _checkDriver = true)
         : ic(_ic)
     {
         enabled = false;
         channel = _channel;
+        checkDriver = _checkDriver;
     }
     bool set(float val)
     {
-        if ((millis() + (channel * 500 + ic.getChipAddress() * 125) - lastCheckedIC) > 1000) {
-            // check on drivers twice per second, staggered for the 4 possible drivers
-            ic.checkDriver();
-            lastCheckedIC = millis();
+        if (checkDriver) {
+            if ((millis() + (channel * 500 + ic.getChipAddress() * 125) - lastCheckedIC) > 1000) {
+                // check on drivers twice per second, staggered for the 4 possible drivers
+                ic.checkDriver();
+                lastCheckedIC = millis() + (channel * 500 + ic.getChipAddress() * 125);
+            }
         }
         val = constrain(val, -1, 1);
         uint32_t value = (uint32_t)(val * 255) & 0b111111111;
