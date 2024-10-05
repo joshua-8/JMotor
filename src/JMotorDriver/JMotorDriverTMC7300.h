@@ -46,7 +46,6 @@ public:
                 if (millis() - lastCheckedIC > 900) {
                     lastCheckedIC = millis();
                     ic.checkDriver();
-                    Serial.printf("checked %d %d %d %d\n", channel, ic.getChipAddress(), millis(), (millis() + ic.getChipAddress() * 125 + 500 * channel));
                 }
             }
         }
@@ -75,6 +74,7 @@ public:
             }
         }
         if (_enable == true && enabled == false) {
+            ic.checkDriver();
             if (!channel) {
                 ic.writeField(TMC7300_PWM_A, 0);
             } else {
