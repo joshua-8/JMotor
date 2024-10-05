@@ -15,7 +15,8 @@ protected:
     boolean enabled;
     boolean channel;
     boolean checkDriver;
-    unsigned long lastCheckedIC = 0;
+    unsigned long lastCheckedIC;
+    byte lastCheckedICCounter;
 
 public:
     /**
@@ -36,15 +37,20 @@ public:
         enabled = false;
         channel = _channel;
         checkDriver = _checkDriver;
+        lastCheckedIC = 0;
+        lastCheckedICCounter = ic.getChipAddress() + 4 * channel;
     }
     bool set(float val)
     {
         if (checkDriver) {
-            if ((millis() + (channel * 500 + ic.getChipAddress() * 125) - lastCheckedIC) > 1000) {
-                // check on drivers twice per second, staggered for the 4 possible drivers
-                ic.checkDriver();
-                lastCheckedIC = millis() + (channel * 500 + ic.getChipAddress() * 125);
-                Serial.printf("checked %d %d %d\n", channel, ic.getChipAddress(), millis());
+            if (millis() - lastCheckedIC > 125) { // attempt to spread out driver checks across the 4 drivers that might be connected
+                lastCheckedIC = millis();
+                lastCheckedICCounter++;
+                if (lastCheckedICCounter == 8) {
+                    ic.checkDriver();
+                    lastCheckedICCounter = 0;
+                    Serial.printf("checked %d %d %d\n", channel, ic.getChipAddress(), millis());
+                }
             }
         }
         val = constrain(val, -1, 1);
