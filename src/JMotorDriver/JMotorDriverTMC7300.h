@@ -45,7 +45,10 @@ public:
             if (((millis() + ic.getChipAddress() * 125 + 500 * channel) % 1000) <= 125) {
                 if (millis() - lastCheckedIC > 900) {
                     lastCheckedIC = millis();
-                    ic.checkDriver();
+                    Serial.print(ic.checkDriver(), BIN);
+                    Serial.print(" ");
+                    Serial.println(ic.getChipAddress());
+                    Serial.flush();
                 }
             }
         }
