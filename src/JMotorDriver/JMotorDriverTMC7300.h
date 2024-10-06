@@ -28,9 +28,9 @@ public:
      * @brief control a motor connected to a TMC7300 dual motor driver chip
      * @param  _ic: an instance of the TMC7300IC class, for communicating with the motor driver chip
      * @param  _channel: 0 or 1, which motor?
-     * @param  _checkDriver: true to check driver settings and reset if needed (helps recover from power cycling the driver but not the microcontroller)
+     * @param  _checkDriver: true to check driver settings and reset if needed (helps recover from power cycling the driver and from driver errors)
      */
-    JMotorDriverTMC7300(TMC7300IC& _ic, boolean _channel, boolean _checkDriver = false)
+    JMotorDriverTMC7300(TMC7300IC& _ic, boolean _channel, boolean _checkDriver = true)
         : ic(_ic)
     {
         enabled = false;
