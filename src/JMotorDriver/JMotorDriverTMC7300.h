@@ -30,7 +30,7 @@ public:
      * @param  _channel: 0 or 1, which motor?
      * @param  _checkDriver: true to check driver settings and reset if needed (helps recover from power cycling the driver but not the microcontroller)
      */
-    JMotorDriverTMC7300(TMC7300IC& _ic, boolean _channel, boolean _checkDriver = true)
+    JMotorDriverTMC7300(TMC7300IC& _ic, boolean _channel, boolean _checkDriver = false)
         : ic(_ic)
     {
         enabled = false;
@@ -45,10 +45,7 @@ public:
             if (((millis() + ic.getChipAddress() * 125 + 500 * channel) % 1000) <= 125) {
                 if (millis() - lastCheckedIC > 900) {
                     lastCheckedIC = millis();
-                    Serial.print(ic.checkDriver(), BIN);
-                    Serial.print(" ");
-                    Serial.println(ic.getChipAddress());
-                    Serial.flush();
+                    ic.checkDriver();
                 }
             }
         }
@@ -58,10 +55,12 @@ public:
             if (!channel) {
                 if (ic.readField(TMC7300_PWM_A, false) != value) {
                     ic.writeField(TMC7300_PWM_A, value, true);
+                    Serial.println("writing A");
                 }
             } else {
                 if (ic.readField(TMC7300_PWM_B, false) != value) {
                     ic.writeField(TMC7300_PWM_B, value, true);
+                    Serial.println("writing B");
                 }
             }
         }
