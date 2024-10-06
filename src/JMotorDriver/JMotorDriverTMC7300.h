@@ -53,17 +53,9 @@ public:
         uint32_t value = (uint32_t)(val * 255) & 0b111111111;
         if (enabled) {
             if (!channel) {
-                uint32_t prevValue = ic.readField(TMC7300_PWM_A, false);
-                if (prevValue != value) {
-                    ic.writeField(TMC7300_PWM_A, value, true);
-                    Serial.printf("%d, %d, %d\n", prevValue, value, prevValue != value);
-                }
+                ic.writeField(TMC7300_PWM_A, value, true);
             } else {
-                uint32_t prevValue = ic.readField(TMC7300_PWM_B, false);
-                if (prevValue != value) {
-                    ic.writeField(TMC7300_PWM_B, value, true);
-                    Serial.printf("%d, %d, %d\n", prevValue, value, prevValue != value);
-                }
+                ic.writeField(TMC7300_PWM_B, value, true);
             }
         }
         return abs(val) < 1;
