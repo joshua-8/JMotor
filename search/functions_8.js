@@ -39,7 +39,7 @@ var searchData=
   ['jmotordriveresp32servo_36',['JMotorDriverEsp32Servo',['../class_j_motor_driver_esp32_servo.html#ac62623e030d03461f309803103d7e16b',1,'JMotorDriverEsp32Servo']]],
   ['jmotordriverservoadvanceddual_37',['JMotorDriverServoAdvancedDual',['../class_j_motor_driver_servo_advanced_dual.html#aef4b48fc12f32a5f608926d54a2dffff',1,'JMotorDriverServoAdvancedDual']]],
   ['jmotordriverservodual_38',['JMotorDriverServoDual',['../class_j_motor_driver_servo_dual.html#afe5d1ae8be269250d6ece269ee32cdc4',1,'JMotorDriverServoDual']]],
-  ['jmotordrivertmc7300_39',['JMotorDriverTMC7300',['../class_j_motor_driver_t_m_c7300.html#a5f542760d0f660df610cb2c03c88490b',1,'JMotorDriverTMC7300']]],
+  ['jmotordrivertmc7300_39',['JMotorDriverTMC7300',['../class_j_motor_driver_t_m_c7300.html#aa16038ac3cb88dbdb726562a8e34e051',1,'JMotorDriverTMC7300']]],
   ['jservocontroller_40',['JServoController',['../class_j_servo_controller.html#a1704da79c93d1507e0cbe070330d9cf2',1,'JServoController']]],
   ['jservocontrolleradvanced_41',['JServoControllerAdvanced',['../class_j_servo_controller_advanced.html#aa3722a8357b0278455e6ea5ccf7ee9bc',1,'JServoControllerAdvanced']]],
   ['jservocontrollergentle_42',['JServoControllerGentle',['../class_j_servo_controller_gentle.html#a0c0a47fab0f3fac578fb76725c18611e',1,'JServoControllerGentle']]],
