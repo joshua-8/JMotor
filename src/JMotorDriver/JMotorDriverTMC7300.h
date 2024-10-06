@@ -56,11 +56,13 @@ public:
                 if (ic.readField(TMC7300_PWM_A, false) != value) {
                     ic.writeField(TMC7300_PWM_A, value, true);
                     Serial.println("writing A");
+                    Serial.printf("%d, %d\n", ic.readField(TMC7300_PWM_A, false), value);
                 }
             } else {
                 if (ic.readField(TMC7300_PWM_B, false) != value) {
                     ic.writeField(TMC7300_PWM_B, value, true);
                     Serial.println("writing B");
+                    Serial.printf("%d, %d\n", ic.readField(TMC7300_PWM_B, false), value);
                 }
             }
         }
