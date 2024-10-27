@@ -16,6 +16,7 @@ protected:
     boolean channel;
     boolean checkDriver;
     unsigned long lastCheckedIC;
+    byte enablePin;
 
 public:
     /**
@@ -29,14 +30,16 @@ public:
      * @param  _ic: an instance of the TMC7300IC class, for communicating with the motor driver chip
      * @param  _channel: 0 or 1, which motor?
      * @param  _checkDriver: true to check driver settings and reset if needed (helps recover from power cycling the driver and from driver errors)
+     * @param  _enablePin: pin to enable the driver, -1 if not used
      */
-    JMotorDriverTMC7300(TMC7300IC& _ic, boolean _channel, boolean _checkDriver = true)
+    JMotorDriverTMC7300(TMC7300IC& _ic, boolean _channel, boolean _checkDriver = true, byte _enablePin = -1)
         : ic(_ic)
     {
         enabled = false;
         channel = _channel;
         checkDriver = _checkDriver;
         lastCheckedIC = 0;
+        enablePin = _enablePin;
     }
     bool set(float val)
     {
@@ -68,6 +71,9 @@ public:
             } else {
                 ic.writeField(TMC7300_PWM_B, 0);
             }
+            if (enablePin >= 0 && enabled) {
+                digitalWrite(enablePin, LOW);
+            }
         }
         if (_enable == true && enabled == false) {
             ic.checkDriver();
@@ -75,6 +81,10 @@ public:
                 ic.writeField(TMC7300_PWM_A, 0);
             } else {
                 ic.writeField(TMC7300_PWM_B, 0);
+            }
+            if (enablePin >= 0) {
+                pinMode(enablePin, OUTPUT);
+                digitalWrite(enablePin, HIGH);
             }
         }
         enabled = _enable;
