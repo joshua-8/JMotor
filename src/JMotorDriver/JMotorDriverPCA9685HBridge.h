@@ -17,6 +17,7 @@ protected:
     byte channelPos;
     byte channelNeg;
     PCA9685& pca9685;
+    float lastVal;
 
 public:
     /**
@@ -44,6 +45,7 @@ public:
         reverse = _reverse;
         breakWhenEnabled = _breakWhenEnabled;
         breakWhenDisabled = _breakWhenDisabled;
+        lastVal = NAN;
     }
     /**
      * @brief  activate electrical break mode when motor is enabled and speed is 0
@@ -72,22 +74,26 @@ public:
         if (enabled) {
             val = val * dutyCycleMax;
             val = constrain(val, -dutyCycleMax, dutyCycleMax);
-            if (val == 0) {
-                if (breakWhenEnabled) {
-                    pca9685.setChannelDutyCycle(channelPos, dutyCycleMax);
-                    pca9685.setChannelDutyCycle(channelNeg, dutyCycleMax);
+            if (val != lastVal) {
+                if (val == 0 || isnan(val)) {
+                    if (breakWhenEnabled) {
+                        pca9685.setChannelDutyCycle(channelPos, dutyCycleMax);
+                        pca9685.setChannelDutyCycle(channelNeg, dutyCycleMax);
+                    } else {
+                        pca9685.setChannelDutyCycle(channelPos, 0);
+                        pca9685.setChannelDutyCycle(channelNeg, 0);
+                    }
                 } else {
-                    pca9685.setChannelDutyCycle(channelPos, 0);
-                    pca9685.setChannelDutyCycle(channelNeg, 0);
+                    if (val > 0) {
+                        pca9685.setChannelDutyCycle(channelNeg, 0);
+                        pca9685.setChannelDutyCycle(channelPos, val);
+                    } else {
+                        pca9685.setChannelDutyCycle(channelPos, 0);
+                        pca9685.setChannelDutyCycle(channelNeg, -val);
+                    }
                 }
             }
-            if (val > 0) {
-                pca9685.setChannelDutyCycle(channelNeg, 0);
-                pca9685.setChannelDutyCycle(channelPos, val);
-            } else {
-                pca9685.setChannelDutyCycle(channelPos, 0);
-                pca9685.setChannelDutyCycle(channelNeg, -val);
-            }
+            lastVal = val;
         }
         return abs(val) < dutyCycleMax;
     }
