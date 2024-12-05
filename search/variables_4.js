@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['enabled_0',['enabled',['../class_j_motor_driver_esp32_h_bridge.html#ac33f9b2d8122b057a1e5066e92a2ba67',1,'JMotorDriverEsp32HBridge::enabled'],['../class_j_motor_driver_t_m_c7300.html#a4786e43c5d19ce8b227dde0edeaf6d43',1,'JMotorDriverTMC7300::enabled'],['../class_j_servo_controller.html#afb7350b46d5a35930d546fe0b0bcb60d',1,'JServoController::enabled']]],
+  ['enabled_0',['enabled',['../class_j_motor_driver_esp32_h_bridge.html#ac33f9b2d8122b057a1e5066e92a2ba67',1,'JMotorDriverEsp32HBridge::enabled'],['../class_j_motor_driver_p_c_a9685_h_bridge.html#abb2f4eb783a17cb37e757cdbb48e279b',1,'JMotorDriverPCA9685HBridge::enabled'],['../class_j_motor_driver_t_m_c7300.html#a4786e43c5d19ce8b227dde0edeaf6d43',1,'JMotorDriverTMC7300::enabled'],['../class_j_servo_controller.html#afb7350b46d5a35930d546fe0b0bcb60d',1,'JServoController::enabled']]],
   ['enabledmillis_1',['enabledMillis',['../class_j_servo_controller_advanced.html#a9153c59f4460b44fbc3ca95dc7ec5fec',1,'JServoControllerAdvanced']]],
   ['enablepin_2',['enablePin',['../class_j_motor_driver_t_m_c7300.html#a08717a8b465ff1c991bba93c1ab1b956',1,'JMotorDriverTMC7300']]],
   ['encoder_3',['encoder',['../class_j_motor_controller_closed.html#a52c5bde3a86b8dbc8aa5936f643a549c',1,'JMotorControllerClosed']]],
