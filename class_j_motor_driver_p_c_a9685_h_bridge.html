@@ -105,10 +105,13 @@ Collaboration diagram for JMotorDriverPCA9685HBridge:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7c2e4d58888915e0876afbdec19fc506" id="r_a7c2e4d58888915e0876afbdec19fc506"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_p_c_a9685_h_bridge.html#a7c2e4d58888915e0876afbdec19fc506">JMotorDriverPCA9685HBridge</a> (PCA9685 &amp;_pca9685, byte _channelPos, byte _channelNeg, bool _reverse=false, bool _breakWhenEnabled=true, bool _breakWhenDisabled=false)</td></tr>
+<tr class="memdesc:a7c2e4d58888915e0876afbdec19fc506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls an H-bridge motor driver controlled by a PCA9685.  <br /></td></tr>
 <tr class="separator:a7c2e4d58888915e0876afbdec19fc506"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0f580ff0c09ead8f74001c6d9ff59e3" id="r_aa0f580ff0c09ead8f74001c6d9ff59e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_p_c_a9685_h_bridge.html#aa0f580ff0c09ead8f74001c6d9ff59e3">setBreakWhenEnabled</a> (bool _breakWhenEnabled)</td></tr>
+<tr class="memdesc:aa0f580ff0c09ead8f74001c6d9ff59e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">activate electrical break mode when motor is enabled and speed is 0  <br /></td></tr>
 <tr class="separator:aa0f580ff0c09ead8f74001c6d9ff59e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4a857aa70c17d3682b76db259e44de4" id="r_ad4a857aa70c17d3682b76db259e44de4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_p_c_a9685_h_bridge.html#ad4a857aa70c17d3682b76db259e44de4">setBreakWhenDisabled</a> (bool _breakWhenDisabled)</td></tr>
+<tr class="memdesc:ad4a857aa70c17d3682b76db259e44de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">activate electrical break mode when motor is disabled  <br /></td></tr>
 <tr class="separator:ad4a857aa70c17d3682b76db259e44de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29984d01d6804090119fbb720fe71d77" id="r_a29984d01d6804090119fbb720fe71d77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_motor_driver_p_c_a9685_h_bridge.html#a29984d01d6804090119fbb720fe71d77">setReverse</a> (bool _reverse)</td></tr>
 <tr class="separator:a29984d01d6804090119fbb720fe71d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -212,6 +215,20 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Controls an H-bridge motor driver controlled by a PCA9685. </p>
+<dl class="section note"><dt>Note</dt><dd>The PCA9685 must be initialized before this class is used to control a motor </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_pca9685</td><td>reference to an instance of janelia-arduino/PCA9685 </td></tr>
+    <tr><td class="paramname">_channelPos</td><td>PCA channel that makes the motor go forward </td></tr>
+    <tr><td class="paramname">_channelNeg</td><td>PCA channel that makes the motor go backward </td></tr>
+    <tr><td class="paramname">_reverse</td><td>(bool, default=false) set to true if the motor is wired backwards </td></tr>
+    <tr><td class="paramname">_breakWhenEnabled</td><td>(bool, default=true) set to true to turn on electrical break mode when motor is enabled and speed is 0 </td></tr>
+    <tr><td class="paramname">_breakWhenDisabled</td><td>(bool, default=false) set to true to turn on electrical break mode when motor is disabled example PCA9685 setup: Wire1.begin(PIN_I2C_SDA_IMU, PIN_I2C_SCL_IMU, 400000); pca9685.setupSingleDevice(Wire1, 0x40); pca9685.setupOutputEnablePin(12); pca9685.enableOutputs(12); pca9685.setToFrequency(1500); </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -390,6 +407,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>activate electrical break mode when motor is disabled </p>
+
 </div>
 </div>
 <a id="aa0f580ff0c09ead8f74001c6d9ff59e3" name="aa0f580ff0c09ead8f74001c6d9ff59e3"></a>
@@ -415,6 +434,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>activate electrical break mode when motor is enabled and speed is 0 </p>
 
 </div>
 </div>
