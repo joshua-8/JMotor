@@ -10,9 +10,10 @@ var searchData=
   ['lastpossetpoint_7',['lastPosSetpoint',['../class_j_motor_controller_closed.html#ac0f9e1fc68c2bee5b09c805dd125ee5b',1,'JMotorControllerClosed']]],
   ['lastrunmicros_8',['lastrunmicros',['../class_j_motor_controller_basic.html#a175be0e9bf6befcedfe864696db78130',1,'JMotorControllerBasic::lastRunMicros'],['../class_j_motor_controller_closed.html#a3211ccb69573ece34bdbf81de9bcaa1c',1,'JMotorControllerClosed::lastRunMicros']]],
   ['lastrunopenmicros_9',['lastRunOpenMicros',['../class_j_motor_controller_open.html#aa0c7855bdb18b7a6549f078694a32ea1',1,'JMotorControllerOpen']]],
-  ['left_10',['left',['../class_j_drivetrain_two_side.html#aba6bf82410b8739d4f18856389dfa911',1,'JDrivetrainTwoSide']]],
-  ['leftdist_11',['leftDist',['../class_j_drivetrain_two_side.html#a12887b6921d902ac2e06ba32e92a7834',1,'JDrivetrainTwoSide']]],
-  ['leftvel_12',['leftVel',['../class_j_drivetrain_two_side.html#a7645937e948a739a0784f70a22eadd8c',1,'JDrivetrainTwoSide']]],
-  ['library_13',['JMotor Library',['../md_readme.html',1,'']]],
-  ['limitsetpointdistfromcurrent_14',['limitSetpointDistFromCurrent',['../class_j_motor_controller_closed.html#afbd7ffede859faf8c514efcae0c2096e',1,'JMotorControllerClosed']]]
+  ['lastval_10',['lastVal',['../class_j_motor_driver_p_c_a9685_h_bridge.html#aa4402402f21904a15b496a463f8620d3',1,'JMotorDriverPCA9685HBridge']]],
+  ['left_11',['left',['../class_j_drivetrain_two_side.html#aba6bf82410b8739d4f18856389dfa911',1,'JDrivetrainTwoSide']]],
+  ['leftdist_12',['leftDist',['../class_j_drivetrain_two_side.html#a12887b6921d902ac2e06ba32e92a7834',1,'JDrivetrainTwoSide']]],
+  ['leftvel_13',['leftVel',['../class_j_drivetrain_two_side.html#a7645937e948a739a0784f70a22eadd8c',1,'JDrivetrainTwoSide']]],
+  ['library_14',['JMotor Library',['../md_readme.html',1,'']]],
+  ['limitsetpointdistfromcurrent_15',['limitSetpointDistFromCurrent',['../class_j_motor_controller_closed.html#afbd7ffede859faf8c514efcae0c2096e',1,'JMotorControllerClosed']]]
 ];
