@@ -109,6 +109,7 @@ public:
                     pca9685.setChannelDutyCycle(channelPos, 0);
                     pca9685.setChannelDutyCycle(channelNeg, 0);
                 }
+                lastVal = NAN;
                 enabled = true;
                 return true;
             }
